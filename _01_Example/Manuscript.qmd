@@ -1,0 +1,131 @@
+---
+title: "A Study on Penguins: A Minimal Reproducible Example"
+author:
+  - name: "Josephine Zerna"
+    email: "josephine.zerna@tu-dresden.de"
+    orcid: 0000-0003-2892-884X
+    roles:
+      - conceptualization
+      - writing
+    affiliations:
+      - id: "tu-dresden"
+        name: "Technische Universität Dresden"
+        group: Chair of Differential and Personality Psychology
+        department: Faculty of Psychology
+        city: Dresden
+        postal-code: 01069
+  - name: "Christoph Scheffel"
+    affiliation:
+      - id: "tu-dresden"
+    email: "christoph_scheffel@tu-dresden.de"
+    orcid: 0000-0001-5963-9229
+    corresponding: true
+    roles:
+      - project administration
+      - methodology
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+lang: en
+abstract: "This document is a minimal, reproducible manuscript using the penguins data set as an example."
+keywords: [penguins, reproducibility, minimal, example]
+floatsintext: false
+bibliography: Bibliography.bib
+format:
+  #apaquarto-docx: default
+  #apaquarto-html: default
+  apaquarto-pdf:
+    # Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    documentmode: man
+    keep-tex: true
+    pdf-engine: lualatex
+    a4paper: true
+---
+
+# Introduction
+
+Penguins are fascinating creatures that inhabit various regions of the Southern Hemisphere, including Antarctica and surrounding islands.
+The study of penguins provides valuable insights into ecosystem dynamics, climate change impacts, and evolutionary biology [@smith2020; @jones2018].
+
+This manuscript presents a minimal reproducible example utilizing the penguins dataset to demonstrate scientific workflows in R.
+
+```{r}
+#| label: "t-test"
+#| echo: false
+
+# Load penguins data set
+dat <- read.csv("Data.csv")
+
+# Remove rows with NA
+dat_clean <- dat[complete.cases(dat), ]
+
+# Treat year as categorical variable
+dat_clean$year <- as.factor(dat_clean$year)
+
+# Perform t-test
+t_test_result <- t.test(
+  bill_length_mm ~ sex,
+  data = dat_clean,
+  var.equal = FALSE
+)
+```
+
+# Methods
+
+We conducted a Welch two-sample *t*-test to compare the average bill lengths between male and female penguins.
+The null hypothesis ($H_0$) states that there is no difference in bill lengths between male and female penguins, while the alternative hypothesis ($H_1$) suggests a significant difference.
+
+The *t*-test was performed using the `t.test()` function in R, with a significance level of 0.05.
+
+# Results
+
+Descriptive statistics of the data set are given in @tbl-descriptive-statistics and individual bill lengths are displayed in @fig-bill-length-comparison.
+
+```{r}
+#| echo: false
+#| output: "asis"
+
+report::report(
+  x = t_test_result,
+  data = dat_clean,
+  rules = "gignac2016"
+) |>
+  report::as.report_text(summary = TRUE)
+```
+
+```{r}
+#| label: "tbl-descriptive-statistics"
+#| echo: false
+#| tbl-cap: "Descriptive Statistics"
+#| apa-twocolumn: true
+
+report::report_sample(dat_clean, by = "sex", total = FALSE) |>
+  knitr::kable()
+
+```
+
+```{r}
+#| label: "fig-bill-length-comparison"
+#| echo: false
+#| fig-cap: "Scatter Plot of Bill Lengths by Sex With Violin Plot Showing Quartiles"
+
+# Create ggplot object
+ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex), group = sex) +
+  ggplot2::geom_violin(
+    draw_quantiles = c(0.25, 0.5, 0.75),
+    show.legend = FALSE
+  ) +
+  ggplot2::geom_jitter(width = 0.15, show.legend = FALSE) +
+  ggplot2::labs(x = "Sex", y = "Bill length in mm") +
+  ggplot2::theme_minimal()
+```
+
+# Discussion
+
+The significant difference in bill lengths between male and female penguins suggests potential sexual dimorphism in this trait.
+This finding aligns with previous research indicating differential foraging strategies and resource partitioning between male and female penguins [@brown2015; @wilson2019].
+
+Understanding the factors influencing bill morphology in penguins is crucial for conservation efforts and ecosystem management, particularly in the face of ongoing environmental challenges.
+
+# References
+
+::: {#refs}
+:::
