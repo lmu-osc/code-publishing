@@ -670,15 +670,15 @@ Note&nbsp;4: Using REUSE to Record Licenses
   norm --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
   
   type --"Software"--&gt; code_sa("Attribution?&lt;br&gt;State changes?&lt;br&gt;Copyleft?")
-  type --"Writing, image, audio, video"--&gt; nocode_cc("Anti-DRM?&lt;br&gt;Attribution?&lt;br&gt;State changes?&lt;br&gt;Copyleft?")
+  type --"Writing, image, audio, video"--&gt; nocode_cc("Attribution?&lt;br&gt;State changes?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
   
   code_sa --"Attribution &amp;&lt;br&gt;State changes"--&gt; apache["Apache 2.0"]
   code_sa --"Attribution &amp;&lt;br&gt;Weak copyleft"--&gt; mpl["MPL 2.0"]
   code_sa --"Attribution &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Strong copyleft"--&gt; agpl["AGPLv3"]
   
   nocode_cc --"Neither"--&gt; cc0["CC0 1.0"]
-  nocode_cc --"Anti-DRM &amp;&lt;br&gt;Attribution &amp;&lt;br&gt;State changes"--&gt; cc_by["CC BY 4.0"]
-  nocode_cc --"Anti-DRM &amp;&lt;br&gt;Attribution &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Copyleft"--&gt; cc_by_sa["CC BY-SA 4.0"]
+  nocode_cc --"Attribution &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM"--&gt; cc_by["CC BY 4.0"]
+  nocode_cc --"Attribution &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft"--&gt; cc_by_sa["CC BY-SA 4.0"]
   
   click apache href "https://choosealicense.com/licenses/apache-2.0/"
   click mpl href "https://choosealicense.com/licenses/mpl-2.0/"
@@ -692,7 +692,7 @@ Note&nbsp;4: Using REUSE to Record Licenses
 </div>
 </div>
 </div>
-<p>DRM = digital rights management</p>
+<p>Note: DRM = digital rights management</p>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flowchart-non-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Advanced License Flowchart for Software, Writing, Images, Audio, and Video
@@ -726,11 +726,11 @@ Figure&nbsp;2: Advanced License Flowchart for Software, Writing, Images, Audio, 
   use_existing_license_content --&gt; switch_license
   
   cc0_content_metadata --&gt; cc0_db["CC0 1.0"]
-  switch_license --"CC0 or&lt;br&gt;non-CC license"--&gt; sa(Copyleft?)
+  switch_license --"CC0 or&lt;br&gt;non-CC license"--&gt; sa("Attribution?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
   switch_license --"CC BY or&lt;br&gt;CC BY-SA"--&gt; same["&lt;em&gt;Same license for DB&lt;/em&gt;"]
   
-  sa --"No (permissive)"--&gt; cc0_db
-  sa --"Yes"--&gt; odbl["ODbL 1.0"]
+  sa --"Neither"--&gt; cc0_db
+  sa --"Attribution &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft"--&gt; odbl["ODbL 1.0"]
   
   %% the following link is only added to have terminal nodes on the same level
   sa ~~~ same
@@ -1292,7 +1292,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"loop":false,"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
