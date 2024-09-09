@@ -429,16 +429,11 @@ Tip&nbsp;1: Projects Involving R Code
 <p>The Quarto files in this project are made available under CC&nbsp;BY-SA&nbsp;4.0, or (at your option) under the terms of the Apache Software License&nbsp;2.0.</p>
 </blockquote>
 <p>It is disputed whether software that uses an R package under AGPLv3 or GPLv3<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> can only be published under a GPL-compatible license – or even has to be published under the same license. Posit, the company behind RStudio, does not believe that to be the case <span class="citation" data-cites="Wickham2023PackagesLicense">(see also <a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham and Bryan 2023</a>)</span>. You can learn which license an installed package uses via <code>packageDescription("&lt;PACKAGE_NAME&gt;", fields = "License")</code>. And to identify which licenses are being used by the R packages your project depends on, you can use the following code:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>direct_deps <span class="ot">&lt;-</span> <span class="fu">unique</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>all_deps <span class="ot">&lt;-</span> tools<span class="sc">::</span><span class="fu">package_dependencies</span>(</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">packages =</span> direct_deps,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">which =</span> <span class="st">"strong"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">recursive =</span> <span class="cn">TRUE</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unlist</span>() <span class="sc">|&gt;</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">append</span>(deps) <span class="sc">|&gt;</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>()</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">installed.packages</span>(<span class="at">fields =</span> <span class="st">"License"</span>)[pkgs, <span class="st">"License"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  pak<span class="sc">::</span><span class="fu">pkg_deps</span>(<span class="at">dependencies =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getElement</span>(<span class="st">"package"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">installed.packages</span>(<span class="at">fields=</span><span class="st">"License"</span>)[deps, <span class="st">"License"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <p>We have prepared two advanced license flowcharts, one for software, writing, images, audio, and video in <a href="#fig-flowchart-non-data" class="quarto-xref">Figure&nbsp;2</a> and one for data in <a href="#fig-flowchart-data" class="quarto-xref">Figure&nbsp;3</a> where you can make additional choices. Note, however, that especially the advanced flowchart for licensing data is quite complex and we recommend you to seek legal counsel if you want to be sure.</p>
@@ -1292,7 +1287,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
