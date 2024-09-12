@@ -9,23 +9,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Code publishing tutorial",
+    "title": "Code Publishing Tutorial",
     "section": "",
-    "text": "This tutorial covers how to make your code available to others. While the general principles taught in this tutorial apply to most researchers publishing code, we will make very specific suggestions what tools to use.\nWe will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:\n\nremoving legal barriers: adding an appropriate license\nhigh-level documentation: creating a README file\narchival: uploading it to a repository"
-  },
-  {
-    "objectID": "index.html#content",
-    "href": "index.html#content",
-    "title": "Code publishing tutorial",
-    "section": "",
-    "text": "This tutorial covers how to make your code available to others. While the general principles taught in this tutorial apply to most researchers publishing code, we will make very specific suggestions what tools to use.\nWe will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:\n\nremoving legal barriers: adding an appropriate license\nhigh-level documentation: creating a README file\narchival: uploading it to a repository"
-  },
-  {
-    "objectID": "index.html#prerequisites",
-    "href": "index.html#prerequisites",
-    "title": "Code publishing tutorial",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nWe will assume you have installed Git, R, RStudio, and Quarto. Windows users may additionally need RTools.\nIf you are really new to R, we recommend looking at the tutorial “Introduction to R”. If you have not used Quarto before, we have also prepared a “Quarto Workshop”.\nGet started"
+    "text": "This tutorial covers how to make your code available to others. It wraps up a series of tutorials which we recommend to go through in advance:\n\nIntroduction to version control with git and GitHub within RStudio: This tutorial explains how to set up a simple project with version control.\nCollaborative coding with GitHub and RStudio: Here you can learn how to collaborate with others on code projects using GitHub.\nIntroduction to R: This is an introduction to the R programming language.\nIntroduction to renv: Here you can learn how to manage the dependencies of an R project.\nIntroduction to Quarto: Learn how to combine prose and code to make documents more reproducible.\nIntroduction to Zotero: Get introduced to the reference management software Zotero.\nFAIR research data management: Learn how to make your data findable, accessible, interoperable, and reusable.\n\nWhile the general principles taught in this tutorial apply to most researchers publishing code, we will make very specific suggestions what tools to use.\nIn particular, we will assume you have installed Git, R, RStudio, and Quarto. Windows users may additionally need RTools.\nWe will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:\n\nremoving legal barriers: adding an appropriate license\nhigh-level documentation: creating a README file\narchival: uploading it to a repository\n\nGet started\n\n\n\n Back to top"
   },
   {
     "objectID": "intro.html",
