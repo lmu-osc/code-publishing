@@ -259,7 +259,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./archive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archive</span></a>
+ <span class="menu-text">Archive Your Project</span></a>
   </div>
 </li>
     </ul>
@@ -474,10 +474,10 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
 <li>applicable privacy laws (e.g., the GDPR for European citizens),</li>
 <li>contractual obligations (e.g., with your data provider),</li>
 <li>copyright of the data and their particular structure, and</li>
-<li>any sui generis database right.</li>
+<li>any <em>sui generis</em> database right.</li>
 </ol>
 <p>Privacy laws and contractual obligations may require you to create a completely anonymized or synthetic dataset<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (if possible), or prohibit any sharing of data, in which case you should provide a reference to a data repository where they can be obtained from. For further information, you can watch the talk “<a href="https://osf.io/j6fy8">Data anonymity</a>” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at <a href="https://osf.io/z6gcu">the accompanying slides</a>.</p>
-<p>Purely factual data such as measurements are usually not copyrightable, but literary or artistic works that cross the threshold of originality are. Additionally, in some jurisdictions data can be subject to <em>sui generis database rights</em> which prevent extracting substantial parts of a database. As a consequence, you need to ensure that you own or have authority to share the data with respect to copyright and similar rights, and to license it to others (see “<a href="./choose_license.html">Choose a License</a>”).</p>
+<p>Purely factual data such as measurements are usually not copyrightable, but literary or artistic works that cross the threshold of originality are. Additionally, in some jurisdictions data can be subject to <em>sui generis</em> database rights which prevent extracting substantial parts of a database. As a consequence, you need to ensure that you own or have authority to share the data with respect to copyright and similar rights, and to license it to others (see “<a href="./choose_license.html">Choose a License</a>”).</p>
 </div>
 </div>
 <p>When publishing a data set, it is important to document the meaning (e.g., units) and possible values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R packages <a href="https://cran.r-project.org/package=tinylabels"><code>tinylabels</code></a>, <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a>, and <a href="https://vincentarelbundock.github.io/tinytable/"><code>tinytable</code></a>. You can install them now using:</p>
@@ -535,12 +535,12 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
 <!-- preamble start -->
 
     <script>
-      function styleCell_wh31i8dg9t8m961flt6w(i, j, css_id) {
-        var table = document.getElementById("tinytable_wh31i8dg9t8m961flt6w");
+      function styleCell_i9gxeyhe12m9l97et9c4(i, j, css_id) {
+        var table = document.getElementById("tinytable_i9gxeyhe12m9l97et9c4");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_wh31i8dg9t8m961flt6w');
+        var table = document.getElementById('tinytable_i9gxeyhe12m9l97et9c4');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -548,8 +548,8 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_wh31i8dg9t8m961flt6w(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_wh31i8dg9t8m961flt6w");
+      function spanCell_i9gxeyhe12m9l97et9c4(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_i9gxeyhe12m9l97et9c4");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -575,21 +575,21 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
         targetCell.rowSpan = rowspan;
         targetCell.colSpan = colspan;
       }
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 0, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 1, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 2, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 3, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 4, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 5, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 6, 'tinytable_css_idi7nnytenporwuqy1chwu') })
-window.addEventListener('load', function () { styleCell_wh31i8dg9t8m961flt6w(0, 7, 'tinytable_css_idi7nnytenporwuqy1chwu') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 0, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 1, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 2, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 3, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 4, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 5, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 6, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
+window.addEventListener('load', function () { styleCell_i9gxeyhe12m9l97et9c4(0, 7, 'tinytable_css_id2gujlrtk1ekdp5n1zuq0') })
     </script>
 
     <style>
-    .table td.tinytable_css_idi7nnytenporwuqy1chwu, .table th.tinytable_css_idi7nnytenporwuqy1chwu {  border-bottom: solid 0.1em #d3d8dc; }
+    .table td.tinytable_css_id2gujlrtk1ekdp5n1zuq0, .table th.tinytable_css_id2gujlrtk1ekdp5n1zuq0 {  border-bottom: solid 0.1em #d3d8dc; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_wh31i8dg9t8m961flt6w" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_i9gxeyhe12m9l97et9c4" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -972,6 +972,22 @@ Warning&nbsp;2: Take Copyright Seriously
 <p>When you include work by others in your project – especially if you intend to make it available publicly –, make sure you have the necessary rights to do so. Only build on existing work for which you are given an express grant of relevant rights. How do you know you are allowed to copy, edit, and share the two files linked above?</p>
 </div>
 </div>
+<div id="nte-take-copyright-seriously-solution" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;3: Hint for “Take Copyright Seriously”
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Have a look at the <a href="./about.html">about page</a>.</p>
+</div>
+</div>
+</div>
 <p>As the manuscript uses some new packages, install them with:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -979,7 +995,7 @@ Warning&nbsp;2: Take Copyright Seriously
 </div>
 <div class="sourceCode" id="cb16" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The manuscript also uses the Quarto extension “<a href="https://wjschne.github.io/apaquarto/">apaquarto</a>”, which typesets documents according to the requirements of the <span class="citation" data-cites="APA2020"><em>Publication Manual of the American Psychological Association</em> (<a href="#ref-APA2020" role="doc-biblioref">2020</a>)</span>. It can be installed in the project using the following command:</p>
+<p>The manuscript also uses the Quarto extension “<a href="https://wjschne.github.io/apaquarto/">apaquarto</a>”, which typesets documents according to the requirements of the American Psychological Association <span class="citation" data-cites="APA2020">(<a href="#ref-APA2020" role="doc-biblioref">2020</a>)</span>. It can be installed in the project using the following command:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
@@ -1645,7 +1661,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

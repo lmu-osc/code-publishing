@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Archive – Code Publishing Tutorial</title>
+<title>Archive Your Project – Code Publishing Tutorial</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -145,7 +145,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./archive.html">Archive</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./archive.html">Archive Your Project</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./archive.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Archive</span></a>
+ <span class="menu-text">Archive Your Project</span></a>
   </div>
 </li>
     </ul>
@@ -203,14 +203,22 @@ div.csl-indent {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
 </div></div>
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#where-to-deposit-software" id="toc-where-to-deposit-software" class="nav-link active" data-scroll-target="#where-to-deposit-software">Where to Deposit Software</a></li>
+  <li><a href="#using-zenodo-to-archive-your-project" id="toc-using-zenodo-to-archive-your-project" class="nav-link" data-scroll-target="#using-zenodo-to-archive-your-project">Using Zenodo to Archive Your Project</a></li>
+  <li><a href="#final-remarks" id="toc-final-remarks" class="nav-link" data-scroll-target="#final-remarks">Final Remarks</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/archive.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Archive</h1>
+<h1 class="title">Archive Your Project</h1>
 </div>
 
 
@@ -227,6 +235,8 @@ div.csl-indent {
 </header>
 
 
+<section id="where-to-deposit-software" class="level2">
+<h2 class="anchored" data-anchor-id="where-to-deposit-software">Where to Deposit Software</h2>
 <p>The project is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder <span class="citation" data-cites="Jackson2018">(excerpt from <a href="#ref-Jackson2018" role="doc-biblioref">Jackson and The Software Sustainability Institute 2018</a>, with footnotes removed, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" role="doc-biblioref">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
 <blockquote class="blockquote">
 <p><strong>Does the digital repository give you a unique persistent digital identifier for your deposit?</strong></p>
@@ -244,11 +254,45 @@ div.csl-indent {
 <p><strong>Is the digital repository accredited or certified?</strong></p>
 <p>The digital repository may be accredited or certified by an independent agency that reviews digital repositories according to various criteria related to its policies and processes. The presence of an accreditation or certification may provide you with an additional degree of confidence that the digital repository meets your requirements. For example, the Data Seal of Approval can be awarded to digital repositories who satisfy a set of quality guidelines relating to how they manage, preserve and make available the deposits they hold. The presence of a Data Seal of Approval could give you additional confidence that a digital repository is suitable for holding your deposit.</p>
 </blockquote>
-<p>Additional guidance is provided by <span class="citation" data-cites="Daquin2023">d’Aquin et al. (<a href="#ref-Daquin2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="Garijo2022">Garijo et al. (<a href="#ref-Garijo2022" role="doc-biblioref">2022</a>)</span>. We will cover the archival using the Software Heritage archive and Zenodo.</p>
+<p>Additional guidance is provided by <span class="citation" data-cites="Daquin2023">d’Aquin et al. (<a href="#ref-Daquin2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="Garijo2022">Garijo et al. (<a href="#ref-Garijo2022" role="doc-biblioref">2022</a>)</span>.</p>
+</section>
+<section id="using-zenodo-to-archive-your-project" class="level2">
+<h2 class="anchored" data-anchor-id="using-zenodo-to-archive-your-project">Using Zenodo to Archive Your Project</h2>
+<p>In the following we will demonstrate how to use Zenodo to archive one’s project and obtain a DOI.</p>
+<div id="cau-sandbox" class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution&nbsp;1: Zenodo Sandbox
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that during this tutorial, we will be using Zenodo’s sandbox instance located at <a href="https://sandbox.zenodo.org/"><code>sandbox.zenodo.org</code></a> in order to learn how to use it while not wasting Zenodo’s resources. For real projects, use the production instance at <a href="https://zenodo.org/"><code>zenodo.org</code></a>, which requires a separate account.</p>
+</div>
+</div>
+<p>First, create an account on the Zenodo Sandbox by clicking on <em>Sign up</em> in the upper right corner and submitting the provided form. Then, confirm your email address (also check your spam folder if you cannot find the confirmation email).</p>
+<p>Now you can follow the guide “<a href="https://help.zenodo.org/docs/deposit/create-new-upload/">Create new upload</a>”, taking into account the following notes specific to each step:</p>
+<ul>
+<li><strong>Add/remove files</strong>: To circumvent the file limit on Zenodo, you can bundle your project folder in one ZIP file and upload that instead.</li>
+<li><strong>Fill in metadata</strong>
+<ul>
+<li><strong>Digital Object Identifier</strong> (DOI): Usually, you will want a DOI, therefore you need to choose <em>No</em> for the question whether you already have a DOI for this upload, and click on <em>Get a DOI now!</em>.</li>
+<li><strong>Resource type</strong>: Select the most appropriate one, for example, <em>Publication / Preprint</em>.</li>
+<li><strong>Licenses</strong>: If your project only contains content by you and if you previously only chose one license, you can select that by choosing <em>Add standard</em>. Otherwise, click on <em>Add custom</em> and describe how each file is licensed. If you have been using REUSE to record license information, you can run enter <code>SPDX Document</code> as title and run the reuse tool with <code>reuse spdx -o reuse.spdx</code> to create the file <code>reuse.spdx</code>. Then you can paste the content of <code>reuse.spdx</code> into the description field of the custom license as it contains information about the license of each file.</li>
+</ul></li>
+</ul>
+<p>If you previously uploaded your project to a public Git repository (which we didn’t cover during this tutorial), you could also add the new DOI to your README, for example, under the section “Citation”.</p>
+</section>
+<section id="final-remarks" class="level2">
+<h2 class="anchored" data-anchor-id="final-remarks">Final Remarks</h2>
+<p>There are situations in which you are not allowed to share your data publicly. In this case, consider using a repository specifically for research data, which later grants access for valid uses individually.</p>
 <p>For further information, you may be interested in <a href="https://softwaresaved.github.io/software-deposit-guidance/">Software Deposit Guidance for Researchers</a>.</p>
 
 
 
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-Daquin2023" class="csl-entry" role="listitem">
@@ -698,7 +742,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p>Copyright 2024 Open Science Center at LMU Munich</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/archive.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/archive.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

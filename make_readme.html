@@ -236,7 +236,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./archive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Archive</span></a>
+ <span class="menu-text">Archive Your Project</span></a>
   </div>
 </li>
     </ul>
@@ -251,7 +251,9 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#creating-a-readme" id="toc-creating-a-readme" class="nav-link active" data-scroll-target="#creating-a-readme">Creating a README</a></li>
+  <li><a href="#what-does-a-readme-contain" id="toc-what-does-a-readme-contain" class="nav-link active" data-scroll-target="#what-does-a-readme-contain">What does a README contain?</a></li>
+  <li><a href="#sec-dependencies" id="toc-sec-dependencies" class="nav-link" data-scroll-target="#sec-dependencies">Installation/Dependencies</a></li>
+  <li><a href="#create-it" id="toc-create-it" class="nav-link" data-scroll-target="#create-it">Create It!</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/make_readme.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -277,15 +279,15 @@ window.Quarto = {
 </header>
 
 
-<section id="creating-a-readme" class="level2">
-<h2 class="anchored" data-anchor-id="creating-a-readme">Creating a README</h2>
+<section id="what-does-a-readme-contain" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-a-readme-contain">What does a README contain?</h2>
 <p>Once you have prepared your project and settled on a license, it is time to add a final touch. Imagine returning to your project in five years, having forgotten most of the details of what you did exactly. What would be useful to know in order to quickly understand what is going on in the project? This is what needs to be described in the README. While you could just start writing along, most READMEs have some sections in common which we describe below.</p>
 <dl>
 <dt>Name</dt>
 <dd>
 <p>How is the project called?</p>
 </dd>
-<dt>Badges and project status</dt>
+<dt>Badges/Project Status</dt>
 <dd>
 <p>Badges typically report quick facts, like <a href="https://www.repostatus.org/">whether the project is actively maintained</a>, <a href="https://tinyverse.netlify.app/">how many dependencies it has</a>, or <a href="https://www.r-pkg.org/services#badges">whether it has been published in a package repository</a>. Sometimes, the license, any associated DOIs, or quality metrics like code coverage by unit tests are communicated via badges as well.</p>
 </dd>
@@ -299,56 +301,7 @@ window.Quarto = {
 </dd>
 <dt>Installation/Dependencies</dt>
 <dd>
-<p>What steps need to be taken to run the project? What software needs to be installed? Mention all dependencies here that are not explicitly managed by <code>renv</code>, such as the system dependencies of R packages as well as the version of Quarto.</p>
-<p>An overview over the system dependencies of R packages can be created using the function <code>pak::pkg_sysreqs()</code>. In combination with <code>renv</code>, we can obtain the system dependencies of all R packages in the current project:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_sysreqs</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The output may look like the following:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>── Install scripts ─────────────────────── </span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dnf install -y make pandoc</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>── Packages and their system dependencies </span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fs        – make</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>knitr     – pandoc</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>rmarkdown – pandoc</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sass      – make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We can see that <code>make</code> and <code>pandoc</code> were identified as system dependencies. One can obtain their version by running them with the <code>--version</code> argument:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb3" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="at">--version</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>We also know that we need Quarto to create the PDF and that we installed the <code>apaquarto</code> extension, so let’s find out these versions as well:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> list extensions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Finally, we know that we installed a <span class="math inline">\(\TeX\)</span> distribution to create the PDF, so let’s find out its version by running:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The output is quite long and it might look slightly different for you, but the relevant sections are the following:</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>[✓] Checking tools....................OK</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>      TinyTeX: (not installed)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>      Chromium: (not installed)</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>[✓] Checking LaTeX....................OK</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      Using: Installation From Path</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      Path: /usr/local/texlive/2024/bin/x86_64-linux</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>      Version: 2024</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We put all the information obtained about system dependencies and their versions in the README. Sharing the install scripts that were provided by <code>pak</code> is an additional courtesy to your readers.</p>
+<p>What steps need to be taken to run the project? What software needs to be installed? Mention all dependencies here that are not explicitly managed by <code>renv</code>, such as the system dependencies of R packages as well as the version of Quarto. An R package’s system dependency is any additional software that you need to install on your computer in order to use a particular R package. For example, the R package <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> allows to run Python code from within R. However, in order to actually use it, one has to additionally install Python itself as it does not come together with <code>reticulate</code> – rather, it is a system dependency. See <a href="#sec-dependencies" class="quarto-xref">Section&nbsp;2</a> for additional information.</p>
 </dd>
 <dt>Usage</dt>
 <dd>
@@ -375,7 +328,266 @@ window.Quarto = {
 <p>Under which license are the contents in this project available?</p>
 </dd>
 </dl>
-<p>Create your README now as the file <code>README.md</code>.</p>
+</section>
+<section id="sec-dependencies" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dependencies">Installation/Dependencies</h2>
+<p>An overview over the system dependencies of R packages can be created using the function <code>pak::pkg_sysreqs()</code>. In combination with <code>renv</code>, we can obtain the system dependencies of all R packages in the current project:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_sysreqs</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The output may look like the following:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>── Install scripts ─────────────────────── </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dnf install -y make pandoc</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>── Packages and their system dependencies </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>fs        – make</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>knitr     – pandoc</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>rmarkdown – pandoc</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sass      – make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can see that <code>make</code> and <code>pandoc</code> were identified as system dependencies. One can obtain their version by running them with the <code>--version</code> argument:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">make</span> <span class="at">--version</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">pandoc</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We also know that we need Quarto to create the PDF, so let’s find out its version as well:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you installed <code>apaquarto</code> or any other Quarto extension, one can query their versions as follows:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> list extensions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, we know that we installed a <span class="math inline">\(\TeX\)</span> distribution to create the PDF, so let’s find out its version by running:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb6" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> check</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The output is quite long and it might look slightly different for you, but the relevant sections are the following:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[✓] Checking tools....................OK</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>      TinyTeX: v2024.09</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>      Chromium: (not installed)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>[✓] Checking LaTeX....................OK</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      Using: TinyTex</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      Path: /home/r155953/.TinyTeX/bin/x86_64-linux</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      Version: 2024</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="create-it" class="level2">
+<h2 class="anchored" data-anchor-id="create-it">Create It!</h2>
+<p>Create your README now as the file <code>README.md</code>. If you feel stuck, you can have a look at the following examples:</p>
+<div id="tip-name" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;1: Name
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Penguin Paper</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tip-project-status" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;2: Badges/Project Status
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="al">![Project Status: Unsupported – The project has reached a stable, usable state but the author(s) have ceased all work on it. A new maintainer may be desired.](https://www.repostatus.org/badges/latest/unsupported.svg)</span><span class="co">](https://www.repostatus.org/#unsupported)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tip-description" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;3: Description
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb10" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>This project contains the Quarto manuscript of our study on penguins. It is written in R and uses <span class="in">`renv`</span> to track its dependencies.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tip-installation" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;4: Installation/Dependencies
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Dependencies</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>This manuscript requires the following system software to be installed. In addition, we provide the version numbers this manuscript has last been run with:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/docs/download/)</span> 1.6.9</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>GNU Make 4.4.1</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Pandoc 3.3</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>TinyTeX 2024.09</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">R</span><span class="co">](https://cloud.r-project.org/)</span> 4.4.1</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>On Fedora Linux, Make and Pandoc can be installed as follows:</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="ex">dnf</span> install <span class="at">-y</span> make pandoc</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>Quarto and R can be installed using the links provided. TinyTeX can be installed using Quarto by entering the following into the terminal:</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> install tinytex</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>All R packages that this project requires are managed using <span class="co">[</span><span class="ot">`renv`</span><span class="co">](https://cran.r-project.org/package=renv)</span>. Therefore, <span class="in">`renv`</span> needs to be installed first, by entering the following in the R console:</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"renv"</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>Next, one can open a new R session in the root directory of this project and run the following, which should install all required R packages at their recorded versions:</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="in">```r</span></span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">restore</span>()</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tip-usage" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;5: Usage
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Usage</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>The most important file in this project is <span class="in">`Manuscript.qmd`</span> which contains the text of the article as well as the code for its computations. It is accompanied by the following files:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Bibliography.bib`</span>: bibliographic references used in the manuscript</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Data.csv`</span>: a data set containing the simplified <span class="in">`palmerpenguins`</span> data created using <span class="in">`write.csv(palmerpenguins::penguins, "dat.csv", row.names = FALSE)`</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data_dictionary.html`</span>: a dictionary to the data file, created using <span class="in">`create_data_dictionary.R`</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>The folder <span class="in">`_extensions`</span> contains the <span class="in">`apaquarto`</span> extension which is used to typeset the PDF accoording to APA guidelines.</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>The manuscript can be rendered to PDF using the following command:</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tip-citation" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;6: Citation
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Citation</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>Please cite this draft as follows:</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Zerna &amp; Scheffel (2024): "A Study on Penguins: A Minimal Reproducible Example". Unpublished manuscript.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div id="tip-citation" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;7: License
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>README.md</strong></pre>
+</div>
+<div class="sourceCode" id="cb14" data-filename="README.md"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## License</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>The manuscript file and the bibliograhpic references are made available by us under <span class="co">[</span><span class="ot">CC BY 4.0</span><span class="co">](https://creativecommons.org/licenses/by/4.0/)</span>. The data set by Kristen Gorman has been published under <span class="co">[</span><span class="ot">CC0 1.0</span><span class="co">](https://creativecommons.org/publicdomain/zero/1.0/)</span>. <span class="in">`apaquarto`</span> has also been published under <span class="co">[</span><span class="ot">CC0 1.0</span><span class="co">](https://creativecommons.org/publicdomain/zero/1.0/)</span>. All other files in this project are available under <span class="co">[</span><span class="ot">CC0 1.0</span><span class="co">](https://creativecommons.org/publicdomain/zero/1.0/)</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
 </section>
@@ -814,8 +1026,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./archive.html" class="pagination-link" aria-label="Archive">
-        <span class="nav-page-text">Archive</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./archive.html" class="pagination-link" aria-label="Archive Your Project">
+        <span class="nav-page-text">Archive Your Project</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
