@@ -291,10 +291,10 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="tldr">TL;DR</h2>
 <p>Every expression of an idea, such as a literary or an artistic works, is automatically covered by copyright. This means that nobody else than the copyright holder is allowed to copy, modify, or share it. Copyright licenses can grant others some of the necessary rights, but mostly don’t cover publicity, privacy, moral, patent, or trademark rights.</p>
 <p>Researchers are only allowed to share material they have the necessary rights to, for example, through a free/open license. These licenses often require to attribute the authors, indicate whether changes were made, and provide the text of the license, among other things. In addition, researchers should share any work by their own under such a license.</p>
-<p>“Choosing a License” involves:</p>
+<p><em>Choosing a license</em> involves:</p>
 <ol type="1">
-<li>Recording the copyright notices and licenses for files by others (for example, in a file called <code>LICENSE.txt</code>) and following all their additional requirements.</li>
-<li>In the simplest case, choosing two licenses (one for code, one for everything else) which to apply simultaneously to all own files (for example, again by recording the license in the file <code>LICENSE.txt</code>). Recipients are then free to choose under which of the two licenses to use the material.</li>
+<li>Recording the copyright notices and licenses for content by others (for example, in a file called <code>LICENSE.txt</code>) and following all their additional requirements.</li>
+<li>In the simplest case, choosing two licenses (one suitable for code, one for everything else) which to apply simultaneously to all own content (for example, again by recording the license in the file <code>LICENSE.txt</code>). Recipients are then free to choose under which of the two licenses to use the material.</li>
 </ol>
 <p>We recommend to choose <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> and <a href="https://choosealicense.com/licenses/apache-2.0/">Apache&nbsp;2.0</a> for all own works. Take your time to read the summaries behind the links and/or the actual license text to understand its legal effect.</p>
 <p>You can adapt the following wording to your use case:</p>
@@ -361,6 +361,28 @@ Note&nbsp;1: A Note on Terminology
 <section id="work-type" class="level3">
 <h3 class="anchored" data-anchor-id="work-type">Work Type?</h3>
 <p>If you create a new work and no strong community norms suggest a particular license, you need to choose the license yourself. Which license to choose depends on the type of work you create. Software licenses, for example, may consider that the source code is the preferred form for making modifications, while licenses for data can differentiate between the database and any works produced from it. We have created a flowchart that covers the most likely types of works you will create as a researcher: software, writing (i.e., text), images, audio, video, and data (see <a href="#fig-flowchart-simple" class="quarto-xref">Figure&nbsp;1</a>). This flowchart always recommends the most permissive license possible to maximize reuse – below we provide two additional flowcharts that allow for more choices. Click on the name of a license to learn more about it.</p>
+<div id="tip-dual-licensing" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;1: Dual-licensing
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Sometimes, the type of a work is not obvious. For example, a Quarto document…</p>
+<ul>
+<li>…contains both R code and writing, and</li>
+<li>…may be distributed in the source format or as rendered document, possibly including images.</li>
+</ul>
+<p>One may wonder which license to apply in this case, because Creative Commons licenses are not recommended for source code<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> and applying software licenses to PDFs or images can lead to confusion or nuisance.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a></p>
+<p>One solution is to make such a work simultaneously available under two licenses, at the choice of the recipient: Either under a specified software license, or under a Creative Commons license<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>. This is called dual-licensing and makes it easier to reuse both the rendered document as well as the code. For example, one could write:</p>
+<blockquote class="blockquote">
+<p>The Quarto files in this project are made available under CC0&nbsp;1.0 or (at your option) under the terms of the Apache Software License&nbsp;2.0.</p>
+</blockquote>
+</div>
+</div>
 <p>Note, that for data you have, at least in principle, the option to apply separate licenses to the individual entries and the collective database. For example, if you were to create a database of artworks by others, those artworks would be licensed individually as chosen by the artists, but the license for the database as a whole could be chosen by you. The latter includes the structure of the database (e.g., the selection of entries and field names) and any <em>sui generis</em> database rights. However, if the content was created by you, we recommend you to choose the same license for both content and database. Metadata, in particular, should always be licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>.</p>
 <div id="fig-flowchart-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -400,7 +422,7 @@ Figure&nbsp;1: Flowchart for Choosing a License
 </figure>
 </div>
 <div id="nte-other-work-types" class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -409,7 +431,7 @@ Note&nbsp;2: Other Work Types
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>One should be cautious about the restrictions of licenses applied to the following types of works:</p>
 <ul>
@@ -424,7 +446,7 @@ Note&nbsp;2: Other Work Types
 </section>
 <section id="copyleft" class="level3">
 <h3 class="anchored" data-anchor-id="copyleft">Copyleft?</h3>
-<p>The consequence of applying a permissive license to your work is that others may distribute their modifications to it under stricter terms, possibly without a free/open license. You may prefer that everybody who receives somebody else’s adaptations of your work enjoys the same rights that you granted to them. This can be achieved by <em>copyleft</em> licenses.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> For software, they come in two flavors:</p>
+<p>The consequence of applying a permissive license to your work is that others may distribute their modifications to it under stricter terms, possibly without a free/open license. You may prefer that everybody who receives somebody else’s adaptations of your work enjoys the same rights that you granted to them. This can be achieved by <em>copyleft</em> licenses.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> For software, they come in two flavors:</p>
 <ul>
 <li><strong>Weak copyleft licenses</strong> only require that modifications to the software itself are licensed under the same or a compatible license if shared. For example, if you create and publish software under a weak copyleft license, others who modify it and put their version on the internet have to apply the same license. However, people who merely <em>use</em> your software in their own work which they make publicly available can choose any license for it.</li>
 <li><strong>Strong copyleft licenses,</strong> on the other side, insist that any larger works that use the copyleft-licensed software must also be licensed under the same or a compatible license if shared. For example, if your software were to be put under a strong copyleft license, everybody publishing software that uses your software would need to put it under the same license. Because of only few rulings in courts, the extent of this requirement is disputed <span class="citation" data-cites="Wikipedia2024">(<a href="#ref-Wikipedia2024" role="doc-biblioref">Wikipedia contributors 2024</a>)</span>.</li>
@@ -436,16 +458,13 @@ Note&nbsp;2: Other Work Types
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip&nbsp;1: Projects Involving R Code
+Tip&nbsp;2: Projects Involving R Code
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>In most cases, the output of software, like images or tables, does not depend on its license. Therefore, if you use an R package under a copyleft license to create a figure, you are likely the copyright owner. However, if the output is based on data, it can be considered a derivative work and the license of the data also applies. For example, maps may be considered as a derivative of the geographic data they are based on.</p>
-<p>If a Quarto document contains both R code and writing, one may wonder what type of license to apply. It is possible to make such a file simultaneously available under two licenses, at the choice of the recipient: Either under a specified software license, or under a Creative Commons license<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. This is called dual-licensing and makes it easier to reuse both rendered PDF as well as the code. For example, one could write:</p>
-<blockquote class="blockquote">
-<p>The Quarto files in this project are made available under CC0&nbsp;1.0 or (at your option) under the terms of the Apache Software License&nbsp;2.0.</p>
-</blockquote>
-<p>It is disputed whether software that uses an R package under AGPLv3 or GPLv3<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> can only be published under a GPL-compatible license – or even has to be published under the same license. Posit, the company behind RStudio, does not believe that to be the case <span class="citation" data-cites="Wickham2023PackagesLicense">(see also <a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham and Bryan 2023</a>)</span>. You can learn which license an installed package uses via <code>packageDescription("&lt;PACKAGE_NAME&gt;", fields = "License")</code>. And to identify which licenses are being used by the R packages your project depends on, you can use the following code:</p>
+<p>It is disputed whether software that uses an R package under AGPLv3 or GPLv3<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> can only be published under a GPL-compatible license – or even has to be published under the same license. Posit, the company behind RStudio, does not believe that to be the case <span class="citation" data-cites="Wickham2023PackagesLicense">(see also <a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham and Bryan 2023</a>)</span>.</p>
+<p>You can learn which license an installed package uses via <code>packageDescription("&lt;PACKAGE_NAME&gt;", fields = "License")</code>. And to identify which licenses are being used by the R packages your project depends on, you can use the following code:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  pak<span class="sc">::</span><span class="fu">pkg_deps</span>(<span class="at">dependencies =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
@@ -465,7 +484,7 @@ Tip&nbsp;1: Projects Involving R Code
 </ul>
 <p>From the Creative Commons licenses, only <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> does not require providing attribution. All software licenses in <a href="#fig-flowchart-non-data" class="quarto-xref">Figure&nbsp;2</a> require providing attribution, although only <a href="https://choosealicense.com/licenses/apache-2.0/">Apache&nbsp;2.0</a> and <a href="https://choosealicense.com/licenses/agpl-3.0/">AGPLv3</a> require others to indicate changes. For data, the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> allows for technological measures that restrict the work only if a version of the database is provided in parallel without such measures.</p>
 <div id="nte-silos" class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -474,7 +493,7 @@ Note&nbsp;3: Other Restrictions
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>As indicated before, a free/open license must allow creating derivative works and must allow exercising the rights granted by it <em>for any purpose</em>, including commercial use. There are a few good resources on the reasoning behind that <span class="citation" data-cites="Klimpel2013 ODI2015">(e.g., see <a href="#ref-Klimpel2013" role="doc-biblioref">Klimpel 2013</a>; <a href="#ref-ODI2015" role="doc-biblioref">Open Data Institute 2015</a>)</span>, but we would like to highlight one reason in particular.</p>
 <p>With the rights provided by free/open licenses comes the possibility to build on and combine multiple works by different authors, which is essential for any cultural and scientific activity. However, this is only possible if the various licenses involved are compatible with each other. For example, one is allowed to remix two figures if the first is licensed under CC&nbsp;BY&nbsp;4.0 and the second under CC&nbsp;BY-SA&nbsp;4.0 because the licenses were written to be compatible with each other <span class="citation" data-cites="CC2024FAQ">(compare <a href="#ref-CC2024FAQ" role="doc-biblioref">Creative Commons 2024b</a>)</span>. Also note that CC&nbsp;BY-SA&nbsp;4.0 is <a href="https://creativecommons.org/compatiblelicenses">one-way compatible</a> with the GPLv3, which in turn is compatible with the AGPLv3.</p>
@@ -493,11 +512,11 @@ Note&nbsp;3: Other Restrictions
 <section id="which-licenses-to-choose-for-a-project" class="level2">
 <h2 class="anchored" data-anchor-id="which-licenses-to-choose-for-a-project">Which Licenses to Choose for a Project?</h2>
 <p>So far, we only discussed how to choose a license for works <em>of one type</em>. But what if you want to share a project with all kinds of files? For example, the project from this tutorial (among other things) includes a data file, a manuscript file with intermingled code and writing, and an R file. And what if you also want to share files by others, as is the case with <code>apaquarto</code> which you may have installed in this project?</p>
-<p>The answer is that you need to indicate the license on a per-file or per-folder basis (rather than choosing one for the whole project). The easiest approach is to make note of every foreign work included in your project and record its license. Then, dual-license all the remaining files, which are yours, under a code and a non-code license in parallel as explained in <a href="#tip-license-r" class="quarto-xref">Tip&nbsp;1</a>.</p>
+<p>The answer is that you need to indicate the license on a per-file or per-folder basis (rather than choosing one for the whole project). The easiest approach is to make note of every foreign work included in your project and record its license. Then, dual-license all the remaining files, which are yours, under a code and a non-code license in parallel as explained in <a href="#tip-license-r" class="quarto-xref">Tip&nbsp;2</a>.</p>
 </section>
 <section id="applying-the-license" class="level2">
 <h2 class="anchored" data-anchor-id="applying-the-license">Applying the License</h2>
-<p>Having selected the licenses of your choice – again, you might need multiple ones depending on the types of works your project contains –, we encourage you to read through the full license text (or at least a legal summary) to understand their effect. Then, you can record the license of existing content and apply the licenses of your own contributions. Mostly, this just means indicating which license applies to which file or folder, usually in the project’s README (among other places), whose creation will be discussed “<a href="./make_readme.html">later</a>”.</p>
+<p>Having selected the licenses of your choice – again, you might need multiple ones depending on the types of works your project contains –, we encourage you to read through the full license text (or at least a legal summary) to understand their effect. Then, you can record the license of existing content and apply the licenses of your own contributions. Mostly, this just means indicating which license applies to which file or folder, usually in the project’s README (among other places), whose creation will be discussed <a href="./make_readme.html">later</a>.</p>
 <div id="cau-license-versions" class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -512,14 +531,14 @@ Caution&nbsp;2: License Versions Are Important
 <p>For the AGPLv3 it is even recommended to state whether a work is licensed under exactly the indicated version of the license or, alternatively, also under newer versions of the license <span class="citation" data-cites="Stallman2022">(<a href="#ref-Stallman2022" role="doc-biblioref">Stallman 2022</a>)</span>.</p>
 </div>
 </div>
-<p>For example, the <code>apaquarto</code> extension that you included in your project is a work by others.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> You need to indicate its license so that others know what they are allowed to do – and, of course, you need to comply with any terms yourself, such as retaining the copyright notice.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> In contrast, if it were not for this tutorial, the manuscript would contain your own work and you would need to indicate under which license you provide it to others.</p>
+<p>For example, the <code>apaquarto</code> extension that you included in your project is a work by others.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> You need to indicate its license so that others know what they are allowed to do – and, of course, you need to comply with any terms yourself, such as retaining the copyright notice.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> In contrast, if it were not for this tutorial, the manuscript would contain your own work and you would need to indicate under which license you provide it to others.</p>
 <div id="tip-license-help" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip&nbsp;2: Follow the Help Provided by the License Authors
+Tip&nbsp;3: Follow the Help Provided by the License Authors
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -548,11 +567,11 @@ Tip&nbsp;2: Follow the Help Provided by the License Authors
 </div>
 </div>
 <p>While it is common to state the chosen license(s) in the README, usually one of the following actions is taken in addition:</p>
-<p>In the simplest case, one just creates a file called <code>LICENSE.txt</code> where the full text of the license is copied verbatim. This is a practice propagated by GitHub, which provides instructions for many licenses via <a href="https://choosealicense.com/licenses/">ChooseALicense.com</a>. However, if the project is not completely covered by one single license, this practice may become unwieldy. For example, if a project contains different types of works by different authors, the <code>LICENSE.txt</code> needs to detail which file is covered by which license(s), along with any copyright notices.</p>
+<p>In the simplest case, one just creates a file called <code>LICENSE.txt</code> where the full text of the license is copied verbatim. This is a practice propagated by GitHub, which provides instructions for and comparisons of many licenses via <a href="https://choosealicense.com/licenses/">ChooseALicense.com</a>. However, if the project is not completely covered by one single license, this practice may become unwieldy. For example, if a project contains different types of works by different authors, the <code>LICENSE.txt</code> needs to detail which file is covered by which license(s), along with any copyright notices.</p>
 <p>Individual programming languages also have their own way of stating which license a package is distributed under. For R packages, this is usually set by the field <code>License</code> in the file <code>DESCRIPTION</code> <span class="citation" data-cites="Wickham2023PackagesLicense">(<a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham and Bryan 2023</a>)</span>.</p>
 <p>Finally, <a href="#nte-reuse" class="quarto-xref">Note&nbsp;4</a> explains how to use the <a href="https://reuse.software/">REUSE</a> specification to make the choice of license machine-readable. This is the approach we recommend taking.</p>
 <div id="nte-reuse" class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -561,7 +580,7 @@ Note&nbsp;4: Using REUSE to Record Licenses
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Every major free/open license has a unique <a href="https://spdx.org/licenses/">SPDX identifier</a> which allows communicating the license choice unequivocally. We will be using that to indicate the license for every file in your project, along with the year of publication and the copyright holder. To do this, we add a comment to the beginning of every file and include the two tags <code>SPDX-FileCopyrightText</code> and <code>SPDX-License-Identifier</code>. How this works depends on the file type, as the syntax for a comment varies.</p>
 <p>For example, if you previously created the file <code>create_data_dictionary.R</code>, you can now add the following comment to the beginning of the file, replacing <code>&lt;YEAR&gt;</code> and <code>&lt;NAME&gt;</code> with the current year and your name – of course, you can also choose a different license:</p>
@@ -607,7 +626,7 @@ Note&nbsp;4: Using REUSE to Record Licenses
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-License-Identifier:</span><span class="co"> CC-BY-4.0</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Note that <code>Manuscript.qmd</code> was provided to you under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, which is what you indicate with the previous comment. If you edited the file, you may also add yourself.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a></p>
+<p>Note that <code>Manuscript.qmd</code> was provided to you under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, which is what you indicate with the previous comment. If you edited the file, you may also add yourself.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
 <p>Sometimes, there are file types which do not allow for adding the license information inside them, such as PDF and CSV files. For these, a corresponding <code>.license</code> file can be created. Try the following command which indicates that the data were published under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -857,12 +876,14 @@ Wikipedia contributors. 2024. <span>“<span>GNU</span> General Public License �
 <li id="fn2"><p>In fact, the software licenses we recommend on this page have been specifically selected to provide an express grant of patent rights.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Copyleft licenses even require you to choose the same or a compatible license.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>Of course, this is only a heuristic and there might be good reasons to deviate from community norms.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>So called because copyleft licenses make content permanently free, thus turning copyright around: © → 🄯. In the realm of Creative Commons licenses, copyleft is also called <em>share alike</em>.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>that is, a license for writing, image, audio, and video<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>a variant of the AGPLv3 that does not cover software running as a service<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Unless you are the author of the <code>apaquarto</code> extension.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>In this particular case, <code>apaquarto</code> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>, which does not require you to retain a copyright notice. In fact, it’s an extremely permissive license.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them, although you do not need to provide your real name.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>because (among other reasons) they explicitly disclaim any conveyance of patent rights<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>because they often require to keep the license notice intact<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>that is, a license for writing, image, audio, and video<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>So called because copyleft licenses make content permanently free, thus turning copyright around: © → 🄯. In the realm of Creative Commons licenses, copyleft is also called <em>share alike</em>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>a variant of the AGPLv3 that does not cover software running as a service<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Unless you are the author of the <code>apaquarto</code> extension.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>In this particular case, <code>apaquarto</code> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>, which does not require you to retain a copyright notice. In fact, it’s an extremely permissive license.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them, although you do not need to provide your real name.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1311,7 +1332,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
