@@ -294,8 +294,13 @@ div.csl-indent {
 <p>“Choosing a License” involves:</p>
 <ol type="1">
 <li>Recording the copyright notices and licenses for files by others (for example, in a file called <code>LICENSE.txt</code>) and following all their additional requirements.</li>
-<li>In the simplest case, choosing two licenses (one for code, one for everything else) which to apply simultaneously (at the choice of the recipient) to all own files (for example, again by recording the license in the file <code>LICENSE.txt</code>).</li>
+<li>In the simplest case, choosing two licenses (one for code, one for everything else) which to apply simultaneously to all own files (for example, again by recording the license in the file <code>LICENSE.txt</code>). Recipients are then free to choose under which of the two licenses to use the material.</li>
 </ol>
+<p>We recommend to choose <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> and <a href="https://choosealicense.com/licenses/apache-2.0/">Apache&nbsp;2.0</a> for all own works. Take your time to read the summaries behind the links and/or the actual license text to understand its legal effect.</p>
+<p>You can adapt the following wording to your use case:</p>
+<blockquote class="blockquote">
+<p>Except otherwise noted, all files in this project are made available under CC0&nbsp;1.0 or (at your option) under the terms of the Apache Software License&nbsp;2.0.</p>
+</blockquote>
 </section>
 <section id="a-primer-on-licenses" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="a-primer-on-licenses">A Primer on Licenses</h2>
@@ -438,7 +443,7 @@ Tip&nbsp;1: Projects Involving R Code
 <p>In most cases, the output of software, like images or tables, does not depend on its license. Therefore, if you use an R package under a copyleft license to create a figure, you are likely the copyright owner. However, if the output is based on data, it can be considered a derivative work and the license of the data also applies. For example, maps may be considered as a derivative of the geographic data they are based on.</p>
 <p>If a Quarto document contains both R code and writing, one may wonder what type of license to apply. It is possible to make such a file simultaneously available under two licenses, at the choice of the recipient: Either under a specified software license, or under a Creative Commons license<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. This is called dual-licensing and makes it easier to reuse both rendered PDF as well as the code. For example, one could write:</p>
 <blockquote class="blockquote">
-<p>The Quarto files in this project are made available under CC&nbsp;BY-SA&nbsp;4.0, or (at your option) under the terms of the Apache Software License&nbsp;2.0.</p>
+<p>The Quarto files in this project are made available under CC0&nbsp;1.0 or (at your option) under the terms of the Apache Software License&nbsp;2.0.</p>
 </blockquote>
 <p>It is disputed whether software that uses an R package under AGPLv3 or GPLv3<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> can only be published under a GPL-compatible license – or even has to be published under the same license. Posit, the company behind RStudio, does not believe that to be the case <span class="citation" data-cites="Wickham2023PackagesLicense">(see also <a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham and Bryan 2023</a>)</span>. You can learn which license an installed package uses via <code>packageDescription("&lt;PACKAGE_NAME&gt;", fields = "License")</code>. And to identify which licenses are being used by the R packages your project depends on, you can use the following code:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
@@ -1306,7 +1311,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","loop":false,"closeEffect":"zoom","descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
