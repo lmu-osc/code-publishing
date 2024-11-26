@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,10 +57,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-541bc07ff8453ee93dc7a05066b1845d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -237,7 +237,7 @@ div.csl-indent {
 
 <section id="where-to-deposit-software" class="level2">
 <h2 class="anchored" data-anchor-id="where-to-deposit-software">Where to Deposit Software</h2>
-<p>The project is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder <span class="citation" data-cites="Jackson2018">(excerpt from <a href="#ref-Jackson2018" role="doc-biblioref">Jackson and The Software Sustainability Institute 2018</a>, with footnotes removed, licensed under <a href="https://creativecommons.org/licenses/by/4.0/" role="doc-biblioref">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
+<p>The project is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder <span class="citation" data-cites="Jackson2018">(excerpt from <a href="#ref-Jackson2018" role="doc-biblioref">Jackson and The Software Sustainability Institute 2018</a>, with footnotes removed, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
 <blockquote class="blockquote">
 <p><strong>Does the digital repository give you a unique persistent digital identifier for your deposit?</strong></p>
 <p>Persistent digital identifiers are identifiers that are provided under the assumption that they, and the digital objects they refer to, will remain available long term. Examples of unique persistent digital identifiers include DOIs and ARKs. The use of persistent digital identifiers for research outputs, including papers, data and software, and the use of these for citation purposes, is becoming prevalent in research.</p>
@@ -254,7 +254,7 @@ div.csl-indent {
 <p><strong>Is the digital repository accredited or certified?</strong></p>
 <p>The digital repository may be accredited or certified by an independent agency that reviews digital repositories according to various criteria related to its policies and processes. The presence of an accreditation or certification may provide you with an additional degree of confidence that the digital repository meets your requirements. For example, the Data Seal of Approval can be awarded to digital repositories who satisfy a set of quality guidelines relating to how they manage, preserve and make available the deposits they hold. The presence of a Data Seal of Approval could give you additional confidence that a digital repository is suitable for holding your deposit.</p>
 </blockquote>
-<p>Additional guidance is provided by <span class="citation" data-cites="Daquin2023">d’Aquin et al. (<a href="#ref-Daquin2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="Garijo2022">Garijo et al. (<a href="#ref-Garijo2022" role="doc-biblioref">2022</a>)</span>, and <span class="citation" data-cites="ScienceEurope2021">Science Europe (<a href="#ref-ScienceEurope2021" role="doc-biblioref">2021</a>)</span>.</p>
+<p>Additional guidance is provided by <span class="citation" data-cites="Daquin2023">d’Aquin et al. (<a href="#ref-Daquin2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="Garijo2022">Garijo et al. (<a href="#ref-Garijo2022" role="doc-biblioref">2022</a>)</span>, and <span class="citation" data-cites="ScienceEurope2021">Science Europe (<a href="#ref-ScienceEurope2021" role="doc-biblioref">2021</a>)</span>. You can use the registry of research data repositories <a href="https://www.re3data.org/">re3data.org</a> to find one that matches your criteria. We think that the <a href="https://www.softwareheritage.org/">Software Heritage code archive</a> and <a href="https://zenodo.org/">Zenodo</a> are good choices, but don’t forget to also check your local institutions for recommendations.</p>
 </section>
 <section id="using-zenodo-to-archive-your-project" class="level2">
 <h2 class="anchored" data-anchor-id="using-zenodo-to-archive-your-project">Using Zenodo to Archive Your Project</h2>
@@ -390,8 +390,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -502,7 +500,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
