@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.37">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -92,10 +92,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-541bc07ff8453ee93dc7a05066b1845d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-650dd1a6464f4a1c4dc33bcbd6e46959.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -444,7 +444,7 @@ Tip&nbsp;1
 <section id="decide-on-structure" class="level2">
 <h2 class="anchored" data-anchor-id="decide-on-structure">Decide on Structure</h2>
 <p>Before adding your project files, it is helpful to decide on a directory structure, that is, how to call each file and where to put it. In general, the directory structure should facilitate understanding a project by breaking it into logical chunks. There is no single best solution, as a good structure depends on where a project’s complexity lies. However, it is usually helpful if the different files and folders reflect the execution order. For example, if there are multiple data processing stages, one can possibly differentiate input (raw data), intermediate (processed data), and output files (e.g., figures) and put them into separate folders. Similarly, the corresponding code files (e.g., preparation, modeling, visualization) can be prefixed with increasing numbers.</p>
-<p>Luckily, there are already numerous proposals for how to organize one’s project files, both general <span class="citation" data-cites="Wilson2017 TIER4">(e.g., <a href="#ref-Wilson2017" role="doc-biblioref">Wilson et al. 2017</a>; <a href="#ref-TIER4" role="doc-biblioref">Project TIER 2021</a>)</span> as well as specific to a particular programming language <span class="citation" data-cites="Marwick2018 Vuorre2021">(e.g., <a href="#ref-Marwick2018" role="doc-biblioref">Marwick, Boettiger, and Mullen 2018</a>; <a href="#ref-Vuorre2021" role="doc-biblioref">Vuorre and Crump 2021</a>)</span> or journal <span class="citation" data-cites="Vilhuber2021">(<a href="#ref-Vilhuber2021" role="doc-biblioref">Vilhuber 2021</a>)</span>. We recommend you to follow the standards of your field.</p>
+<p>Luckily, there are already numerous proposals for how to organize one’s project files, both general <span class="citation" data-cites="Wilson2017 TIER4">(<a href="#ref-TIER4" role="doc-biblioref">Project TIER, 2021</a>; e.g., <a href="#ref-Wilson2017" role="doc-biblioref">Wilson et al., 2017</a>)</span> as well as specific to a particular programming language <span class="citation" data-cites="Marwick2018 Vuorre2021">(e.g., <a href="#ref-Marwick2018" role="doc-biblioref">Marwick et al., 2018</a>; <a href="#ref-Vuorre2021" role="doc-biblioref">Vuorre &amp; Crump, 2021</a>)</span> or journal <span class="citation" data-cites="Vilhuber2021">(<a href="#ref-Vilhuber2021" role="doc-biblioref">Vilhuber, 2021</a>)</span>. We recommend you to follow the standards of your field.</p>
 <p>For the purpose of this tutorial, we will provide you with a data set and a corresponding analysis. They are simple enough to be put together in the root folder of your project.</p>
 </section>
 <section id="add-data" class="level2 page-columns page-full">
@@ -535,12 +535,12 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
 <!-- preamble start -->
 
     <script>
-      function styleCell_rxqswyk5gof1r9odq1cz(i, j, css_id) {
-        var table = document.getElementById("tinytable_rxqswyk5gof1r9odq1cz");
+      function styleCell_qnfxum8l05b5w4n0hrha(i, j, css_id) {
+        var table = document.getElementById("tinytable_qnfxum8l05b5w4n0hrha");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_rxqswyk5gof1r9odq1cz');
+        var table = document.getElementById('tinytable_qnfxum8l05b5w4n0hrha');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -548,8 +548,8 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_rxqswyk5gof1r9odq1cz(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_rxqswyk5gof1r9odq1cz");
+      function spanCell_qnfxum8l05b5w4n0hrha(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_qnfxum8l05b5w4n0hrha");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -575,21 +575,21 @@ Warning&nbsp;1: Consider Legal Restrictions Before Sharing
         targetCell.rowSpan = rowspan;
         targetCell.colSpan = colspan;
       }
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 0, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 1, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 2, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 3, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 4, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 5, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 6, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
-window.addEventListener('load', function () { styleCell_rxqswyk5gof1r9odq1cz(0, 7, 'tinytable_css_idaz4umq08vyuny7e3dctu') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 0, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 1, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 2, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 3, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 4, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 5, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 6, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
+window.addEventListener('load', function () { styleCell_qnfxum8l05b5w4n0hrha(0, 7, 'tinytable_css_idy5fa0eupoismfu1kdvyt') })
     </script>
 
     <style>
-    .table td.tinytable_css_idaz4umq08vyuny7e3dctu, .table th.tinytable_css_idaz4umq08vyuny7e3dctu {  border-bottom: solid 0.1em #d3d8dc; }
+    .table td.tinytable_css_idy5fa0eupoismfu1kdvyt, .table th.tinytable_css_idy5fa0eupoismfu1kdvyt {  border-bottom: solid 0.1em #d3d8dc; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_rxqswyk5gof1r9odq1cz" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_qnfxum8l05b5w4n0hrha" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -891,7 +891,7 @@ Note&nbsp;2: Create Machine-Readable Variable Documentation
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="fu">c</span>(<span class="dv">2007</span>, <span class="dv">2008</span>, <span class="dv">2009</span>)</span>
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Another alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a>.</p>
-<p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data. For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. Finally, the package is used to create a metadata file that contains the schema.</p>
+<p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. Finally, the package is used to create a metadata file that contains the schema.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data and create schema</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>dat_filename <span class="ot">&lt;-</span> <span class="st">"Data.csv"</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(dat_filename)</span>
@@ -1096,7 +1096,7 @@ Warning&nbsp;3: Beware of Credentials
 <div class="callout-body-container callout-body">
 <p>Sometimes, a data analysis requires the interaction with online services:</p>
 <ul>
-<li>Data may be collected from social network sites using their APIs<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> or downloaded from a data repository, or</li>
+<li>Data may be collected from social network sites using their APIs<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> or downloaded from a data repository, or</li>
 <li>an analysis may be conducted with the help of AI providers.</li>
 </ul>
 <p>In these cases, make sure that the code you check in to Git does not contain any credentials that are required for accessing these services. Instead, make use of environment variables which are defined in a location that is excluded from version control. When programming with R, you can define them in a file called <code>.Renviron</code> in the root of your project folder:</p>
@@ -1109,7 +1109,7 @@ Warning&nbsp;3: Beware of Credentials
 </div>
 <p>When you start a new session from the project root, the file is automatically read by R and the environment variables can be accessed using <code>Sys.getenv()</code>:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">query_api</span>(..., <span class="at">api_key =</span> <span class="fu">Sys.getenv</span>(<span class="st">"MY_FIRST_KEY"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Make sure that <code>.Renviron</code> is added to your <code>.gitignore</code> file in order to exclude it from the Git repository. If you already committed a file that contains credentials, you can follow <span class="citation" data-cites="Chacon2024">Chacon and Straub (<a href="#ref-Chacon2024" role="doc-biblioref">2024</a>)</span>.</p>
+<p>Make sure that <code>.Renviron</code> is added to your <code>.gitignore</code> file in order to exclude it from the Git repository. If you already committed a file that contains credentials, you can follow <span class="citation" data-cites="Chacon2024">Chacon &amp; Straub (<a href="#ref-Chacon2024" role="doc-biblioref">2024</a>)</span>.</p>
 </div>
 </div>
 <section id="coding-best-practices" class="level3">
@@ -1121,17 +1121,17 @@ Warning&nbsp;3: Beware of Credentials
 <li><p><strong>Don’t repeat yourself.</strong> Use variables and functions before you start to write (or copy-paste) the same thing twice.</p></li>
 <li><p><strong>Use comments to explain why you do things.</strong> The code already shows what you do. Use comments to summarize it and explain why you do it.</p></li>
 <li><p><strong>Don’t reinvent the wheel.</strong> With R, chances are that what you need to do is greatly facilitated by a package from one of many high-quality collections such as <a href="https://ropensci.org/packages/">rOpenSci</a>, <a href="https://github.com/r-lib">r-lib</a>, <a href="https://www.tidyverse.org/packages/">Tidyverse</a>, or <a href="https://fastverse.github.io/fastverse/">fastverse</a>.</p></li>
-<li><p><strong>Think twice about your dependencies.</strong> Every dependency increases the risk of irreproducibility in the future. Prefer packages that are well-maintained and light on dependencies<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. We also recommend you to read “When should you take a dependency?” by <span class="citation" data-cites="Wickham2023PackagesDependency">Wickham and Bryan (<a href="#ref-Wickham2023PackagesDependency" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Think twice about your dependencies.</strong> Every dependency increases the risk of irreproducibility in the future. Prefer packages that are well-maintained and light on dependencies<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. We also recommend you to read “When should you take a dependency?” by <span class="citation" data-cites="Wickham2023PackagesDependency">Wickham &amp; Bryan (<a href="#ref-Wickham2023PackagesDependency" role="doc-biblioref">2023</a>)</span>.</p></li>
 <li><p><strong>Fail early, often and noisily.</strong> Whenever you expect a certain state, use assertions to be sure. In R, you can use <code>stopifnot()</code> to make sure that a condition is actually true.</p></li>
-<li><p><strong>Test your code.</strong> Test your code with scenarios where you know what the result should be. Turn bugs you discovered into test cases. Use linting tools<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> to identify common mistakes in your code, for example, the R package <a href="https://lintr.r-lib.org/"><code>lintr</code></a>.</p></li>
-<li><p><strong>Read through a style guide and follow it.</strong> A style guide is a set of stylistic conventions that improve the code quality. R users are recommended to read Wickham’s <span class="citation" data-cites="Wickham2022Style">(<a href="#ref-Wickham2022Style" role="doc-biblioref">2022</a>)</span> “Tidyverse style guide” and use the R package <a href="https://styler.r-lib.org/"><code>styler</code></a>. Python users may benefit from reading the “Style Guide for Python Code” by <span class="citation" data-cites="VanRossum2013">Rossum, Warsaw, and Coghlan (<a href="#ref-VanRossum2013" role="doc-biblioref">2013</a>)</span>. And even if you don’t follow a style guide, be consistent.</p></li>
+<li><p><strong>Test your code.</strong> Test your code with scenarios where you know what the result should be. Turn bugs you discovered into test cases. Use linting tools<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> to identify common mistakes in your code, for example, the R package <a href="https://lintr.r-lib.org/"><code>lintr</code></a>.</p></li>
+<li><p><strong>Read through a style guide and follow it.</strong> A style guide is a set of stylistic conventions that improve the code quality. R users are recommended to read Wickham’s <span class="citation" data-cites="Wickham2022Style">(<a href="#ref-Wickham2022Style" role="doc-biblioref">2022</a>)</span> “Tidyverse style guide” and use the R package <a href="https://styler.r-lib.org/"><code>styler</code></a>. Python users may benefit from reading the “Style Guide for Python Code” by <span class="citation" data-cites="VanRossum2013">Rossum et al. (<a href="#ref-VanRossum2013" role="doc-biblioref">2013</a>)</span>. And even if you don’t follow a style guide, be consistent.</p></li>
 </ul>
 <p>This is only a brief summary and there is much more to be learned about coding practices. If you want to dive deeper we recommend the following resources:</p>
 <ul>
-<li>“Tidy design principles” <span class="citation" data-cites="Wickham2023Design">(<a href="#ref-Wickham2023Design" role="doc-biblioref">Wickham 2023</a>)</span></li>
-<li>“The Good Research Code Handbook” <span class="citation" data-cites="Mineault2021">(<a href="#ref-Mineault2021" role="doc-biblioref">Mineault and Nozawa 2021</a>)</span></li>
-<li>“Quality assurance of code for analysis and research” <span class="citation" data-cites="UKGovernment2020">(<a href="#ref-UKGovernment2020" role="doc-biblioref">UK Government Analytical Community 2020</a>)</span></li>
-<li>“The Art of UNIX Programming” <span class="citation" data-cites="Raymond2003">(<a href="#ref-Raymond2003" role="doc-biblioref">Raymond 2003</a>)</span></li>
+<li>“Tidy design principles” <span class="citation" data-cites="Wickham2023Design">(<a href="#ref-Wickham2023Design" role="doc-biblioref">Wickham, 2023</a>)</span></li>
+<li>“The Good Research Code Handbook” <span class="citation" data-cites="Mineault2021">(<a href="#ref-Mineault2021" role="doc-biblioref">Mineault &amp; Nozawa, 2021</a>)</span></li>
+<li>“Quality assurance of code for analysis and research” <span class="citation" data-cites="UKGovernment2020">(<a href="#ref-UKGovernment2020" role="doc-biblioref">UK Government Analytical Community, 2020</a>)</span></li>
+<li>“The Art of UNIX Programming” <span class="citation" data-cites="Raymond2003">(<a href="#ref-Raymond2003" role="doc-biblioref">Raymond, 2003</a>)</span></li>
 </ul>
 <blockquote class="blockquote">
 <p>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</p>
@@ -1141,14 +1141,14 @@ Warning&nbsp;3: Beware of Credentials
 </section>
 <section id="the-last-mile" class="level2">
 <h2 class="anchored" data-anchor-id="the-last-mile">The Last Mile</h2>
-<p><code>renv</code> only records the versions of R packages and of R itself. This means that potential system dependencies of R packages and other tools utilized in the project are not documented anywhere, including Quarto.<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> We will manually write them down when <a href="./make_readme.html">creating a README</a>. For now, however, there is one simple step you can take to record the version of Quarto (and a few other dependencies). Do run the following:</p>
+<p><code>renv</code> only records the versions of R packages and of R itself. This means that potential system dependencies of R packages and other tools utilized in the project are not documented anywhere, including Quarto.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> We will manually write them down when <a href="./make_readme.html">creating a README</a>. For now, however, there is one simple step you can take to record the version of Quarto (and a few other dependencies). Do run the following:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
 <div class="sourceCode" id="cb25" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use binder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will create a few additional files which facilitate reconstructing the computational environment in the future.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> As always, commit your changes:</p>
+<p>This will create a few additional files which facilitate reconstructing the computational environment in the future.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> As always, commit your changes:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
@@ -1164,59 +1164,60 @@ Warning&nbsp;3: Beware of Credentials
 </section>
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-Chacon2024" class="csl-entry" role="listitem">
-Chacon, Scott, and Ben Straub. 2024. <span>“Removing a File from Every Commit.”</span> In <em>Pro Git</em>, Second edition. Apress. <a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#_removing_file_every_commit">https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#_removing_file_every_commit</a>.
+Chacon, S., &amp; Straub, B. (2024). Removing a file from every commit. In <em>Pro git</em> (Second edition). Apress. <a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#_removing_file_every_commit">https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#_removing_file_every_commit</a>
 </div>
 <div id="ref-Marwick2018" class="csl-entry" role="listitem">
-Marwick, Ben, Carl Boettiger, and Lincoln Mullen. 2018. <span>“Packaging Data Analytical Work Reproducibly Using <span>R</span> (and Friends).”</span> <em>The American Statistician</em> 72 (1): 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>.
+Marwick, B., Boettiger, C., &amp; Mullen, L. (2018). Packaging data analytical work reproducibly using <span>R</span> (and friends). <em>The American Statistician</em>, <em>72</em>(1), 80–88. <a href="https://doi.org/10.1080/00031305.2017.1375986">https://doi.org/10.1080/00031305.2017.1375986</a>
 </div>
 <div id="ref-Mineault2021" class="csl-entry" role="listitem">
-Mineault, Patrick, and Kento Nozawa. 2021. <span>“The Good Research Code Handbook.”</span> <a href="https://goodresearch.dev/" class="uri">https://goodresearch.dev/</a>. December 21, 2021. <a href="https://doi.org/10.5281/ZENODO.5796873">https://doi.org/10.5281/ZENODO.5796873</a>.
+Mineault, P., &amp; Nozawa, K. (2021, December 21). <em>The good research code handbook</em>. <a href="https://goodresearch.dev/" class="uri">https://goodresearch.dev/</a>. <a href="https://doi.org/10.5281/ZENODO.5796873">https://doi.org/10.5281/ZENODO.5796873</a>
 </div>
 <div id="ref-TIER4" class="csl-entry" role="listitem">
-Project TIER. 2021. <span>“<span>TIER</span> Protocol 4.0.”</span> 2021. <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">https://www.projecttier.org/tier-protocol/protocol-4-0/</a>.
+Project TIER. (2021). <em><span>TIER</span> protocol 4.0</em>. <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/">https://www.projecttier.org/tier-protocol/protocol-4-0/</a>
 </div>
 <div id="ref-APA2020" class="csl-entry" role="listitem">
-<em>Publication Manual of the American Psychological Association</em>. 2020. 7th ed. Washington: American Psychological Association. <a href="https://doi.org/10.1037/0000165-000">https://doi.org/10.1037/0000165-000</a>.
+<em>Publication manual of the american psychological association</em> (7th ed.). (2020). American Psychological Association. <a href="https://doi.org/10.1037/0000165-000">https://doi.org/10.1037/0000165-000</a>
 </div>
 <div id="ref-Raymond2003" class="csl-entry" role="listitem">
-Raymond, Eric S. 2003. <em>The Art of <span>UNIX</span> Programming: With Contributions from Thirteen <span>UNIX</span> Pioneers, Including Its Inventor, Ken Thompson</em>. Addison-Wesley Professional Computing Series. Boston: Addison-Wesley. <a href="https://www.arp242.net/the-art-of-unix-programming/">https://www.arp242.net/the-art-of-unix-programming/</a>.
+Raymond, E. S. (2003). <em>The art of <span>UNIX</span> programming: With contributions from thirteen <span>UNIX</span> pioneers, including its inventor, ken thompson</em>. Addison-Wesley. <a href="https://www.arp242.net/the-art-of-unix-programming/">https://www.arp242.net/the-art-of-unix-programming/</a>
 </div>
 <div id="ref-VanRossum2013" class="csl-entry" role="listitem">
-Rossum, Guido van, Barry Warsaw, and Alyssa Coghlan. 2013. <span>“Style Guide for Python Code. Python Enhancement Proposals (<span>PEPs</span>).”</span> August 1, 2013. <a href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a>.
+Rossum, G. van, Warsaw, B., &amp; Coghlan, A. (2013, August 1). <em>Style guide for python code. Python enhancement proposals (<span>PEPs</span>)</em>. <a href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a>
 </div>
 <div id="ref-UKGovernment2020" class="csl-entry" role="listitem">
-UK Government Analytical Community. 2020. <span>“Quality Assurance of Code for Analysis and Research.”</span> 2020. <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/">https://best-practice-and-impact.github.io/qa-of-code-guidance/</a>.
+UK Government Analytical Community. (2020). <em>Quality assurance of code for analysis and research</em>. <a href="https://best-practice-and-impact.github.io/qa-of-code-guidance/">https://best-practice-and-impact.github.io/qa-of-code-guidance/</a>
 </div>
 <div id="ref-Vilhuber2021" class="csl-entry" role="listitem">
-Vilhuber, Lars. 2021. <span>“Preparing Your Files for Verification. Office of the <span>AEA</span> Data Editor.”</span> April 8, 2021. <a href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit">https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit</a>.
+Vilhuber, L. (2021, April 8). <em>Preparing your files for verification. Office of the <span>AEA</span> data editor</em>. <a href="https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit">https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit</a>
 </div>
 <div id="ref-Vuorre2021" class="csl-entry" role="listitem">
-Vuorre, Matti, and Matthew J. C. Crump. 2021. <span>“Sharing and Organizing Research Products as <span>R</span> Packages.”</span> <em>Behavior Research Methods</em> 53 (2): 792–802. <a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>.
+Vuorre, M., &amp; Crump, M. J. C. (2021). Sharing and organizing research products as <span>R</span> packages. <em>Behavior Research Methods</em>, <em>53</em>(2), 792–802. <a href="https://doi.org/10.3758/s13428-020-01436-x">https://doi.org/10.3758/s13428-020-01436-x</a>
 </div>
 <div id="ref-Wickham2022Style" class="csl-entry" role="listitem">
-Wickham, Hadley. 2022. <span>“The Tidyverse Style Guide.”</span> July 24, 2022. <a href="https://style.tidyverse.org/">https://style.tidyverse.org/</a>.
+Wickham, H. (2022, July 24). <em>The tidyverse style guide</em>. <a href="https://style.tidyverse.org/">https://style.tidyverse.org/</a>
 </div>
 <div id="ref-Wickham2023Design" class="csl-entry" role="listitem">
-———. 2023. <span>“Tidy Design Principles.”</span> November 20, 2023. <a href="https://design.tidyverse.org/">https://design.tidyverse.org/</a>.
+Wickham, H. (2023, November 20). <em>Tidy design principles</em>. <a href="https://design.tidyverse.org/">https://design.tidyverse.org/</a>
 </div>
 <div id="ref-Wickham2023PackagesDependency" class="csl-entry" role="listitem">
-Wickham, Hadley, and Jennifer Bryan. 2023. <span>“When Should You Take a Dependency?”</span> In <em>R Packages</em>, Second edition. O’Reilly Media. <a href="https://r-pkgs.org/dependencies-mindset-background.html#sec-dependencies-pros-cons">https://r-pkgs.org/dependencies-mindset-background.html#sec-dependencies-pros-cons</a>.
+Wickham, H., &amp; Bryan, J. (2023). When should you take a dependency? In <em>R packages</em> (Second edition). O’Reilly Media. <a href="https://r-pkgs.org/dependencies-mindset-background.html#sec-dependencies-pros-cons">https://r-pkgs.org/dependencies-mindset-background.html#sec-dependencies-pros-cons</a>
 </div>
 <div id="ref-Wilson2017" class="csl-entry" role="listitem">
-Wilson, Greg, Jennifer Bryan, Karen Cranston, Justin Kitzes, Lex Nederbragt, and Tracy K. Teal. 2017. <span>“Good Enough Practices in Scientific Computing.”</span> <em>PLOS Computational Biology</em> 13 (6): 1–20. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>.
+Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., &amp; Teal, T. K. (2017). Good enough practices in scientific computing. <em>PLOS Computational Biology</em>, <em>13</em>(6), 1–20. <a href="https://doi.org/10.1371/journal.pcbi.1005510">https://doi.org/10.1371/journal.pcbi.1005510</a>
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
 <li id="fn1"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://sdctools.github.io/sdcMicro/">sdcMicro</a>, or <a href="https://www.synthpop.org.uk/">Synthpop</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Note that the code provided does not alter the data file – no labels will be added to <code>Data.csv</code>. The labels are only added to a (temporary) copy of the data set within R in order to create the data dictionary.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>An <em>application programming interface</em> provides the capability to interact with other software using a programming language.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>You can use the function <code>pak::pkg_deps()</code> to count the total number of package dependencies in R.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>A linting tool analyzes your code without actually running it. This process is called static code analysis.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>As of August 2024, a proposal to record the version of Quarto has not been implemented, see <a href="https://github.com/rstudio/renv/issues/1143">rstudio/renv#1143</a>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Either using <a href="https://repo2docker.readthedocs.io/">repo2docker</a> or the public <a href="https://mybinder.org/">binder</a> service.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>In June 2024, <a href="https://datapackage.org/">version 2</a> of the frictionless data standard has been released. As of November 2024, the R package <code>frictionless</code> only supports the first version, though support for v2 is <a href="https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2">planned</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>An <em>application programming interface</em> provides the capability to interact with other software using a programming language.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>You can use the function <code>pak::pkg_deps()</code> to count the total number of package dependencies in R.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>A linting tool analyzes your code without actually running it. This process is called static code analysis.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>As of August 2024, a proposal to record the version of Quarto has not been implemented, see <a href="https://github.com/rstudio/renv/issues/1143">rstudio/renv#1143</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Either using <a href="https://repo2docker.readthedocs.io/">repo2docker</a> or the public <a href="https://mybinder.org/">binder</a> service.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

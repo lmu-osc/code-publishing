@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.37">
+<meta name="generator" content="quarto-1.6.39">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,10 +57,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-541bc07ff8453ee93dc7a05066b1845d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-650dd1a6464f4a1c4dc33bcbd6e46959.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -203,7 +203,15 @@ div.csl-indent {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
 <p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
 </div></div>
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-importance-of-sharing" id="toc-the-importance-of-sharing" class="nav-link active" data-scroll-target="#the-importance-of-sharing">The importance of sharing</a></li>
+  <li><a href="#linking-results-and-computations" id="toc-linking-results-and-computations" class="nav-link" data-scroll-target="#linking-results-and-computations">Linking results and computations</a></li>
+  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best practices</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -227,7 +235,24 @@ div.csl-indent {
 </header>
 
 
-<p>Together, we will create a research compendium whilst taking the following ten things into account <span class="citation" data-cites="Arguillas2022">(by <a href="#ref-Arguillas2022" role="doc-biblioref">Arguillas et al. 2022</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
+<p>In the following, we will provide a brief introduction to the concept of <em>research compendia</em>.</p>
+<section id="the-importance-of-sharing" class="level2">
+<h2 class="anchored" data-anchor-id="the-importance-of-sharing">The importance of sharing</h2>
+<p>Suppose you are reading an article about a new imaging method to turn seismological data into subsurface images. The article describes the ideas that went into developing this method and presents a few examples to illustrate its superiority over previous approaches. You got interested and would like to apply this method to your own data. However, with only the article available, it could take months to come up with a working solution, if possible at all. This situation has been put aptly by <span class="citation" data-cites="Buckheit1995">Buckheit &amp; Donoho (<a href="#ref-Buckheit1995" role="doc-biblioref">1995</a>)</span>, distilling an idea by Jon Claerbout:</p>
+<blockquote class="blockquote">
+<p>“An article about computational science in a scientific publication is not the scholarship itself, it is merely advertising of the scholarship. The actual scholarship is the complete software development environment and the complete set of instructions which generated the figures.”</p>
+</blockquote>
+<p>Even for articles that are use computers to apply existing methods (rather than reporting on a new method), sharing the source code and being transparent about the computational environment is imperative to making research reproducible <span class="citation" data-cites="Ince2012">(<a href="#ref-Ince2012" role="doc-biblioref">Ince et al., 2012</a>)</span>. By reproducibility, we mean “obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis” <span class="citation" data-cites="NASEM2019">(<a href="#ref-NASEM2019" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine, 2019, p. 46</a>)</span>.</p>
+</section>
+<section id="linking-results-and-computations" class="level2">
+<h2 class="anchored" data-anchor-id="linking-results-and-computations">Linking results and computations</h2>
+<p>This tutorial not only covers sharing the source code, but also connecting it to the results through the creation of dynamic documents. Rather than manually copying numerical results, figures, or tables, they are inserted automatically upon rendering of the article. Dynamic documents bundled together with any necessary data and auxiliary software are called a <a href="https://research-compendium.science/">research compendium</a> <span class="citation" data-cites="Gentleman2007">(<a href="#ref-Gentleman2007" role="doc-biblioref">Gentleman &amp; Temple Lang, 2007</a>)</span>.</p>
+<p>The practice to interleave narrative text with code has its roots in the paradigm of literate programming, where documentation and source code are treated as equals and are arranged in a way to maximize understanding <span class="citation" data-cites="Knuth1984">(<a href="#ref-Knuth1984" role="doc-biblioref">Knuth, 1984</a>)</span>. Alternating text and code can be also found in notebook interfaces for exploratory programming, such as provided by Wolfram Mathematica or Jupyter Notebooks <span class="citation" data-cites="Kluyver2016">(<a href="#ref-Kluyver2016" role="doc-biblioref">Kluyver et al., 2016</a>)</span>, with the added capability of executing the code and embedding its output. With <em>Sweave</em> <span class="citation" data-cites="Leisch2002">(<a href="#ref-Leisch2002" role="doc-biblioref">Leisch, 2002</a>)</span>, ideas from both worlds – literate programming and embedding program output – were combined into one tool for rendering dynamic documents using the R programming language. It is the predecessor of the R package <code>knitr</code> <span class="citation" data-cites="Xie2015">(<a href="#ref-Xie2015" role="doc-biblioref">Xie, 2015</a>)</span> which is being used under the hood in this tutorial.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Linking results with their computations has benefits for authors and readers. For the author, articles always contain the most recent version of figures, as they are updated automatically when the computation changes. For the readers, it enables understanding exactly how a particular result was obtained if they get access to the underlying research compendium.</p>
+</section>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">Best practices</h2>
+<p>When creating the research compendium, there are a few things to consider <span class="citation" data-cites="Arguillas2022">(by <a href="#ref-Arguillas2022" role="doc-biblioref">Arguillas et al., 2022</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
 <blockquote class="blockquote">
 <p><strong>Does the research compendium contain everything needed to reproduce a predefined outcome in an organized and parsimonious way?</strong></p>
 <ol type="1">
@@ -255,15 +280,47 @@ div.csl-indent {
 <li><strong>Review:</strong> A series of managed activities are needed to ensure continued access to and functionality of the research compendium and its components for as long as necessary.</li>
 </ol>
 </blockquote>
+<p>Although this tutorial guides you through the creation of a research compendium, you are invited to revisit these questions after completion and check whether and how each point was addressed (or not). Further, you can consult them as a checklist for future projects.</p>
 
 
 
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-Arguillas2022" class="csl-entry" role="listitem">
-Arguillas, Florio, Thu-Mai Christian, Mandy Gooch, Tom Honeyman, Limor Peer, and CURE-FAIR WG. 2022. <span>“10 Things for Curating Reproducible and <span>FAIR</span> Research.”</span> Research Data Alliance; <a href="https://curating4reproducibility.org/10things/" class="uri">https://curating4reproducibility.org/10things/</a>. <a href="https://doi.org/10.15497/RDA00074">https://doi.org/10.15497/RDA00074</a>.
+Arguillas, F., Christian, T.-M., Gooch, M., Honeyman, T., Peer, L., &amp; CURE-FAIR WG. (2022). <em>10 things for curating reproducible and <span>FAIR</span> research</em>. Research Data Alliance; <a href="https://curating4reproducibility.org/10things/" class="uri">https://curating4reproducibility.org/10things/</a>. <a href="https://doi.org/10.15497/RDA00074">https://doi.org/10.15497/RDA00074</a>
 </div>
-</div></section></div></main> <!-- /main -->
+<div id="ref-Buckheit1995" class="csl-entry" role="listitem">
+Buckheit, J. B., &amp; Donoho, D. L. (1995). <span>WaveLab</span> and reproducible research. In A. Antoniadis &amp; G. Oppenheim (Eds.), <em>Wavelets and statistics</em> (Vol. 103, pp. 55–81). Springer New York. <a href="https://doi.org/10.1007/978-1-4612-2544-7_5">https://doi.org/10.1007/978-1-4612-2544-7_5</a>
+</div>
+<div id="ref-Gentleman2007" class="csl-entry" role="listitem">
+Gentleman, R., &amp; Temple Lang, D. (2007). Statistical analyses and reproducible research. <em>Journal of Computational and Graphical Statistics</em>, <em>16</em>(1), 1–23. <a href="https://doi.org/10.1198/106186007X178663">https://doi.org/10.1198/106186007X178663</a>
+</div>
+<div id="ref-Ince2012" class="csl-entry" role="listitem">
+Ince, D. C., Hatton, L., &amp; Graham-Cumming, J. (2012). The case for open computer programs. <em>Nature</em>, <em>482</em>(7386), 485–488. <a href="https://doi.org/10.1038/nature10836">https://doi.org/10.1038/nature10836</a>
+</div>
+<div id="ref-Kluyver2016" class="csl-entry" role="listitem">
+Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C., &amp; team, J. development. (2016). Jupyter notebooks – a publishing format for reproducible computational workflows. In F. Loizides &amp; B. Scmidt (Eds.), <em>Positioning and power in academic publishing: Players, agents and agendas</em> (pp. 87–90). IOS Press. <a href="https://doi.org/10.3233/978-1-61499-649-1-87">https://doi.org/10.3233/978-1-61499-649-1-87</a>
+</div>
+<div id="ref-Knuth1984" class="csl-entry" role="listitem">
+Knuth, D. E. (1984). Literate programming. <em>The Computer Journal</em>, <em>27</em>(2), 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>
+</div>
+<div id="ref-Leisch2002" class="csl-entry" role="listitem">
+Leisch, F. (2002). Sweave: Dynamic generation of statistical reports using literate data analysis. In W. Härdle &amp; B. Rönz (Eds.), <em>Compstat</em> (pp. 575–580). Physica-Verlag <span>HD</span>. <a href="https://doi.org/10.1007/978-3-642-57489-4_89">https://doi.org/10.1007/978-3-642-57489-4_89</a>
+</div>
+<div id="ref-NASEM2019" class="csl-entry" role="listitem">
+National Academies of Sciences, Engineering, and Medicine. (2019). <em>Reproducibility and replicability in science</em>. National Academies Press. <a href="https://doi.org/10.17226/25303">https://doi.org/10.17226/25303</a>
+</div>
+<div id="ref-Xie2015" class="csl-entry" role="listitem">
+Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (Second edition). <span>CRC</span> Press.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Specifically, Quarto employs <code>knitr</code> to execute chunks of R code.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -698,7 +755,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p>Copyright 2024 Open Science Center at LMU Munich</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
