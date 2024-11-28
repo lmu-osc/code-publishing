@@ -305,11 +305,11 @@ div.csl-indent {
 <section id="a-primer-on-licenses" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="a-primer-on-licenses">A Primer on Licenses</h2>
 <div class="page-columns page-full"><p>Whenever you create a literary or artistic work (such as a text, image, video, or software), the copyright law in most countries limits other people from copying, modifying, and sharing it without your express permission.  This even applies if you make it available to others (e.g., on your website): First and foremost they are not allowed to copy, modify, or share it. This legal default of “all rights reserved” was created to benefit publishers, not authors <span class="citation" data-cites="Fogel2006">(<a href="#ref-Fogel2006" role="doc-biblioref">Fogel, 2006</a>)</span>, and runs counter to many cultural and scientific processes. Copyright licenses enable authors to free up their works for reuse by others.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">If the work was created as part of your job, it might be your employer who holds the copyright to the work, depending on the country and contract.</span></div></div>
+<p>A license is a legal document that regulates what <em>others</em> are allowed to do with a copyright-protected work – the licenses we discuss do not limit the author or copyright holder in their rights. And while you <em>could</em> write your own, there are already many pre-formulated licenses available to choose from and to apply to your work.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>For the purpose of this tutorial, by <em>license</em> we mean <em>copyright license</em>.</p>
-</div></div><p>A license is a legal document that regulates what <em>others</em> are allowed to do with a copyright-protected work – the licenses we discuss do not limit the author or copyright holder in their rights. And while you <em>could</em> write your own, there are already many pre-formulated licenses available to choose from and to apply to your work.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<div id="cau-exclusive-rights" class="callout callout-style-default callout-caution callout-titled">
+</div></div><div id="cau-exclusive-rights" class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -356,7 +356,7 @@ Note&nbsp;1: A Note on Terminology
 <p><img src="images/Definition_of_Free_Cultural_Works.svg" class="img-fluid" width="250"></p>
 </div></div><section id="existing-license" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="existing-license">Existing License?</h3>
-<div class="page-columns page-full"><p>First, if you adapt (i.e., modify, build on) a work by others you need to determine if it is provided to you under a free/open license. If yes, we recommend you to make your contribution available under the same license.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For example, if you adapt code published in another paper, choose the same license for your modifications. The same applies if there are strong community norms to use a particular free/open license.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Importantly, as discussed before, you are generally not allowed to adapt a work <em>not</em> published under a free/open license.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">You can determine whether a license is free/open by searching for its name in the <a href="https://spdx.org/licenses/">SPDX License List</a> and looking for at least one <code>Y</code> in the two columns <em>FSF Free/Libre?</em> and <em>OSI Approved?</em></span></div></div>
+<div class="page-columns page-full"><p>First, if you adapt (i.e., modify, build on) a work by others you need to determine if it is provided to you under a free/open license. If yes, we recommend you to make your contribution available under the same license.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For example, if you adapt code published in another paper, choose the same license for your modifications. The same applies if there are strong community norms to use a particular free/open license<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> or if a particular license choice is mandated by your funder. Importantly, as discussed before, you are generally not allowed to adapt a work <em>not</em> published under a free/open license.</p><div class="no-row-height column-margin column-container"><span class="margin-aside">You can determine whether a license is free/open by searching for its name in the <a href="https://spdx.org/licenses/">SPDX License List</a> and looking for at least one <code>Y</code> in the two columns <em>FSF Free/Libre?</em> and <em>OSI Approved?</em></span></div></div>
 </section>
 <section id="work-type" class="level3">
 <h3 class="anchored" data-anchor-id="work-type">Work Type?</h3>
@@ -394,10 +394,10 @@ Tip&nbsp;1: Multi-licensing
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
   start("We want&lt;br&gt;to choose&lt;br&gt;a license.") --"We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license["&lt;em&gt;Use its license&lt;/em&gt;"]
-  start --"We created the work&lt;br&gt;entirely by ourselves."--&gt; norm("Community norm&lt;br&gt;regarding license?")
+  start --"We created the work&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;regarding license?")
   
-  norm --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that norm&lt;/em&gt;"]
-  norm --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
   
   type --"Software"--&gt; apache["Apache 2.0"]
   type --"Writing, image, audio, video"--&gt; cc0["CC0 1.0"]
@@ -436,7 +436,7 @@ Note&nbsp;2: Other Work Types
 <p>One should be cautious about the restrictions of licenses applied to the following types of works:</p>
 <ul>
 <li><strong>fonts:</strong> Copyleft licenses applied to fonts can be a special case: If a font is put under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, any documents containing texts using that font will probably be derivative works and have to be put under the same license if shared. If the intent is that only derived fonts, if published, have to be put under the same license, the <a href="https://openfontlicense.org/">SIL Open Font License&nbsp;1.1</a> is an appropriate choice. Note, however, that it doesn’t require attribution for usage. If no copyleft mechanism is intended, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> also works for fonts.</li>
-<li><strong>templates and LaTeX packages:</strong> If a template or, for this purpose, a LaTeX package, is licensed under a copyleft software license such as the <a href="https://choosealicense.com/licenses/gpl-3.0/">AGPLv3</a>, every work that is a derivative of the template or that uses the LaTeX package has to put under the same license, if shared <span class="citation" data-cites="Koppor2016">(<a href="#ref-Koppor2016" role="doc-biblioref">Koppor, 2016</a>)</span>. And if a document contained source code covered by the GPLv3, the same license would also apply to the document <span class="citation" data-cites="MadHatter2022">(<a href="#ref-MadHatter2022" role="doc-biblioref">MadHatter, 2022</a>)</span>.</li>
+<li><strong>templates and LaTeX packages:</strong> If a template or, for this purpose, a LaTeX package, is licensed under a copyleft software license such as the <a href="https://choosealicense.com/licenses/agpl-3.0/">AGPLv3</a>, every work that is a derivative of the template or that uses the LaTeX package has to put under the same license, if shared <span class="citation" data-cites="Koppor2016">(<a href="#ref-Koppor2016" role="doc-biblioref">Koppor, 2016</a>)</span>. And if a document contained source code covered by the GPLv3, the same license would also apply to the document <span class="citation" data-cites="MadHatter2022">(<a href="#ref-MadHatter2022" role="doc-biblioref">MadHatter, 2022</a>)</span>.</li>
 <li><strong>database content:</strong> If the work produced from a database (the “output”) is a derivative of the content in the database, the output is subject to the restrictions laid out in the license. For example, if geospatial data were to be licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, all maps produced from the data would likely need to fulfill this license’s obligation for unrestricted access (its Anti-DRM provision) if shared <span class="citation" data-cites="Poole2017">(see <a href="#ref-Poole2017" role="doc-biblioref">Poole, 2017</a>)</span>. Similarly, following an example from <span class="citation" data-cites="Matt2009">Matt (<a href="#ref-Matt2009" role="doc-biblioref">2009</a>)</span>, if one were to choose the copyleft license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> for this purpose, any map that is a derivative of the data would also need to licensed under CC&nbsp;BY-SA&nbsp;4.0 (or a compatible license) if shared. If the intention is to only have <a href="https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline">derivative databases</a> under the same license, one might want to choose the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> for the database, as it was specifically designed not to apply to works produced from the data in the database. Otherwise <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> is an excellent choice for data.</li>
 <li><strong>works in the public domain</strong>: If a work is already in the public domain, it should be marked using the <a href="https://creativecommons.org/publicdomain/mark/1.0/">PDM 1.0</a>, rather than applying a waiver such as the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> (or even another license).</li>
 </ul>
@@ -700,10 +700,10 @@ Note&nbsp;4: Using REUSE to Record Licenses
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
   start("We want to choose a&lt;br&gt;license for software,&lt;br&gt;writing, image, audio,&lt;br&gt;or video.") --"We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license["&lt;em&gt;Use its license&lt;/em&gt;"]
-  start --"We created the work&lt;br&gt;entirely by ourselves."--&gt; norm("Community norm&lt;br&gt;regarding license?")
+  start --"We created the work&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;regarding license?")
   
-  norm --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that norm&lt;/em&gt;"]
-  norm --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
   
   type --"Software"--&gt; code_sa("Attribution?&lt;br&gt;State changes?&lt;br&gt;Copyleft?")
   type --"Writing, image, audio, video"--&gt; nocode_cc("Attribution?&lt;br&gt;State changes?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
@@ -745,16 +745,16 @@ Figure&nbsp;2: Advanced License Flowchart for Software, Writing, Images, Audio, 
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
   start("We want to choose a&lt;br&gt;license for data.") --"We adapted a database by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license_db["&lt;em&gt;Use its license(s)&lt;br&gt;for content and database&lt;/em&gt;"]
-  start --"We created a database&lt;br&gt;entirely by ourselves."--&gt; norm("Community norm&lt;br&gt;regarding license?")
+  start --"We created a database&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;regarding license?")
   
-  norm --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that norm&lt;/em&gt;"]
-  norm --"Does not&lt;br&gt;exist"--&gt; existing_license_content("Adapting content&lt;br&gt; by others?")
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; existing_license_content("Adapting content&lt;br&gt; by others?")
   
   subgraph "License for individual data entries (content)"
-  existing_license_content --"No, we created the content&lt;br&gt;entirely by ourselves."--&gt; metadata("Entries are facts&lt;br&gt;(like measurements&lt;br&gt;or metadata)?")
+  existing_license_content --"No, we created the content&lt;br&gt;entirely by ourselves."--&gt; facts("Entries are facts&lt;br&gt;(like measurements&lt;br&gt;or metadata)?")
   existing_license_content --"Yes, it was&lt;br&gt;shared under a&lt;br&gt;free/open license."--&gt; use_existing_license_content["&lt;em&gt;Use that license&lt;/em&gt;"]
-  metadata --"Yes"--&gt; cc0_content_metadata["CC0 1.0"]
-  metadata --"No"--&gt; choose_license["&lt;em&gt;Consult flowchart for&lt;br&gt;software, writing,&lt;br&gt;image, audio, and video&lt;/em&gt;"]
+  facts --"Yes"--&gt; cc0_content_metadata["CC0 1.0"]
+  facts --"No"--&gt; choose_license["&lt;em&gt;Consult flowchart for&lt;br&gt;software, writing,&lt;br&gt;image, audio, and video&lt;/em&gt;"]
   end
   
   subgraph "License for combination of data (database)"
