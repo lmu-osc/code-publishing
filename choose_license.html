@@ -130,6 +130,35 @@ div.csl-indent {
 <script src="site_libs/quarto-diagram/mermaid-init.js"></script>
 <link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -309,13 +338,13 @@ div.csl-indent {
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>For the purpose of this tutorial, by <em>license</em> we mean <em>copyright license</em>.</p>
-</div></div><div id="cau-exclusive-rights" class="callout callout-style-default callout-caution callout-titled">
+</div></div><div id="wrn-exclusive-rights" class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution&nbsp;1: Giving Publishers Exclusive Rights
+Warning&nbsp;1: Giving Publishers Exclusive Rights
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -330,7 +359,7 @@ Caution&nbsp;1: Giving Publishers Exclusive Rights
 <p>Many boilerplate licenses are available to apply to your work. Which license is appropriate depends on several factors, including existing licenses in place and the type of work, but also your personal considerations. We strongly recommend to apply a <em>free/open</em> license to your work, which means that the work “can be freely studied, applied, copied and/or modified, by anyone, for any purpose” <span class="citation" data-cites="Moller2015">(<a href="#ref-Moller2015" role="doc-biblioref">Möller et al., 2015</a>)</span>. Importantly, this also means that others do not need to ask or notify the author and that they can use it for commercial purposes. By the choice of license, authors can, however, demand that they are credited, that the original license is indicated, that modifications are indicated, that derivative works are only shared under the same license, and that no further restrictions are imposed on the work. Software licenses may additionally require to make the source code available to everybody the software is shared with and often require to display the full text of the license upon usage. Because there are many free/open licenses available, the licenses discussed here only represent a recommended subset.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>If you would like to choose a license not listed here, it should be appropriate for the type of work in question and be compatible with the dominant copyleft license in the respective community (see also <a href="#nte-silos" class="quarto-xref">Note&nbsp;3</a>). For software that’s almost universally the (A)GPLv3 and for writing, image, audio, and video that’s mostly the CC&nbsp;BY-SA&nbsp;4.0. For data, no dominant copyleft license has emerged yet, so any of <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a>, <a href="https://cdla.dev/sharing-1-0/">CDLA&nbsp;Sharing&nbsp;1.0</a>, and CC&nbsp;BY-SA&nbsp;4.0 are acceptable.</p>
+<p>If you would like to choose a license not listed here, it should be appropriate for the type of work in question and be compatible with the dominant copyleft license in the respective community (see also <a href="#nte-silos" class="quarto-xref">Note&nbsp;3</a>). For software that’s almost universally the (A)GPLv3 and for writing, image, audio, and video that’s mostly the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>. For data, no dominant copyleft license has emerged yet, so any of <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a>, <a href="https://cdla.dev/sharing-1-0/">CDLA&nbsp;Sharing&nbsp;1.0</a>, and <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> are acceptable.</p>
 </div></div><div id="nte-terminology" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -433,12 +462,12 @@ Note&nbsp;2: Other Work Types
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>One should be cautious about the restrictions of licenses applied to the following types of works:</p>
+<p>One should take special care when applying license to the following types of works:</p>
 <ul>
 <li><strong>fonts:</strong> Copyleft licenses applied to fonts can be a special case: If a font is put under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, any documents containing texts using that font will probably be derivative works and have to be put under the same license if shared. If the intent is that only derived fonts, if published, have to be put under the same license, the <a href="https://openfontlicense.org/">SIL Open Font License&nbsp;1.1</a> is an appropriate choice. Note, however, that it doesn’t require attribution for usage. If no copyleft mechanism is intended, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> also works for fonts.</li>
-<li><strong>templates and LaTeX packages:</strong> If a template or, for this purpose, a LaTeX package, is licensed under a copyleft software license such as the <a href="https://choosealicense.com/licenses/agpl-3.0/">AGPLv3</a>, every work that is a derivative of the template or that uses the LaTeX package has to put under the same license, if shared <span class="citation" data-cites="Koppor2016">(<a href="#ref-Koppor2016" role="doc-biblioref">Koppor, 2016</a>)</span>. And if a document contained source code covered by the GPLv3, the same license would also apply to the document <span class="citation" data-cites="MadHatter2022">(<a href="#ref-MadHatter2022" role="doc-biblioref">MadHatter, 2022</a>)</span>.</li>
-<li><strong>database content:</strong> If the work produced from a database (the “output”) is a derivative of the content in the database, the output is subject to the restrictions laid out in the license. For example, if geospatial data were to be licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, all maps produced from the data would likely need to fulfill this license’s obligation for unrestricted access (its Anti-DRM provision) if shared <span class="citation" data-cites="Poole2017">(see <a href="#ref-Poole2017" role="doc-biblioref">Poole, 2017</a>)</span>. Similarly, following an example from <span class="citation" data-cites="Matt2009">Matt (<a href="#ref-Matt2009" role="doc-biblioref">2009</a>)</span>, if one were to choose the copyleft license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> for this purpose, any map that is a derivative of the data would also need to licensed under CC&nbsp;BY-SA&nbsp;4.0 (or a compatible license) if shared. If the intention is to only have <a href="https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline">derivative databases</a> under the same license, one might want to choose the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> for the database, as it was specifically designed not to apply to works produced from the data in the database. Otherwise <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> is an excellent choice for data.</li>
-<li><strong>works in the public domain</strong>: If a work is already in the public domain, it should be marked using the <a href="https://creativecommons.org/publicdomain/mark/1.0/">PDM 1.0</a>, rather than applying a waiver such as the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> (or even another license).</li>
+<li><strong>templates and TeX packages:</strong> If a template or, for this purpose, a <span class="math inline">\(\TeX\)</span> package, is licensed under a copyleft license such as the (A)GPLv3, every work that is a derivative of the template or that uses the <span class="math inline">\(\TeX\)</span> package has to put under the same license, if shared <span class="citation" data-cites="Koppor2016">(<a href="#ref-Koppor2016" role="doc-biblioref">Koppor, 2016</a>)</span>. And if a document contained source code covered by the (A)GPLv3, the same license would also apply to the document <span class="citation" data-cites="MadHatter2022">(<a href="#ref-MadHatter2022" role="doc-biblioref">MadHatter, 2022</a>)</span>.</li>
+<li><strong>database content:</strong> If the work produced from a database (the “output”) is a derivative of the content in the database, the output is subject to the restrictions laid out in the license. For example, if geospatial data were to be licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, all maps produced from the data would likely need to fulfill this license’s obligation for unrestricted access (its Anti-DRM provision) if shared <span class="citation" data-cites="Poole2017">(see <a href="#ref-Poole2017" role="doc-biblioref">Poole, 2017</a>)</span>. Similarly, following an example from <span class="citation" data-cites="Matt2009">Matt (<a href="#ref-Matt2009" role="doc-biblioref">2009</a>)</span>, if one were to choose the copyleft license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> for this purpose, any map that is a derivative of the data would also need to be licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> (or a compatible license) if shared. If the intention is to only have <a href="https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline">derivative databases</a> under the same license, one might want to choose the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> for the database, as it was specifically designed not to apply to works produced from the data in the database. Otherwise <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> is an excellent choice for data.</li>
+<li><strong>works in the public domain</strong>: If a work is already in the public domain, it should be marked using the <a href="https://creativecommons.org/publicdomain/mark/1.0/">PDM 1.0</a>, rather than applying a waiver such as the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> (or another license).</li>
 </ul>
 </div>
 </div>
@@ -462,8 +491,8 @@ Tip&nbsp;2: Projects Involving R Code
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In most cases, the output of software, like images or tables, does not depend on the software’s license. Therefore, if you use an R package under a copyleft license to create a figure, you are likely the copyright owner. However, if the output is based on data, it can be considered a derivative work and the license of the data also applies. For example, maps may be considered as a derivative of the geographic data they are based on.</p>
-<p>It is disputed whether software that uses an R package under AGPLv3 or GPLv3<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> can only be published under a GPL-compatible license – or even has to be published under the same license. Posit, the company behind RStudio, does not believe that to be the case <span class="citation" data-cites="Wickham2023PackagesLicense">(see also <a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham &amp; Bryan, 2023</a>)</span>.</p>
+<p>In most cases, the output of software, like images or tables, does not depend on the software’s license.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> Therefore, if you use an R package under a copyleft license to create a figure, you are likely the copyright owner. However, if the output is based on data, it can be considered a derivative work of the data and the license of the data also applies. For example, maps may be considered as a derivative of the geographic data they are based on.</p>
+<p>It is disputed whether software that uses an R package under AGPLv3 or GPLv3<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> can only be published under a GPL-compatible license – or even has to be published under the same license. Posit, the company behind RStudio, does not believe that to be the case <span class="citation" data-cites="Wickham2023PackagesLicense">(see also <a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham &amp; Bryan, 2023</a>)</span>.</p>
 <p>You can learn which license an installed package uses via <code>packageDescription("&lt;PACKAGE_NAME&gt;", fields = "License")</code>. And to identify which licenses are being used by the R packages your project depends on, you can use the following code:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
@@ -523,7 +552,7 @@ Note&nbsp;3: Other Restrictions
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution&nbsp;2: License Versions Are Important
+Caution&nbsp;1: License Versions Are Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -531,7 +560,7 @@ Caution&nbsp;2: License Versions Are Important
 <p>For the AGPLv3 it is even recommended to state whether a work is licensed under exactly the indicated version of the license or, alternatively, also under newer versions of the license <span class="citation" data-cites="Stallman2022Version">(<a href="#ref-Stallman2022Version" role="doc-biblioref">Stallman, 2022a</a>)</span>.</p>
 </div>
 </div>
-<p>For example, the <code>apaquarto</code> extension that you included in your project is a work by others.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> You need to indicate its license so that others know what they are allowed to do – and, of course, you need to comply with any terms yourself, such as retaining the copyright notice.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> In contrast, if it were not for this tutorial, the manuscript would contain your own work and you would need to indicate under which license you provide it to others.</p>
+<p>For example, the <code>apaquarto</code> extension that you included in your project is a work by others.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> You need to indicate its license so that others know what they are allowed to do – and, of course, you need to comply with any terms yourself, such as retaining the copyright notice.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> In contrast, if it were not for this tutorial, the manuscript would contain your own work and you would need to indicate under which license you provide it to others.</p>
 <div id="tip-license-help" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -626,7 +655,7 @@ Note&nbsp;4: Using REUSE to Record Licenses
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-License-Identifier:</span><span class="co"> CC-BY-4.0</span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Note that <code>Manuscript.qmd</code> was provided to you under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, which is what you indicate with the previous comment. If you edited the file, you may also add yourself.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a></p>
+<p>Note that <code>Manuscript.qmd</code> was provided to you under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, which is what you indicate with the previous comment. If you edited the file, you may also add yourself.<a href="#fn13" class="footnote-ref" id="fnref13" role="doc-noteref"><sup>13</sup></a></p>
 <p>Sometimes, there are file types which do not allow for adding the license information inside them, such as PDF and CSV files. For these, a corresponding <code>.license</code> file can be created. Try the following command which indicates that the data were published under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -758,7 +787,7 @@ Figure&nbsp;2: Advanced License Flowchart for Software, Writing, Images, Audio, 
   end
   
   subgraph "License for combination of data (database)"
-  choose_license --&gt; switch_license["&lt;em&gt;Depending on content license&lt;/em&gt;"]
+  choose_license --&gt; switch_license["&lt;em&gt;Depending on&lt;br&gt;content license&lt;/em&gt;"]
   use_existing_license_content --&gt; switch_license
   
   cc0_content_metadata --&gt; cc0_db["CC0 1.0"]
@@ -791,6 +820,9 @@ Figure&nbsp;3: Advanced License Flowchart for Data(base)
 
 
 </div></section><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-apsillers2019" class="csl-entry" role="listitem">
+apsillers. (2019, March 11). <em>Answer to "does "the <span>GPL</span> doesn’t cover the output of a program" also apply if the output is source code?". Open source stack exchange</em>. <a href="https://opensource.stackexchange.com/a/8060/34940">https://opensource.stackexchange.com/a/8060/34940</a>
+</div>
 <div id="ref-CC2013" class="csl-entry" role="listitem">
 Creative Commons. (2013, November 25). <em>Considerations for licensors and licensees</em>. <a href="https://creativecommons.org/share-your-work/licensing-considerations/version4/">https://creativecommons.org/share-your-work/licensing-considerations/version4/</a>
 </div>
@@ -889,10 +921,11 @@ Wikipedia contributors. (2024). <span>GNU</span> general public license – link
 <li id="fn6"><p>because they often require to display the full text of the license<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>that is, a license for writing, image, audio, and video<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>So called because copyleft licenses make content permanently free, thus turning copyright around: © → 🄯. In the realm of Creative Commons licenses, copyleft is also called <em>share alike</em>.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>a variant of the AGPLv3 that does not cover software running as a service<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn10"><p>Unless you are the author of the <code>apaquarto</code> extension.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn11"><p>In this particular case, <code>apaquarto</code> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>, which does not require you to retain a copyright notice. In fact, it’s an extremely permissive license.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn12"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them, although you do not need to provide your real name.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>The exception is when the software is part of the output <span class="citation" data-cites="apsillers2019">(see <a href="#ref-apsillers2019" role="doc-biblioref">apsillers, 2019</a>)</span>.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>a variant of the AGPLv3 that does not cover software running as a service<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Unless you are the author of the <code>apaquarto</code> extension.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn12"><p>In this particular case, <code>apaquarto</code> is licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>, which does not require you to retain a copyright notice. In fact, it’s an extremely permissive license.<a href="#fnref12" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn13"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them, although you do not need to provide your real name.<a href="#fnref13" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
