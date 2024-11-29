@@ -40,7 +40,7 @@ format:
 Penguins are fascinating creatures that inhabit various regions of the Southern Hemisphere, including Antarctica and surrounding islands.
 The study of penguins provides valuable insights into ecosystem dynamics, climate change impacts, and evolutionary biology [@smith2020; @jones2018].
 
-This manuscript presents a minimal reproducible example utilizing the penguins dataset to demonstrate scientific workflows in R.
+This manuscript presents a minimal reproducible example utilizing the penguins data set to demonstrate scientific workflows in R.
 
 ```{r}
 #| label: "t-test"

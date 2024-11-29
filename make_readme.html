@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -301,7 +301,7 @@ window.Quarto = {
 </dd>
 <dt>Installation/Dependencies</dt>
 <dd>
-<p>What steps need to be taken to run the project? What software needs to be installed? Mention all dependencies here that are not explicitly managed by <code>renv</code>, such as the system dependencies of R packages as well as the version of Quarto. An R package’s system dependency is any additional software that you need to install on your computer in order to use a particular R package. For example, the R package <a href="https://rstudio.github.io/reticulate/"><code>reticulate</code></a> allows to run Python code from within R. However, in order to actually use it, one has to additionally install Python itself as it does not come together with <code>reticulate</code> – rather, it is a system dependency. See <a href="#sec-dependencies" class="quarto-xref">Section&nbsp;2</a> for additional information.</p>
+<p>What steps need to be taken to run the project? What software needs to be installed? R itself and the R packages are already documented as this project uses <code>renv</code>. Therefore you can focus on all other dependencies, such as the system dependencies of R packages as well as the version of Quarto.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Also, don’t forget to mention software that you have used for any manual steps. See <a href="#sec-dependencies" class="quarto-xref">Section&nbsp;2</a> for additional information.</p>
 </dd>
 <dt>Usage</dt>
 <dd>
@@ -331,12 +331,18 @@ window.Quarto = {
 </section>
 <section id="sec-dependencies" class="level2">
 <h2 class="anchored" data-anchor-id="sec-dependencies">Installation/Dependencies</h2>
-<p>An overview over the system dependencies of R packages can be created using the function <code>pak::pkg_sysreqs()</code>. In combination with <code>renv</code>, we can obtain the system dependencies of all R packages in the current project:</p>
+<p>An overview over the system dependencies of R packages can be created using the function <code>pak::pkg_sysreqs()</code>. In combination with <code>renv</code>, we can obtain the system dependencies of all R packages the current project directly depends on:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_sysreqs</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, install pak</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"pak"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Then, identify the system dependencies of your direct dependencies</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  pak<span class="sc">::</span><span class="fu">pkg_sysreqs</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The output may look like the following:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>── Install scripts ─────────────────────── </span>
@@ -347,7 +353,7 @@ window.Quarto = {
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>knitr     – pandoc</span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>rmarkdown – pandoc</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>sass      – make</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>We can see that <code>make</code> and <code>pandoc</code> were identified as system dependencies. One can obtain their version by running them with the <code>--version</code> argument:</p>
+<p>We can see that <code>make</code> and <code>pandoc</code> were identified as system dependencies. Often, one can obtain their version by running them with the <code>--version</code> argument:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
@@ -362,7 +368,7 @@ window.Quarto = {
 </div>
 <div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If you installed <code>apaquarto</code> or any other Quarto extension, one can query their versions as follows:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>If you installed <code>apaquarto</code> or any other Quarto extension, one can query their versions as follows:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
@@ -385,6 +391,7 @@ window.Quarto = {
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>      Using: TinyTex</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>      Path: /home/r155953/.TinyTeX/bin/x86_64-linux</span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      Version: 2024</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Of course, all the system dependencies identified until now may have dependencies on their own. Use your own judgement to decide when not to dig deeper.</p>
 </section>
 <section id="create-it" class="level2">
 <h2 class="anchored" data-anchor-id="create-it">Create It!</h2>
@@ -596,7 +603,8 @@ Tip&nbsp;7: License
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Luckily, the extensions are included in the project folder, so technically their version is already recorded in the project’s files.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>As of August 2024, a proposal for <code>renv</code> to record the version of Quarto has not been implemented, see <a href="https://github.com/rstudio/renv/issues/1143">rstudio/renv#1143</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Luckily, the extensions are included in the project folder, so technically their version is already recorded in the project’s files.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

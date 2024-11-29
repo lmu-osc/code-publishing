@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.39">
@@ -285,7 +285,11 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#coding-best-practices" id="toc-coding-best-practices" class="nav-link" data-scroll-target="#coding-best-practices">Coding Best Practices</a></li>
   </ul></li>
-  <li><a href="#citing-software-and-data" id="toc-citing-software-and-data" class="nav-link" data-scroll-target="#citing-software-and-data">Citing Software and Data</a></li>
+  <li><a href="#cite-data-and-software" id="toc-cite-data-and-software" class="nav-link" data-scroll-target="#cite-data-and-software">Cite Data and Software</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
+  </ul></li>
   <li><a href="#the-last-mile" id="toc-the-last-mile" class="nav-link" data-scroll-target="#the-last-mile">The Last Mile</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -481,7 +485,7 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <li>copyright of the data and their particular structure, and</li>
 <li>any <em>sui generis</em> database right.</li>
 </ol>
-<p>Privacy laws and contractual obligations may require you to create a completely anonymized or synthetic dataset<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (if possible), or prohibit any sharing of data, in which case you should provide a reference to a data repository where they can be obtained from. For further information, you can watch the talk “<a href="https://osf.io/j6fy8">Data anonymity</a>” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at <a href="https://osf.io/z6gcu">the accompanying slides</a>.</p>
+<p>Privacy laws and contractual obligations may require you to create a completely anonymized or synthetic data set<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (if possible), or prohibit any sharing of data, in which case you should provide a reference to a data repository where they can be obtained from. For further information, you can watch the talk “<a href="https://osf.io/j6fy8">Data anonymity</a>” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at <a href="https://osf.io/z6gcu">the accompanying slides</a>.</p>
 <p>Purely factual data such as measurements are usually not copyrightable, but literary or artistic works that cross the threshold of originality are. Additionally, in some jurisdictions data can be subject to <em>sui generis</em> database rights which prevent extracting substantial parts of a database. As a consequence, you need to ensure that you own or have authority to share the data with respect to copyright and similar rights, and to license it to others (see “<a href="./choose_license.html">Choose a License</a>”).</p>
 </div>
 </div>
@@ -540,12 +544,12 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <!-- preamble start -->
 
     <script>
-      function styleCell_uwpsynndb0eyb690ih2f(i, j, css_id) {
-        var table = document.getElementById("tinytable_uwpsynndb0eyb690ih2f");
+      function styleCell_7tz7tbqhu6u1431a2nix(i, j, css_id) {
+        var table = document.getElementById("tinytable_7tz7tbqhu6u1431a2nix");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_uwpsynndb0eyb690ih2f');
+        var table = document.getElementById('tinytable_7tz7tbqhu6u1431a2nix');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -553,8 +557,8 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_uwpsynndb0eyb690ih2f(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_uwpsynndb0eyb690ih2f");
+      function spanCell_7tz7tbqhu6u1431a2nix(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_7tz7tbqhu6u1431a2nix");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -580,21 +584,21 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
         targetCell.rowSpan = rowspan;
         targetCell.colSpan = colspan;
       }
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 0, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 1, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 2, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 3, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 4, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 5, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 6, 'tinytable_css_idzeaubtkath1wog4a15a3') })
-window.addEventListener('load', function () { styleCell_uwpsynndb0eyb690ih2f(0, 7, 'tinytable_css_idzeaubtkath1wog4a15a3') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 0, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 1, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 2, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 3, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 4, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 5, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 6, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 7, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
     </script>
 
     <style>
-    .table td.tinytable_css_idzeaubtkath1wog4a15a3, .table th.tinytable_css_idzeaubtkath1wog4a15a3 {  border-bottom: solid 0.1em #d3d8dc; }
+    .table td.tinytable_css_id9ce2zbf8hsu9y404r0pb, .table th.tinytable_css_id9ce2zbf8hsu9y404r0pb {  border-bottom: solid 0.1em #d3d8dc; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_uwpsynndb0eyb690ih2f" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_7tz7tbqhu6u1431a2nix" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -875,8 +879,12 @@ Note&nbsp;2: Create Machine-Readable Variable Documentation
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>This example demonstrates how the title and description of the data set, the description of the variables and their possible values are stored in a machine-readable way.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>table_info <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"penguins dataset"</span>,</span>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>table_info <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"penguins data set"</span>,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Size measurements for adult foraging penguins near Palmer Station, Antarctica"</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>descriptions <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
@@ -895,9 +903,14 @@ Note&nbsp;2: Create Machine-Readable Variable Documentation
 <span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>),</span>
 <span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="fu">c</span>(<span class="dv">2007</span>, <span class="dv">2008</span>, <span class="dv">2009</span>)</span>
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Another alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a>.</p>
 <p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. Finally, the package is used to create a metadata file that contains the schema.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data and create schema</span></span>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data and create schema</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>dat_filename <span class="ot">&lt;-</span> <span class="st">"Data.csv"</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(dat_filename)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>dat_schema <span class="ot">&lt;-</span> frictionless<span class="sc">::</span><span class="fu">create_schema</span>(dat)</span>
@@ -934,6 +947,7 @@ Note&nbsp;2: Create Machine-Readable Variable Documentation
 <span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    ))</span>
 <span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>frictionless<span class="sc">::</span><span class="fu">write_package</span>(dat_package, <span class="at">directory =</span> <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>This creates the metadata file <code>datapackage.json</code> in the current directory. Make sure it is located in the same folder as <code>Data.csv</code>, as together they comprise a <a href="https://specs.frictionlessdata.io/data-package/">data package</a>.</p>
 </div>
 </div>
@@ -1144,22 +1158,77 @@ Warning&nbsp;1: Beware of Credentials
 </blockquote>
 </section>
 </section>
-<section id="citing-software-and-data" class="level2">
-<h2 class="anchored" data-anchor-id="citing-software-and-data">Citing Software and Data</h2>
-<p>If you rely on software or data by others in your research, the question arises whether and how to cite it in your publications. Put simply, all data relied upon should be cited to allow for precise identification and access. From the “eight core principles of data citation” by <span class="citation" data-cites="Starr2015">Starr et al. (<a href="#ref-Starr2015" role="doc-biblioref">2015</a>)</span>, licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>:</p>
+<section id="cite-data-and-software" class="level2">
+<h2 class="anchored" data-anchor-id="cite-data-and-software">Cite Data and Software</h2>
+<p>If you rely on data or software by others in your research, the question arises whether and how to cite it in your publications.</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>Put simply, all data relied upon should be cited to allow for precise identification and access. From the “eight core principles of data citation” by <span class="citation" data-cites="Starr2015">Starr et al. (<a href="#ref-Starr2015" role="doc-biblioref">2015</a>)</span>, licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>:</p>
 <blockquote class="blockquote">
 <p><strong>Principle 1 – Importance</strong>: “Data should be considered legitimate, citable products of research. Data citations should be accorded the same importance in the scholarly record as citations of other research objects, such as publications.”</p>
 <p><strong>Principle 3 – Evidence</strong>: “In scholarly literature, whenever and wherever a claim relies upon data, the corresponding data should be cited.”</p>
 <p><strong>Principle 5 – Access</strong>: “Data citations should facilitate access to the data themselves and to such associated metadata, documentation, code, and other materials, as are necessary for both humans and machines to make informed use of the referenced data.”</p>
 <p><strong>Principle 7 – Specificity and Verifiability</strong>: “Data citations should facilitate identification of, access to, and verification of the specific data that support a claim. Citations or citation metadata should include information about provenance and fixity sufficient to facilitate verifying that the specific time slice, version and/or granular portion of data retrieved subsequently is the same as was originally cited.”</p>
 </blockquote>
-<p>When it comes to software, the answer is a little more nuanced – you can consult <a href="#fig-software-citation" class="quarto-xref">Figure&nbsp;1</a> for advice whether to cite it. As with data, citations should allow for exact identification and access. From the six “software citation principles” by <span class="citation" data-cites="Smith2016">Smith et al. (<a href="#ref-Smith2016" role="doc-biblioref">2016</a>)</span>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>:</p>
+<p>Now, add an appropriate citation for the data set to the manuscript. Does your citation adhere to the principles above?</p>
+<div id="nte-cite-palmerpenguins" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;4: Hint for citing the data set
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As the data set is from the R package <code>palmerpenguins</code>, one can use the function <code>citation()</code> to display a suggested citation:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>To cite palmerpenguins in publications use:
+
+  Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer
+  Archipelago (Antarctica) penguin data. R package version 0.1.0.
+  https://allisonhorst.github.io/palmerpenguins/. doi:
+  10.5281/zenodo.3960218.
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {palmerpenguins: Palmer Archipelago (Antarctica) penguin data},
+    author = {Allison Marie Horst and Alison Presmanes Hill and Kristen B Gorman},
+    year = {2020},
+    note = {R package version 0.1.0},
+    doi = {10.5281/zenodo.3960218},
+    url = {https://allisonhorst.github.io/palmerpenguins/},
+  }</code></pre>
+</div>
+</div>
+<p>As this can only be run with the package <code>palmerpenguins</code> installed, you can also find a <a href="https://allisonhorst.github.io/palmerpenguins/#citation">suggested citation on its website</a>.</p>
+<p>Copy the BibTeX entry to the file <code>Bibliography.bib</code> and add an identifier between <code>@Manual{</code> and the comma, such that the entry’s first line reads <code>@Manual{horst2020,</code>. Then, add a sentence to the manuscript such as follows:</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>The analyzed data are by @horst2020.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Render the document to check that the citation is displayed properly.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb28" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="software" class="level3">
+<h3 class="anchored" data-anchor-id="software">Software</h3>
+<p>When it comes to software, the answer is a little more nuanced due to the large number of involved dependencies. You can consult <a href="#fig-software-citation" class="quarto-xref">Figure&nbsp;1</a> for general advice whether to cite a particular piece of software or not. As with data, citations should allow for exact identification and access. From the six “software citation principles” by <span class="citation" data-cites="Smith2016">Smith et al. (<a href="#ref-Smith2016" role="doc-biblioref">2016</a>)</span>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>:</p>
 <blockquote class="blockquote">
 <p><strong>1. Importance</strong>: Software should be considered a legitimate and citable product of research. Software citations should be accorded the same importance in the scholarly record as citations of other research products, such as publications and data; they should be included in the metadata of the citing work, for example in the reference list of a journal article, and should not be omitted or separated. Software should be cited on the same basis as any other research product such as a paper or a book, that is, authors should cite the appropriate set of software products just as they cite the appropriate set of papers.</p>
 <p><strong>5. Accessibility</strong>: Software citations should facilitate access to the software itself and to its associated metadata, documentation, data, and other materials necessary for both humans and machines to make informed use of the referenced software.</p>
 <p><strong>6. Specificity</strong>: Software citations should facilitate identification of, and access to, the specific version of software that was used. Software identification should be as specific as necessary, such as using version numbers, revision numbers, or variants such as platforms.</p>
 </blockquote>
-<p>To help with generating the citation, you can use the <a href="https://citeas.org/">CiteAs service</a>.</p>
+<p>In practice, the first step is to identify all pieces of software the project relies on. A few of them are obvious, such as R itself, Quarto, and the <span class="math inline">\(\TeX\)</span> distribution we installed before. Then there are the individual R packages, Quarto extensions, and <span class="math inline">\(\TeX\)</span> packages. All of them, in turn, may have dependencies and it is up to you decide when not to dig deeper. For example, some R packages are only thin wrappers around other R packages or around system dependencies which also might deserve credit. A system dependency is additional software that you require on your computer apart from the R package.</p>
 <div id="fig-software-citation" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-software-citation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1196,24 +1265,73 @@ Figure&nbsp;1: “Should I cite the software?” by <span class="citation" data-
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="the-last-mile" class="level2">
-<h2 class="anchored" data-anchor-id="the-last-mile">The Last Mile</h2>
-<p><code>renv</code> only records the versions of R packages and of R itself. This means that potential system dependencies of R packages and other tools utilized in the project are not documented anywhere, including Quarto.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> We will manually write them down when <a href="./make_readme.html">creating a README</a>. For now, however, there is one simple step you can take to record the version of Quarto (and a few other dependencies). Do run the following:</p>
+<p>Now, add references for the software you would like to cite to the manuscript. In the following, we will demonstrate this for R and all R packages by using the R package <code>grateful</code>. For arbitrary software, you can use the <a href="https://citeas.org/">CiteAs service</a> to create appropriate citations.</p>
+<p>Add the following code chunk to the end of the discussion in the manuscript:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Manuscript.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb29" data-filename="Manuscript.qmd"><pre class="sourceCode markdown qmd code-with-copy"><code class="sourceCode markdown"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="in">grateful::cite_packages(</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="in">    output = "paragraph",</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="in">    out.dir = ".",</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="in">    omit = NULL,</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a><span class="in">    dependencies = TRUE,</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a><span class="in">    passive.voice = TRUE,</span></span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="in">    bib.file = "grateful-refs"</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will automatically create a paragraph citing all used packages and generate the bibliography file <code>grateful-refs.bib</code>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Then, in the YAML header, add <code>grateful-refs.bib</code> by setting the <code>bibliography</code> as follows:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Manuscript.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb30" data-filename="Manuscript.qmd"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bibliography</span><span class="kw">:</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Bibliography.bib</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> grateful-refs.bib</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Use <code>renv</code> to view, install, and record the newly used package <code>grateful</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb31" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>()</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, render the document again and commit the changes:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb25" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use binder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb32" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Cite data and software"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="the-last-mile" class="level2">
+<h2 class="anchored" data-anchor-id="the-last-mile">The Last Mile</h2>
+<p><code>renv</code> only records the versions of R packages and of R itself. This means that everything we have not decided to cite in the previous step is not documented anywhere. We will cover system dependencies when <a href="./make_readme.html">creating a README</a>. For now, however, there is one simple step you can take to record the version of Quarto (and a few other dependencies). Do run the following:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb33" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use binder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This will create a few additional files which facilitate reconstructing the computational environment in the future.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> As always, commit your changes:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb26" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add repo2docker config"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add repo2docker config"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You are now all set up to prepare your project for sharing!</p>
 
@@ -1286,7 +1404,7 @@ Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., &amp; Teal, T. 
 <li id="fn4"><p>An <em>application programming interface</em> provides the capability to interact with other software using a programming language.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>You can use the function <code>pak::pkg_deps()</code> to count the total number of package dependencies in R.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>A linting tool analyzes your code without actually running it. This process is called static code analysis.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>As of August 2024, a proposal to record the version of Quarto has not been implemented, see <a href="https://github.com/rstudio/renv/issues/1143">rstudio/renv#1143</a>.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Note that the detection can fail <a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Either using <a href="https://repo2docker.readthedocs.io/">repo2docker</a> or the public <a href="https://mybinder.org/">binder</a> service.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
