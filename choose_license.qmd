@@ -24,6 +24,26 @@ You can adapt the following wording to your use case:
 
 Whenever you create a literary or artistic work (such as a text, image, video, or software), the copyright law in most countries limits other people from copying, modifying, and sharing it without your express permission. [If the work was created as part of your job, it might be your employer who holds the copyright to the work, depending on the country and contract.]{.aside} This even applies if you make it available to others (e.g., on your website): First and foremost they are not allowed to copy, modify, or share it. This legal default of "all rights reserved" was created to benefit publishers, not authors [@Fogel2006], and runs counter to many cultural and scientific processes. Copyright licenses enable authors to free up their works for reuse by others.
 
+::: {#nte-situation-lmu .callout-note collapse="true"}
+### For researchers at LMU
+
+If you are an employee at LMU and your funder does not mandate the use of a particular license,
+the decision of which license to use lies with the holder of your chair (_Lehrstuhlinhaber\*in_).
+In the (rare) case that the software you developed has a technical application,
+that it falls under the legal definition of an invention,
+you are required to officially report your invention to the university which decides on its release.
+However, the [IP strategy](https://www.serviceportal.verwaltung.uni-muenchen.de/services/forschungsservices/_downloads/07_ip_strategy.pdf) of the LMU highlights that
+"LMU can make the greatest contribution to the value chain by focusing on the production of outstanding results in basic research and by helping to **make the results publicly accessible**.
+It follows that the commercial exploitation of research results has an accessory role".
+Furthermore, "as a rule, the inventor is entitled to the discretionary use of invention- and research-based results".
+Taken together, LMU emphasizes the importance of openness of research results and the freedom of researchers to share their findings widely.
+
+Only if the university claims the invention after you reported it, you may not apply a copyright license that contains a patent grant. In all other cases you are free to license your research project as you like.
+
+More information about the invention disclosure process can be found in the [service portal](https://www.serviceportal.verwaltung.uni-muenchen.de/internationals/research_transfer/intellectual_property/index.html).
+More information about software patents are provided by the FSFE: [Software Patents in Europe](https://fsfe.org/activities/swpat/swpat.en.html).
+:::
+
 A license is a legal document that regulates what _others_ are allowed to do with a copyright-protected work -- the licenses we discuss do not limit the author or copyright holder in their rights. And while you _could_ write your own, there are already many pre-formulated licenses available to choose from and to apply to your work.^[In fact, you should not create your own license if the purpose is to share your work freely and openly with others. By using a boilerplate license others know what to expect, also because they have been [tested](https://sfconservancy.org/copyleft-compliance/) in [courts](https://legaldb.creativecommons.org/).]
 
 ::: {.column-margin}
@@ -396,3 +416,4 @@ flowchart TB
 
 Advanced License Flowchart for Data(base)
 :::
+
