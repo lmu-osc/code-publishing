@@ -399,7 +399,7 @@ Note&nbsp;1: Without RStudio
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> init</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Then, one can open an R session by simply typing <code>R</code> into the terminal. Next, make sure that <code>getwd()</code> indicates that the working directory is <code>code-publishing-exercise</code>. If not, set it using <code>setwd("code-publishing-exercise")</code>. Then, initialize <code>renv</code>:</p>
+<p>Then, one can open an R session by simply typing <code>R</code> into the terminal. Next, make sure that <code>getwd()</code> indicates that the working directory is <code>code-publishing-exercise</code>. Then, initialize <code>renv</code>:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
@@ -458,7 +458,7 @@ Tip&nbsp;1
 </section>
 <section id="add-data" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="add-data">Add Data</h2>
-<p>You can now download the data set we have prepared for you and put into your project folder: <a href="_01_Example/Data.csv" download=""><code>Data.csv</code></a></p>
+<p>You can now download the data set we have prepared for you and put it into your project folder: <a href="_01_Example/Data.csv" download=""><code>Data.csv</code></a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
@@ -467,7 +467,7 @@ Tip&nbsp;1
 <figcaption>palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</figcaption>
 </figure>
 </div>
-</div></div><p>The data set is from the package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a> and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available under the license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>.</p>
+</div></div><p>The data set is from the package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available under the license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>.</p>
 <div id="imp-legal-restrictions" class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -485,7 +485,7 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <li>copyright of the data and their particular structure, and</li>
 <li>any <em>sui generis</em> database right.</li>
 </ol>
-<p>Privacy laws and contractual obligations may require you to create a completely anonymized or synthetic data set<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> (if possible), or prohibit any sharing of data, in which case you should provide a reference to a data repository where they can be obtained from. For further information, you can watch the talk “<a href="https://osf.io/j6fy8">Data anonymity</a>” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at <a href="https://osf.io/z6gcu">the accompanying slides</a>.</p>
+<p>Privacy laws and contractual obligations may require you to create a completely anonymized or synthetic data set<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> (if possible), or prohibit any sharing of data, in which case you should provide a reference to a data repository where they can be obtained from. For further information, you can watch the talk “<a href="https://osf.io/j6fy8">Data anonymity</a>” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at <a href="https://osf.io/z6gcu">the accompanying slides</a>.</p>
 <p>Purely factual data such as measurements are usually not copyrightable, but literary or artistic works that cross the threshold of originality are. Additionally, in some jurisdictions data can be subject to <em>sui generis</em> database rights which prevent extracting substantial parts of a database. As a consequence, you need to ensure that you own or have authority to share the data with respect to copyright and similar rights, and to license it to others (see “<a href="./choose_license.html">Choose a License</a>”).</p>
 </div>
 </div>
@@ -501,7 +501,7 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can put the code that follows for creating the data dictionary into a new file called <code>create_data_dictionary.R</code>.</p>
-<p>Using <code>tinylabels</code> we can add labels to the variables of a <code>data.frame</code> in R:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>Using <code>tinylabels</code> we can add labels to the variables of a <code>data.frame</code> in R:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -544,12 +544,12 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <!-- preamble start -->
 
     <script>
-      function styleCell_7tz7tbqhu6u1431a2nix(i, j, css_id) {
-        var table = document.getElementById("tinytable_7tz7tbqhu6u1431a2nix");
+      function styleCell_xhygqduk7fwm6ao0m5fp(i, j, css_id) {
+        var table = document.getElementById("tinytable_xhygqduk7fwm6ao0m5fp");
         table.rows[i].cells[j].classList.add(css_id);
       }
       function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_7tz7tbqhu6u1431a2nix');
+        var table = document.getElementById('tinytable_xhygqduk7fwm6ao0m5fp');
         var newRow = table.insertRow(i);
         var newCell = newRow.insertCell(0);
         newCell.setAttribute("colspan", colspan);
@@ -557,8 +557,8 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
         // this may be unsafe, but innerText does not interpret <br>
         newCell.innerHTML = content;
       }
-      function spanCell_7tz7tbqhu6u1431a2nix(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_7tz7tbqhu6u1431a2nix");
+      function spanCell_xhygqduk7fwm6ao0m5fp(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_xhygqduk7fwm6ao0m5fp");
         const targetRow = table.rows[i];
         const targetCell = targetRow.cells[j];
         for (let r = 0; r < rowspan; r++) {
@@ -584,21 +584,21 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
         targetCell.rowSpan = rowspan;
         targetCell.colSpan = colspan;
       }
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 0, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 1, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 2, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 3, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 4, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 5, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 6, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
-window.addEventListener('load', function () { styleCell_7tz7tbqhu6u1431a2nix(0, 7, 'tinytable_css_id9ce2zbf8hsu9y404r0pb') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 0, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 1, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 2, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 3, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 4, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 5, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 6, 'tinytable_css_idj01keln98k4s7845jeuv') })
+window.addEventListener('load', function () { styleCell_xhygqduk7fwm6ao0m5fp(0, 7, 'tinytable_css_idj01keln98k4s7845jeuv') })
     </script>
 
     <style>
-    .table td.tinytable_css_id9ce2zbf8hsu9y404r0pb, .table th.tinytable_css_id9ce2zbf8hsu9y404r0pb {  border-bottom: solid 0.1em #d3d8dc; }
+    .table td.tinytable_css_idj01keln98k4s7845jeuv, .table th.tinytable_css_idj01keln98k4s7845jeuv {  border-bottom: solid 0.1em #d3d8dc; }
     </style>
     <div class="container">
-      <table class="table table-borderless" id="tinytable_7tz7tbqhu6u1431a2nix" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+      <table class="table table-borderless" id="tinytable_xhygqduk7fwm6ao0m5fp" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
         <thead>
         
               <tr>
@@ -905,7 +905,7 @@ Note&nbsp;2: Create Machine-Readable Variable Documentation
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Another alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a>.</p>
-<p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. Finally, the package is used to create a metadata file that contains the schema.</p>
+<p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. Finally, the package is used to create a metadata file that contains the schema.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
@@ -988,7 +988,7 @@ Important&nbsp;2: Take Copyright Seriously
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>When you include work by others in your project – especially if you intend to make it available publicly –, make sure you have the necessary rights to do so. Only build on existing work for which you are given an express grant of relevant rights. How do you know you are allowed to copy, edit, and share the two files linked above?</p>
+<p>If you include work by others in your project – especially if you intend to make it available publicly –, make sure you have the necessary rights to do so. Only build on existing work for which you receive an express grant of relevant rights. How do you know you are allowed to copy, edit, and share the two files linked above?</p>
 </div>
 </div>
 <div id="nte-take-copyright-seriously-solution" class="callout callout-style-default callout-note callout-titled">
@@ -1115,7 +1115,7 @@ Warning&nbsp;1: Beware of Credentials
 <div class="callout-body-container callout-body">
 <p>Sometimes, a data analysis requires the interaction with online services:</p>
 <ul>
-<li>Data may be collected from social network sites using their APIs<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> or downloaded from a data repository, or</li>
+<li>Data may be collected from social network sites using their APIs<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> or downloaded from a data repository, or</li>
 <li>an analysis may be conducted with the help of AI providers.</li>
 </ul>
 <p>In these cases, make sure that the code you check in to Git does not contain any credentials that are required for accessing these services. Instead, make use of environment variables which are defined in a location that is excluded from version control. When programming with R, you can define them in a file called <code>.Renviron</code> in the root of your project folder:</p>
@@ -1140,9 +1140,9 @@ Warning&nbsp;1: Beware of Credentials
 <li><p><strong>Don’t repeat yourself.</strong> Use variables and functions before you start to write (or copy-paste) the same thing twice.</p></li>
 <li><p><strong>Use comments to explain why you do things.</strong> The code already shows what you do. Use comments to summarize it and explain why you do it.</p></li>
 <li><p><strong>Don’t reinvent the wheel.</strong> With R, chances are that what you need to do is greatly facilitated by a package from one of many high-quality collections such as <a href="https://ropensci.org/packages/">rOpenSci</a>, <a href="https://github.com/r-lib">r-lib</a>, <a href="https://www.tidyverse.org/packages/">Tidyverse</a>, or <a href="https://fastverse.github.io/fastverse/">fastverse</a>.</p></li>
-<li><p><strong>Think twice about your dependencies.</strong> Every dependency increases the risk of irreproducibility in the future. Prefer packages that are well-maintained and light on dependencies<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a>. We also recommend you to read “When should you take a dependency?” by <span class="citation" data-cites="Wickham2023PackagesDependency">Wickham &amp; Bryan (<a href="#ref-Wickham2023PackagesDependency" role="doc-biblioref">2023</a>)</span>.</p></li>
-<li><p><strong>Fail early, often and noisily.</strong> Whenever you expect a certain state, use assertions to be sure. In R, you can use <code>stopifnot()</code> to make sure that a condition is actually true.</p></li>
-<li><p><strong>Test your code.</strong> Test your code with scenarios where you know what the result should be. Turn bugs you discovered into test cases. Use linting tools<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> to identify common mistakes in your code, for example, the R package <a href="https://lintr.r-lib.org/"><code>lintr</code></a>.</p></li>
+<li><p><strong>Think twice about your dependencies.</strong> Every dependency increases the risk of irreproducibility in the future. Prefer packages that are well-maintained and light on dependencies<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>. We also recommend you to read “When should you take a dependency?” by <span class="citation" data-cites="Wickham2023PackagesDependency">Wickham &amp; Bryan (<a href="#ref-Wickham2023PackagesDependency" role="doc-biblioref">2023</a>)</span>.</p></li>
+<li><p><strong>Fail early, often, and noisily.</strong> Whenever you expect a certain state, use assertions to be sure. In R, you can use <code>stopifnot()</code> to make sure that a condition is actually true.</p></li>
+<li><p><strong>Test your code.</strong> Test your code with scenarios where you know what the result should be. Turn bugs you discovered into test cases. Use linting tools<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> to identify common mistakes in your code, for example, the R package <a href="https://lintr.r-lib.org/"><code>lintr</code></a>.</p></li>
 <li><p><strong>Read through a style guide and follow it.</strong> A style guide is a set of stylistic conventions that improve the code quality. R users are recommended to read Wickham’s <span class="citation" data-cites="Wickham2022Style">(<a href="#ref-Wickham2022Style" role="doc-biblioref">2022</a>)</span> “Tidyverse style guide” and use the R package <a href="https://styler.r-lib.org/"><code>styler</code></a>. Python users may benefit from reading the “Style Guide for Python Code” by <span class="citation" data-cites="VanRossum2013">Rossum et al. (<a href="#ref-VanRossum2013" role="doc-biblioref">2013</a>)</span>. And even if you don’t follow a style guide, be consistent.</p></li>
 </ul>
 <p>This is only a brief summary and there is much more to be learned about coding practices. If you want to dive deeper we recommend the following resources:</p>
@@ -1284,7 +1284,7 @@ Figure&nbsp;1: “Should I cite the software?” by <span class="citation" data-
 <span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
 <span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will automatically create a paragraph citing all used packages and generate the bibliography file <code>grateful-refs.bib</code>.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Then, in the YAML header, add <code>grateful-refs.bib</code> by setting the <code>bibliography</code> as follows:</p>
+<p>This will automatically create a paragraph citing all used packages and generate the bibliography file <code>grateful-refs.bib</code>.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> Then, in the YAML header, add <code>grateful-refs.bib</code> by setting the <code>bibliography</code> as follows:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Manuscript.qmd</strong></pre>
@@ -1293,7 +1293,7 @@ Figure&nbsp;1: “Should I cite the software?” by <span class="citation" data-
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> Bibliography.bib</span></span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> grateful-refs.bib</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Use <code>renv</code> to view, install, and record the newly used package <code>grateful</code>:</p>
+<p>Use <code>renv</code> to view, install, and record the newly used package:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
@@ -1324,7 +1324,7 @@ Figure&nbsp;1: “Should I cite the software?” by <span class="citation" data-
 </div>
 <div class="sourceCode" id="cb33" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> use binder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This will create a few additional files which facilitate reconstructing the computational environment in the future.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> As always, commit your changes:</p>
+<p>This will create a few additional files which facilitate reconstructing the computational environment in the future.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> As always, commit your changes:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
@@ -1398,14 +1398,15 @@ Wilson, G., Bryan, J., Cranston, K., Kitzes, J., Nederbragt, L., &amp; Teal, T. 
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://sdctools.github.io/sdcMicro/">sdcMicro</a>, or <a href="https://www.synthpop.org.uk/">Synthpop</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Note that the code provided does not alter the data file – no labels will be added to <code>Data.csv</code>. The labels are only added to a (temporary) copy of the data set within R in order to create the data dictionary.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>In June 2024, <a href="https://datapackage.org/">version 2</a> of the frictionless data standard has been released. As of November 2024, the R package <code>frictionless</code> only supports the first version, though support for v2 is <a href="https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2">planned</a>.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>An <em>application programming interface</em> provides the capability to interact with other software using a programming language.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>You can use the function <code>pak::pkg_deps()</code> to count the total number of package dependencies in R.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>A linting tool analyzes your code without actually running it. This process is called static code analysis.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Note that the detection can fail <a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>Either using <a href="https://repo2docker.readthedocs.io/">repo2docker</a> or the public <a href="https://mybinder.org/">binder</a> service.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Created with <code>palmerpenguins</code> v0.1.1 using <code>write.csv(palmerpenguins::penguins, file = "Data.csv", row.names = FALSE)</code>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://sdctools.github.io/sdcMicro/">sdcMicro</a>, or <a href="https://www.synthpop.org.uk/">Synthpop</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Note that the code provided does not alter the data file – no labels will be added to <code>Data.csv</code>. The labels are only added to a (temporary) copy of the data set within R in order to create the data dictionary.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>In June 2024, <a href="https://datapackage.org/">version 2</a> of the frictionless data standard has been released. As of November 2024, the R package <code>frictionless</code> only supports the first version, though support for v2 is <a href="https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2">planned</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>An <em>application programming interface</em> provides the capability to interact with other software using a programming language.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>You can use the function <code>pak::pkg_deps()</code> to count the total number of package dependencies in R.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>A linting tool analyzes your code without actually running it. Therefore, this process is also called static code analysis.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Note that this automatic detection can miss packages in some circumstances, therefore always verify the rendered result.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Either using <a href="https://repo2docker.readthedocs.io/">repo2docker</a> or the public <a href="https://mybinder.org/">binder</a> service.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1844,7 +1845,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>Copyright 2024 Open Science Center at LMU Munich</p>
+<p>© 2024 Open Science Center at LMU Munich</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
