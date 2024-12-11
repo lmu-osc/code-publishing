@@ -47,7 +47,7 @@ This manuscript presents a minimal reproducible example utilizing the penguins d
 #| echo: false
 
 # Load penguins data set
-dat <- read.csv("Data.csv")
+dat <- read.csv("data.csv")
 
 # Remove rows with NA
 dat_clean <- dat[complete.cases(dat), ]
