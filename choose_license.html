@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -92,10 +92,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-650dd1a6464f4a1c4dc33bcbd6e46959.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-23dc08de22340bf10d47cf1bc6de36e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -464,7 +464,7 @@ Note&nbsp;2: Other Work Types
 <div class="callout-body-container callout-body">
 <p>One should take special care when applying license to the following types of works:</p>
 <ul>
-<li><strong>fonts:</strong> Copyleft licenses applied to fonts can be a special case: If a font is put under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, any documents containing texts using that font will probably be derivative works and have to be put under the same license if shared. If the intent is that only derived fonts, if published, have to be put under the same license, the <a href="https://openfontlicense.org/">SIL Open Font License&nbsp;1.1</a> is an appropriate choice. Note, however, that it doesn’t require attribution for usage. If no copyleft mechanism is intended, <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> also works for fonts.</li>
+<li><strong>fonts:</strong> Copyleft licenses applied to fonts can be a special case: If a font is put under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, any documents containing texts using that font will probably be derivative works and have to be put under the same license if shared. The <a href="https://openfontlicense.org/">SIL Open Font License&nbsp;1.1</a> is the <em>de facto</em> standard license for fonts, requiring that derived fonts, if published, have to be put under the same license. It doesn’t require attribution for usage (e.g., when embedded in a document), but forbids that the font is sold by itself. Selling the font is allowed, however, if it is bundled with other software.</li>
 <li><strong>templates and TeX packages:</strong> If a template or, for this purpose, a <span class="math inline">\(\TeX\)</span> package, is licensed under a copyleft license such as the (A)GPLv3, every work that is a derivative of the template or that uses the <span class="math inline">\(\TeX\)</span> package has to put under the same license, if shared <span class="citation" data-cites="Koppor2016">(<a href="#ref-Koppor2016" role="doc-biblioref">Koppor, 2016</a>)</span>. And if a document contained source code covered by the (A)GPLv3, the same license would also apply to the document <span class="citation" data-cites="MadHatter2022">(<a href="#ref-MadHatter2022" role="doc-biblioref">MadHatter, 2022</a>)</span>.</li>
 <li><strong>database content:</strong> If the work produced from a database (the “output”) is a derivative of the content in the database, the output is subject to the restrictions laid out in the license. For example, if geospatial data were to be licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, all maps produced from the data would likely need to fulfill this license’s obligation for unrestricted access (its Anti-DRM provision) if shared <span class="citation" data-cites="Poole2017">(see <a href="#ref-Poole2017" role="doc-biblioref">Poole, 2017</a>)</span>. Similarly, following an example from <span class="citation" data-cites="Matt2009">Matt (<a href="#ref-Matt2009" role="doc-biblioref">2009</a>)</span>, if one were to choose the copyleft license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> for this purpose, any map that is a derivative of the data would also need to be licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> (or a compatible license) if shared. If the intention is to only have <a href="https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline">derivative databases</a> under the same license, one might want to choose the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> for the database, as it was specifically designed not to apply to works produced from the data in the database. Otherwise <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> is an excellent choice for data.</li>
 <li><strong>works in the public domain</strong>: If a work is already in the public domain, it should be marked using the <a href="https://creativecommons.org/publicdomain/mark/1.0/">PDM 1.0</a>, rather than applying a waiver such as the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> (or another license).</li>
@@ -508,7 +508,9 @@ Tip&nbsp;2: Projects Involving R Code
 <p>The advanced license flowcharts also allow you to make additional decisions:</p>
 <ul>
 <li><strong>Attribution</strong> means whether recipients of your work are required to provide attribution to you. For software licenses, the attribution is part of a copyright notice. Note that even if attribution is not a requirement of the license, good scientific practice demands that appropriate citations are made.</li>
+<li><strong>Add license text</strong> means that recipients need to distribute the full text of the license along with the work (rather than only mentioning its license, for example, via a link).</li>
 <li><strong>State changes</strong> means that recipients need to indicate if changes were made.</li>
+<li><strong>Disclose code</strong> means that recipients need to disclose the source code when distributing modified versions of your work.</li>
 <li><strong>Anti-DRM</strong> means that when others share your work they are not allowed to apply technological measures restricting anything that the license permits. Implementing such restrictive measures is also referred to as <strong>d</strong>igital <strong>r</strong>ights <strong>m</strong>anagement (DRM).</li>
 </ul>
 <p>From the Creative Commons licenses, only <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> does not require providing attribution. All software licenses in <a href="#fig-flowchart-non-data" class="quarto-xref">Figure&nbsp;2</a> require providing attribution, although only <a href="https://choosealicense.com/licenses/apache-2.0/">Apache&nbsp;2.0</a> and <a href="https://choosealicense.com/licenses/agpl-3.0/">AGPLv3</a> require others to indicate changes. For data, the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> allows for technological measures that restrict the work only if a version of the database is provided in parallel without such measures.</p>
@@ -524,9 +526,7 @@ Note&nbsp;3: Other Restrictions
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>As indicated before, a free/open license must allow creating derivative works and must allow exercising the rights granted by it <em>for any purpose</em>, including commercial use. There are a few good resources on the reasoning behind that <span class="citation" data-cites="Klimpel2013 ODI2015 Stallman2022NoLimit Moller2023 Vezina2020 WikimediaCommons2009">(e.g., see <a href="#ref-Klimpel2013" role="doc-biblioref">Klimpel, 2013</a>; <a href="#ref-Moller2023" role="doc-biblioref">Möller, 2023</a>; <a href="#ref-ODI2015" role="doc-biblioref">Open Data Institute, 2015</a>; <a href="#ref-Stallman2022NoLimit" role="doc-biblioref">Stallman, 2022b</a>; <a href="#ref-Vezina2020" role="doc-biblioref">Vézina, 2020</a>; <a href="#ref-WikimediaCommons2009" role="doc-biblioref">Wikimedia Commons contributors, 2009</a>)</span>, but we would like to highlight one reason in particular.</p>
-<p>With the rights provided by free/open licenses comes the possibility to build on and combine multiple works by different authors, which is essential for any cultural and scientific activity. However, this is only possible if the various licenses involved are compatible with each other. For example, one is allowed to remix two figures if the first is licensed under CC&nbsp;BY&nbsp;4.0 and the second under CC&nbsp;BY-SA&nbsp;4.0 because the licenses were written to be compatible with each other <span class="citation" data-cites="CC2024FAQ">(compare <a href="#ref-CC2024FAQ" role="doc-biblioref">Creative Commons, 2024b</a>)</span>. Also note that CC&nbsp;BY-SA&nbsp;4.0 is <a href="https://creativecommons.org/compatiblelicenses">one-way compatible</a> with the GPLv3, which in turn is compatible with the AGPLv3.</p>
-<p>However, applying a restriction such as only permitting non-commercial use or not allowing derivative works creates <em>silos</em> of works which are mutually incompatible with each other. Put differently, one cannot share a remix of two works where one is licensed under CC&nbsp;BY-SA&nbsp;4.0 and the other only allows non-commercial use. In order to avoid silos, one should only choose licenses which are compatible with the dominant copyleft license in the respective community <span class="citation" data-cites="Lammerhirt2017 Wheeler2014">(<a href="#ref-Lammerhirt2017" role="doc-biblioref">Lämmerhirt, 2017</a>; <a href="#ref-Wheeler2014" role="doc-biblioref">Wheeler, 2014</a>)</span>. If you would like to learn more about the different types of compatibility, we recommend you to read the article “A Quick Guide to Software Licensing for the Scientist-Programmer” by <span class="citation" data-cites="Morin2012">Morin et al. (<a href="#ref-Morin2012" role="doc-biblioref">2012</a>)</span>. The following diagram provides an overview of the compatibility of various licenses:</p>
+<p>As indicated before, a free/open license must allow creating derivative works and must allow exercising the rights granted by it <em>for any purpose</em>, including commercial use. Otherwise, creating adaptations from multiple works by different authors would either limit commercial use for everybody (including the authors) or would not be possible at all (when including materials with a copyleft license), effectively creating <em>silos</em> of works which are mutually incompatible with each other. This is especially relevant for work types for which adaptations are created frequently, such as text, data, and source code. In order to avoid silos, one should only choose licenses which are compatible with the dominant copyleft license in the respective community <span class="citation" data-cites="Lammerhirt2017 Wheeler2014">(<a href="#ref-Lammerhirt2017" role="doc-biblioref">Lämmerhirt, 2017</a>; <a href="#ref-Wheeler2014" role="doc-biblioref">Wheeler, 2014</a>)</span>. If you would like to learn more about the different types of compatibility, we recommend you to read the article “A Quick Guide to Software Licensing for the Scientist-Programmer” by <span class="citation" data-cites="Morin2012">Morin et al. (<a href="#ref-Morin2012" role="doc-biblioref">2012</a>)</span>. The following diagram provides an overview of the compatibility of various licenses:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/Morrison2024.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="“Open data-capable license interoperability” by Robbie Morrison [-@Morrison2024] licensed under CC&nbsp;BY&nbsp;4.0"><img src="images/Morrison2024.jpg" class="img-fluid figure-img" alt="“Open data-capable license interoperability” by Robbie Morrison (2024) licensed under CC&nbsp;BY&nbsp;4.0"></a></p>
@@ -557,7 +557,7 @@ Caution&nbsp;1: License Versions Are Important
 </div>
 <div class="callout-body-container callout-body">
 <p>You may have noticed that we mostly refer to licenses using a name <em>and</em> a version number. This is because the organizations that created the licenses sometimes publish updated versions to accommodate for developments in copyright law and the communities that use the licenses. For example, the Creative Commons licenses (that start with <code>CC</code>) were first published in 2002. Since then, the possibility to relicense under later (<a href="https://creativecommons.org/weblog/entry/4216#:~:text=Share%20Alike%20Across%20Borders">v2.0</a>, 2004) and compatible licenses (<a href="https://creativecommons.org/weblog/entry/7249">v3.0</a>, 2007) has been added, a 30-day window to correct license violations has been established to combat <a href="https://commons.wikimedia.org/wiki/Commons:Copyleft_trolling">copyleft trolls</a>, and <em>sui generis</em> database rights are covered explicitly (<a href="https://creativecommons.org/weblog/entry/40768">v4.0</a>, 2013). There are many more <a href="https://wiki.creativecommons.org/wiki/License_Versions">subtle differences between license versions</a>, therefore it is important to indicate which license version exactly one is referring to, as the license of a work does not “update” automatically. CC0, officially introduced in 2009, is still at version <a href="http://www.creativecommons.org/weblog/entry/13304">1.0</a>.</p>
-<p>For the AGPLv3 it is even recommended to state whether a work is licensed under exactly the indicated version of the license or, alternatively, also under newer versions of the license <span class="citation" data-cites="Stallman2022Version">(<a href="#ref-Stallman2022Version" role="doc-biblioref">Stallman, 2022a</a>)</span>.</p>
+<p>For the AGPLv3 it is even recommended to state whether a work is licensed under exactly the indicated version of the license or, alternatively, also under newer versions of the license <span class="citation" data-cites="Stallman2022Version">(<a href="#ref-Stallman2022Version" role="doc-biblioref">Stallman, 2022</a>)</span>.</p>
 </div>
 </div>
 <p>For example, the <code>apaquarto</code> extension that you included in your project is a work by others.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a> You need to indicate its license so that others know what they are allowed to do – and, of course, you need to comply with any terms yourself, such as retaining the copyright notice.<a href="#fn12" class="footnote-ref" id="fnref12" role="doc-noteref"><sup>12</sup></a> In contrast, if it were not for this tutorial, the manuscript would contain your own work and you would need to indicate under which license you provide it to others.</p>
@@ -710,7 +710,7 @@ Note&nbsp;4: Using REUSE to Record Licenses
 <p>If you would like to learn more about copyright and licenses you might find the following resources interesting:</p>
 <ul>
 <li>“Open Content – A Practical Guide to Using Creative Commons Licences” by <span class="citation" data-cites="Kreutzer2014">Kreutzer &amp; Deutsche UNESCO-Kommission (<a href="#ref-Kreutzer2014" role="doc-biblioref">2014</a>)</span></li>
-<li>“Creative Commons Certificate for Educators, Academic Librarians, and Open Culture” by <span class="citation" data-cites="CC2024Certificate">Creative Commons (<a href="#ref-CC2024Certificate" role="doc-biblioref">2024a</a>)</span></li>
+<li>“Creative Commons Certificate for Educators, Academic Librarians, and Open Culture” by <span class="citation" data-cites="CC2024Certificate">Creative Commons (<a href="#ref-CC2024Certificate" role="doc-biblioref">2024</a>)</span></li>
 <li>“Freie Software – Zwischen Privat- und Gemeineigentum” by <span class="citation" data-cites="Grassmuck2004">Grassmuck (<a href="#ref-Grassmuck2004" role="doc-biblioref">2004</a>)</span></li>
 </ul>
 </section>
@@ -734,12 +734,12 @@ Note&nbsp;4: Using REUSE to Record Licenses
   regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
   regulation --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
   
-  type --"Software"--&gt; code_sa("Attribution?&lt;br&gt;State changes?&lt;br&gt;Copyleft?")
+  type --"Software"--&gt; code_sa("Attribution?&lt;br&gt;Add license text?&lt;br&gt;State changes?&lt;br&gt;Disclose code?&lt;br&gt;Copyleft?")
   type --"Writing, image, audio, video"--&gt; nocode_cc("Attribution?&lt;br&gt;State changes?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
   
-  code_sa --"Attribution &amp;&lt;br&gt;State changes"--&gt; apache["Apache 2.0"]
-  code_sa --"Attribution &amp;&lt;br&gt;Weak copyleft"--&gt; mpl["MPL 2.0"]
-  code_sa --"Attribution &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Strong copyleft"--&gt; agpl["AGPLv3"]
+  code_sa --"Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes"--&gt; apache["Apache 2.0"]
+  code_sa --"Attribution &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Weak copyleft"--&gt; mpl["MPL 2.0"]
+  code_sa --"Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Strong copyleft"--&gt; agpl["AGPLv3"]
   
   nocode_cc --"Neither"--&gt; cc0["CC0 1.0"]
   nocode_cc --"Attribution &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM"--&gt; cc_by["CC BY 4.0"]
@@ -830,10 +830,7 @@ Creative Commons. (2013, November 25). <em>Considerations for licensors and lice
 Creative Commons. (2015, August 8). <em><span>ShareAlike</span> compatibility analysis: <span>GPL</span></em>. <a href="https://wiki.creativecommons.org/index.php?title=ShareAlike_compatibility_analysis:_GPL&amp;oldid=114476">https://wiki.creativecommons.org/index.php?title=ShareAlike_compatibility_analysis:_GPL&amp;oldid=114476</a>
 </div>
 <div id="ref-CC2024Certificate" class="csl-entry" role="listitem">
-Creative Commons. (2024a). <em>Creative commons certificate for educators, academic librarians, and open culture</em>. <a href="https://certificates.creativecommons.org/cccertedu/">https://certificates.creativecommons.org/cccertedu/</a>
-</div>
-<div id="ref-CC2024FAQ" class="csl-entry" role="listitem">
-Creative Commons. (2024b, June 3). <em>Answer to ’can <span>I</span> combine material under different creative commons licenses in my work?’ in frequently asked questions</em>. <a href="https://creativecommons.org/faq/#can-i-combine-material-under-different-creative-commons-licenses-in-my-work">https://creativecommons.org/faq/#can-i-combine-material-under-different-creative-commons-licenses-in-my-work</a>
+Creative Commons. (2024). <em><span>Creative Commons</span> certificate for educators, academic librarians, and open culture</em>. <a href="https://certificates.creativecommons.org/cccertedu/">https://certificates.creativecommons.org/cccertedu/</a>
 </div>
 <div id="ref-Elson2016" class="csl-entry" role="listitem">
 Elson, M. (2016, November 11). <em>Retaining copyright for figures in academic publications to allow easy citation and reuse. Medium</em>. <a href="https://medium.com/@malte.elson/retaining-copyright-for-figures-in-academic-publications-to-allow-easy-citation-and-reuse-77c6e2b511fe">https://medium.com/@malte.elson/retaining-copyright-for-figures-in-academic-publications-to-allow-easy-citation-and-reuse-77c6e2b511fe</a>
@@ -846,9 +843,6 @@ Free Software Foundation. (2021, February 2). <em>What is free software?</em> <a
 </div>
 <div id="ref-Grassmuck2004" class="csl-entry" role="listitem">
 Grassmuck, V. (2004). <em>Freie Software: zwischen Privat- und Gemeineigentum</em> (2., korrigierte Aufl). Bundeszentrale für politische Bildung. <a href="https://freie-software.bpb.de/">https://freie-software.bpb.de/</a>
-</div>
-<div id="ref-Klimpel2013" class="csl-entry" role="listitem">
-Klimpel, P. (2013). <em>Free knowledge based on creative commons licenses</em>. Wikimedia. <a href="https://meta.wikimedia.org/wiki/Free_knowledge_based_on_Creative_Commons_licenses">https://meta.wikimedia.org/wiki/Free_knowledge_based_on_Creative_Commons_licenses</a>
 </div>
 <div id="ref-Koppor2016" class="csl-entry" role="listitem">
 Koppor. (2016, July 23). <em>Answer to ’<span>GPL</span>-licensed <span>LaTeX</span> template - implications for resulting work?’. Open source stack exchange</em>. <a href="https://opensource.stackexchange.com/questions/2735/gpl-licensed-latex-template-implications-for-resulting-work/4206#4206">https://opensource.stackexchange.com/questions/2735/gpl-licensed-latex-template-implications-for-resulting-work/4206#4206</a>
@@ -865,9 +859,6 @@ MadHatter. (2022, March 18). <em>Answer to ’is the <span>PDF</span> output of 
 <div id="ref-Matt2009" class="csl-entry" role="listitem">
 Matt. (2009, October 23). <em>Why <span>CC</span> <span>BY</span>-<span>SA</span> is unsuitable. <span>OpenStreetMap</span> foundation</em>. <a href="https://osmfoundation.org/w/index.php?title=Licence_and_Legal_FAQ/Why_CC_BY-SA_is_Unsuitable&amp;oldid=3927">https://osmfoundation.org/w/index.php?title=Licence_and_Legal_FAQ/Why_CC_BY-SA_is_Unsuitable&amp;oldid=3927</a>
 </div>
-<div id="ref-Moller2023" class="csl-entry" role="listitem">
-Möller, E. (2023, December 15). <em>The case for free use: Reasons not to use a creative commons -<span>NC</span> license</em>. <a href="https://freedomdefined.org/index.php?title=Licenses/NC&amp;oldid=27327">https://freedomdefined.org/index.php?title=Licenses/NC&amp;oldid=27327</a>
-</div>
 <div id="ref-Moller2015" class="csl-entry" role="listitem">
 Möller, E., Hill, B. M., Garlick, M., Stark, E., Knapp, J. A., Kadlec, P., Stallman, R., Lessig, L., &amp; Beesley, A. (2015, February 17). <em>Definition of free cultural works</em>. <a href="https://freedomdefined.org/Definition/1.1">https://freedomdefined.org/Definition/1.1</a>
 </div>
@@ -876,9 +867,6 @@ Morin, A., Urban, J., &amp; Sliz, P. (2012). A quick guide to software licensing
 </div>
 <div id="ref-Morrison2024" class="csl-entry" role="listitem">
 Morrison, R. (2024, August 27). <em>Which open data license? Open energy modelling initiative forum</em>. <a href="https://forum.openmod.org/t/which-open-data-license/2611">https://forum.openmod.org/t/which-open-data-license/2611</a>
-</div>
-<div id="ref-ODI2015" class="csl-entry" role="listitem">
-Open Data Institute. (2015, September 22). <em>What are the impacts of non-open licences?</em> <a href="https://theodi.org/insights/guides/what-are-the-impacts-of-non-open-licences/">https://theodi.org/insights/guides/what-are-the-impacts-of-non-open-licences/</a>
 </div>
 <div id="ref-OKFN2016" class="csl-entry" role="listitem">
 Open Knowledge Foundation. (2016). <em>The open definition - open definition - defining open in open data, open content and open knowledge</em>. <a href="https://opendefinition.org/">https://opendefinition.org/</a>
@@ -896,19 +884,13 @@ Rumsey, S., &amp; Labastida, I. (2022, July 25). <em>Exclusive licence to publis
 SPARC. (2006). <em>Author rights: Using the <span>SPARC</span> author addendum</em>. <a href="https://sparcopen.org/our-work/author-rights/brochure-html/">https://sparcopen.org/our-work/author-rights/brochure-html/</a>
 </div>
 <div id="ref-Stallman2022Version" class="csl-entry" role="listitem">
-Stallman, R. (2022a, January 22). <em>For clarity’s sake, please don’t say <span>“licensed under <span>GNU</span> <span>GPL</span> 2”</span>!</em> <a href="https://www.gnu.org/licenses/identify-licenses-clearly.html">https://www.gnu.org/licenses/identify-licenses-clearly.html</a>
-</div>
-<div id="ref-Stallman2022NoLimit" class="csl-entry" role="listitem">
-Stallman, R. (2022b, September 6). <em>Why programs must not limit the freedom to run them</em>. <a href="https://www.gnu.org/philosophy/programs-must-not-limit-freedom-to-run.html">https://www.gnu.org/philosophy/programs-must-not-limit-freedom-to-run.html</a>
+Stallman, R. (2022, January 22). <em>For clarity’s sake, please don’t say <span>“licensed under <span>GNU</span> <span>GPL</span> 2”</span>!</em> <a href="https://www.gnu.org/licenses/identify-licenses-clearly.html">https://www.gnu.org/licenses/identify-licenses-clearly.html</a>
 </div>
 <div id="ref-Suber2022" class="csl-entry" role="listitem">
 Suber, P. (2022). Publishing without exclusive rights. <em>The Journal of Electronic Publishing</em>, <em>25</em>(1). <a href="https://doi.org/10.3998/jep.1869">https://doi.org/10.3998/jep.1869</a>
 </div>
 <div id="ref-UKRN2023" class="csl-entry" role="listitem">
 UK Reproducibility Network, &amp; Eglen, S. (2023). <em>Rights retention strategy: A primer from <span>UKRN</span></em>. Open Science Framework. <a href="https://doi.org/10.31219/osf.io/2ajsg">https://doi.org/10.31219/osf.io/2ajsg</a>
-</div>
-<div id="ref-Vezina2020" class="csl-entry" role="listitem">
-Vézina, B. (2020, April 21). <em>Why sharing academic publications under <span>“no derivatives”</span> licenses is misguided. Creative commons</em>. <a href="https://creativecommons.org/2020/04/21/academic-publications-under-no-derivatives-licenses-is-misguided/">https://creativecommons.org/2020/04/21/academic-publications-under-no-derivatives-licenses-is-misguided/</a>
 </div>
 <div id="ref-Villa2016Copyleft" class="csl-entry" role="listitem">
 Villa, L. (2016a, September 21). <em>Copyleft, attribution, and data: Other considerations. Luis villa: Open tech and policy</em>. <a href="https://lu.is/2016/09/copyleft-attribution-and-data-other-considerations/">https://lu.is/2016/09/copyleft-attribution-and-data-other-considerations/</a>
@@ -921,9 +903,6 @@ Wheeler, D. A. (2014, February 16). <em>Make your open source software <span>GPL
 </div>
 <div id="ref-Wickham2023PackagesLicense" class="csl-entry" role="listitem">
 Wickham, H., &amp; Bryan, J. (2023). Licensing. In <em>R packages</em> (Second edition). O’Reilly Media. <a href="https://r-pkgs.org/license.html">https://r-pkgs.org/license.html</a>
-</div>
-<div id="ref-WikimediaCommons2009" class="csl-entry" role="listitem">
-Wikimedia Commons contributors. (2009, June 30). <em>Licensing/justifications. Wikimedia commons</em>. <a href="https://commons.wikimedia.org/w/index.php?title=Commons:Licensing/Justifications&amp;oldid=917608913">https://commons.wikimedia.org/w/index.php?title=Commons:Licensing/Justifications&amp;oldid=917608913</a>
 </div>
 <div id="ref-Wikipedia2024" class="csl-entry" role="listitem">
 Wikipedia contributors. (2024). <span>GNU</span> general public license – linking and derived works. In <em>Wikipedia</em>. Wikipedia, The Free Encyclopedia. <a href="https://en.wikipedia.org/w/index.php?title=GNU_General_Public_License&amp;oldid=1244139410#Linking_and_derived_works">https://en.wikipedia.org/w/index.php?title=GNU_General_Public_License&amp;oldid=1244139410#Linking_and_derived_works</a>
