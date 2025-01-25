@@ -22,7 +22,7 @@ author:
     roles:
       - project administration
       - methodology
-date: "`r format(Sys.Date(), '%B %d, %Y')`"
+date: "today"
 lang: en
 abstract: "This document is a minimal, reproducible manuscript using the penguins data set as an example."
 keywords: [penguins, reproducibility, minimal, example]
