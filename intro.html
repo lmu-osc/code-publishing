@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-23dc08de22340bf10d47cf1bc6de36e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-187ffd50043b4817e2f94d3f162977df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -179,6 +179,24 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Add Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Add Code</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./choose_license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Choose a License</span></a>
   </div>
@@ -208,6 +226,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#the-importance-of-sharing" id="toc-the-importance-of-sharing" class="nav-link active" data-scroll-target="#the-importance-of-sharing">The Importance of Sharing</a></li>
+  <li><a href="#document-materials" id="toc-document-materials" class="nav-link" data-scroll-target="#document-materials">Document Materials</a></li>
   <li><a href="#linking-results-and-computations" id="toc-linking-results-and-computations" class="nav-link" data-scroll-target="#linking-results-and-computations">Linking Results and Computations</a></li>
   <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
   </ul>
@@ -235,7 +254,7 @@ div.csl-indent {
 </header>
 
 
-<p>In the following, we will provide a brief introduction to the concept of <em>research compendia</em>.</p>
+<p>In the following, we will set the stage by highlighting the importance of sharing all materials, documenting their usage, and linking results with their computations, leading to the creation <em>research compendia</em>.</p>
 <section id="the-importance-of-sharing" class="level2">
 <h2 class="anchored" data-anchor-id="the-importance-of-sharing">The Importance of Sharing</h2>
 <p>Suppose you are reading an article about a new imaging method to turn seismological data into subsurface images. The article describes the ideas that went into developing this method and presents a few examples to illustrate its superiority over previous approaches. You got interested and would like to apply this method to your own data. However, with only the article available, it could take months to come up with a working solution, if possible at all. This situation has been put aptly by Buckheit &amp; Donoho <span class="citation" data-cites="Buckheit1995">(<a href="#ref-Buckheit1995" role="doc-biblioref">1995, p. 59</a>)</span>, distilling an idea by the geophysicist Jon Claerbout:</p>
@@ -244,15 +263,26 @@ div.csl-indent {
 </blockquote>
 <p>Even when researchers merely apply existing methods (rather than report on a new method), sharing the source code and being transparent about the computational environment is imperative to making their results reproducible <span class="citation" data-cites="Ince2012">(<a href="#ref-Ince2012" role="doc-biblioref">Ince et al., 2012</a>)</span>. By reproducibility, we mean “obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis” <span class="citation" data-cites="NASEM2019">(<a href="#ref-NASEM2019" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine, 2019, p. 46</a>)</span>.</p>
 </section>
+<section id="document-materials" class="level2">
+<h2 class="anchored" data-anchor-id="document-materials">Document Materials</h2>
+<p>However, there’s more to code publishing than sharing. Researchers should document (i.e., track) which data, software, images, texts, and other materials contributed to their work. In more elaborate terms, researchers should preserve the <em>provenance</em> of shared materials, for at least three tangible reasons:</p>
+<ul>
+<li><strong>Academic integrity</strong>: Providing citations for works that are not one’s own avoids plagiarism.</li>
+<li><strong>Complying with the law</strong>: Providing attribution and license texts (among other things) may be a legal obligation when redistributing materials.</li>
+<li><strong>Facilitating reproductions</strong>: Stating utilized software and data with their exact versions helps reproducers.</li>
+</ul>
+<p>Of course, when and how to reserve provenance varies for these reasons. Rephrasing someone’s text avoids issues of copyright, but may be plagiarism. And bibliographies of various styles may comply with scientific citation standards, but if they omit the first names of authors or the version number of computer programs, they might not help with matters of copyright or reproducibility.</p>
+<p>In this tutorial, we’ll consider all of these reasons important. And there are even more: Documenting the provenance puts research into context and allows others to understand how it came about. Also, cited authors benefit from the citation as they gain potential readers.</p>
+</section>
 <section id="linking-results-and-computations" class="level2">
 <h2 class="anchored" data-anchor-id="linking-results-and-computations">Linking Results and Computations</h2>
-<p>This tutorial not only covers sharing the source code, but also connecting it to the results through the creation of dynamic documents. Rather than manually copying numerical results, figures, or tables, they are inserted automatically upon rendering of the article. Dynamic documents bundled together with any necessary data and auxiliary software are called a <a href="https://research-compendium.science/">research compendium</a> <span class="citation" data-cites="Gentleman2007">(<a href="#ref-Gentleman2007" role="doc-biblioref">Gentleman &amp; Temple Lang, 2007</a>)</span>.</p>
+<p>For the purpose of this tutorial, tracking the provenance of results deserves particular attention. This means connecting them to the source code through the creation of dynamic documents. Rather than manually copying numerical results, figures, or tables, they are inserted automatically upon rendering of the article. Dynamic documents bundled together with any necessary data and auxiliary software are called <a href="https://research-compendium.science/">research compendia</a> <span class="citation" data-cites="Gentleman2007">(<a href="#ref-Gentleman2007" role="doc-biblioref">Gentleman &amp; Temple Lang, 2007</a>)</span>.</p>
 <p>The practice to interleave narrative text with code has its roots in the paradigm of literate programming, where documentation and source code are treated as equals and are arranged in a way to maximize understanding <span class="citation" data-cites="Knuth1984">(<a href="#ref-Knuth1984" role="doc-biblioref">Knuth, 1984</a>)</span>. Alternating text and code can be also found in notebook interfaces for exploratory programming <span class="citation" data-cites="Kluyver2016">(e.g., Wolfram Mathematica or Jupyter Notebooks, see <a href="#ref-Kluyver2016" role="doc-biblioref">Kluyver et al., 2016</a>)</span> that also have the capability to execute code and embed its output. With <em>Sweave</em> <span class="citation" data-cites="Leisch2002">(<a href="#ref-Leisch2002" role="doc-biblioref">Leisch, 2002</a>)</span>, ideas from both worlds – literate programming and embedding program output – were combined into one tool for rendering dynamic documents using the R programming language. It is the predecessor of the R package <code>knitr</code> <span class="citation" data-cites="Xie2015">(<a href="#ref-Xie2015" role="doc-biblioref">Xie, 2015</a>)</span> which is being used under the hood in this tutorial.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>Linking results with their computations has benefits for authors and readers. For the author, articles always contain the most recent version of figures, as they are updated automatically when the computation changes. For the readers, it enables understanding exactly how a particular result was obtained if they get access to the underlying research compendium.</p>
 </section>
 <section id="best-practices" class="level2">
 <h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
-<p>When creating a research compendium, there are a few things to consider <span class="citation" data-cites="Arguillas2022">(by <a href="#ref-Arguillas2022" role="doc-biblioref">Arguillas et al., 2022</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
+<p>To recap, in this tutorial you will share your materials, document their usage, and connect results to the underlying source code through the creation of a research compendium. Make sure to consider the following things along the way <span class="citation" data-cites="Arguillas2022">(by <a href="#ref-Arguillas2022" role="doc-biblioref">Arguillas et al., 2022</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
 <blockquote class="blockquote">
 <p><strong>Does the research compendium contain everything needed to reproduce a predefined outcome in an organized and parsimonious way?</strong></p>
 <ol type="1">

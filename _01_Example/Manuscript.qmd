@@ -28,11 +28,10 @@ abstract: "This document is a minimal, reproducible manuscript using the penguin
 keywords: [penguins, reproducibility, minimal, example]
 bibliography: Bibliography.bib
 format:
-  apaquarto-pdf:
-    documentmode: man
-    keep-tex: true
+  pdf:
     pdf-engine: lualatex
-    a4paper: true
+    documentclass: scrartcl
+    papersize: a4
 ---
 
 # Introduction
@@ -40,28 +39,10 @@ format:
 Penguins are fascinating creatures that inhabit various regions of the Southern Hemisphere, including Antarctica and surrounding islands.
 The study of penguins provides valuable insights into ecosystem dynamics, climate change impacts, and evolutionary biology [@smith2020; @jones2018].
 
+<!-- ADD IMAGE HERE -->
+
 This manuscript presents a minimal reproducible example utilizing the penguins data set to demonstrate scientific workflows in R.
-
-```{r}
-#| label: "t-test"
-#| echo: false
-
-# Load penguins data set
-dat <- read.csv("data.csv")
-
-# Remove rows with NA
-dat_clean <- dat[complete.cases(dat), ]
-
-# Treat year as categorical variable
-dat_clean$year <- as.factor(dat_clean$year)
-
-# Perform t-test
-t_test_result <- t.test(
-  bill_length_mm ~ sex,
-  data = dat_clean,
-  var.equal = FALSE
-)
-```
+<!-- CITE DATA HERE -->
 
 # Methods
 
@@ -71,47 +52,6 @@ The null hypothesis ($H_0$) states that there is no difference in bill lengths b
 The *t*-test was performed using the `t.test()` function in R, with a significance level of 0.05.
 
 # Results
-
-Descriptive statistics of the data set are given in @tbl-descriptive-statistics and individual bill lengths are displayed in @fig-bill-length-comparison.
-
-```{r}
-#| echo: false
-#| output: "asis"
-
-report::report(
-  x = t_test_result,
-  data = dat_clean,
-  rules = "gignac2016"
-) |>
-  report::as.report_text(summary = TRUE)
-```
-
-```{r}
-#| label: "tbl-descriptive-statistics"
-#| echo: false
-#| tbl-cap: "Descriptive Statistics"
-#| apa-twocolumn: true
-
-report::report_sample(dat_clean, by = "sex", total = FALSE) |>
-  knitr::kable()
-
-```
-
-```{r}
-#| label: "fig-bill-length-comparison"
-#| echo: false
-#| fig-cap: "Scatter Plot of Bill Lengths by Sex With Violin Plot Showing Quartiles"
-
-# Create ggplot object
-ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex), group = sex) +
-  ggplot2::geom_violin(
-    draw_quantiles = c(0.25, 0.5, 0.75),
-    show.legend = FALSE
-  ) +
-  ggplot2::geom_jitter(width = 0.15, show.legend = FALSE) +
-  ggplot2::labs(x = "Sex", y = "Bill length in mm") +
-  ggplot2::theme_minimal()
-```
 
 # Discussion
 

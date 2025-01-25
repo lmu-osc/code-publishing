@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-23dc08de22340bf10d47cf1bc6de36e8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-187ffd50043b4817e2f94d3f162977df.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -179,6 +179,24 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copyright</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Add Data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./code.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Add Code</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./choose_license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Choose a License</span></a>
   </div>
@@ -208,7 +226,7 @@ div.csl-indent {
    
   <ul>
   <li><a href="#where-to-deposit-software" id="toc-where-to-deposit-software" class="nav-link active" data-scroll-target="#where-to-deposit-software">Where to Deposit Software</a></li>
-  <li><a href="#using-zenodo-to-archive-your-project" id="toc-using-zenodo-to-archive-your-project" class="nav-link" data-scroll-target="#using-zenodo-to-archive-your-project">Using Zenodo to Archive Your Project</a></li>
+  <li><a href="#using-zenodo-to-archive-your-project-folder" id="toc-using-zenodo-to-archive-your-project-folder" class="nav-link" data-scroll-target="#using-zenodo-to-archive-your-project-folder">Using Zenodo to Archive Your Project Folder</a></li>
   <li><a href="#final-remarks" id="toc-final-remarks" class="nav-link" data-scroll-target="#final-remarks">Final Remarks</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/archive.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -237,7 +255,7 @@ div.csl-indent {
 
 <section id="where-to-deposit-software" class="level2">
 <h2 class="anchored" data-anchor-id="where-to-deposit-software">Where to Deposit Software</h2>
-<p>The project is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder <span class="citation" data-cites="Jackson2018">(excerpt from <a href="#ref-Jackson2018" role="doc-biblioref">Jackson &amp; The Software Sustainability Institute, 2018</a>, with footnotes removed, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
+<p>The project folder is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder <span class="citation" data-cites="Jackson2018">(excerpt from <a href="#ref-Jackson2018" role="doc-biblioref">Jackson &amp; The Software Sustainability Institute, 2018</a>, with footnotes removed, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
 <blockquote class="blockquote">
 <p><strong>Does the digital repository give you a unique persistent digital identifier for your deposit?</strong></p>
 <p>Persistent digital identifiers are identifiers that are provided under the assumption that they, and the digital objects they refer to, will remain available long term. Examples of unique persistent digital identifiers include DOIs and ARKs. The use of persistent digital identifiers for research outputs, including papers, data and software, and the use of these for citation purposes, is becoming prevalent in research.</p>
@@ -256,9 +274,9 @@ div.csl-indent {
 </blockquote>
 <p>Additional guidance is provided by <span class="citation" data-cites="Daquin2023">d’Aquin et al. (<a href="#ref-Daquin2023" role="doc-biblioref">2023</a>)</span>, <span class="citation" data-cites="Garijo2022">Garijo et al. (<a href="#ref-Garijo2022" role="doc-biblioref">2022</a>)</span>, and <span class="citation" data-cites="ScienceEurope2021">Science Europe (<a href="#ref-ScienceEurope2021" role="doc-biblioref">2021</a>)</span>. You can use the registry of research data repositories <a href="https://www.re3data.org/">re3data.org</a> to find one that matches your criteria. We think that the <a href="https://www.softwareheritage.org/">Software Heritage code archive</a> and <a href="https://zenodo.org/">Zenodo</a> are good choices, but don’t forget to also check your local institutions for recommendations.</p>
 </section>
-<section id="using-zenodo-to-archive-your-project" class="level2">
-<h2 class="anchored" data-anchor-id="using-zenodo-to-archive-your-project">Using Zenodo to Archive Your Project</h2>
-<p>In the following we will demonstrate how to use Zenodo to archive one’s project and obtain a DOI.</p>
+<section id="using-zenodo-to-archive-your-project-folder" class="level2">
+<h2 class="anchored" data-anchor-id="using-zenodo-to-archive-your-project-folder">Using Zenodo to Archive Your Project Folder</h2>
+<p>In the following we will demonstrate how to use Zenodo to archive one’s project folder and obtain a DOI.</p>
 <div id="cau-sandbox" class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -280,10 +298,10 @@ Caution&nbsp;1: Zenodo Sandbox
 <ul>
 <li><strong>Digital Object Identifier</strong> (DOI): Usually, you will want a DOI, therefore you need to choose <em>No</em> for the question whether you already have a DOI for this upload, and click on <em>Get a DOI now!</em>.</li>
 <li><strong>Resource type</strong>: Select the most appropriate one, for example, <em>Publication / Preprint</em>.</li>
-<li><strong>Licenses</strong>: If your project only contains content by you and if you previously only chose one license, you can select that by choosing <em>Add standard</em>. Otherwise, click on <em>Add custom</em> and describe how each file is licensed. If you have been using REUSE to record license information, you can run enter <code>SPDX Document</code> as title and run the reuse tool with <code>reuse spdx -o reuse.spdx</code> to create the file <code>reuse.spdx</code>. Then you can paste the content of <code>reuse.spdx</code> into the description field of the custom license as it contains information about the license of each file.</li>
+<li><strong>Licenses</strong>: If your project folder only contains content by you and if you previously only chose one license, you can select that by choosing <em>Add standard</em>. Otherwise, click on <em>Add custom</em> and describe how each file is licensed. If you have been using REUSE to record license information, you can run enter <code>SPDX Document</code> as title and run the reuse tool with <code>reuse spdx -o reuse.spdx</code> to create the file <code>reuse.spdx</code>. Then you can paste the content of <code>reuse.spdx</code> into the description field of the custom license as it contains information about the license of each file.</li>
 </ul></li>
 </ul>
-<p>If you previously uploaded your project to a public Git repository (which we didn’t cover during this tutorial), you could also add the new DOI to your README, for example, under the section “Citation”.</p>
+<p>If you previously uploaded your project folder to a public Git repository (which we didn’t cover during this tutorial), you could also add the new DOI to your README, for example, under the section “Citation”.</p>
 </section>
 <section id="final-remarks" class="level2">
 <h2 class="anchored" data-anchor-id="final-remarks">Final Remarks</h2>
