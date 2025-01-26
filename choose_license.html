@@ -330,7 +330,7 @@ window.Quarto = {
 </header>
 
 
-<p>So far, you took care to legally include works by others in your project folder. Up next, you will free up your project for reuse. This means ensuring that every bit (co-)authored by you in the project is put under a free/open license. It may be that your project (i.e., its files and folders) is not one work, but rather consists of multiple works available under different licenses. In that case, you need to indicate the license on a per-file or per-folder basis (rather than choosing one for the whole project). Sometimes, even different parts of a file might be subject to different licenses. For the purpose of this tutorial, we will consider the manuscript which you edited and the data dictionary you created.</p>
+<p>So far, you took care to legally include works by others in your project folder. Up next, you will free up your project for reuse. This means ensuring that every bit (co-)authored by you in the project is put under a free/open license. It may be that your project (i.e., its files and folders) is not one work, but rather consists of multiple works available under different licenses. In that case, you need to indicate the license on a per-file or per-folder basis (rather than choosing one for the whole project). Sometimes, even different parts of a file might be subject to different licenses. For the purpose of this tutorial, we will consider the manuscript and the bibliography which you edited as well as the data dictionary you created.</p>
 <div id="wrn-exclusive-rights" class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -355,7 +355,7 @@ Note&nbsp;1: License Choice TL;DR
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We recommend to choose free/open licenses suitable to the type of work (i.e., code, data, and everything else). <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> and <a href="https://choosealicense.com/licenses/apache-2.0/">Apache&nbsp;2.0</a> are good choices to apply simultaneously to all own works. Take your time to read the summaries behind the links and/or the actual license text to understand the legal effect. You can adapt the following wording to your use case:</p>
+<p>We recommend to choose free/open licenses suitable to the type of work (e.g., code, data, image etc.). <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> and <a href="https://choosealicense.com/licenses/apache-2.0/">Apache&nbsp;2.0</a> are good choices to apply simultaneously to all own works. Take your time to read the summaries behind the links and/or the actual license text to understand the legal effect. You can adapt the following wording to your use case:</p>
 <blockquote class="blockquote">
 <p>Except where noted otherwise, all files in this project are made available under CC0&nbsp;1.0 or (at your option) under the terms of the Apache License&nbsp;2.0.</p>
 </blockquote>
@@ -608,12 +608,12 @@ Note&nbsp;5: Using REUSE to Record Licenses
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Every major free/open license has a unique <a href="https://spdx.org/licenses/">SPDX identifier</a> which allows communicating the license choice unequivocally. We will be using that to indicate the license for every file in your project folder, along with the year of publication and the copyright holder. To do this, we add a comment to the beginning of every file and include the two tags <code>SPDX-FileCopyrightText</code> and <code>SPDX-License-Identifier</code>. How this works depends on the file type, as the syntax for a comment varies.</p>
-<p>For example, if you previously created the file <code>create_data_dictionary.R</code>, you can now add the following comment to the beginning of the file, replacing <code>&lt;YEAR&gt;</code> and <code>&lt;NAME&gt;</code> with the current year and your name – of course, you can also choose a different license:</p>
+<p>For example, if you previously created the file <code>create_data_dictionary.R</code>, you can now add the following comment to the beginning of the file, replacing <code>&lt;YEAR&gt;</code> and <code>&lt;YOUR NAME&gt;</code> with the current year and your name – of course, you can also choose a different license:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>create_data_dictionary.R</strong></pre>
 </div>
-<div class="sourceCode" id="cb2" data-filename="create_data_dictionary.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="an">SPDX-FileCopyrightText:</span><span class="co"> &lt;YEAR&gt; &lt;NAME&gt;</span></span>
+<div class="sourceCode" id="cb2" data-filename="create_data_dictionary.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="an">SPDX-FileCopyrightText:</span><span class="co"> &lt;YEAR&gt; &lt;YOUR NAME&gt;</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="an">SPDX-License-Identifier:</span><span class="co"> CC0-1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -629,14 +629,14 @@ Note&nbsp;5: Using REUSE to Record Licenses
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode bash code-overflow-wrap code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"&lt;NAME&gt;"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> create_data_dictionary.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode bash code-overflow-wrap code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"&lt;YOUR NAME&gt;"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> create_data_dictionary.R</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In many cases, the reuse tool will figure out the appropriate comment style for you. If this is not the case, as currently with Quarto files, you can tell it directly which comment style to use (<code>html</code> in this case):</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode bash code-overflow-wrap code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"Josephine Zerna &lt;josephine.zerna@tu-dresden.de&gt;"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Christoph Scheffel &lt;christoph_scheffel@tu-dresden.de&gt;"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Florian Kohrt"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC-BY-4.0"</span> <span class="at">--style</span><span class="op">=</span>html Manuscript.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode bash code-overflow-wrap code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"Josephine Zerna"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Christoph Scheffel"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> <span class="at">--style</span><span class="op">=</span>html Manuscript.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This adds the following header to <code>Manuscript.qmd</code>:</p>
 <div class="code-with-filename">
@@ -644,29 +644,30 @@ Note&nbsp;5: Using REUSE to Record Licenses
 <pre><strong>Manuscript.qmd</strong></pre>
 </div>
 <div class="sourceCode" id="cb6" data-filename="Manuscript.qmd"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!--</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-FileCopyrightText:</span><span class="co"> 2024 Christoph Scheffel &lt;christoph_scheffel@tu-dresden.de&gt;</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-FileCopyrightText:</span><span class="co"> 2024 Florian Kohrt</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-FileCopyrightText:</span><span class="co"> 2024 Josephine Zerna &lt;josephine.zerna@tu-dresden.de&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-License-Identifier:</span><span class="co"> CC-BY-4.0</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-FileCopyrightText:</span><span class="co"> 2024 Christoph Scheffel</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-FileCopyrightText:</span><span class="co"> 2024 Josephine Zerna</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="an">SPDX-License-Identifier:</span><span class="co"> CC0-1.0</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">--&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Note that <code>Manuscript.qmd</code> was provided to you under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, which is what you indicate with the previous comment. If you edited the file, you may also add yourself.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>Note that <code>Manuscript.qmd</code> was provided to you under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>, which is what you indicate with the previous comment. As you edited the file throughout this tutorial, you may also add yourself.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
 <p>Sometimes, there are file types which do not allow for adding the license information inside them, such as PDF and CSV files. For these, a corresponding <code>.license</code> file can be created. Try the following command which indicates that the data were published under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="Terminal"><pre class="sourceCode bash code-overflow-wrap code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"Kristen Gorman"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" data-filename="Terminal"><pre class="sourceCode bash code-overflow-wrap code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"Allison Horst"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Alison Hill"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Kristen Gorman"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> data.csv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You will notice that this creates another file called <code>data.csv.license</code> containing the relevant information:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>data.csv.license</strong></pre>
 </div>
-<div class="sourceCode" id="cb8" data-filename="data.csv.license"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Kristen Gorman</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-License-Identifier</span><span class="kw">:</span><span class="at"> CC0-1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-filename="data.csv.license"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Allison Horst</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Alison Hill</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Kristen Gorman</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-License-Identifier</span><span class="kw">:</span><span class="at"> CC0-1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you want to indicate the license for all files in a particular folder, you can create a file called <code>REUSE.toml</code> and add an <code>[[annotations]]</code> table for them:</p>
 <div class="code-with-filename">
@@ -681,7 +682,7 @@ Note&nbsp;5: Using REUSE to Record Licenses
 <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dt">SPDX-FileCopyrightText</span> <span class="op">=</span> <span class="st">"2024 William Joel Schneider &lt;w.joel.schneider@gmail.com&gt;"</span></span>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dt">SPDX-License-Identifier</span> <span class="op">=</span> <span class="st">"CC0-1.0"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Finally, there may be some minor files which are build artifacts. You can either add them to your <code>.gitignore</code> file or use the CC0&nbsp;1.0 license/waiver with a copyright tag such as <code>SPDX-FileCopyrightText: NONE</code> to assert that there is no copyright holder. For more information, also discussing other corner cases, you can read their <a href="https://reuse.software/faq/">Frequently Asked Questions</a>.</p>
+<p>Finally, there may be some minor files which are build artifacts. You can either add them to your <code>.gitignore</code> file or use CC0&nbsp;1.0 with a copyright tag such as <code>SPDX-FileCopyrightText: NONE</code> to assert that there is no copyright holder. For more information, also discussing other corner cases, you can read their <a href="https://reuse.software/faq/">Frequently Asked Questions</a>.</p>
 <p>Once you are done, you can download the texts of all indicated licenses using…</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -699,7 +700,7 @@ Note&nbsp;5: Using REUSE to Record Licenses
 </div>
 </div>
 </div>
-<p>The manuscript you downloaded for this tutorial is made available to you under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> as is all code in this tutorial (e.g., for creating the data dictionary). Therefore, you can apply any license to your modified version. Please apply the license of your choice now, using any of the methods mentioned above (except the <code>README</code>, which we will cover later).</p>
+<p>The manuscript and the bibliography file you downloaded for this tutorial are made available to you under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> as is all code in this tutorial (e.g., for creating the data dictionary). Therefore, you can apply any license to your modified version. Please apply the license of your choice now, using any of the methods mentioned above (except the <code>README</code>, which we will cover later).</p>
 <div id="tip-manuscript-licensetxt" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -712,14 +713,14 @@ Tip&nbsp;4: Addition to <code>LICENSE.txt</code> (Solution)
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>In the following example, the edited manuscript files have been multi-licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a> (or later) or (at option of the reuser) under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, while the data dictionary and its code are made available under CC0&nbsp;1.0.</p>
+<p>In the following example, the edited manuscript files have been multi-licensed under <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPLv3</a> (or later) or (at option of the reuser) under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, while the bibliography, the data dictionary and its code are made available under CC0&nbsp;1.0.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>LICENSE.txt</strong></pre>
 </div>
 <div class="sourceCode" id="cb12" data-filename="LICENSE.txt"><pre class="sourceCode txt code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>The Quarto documents stored in "Manuscript.qmd", "Manuscript.tex", and "Manuscript.pdf" by Josephine Zerna, Christoph Scheffel, and &lt;YOUR NAME&gt; are available under AGPLv3 (or later) &lt;https://www.gnu.org/licenses/agpl-3.0.html&gt; or (at your option) under CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0/&gt;.</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>The data dictionary (stored in "data_dictionary.html") and the code used to create it (stored in "create_data_dictionary.R") by Florian Kohrt and &lt;YOUR NAME&gt; are available under CC0 1.0 &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>The bibliography (stored in "Bibliography.bib"), data dictionary (stored in "data_dictionary.html"), and the code used to create it (stored in "create_data_dictionary.R") by Florian Kohrt and &lt;YOUR NAME&gt; are available under CC0 1.0 &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>As the AGPLv3 requires reusers adding the <a href="https://www.gnu.org/licenses/agpl-3.0.txt">full license text</a>, we recommend to also copy it to the project folder (if not already in there).</p>
 </div>
@@ -897,7 +898,7 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
 <li id="fn6"><p>The exception is when the software is part of the output <span class="citation" data-cites="FSF2024">(see <a href="#ref-FSF2024" role="doc-biblioref">Free Software Foundation, 2024</a>)</span>.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>a variant of the AGPLv3 that does not cover software running as a service<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>in Germany: <em>Verwertungsgesellschaft</em><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them, although you do not need to provide your real name.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them. Also, you do not need to provide your real name.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
