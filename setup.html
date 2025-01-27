@@ -352,7 +352,7 @@ window.Quarto = {
 <figcaption>renv: A dependency management toolkit for R</figcaption>
 </figure>
 </div>
-</div></div><p>Also, we will utilize the package <a href="https://rstudio.github.io/renv/"><code>renv</code></a> to track the R packages our project depends on. Using it makes it easier for others to view and obtain them at a later point in time. Therefore make sure that the box <em>Use renv with this project</em> is checked. Again, if this is the first time you are hearing about <code>renv</code>, have a look at the tutorial “<a href="https://lmu-osc.github.io/introduction-to-renv/">Introduction to {renv}</a>”.</p>
+</div></div><p>Also, we will utilize the package <a href="https://rstudio.github.io/renv/"><code>renv</code></a> to track the R packages our project depends on. Using it makes it easier for others to view and obtain them at the exact same version at a later point in time. Therefore make sure that the box <em>Use renv with this project</em> is checked. Again, if this is the first time you are hearing about <code>renv</code>, have a look at the tutorial “<a href="https://lmu-osc.github.io/introduction-to-renv/">Introduction to {renv}</a>”.</p>
 <p>If you are already familiar with Markdown and Quarto, you can uncheck the box <em>Use visual markdown editor</em>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -366,7 +366,7 @@ window.Quarto = {
 </figure>
 </div>
 <p>If, like in the image, a Quarto file with some demo content was opened automatically, you can close and delete it, for example, using RStudio’s file manager.</p>
-<p>Throughout this tutorial, you will need to run both R code and system commands (primarily <code>git</code> and <code>quarto</code>). Within RStudio, R code can be run by going to the tab <em>Console</em>, while system commands are executed in the tab <em>Terminal</em>. We also indicate where to run your code directly above each code snippet.</p>
+<p>Throughout this tutorial, you will need to run both R code and system commands (primarily <code>git</code> and <code>quarto</code>). Within RStudio, R code can be run by going to the tab <em>Console</em>, while system commands are executed in the tab <em>Terminal</em>. We also indicate where to run your code directly above each code snippet. If no indication is given, the code is only for demonstration purposes and does not need to be run.</p>
 <p>Make sure that your project is in a consistent state according to <code>renv</code> by running:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -471,7 +471,7 @@ Tip&nbsp;2
 <section id="decide-on-structure" class="level2">
 <h2 class="anchored" data-anchor-id="decide-on-structure">Decide on Structure</h2>
 <p>Before adding your project files, it is helpful to decide on a folder structure, that is, how to call each file and where to put it. In general, the folder structure should facilitate understanding a project by breaking it into logical chunks. There is no single best solution, as a good structure depends on where a project’s complexity lies. However, it is usually helpful if the different files and folders reflect the execution order. For example, if there are multiple data processing stages, one can possibly differentiate input (raw data), intermediate (processed data), and output files (e.g., figures) and put them into separate folders. Similarly, the corresponding code files (e.g., preparation, modeling, visualization) can be prefixed with increasing numbers.</p>
-<p>Luckily, there are already numerous proposals for how to organize one’s project files, both general <span class="citation" data-cites="Wilson2017 TIER4">(<a href="#ref-TIER4" role="doc-biblioref">Project TIER, 2021</a>; e.g., <a href="#ref-Wilson2017" role="doc-biblioref">Wilson et al., 2017</a>)</span> as well as specific to a particular programming language <span class="citation" data-cites="Marwick2018 Vuorre2021 ArayaSalas2024">(<a href="#ref-ArayaSalas2024" role="doc-biblioref">Araya-Salas &amp; Arriaga Madrigal, 2024</a>; e.g., <a href="#ref-Marwick2018" role="doc-biblioref">Marwick et al., 2018</a>; <a href="#ref-Vuorre2021" role="doc-biblioref">Vuorre &amp; Crump, 2021</a>)</span> or journal <span class="citation" data-cites="Vilhuber2021">(<a href="#ref-Vilhuber2021" role="doc-biblioref">Vilhuber, 2021</a>)</span>. We recommend you to follow the standards of your field.</p>
+<p>Luckily, there are already numerous proposals for how to organize one’s project files, both general <span class="citation" data-cites="TIER4 Wilson2017">(e.g., <a href="#ref-TIER4" role="doc-biblioref">Project TIER, 2021</a>; <a href="#ref-Wilson2017" role="doc-biblioref">Wilson et al., 2017</a>)</span> as well as specific to a particular programming language <span class="citation" data-cites="ArayaSalas2024 Marwick2018 Vuorre2021">(e.g., <a href="#ref-ArayaSalas2024" role="doc-biblioref">Araya-Salas &amp; Arriaga Madrigal, 2024</a>; <a href="#ref-Marwick2018" role="doc-biblioref">Marwick et al., 2018</a>; <a href="#ref-Vuorre2021" role="doc-biblioref">Vuorre &amp; Crump, 2021</a>)</span> or journal <span class="citation" data-cites="Vilhuber2021">(<a href="#ref-Vilhuber2021" role="doc-biblioref">Vilhuber, 2021</a>)</span>. We recommend you to follow the standards of your field.</p>
 <p>In this simple project, we will explore differences in bill length between male and female penguins. You can put all your files in the root folder of your project.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -971,7 +971,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>© 2024 Open Science Center at LMU Munich</p>
+<p>© 2024–2025 Open Science Center at LMU Munich</p>
 <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
