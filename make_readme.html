@@ -309,6 +309,8 @@ window.Quarto = {
 <dd>
 <p>Badges typically report quick facts, like <a href="https://www.repostatus.org/">whether the project is actively maintained</a>, <a href="https://tinyverse.netlify.app/">how many dependencies it has</a>, or <a href="https://www.r-pkg.org/services#badges">whether it has been published in a package repository</a>. Sometimes, the license, any associated DOIs, or quality metrics like code coverage by unit tests are communicated via badges as well.</p>
 </dd>
+</dl>
+<dl>
 <dt>Description</dt>
 <dd>
 <p>What is the project about? What are its features? Why was it created?</p>
@@ -321,6 +323,8 @@ window.Quarto = {
 <dd>
 <p>What steps need to be taken to run the project? What software needs to be installed? R itself and the R packages are already documented as this project uses <code>renv</code>. Therefore you can focus on all other dependencies, such as the system dependencies of R packages as well as the version of Quarto.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Also, don’t forget to mention software that you have used for any manual steps. See <a href="#sec-dependencies" class="quarto-xref">Section&nbsp;2</a> for additional information. It may make sense to provide these information in the README even if you already cite all programs and their version numbers in your manuscript.</p>
 </dd>
+</dl>
+<dl>
 <dt>Usage</dt>
 <dd>
 <p>Which files does the project folder contain? How are they organized? How can one run the project – is there a master script or a particular order in which any scripts need to be executed? How long does it take to run all scripts? Is there additional documentation available?</p>
@@ -575,15 +579,16 @@ Tip&nbsp;5: Usage
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Bibliography.bib`</span>: bibliographic references used in the manuscript</span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data.csv`</span>: a data set containing the simplified <span class="in">`palmerpenguins`</span> data</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data_dictionary.html`</span>: a dictionary to the data file, created using <span class="in">`create_data_dictionary.R`</span></span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>The folder <span class="in">`_extensions`</span> contains the <span class="in">`apaquarto`</span> extension which is used to typeset the PDF accoording to APA guidelines.</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>The manuscript can be rendered to PDF using the following command:</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`data_dictionary.html`</span>: a dictionary to the data file,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  created using <span class="in">`create_data_dictionary.R`</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>The folder <span class="in">`_extensions`</span> contains the <span class="in">`apaquarto`</span> extension which is used to typeset the PDF accoording to APA guidelines.</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>The manuscript can be rendered to PDF using the following command:</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="in">```bash</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
