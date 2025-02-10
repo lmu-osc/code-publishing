@@ -318,725 +318,458 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 </section>
 <section id="add-data-dictionary" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="add-data-dictionary">Add Data Dictionary</h2>
-<p>When distributing a data set, it is important to document the meaning (e.g., units) and valid values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R package <a href="https://rstudio.github.io/pointblank/"><code>pointblank</code></a>. You can install it now using:</p>
+<p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R packages <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a> and <a href="https://vincentarelbundock.github.io/tinytable/"><code>tinytable</code></a>. You can install them now using:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"datawizard"</span>,</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tinytable"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can put the code that follows in a separate document. Create it by clicking on <em>File</em> &gt; <em>New File</em> &gt; <em>Quarto Document…</em>. Choose a title such as <code>Data Dictionary</code>, select <em>HTML</em> as format, uncheck the use of the visual markdown editor, and click on <em>Create</em>. Remove everything except the YAML header (between the <code>---</code>). To make the HTML file self-contained, also set <code>embed-resources: true</code> such that the YAML header looks as follows:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>data_dictionary.qmd</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="data_dictionary.qmd"><pre class="sourceCode yml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Data Dictionary"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="fu">embed-resources</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, save it as <code>data_dictionary.qmd</code> by clicking on <em>File</em> &gt; <em>Save</em>.</p>
+<p>To create the actual data dictionary, first write a description for all columns so others can understand what the variable names mean. Where necessary, also document their value – this is especially important if their meaning is non-obvious. In the following, we demonstrate this by storing the penguins’ binomial name along with the English name.</p>
+<div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>data_dictionary.qmd</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="in">vars &lt;- c(</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="in">  species = "a character string denoting penguin species",</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="in">  island = "a character string denoting island in Palmer Archipelago, Antarctica",</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="in">  bill_length_mm = "a number denoting bill length (millimeters)",</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="in">  bill_depth_mm = "a number denoting bill depth (millimeters)",</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="in">  flipper_length_mm = "an integer denoting flipper length (millimeters)",</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="in">  body_mass_g = "an integer denoting body mass (grams)",</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="in">  sex = "a character string denoting penguin sex",</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="in">  year = "an integer denoting the study year"</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="in">vals &lt;- list(</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="in">  species = c(</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="in">    Adelie = "Pygoscelis adeliae",</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="in">    Gentoo = "Pygoscelis papua",</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="in">    Chinstrap = "Pygoscelis antarcticus"</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="in">  )</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="in">)</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Then, load the data and use <code>datawizard</code> to add the descriptions to the <code>data.frame</code>:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/pointblank.png" class="img-fluid figure-img" width="250"></p>
-<figcaption>pointblank: Data Validation and Organization of Metadata for Local and Remote Tables</figcaption>
+<p><img src="images/datawizard.png" class="img-fluid figure-img" width="250"></p>
+<figcaption>datawizard: Easy Data Wrangling and Statistical Transformations</figcaption>
 </figure>
 </div>
-</div></div><div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"pointblank"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>You can put the code that follows for creating the data dictionary into a new file called <code>create_data_dictionary.R</code>.</p>
-<p>First, we write down everything we know about the data set. This includes:</p>
-<ul>
-<li>a general description of the data set</li>
-<li>descriptions of all columns</li>
-<li>valid values, where applicable</li>
-</ul>
-<div class="cell">
+</div></div><div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>create_data_dictionary.R</strong></pre>
+<pre><strong>data_dictionary.qmd</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>table_info <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"palmerpenguins::penguins"</span>,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Size measurements for adult foraging penguins near Palmer Station, Antarctica"</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>descriptions <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="st">"a character string denoting penguin species"</span>,</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="st">"a character string denoting island in Palmer Archipelago, Antarctica"</span>,</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">bill_length_mm =</span> <span class="st">"a number denoting bill length (millimeters)"</span>,</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">bill_depth_mm =</span> <span class="st">"a number denoting bill depth (millimeters)"</span>,</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">flipper_length_mm =</span> <span class="st">"an integer denoting flipper length (millimeters)"</span>,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">body_mass_g =</span> <span class="st">"an integer denoting body mass (grams)"</span>,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"a character string denoting penguin sex"</span>,</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="st">"an integer denoting the study year"</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>vals <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="fu">c</span>(<span class="st">"Adelie"</span>, <span class="st">"Gentoo"</span>, <span class="st">"Chinstrap"</span>),</span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Torgersen"</span>, <span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>),</span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>),</span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="fu">c</span>(<span class="dv">2007</span>, <span class="dv">2008</span>, <span class="dv">2009</span>)</span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="in">dat &lt;- read.csv("data.csv")</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="in">for (x in names(vars)) {</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="in">  if (x %in% names(vals)) {</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="in">    dat &lt;- datawizard::assign_labels(</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="in">      dat,</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="in">      select = I(x),</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="in">      variable = vars[[x]],</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="in">      values = vals[[x]]</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="in">    )</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="in">  } else {</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="in">    dat &lt;- datawizard::assign_labels(</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="in">      dat,</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="in">      select = I(x),</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="in">      variable = vars[[x]]</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="in">    )</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="in">  }</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="in">}</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Next, you can use <code>datawizard</code> again to create the data dictionary containing the descriptions, but also some other information about each variable (e.g., the number of missing values). Finally, you can use <code>tinytable</code> to print the table.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/tinytable.svg" class="img-fluid figure-img" width="250"></p>
+<figcaption>tinytable: Simple and Configurable Tables</figcaption>
+</figure>
+</div>
+</div></div><div class="cell">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>data_dictionary.qmd</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| column: "body-outset"</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">(dict &lt;- datawizard::data_codebook(dat) |&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">  subset(select = -c(ID, .row_id)) |&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">  tinytable::tt() |&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">  tinytable::format_tt(replace = "")) # hide NAs</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display column-body-outset">
+<!-- preamble start -->
+
+    <script>
+      function styleCell_7agyrs4rimdbdqxiejlu(i, j, css_id) {
+        var table = document.getElementById("tinytable_7agyrs4rimdbdqxiejlu");
+        table.rows[i].cells[j].classList.add(css_id);
+      }
+      function insertSpanRow(i, colspan, content) {
+        var table = document.getElementById('tinytable_7agyrs4rimdbdqxiejlu');
+        var newRow = table.insertRow(i);
+        var newCell = newRow.insertCell(0);
+        newCell.setAttribute("colspan", colspan);
+        // newCell.innerText = content;
+        // this may be unsafe, but innerText does not interpret <br>
+        newCell.innerHTML = content;
+      }
+      function spanCell_7agyrs4rimdbdqxiejlu(i, j, rowspan, colspan) {
+        var table = document.getElementById("tinytable_7agyrs4rimdbdqxiejlu");
+        const targetRow = table.rows[i];
+        const targetCell = targetRow.cells[j];
+        for (let r = 0; r < rowspan; r++) {
+          // Only start deleting cells to the right for the first row (r == 0)
+          if (r === 0) {
+            // Delete cells to the right of the target cell in the first row
+            for (let c = colspan - 1; c > 0; c--) {
+              if (table.rows[i + r].cells[j + c]) {
+                table.rows[i + r].deleteCell(j + c);
+              }
+            }
+          }
+          // For rows below the first, delete starting from the target column
+          if (r > 0) {
+            for (let c = colspan - 1; c >= 0; c--) {
+              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
+                table.rows[i + r].deleteCell(j);
+              }
+            }
+          }
+        }
+        // Set rowspan and colspan of the target cell
+        targetCell.rowSpan = rowspan;
+        targetCell.colSpan = colspan;
+      }
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 0, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 1, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 2, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 3, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 4, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 5, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 6, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 7, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
+    </script>
+
+    <style>
+    .table td.tinytable_css_idvg0dq8he8d3jpotcmra8, .table th.tinytable_css_idvg0dq8he8d3jpotcmra8 {  border-bottom: solid 0.1em #d3d8dc; }
+    </style>
+    <div class="container">
+      <table class="table table-borderless" id="tinytable_7agyrs4rimdbdqxiejlu" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
+        <thead>
+        
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Label</th>
+                <th scope="col">Type</th>
+                <th scope="col">Missings</th>
+                <th scope="col">Values</th>
+                <th scope="col">Value Labels</th>
+                <th scope="col">N</th>
+                <th scope="col">Prop</th>
+              </tr>
+        </thead>
+        
+        <tbody>
+                <tr>
+                  <td>species</td>
+                  <td>a character string denoting penguin species</td>
+                  <td>character</td>
+                  <td>0 (0.0%)</td>
+                  <td>Adelie</td>
+                  <td>Pygoscelis adeliae</td>
+                  <td>152</td>
+                  <td>44.2%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Chinstrap</td>
+                  <td>Pygoscelis antarcticus</td>
+                  <td>68</td>
+                  <td>19.8%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Gentoo</td>
+                  <td>Pygoscelis papua</td>
+                  <td>124</td>
+                  <td>36.0%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>island</td>
+                  <td>a character string denoting island in Palmer Archipelago, Antarctica</td>
+                  <td>character</td>
+                  <td>0 (0.0%)</td>
+                  <td>Biscoe</td>
+                  <td></td>
+                  <td>168</td>
+                  <td>48.8%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Dream</td>
+                  <td></td>
+                  <td>124</td>
+                  <td>36.0%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>Torgersen</td>
+                  <td></td>
+                  <td>52</td>
+                  <td>15.1%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>bill_length_mm</td>
+                  <td>a number denoting bill length (millimeters)</td>
+                  <td>numeric</td>
+                  <td>2 (0.6%)</td>
+                  <td>[32.1, 59.6]</td>
+                  <td></td>
+                  <td>342</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>bill_depth_mm</td>
+                  <td>a number denoting bill depth (millimeters)</td>
+                  <td>numeric</td>
+                  <td>2 (0.6%)</td>
+                  <td>[13.1, 21.5]</td>
+                  <td></td>
+                  <td>342</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>flipper_length_mm</td>
+                  <td>an integer denoting flipper length (millimeters)</td>
+                  <td>integer</td>
+                  <td>2 (0.6%)</td>
+                  <td>[172, 231]</td>
+                  <td></td>
+                  <td>342</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>body_mass_g</td>
+                  <td>an integer denoting body mass (grams)</td>
+                  <td>integer</td>
+                  <td>2 (0.6%)</td>
+                  <td>[2700, 6300]</td>
+                  <td></td>
+                  <td>342</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>sex</td>
+                  <td>a character string denoting penguin sex</td>
+                  <td>character</td>
+                  <td>11 (3.2%)</td>
+                  <td>female</td>
+                  <td></td>
+                  <td>165</td>
+                  <td>49.5%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>male</td>
+                  <td></td>
+                  <td>168</td>
+                  <td>50.5%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>year</td>
+                  <td>an integer denoting the study year</td>
+                  <td>integer</td>
+                  <td>0 (0.0%)</td>
+                  <td>2007</td>
+                  <td></td>
+                  <td>110</td>
+                  <td>32.0%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>2008</td>
+                  <td></td>
+                  <td>114</td>
+                  <td>33.1%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>2009</td>
+                  <td></td>
+                  <td>120</td>
+                  <td>34.9%</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+        </tbody>
+      </table>
+    </div>
+<!-- hack to avoid NA insertion in last line -->
 </div>
 </div>
 <p>Depending on the type of data, it may also be necessary to describe measurement instruments, sampling procedures, appropriate weighting, applied preprocessing steps, or contact information. In our case, as the data have already been published, we only store a reference to its source.</p>
-<p>As the data set is from the R package <code>palmerpenguins</code>, if you have it installed you can use the function <code>citation()</code> to create such a reference:</p>
+<p>The data set is from the R package <code>palmerpenguins</code>. If you had it installed you could use the function <code>citation()</code> to create such a reference:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dat_source <span class="ot">&lt;-</span> <span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">format</span>(<span class="at">bibtex =</span> <span class="cn">FALSE</span>, <span class="at">style =</span> <span class="st">"text"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">format</span>(<span class="at">bibtex =</span> <span class="cn">FALSE</span>, <span class="at">style =</span> <span class="st">"text"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Without the package <code>palmerpenguins</code> installed, you can find a <a href="https://allisonhorst.github.io/palmerpenguins/#citation">suggested citation on its website</a> and run the following:</p>
+<p>Without the package <code>palmerpenguins</code> installed, you can find a <a href="https://allisonhorst.github.io/palmerpenguins/#citation">suggested citation on its website</a> and add that to your data dictionary:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>create_data_dictionary.R</strong></pre>
+<pre><strong>data_dictionary.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" data-filename="create_data_dictionary.R"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dat_source <span class="ot">&lt;-</span> <span class="st">"Horst A, Hill A, Gorman K (2022). _palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data_. R package version 0.1.1, https://github.com/allisonhorst/palmerpenguins, &lt;https://allisonhorst.github.io/palmerpenguins/&gt;."</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7" data-filename="data_dictionary.qmd"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Horst A, Hill A, Gorman K (2022). _palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data_. R package version 0.1.1, https://github.com/allisonhorst/palmerpenguins, <span class="ot">&lt;https://allisonhorst.github.io/palmerpenguins/&gt;</span>.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<p>Then, we use <code>pointblank</code> to create a data dictionary with this information.</p>
-<div class="cell">
+<p>Finally, you can render the data dictionary by running the following:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>create_data_dictionary.R</strong></pre>
+<pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>vals <span class="ot">&lt;-</span> <span class="fu">sapply</span>(vals, \(x) {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste0</span>(</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"("</span>,</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    knitr<span class="sc">::</span><span class="fu">combine_words</span>(x, <span class="at">and =</span> <span class="st">" or "</span>, <span class="at">before =</span> <span class="st">"`"</span>, <span class="at">after =</span> <span class="st">"`"</span>),</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">")"</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data.csv"</span>)</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>dict <span class="ot">&lt;-</span> pointblank<span class="sc">::</span><span class="fu">create_informant</span>(</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>  dat,</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">tbl_name =</span> <span class="cn">NA</span>,</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">label =</span> table_info[[<span class="st">"title"</span>]],</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">lang =</span> <span class="st">"en"</span></span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>  pointblank<span class="sc">::</span><span class="fu">info_tabular</span>(</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">Description =</span> table_info[[<span class="st">"description"</span>]],</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">Source =</span> dat_source</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>  pointblank<span class="sc">::</span><span class="fu">info_columns_from_tbl</span>(<span class="fu">stack</span>(descriptions)[<span class="dv">2</span><span class="sc">:</span><span class="dv">1</span>]) <span class="sc">|&gt;</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>  pointblank<span class="sc">::</span><span class="fu">info_columns_from_tbl</span>(<span class="fu">stack</span>(vals)[<span class="dv">2</span><span class="sc">:</span><span class="dv">1</span>]) <span class="sc">|&gt;</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>  pointblank<span class="sc">::</span><span class="fu">get_informant_report</span>(</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Data Dictionary for `data.csv`"</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>dict</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render data_dictionary.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell-output-display">
-<div id="pb_information" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-#pb_information table {
-  font-family: 'IBM Plex Sans', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-#pb_information thead, #pb_information tbody, #pb_information tfoot, #pb_information tr, #pb_information td, #pb_information th {
-  border-style: none;
-}
-
-#pb_information p {
-  margin: 0;
-  padding: 0;
-}
-
-#pb_information .gt_table {
-  display: table;
-  border-collapse: collapse;
-  line-height: normal;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 130%;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: 650px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#pb_information .gt_caption {
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
-
-#pb_information .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#pb_information .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 3px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#pb_information .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#pb_information .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#pb_information .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#pb_information .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#pb_information .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#pb_information .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#pb_information .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#pb_information .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#pb_information .gt_spanner_row {
-  border-bottom-style: hidden;
-}
-
-#pb_information .gt_group_heading {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  text-align: left;
-}
-
-#pb_information .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#pb_information .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#pb_information .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#pb_information .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#pb_information .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#pb_information .gt_stub_row_group {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 5px;
-  padding-right: 5px;
-  vertical-align: top;
-}
-
-#pb_information .gt_row_group_first td {
-  border-top-width: 2px;
-}
-
-#pb_information .gt_row_group_first th {
-  border-top-width: 2px;
-}
-
-#pb_information .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#pb_information .gt_first_summary_row {
-  border-top-style: solid;
-  border-top-color: #D3D3D3;
-}
-
-#pb_information .gt_first_summary_row.thick {
-  border-top-width: 2px;
-}
-
-#pb_information .gt_last_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#pb_information .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#pb_information .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#pb_information .gt_last_grand_summary_row_top {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-bottom-style: double;
-  border-bottom-width: 6px;
-  border-bottom-color: #D3D3D3;
-}
-
-#pb_information .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#pb_information .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#pb_information .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#pb_information .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#pb_information .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#pb_information .gt_sourcenote {
-  font-size: 90%;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#pb_information .gt_left {
-  text-align: left;
-}
-
-#pb_information .gt_center {
-  text-align: center;
-}
-
-#pb_information .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#pb_information .gt_font_normal {
-  font-weight: normal;
-}
-
-#pb_information .gt_font_bold {
-  font-weight: bold;
-}
-
-#pb_information .gt_font_italic {
-  font-style: italic;
-}
-
-#pb_information .gt_super {
-  font-size: 65%;
-}
-
-#pb_information .gt_footnote_marks {
-  font-size: 75%;
-  vertical-align: 0.4em;
-  position: initial;
-}
-
-#pb_information .gt_asterisk {
-  font-size: 100%;
-  vertical-align: 0;
-}
-
-#pb_information .gt_indent_1 {
-  text-indent: 5px;
-}
-
-#pb_information .gt_indent_2 {
-  text-indent: 10px;
-}
-
-#pb_information .gt_indent_3 {
-  text-indent: 15px;
-}
-
-#pb_information .gt_indent_4 {
-  text-indent: 20px;
-}
-
-#pb_information .gt_indent_5 {
-  text-indent: 25px;
-}
-
-#pb_information .katex-display {
-  display: inline-flex !important;
-  margin-bottom: 0.75em !important;
-}
-
-#pb_information div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
-  height: 0px !important;
-}
-
-#pb_information {
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: .15px;
-}
-
-#pb_information a {
-  color: #375F84;
-  text-decoration: none;
-}
-
-#pb_information a:hover {
-  color: #375F84;
-  text-decoration: underline;
-}
-
-#pb_information p {
-  overflow: visible;
-  margin-top: 2px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 5px;
-}
-
-#pb_information ul {
-  list-style-type: square;
-  padding-left: 25px;
-  margin-top: -4px;
-  margin-bottom: 6px;
-}
-
-#pb_information li {
-  text-indent: -1px;
-}
-
-#pb_information h4 {
-  font-weight: 500;
-  color: #444444;
-}
-
-#pb_information code {
-  font-family: 'IBM Plex Mono', monospace, courier;
-  font-size: 90%;
-  font-weight: 500;
-  color: #666666;
-  background-color: transparent;
-  padding: 0;
-}
-
-#pb_information .pb_date {
-  text-decoration-style: solid;
-  text-decoration-color: #9933CC;
-  text-decoration-line: underline;
-  text-underline-position: under;
-  font-variant-numeric: tabular-nums;
-  margin-right: 4px;
-}
-
-#pb_information .pb_label {
-  border: solid 1px;
-  border-color: inherit;
-  padding: 0px 3px 0px 3px;
-}
-
-#pb_information .pb_label_rounded {
-  border: solid 1px;
-  border-color: inherit;
-  border-radius: 8px;
-  padding: 0px 8px 0px 8px;
-}
-
-#pb_information .pb_sub_label {
-  font-size: smaller;
-  color: #777777;
-}
-
-#pb_information .pb_col_type {
-  font-size: 75%;
-}
-
-#pb_information .gt_sourcenote {
-  height: 35px;
-  font-size: 60%;
-  padding: 0;
-}
-
-#pb_information .gt_group_heading {
-  text-indent: -3px;
-}
-</style>
-
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
-<colgroup>
-<col style="width: 100%">
-</colgroup>
-<thead>
-<tr class="gt_heading header">
-<th class="gt_heading gt_title gt_font_normal" style="text-align: left; color: #444444; font-size: 28px; font-weight: 500;">Data Dictionary for <code>data.csv</code></th>
-</tr>
-<tr class="gt_heading even">
-<th class="gt_heading gt_subtitle gt_font_normal gt_bottom_border" style="text-align: left; font-size: 12px;"><span data-qmd-base64="PHNwYW4gc3R5bGU9InRleHQtZGVjb3JhdGlvbi1zdHlsZTpzb2xpZDt0ZXh0LWRlY29yYXRpb24tY29sb3I6I0FERDhFNjt0ZXh0LWRlY29yYXRpb24tbGluZTp1bmRlcmxpbmU7dGV4dC11bmRlcmxpbmUtcG9zaXRpb246dW5kZXI7Y29sb3I6IzMzMzMzMztmb250LXZhcmlhbnQtbnVtZXJpYzp0YWJ1bGFyLW51bXM7cGFkZGluZy1sZWZ0OjRweDttYXJnaW4tcmlnaHQ6NXB4O3BhZGRpbmctcmlnaHQ6MnB4OyI+cGFsbWVycGVuZ3VpbnM6OnBlbmd1aW5zPC9zcGFuPjwvcD4KPGRpdiBzdHlsZT0iaGVpZ2h0OjI1cHg7bWFyZ2luLXRvcDoxMHB4OyI+PHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6ICM5OTMzQ0M7Y29sb3I6ICNGRkZGRkY7cGFkZGluZzogMC41ZW0gMC41ZW07cG9zaXRpb246IGluaGVyaXQ7dGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTttYXJnaW46IDVweCAxcHggNXB4IDRweDtmb250LXdlaWdodDogYm9sZDtib3JkZXI6IHNvbGlkIDFweCAjOTkzM0NDO3BhZGRpbmc6IDJweCAxMHB4IDJweCAxMHB4O2ZvbnQtc2l6ZTogc21hbGxlcjsiPmRhdGEgZnJhbWU8L3NwYW4+PHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6I2VlY2JmZjtjb2xvcjojMzMzMzMzO3BhZGRpbmc6MC41ZW0gMC41ZW07cG9zaXRpb246aW5oZXJpdDt0ZXh0LXRyYW5zZm9ybTp1cHBlcmNhc2U7bWFyZ2luOjVweCAwcHggNXB4IDVweDtmb250LXdlaWdodDpib2xkO2JvcmRlcjpzb2xpZCAxcHggI2VlY2JmZjtwYWRkaW5nOjJweCAxNXB4IDJweCAxNXB4O2ZvbnQtc2l6ZTpzbWFsbGVyOyI+Um93czwvc3Bhbj4KPHNwYW4gc3R5bGU9ImJhY2tncm91bmQtY29sb3I6bm9uZTtjb2xvcjojMzMzMzMzO3BhZGRpbmc6MC41ZW0gMC41ZW07cG9zaXRpb246aW5oZXJpdDttYXJnaW46NXB4IDBweCA1cHggLTRweDtmb250LXdlaWdodDpib2xkO2JvcmRlcjpzb2xpZCAxcHggI2VlY2JmZjtwYWRkaW5nOjJweCAxNXB4IDJweCAxNXB4O2ZvbnQtc2l6ZTpzbWFsbGVyOyI+MzQ0PC9zcGFuPgo8c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjojQkRFN0I0O2NvbG9yOiMzMzMzMzM7cGFkZGluZzowLjVlbSAwLjVlbTtwb3NpdGlvbjppbmhlcml0O3RleHQtdHJhbnNmb3JtOnVwcGVyY2FzZTttYXJnaW46NXB4IDBweCA1cHggMXB4O2ZvbnQtd2VpZ2h0OmJvbGQ7Ym9yZGVyOnNvbGlkIDFweCAjQkRFN0I0O3BhZGRpbmc6MnB4IDE1cHggMnB4IDE1cHg7Zm9udC1zaXplOnNtYWxsZXI7Ij5Db2x1bW5zPC9zcGFuPgo8c3BhbiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjpub25lO2NvbG9yOiMzMzMzMzM7cGFkZGluZzowLjVlbSAwLjVlbTtwb3NpdGlvbjppbmhlcml0O21hcmdpbjo1cHggMHB4IDVweCAtNHB4O2ZvbnQtd2VpZ2h0OmJvbGQ7Ym9yZGVyOnNvbGlkIDFweCAjQkRFN0I0O3BhZGRpbmc6MnB4IDE1cHggMnB4IDE1cHg7Zm9udC1zaXplOnNtYWxsZXI7Ij44PC9zcGFuPjwvZGl2Pgo=">
-<span class="gt_from_md">
-<span style="text-decoration-style:solid;text-decoration-color:#ADD8E6;text-decoration-line:underline;text-underline-position:under;color:#333333;font-variant-numeric:tabular-nums;padding-left:4px;margin-right:5px;padding-right:2px;">palmerpenguins::penguins</span>
-<p></p>
-<div style="height:25px;margin-top:10px;">
-<span style="background-color: #9933CC;color: #FFFFFF;padding: 0.5em 0.5em;position: inherit;text-transform: uppercase;margin: 5px 1px 5px 4px;font-weight: bold;border: solid 1px #9933CC;padding: 2px 10px 2px 10px;font-size: smaller;">data frame</span><span style="background-color:#eecbff;color:#333333;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 0px 5px 5px;font-weight:bold;border:solid 1px #eecbff;padding:2px 15px 2px 15px;font-size:smaller;">Rows</span> <span style="background-color:none;color:#333333;padding:0.5em 0.5em;position:inherit;margin:5px 0px 5px -4px;font-weight:bold;border:solid 1px #eecbff;padding:2px 15px 2px 15px;font-size:smaller;">344</span> <span style="background-color:#BDE7B4;color:#333333;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 0px 5px 1px;font-weight:bold;border:solid 1px #BDE7B4;padding:2px 15px 2px 15px;font-size:smaller;">Columns</span> <span style="background-color:none;color:#333333;padding:0.5em 0.5em;position:inherit;margin:5px 0px 5px -4px;font-weight:bold;border:solid 1px #BDE7B4;padding:2px 15px 2px 15px;font-size:smaller;">8</span>
-</div>
-</span></span></th>
-</tr>
-</thead>
-<tbody class="gt_table_body">
-<tr class="gt_group_heading_row odd">
-<td id="Table" class="gt_group_heading" data-quarto-table-cell-role="th" style="color: #444444; font-weight: 500; text-transform: uppercase; background-color: #FCFCFC; border-bottom-width: 1; border-bottom-style: solid; border-bottom-color: #EFEFEF" scope="col">Table</td>
-</tr>
-<tr class="gt_row_group_first even">
-<td class="gt_row gt_left" headers="Table  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><h4 id="description" style="margin-bottom:5px;" class="anchored">DESCRIPTION</h4>
-Size measurements for adult foraging penguins near Palmer Station, Antarctica</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Table  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><h4 id="source" style="margin-bottom:5px;" class="anchored">SOURCE</h4>
-Horst A, Hill A, Gorman K (2022). _palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data_. R package version 0.1.1, https://github.com/allisonhorst/palmerpenguins, &lt; allisonhorst.github.io palmerpenguins&gt;.</td>
-</tr>
-<tr class="gt_group_heading_row even">
-<td id="Columns" class="gt_group_heading" data-quarto-table-cell-role="th" style="color: #444444; font-weight: 500; text-transform: uppercase; background-color: #FCFCFC; border-bottom-width: 1; border-bottom-style: solid; border-bottom-color: #EFEFEF" scope="col">Columns</td>
-</tr>
-<tr class="gt_row_group_first odd">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">species</code>&nbsp;&nbsp;<code class="pb_col_type">character</code> <strong>INFO</strong> a character string denoting penguin species (`Adelie`, `Gentoo`, or `Chinstrap`)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">island</code>&nbsp;&nbsp;<code class="pb_col_type">character</code> <strong>INFO</strong> a character string denoting island in Palmer Archipelago, Antarctica (`Torgersen`, `Biscoe`, or `Dream`)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">bill_length_mm</code>&nbsp;&nbsp;<code class="pb_col_type">numeric</code> <strong>INFO</strong> a number denoting bill length (millimeters)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">bill_depth_mm</code>&nbsp;&nbsp;<code class="pb_col_type">numeric</code> <strong>INFO</strong> a number denoting bill depth (millimeters)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">flipper_length_mm</code>&nbsp;&nbsp;<code class="pb_col_type">integer</code> <strong>INFO</strong> an integer denoting flipper length (millimeters)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">body_mass_g</code>&nbsp;&nbsp;<code class="pb_col_type">integer</code> <strong>INFO</strong> an integer denoting body mass (grams)</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">sex</code>&nbsp;&nbsp;<code class="pb_col_type">character</code> <strong>INFO</strong> a character string denoting penguin sex (`male` or `female`)</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="Columns  item" style="color: #666666; font-size: smaller; border-top-width: 1; border-top-style: solid; border-top-color: #EFEFEF"><code style="margin-bottom:5px;color:#555555;font-weight:500;line-height:2em;border:solid 1px #499FFE;padding:2px 8px 3px 8px;background-color:#FAFAFA;">year</code>&nbsp;&nbsp;<code class="pb_col_type">integer</code> <strong>INFO</strong> an integer denoting the study year (`2007`, `2008`, or `2009`)</td>
-</tr>
-</tbody><tfoot class="gt_sourcenotes">
-<tr class="odd">
-<td class="gt_sourcenote"><span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin-left:10px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;padding:2px 10px 2px 10px;">2025-02-09 01:14:44 UTC</span> <span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;margin:5px 1px 5px 0;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">&lt; 1 s</span> <span style="background-color:#FFF;color:#444;padding:0.5em 0.5em;position:inherit;text-transform:uppercase;margin:5px 1px 5px -1px;border:solid 1px #999999;font-variant-numeric:tabular-nums;border-radius:0;padding:2px 10px 2px 10px;">2025-02-09 01:14:44 UTC</span></td>
-</tr>
-</tfoot>
-
-</table>
-
-</div>
-</div>
-</div>
-<p>Finally, we can store the data dictionary inside an HTML file and put the HTML file into the project folder as well.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>create_data_dictionary.R</strong></pre>
-</div>
-<div class="sourceCode" id="cb6" data-filename="create_data_dictionary.R"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pointblank<span class="sc">::</span><span class="fu">export_report</span>(dict, <span class="at">filename =</span> <span class="st">"data_dictionary.html"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>For a more elaborate introduction to <code>pointblank</code>, you can read its “<a href="https://rstudio.github.io/pointblank/articles/INFO-1.html">Intro to Information Management</a>”.</p>
+<p>This should create the file <code>data_dictionary.html</code> which you open and view in your web browser.</p>
 <p>One could go even further by making the information machine-readable in a standardized way. We provide an optional example of that in <a href="#nte-frictionless" class="quarto-xref">Note&nbsp;1</a>. If you want to learn more about the sharing of research data, have a look at the tutorial “<a href="https://lmu-osc.github.io/FAIR-Data-Management/">FAIR research data management</a>”.</p>
 <div id="nte-frictionless" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -1050,64 +783,109 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>This example demonstrates how the title and description of the data set, the description of the variables and their valid values are stored in a machine-readable way. As before, we also provide a reference to the source.</p>
+<p>This example demonstrates how the title and description of the data set, the description of the variables and their valid values are stored in a machine-readable way. We’ll reuse the descriptions we already created<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and add a few others.</p>
+<p>First, store the title and description of the data set as a whole:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>table_info <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"penguins data set"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Size measurements for adult foraging penguins near Palmer Station, Antarctica"</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As before, also provide a reference to the source.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="Console"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>dat_source <span class="ot">&lt;-</span> <span class="st">"https://allisonhorst.github.io/palmerpenguins/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10" data-filename="Console"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat_source <span class="ot">&lt;-</span> <span class="st">"https://allisonhorst.github.io/palmerpenguins/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Another alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a>.</p>
-<p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under CC0&nbsp;1.0. Finally, the package is used to create a metadata file that contains the schema.</p>
+<p>Next, create a list of the categorical variables’ valid values:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
 </div>
-<div class="sourceCode" id="cb8" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data and create schema</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>dat_filename <span class="ot">&lt;-</span> <span class="st">"data.csv"</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(dat_filename)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>dat_schema <span class="ot">&lt;-</span> frictionless<span class="sc">::</span><span class="fu">create_schema</span>(dat)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Add descriptions to the fields</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>dat_schema<span class="sc">$</span>fields <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dat_schema<span class="sc">$</span>fields, \(x) {</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(x, <span class="at">description =</span> descriptions[[x<span class="sc">$</span>name]])</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Record valid values</span></span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>dat_schema<span class="sc">$</span>fields <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dat_schema<span class="sc">$</span>fields, \(x) {</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (x<span class="sc">$</span>name <span class="sc">%in%</span> <span class="fu">names</span>(vals)) {</span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">modifyList</span>(x, <span class="fu">list</span>(<span class="at">constraints =</span> <span class="fu">list</span>(<span class="at">enum =</span> vals[[x<span class="sc">$</span>name]])))</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    x</span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>})</span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Define missing values</span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>dat_schema<span class="sc">$</span>missingValues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>)</span>
-<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Create package with license info and write it</span></span>
-<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>dat_package <span class="ot">&lt;-</span> frictionless<span class="sc">::</span><span class="fu">create_package</span>() <span class="sc">|&gt;</span></span>
-<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>  frictionless<span class="sc">::</span><span class="fu">add_resource</span>(</span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">resource_name =</span> <span class="st">"penguins"</span>,</span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> dat_filename,</span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">schema =</span> dat_schema,</span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> table_info[[<span class="st">"title"</span>]],</span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">description =</span> table_info[[<span class="st">"description"</span>]],</span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">licenses =</span> <span class="fu">list</span>(<span class="fu">list</span>(</span>
-<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"CC0-1.0"</span>,</span>
-<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>      <span class="at">path =</span> <span class="st">"https://creativecommons.org/publicdomain/zero/1.0/"</span>,</span>
-<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"CC0 1.0 Universal"</span></span>
-<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a>    )),</span>
-<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">sources =</span> <span class="fu">list</span>(<span class="fu">list</span>(</span>
-<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"CRAN"</span>,</span>
-<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">path =</span> dat_source</span>
-<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a>    ))</span>
-<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>frictionless<span class="sc">::</span><span class="fu">write_package</span>(dat_package, <span class="at">directory =</span> <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>valid_vals <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="fu">c</span>(<span class="st">"Adelie"</span>, <span class="st">"Gentoo"</span>, <span class="st">"Chinstrap"</span>),</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Torgersen"</span>, <span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>),</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>),</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="fu">c</span>(<span class="dv">2007</span>, <span class="dv">2008</span>, <span class="dv">2009</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Finally, store the descriptions of the variables we already created earlier:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="st">"a character string denoting penguin species"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="st">"a character string denoting island in Palmer Archipelago, Antarctica"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">bill_length_mm =</span> <span class="st">"a number denoting bill length (millimeters)"</span>,</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">bill_depth_mm =</span> <span class="st">"a number denoting bill depth (millimeters)"</span>,</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">flipper_length_mm =</span> <span class="st">"an integer denoting flipper length (millimeters)"</span>,</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">body_mass_g =</span> <span class="st">"an integer denoting body mass (grams)"</span>,</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"a character string denoting penguin sex"</span>,</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="st">"an integer denoting the study year"</span></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Another alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a>.</p>
+<p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under CC0&nbsp;1.0. Finally, the package is used to create a metadata file that contains the schema.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Console</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install {frictionless} and the required dependency {stringi}</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frictionless"</span>,</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stringi"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Read data and create schema</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>dat_filename <span class="ot">&lt;-</span> <span class="st">"data.csv"</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(dat_filename)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>dat_schema <span class="ot">&lt;-</span> frictionless<span class="sc">::</span><span class="fu">create_schema</span>(dat)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Add descriptions to the fields</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>dat_schema<span class="sc">$</span>fields <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dat_schema<span class="sc">$</span>fields, \(x) {</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">c</span>(x, <span class="at">description =</span> vars[[x<span class="sc">$</span>name]])</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Record valid values</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>dat_schema<span class="sc">$</span>fields <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dat_schema<span class="sc">$</span>fields, \(x) {</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (x[[<span class="st">"name"</span>]] <span class="sc">%in%</span> <span class="fu">names</span>(valid_vals)) {</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">modifyList</span>(x, <span class="fu">list</span>(<span class="at">constraints =</span> <span class="fu">list</span>(<span class="at">enum =</span> valid_vals[[x<span class="sc">$</span>name]])))</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    x</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Define missing values</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>dat_schema<span class="sc">$</span>missingValues <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">""</span>, <span class="st">"NA"</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Create package with license info and write it</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>dat_package <span class="ot">&lt;-</span> frictionless<span class="sc">::</span><span class="fu">create_package</span>() <span class="sc">|&gt;</span></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>  frictionless<span class="sc">::</span><span class="fu">add_resource</span>(</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">resource_name =</span> <span class="st">"penguins"</span>,</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> dat_filename,</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">schema =</span> dat_schema,</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> table_info[[<span class="st">"title"</span>]],</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">description =</span> table_info[[<span class="st">"description"</span>]],</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">licenses =</span> <span class="fu">list</span>(<span class="fu">list</span>(</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>      <span class="at">name =</span> <span class="st">"CC0-1.0"</span>,</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>      <span class="at">path =</span> <span class="st">"https://creativecommons.org/publicdomain/zero/1.0/"</span>,</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"CC0 1.0 Universal"</span></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>    )),</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">sources =</span> <span class="fu">list</span>(<span class="fu">list</span>(</span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a>      <span class="at">title =</span> <span class="st">"CRAN"</span>,</span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>      <span class="at">path =</span> dat_source</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>    ))</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>frictionless<span class="sc">::</span><span class="fu">write_package</span>(dat_package, <span class="at">directory =</span> <span class="st">"."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This creates the metadata file <code>datapackage.json</code> in the current directory. Make sure it is located in the same folder as <code>data.csv</code>, as together they comprise a <a href="https://specs.frictionlessdata.io/data-package/">data package</a>.</p>
 </div>
@@ -1118,8 +896,8 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
 </div>
-<div class="sourceCode" id="cb9" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="add-data-citation-and-attribution" class="level2">
@@ -1144,24 +922,24 @@ Tip&nbsp;1: Citing the Data Set (Solution)
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>You can find an appropriate BibTeX entry on <a href="https://allisonhorst.github.io/palmerpenguins/#citation">the package website</a> or with the function <code>citation()</code>:<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>You can find an appropriate BibTeX entry on <a href="https://allisonhorst.github.io/palmerpenguins/#citation">the package website</a> or with the function <code>citation()</code>:<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">key =</span> <span class="st">"horst2020"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">toBibtex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">key =</span> <span class="st">"horst2020"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">toBibtex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Bibliography.bib</strong></pre>
 </div>
-<div class="sourceCode" id="cb11" data-filename="Bibliography.bib"><pre class="sourceCode bib code-overflow-scroll code-with-copy"><code class="sourceCode bibtex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="va">@Manual</span>{<span class="ot">horst2020</span>,</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Allison Horst and Alison Hill and Kristen Gorman},</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2022},</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span> = {R package version 0.1.1, </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>https://github.com/allisonhorst/palmerpenguins},</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://allisonhorst.github.io/palmerpenguins/},</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16" data-filename="Bibliography.bib"><pre class="sourceCode bib code-overflow-scroll code-with-copy"><code class="sourceCode bibtex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="va">@Manual</span>{<span class="ot">horst2020</span>,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Allison Horst and Alison Hill and Kristen Gorman},</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2022},</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span> = {R package version 0.1.1, </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>https://github.com/allisonhorst/palmerpenguins},</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://allisonhorst.github.io/palmerpenguins/},</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1170,14 +948,14 @@ Tip&nbsp;1: Citing the Data Set (Solution)
 <div class="code-with-filename-file">
 <pre><strong>Manuscript.qmd</strong></pre>
 </div>
-<div class="sourceCode" id="cb12" data-filename="Manuscript.qmd"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>The analyzed data are by @horst2020.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17" data-filename="Manuscript.qmd"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>The analyzed data are by @horst2020.</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Render the document to check that the citation is displayed properly.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb13" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb18" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1189,7 +967,7 @@ Tip&nbsp;1: Citing the Data Set (Solution)
 <div class="code-with-filename-file">
 <pre><strong>LICENSE.txt</strong></pre>
 </div>
-<div class="sourceCode" id="cb14" data-filename="LICENSE.txt"><pre class="sourceCode txt code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>The penguins data stored in "data.csv" by Allison Horst, Alison Hill, and Kristen Gorman available from &lt;https://allisonhorst.github.io/palmerpenguins/&gt; are licensed under CC0 1.0: &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19" data-filename="LICENSE.txt"><pre class="sourceCode txt code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>The penguins data stored in "data.csv" by Allison Horst, Alison Hill, and Kristen Gorman available from &lt;https://allisonhorst.github.io/palmerpenguins/&gt; are licensed under CC0 1.0: &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1199,9 +977,9 @@ Tip&nbsp;1: Citing the Data Set (Solution)
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="sourceCode" id="cb15" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 
@@ -1220,8 +998,10 @@ Vilhuber, L. (2024). <em>Creating reproducible packages when data are confidenti
 
 <ol>
 <li id="fn1"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://github.com/sdcTools">sdcTools</a>, or <a href="https://www.synthpop.org.uk/">Synthpop</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>In June 2024, <a href="https://datapackage.org/">version 2</a> of the frictionless data standard has been released. As of November 2024, the R package <code>frictionless</code> only supports the first version, though support for v2 is <a href="https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2">planned</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Note that this function requires to have the respective package installed.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Note that the code provided does not alter the data file – no description will be added to <code>data.csv</code>. The descriptions are only added to a (temporary) copy of the data set within R to create the data dictionary.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Unfortunately, the descriptions of values are not reused in this example, as they are <a href="https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering">not supported</a> by the specification we are using.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>In June 2024, <a href="https://datapackage.org/">version 2</a> of the frictionless data standard has been released. As of November 2024, the R package <code>frictionless</code> only supports the first version, though support for v2 is <a href="https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2">planned</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Note that this function requires to have the respective package installed.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
