@@ -318,15 +318,12 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 </section>
 <section id="add-data-dictionary" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="add-data-dictionary">Add Data Dictionary</h2>
-<p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R packages <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a> and <a href="https://vincentarelbundock.github.io/tinytable/"><code>tinytable</code></a>. You can install them now using:</p>
+<p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R package <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a>. You can install them now using:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"datawizard"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tinytable"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"datawizard"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can put the code that follows in a separate document. Create it by clicking on <em>File</em> &gt; <em>New File</em> &gt; <em>Quarto Document…</em>. Choose a title such as <code>Data Dictionary</code>, select <em>HTML</em> as format, uncheck the use of the visual markdown editor, and click on <em>Create</em>. Remove everything except the YAML header (between the <code>---</code>). To make the HTML file self-contained, also set <code>embed-resources: true</code> such that the YAML header looks as follows:</p>
 <div class="code-with-filename">
@@ -409,16 +406,8 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>Next, you can use <code>datawizard</code> again to create the data dictionary containing the descriptions, but also some other information about each variable (e.g., the number of missing values). Finally, you can use <code>tinytable</code> to print the table.</p>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/tinytable.svg" class="img-fluid figure-img" width="250"></p>
-<figcaption>tinytable: Simple and Configurable Tables</figcaption>
-</figure>
-</div>
-</div></div><div class="cell">
+<p>Then, you can create the data dictionary containing the descriptions, but also some other information about each variable (e.g., the number of missing values) and print it.</p>
+<div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>data_dictionary.qmd</strong></pre>
@@ -426,323 +415,177 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="in">#| echo: false</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="in">#| column: "body-outset"</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="in">(dict &lt;- datawizard::data_codebook(dat) |&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">  subset(select = -c(ID, .row_id)) |&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">  tinytable::tt() |&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">  tinytable::format_tt(replace = "")) # hide NAs</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="in">#| classes: plain</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="in">datawizard::data_codebook(dat) |&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="in">  datawizard::data_select(exclude = c("ID", ".row_id")) |&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="in">  datawizard::data_filter(N != "") |&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="in">  datawizard::print_md()</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="cell page-columns page-full">
+<div class="cell plain page-columns page-full">
 <div class="cell-output-display column-body-outset">
-<!-- preamble start -->
-
-    <script>
-      function styleCell_7agyrs4rimdbdqxiejlu(i, j, css_id) {
-        var table = document.getElementById("tinytable_7agyrs4rimdbdqxiejlu");
-        table.rows[i].cells[j].classList.add(css_id);
-      }
-      function insertSpanRow(i, colspan, content) {
-        var table = document.getElementById('tinytable_7agyrs4rimdbdqxiejlu');
-        var newRow = table.insertRow(i);
-        var newCell = newRow.insertCell(0);
-        newCell.setAttribute("colspan", colspan);
-        // newCell.innerText = content;
-        // this may be unsafe, but innerText does not interpret <br>
-        newCell.innerHTML = content;
-      }
-      function spanCell_7agyrs4rimdbdqxiejlu(i, j, rowspan, colspan) {
-        var table = document.getElementById("tinytable_7agyrs4rimdbdqxiejlu");
-        const targetRow = table.rows[i];
-        const targetCell = targetRow.cells[j];
-        for (let r = 0; r < rowspan; r++) {
-          // Only start deleting cells to the right for the first row (r == 0)
-          if (r === 0) {
-            // Delete cells to the right of the target cell in the first row
-            for (let c = colspan - 1; c > 0; c--) {
-              if (table.rows[i + r].cells[j + c]) {
-                table.rows[i + r].deleteCell(j + c);
-              }
-            }
-          }
-          // For rows below the first, delete starting from the target column
-          if (r > 0) {
-            for (let c = colspan - 1; c >= 0; c--) {
-              if (table.rows[i + r] && table.rows[i + r].cells[j]) {
-                table.rows[i + r].deleteCell(j);
-              }
-            }
-          }
-        }
-        // Set rowspan and colspan of the target cell
-        targetCell.rowSpan = rowspan;
-        targetCell.colSpan = colspan;
-      }
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 0, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 1, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 2, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 3, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 4, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 5, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 6, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-window.addEventListener('load', function () { styleCell_7agyrs4rimdbdqxiejlu(0, 7, 'tinytable_css_idvg0dq8he8d3jpotcmra8') })
-    </script>
-
-    <style>
-    .table td.tinytable_css_idvg0dq8he8d3jpotcmra8, .table th.tinytable_css_idvg0dq8he8d3jpotcmra8 {  border-bottom: solid 0.1em #d3d8dc; }
-    </style>
-    <div class="container">
-      <table class="table table-borderless" id="tinytable_7agyrs4rimdbdqxiejlu" style="width: auto; margin-left: auto; margin-right: auto;" data-quarto-disable-processing="true">
-        <thead>
-        
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Label</th>
-                <th scope="col">Type</th>
-                <th scope="col">Missings</th>
-                <th scope="col">Values</th>
-                <th scope="col">Value Labels</th>
-                <th scope="col">N</th>
-                <th scope="col">Prop</th>
-              </tr>
-        </thead>
-        
-        <tbody>
-                <tr>
-                  <td>species</td>
-                  <td>a character string denoting penguin species</td>
-                  <td>character</td>
-                  <td>0 (0.0%)</td>
-                  <td>Adelie</td>
-                  <td>Pygoscelis adeliae</td>
-                  <td>152</td>
-                  <td>44.2%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Chinstrap</td>
-                  <td>Pygoscelis antarcticus</td>
-                  <td>68</td>
-                  <td>19.8%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Gentoo</td>
-                  <td>Pygoscelis papua</td>
-                  <td>124</td>
-                  <td>36.0%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>island</td>
-                  <td>a character string denoting island in Palmer Archipelago, Antarctica</td>
-                  <td>character</td>
-                  <td>0 (0.0%)</td>
-                  <td>Biscoe</td>
-                  <td></td>
-                  <td>168</td>
-                  <td>48.8%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Dream</td>
-                  <td></td>
-                  <td>124</td>
-                  <td>36.0%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>Torgersen</td>
-                  <td></td>
-                  <td>52</td>
-                  <td>15.1%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>bill_length_mm</td>
-                  <td>a number denoting bill length (millimeters)</td>
-                  <td>numeric</td>
-                  <td>2 (0.6%)</td>
-                  <td>[32.1, 59.6]</td>
-                  <td></td>
-                  <td>342</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>bill_depth_mm</td>
-                  <td>a number denoting bill depth (millimeters)</td>
-                  <td>numeric</td>
-                  <td>2 (0.6%)</td>
-                  <td>[13.1, 21.5]</td>
-                  <td></td>
-                  <td>342</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>flipper_length_mm</td>
-                  <td>an integer denoting flipper length (millimeters)</td>
-                  <td>integer</td>
-                  <td>2 (0.6%)</td>
-                  <td>[172, 231]</td>
-                  <td></td>
-                  <td>342</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>body_mass_g</td>
-                  <td>an integer denoting body mass (grams)</td>
-                  <td>integer</td>
-                  <td>2 (0.6%)</td>
-                  <td>[2700, 6300]</td>
-                  <td></td>
-                  <td>342</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>sex</td>
-                  <td>a character string denoting penguin sex</td>
-                  <td>character</td>
-                  <td>11 (3.2%)</td>
-                  <td>female</td>
-                  <td></td>
-                  <td>165</td>
-                  <td>49.5%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>male</td>
-                  <td></td>
-                  <td>168</td>
-                  <td>50.5%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>year</td>
-                  <td>an integer denoting the study year</td>
-                  <td>integer</td>
-                  <td>0 (0.0%)</td>
-                  <td>2007</td>
-                  <td></td>
-                  <td>110</td>
-                  <td>32.0%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>2008</td>
-                  <td></td>
-                  <td>114</td>
-                  <td>33.1%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td>2009</td>
-                  <td></td>
-                  <td>120</td>
-                  <td>34.9%</td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-        </tbody>
-      </table>
-    </div>
-<!-- hack to avoid NA insertion in last line -->
+<table class="caption-top table">
+<caption>dat (344 rows and 8 variables, 8 shown)</caption>
+<colgroup>
+<col style="width: 11%">
+<col style="width: 44%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 7%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Label</th>
+<th style="text-align: left;">Type</th>
+<th style="text-align: right;">Missings</th>
+<th style="text-align: right;">Values</th>
+<th style="text-align: left;">Value Labels</th>
+<th style="text-align: right;">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">species</td>
+<td style="text-align: left;">a character string denoting penguin species</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0 (0.0%)</td>
+<td style="text-align: right;">Adelie</td>
+<td style="text-align: left;">Pygoscelis adeliae</td>
+<td style="text-align: right;">152 (44.2%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">Chinstrap</td>
+<td style="text-align: left;">Pygoscelis antarcticus</td>
+<td style="text-align: right;">68 (19.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">Gentoo</td>
+<td style="text-align: left;">Pygoscelis papua</td>
+<td style="text-align: right;">124 (36.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">island</td>
+<td style="text-align: left;">a character string denoting island in Palmer Archipelago, Antarctica</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">0 (0.0%)</td>
+<td style="text-align: right;">Biscoe</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">168 (48.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">Dream</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">124 (36.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">Torgersen</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">52 (15.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">bill_length_mm</td>
+<td style="text-align: left;">a number denoting bill length (millimeters)</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: right;">2 (0.6%)</td>
+<td style="text-align: right;">[32.1, 59.6]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">342</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">bill_depth_mm</td>
+<td style="text-align: left;">a number denoting bill depth (millimeters)</td>
+<td style="text-align: left;">numeric</td>
+<td style="text-align: right;">2 (0.6%)</td>
+<td style="text-align: right;">[13.1, 21.5]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">342</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">flipper_length_mm</td>
+<td style="text-align: left;">an integer denoting flipper length (millimeters)</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">2 (0.6%)</td>
+<td style="text-align: right;">[172, 231]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">342</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">body_mass_g</td>
+<td style="text-align: left;">an integer denoting body mass (grams)</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">2 (0.6%)</td>
+<td style="text-align: right;">[2700, 6300]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">342</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sex</td>
+<td style="text-align: left;">a character string denoting penguin sex</td>
+<td style="text-align: left;">character</td>
+<td style="text-align: right;">11 (3.2%)</td>
+<td style="text-align: right;">female</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">165 (49.5%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">male</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">168 (50.5%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">year</td>
+<td style="text-align: left;">an integer denoting the study year</td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">0 (0.0%)</td>
+<td style="text-align: right;">2007</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">110 (32.0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2008</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">114 (33.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2009</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">120 (34.9%)</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <p>Depending on the type of data, it may also be necessary to describe measurement instruments, sampling procedures, appropriate weighting, applied preprocessing steps, or contact information. In our case, as the data have already been published, we only store a reference to its source.</p>
