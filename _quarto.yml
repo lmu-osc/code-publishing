@@ -52,6 +52,8 @@ format:
       sidebar-width: 300px
     mermaid:
       theme: neutral
+    include-in-header:
+      - file: matomo_analytics.html
 
 csl: apa.csl
 bibliography: literature.bib
