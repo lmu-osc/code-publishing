@@ -101,8 +101,8 @@ In the following, we demonstrate this by storing the penguins' binomial name
 along with the English name.
 
 ``````{cat}
-#| engine.opts: list(file = "_data_dictionary.qmd"),
-#| class.source: "md",
+#| engine.opts: list(file = "_data_dictionary.qmd")
+#| class.source: "md"
 #| filename: "data_dictionary.qmd"
 
 ```{r}
@@ -144,8 +144,8 @@ to create the data dictionary.
 :::
 
 ``````{cat}
-#| engine.opts: list(file = "_data_dictionary.qmd", append = TRUE),
-#| class.source: "md",
+#| engine.opts: list(file = "_data_dictionary.qmd", append = TRUE)
+#| class.source: "md"
 #| filename: "data_dictionary.qmd"
 
 ```{r}
@@ -178,8 +178,8 @@ but also some other information about each variable
 (e.g., the number of missing values) and print it.
 
 ``````{cat}
-#| engine.opts: list(file = "_data_dictionary.qmd", append = TRUE),
-#| class.source: "md",
+#| engine.opts: list(file = "_data_dictionary.qmd", append = TRUE)
+#| class.source: "md"
 #| filename: "data_dictionary.qmd"
 
 ```{r}
