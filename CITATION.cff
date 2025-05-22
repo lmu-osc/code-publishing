@@ -1,17 +1,40 @@
 cff-version: 1.2.0
-title: Code Publishing Tutorial
+message: "If you use this software, please cite it as below."
 authors:
   - given-names: Florian
     family-names: Kohrt
     orcid: 'https://orcid.org/0000-0003-0374-5625'
-    affiliation: LMU Munich
-    email: fkohrt@anche.no
+    affiliation: "LMU Munich"
   - given-names: Josephine
     family-names: Zerna
     orcid: 'https://orcid.org/0000-0003-2892-884X'
   - given-names: Christoph
     family-names: Scheffel
     orcid: 'https://orcid.org/0000-0001-5963-9229'
+
+title: "Code Publishing  Tutorial"
+version: 0.1.0
+doi: "DOI_HERE_AFTER_GENERATED"
+date-released: 2024-09-13
 repository-code: 'https://github.com/lmu-osc/code-publishing'
 url: 'https://lmu-osc.github.io/code-publishing/'
-date-released: '2024-09-13'
+preferred-citation:
+  authors:
+   - given-names: Florian
+     family-names: Kohrt
+     orcid: 'https://orcid.org/0000-0003-0374-5625'
+   - given-names: Josephine
+     family-names: Zerna
+     orcid: "https://orcid.org/0000-0003-2892-884X"
+   - given-names: Christoph
+     family-names: Scheffel
+     orcid: 'https://orcid.org/0000-0001-5963-9229'
+  title: "Simulations for Advanced Power Analyses"
+  year: 2024
+  doi: "DOI_HERE_AFTER_GENERATED"
+  publisher:
+    name: "LMU Open Science Center"
+    ror: "https://ror.org/029e6qe04"
+  repository-code: 'https://github.com/lmu-osc/code-publishing'
+  url: 'https://lmu-osc.github.io/code-publishing/'
+  type: "book"
