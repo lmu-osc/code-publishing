@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -37,10 +72,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-07a2708215d4ccac2f775df52625052e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e83b1d796f8aeb4ac18de749f3fa8d7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -233,12 +268,13 @@ ul.task-list li input[type="checkbox"] {
 <h1>Contributing Notes</h1>
 <p>There are some things to consider when contributing to this repo:</p>
 <ul>
-<li>make screenshots in high resolution by temporarily increasing the font scaling factor in your OS and using a large display</li>
-<li>limit the width of images</li>
-<li>annotate code blocks with <code>filename="Terminal"</code> and<code>filename="Console"</code> to differentiate Bash and R that should be entered by the user (if there is no file from which the code is an excerpt)</li>
-<li>Put optional content into a collapsed note</li>
-<li>Put important content into warning</li>
-<li>hierarchy of callouts
+<li><p>make screenshots in high resolution by temporarily increasing the font scaling factor in your OS and using a large display</p></li>
+<li><p>limit the width of images and center them, for example, as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/my_image.png)</span>{width=500px fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>annotate code blocks with <code>filename="Terminal"</code> and<code>filename="Console"</code> to differentiate Bash and R that should be entered by the user (if there is no file from which the code is an excerpt)</p></li>
+<li><p>Put optional content into a collapsed note</p></li>
+<li><p>Put important content into warning</p></li>
+<li><p>hierarchy of callouts</p>
 <ul>
 <li>note</li>
 <li>tip</li>
@@ -246,21 +282,22 @@ ul.task-list li input[type="checkbox"] {
 <li>warning</li>
 <li>important</li>
 </ul></li>
-<li>headings (including tabset tabs and callout titles) are written in title case</li>
-<li>headings are only H2 and below because the title is already H1</li>
-<li>callouts use context-specific heading levels that are one below the current heading level</li>
-<li>R package names are typeset in <code>monospace</code></li>
-<li>Prefer R packages that follow the <a href="https://www.tinyverse.org/">tinyverse</a> philosophy, that is, have a lightweight dependency footprint. All packages need to be downloaded by <code>renv</code> and (worst case) compiled during the tutorial, which better not take too long. Use <code>pak::pkg_deps()</code> to count the total number of package dependencies.</li>
-<li>Write license abbreviations with no-break spaces (e.g., write <code>CC\ BY\ 4.0</code> rather than <code>CC BY 4.0</code>)</li>
-<li>When writing markdown:
+<li><p>headings (including tabset tabs and callout titles) are written in title case</p></li>
+<li><p>on any page, start headings at level 2 (i.e., use <code>##</code>) and above because the page title is already at level 1</p></li>
+<li><p>maintain the hierarchy of headings, that is, only create headings at level <code>n</code> if there’s already a heading at level <code>n-1</code></p></li>
+<li><p>also maintain the hierarchy of headings for callouts: callouts use heading levels that are one below the current heading level</p></li>
+<li><p>R package names are typeset in <code>monospace</code></p></li>
+<li><p>Prefer R packages that follow the <a href="https://www.tinyverse.org/">tinyverse</a> philosophy, that is, have a lightweight dependency footprint. All packages need to be downloaded by <code>renv</code> and (worst case) compiled during the tutorial, which better not take too long. Use <code>pak::pkg_deps()</code> to count the total number of package dependencies.</p></li>
+<li><p>Write license abbreviations with <a href="https://pandoc.org/MANUAL.html#extension-all_symbols_escapable:~:text=A%20backslash%2Descaped%20space%20is%20parsed%20as%20a%20nonbreaking%20space.">no-break spaces</a> (e.g., write <code>CC\ BY\ 4.0</code> rather than <code>CC BY 4.0</code>)</p></li>
+<li><p>When writing markdown:</p>
 <ul>
 <li>use <a href="https://rhodesmill.org/brandon/2012/one-sentence-per-line/">semantic linefeeds</a> to ease change tracking, except for exact quotes (as they won’t be updated) and for example code in code blocks (to allow for wrapping on the website as required by the user’s device)</li>
 <li>use <a href="https://pandoc.org/MANUAL.html#extension-footnotes">regular footnotes</a> rather than <a href="https://pandoc.org/MANUAL.html#extension-inline_notes">inline footnotes</a> to increase the readability of markdown (except for short notes or at the end of lines)</li>
 <li>use <a href="https://pandoc.org/MANUAL.html#reference-links">reference links</a> rather than <a href="https://pandoc.org/MANUAL.html#inline-links">inline links</a> to increase the readability of markdown (except for short links or at the end of a line)</li>
 </ul></li>
-<li>If the (R package/system) dependencies that are required to work through the tutorial change, make sure to adjust the respective section in <code>make_readme.qmd</code> accordingly.</li>
-<li>When making significant contributions, add people to the <code>CITATION.cff</code> file and mention them in <code>about.qmd</code>.</li>
-<li>keep usage of terms consistent, for example:
+<li><p>If the (R package/system) dependencies that are required to work through the tutorial change, make sure to adjust the respective section in <code>make_readme.qmd</code> accordingly.</p></li>
+<li><p>When making significant contributions, add people to the <code>CITATION.cff</code> file and mention them in <code>about.qmd</code>.</p></li>
+<li><p>keep usage of terms consistent, for example:</p>
 <ul>
 <li>always write <em>data dictionary</em> or always write <em>codebook</em> (but don’t mix)
 <ul>
