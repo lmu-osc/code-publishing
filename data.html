@@ -97,7 +97,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-e83b1d796f8aeb4ac18de749f3fa8d7f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ee159c5d066f3e0e973fd52f0227b9f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -334,7 +334,7 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 </section>
 <section id="add-data-dictionary" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="add-data-dictionary">Add Data Dictionary</h2>
-<p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R package <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a>. You can install them now using:</p>
+<p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R package <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a>. You can install it now using:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Console</strong></pre>
@@ -354,7 +354,7 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then, save it as <code>data_dictionary.qmd</code> by clicking on <em>File</em> &gt; <em>Save</em>.</p>
-<p>To create the actual data dictionary, first write a description for all columns so others can understand what the variable names mean. Where necessary, also document their value – this is especially important if their meaning is non-obvious. In the following, we demonstrate this by storing the penguins’ binomial name along with the English name.</p>
+<p>To create the actual data dictionary, first write a description for every column so others can understand what the variable names mean. Where necessary, also document their value – this is especially important if their meaning is non-obvious. In the following, we demonstrate this by storing the penguins’ binomial name along with the English name.</p>
 <div class="cell">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -630,7 +630,7 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 </div>
 <div class="sourceCode" id="cb8" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render data_dictionary.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>This should create the file <code>data_dictionary.html</code> which you open and view in your web browser.</p>
+<p>This should create the file <code>data_dictionary.html</code> which you can open and view in your web browser.</p>
 <p>One could go even further by making the information machine-readable in a standardized way. We provide an optional example of that in <a href="#nte-frictionless" class="quarto-xref">Note&nbsp;1</a>. If you want to learn more about the sharing of research data, have a look at the tutorial “<a href="https://lmu-osc.github.io/FAIR-Data-Management/">FAIR research data management</a>”.</p>
 <div id="nte-frictionless" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -695,7 +695,7 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="st">"an integer denoting the study year"</span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Another alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a>.</p>
+<p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://specs.frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a> and <a href="https://psych-ds.github.io/">Psych-DS</a>.</p>
 <p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under CC0&nbsp;1.0. Finally, the package is used to create a metadata file that contains the schema.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -859,7 +859,7 @@ Vilhuber, L. (2024, October 14). <em>Creating reproducible packages when data ar
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://github.com/sdcTools">sdcTools</a>, <a href="https://www.synthpop.org.uk/">Synthpop</a>, or <a href="https://opendp.org/">OpenDP</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://github.com/sdcTools">sdcTools</a>, <a href="https://www.synthpop.org.uk/">Synthpop</a>, <a href="https://opendp.org/">OpenDP</a>, or <a href="https://www.greenmask.io/">Greenmask</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Note that the code provided does not alter the data file – no description will be added to <code>data.csv</code>. The descriptions are only added to a (temporary) copy of the data set within R to create the data dictionary.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Unfortunately, the descriptions of values are not reused in this example, as they are <a href="https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering">not supported</a> by the specification we are using.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>In June 2024, <a href="https://datapackage.org/">version 2</a> of the frictionless data standard has been released. As of November 2024, the R package <code>frictionless</code> only supports the first version, though support for v2 is <a href="https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2">planned</a>.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
