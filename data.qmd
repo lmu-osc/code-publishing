@@ -65,7 +65,7 @@ and values of its variables.
 This is typically done with a _data dictionary_ (also called a _codebook_).
 In the following, we will demonstrate how to create a simple data dictionary
 using the R package [`datawizard`][datawizard].
-You can install them now using:
+You can install it now using:
 
 [datawizard]: https://easystats.github.io/datawizard/
 
@@ -93,7 +93,7 @@ format:
 
 Then, save it as `data_dictionary.qmd` by clicking on _File_ > _Save_.
 
-To create the actual data dictionary, first write a description for all columns
+To create the actual data dictionary, first write a description for every column
 so others can understand what the variable names mean.
 Where necessary, also document their value
 -- this is especially important if their meaning is non-obvious.
@@ -244,7 +244,7 @@ quarto render data_dictionary.qmd
 ```
 
 This should create the file `data_dictionary.html`
-which you open and view in your web browser.
+which you can open and view in your web browser.
 
 One could go even further by making the information machine-readable in a standardized way.
 We provide an optional example of that in @nte-frictionless.

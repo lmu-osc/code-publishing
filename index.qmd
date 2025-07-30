@@ -11,7 +11,7 @@ It wraps up a series of tutorials which we recommend to go through in advance:
   Here you can learn how to collaborate with others on code projects using GitHub.
 - [Introduction to R](https://lmu-osc.github.io/introduction-to-R/):
   This is an introduction to the R programming language.
-- [Introduction to `renv`](https://lmu-osc.github.io/introduction-to-renv/):
+- [Introduction to {renv}](https://lmu-osc.github.io/introduction-to-renv/):
   Here you can learn how to manage the dependencies of an R project.
 - [Introduction to Quarto](https://lmu-osc.github.io/introduction-to-Quarto/):
   Learn how to combine prose and code to make documents more reproducible.

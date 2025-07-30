@@ -136,7 +136,7 @@ taking into account the following notes specific to each step:
     you can select that by choosing _Add standard_.
     Otherwise, click on _Add custom_ and describe how each file is licensed.
     If you have been using REUSE to record license information,
-    you can run enter `SPDX Document` as title
+    you can enter `SPDX Document` as title
     and run the reuse tool with `reuse spdx -o reuse.spdx`
     to create the file `reuse.spdx`.
     Then you can paste the content of `reuse.spdx`
@@ -155,4 +155,4 @@ In this case, consider using a repository specifically for research data,
 which later grants access for valid uses individually.
 
 For further information, you may be interested in
-"Software Deposit Guidance for Researchers" [@Jackson2018Guidance].
+"Software Deposit: Guidance for Researchers" [@Jackson2018Guidance].

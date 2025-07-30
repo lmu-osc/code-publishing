@@ -244,7 +244,7 @@ Therefore, if you use an R package under a copyleft license to create a figure,
 you are likely the copyright owner.
 However, if the output is based on data,
 it can be considered a derivative work of the data and the license of the data also applies.
-For example, maps may be considered as a derivative of the geographic data they are based on.
+For example, maps may be considered a derivative work of the geographic data they are based on.
 
 [^output-exception]: The exception is when the software is part of the output [see @FSF2024].
 
