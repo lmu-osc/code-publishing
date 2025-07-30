@@ -614,7 +614,8 @@ Licenses may require that you provide attribution to the author(s)[^others]
 and to retain any copyright notices,[^example-notice]
 although the specifics vary between licenses.
 For example, Creative Commons licenses other than CC0 require
-that the name of the author, the title of the work, and a link to the work are provided.
+that the name of the author, the title of the work, and a link to the work are provided
+and that existing copyright notices are retained.
 
 [^others]: or others whose names are provided with the original work
 [^example-notice]: Such as `Copyright (c) 2025 Jane Doe`
