@@ -40,7 +40,7 @@ There are some things to consider when contributing to this repo:
   - use [semantic linefeeds][semantic-linefeeds] to ease change tracking,
     except for exact quotes (as they won't be updated)
     and for example code in code blocks
-    (to allow for wrapping on the website as required by the user's device)
+    (to allow for wrapping on the website as required by the user's screen width)
   - use [regular footnotes][regular-footnotes] rather than [inline footnotes][inline-footnotes]
     to increase the readability of markdown
     (except for short notes or at the end of lines)
