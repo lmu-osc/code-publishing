@@ -55,7 +55,8 @@ Another resource to look at is the presentation
 
 [^anon-synth-tools]: For example, using [Amnesia](https://amnesia.openaire.eu/),
 [ARX](https://arx.deidentifier.org/), [sdcTools](https://github.com/sdcTools),
-[Synthpop](https://www.synthpop.org.uk/), or [OpenDP](https://opendp.org/).
+[Synthpop](https://www.synthpop.org.uk/), [OpenDP](https://opendp.org/),
+or [Greenmask](https://www.greenmask.io/).
 
 ## Add Data Dictionary
 
