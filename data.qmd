@@ -321,7 +321,7 @@ vars <- c(
 
 Generally, metadata are either stored embedded into the data or externally,
 for example, in a separate file.
-We will use the "[frictionless data](https://frictionlessdata.io/)" standard,
+We will use the "[frictionless data](https://specs.frictionlessdata.io/)" standard,
 where metadata are stored separately.
 Another alternative would be [RO-Crate](https://www.researchobject.org/ro-crate/).
 
