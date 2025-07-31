@@ -15,7 +15,7 @@ authors:
 
 title: "Code Publishing Tutorial"
 version: 0.1.0
-doi: "DOI_HERE_AFTER_GENERATED"
+doi: "10.5281/zenodo.16631977"
 date-released: 2024-09-13
 repository-code: 'https://github.com/lmu-osc/code-publishing'
 url: 'https://lmu-osc.github.io/code-publishing/'
@@ -34,7 +34,7 @@ preferred-citation:
      
   title: "Code Publishing Tutorial"
   year: 2024
-  doi: "DOI_HERE_AFTER_GENERATED"
+  doi: "10.5281/zenodo.16631977"
   publisher:
     name: "LMU Open Science Center"
     ror: "https://ror.org/029e6qe04"
