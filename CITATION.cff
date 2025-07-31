@@ -12,11 +12,10 @@ authors:
   - given-names: Christoph
     family-names: Scheffel
     orcid: 'https://orcid.org/0000-0001-5963-9229'
-
 title: "Code Publishing Tutorial"
 version: 0.1.0
 doi: "10.5281/zenodo.16631977"
-date-released: 2024-09-13
+date-released: 2025-07-31
 repository-code: 'https://github.com/lmu-osc/code-publishing'
 url: 'https://lmu-osc.github.io/code-publishing/'
 preferred-citation:
@@ -31,9 +30,8 @@ preferred-citation:
    - given-names: Christoph
      family-names: Scheffel
      orcid: 'https://orcid.org/0000-0001-5963-9229'
-     
   title: "Code Publishing Tutorial"
-  year: 2024
+  year: 2025
   doi: "10.5281/zenodo.16631977"
   publisher:
     name: "LMU Open Science Center"
