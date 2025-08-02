@@ -4,7 +4,9 @@ project:
 website:
   title: "Code Publishing Tutorial"
   page-footer:
-    center: "© 2024–2025 Open Science Center at LMU Munich"
+    center: |
+      A recommended citation and license information for this tutorial
+      are provided on the [about page](about.qmd).
     border: false
   search:
     location: sidebar
