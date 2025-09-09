@@ -48,6 +48,8 @@ While this tutorial focuses on Quarto,
 you can also create reproducible research projects with the following tools:
 
 - [Jupyter Book](https://jupyterbook.org/)
+- [Pluto](https://plutojl.org/)
+- [marimo](https://marimo.io/)
 - [Stencila](https://stencila.io/)
 - [Curvenote](https://curvenote.dev/)
 - [showyourwork!](https://show-your.work/)
