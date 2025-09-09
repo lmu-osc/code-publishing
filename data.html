@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,10 +94,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee159c5d066f3e0e973fd52f0227b9f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c124d41307230cf2355a7ce77fa018c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -434,18 +434,18 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">#| column: "body-outset"</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">#| classes: plain</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>datawizard<span class="sc">::</span><span class="fu">data_codebook</span>(dat) <span class="sc">|&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">data_select</span>(<span class="at">exclude =</span> ID) <span class="sc">|&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">data_filter</span>(N <span class="sc">!=</span> <span class="st">""</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">print_md</span>()</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">#| tbl-cap: "{.borderless .hover}"</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>datawizard<span class="sc">::</span><span class="fu">data_codebook</span>(dat) <span class="sc">|&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">data_select</span>(<span class="at">exclude =</span> ID) <span class="sc">|&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">data_filter</span>(N <span class="sc">!=</span> <span class="st">""</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  datawizard<span class="sc">::</span><span class="fu">print_md</span>()</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="cell plain page-columns page-full">
+<div class="cell plain page-columns page-full" data-tbl-cap="{.borderless .hover}">
 <div class="cell-output-display column-body-outset">
-<table class="caption-top table">
-<caption>dat (344 rows and 8 variables, 8 shown)</caption>
+<table class="table-borderless table-hover caption-top table">
 <colgroup>
 <col style="width: 11%">
 <col style="width: 44%">
@@ -695,7 +695,7 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="st">"an integer denoting the study year"</span></span>
 <span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://specs.frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Alternative would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a> and <a href="https://psych-ds.github.io/">Psych-DS</a>.</p>
+<p>Generally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “<a href="https://specs.frictionlessdata.io/">frictionless data</a>” standard, where metadata are stored separately. Alternatives would be <a href="https://www.researchobject.org/ro-crate/">RO-Crate</a> and <a href="https://psych-ds.github.io/">Psych-DS</a>.</p>
 <p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under CC0&nbsp;1.0. Finally, the package is used to create a metadata file that contains the schema.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -767,8 +767,14 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <p>All data relied upon should be cited in the manuscript to allow for precise identification and access. From the “eight core principles of data citation” by <span class="citation" data-cites="Starr2015">Starr et al. (<a href="#ref-Starr2015" role="doc-biblioref">2015</a>)</span>, licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>:</p>
 <blockquote class="blockquote">
 <p><strong>Principle 1 – Importance</strong>: “Data should be considered legitimate, citable products of research. Data citations should be accorded the same importance in the scholarly record as citations of other research objects, such as publications.”</p>
+</blockquote>
+<blockquote class="blockquote">
 <p><strong>Principle 3 – Evidence</strong>: “In scholarly literature, whenever and wherever a claim relies upon data, the corresponding data should be cited.”</p>
+</blockquote>
+<blockquote class="blockquote">
 <p><strong>Principle 5 – Access</strong>: “Data citations should facilitate access to the data themselves and to such associated metadata, documentation, code, and other materials, as are necessary for both humans and machines to make informed use of the referenced data.”</p>
+</blockquote>
+<blockquote class="blockquote">
 <p><strong>Principle 7 – Specificity and Verifiability</strong>: “Data citations should facilitate identification of, access to, and verification of the specific data that support a claim. Citations or citation metadata should include information about provenance and fixity sufficient to facilitate verifying that the specific time slice, version and/or granular portion of data retrieved subsequently is the same as was originally cited.”</p>
 </blockquote>
 <p>Now, it’s your turn to add an appropriate citation for the data set to the manuscript. Does your citation adhere to the principles above?</p>

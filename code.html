@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -94,10 +94,10 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee159c5d066f3e0e973fd52f0227b9f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c124d41307230cf2355a7ce77fa018c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -515,7 +515,7 @@ Warning&nbsp;2: Dealing with Dependencies
 <span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Get information about their source</span></span>
 <span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">package_info</span>(deps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If the <code>source</code> column only contains the entries <code>CRAN</code>, <code>RSPM</code>, or <code>Bioconductor</code>, they are already archived. If the <code>source</code> column instead mentions something else (e.g., <code>GitHub</code>), you need to make sure yourself that the package is available to users of your project. You can either archive the package, for example in the <a href="https://archive.softwareheritage.org/">Software Heritage archive</a>. Or you store a copy of the package in the project folder – of course, you need to make sure that you are allowed to do so from a copyright perspective and comply with its license.</p>
+<p>If the <code>source</code> column only contains the entries <code>CRAN</code>, <code>RSPM</code>, or <code>Bioconductor</code>, they are already archived. If the <code>source</code> column instead mentions something else (e.g., <code>Github</code>), you need to make sure yourself that the package is available to users of your project. You can either archive the package, for example in the <a href="https://archive.softwareheritage.org/">Software Heritage archive</a>. Or you store a copy of the package in the project folder – of course, you need to make sure that you are allowed to do so from a copyright perspective and comply with its license.</p>
 </section>
 <section id="downloaded-files" class="level4">
 <h4 class="anchored" data-anchor-id="downloaded-files">Downloaded Files</h4>
@@ -625,6 +625,8 @@ Tip&nbsp;4: Addition to <code>LICENSE.txt</code> (Solution)
 <p>Of course, being transparent about used software for reasons of reproducibility and academic integrity matters in any case. You can consult <a href="#fig-software-citation" class="quarto-xref">Figure&nbsp;1</a> for general advice whether to cite a particular piece of software or not. As with data, citations should allow for exact identification and access. From the six “software citation principles” by <span class="citation" data-cites="Smith2016">Smith et al. (<a href="#ref-Smith2016" role="doc-biblioref">2016</a>)</span>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>:</p>
 <blockquote class="blockquote">
 <p><strong>1. Importance</strong>: Software should be considered a legitimate and citable product of research. Software citations should be accorded the same importance in the scholarly record as citations of other research products, such as publications and data; they should be included in the metadata of the citing work, for example in the reference list of a journal article, and should not be omitted or separated. Software should be cited on the same basis as any other research product such as a paper or a book, that is, authors should cite the appropriate set of software products just as they cite the appropriate set of papers.</p>
+</blockquote>
+<blockquote class="blockquote">
 <p><strong>5. Accessibility</strong>: Software citations should facilitate access to the software itself and to its associated metadata, documentation, data, and other materials necessary for both humans and machines to make informed use of the referenced software.</p>
 <p><strong>6. Specificity</strong>: Software citations should facilitate identification of, and access to, the specific version of software that was used. Software identification should be as specific as necessary, such as using version numbers, revision numbers, or variants such as platforms.</p>
 </blockquote>

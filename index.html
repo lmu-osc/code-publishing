@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -37,10 +37,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee159c5d066f3e0e973fd52f0227b9f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c124d41307230cf2355a7ce77fa018c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -250,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://lmu-osc.github.io/FAIR-Data-Management/">FAIR research data management</a>: Learn how to make your data findable, accessible, interoperable, and reusable.</li>
 </ul>
 <p>While the general principles taught in this tutorial apply to most researchers publishing code, we will focus on the programming language R and the publishing system Quarto.</p>
-<p>To follow the tutorial you need to have installed <a href="https://git-scm.com/downloads">Git</a>, <a href="https://cloud.r-project.org/">R</a>, and <a href="https://quarto.org/docs/download/">Quarto</a>. Windows users may additionally need <a href="https://cloud.r-project.org/bin/windows/Rtools/">RTools</a>. Some things will be explained using the <a href="https://posit.co/download/rstudio-desktop/#:~:text=2%3A%20Install%20RStudio">RStudio IDE</a>, but you are free to use any IDE you like.</p>
+<p>To follow the tutorial you need to have installed <a href="https://git-scm.com/downloads">Git</a>, <a href="https://cloud.r-project.org/">R</a>, and <a href="https://quarto.org/docs/download/release.html">Quarto</a>. Windows users may additionally need <a href="https://cloud.r-project.org/bin/windows/Rtools/">RTools</a>. Some things will be explained using the <a href="https://posit.co/download/rstudio-desktop/#:~:text=2%3A%20Install%20RStudio">RStudio IDE</a>, but you are free to use any IDE you like.</p>
 <div id="nte-quarto-alternatives" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -264,10 +264,12 @@ Note&nbsp;1: Alternatives to Quarto
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Quarto is a tool to render dynamic documents, but not the only one.</p>
-<p>It is the successor of the R package <a href="https://rmarkdown.rstudio.com/"><code>rmarkdown</code></a> and mostly backwards-compatible. <code>rmarkdown</code> continues to be supported, but the development of new features happens in Quarto. The main difference is that Quarto has first-class support for Python. In other words, Python users of Quarto do not need to have R installed.</p>
-<p>While this tutorial focuses on Quarto, you can also create reproducible research projects with the following tools:</p>
+<p>It is the successor of the R package <a href="https://pkgs.rstudio.com/rmarkdown/"><code>rmarkdown</code></a> and mostly backwards-compatible. <code>rmarkdown</code> continues to be supported, but the development of new features happens in Quarto. The main difference is that Quarto has first-class support for Python. In other words, Python users of Quarto do not need to have R installed.</p>
+<p>While this tutorial focuses on Quarto, you can also create dynamic documents with the following tools:</p>
 <ul>
 <li><a href="https://jupyterbook.org/">Jupyter Book</a></li>
+<li><a href="https://plutojl.org/">Pluto</a></li>
+<li><a href="https://marimo.io/">marimo</a></li>
 <li><a href="https://stencila.io/">Stencila</a></li>
 <li><a href="https://curvenote.dev/">Curvenote</a></li>
 <li><a href="https://show-your.work/">showyourwork!</a></li>
@@ -280,7 +282,7 @@ Note&nbsp;1: Alternatives to Quarto
 <p>We will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:</p>
 <ul>
 <li>removing legal barriers: adding an appropriate license</li>
-<li>high-level documentation: creating a README file</li>
+<li>high-level documentation: creating a <code>README</code> file</li>
 <li>archival: uploading it to a repository</li>
 </ul>
 <p><a href="./intro.html" class="btn btn-lg btn-success">Get started</a></p>

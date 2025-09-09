@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ee159c5d066f3e0e973fd52f0227b9f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-c124d41307230cf2355a7ce77fa018c7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -271,9 +271,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>make screenshots in high resolution by temporarily increasing the font scaling factor in your OS and using a large display</p></li>
 <li><p>limit the width of images and center them, for example, as follows:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="al">![](images/my_image.png)</span>{width=500px fig-align="center"}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>annotate code blocks with <code>filename="Terminal"</code> and<code>filename="Console"</code> to differentiate Bash and R that should be entered by the user (if there is no file from which the code is an excerpt)</p></li>
-<li><p>Put optional content into a collapsed note</p></li>
-<li><p>Put important content into warning</p></li>
+<li><p>Annotate code blocks with <code>filename="Terminal"</code> and<code>filename="Console"</code> to differentiate Bash and R that should be entered by the user (if there is no file from which the code is an excerpt).</p></li>
+<li><p>Put optional content into a collapsed note.</p></li>
+<li><p>Put important content into warning.</p></li>
 <li><p>hierarchy of callouts</p>
 <ul>
 <li>note</li>
@@ -282,31 +282,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>warning</li>
 <li>important</li>
 </ul></li>
-<li><p>headings (including tabset tabs and callout titles) are written in title case</p></li>
-<li><p>on any page, start headings at level 2 (i.e., use <code>##</code>) and above because the page title is already at level 1</p></li>
-<li><p>maintain the hierarchy of headings, that is, only create headings at level <code>n</code> if there’s already a heading at level <code>n-1</code></p></li>
-<li><p>also maintain the hierarchy of headings for callouts: callouts use heading levels that are one below the current heading level</p></li>
-<li><p>R package names are typeset in <code>monospace</code></p></li>
+<li><p>Headings (including tabset tabs and callout titles) are written in title case.</p></li>
+<li><p>On any page, start headings at level 2 (i.e., use <code>##</code>) and above because the page title is already at level 1.</p></li>
+<li><p>Maintain the hierarchy of headings, that is, only create headings at level <code>n</code> if there’s already a heading at level <code>n-1</code>.</p></li>
+<li><p>Also maintain the hierarchy of headings for callouts: Callouts use heading levels that are one below the current heading level.</p></li>
+<li><p>Filenames and R package names are typeset in <code>monospace</code>.</p></li>
+<li><p>No special formatting of terms in headings (e.g., <code>$\TeX$</code> or <code>README</code>).</p></li>
 <li><p>Prefer R packages that follow the <a href="https://www.tinyverse.org/">tinyverse</a> philosophy, that is, have a lightweight dependency footprint. All packages need to be downloaded by <code>renv</code> and (worst case) compiled during the tutorial, which better not take too long. Use <code>pak::pkg_deps()</code> to count the total number of package dependencies.</p></li>
-<li><p>Write license abbreviations with <a href="https://pandoc.org/MANUAL.html#extension-all_symbols_escapable:~:text=A%20backslash%2Descaped%20space%20is%20parsed%20as%20a%20nonbreaking%20space.">no-break spaces</a> (e.g., write <code>CC\ BY\ 4.0</code> rather than <code>CC BY 4.0</code>)</p></li>
+<li><p>Write license abbreviations with <a href="https://pandoc.org/MANUAL.html#extension-all_symbols_escapable:~:text=A%20backslash%2Descaped%20space%20is%20parsed%20as%20a%20nonbreaking%20space.">no-break spaces</a> (e.g., write <code>CC\ BY\ 4.0</code> rather than <code>CC BY 4.0</code>).</p></li>
 <li><p>When writing markdown:</p>
 <ul>
-<li>use <a href="https://rhodesmill.org/brandon/2012/one-sentence-per-line/">semantic linefeeds</a> to ease change tracking, except for exact quotes (as they won’t be updated) and for example code in code blocks (to allow for wrapping on the website as required by the user’s screen width)</li>
-<li>use <a href="https://pandoc.org/MANUAL.html#extension-footnotes">regular footnotes</a> rather than <a href="https://pandoc.org/MANUAL.html#extension-inline_notes">inline footnotes</a> to increase the readability of markdown (except for short notes or at the end of lines)</li>
-<li>use <a href="https://pandoc.org/MANUAL.html#reference-links">reference links</a> rather than <a href="https://pandoc.org/MANUAL.html#inline-links">inline links</a> to increase the readability of markdown (except for short links or at the end of a line)</li>
+<li>Use <a href="https://rhodesmill.org/brandon/2012/one-sentence-per-line/">semantic linefeeds</a> to ease change tracking, except for exact quotes (as they won’t be updated) and for example code in code blocks (to allow for wrapping on the website depending on the user’s screen width).</li>
+<li>Use <a href="https://pandoc.org/MANUAL.html#extension-footnotes">regular footnotes</a> rather than <a href="https://pandoc.org/MANUAL.html#extension-inline_notes">inline footnotes</a> to increase the readability of markdown (except for short notes or at the end of lines).</li>
+<li>Use <a href="https://pandoc.org/MANUAL.html#reference-links">reference links</a> rather than <a href="https://pandoc.org/MANUAL.html#inline-links">inline links</a> to increase the readability of markdown (except for short links or at the end of a line).</li>
 </ul></li>
 <li><p>If the (R package/system) dependencies that are required to work through the tutorial change, make sure to adjust the respective section in <code>make_readme.qmd</code> accordingly.</p></li>
 <li><p>When making significant contributions, add people to the <code>CITATION.cff</code> file and mention them in <code>about.qmd</code>.</p></li>
-<li><p>keep usage of terms consistent, for example:</p>
+<li><p>Keep usage of terms consistent, for example:</p>
 <ul>
-<li>always write <em>data dictionary</em> or always write <em>codebook</em> (but don’t mix)
+<li>Always write <em>data dictionary</em> or always write <em>codebook</em> (but don’t mix).
 <ul>
-<li>in the case of this tutorial, the convention is to write <em>data dictionary</em></li>
+<li>In the case of this tutorial, the convention is to write <em>data dictionary</em>.</li>
 </ul></li>
-<li>always write <em>data set</em> or always write <em>dataset</em> (but don’t mix)
+<li>Always write <em>data set</em> or always write <em>dataset</em> (but don’t mix)
 <ul>
-<li>in the case of this tutorial, the convention is to write <em>data set</em></li>
+<li>In the case of this tutorial, the convention is to write <em>data set</em>.</li>
 </ul></li>
+</ul></li>
+<li><p>When preparing a new release</p>
+<ul>
+<li>In the file <code>CITATION.cff</code> update the fields <code>version</code>, <code>date-released</code>, <code>year</code>, and <code>doi</code> (twice).</li>
+<li>In the file <code>about.qmd</code> update the fields <code>issued</code> and <code>doi</code>.</li>
 </ul></li>
 </ul>
 
