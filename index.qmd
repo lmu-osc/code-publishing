@@ -37,7 +37,7 @@ but you are free to use any IDE you like.
 
 Quarto is a tool to render dynamic documents, but not the only one.
 
-It is the successor of the R package [`rmarkdown`](https://rmarkdown.rstudio.com/)
+It is the successor of the R package [`rmarkdown`](https://pkgs.rstudio.com/rmarkdown/)
 and mostly backwards-compatible.
 `rmarkdown` continues to be supported,
 but the development of new features happens in Quarto.
