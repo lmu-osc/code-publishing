@@ -418,15 +418,15 @@ licensed under [CC0\ 1.0][cc0]:
 > citable products of research. Data citations should be accorded the same
 > importance in the scholarly record as citations of other research objects,
 > such as publications."
-> 
+
 > **Principle 3 – Evidence**: "In scholarly literature, whenever and wherever a
 > claim relies upon data, the corresponding data should be cited."
-> 
+
 > **Principle 5 – Access**: "Data citations should facilitate access to the data
 > themselves and to such associated metadata, documentation, code, and other
 > materials, as are necessary for both humans and machines to make informed use
 > of the referenced data."
-> 
+
 > **Principle 7 – Specificity and Verifiability**: "Data citations should
 > facilitate identification of, access to, and verification of the specific data
 > that support a claim. Citations or citation metadata should include

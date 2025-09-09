@@ -302,7 +302,7 @@ licensed under [CC\ BY\ 4.0](https://creativecommons.org/licenses/by/4.0/):
 > other research product such as a paper or a book, that is, authors should cite
 > the appropriate set of software products just as they cite the appropriate set
 > of papers.
-> 
+
 > **5\. Accessibility**: Software citations should facilitate access to the
 > software itself and to its associated metadata, documentation, data, and other
 > materials necessary for both humans and machines to make informed use of the
