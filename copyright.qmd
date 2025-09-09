@@ -703,7 +703,11 @@ adding a song to a video, adapting a computer program to fit own use cases,
 or taking a [screenshot of a computer program][commons-screenshots].
 In all of these cases, if the original work is under a copyleft license,
 then sharing of the resulting derivative work is only allowed
-if it is put under the same license.
+if it is put under the same license.[^not-free-open]
+
+[^not-free-open]: Of course, if the original work is not made available
+under a free/open license (permissive or copyleft),
+then sharing your derivative work is, in general, not allowed.
 
 [commons-screenshots]: https://commons.wikimedia.org/wiki/Commons:Screenshots
 
