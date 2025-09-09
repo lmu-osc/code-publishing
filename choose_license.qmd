@@ -206,7 +206,7 @@ One should take special care when applying license to the following types of wor
   the output is subject to the restrictions laid out in the license.
   For example, if geospatial data were to be licensed under [CC\ BY\ 4.0][cc-by],
   all maps produced from the data would likely need to fulfill
-  this license's obligation for unrestricted access (its Anti-DRM provision)
+  this license's obligation for unrestricted access (its anti-DRM provision)
   if shared [see @Poole2017].
   Similarly, following an example from @Matt2009,
   if one were to choose the copyleft license [CC\ BY-SA\ 4.0][cc-by-sa]
