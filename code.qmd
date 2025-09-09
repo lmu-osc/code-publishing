@@ -181,7 +181,7 @@ sessioninfo::package_info(deps)
 
 If the `source` column only contains the entries `CRAN`, `RSPM`, or `Bioconductor`,
 they are already archived.
-If the `source` column instead mentions something else (e.g., `GitHub`),
+If the `source` column instead mentions something else (e.g., `Github`),
 you need to make sure yourself that the package is available to users of your project.
 You can either archive the package,
 for example in the [Software Heritage archive](https://archive.softwareheritage.org/).
