@@ -45,7 +45,7 @@ The main difference is that Quarto has first-class support for Python.
 In other words, Python users of Quarto do not need to have R installed.
 
 While this tutorial focuses on Quarto,
-you can also create reproducible research projects with the following tools:
+you can also create dynamic documents with the following tools:
 
 - [Jupyter Book](https://jupyterbook.org/)
 - [Pluto](https://plutojl.org/)
