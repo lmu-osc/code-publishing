@@ -187,6 +187,7 @@ but also some other information about each variable
 #| echo: false
 #| column: "body-outset"
 #| classes: plain
+#| tbl-cap: "{.borderless .hover}"
 
 datawizard::data_codebook(dat) |>
   datawizard::data_select(exclude = ID) |>
