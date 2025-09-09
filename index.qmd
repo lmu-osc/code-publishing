@@ -27,7 +27,7 @@ and the publishing system Quarto.
 To follow the tutorial you need to have installed
 [Git](https://git-scm.com/downloads),
 [R](https://cloud.r-project.org/), and
-[Quarto](https://quarto.org/docs/download/).
+[Quarto](https://quarto.org/docs/download/release.html).
 Windows users may additionally need [RTools](https://cloud.r-project.org/bin/windows/Rtools/).
 Some things will be explained using the [RStudio IDE](https://posit.co/download/rstudio-desktop/#:~:text=2%3A%20Install%20RStudio),
 but you are free to use any IDE you like.
