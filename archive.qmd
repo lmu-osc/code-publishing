@@ -145,7 +145,7 @@ taking into account the following notes specific to each step:
 
 If you previously uploaded your project folder to a public Git repository
 (which we didn't cover during this tutorial),
-you could also add the new DOI to your README,
+you could also add the new DOI to your `README`,
 for example, under the section "Citation".
 
 ## Final Remarks
