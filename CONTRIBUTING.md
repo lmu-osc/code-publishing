@@ -55,7 +55,7 @@ There are some things to consider when contributing to this repo:
 - Keep usage of terms consistent, for example:
   - Always write _data dictionary_ or always write _codebook_ (but don't mix).
     - In the case of this tutorial, the convention is to write _data dictionary_.
-  - Always write _data set_ or always write _dataset_ (but don't mix)
+  - Always write _data set_ or always write _dataset_ (but don't mix).
     - In the case of this tutorial, the convention is to write _data set_.
 - When preparing a new release
   - In the file `CITATION.cff` update the fields `version`, `date-released`, `year`,
