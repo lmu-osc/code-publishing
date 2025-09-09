@@ -57,7 +57,7 @@ There are some things to consider when contributing to this repo:
     - In the case of this tutorial, the convention is to write _data dictionary_.
   - Always write _data set_ or always write _dataset_ (but don't mix).
     - In the case of this tutorial, the convention is to write _data set_.
-- When preparing a new release
+- When preparing a new release:
   - In the file `CITATION.cff` update the fields `version`, `date-released`, `year`,
     and `doi` (twice).
   - In the file `about.qmd` update the fields `issued` and `doi`.
