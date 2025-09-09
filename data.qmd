@@ -324,7 +324,7 @@ Generally, metadata are either stored embedded into the data or externally,
 for example, in a separate file.
 We will use the "[frictionless data](https://specs.frictionlessdata.io/)" standard,
 where metadata are stored separately.
-Alternative would be [RO-Crate](https://www.researchobject.org/ro-crate/)
+Alternatives would be [RO-Crate](https://www.researchobject.org/ro-crate/)
 and [Psych-DS](https://psych-ds.github.io/).
 
 Specifically, one can use the R package [`frictionless`][frictionless]
