@@ -2,10 +2,10 @@
 
 There are some things to consider when contributing to this repo:
 
-- make screenshots in high resolution
+- Make screenshots in high resolution
   by temporarily increasing the font scaling factor in your OS
-  and using a large display
-- limit the width of images and center them, for example, as follows:
+  and using a large display.
+- Limit the width of images and center them, for example, as follows:
   
   ```md
   ![](images/my_image.png){width=500px fig-align="center"}
