@@ -230,7 +230,7 @@ You can, however, ask the author to put the corresponding work under a free/open
 Without permission you can check your national laws
 for limitations and exceptions to copyright.^[in Germany: _Schranken des Urheberrechts_]
 Examples include the right to quote, [trivial use][commons-minimis],
-and the US-American [fair use][wiki-fair-use].
+scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 
 [commons-threshold]: https://commons.wikimedia.org/wiki/Commons:Threshold_of_originality
 [commons-unprotected]: https://commons.wikimedia.org/wiki/Commons:Unprotected_works
