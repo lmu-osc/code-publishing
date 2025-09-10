@@ -137,7 +137,7 @@ The FSF maintains [a list of software licenses][fsf-list]
 that it considers to be protecting the four freedoms.
 Sometimes the term _libre_ (Spanish and French for _free_)
 is used to make a distinction from _gratis_ software.
-You can learn more about free software at [Write Free Software](https://writefreesoftware.org/learn).
+You can learn more about free software at [Write Free Software](https://writefreesoftware.org/learn/).
 
 [fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses
 
@@ -157,7 +157,7 @@ Conversely, both can (and frequently are) sold for money,
 as their respective criteria only apply once one has access to the software.
 Throughout this tutorial, we write "free/open license"
 to mean a license that is approved by either the FSF or the OSI.
-Software which is neither but makes available its source code
+Software which is available under neither but makes available its source code
 is sometimes referred to as _source-available software_.
 
 Apart from software, the term _open access_ has often been used for works
