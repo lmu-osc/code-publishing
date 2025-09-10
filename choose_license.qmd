@@ -218,7 +218,7 @@ One should take special care when applying license to the following types of wor
   as it was specifically designed not to apply to works produced from the data in the database.
   Otherwise [CC0\ 1.0][cc0] is an excellent choice for data.
 - __works in the public domain__: If a work is already in the public domain,
-  it should be marked using the [PDM 1.0][pdm],
+  it should be marked using the [PDM\ 1.0][pdm],
   rather than applying a waiver such as the [CC0\ 1.0][cc0] (or another license).
 :::
 
