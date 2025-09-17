@@ -42,7 +42,8 @@ to track the R packages our project depends on.
 Using it makes it easier for others to view and obtain them
 at the exact same version at a later point in time.
 Therefore make sure that the box _Use renv with this project_ is checked.
-Again, if this is the first time you are hearing about `renv`,
+If you are asked to install required packages, select _Yes_.
+Also, if this is the first time you are hearing about `renv`,
 have a look at the tutorial "[Introduction to {renv}][renv-tutorial]".
 
 [renv]: https://rstudio.github.io/renv/
@@ -80,6 +81,8 @@ If it reports packages that are not used, synchronize the lock file using:
 ```{.r filename="Console"}
 renv::snapshot()
 ```
+
+You may need to confirm this `renv` command (and the ones to follow) by entering `Y`.
 
 ::: {#tip-renv-status .callout-tip}
 Always run `renv::status()` and resolve any inconsistencies
