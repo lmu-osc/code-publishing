@@ -86,6 +86,7 @@ also set `embed-resources: true` such that the YAML header looks as follows:
 ```{.yml filename="data_dictionary.qmd"}
 ---
 title: "Data Dictionary"
+date: "today"
 format:
   html:
     embed-resources: true
