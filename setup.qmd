@@ -190,7 +190,12 @@ Download the two files to your computer and put them into your project folder.
 
 The manuscript already contains the narrative, but the results are still missing.
 It will be your job to conduct the data analysis.
-For now, add yourself as a co-author in the YAML header of the manuscript.
+For now, add yourself as a co-author in the YAML header of the manuscript:
+
+```{.yml filename="Manuscript.qmd"}
+  - name: "Your name"
+    affiliation: "Your university"
+```
 
 To create a PDF from the manuscript,
 you need to have a $\TeX$ distribution installed on your computer.
@@ -208,6 +213,7 @@ quarto render Manuscript.qmd
 ```
 
 This should create a PDF file called `Manuscript.pdf` in your project folder.
+Open it to verify that it includes your name as author.
 
 You can now make your changes known to Git:
 
