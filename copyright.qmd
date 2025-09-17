@@ -868,6 +868,7 @@ In addition, we recommend creating a file called `LICENSE.txt`
 to describe the license of the image.
 Click on _File_ > _New File_ > _Text File_,
 then on _File_ > _Save_, and choose `LICENSE.txt` as filename.
+The license description can be worded as follows:
 
 ```{.txt .code-overflow-wrap filename="LICENSE.txt"}
 "Chinstrap Penguin" stored in "penguin.jpg" by "steve b" available from <https://flic.kr/p/2pEKnUr> is licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>
