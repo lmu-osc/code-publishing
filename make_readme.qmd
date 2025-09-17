@@ -291,3 +291,11 @@ Of course, you would use the same license for the manuscript that you chose in t
 The manuscript files `Manuscript.qmd`, `Manuscript.tex`, and `Manuscript.pdf` by Josephine Zerna, Christoph Scheffel, and <YOUR NAME> are available under [CC\ BY-SA\ 4.0](https://creativecommons.org/licenses/by-sa/4.0/) or (at your option) under the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) (or later). For further copyright information, see `LICENSE.txt`.
 ```
 :::
+
+After adding a README, commit your changes:
+
+```{.bash filename="Terminal"}
+git status
+git add .
+git commit -m "Add README"
+```

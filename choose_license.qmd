@@ -571,6 +571,14 @@ As the AGPLv3 requires reusers adding the [full license text](https://www.gnu.or
 we recommend to also copy it to the project folder (if not already in there).
 :::
 
+After choosing a license, commit your changes:
+
+```{.bash filename="Terminal"}
+git status
+git add .
+git commit -m "Add license"
+```
+
 ## Additional Figures {.appendix}
 
 ::: {#fig-flowchart-non-data}
