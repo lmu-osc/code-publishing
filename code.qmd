@@ -64,7 +64,7 @@ report::report_sample(dat_clean, by = "sex", total = FALSE) |>
 #| echo: false
 #| fig-cap: "Scatter Plot of Bill Lengths by Sex With Violin Plot Showing Quartiles"
 
-ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex), group = sex) +
+ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex)) +
   ggplot2::geom_violin(
     draw_quantiles = c(0.25, 0.5, 0.75),
     show.legend = FALSE
