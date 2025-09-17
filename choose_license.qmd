@@ -556,7 +556,7 @@ which we will [cover later](make_readme.qmd)).
 ### Addition to `LICENSE.txt` (Solution)
 
 In the following example, the edited manuscript files have been multi-licensed
-under [AGPLv3][agpl] (or later) or (at option of the reuser) under [CC\ BY-SA\ 4.0][cc-by-sa],
+under [AGPLv3][agpl] (or later) or (at the option of the reuser) under [CC\ BY-SA\ 4.0][cc-by-sa],
 while the bibliography is made available under CC0\ 1.0.
 
 [agpl]: https://www.gnu.org/licenses/agpl-3.0.html

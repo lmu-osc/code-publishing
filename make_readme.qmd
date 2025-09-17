@@ -186,7 +186,7 @@ The most important file in this project folder is `Manuscript.qmd` which contain
 - `data.csv`: a data set containing the simplified `palmerpenguins` data
 - `data_dictionary.html`: a dictionary to the data file, created using `data_dictionary.qmd`
 
-The folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF accoording to APA guidelines.
+The folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF according to APA guidelines.
 ```
 :::
 
