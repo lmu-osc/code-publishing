@@ -263,7 +263,8 @@ Under which license is `apaquarto` made available?
 ### `apaquarto` License (Solution)
 
 According to its GitHub page, `apaquarto` is licensed under CC0\ 1.0.
-This means that it can be used and distributed even without attribution.
+This means that with regards to copyright
+it can be used and distributed even without attribution.
 :::
 
 We recommend adding a short paragraph to `LICENSE.txt` to describe its license.
