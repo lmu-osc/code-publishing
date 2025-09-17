@@ -14,7 +14,7 @@ author:
         city: Dresden
         postal-code: 01069
   - name: "Christoph Scheffel"
-    affiliation:
+    affiliations:
       - id: "tu-dresden"
     email: "christoph_scheffel@tu-dresden.de"
     orcid: 0000-0001-5963-9229
