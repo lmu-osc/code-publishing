@@ -372,7 +372,7 @@ There are multiple standards on how to do so:
   Alternatively, it details which license applies to what
   and the individual licenses are stored in the same or in different files.
 
-- A summary of the licensing situation is often given in a `README` file,
+- A summary of the licensing situation is often given in a README file,
   whose creation will be discussed [later](make_readme.qmd).
 
 - If only parts of a file are covered by a certain license,
@@ -549,7 +549,7 @@ are made available to you under [CC0\ 1.0][cc0]
 as is all code in this tutorial (e.g., for the data analysis).
 Therefore, you can apply any license to your modified version.
 Please apply the license of your choice now,
-using any of the methods mentioned above (except the `README`,
+using any of the methods mentioned above (except the README,
 which we will [cover later](make_readme.qmd)).
 
 ::: {#tip-manuscript-licensetxt .callout-tip collapse="true"}

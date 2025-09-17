@@ -499,7 +499,7 @@ If you want to dive deeper we recommend the following resources:
 `renv` only records the versions of R packages and of R itself.
 This means that everything we have not decided to cite or attribute
 is not documented anywhere.
-We will cover system dependencies when [creating a `README`](make_readme.qmd).
+We will cover system dependencies when [creating a README](make_readme.qmd).
 For now, however, there is one simple step you can take
 to record the version of Quarto (and a few other dependencies).
 Do run the following:
