@@ -74,7 +74,7 @@ are treated as equals and are arranged in a way to maximize understanding [@Knut
 Alternating text and code can be also found in notebook interfaces for exploratory programming
 [e.g., Wolfram Mathematica or Jupyter Notebooks, see @Kluyver2016]
 that also have the capability to execute code and embed its output.
-With _Sweave_ [@Leisch2002], ideas from both world
+With _Sweave_ [@Leisch2002], ideas from both worlds
 -- literate programming and embedding program output --
 were combined into one tool for rendering dynamic documents using the R programming language.
 It is the predecessor of the R package `knitr` [@Xie2015]
