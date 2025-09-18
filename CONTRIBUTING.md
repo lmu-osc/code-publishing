@@ -52,6 +52,8 @@ There are some things to consider when contributing to this repo:
   make sure to adjust the respective section in `make_readme.qmd` accordingly.
 - When making significant contributions,
   add people to the `CITATION.cff` file and mention them in `about.qmd`.
+  Also adjust `choose_license.qmd`, `_01_Example/Manuscript.qmd`,
+  and `LICENSE.txt` where necessary.
 - Keep usage of terms consistent, for example:
   - Always write _data dictionary_ or always write _codebook_ (but don't mix).
     - In the case of this tutorial, the convention is to write _data dictionary_.
