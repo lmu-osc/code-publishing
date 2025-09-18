@@ -10,7 +10,7 @@ For the purpose of this tutorial, we suggest to conduct a simple analysis
 that explores whether the bill lengths of penguins vary depending on their sex.
 You can write your own or use the following example:
 
-::: {#tip-t-test .callout-tip collapse="true"}
+::: {#tip-data-analysis-example .callout-tip collapse="true"}
 ### Data Analysis Example
 
 You can copy the following code into the _results_ section of the manuscript:
