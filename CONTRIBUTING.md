@@ -29,7 +29,7 @@ There are some things to consider when contributing to this repo:
 - Also maintain the hierarchy of headings for callouts:
   Callouts use heading levels that are one below the current heading level.
 - Filenames and R package names are typeset in `monospace`.
-- No special formatting of terms in headings (e.g., `$\TeX$` or `README`).
+- No special formatting of terms in headings (e.g., `$\TeX$`).
 - Prefer R packages that follow the [tinyverse](https://www.tinyverse.org/) philosophy,
   that is, have a lightweight dependency footprint.
   All packages need to be downloaded by `renv` and (worst case) compiled during the tutorial,
