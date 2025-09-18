@@ -294,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Maintain the hierarchy of headings, that is, only create headings at level <code>n</code> if there’s already a heading at level <code>n-1</code>.</p></li>
 <li><p>Also maintain the hierarchy of headings for callouts: Callouts use heading levels that are one below the current heading level.</p></li>
 <li><p>Filenames and R package names are typeset in <code>monospace</code>.</p></li>
-<li><p>No special formatting of terms in headings (e.g., <code>$\TeX$</code> or <code>README</code>).</p></li>
+<li><p>No special formatting of terms in headings (e.g., <code>$\TeX$</code>).</p></li>
 <li><p>Prefer R packages that follow the <a href="https://www.tinyverse.org/">tinyverse</a> philosophy, that is, have a lightweight dependency footprint. All packages need to be downloaded by <code>renv</code> and (worst case) compiled during the tutorial, which better not take too long. Use <code>pak::pkg_deps()</code> to count the total number of package dependencies.</p></li>
 <li><p>Write license abbreviations with <a href="https://pandoc.org/MANUAL.html#extension-all_symbols_escapable:~:text=A%20backslash%2Descaped%20space%20is%20parsed%20as%20a%20nonbreaking%20space.">no-break spaces</a> (e.g., write <code>CC\ BY\ 4.0</code> rather than <code>CC BY 4.0</code>).</p></li>
 <li><p>When writing markdown:</p>
@@ -304,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Use <a href="https://pandoc.org/MANUAL.html#reference-links">reference links</a> rather than <a href="https://pandoc.org/MANUAL.html#inline-links">inline links</a> to increase the readability of markdown (except for short links or at the end of a line).</li>
 </ul></li>
 <li><p>If the (R package/system) dependencies that are required to work through the tutorial change, make sure to adjust the respective section in <code>make_readme.qmd</code> accordingly.</p></li>
-<li><p>When making significant contributions, add people to the <code>CITATION.cff</code> file and mention them in <code>about.qmd</code>.</p></li>
+<li><p>When making significant contributions, add people to the <code>CITATION.cff</code> file and mention them in <code>about.qmd</code>. Also adjust <code>choose_license.qmd</code>, <code>_01_Example/Manuscript.qmd</code>, and <code>LICENSE.txt</code> where necessary.</p></li>
 <li><p>Keep usage of terms consistent, for example:</p>
 <ul>
 <li>Always write <em>data dictionary</em> or always write <em>codebook</em> (but don’t mix).
