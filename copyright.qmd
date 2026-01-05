@@ -890,7 +890,7 @@ git commit -m "Add image"
 If you would like to learn more about copyright and licenses
 you might find the following resources interesting:
 
-- "Open Content -- A Practical Guide to Using Creative Commons Licences"
+- "Open Content -- Navigating Creative Commons Licenses"
   by @Kreutzer2024
 - "Creative Commons Certificate for Educators, Academic Librarians,
   and Open Culture" by @CC2024Certificate
