@@ -49,10 +49,10 @@ There are some things to consider when contributing to this repo:
     to increase the readability of markdown
     (except for short links or at the end of a line).
 - If the (R package/system) dependencies that are required to work through the tutorial change,
-  make sure to adjust the respective section in `make_readme.qmd` accordingly.
+  make sure to adjust the respective section in `make-readme.qmd` accordingly.
 - When making significant contributions,
   add people to the `CITATION.cff` file and mention them in `about.qmd`.
-  Also adjust `choose_license.qmd`, `_01_Example/Manuscript.qmd`,
+  Also adjust `choose-license.qmd`, `_01_Example/Manuscript.qmd`,
   and `LICENSE.txt` where necessary.
 - Keep usage of terms consistent, for example:
   - Always write _data dictionary_ or always write _codebook_ (but don't mix).

@@ -39,8 +39,8 @@ website:
       - copyright.qmd
       - data.qmd
       - code.qmd
-      - choose_license.qmd
-      - make_readme.qmd
+      - choose-license.qmd
+      - make-readme.qmd
       - archive.qmd
 
 format:
