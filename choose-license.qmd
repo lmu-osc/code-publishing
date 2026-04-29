@@ -627,11 +627,11 @@ flowchart TB
   existing_license_content --"No, we created the content<br>entirely by ourselves."--> facts("Entries are facts<br>(like measurements<br>or metadata)?")
   existing_license_content --"Yes, it was<br>shared under a<br>free/open license."--> use_existing_license_content["<em>Use that license</em>"]
   facts --"Yes"--> cc0_content_metadata["CC0 1.0"]
-  facts --"No"--> choose-license["<em>Consult flowchart for<br>software, writing,<br>image, audio, and video</em>"]
+  facts --"No"--> choose_license["<em>Consult flowchart for<br>software, writing,<br>image, audio, and video</em>"]
   end
   
   subgraph database["<strong>License for database</strong>"]
-  choose-license --> switch_license["<em>Depending on<br>content license</em>"]
+  choose_license --> switch_license["<em>Depending on<br>content license</em>"]
   use_existing_license_content --> switch_license
   
   cc0_content_metadata --> cc0_db["CC0 1.0"]
