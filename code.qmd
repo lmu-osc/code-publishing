@@ -226,7 +226,6 @@ format:
   apaquarto-pdf:
     documentmode: man
     keep-tex: true
-    pdf-engine: lualatex
     a4paper: true
 ```
 
