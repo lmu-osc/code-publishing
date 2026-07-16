@@ -70,7 +70,7 @@ You can install it now using:
 
 [datawizard]: https://easystats.github.io/datawizard/
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::install("datawizard")
 ```
 
@@ -270,7 +270,7 @@ as they are [not supported][enum-labels] by the specification we are using.
 
 First, store the title and description of the data set as a whole:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 table_info <- c(
   title = "penguins data set",
   description = "Size measurements for adult foraging penguins near Palmer Station, Antarctica"
@@ -282,7 +282,7 @@ As before, also provide a reference to the source.
 ```{r}
 #| echo: false
 #| class-output: "r code-overflow-wrap"
-#| attr-output: 'filename="Console"'
+#| attr-output: 'filename="R Console"'
 
 # We have provided the data set as CSV file to the readers.
 # Therefore, we cannot assume or require that readers have
@@ -296,7 +296,7 @@ citation("palmerpenguins", auto = TRUE)$url |>
 
 Next, create a list of the categorical variables' valid values:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 valid_vals <- list(
   species = c("Adelie", "Gentoo", "Chinstrap"),
   island = c("Torgersen", "Biscoe", "Dream"),
@@ -307,7 +307,7 @@ valid_vals <- list(
 
 Finally, store the descriptions of the variables we already created earlier:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # Store the description of variables
 vars <- c(
   species = "a character string denoting penguin species",
@@ -344,7 +344,7 @@ of the frictionless data standard has been released.
 As of November 2024, the R package `frictionless` only supports the first version,
 though support for v2 is [planned](https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2).
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # Install {frictionless} and the required dependency {stringi}
 renv::install(c(
   "frictionless",
@@ -403,7 +403,7 @@ Having added the data and its documentation,
 one can view and record the utilized packages with `renv`,
 thus bringing the project into a consistent state:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::status()
 renv::snapshot()
 ```
@@ -448,7 +448,6 @@ to have the respective package installed.]
 ```{r}
 #| class.output: "bib code-overflow-scroll"
 #| attr-output: 'filename="Bibliography.bib"'
-
 citation("palmerpenguins", auto = TRUE) |>
   transform(key = "horst2020") |>
   toBibtex()

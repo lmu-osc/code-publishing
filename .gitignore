@@ -64,3 +64,4 @@ _outline.md
 grateful-refs.bib
 data.csv
 _data_dictionary.qmd
+**/*.quarto_ipynb
