@@ -218,10 +218,9 @@ you could use the function `citation()` to create such a reference:
 ```{r}
 #| label: "data-citation"
 #| eval: false
-#| filename: "R Console"
 
 citation("palmerpenguins", auto = TRUE) |>
-    format(bibtex = FALSE, style = "text")
+  format(bibtex = FALSE, style = "text")
 ```
 
 Without the package `palmerpenguins` installed,
@@ -291,8 +290,8 @@ As before, also provide a reference to the source.
 # the citation on our end and hide how we obtained it.
 
 citation("palmerpenguins", auto = TRUE)$url |>
-    paste0("dat_source <- \"", ... = _, "\"") |>
-    cat()
+  paste0("dat_source <- \"", ... = _, "\"") |>
+  cat()
 ```
 
 Next, create a list of the categorical variables' valid values:
@@ -449,11 +448,9 @@ to have the respective package installed.]
 ```{r}
 #| class.output: "bib code-overflow-scroll"
 #| attr-output: 'filename="Bibliography.bib"'
-#| filename: "R Console"
-
 citation("palmerpenguins", auto = TRUE) |>
-    transform(key = "horst2020") |>
-    toBibtex()
+  transform(key = "horst2020") |>
+  toBibtex()
 ```
 
 Copy the BibTeX entry to the file `Bibliography.bib`.
@@ -482,9 +479,9 @@ we recommend adding a short paragraph to `LICENSE.txt`:
 #| attr-output: 'filename="LICENSE.txt"'
 
 cat(paste0(
-    "The penguins data stored in \"data.csv\" by Allison Horst, Alison Hill, and Kristen Gorman available from <",
-    citation("palmerpenguins", auto = TRUE)$url,
-    "> are licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>"
+  "The penguins data stored in \"data.csv\" by Allison Horst, Alison Hill, and Kristen Gorman available from <",
+  citation("palmerpenguins", auto = TRUE)$url,
+  "> are licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>"
 ))
 ```
 
