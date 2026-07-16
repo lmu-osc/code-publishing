@@ -262,7 +262,7 @@ You can learn which license an installed package uses via
 And to identify which licenses are being used by the R packages your project depends on,
 you can use the following code:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 deps <- renv::dependencies()$Package |>
   unique() |>
   pak::pkg_deps(dependencies = NA) |>

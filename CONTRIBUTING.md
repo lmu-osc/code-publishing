@@ -6,11 +6,12 @@ There are some things to consider when contributing to this repo:
   by temporarily increasing the font scaling factor in your OS
   and using a large display.
 - Limit the width of images and center them, for example, as follows:
-  
+
   ```md
   ![](images/my_image.png){width=500px fig-align="center"}
   ```
-- Annotate code blocks with `filename="Terminal"` and`filename="Console"`
+
+- Annotate code blocks with `filename="Terminal"` and `filename="R Console"`
   to differentiate Bash and R that should be entered by the user
   (if there is no file from which the code is an excerpt).
 - Put optional content into a collapsed note.

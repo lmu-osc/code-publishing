@@ -72,13 +72,13 @@ the code is only for demonstration purposes and does not need to be run.
 
 Make sure that your project is in a consistent state according to `renv` by running:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::status()
 ```
 
 If it reports packages that are not used, synchronize the lock file using:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::snapshot()
 ```
 
@@ -109,7 +109,7 @@ Next, make sure that `getwd()` indicates that
 the working directory is `code-publishing-exercise`.
 Now, initialize `renv`:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::init()
 ```
 :::

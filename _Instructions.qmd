@@ -39,6 +39,8 @@ Therefore, you will find the instructions on how to execute the Minimal Example 
 3. Create a new R Project in this folder and initialize the *renv* environment:
 
 ```{r eval=FALSE}
+#| filename: "R Console"
+
 renv::init()
 ```
 

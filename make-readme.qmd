@@ -88,7 +88,7 @@ using the function `pak::pkg_sysreqs()`.
 In combination with `renv`, we can obtain the system dependencies
 of all R packages the current project directly depends on:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # Find all R package dependencies
 deps <- renv::dependencies()$Package |>
   unique() |>

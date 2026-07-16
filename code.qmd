@@ -78,13 +78,13 @@ ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex)
 
 This code uses some new packages, one can use `renv` to view them:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::status()
 ```
 
 Then, install and record them with:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::install()
 renv::snapshot()
 ```
@@ -160,7 +160,7 @@ Their version is recorded by `renv`,
 but you also need to ensure that they are available for download.
 First, identify the source from which you installed your packages:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # First, install {pak} and {sessioninfo}
 renv::install(c(
   "pak",
@@ -401,7 +401,7 @@ bibliography:
 
 Use `renv` to view, install, and record the newly used package:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::status()
 renv::install()
 renv::snapshot()
