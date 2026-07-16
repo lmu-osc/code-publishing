@@ -342,9 +342,9 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>). In the following, we will demonstrate how to create a simple data dictionary using the R package <a href="https://easystats.github.io/datawizard/"><code>datawizard</code></a>. You can install it now using:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"datawizard"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="st">"datawizard"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>You can put the code that follows in a separate document. Create it by clicking on <em>File</em> &gt; <em>New File</em> &gt; <em>Quarto Document…</em>. Choose a title such as <code>Data Dictionary</code>, select <em>HTML</em> as format, uncheck the use of the visual markdown editor, and click on <em>Create</em>. Remove everything except the YAML header (between the <code>---</code>). To make the HTML file self-contained, also set <code>embed-resources: true</code> such that the YAML header looks as follows:</p>
 <div class="code-with-filename">
@@ -654,9 +654,9 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <p>First, store the title and description of the data set as a whole:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>table_info <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>table_info <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">title =</span> <span class="st">"penguins data set"</span>,</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">description =</span> <span class="st">"Size measurements for adult foraging penguins near Palmer Station, Antarctica"</span></span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -666,18 +666,18 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <div class="cell-output cell-output-stdout">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="Console"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat_source <span class="ot">&lt;-</span> <span class="st">"https://allisonhorst.github.io/palmerpenguins/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10" data-filename="R Console"><pre class="sourceCode r code-overflow-wrap code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat_source <span class="ot">&lt;-</span> <span class="st">"https://allisonhorst.github.io/palmerpenguins/"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
 <p>Next, create a list of the categorical variables’ valid values:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>valid_vals <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>valid_vals <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="fu">c</span>(<span class="st">"Adelie"</span>, <span class="st">"Gentoo"</span>, <span class="st">"Chinstrap"</span>),</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="fu">c</span>(<span class="st">"Torgersen"</span>, <span class="st">"Biscoe"</span>, <span class="st">"Dream"</span>),</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>),</span>
@@ -687,9 +687,9 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <p>Finally, store the descriptions of the variables we already created earlier:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the description of variables</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the description of variables</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="st">"a character string denoting penguin species"</span>,</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="st">"a character string denoting island in Palmer Archipelago, Antarctica"</span>,</span>
@@ -705,9 +705,9 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <p>Specifically, one can use the R package <a href="https://docs.ropensci.org/frictionless/"><code>frictionless</code></a> to create a <em>schema</em> which describes the structure of the data.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as <code>NA</code> and that the data are licensed under CC0&nbsp;1.0. Finally, the package is used to create a metadata file that contains the schema.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install {frictionless} and the required dependency {stringi}</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install {frictionless} and the required dependency {stringi}</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">install</span>(<span class="fu">c</span>(</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"frictionless"</span>,</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stringi"</span></span>
@@ -762,9 +762,9 @@ Note&nbsp;1: Create Machine-Readable Variable Documentation
 <p>Having added the data and its documentation, one can view and record the utilized packages with <code>renv</code>, thus bringing the project into a consistent state:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>Console</strong></pre>
+<pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">status</span>()</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>renv<span class="sc">::</span><span class="fu">snapshot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
