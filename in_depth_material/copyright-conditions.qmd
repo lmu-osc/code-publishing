@@ -4,6 +4,13 @@ subtitle: A More Detailed Explanation of Likely Scenarios
 ---
 
 
+::: {.callout-note}
+
+This is a continuation of the discussion about [Can I Share Other's Works?](/copyright.qmd#can-i-share-others-works) on the Copyright page. We recommend looking there first for additional context if needed.
+
+:::
+
+
 ### Under Which Conditions?
 
 Finally, if you verified that the work has been made available to you under a free/open license,

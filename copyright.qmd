@@ -65,7 +65,7 @@ For example, they can (optionally) ...
 
 We explain below how to choose a license that brings the desired "settings".
 
-## Can I Share the Work of Others?
+## Can I Share the Work of Others? {#can-i-share-others-works}
 
 To determine whether a particular work can be included in the project folder
 and shared publicly, the first step is to search for its license.
@@ -95,7 +95,7 @@ scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 Once you found a license, you need to determine whether it is a standard (boilerplate) license and
 whether it is a free/open. Then you can share the reused material in your repository.
 
-Below are listed typical licenses that are free/open. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our [Copyright Conditions](in_depth_material/copyright-conditions.qmd) page.
+Below are listed typical licenses that are free/open. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our supplementary [Copyright Conditions](in_depth_material/copyright-conditions.qmd) page.
 
 [osi-list]: https://opensource.org/licenses
 [fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses
