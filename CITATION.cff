@@ -17,6 +17,10 @@ authors:
     orcid: "https://orcid.org/0000-0002-8282-3910"
     affiliation: "LMU Munich"
     email: felix.schoenbrodt@psy.lmu.de
+  - given-names: Pat
+    family-names: Callahan
+    orcid: "https://orcid.org/0000-0003-1769-7580"
+    affiliation: "LMU Munich"
 
 title: "Code Publishing Tutorial"
 version: 0.1.0
@@ -36,12 +40,20 @@ preferred-citation:
     - given-names: Christoph
       family-names: Scheffel
       orcid: "https://orcid.org/0000-0001-5963-9229"
+    - given-names: Felix
+      family-names: Schönbrodt
+      orcid: "https://orcid.org/0000-0002-8282-3910"
+      affiliation: "LMU Munich"
+      email: felix.schoenbrodt@psy.lmu.de
+    - given-names: Pat
+      family-names: Callahan
+      orcid: "https://orcid.org/0000-0003-1769-7580"
+      affiliation: "LMU Munich"
   title: "Code Publishing Tutorial"
   year: 2025
   doi: "10.5281/zenodo.16631977"
   publisher:
     name: "LMU Open Science Center"
-    ror: "https://ror.org/029e6qe04"
   repository-code: "https://github.com/lmu-osc/code-publishing"
   url: "https://lmu-osc.github.io/code-publishing/"
   type: "book"
