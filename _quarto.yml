@@ -61,7 +61,6 @@ format:
   html:
     theme:
       - cosmo
-      - lmu-osc-custom.scss
     css:
       - https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css
     toc: true
