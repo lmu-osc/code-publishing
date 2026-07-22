@@ -530,7 +530,7 @@ Also, their commercial use may require the consent of the depicted person.
 
 [commons-photographs]: https://commons.wikimedia.org/wiki/Commons:Photographs_of_identifiable_people
 
-## ✍️ Practical Exercise: Adding an Image
+## Practical Exercise: Adding an Image
 
 Let's practice what you learned by adding an image to the manuscript.
 We'll use [this picture of a penguin from Flickr](https://flic.kr/p/2pEKnUr).
