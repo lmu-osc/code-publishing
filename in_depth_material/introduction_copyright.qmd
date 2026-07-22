@@ -178,7 +178,7 @@ for which the open editing phase began in 2006.
 They are largely viewed as compatible with one another.
 
 :::: {.column-margin}
-![](images/Definition_of_Free_Cultural_Works.svg){width=250px}
+![](/images/Definition_of_Free_Cultural_Works.svg){width=250px}
 ::::
 :::
 
@@ -186,7 +186,7 @@ They are largely viewed as compatible with one another.
 
 To determine whether a particular work can be included in the project folder
 and shared publicly, the first step is to search for its license.
-For example, this tutorial has an [about page](../about.qmd) detailing its licensing,
+For example, this tutorial has an [about page](/about.qmd) detailing its licensing,
 whereas other websites sometimes state the license in the footer.
 Other places to look include a project's `README` file or a dedicated `LICENSE` or `COPYING` file.
 If a project has been stored in a research repository,

@@ -9,7 +9,7 @@ website:
   page-footer:
     center: |
       A recommended citation and license information for this tutorial
-      are provided on the [about page](about.qmd).
+      are provided on the [about page](/about.qmd).
     border: false
   search:
     location: sidebar
