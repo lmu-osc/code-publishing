@@ -275,7 +275,7 @@ We recommend adding a short paragraph to `LICENSE.txt` to describe its license.
 It is best to provide attribution even if the license does not require it.
 
 ```{.txt .code-overflow-wrap filename="LICENSE.txt"}
-"apaquarto" stored in "_extensions/wjschne/apaquarto" by W. Joel Schneider available from <https://github.com/wjschne/apaquarto> is licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>
+"apaquarto" stored in "_extensions/wjschne/apaquarto" by W. Joel Schneider available from <https://github.com/wjschne/apaquarto> is licensed under CC0\ 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>
 ```
 
 Again, if the license required adding the full license text,

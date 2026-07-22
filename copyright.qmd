@@ -530,7 +530,7 @@ Also, their commercial use may require the consent of the depicted person.
 
 [commons-photographs]: https://commons.wikimedia.org/wiki/Commons:Photographs_of_identifiable_people
 
-## ✍️ Practical Exercise: Adding an Image
+## Practical Exercise: Adding an Image
 
 Let's practice what you learned by adding an image to the manuscript.
 We'll use [this picture of a penguin from Flickr](https://flic.kr/p/2pEKnUr).
@@ -566,20 +566,20 @@ we still recommend providing proper attribution.
 - Copyright notice: (not available)
 - Title of the work: `Chinstrap Penguin`
   - Link to the work: <https://www.flickr.com/photos/192320315@N02/53603388557/> or <https://flic.kr/p/2pEKnUr>
-- License name: `CC0 1.0`
+- License name: `CC0\ 1.0`
   - Link to the license: <https://creativecommons.org/publicdomain/zero/1.0/>
 - Link to warranty disclaimer: (not available)
 - Indicate modification: (no existing modification notices)
 
 ```{.md .code-overflow-wrap}
-!["[Chinstrap Penguin](https://flic.kr/p/2pEKnUr)" by "steve b" licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)](penguin.jpg){width=50%}
+!["[Chinstrap Penguin](https://flic.kr/p/2pEKnUr)" by "steve b" licensed under [CC0\ 1.0](https://creativecommons.org/publicdomain/zero/1.0/)](penguin.jpg){width=50%}
 ```
 
 If it is likely that the article gets printed,
 you might want to ensure that the link to the work is retained in that case:
 
 ```{.md .code-overflow-wrap}
-!["[Chinstrap Penguin](https://flic.kr/p/2pEKnUr)" by "steve b" available under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) from [`flic.kr/p/2pEKnUr`](https://flic.kr/p/2pEKnUr)](penguin.jpg){width=50%}
+!["[Chinstrap Penguin](https://flic.kr/p/2pEKnUr)" by "steve b" available under [CC0\ 1.0](https://creativecommons.org/publicdomain/zero/1.0/) from [`flic.kr/p/2pEKnUr`](https://flic.kr/p/2pEKnUr)](penguin.jpg){width=50%}
 ```
 :::
 
@@ -597,7 +597,7 @@ then on _File_ > _Save_, and choose `LICENSE.txt` as filename.
 The license description can be worded as follows:
 
 ```{.txt .code-overflow-wrap filename="LICENSE.txt"}
-"Chinstrap Penguin" stored in "penguin.jpg" by "steve b" available from <https://flic.kr/p/2pEKnUr> is licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>
+"Chinstrap Penguin" stored in "penguin.jpg" by "steve b" available from <https://flic.kr/p/2pEKnUr> is licensed under CC0\ 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>
 ```
 
 If the license required adding the full license text,

@@ -116,7 +116,7 @@ Here's an example from a different data set, with variables in rows, and the dic
 | life_satisfaction | Life Satisfaction         | integer | "How satisfied are you with your life?" | 1 = Very dissatisfied; 2 = Dissatisfied; 3 = Neutral; 4 = Satisfied; 5 = Very satisfied | scale (1–5) | -99 = Not answered |
 
 
-### ✍️ Practical Exercise: Add your own data dictionary
+### Practical Exercise: Add your own data dictionary
 
 Now go ahead and create a data dictionary for the penguins data set, 
 in a software (text or spreadsheet) of your choice.
@@ -139,7 +139,7 @@ Save the data dictionary in the same folder as the actual data set file.
 
 :::
 
-## ✍️ Practical Exercise: Add Data Citation and Attribution
+## Practical Exercise: Add Data Citation and Attribution
 
 All data relied upon should be cited in the manuscript
 to allow for precise identification and access.
