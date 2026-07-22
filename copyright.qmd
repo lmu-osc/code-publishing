@@ -1,5 +1,5 @@
 ---
-title: "Copyright"
+title: "Sharing work of others: Copyright"
 engine: knitr
 format:
   html:
@@ -17,262 +17,88 @@ format:
 ---
 
 By default, everything you put into the project folder will be shared publicly.
-In many instances, this will also include works by others than yourself or your co-authors,
-because you may use existing data, images or software.
-In these cases, you should make sure to only share them to the extent you are allowed to.
-In the following, we will be focusing on copyright,
-but of course, there can also be other restrictions.
+This typically includes:
 
-::: {#nte-copyright-tldr .callout-note}
-## Copyright TL;DR
+- **works by others** than yourself or your co-authors,
+  because you may use existing data, images or software. 
+  Make sure to only share those to the extent you are allowed to.
+- **work that was created by yourself** or your co-authors.
 
-Every expression of an idea, such as a literary or an artistic works,
-is automatically covered by copyright.
-Put simply, this means that nobody else than the copyright holder
-is allowed to copy, modify, or share it.
-Copyright licenses can grant others some of the necessary rights,
-but mostly don't cover publicity, privacy, moral, patent, or trademark rights.
-Certain exceptions and limitations to copyright (such as fair use or the right to quote)
-may obviate the need for a license.
 
-With regard to copyright, free/open licenses can give permission to share a work by others.
-These licenses often require to attribute the authors,
-indicate whether changes were made,
-and provide the text of the license, among other things.
+Copyright and licensing can be complicated. 
+In this chapter, we focus on rather simple (but typical) situations.
+For an in-depth explanation of copyright and licenses, 
+see our supplementary in-depth material "[Introduction to Copyright and Licenses](in_depth_material/introduction_copyright.qmd)".
 
-The following video by @Brinken2021
-embedded from the TIB AV-Portal ([Data Privacy Statement](https://av.tib.eu/privacy))
-explains the correct attribution of works under Creative Commons licenses.
 
-```{=html}
-<details>
-  <summary>Load video</summary>
-  <p><div style="position: relative; width: 100%; aspect-ratio: 16 / 9;">
-    <iframe loading="lazy" src="https://av.tib.eu/player/53550" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-  </div></p>
-  <p>The video “The correct indication of a license: Aspects to consider when reusing the work of others” by Helene Brinken, Jonas Hauss, and Jessika Rücknagel is licensed under <a href="https://creativecommons.org/licenses/by/3.0/de/deed.de">CC&nbsp;BY&nbsp;3.0&nbsp;DE</a>.</p>
-</details>
-```
-:::
-
-## Introduction to Copyright and Licenses
+## Short Introduction to Copyright and Licenses
 
 Whenever authors create a literary or artistic work
 (such as a text, image, video, or software), the copyright law^[in Germany: _Urheberrecht_]
 in most countries limits other people from copying, modifying, and sharing it
-without the author's express permission.
-This even applies if the author makes it available to others (e.g., on their website):
-First and foremost others are not allowed to copy, modify, or share it.
-Importantly, this legal default of "all rights reserved" was created to benefit publishers,
-not authors [@Fogel2006], and runs counter to many cultural and scientific processes.
+without the author's express permission. 
 Copyright licenses enable authors to free up their works for reuse by others.
-
-Note that copyright law [varies between countries][commons-rules]
-and the rule of territoriality (_lex loci protectionis_) applies:
-Applicable are the laws of the country where a work is used.
-Also, if the work was created as part of the author's job,
-it might be their employer who holds the copyright to the work,
-depending on the country and contract.
-
-[commons-rules]: https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory
 
 A license is a legal document that regulates what other people than the author
 can and cannot do with a copyright-protected work, and under which conditions.
-The license may be exclusive, such that it is only granted to one recipient,
-effectively limiting the author in dealing with their own work.
-It can also be non-exclusive, thus giving rights to others without the author losing them.
-To avoid that every author who would like to share their work writes their own license,
-pre-formulated "boilerplate" licenses have been created.
-For example, you might have heard about ["Creative Commons" licenses][cc-licenses],
-which are used by Wikipedia.
-Recognizing them facilitates both sharing (on the side of the author)
-and re-using (on the side of the recipient).^[In fact, authors should not
-create their own license texts if the purpose is to share their work freely
-and openly with others.
-By using a boilerplate license others know what to expect,
-also because it may have already been [tested][sfconservancy] in [courts][cc-db].]
-
-[cc-licenses]: https://creativecommons.org/share-your-work/cclicenses/
-[sfconservancy]: https://sfconservancy.org/copyleft-compliance/
-[cc-db]: https://legaldb.creativecommons.org/
+We strongly recommend to use *existing boilerplate licenses*
+(and not to craft your own license text).
 
 ::: {.column-margin}
-For the purpose of this tutorial, by _license_ we mean _copyright license_.
+For the purpose of this chapter, by _license_ we mean _copyright license_.
 :::
 
-An important class of boilerplate licenses are _free/open_ licenses.
-Put simply, works under a free/open license "can be freely studied, applied, copied and/or modified,
+Works under a free/open license "can be freely studied, applied, copied and/or modified,
 by anyone, for any purpose" [@Moller2015].
 Importantly, this also means that others do not need to ask or notify the author
-and that they can use it for commercial purposes.
-Coming back to the example of Creative Commons licenses,
-not all of them are free/open.
-For example, some restrict commercial use and modification.
-The Creative Commons license "[Attribution-ShareAlike 4.0][cc-by-sa]"
-is an example of a free/open license, however,
-and we will cover several others below.
+and that they can use it also for commercial purposes. If you modified the work and put a sufficient amount of creativity into it,
+the result is called a _derivative work_.
 
-[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/
+Even for free licenses, authors can place certain demands on re-users of their material.
+For example, they can (optionally) ...
 
-By the choice of license, authors can demand that they are credited,
-that the original license is indicated, that modifications are indicated,
-that derivative works are only shared under the same license,
-and that no further restrictions are imposed on the work.
-Software licenses may additionally require to make the source code available
-to everybody the software is shared with
-and often require to display the full text of the license upon distribution.
+- demand that they are credited as the creators of a work,
+- that the original license must be indicated when a work is reused, 
+- that modifications are indicated,
+- that derivative works are only shared under the same license, or
+- that no further restrictions are imposed on the derivative work.
 
-::: {#nte-terminology .callout-note collapse="true"}
-### A Note on Terminology
+We explain below how to choose a license that brings the desired "settings".
 
-The terms _free_ and _open_, especially with regard to software, come with a history.
-The Free Software Foundation (FSF) was founded in 1985
-to protect "four essential freedoms" [-@FSF2024] of a program's user.
-These are the freedoms to use, study, share, and improve a program.
-Software whose users legally and practically have these freedoms
-(because, among other things, they have access to its source code) is considered _free_.
-The four freedoms are seen as vital for a society as a whole
-in the sense that they enable sharing, cooperation and ultimately freedom in general.
-The FSF maintains [a list of software licenses][fsf-list]
-that it considers to be protecting the four freedoms.
-Sometimes the term _libre_ (Spanish and French for _free_)
-is used to make a distinction from _gratis_ software.
-You can learn more about free software at [Write Free Software](https://writefreesoftware.org/learn/).
-
-[fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses
-
-The Open Source Initiative (OSI), which was founded in 1998, follows a more pragmatic approach.
-It is concerned with developing high-quality software,
-for which everyone's ability to obtain, modify and contribute back the source code
-is considered beneficial.
-Access to the source code is one out of multiple conditions for software
-to be considered _open source_ by the OSI [-@OSI2007],
-which equally maintains [a list of approved licenses][osi-list].
-
-[osi-list]: https://opensource.org/licenses
-
-Access to the source code is a necessary, but not sufficient requirement
-both for _free software_ and for _open source software_.
-Conversely, both can (and frequently are) sold for money,
-as their respective criteria only apply once one has access to the software.
-Throughout this tutorial, we write "free/open license"
-to mean a license that is approved by either the FSF or the OSI.
-Software which is available under neither but makes available its source code
-is sometimes referred to as _source-available software_.
-
-Apart from software, the term _open access_ has often been used for works
-that are available at no cost.
-For example, this is the commonality of bronze, green, hybrid, gold,
-and diamond/platinum open access _articles_,
-which otherwise vary in the rights that are granted to readers.
-In 2002, the Budapest Open Access Initiative declared
-that _open access_ additionally includes the right to use articles for any purpose,
-and in 2003, the Bethesda Statement and the Berlin Declaration added
-the right to make derivative works.
-
-Two other notable definitions include the _Open Definition_ [@OKFN2016],
-which was first drafted in 2005, and the definition of _Free Cultural Works_ [@Moller2015],
-for which the open editing phase began in 2006.
-They are largely viewed as compatible with one another.
-
-:::: {.column-margin}
-![](images/Definition_of_Free_Cultural_Works.svg){width=250px}
-::::
-:::
-
-### Can I Share That Work?
+## Can I Share the Work of Others?
 
 To determine whether a particular work can be included in the project folder
 and shared publicly, the first step is to search for its license.
-For example, this tutorial has an [about page](about.qmd) detailing its licensing,
+For example, this tutorial has an [About](about.qmd) page detailing its licensing,
 whereas other websites sometimes state the license in the footer.
+
 Other places to look include a project's README file or a dedicated `LICENSE` or `COPYING` file.
 If a project has been stored in a research repository,
 yet another means of communicating its copyright status might exist.
 For media from Wikimedia Commons, an [Attribution Generator][commons-gen] exists.
 
-[commons-gen]: https://lizenzhinweisgenerator.de/?lang=en
-
-::: {#tip-private-use .callout-tip}
-#### Consider Complicated Licensing Situations
-
-For works by one or only few authors, it is possible
-that one license consistently applies to the whole content.
-More often than not, however, the situation is a little more complicated:
-
-- Different parts of a work may be available under different licenses:
-  A document may incorporate direct quotes or images by others.
-  In this case, the license of the document may not cover those.
-  In the best case, the authors indicate which parts of the work are covered by which license.
-- A work may be available under different licenses at the choice of the (re-)user.
-  This is also called multi-licensing.
-  For example, authors might allow to use a work under any version of a license.
-- In contrast, it may also be the case that one has to comply
-  with the conditions of multiple licenses at the same time.
-  This is the case, for example, if a derivative work is published
-  under a different license than the original work.
-:::
-
 If you cannot find any license, the work might be
-in the public domain^[in Germany: _Gemeinfreiheit_] depending on national law.
-For example, the work may not cross the [threshold of originality][commons-threshold],
-it may not [qualify for copyright protection][commons-unprotected]
--- such as official works by the government --,
-or the copyright protection might have expired.
-According to the [Berne convention][berne-convention],
-copyright expires at earliest 50 years after the author's death,
-but in [many countries][commons-pd] it expires even later
--- you can use a [public domain calculator][pd-calc] to check.
-If no license notice is present and the work is not in the public domain,
-it is _in copyright_ and you are generally not allowed to share it with others.
+in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it.
+
+If no license notice is present and the work is *not* in the public domain,
+it is by default  _in copyright_ and you are generally not allowed to share it with others.
 You can, however, ask the author to put the corresponding work under a free/open license
 -- Wikimedia Commons provides an [email template][commons-templates] to obtain such a permission.
+
 Without permission you can check your national laws
 for limitations and exceptions to copyright.^[in Germany: _Schranken des Urheberrechts_]
 Examples include the right to quote, [trivial use][commons-minimis],
 scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 
-[commons-threshold]: https://commons.wikimedia.org/wiki/Commons:Threshold_of_originality
-[commons-unprotected]: https://commons.wikimedia.org/wiki/Commons:Unprotected_works
-[berne-convention]: https://en.wikipedia.org/wiki/Berne_Convention
-[commons-pd]: https://commons.wikimedia.org/wiki/Help:Public_domain#Copyright_terms_by_country
-[pd-calc]: https://lawflow.org/public-domain-calculators/
 [commons-templates]: https://commons.wikimedia.org/wiki/Commons:Email_templates
-[commons-minimis]: https://commons.wikimedia.org/wiki/Commons:De_minimis
-[wiki-fair-use]: https://en.wikipedia.org/wiki/Wikipedia:FAQ/Copyright#What_is_fair_use?
 
-Having found a license, you need to determine
-(1) whether it is a standard (boilerplate) license,
-(2) whether it is a free/open,
-and (3) whether it is appropriate for the particular type of work and use case.
+Once you found a license, you need to determine whether it is a standard (boilerplate) license and
+whether it is a free/open. Then you can share the reused material in your repository.
 
-1. __Standard licenses__ are usually stated by their name (or an abbreviation),
-   which may include a version number.
-   Most standard licenses were assigned
-   an [SPDX identifier](https://spdx.dev/ids) for unambiguous identification,
-   though the identifier is often not indicated for a particular work
-   (which would be best practice).
-   Also, not all standard licenses have SPDX identifiers.
-   You can view a [list of all licenses with SPDX identifiers here](https://spdx.org/licenses/).
-2. __Free/open__: We have compiled lists of the most common free/open licenses below,
-   categorized by the type of work they apply to.
-   Be sure to look for an exact match,
-   as there are often many licenses with very similar names.
-   If a particular license is not listed below, we also provide links to other resources
-   which you can use to determine whether a license is free/open.
-3. __Type of work and use case__:
-   Many licenses were written with a particular type of work in mind,
-   along with a certain use case.
-   Software licenses, for example, may consider that the source code
-   is the preferred form for making modifications
-   and that software can be encumbered by patents,
-   while licenses for data can differentiate between the database
-   and any works produced from it.
-   Take caution if a license applies to a type work for which it was not originally created
-   and conflicts with your use case.
-   Sometimes, the license name hints at the intended type of work,
-   but when in doubt always read the full license text (and/or consult with a lawyer)
-   to determine whether the conditions are acceptable to you.
+Here are typical licenses that are free/open:
+
+[osi-list]: https://opensource.org/licenses
+[fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses
 
 ::: panel-tabset
 ### Software
@@ -285,7 +111,7 @@ Some of the most common free/open software licenses are listed below:
 :::: unstyled-list
 - <details>
   <summary>GNU Affero General Public License v3.0 (`AGPL-3.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -297,7 +123,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>GNU General Public License v3.0 (`GPL-3.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -309,7 +135,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>GNU Lesser General Public License v3.0 (`LGPL-3.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -321,7 +147,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>Apache License 2.0 (`Apache-2.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -331,7 +157,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>Mozilla Public License 2.0 (`MPL-2.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -342,7 +168,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>MIT License (`MIT`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -351,7 +177,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>BSD 3-Clause "New" or "Revised" License (`BSD-3-Clause`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -360,7 +186,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>BSD 2-Clause "Simplified" License (`BSD-2-Clause`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -389,13 +215,13 @@ In their most recent version this includes the following licenses:
 :::: unstyled-list
 - <details>
   <summary>CC0 1.0 (`CC0-1.0`)</summary>
-  __Major conditions when sharing works__: (none)
+  __You can share under these conditions__: (none)
   
   [Link to full text][cc0-text]
   </details>
 - <details>
   <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -406,7 +232,7 @@ In their most recent version this includes the following licenses:
   </details>
 - <details>
   <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -451,13 +277,13 @@ In the following, we list some popular free/open data licenses:
 :::: unstyled-list
 - <details>
   <summary>CC0 1.0 (`CC0-1.0`)</summary>
-  __Major conditions when sharing works__: (none)
+  __You can share under these conditions__: (none)
   
   [Link to full text][cc0-text]
   </details>
 - <details>
   <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -468,7 +294,7 @@ In the following, we list some popular free/open data licenses:
   </details>
 - <details>
   <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -486,13 +312,13 @@ You might also encounter the following, less popular free/open data licenses:
 :::: unstyled-list
 - <details>
   <summary>Open Data Commons Public Domain Dedication & License 1.0 (`PDDL-1.0`)</summary>
-  __Major conditions when sharing works__: (none)
+  __You can share under these conditions__: (none)
   
   [Link to full text](https://opendatacommons.org/licenses/pddl/1-0/)
   </details>
 - <details>
   <summary>Community Data License Agreement Permissive 2.0 (`CDLA-Permissive-2.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Add license text
   
@@ -500,7 +326,7 @@ You might also encounter the following, less popular free/open data licenses:
   </details>
 - <details>
   <summary>Community Data License Agreement Permissive 1.0 (`CDLA-Permissive-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -509,7 +335,7 @@ You might also encounter the following, less popular free/open data licenses:
   </details>
 - <details>
   <summary>Community Data License Agreement Sharing 1.0 (`CDLA-Sharing-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -527,7 +353,7 @@ If any of these licenses is used, the license for the content must be stated sep
 :::: unstyled-list
 - <details>
   <summary>Open Data Commons Open Database License v1.0 (`ODbL-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -538,7 +364,7 @@ If any of these licenses is used, the license for the content must be stated sep
   </details>
 - <details>
   <summary>Open Data Commons Attribution License v1.0 (`ODC-By-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -553,46 +379,17 @@ Note, however, that some of the licenses there might be inappropriate for data,
 because they do not mention _sui generis_ database rights.
 :::
 
-::: {#cau-license-versions .callout-caution}
-### License Versions Are Important
-
-You may have noticed that in many cases a version number is part of the license name.
-This is because the organizations that created the licenses sometimes publish updated versions
-to accommodate for developments in copyright law and the communities that use the licenses.
-For example, the Creative Commons licenses (that start with `CC`) were [first published in 2002][cc-v1].
-Since then, the possibility to relicense under later ([v2.0][cc-v2], 2004)
-and compatible licenses ([v3.0][cc-v3], 2007) has been added,
-a 30-day window to correct license violations has been established to combat [copyleft trolls][commons-trolls],
-and _sui generis_ database rights have been covered explicitly ([v4.0][cc-v4], 2013).
-There are many more [subtle differences between license versions][cc-versions],
-therefore it is important to indicate which license version exactly one is referring to,
-as the license of a work does not "update" automatically
-(i.e., you have to follow the terms of that exact version).
-CC0, officially introduced in 2009, is still at version [1.0][cc0-v1].
-
-[cc-v1]: https://creativecommons.org/weblog/entry/3476
-[cc-v2]: https://creativecommons.org/weblog/entry/4216#:~:text=Share%20Alike%20Across%20Borders
-[cc-v3]: https://creativecommons.org/weblog/entry/7249#:~:text=BY-SA%20%E2%80%94%20Compatibility%20Structure%20Now%20Included
-[cc-v4]: https://creativecommons.org/weblog/entry/40768
-[cc0-v1]: https://www.creativecommons.org/weblog/entry/13304
-[cc-versions]: https://wiki.creativecommons.org/wiki/License_Versions
-[commons-trolls]: https://commons.wikimedia.org/wiki/Commons:Copyleft_trolling
-
-For the GNU licenses it is even recommended to state whether a work is licensed
-_only_ under the indicated version of the license or, alternatively,
-also under newer versions of the license [@Stallman2022Version].
-:::
 
 ### Under Which Conditions?
 
 Finally, if you verified that the work has been made available to you under a free/open license,
 you need to understand the conditions under which you are allowed to include the work in your project folder
 and share it with others -- regardless of whether you modified it.
+
 In the following, we will explain the most important conditions of the licenses listed above.
 For other licenses we recommend reading their text in full and/or consulting with a lawyer.
 The conditions of many popular free/open licenses are also [summarized on ChooseALicense.com][cal-appendix],
-which you can use to get a general idea of a license
-(but which does not obviate reading the license text in full).
+which you can use to get a general idea of a license.
 Specifically for software licenses the _Open Source Automation Development Lab_
 provides [useful checklists detailing the respective obligations][osadl].[^osadl-note]
 
@@ -622,78 +419,47 @@ and that existing copyright notices are retained.
 
 Projects with many authors often explicitly allow for an attribution
 to the collective as a whole rather than being mentioned individually.
-For example, the flexible attribution requirements of Creative Commons licenses
-allow that Wikipedia authors agree to be attributed through a link to the article [@Linksvayer2009].
-And software projects may use copyright notices that only contain the project name,
+Software projects may use copyright notices that only contain the project name,
 such as `Copyright (c) 2020-2025 The XYZ Project Contributors` [@Winslow2020].
 
 Where to put the attribution depends on the type of the work,
 but in general it is best to keep it close to where the work is used
-and to provide all required information.
-Only linking to a page that provides the attribution (as with Wikipedia articles)
-most likely will not suffice in general.
+and to provide all required information. 
+For images, for example, this can be a small text next to the image.
 
-#### State Changes
 
-If a work has been modified, licenses may require that this is indicated.
-For example, if an image under a Creative Commons license other than CC0
-is reused in a cropped version, reusers could add "adapted from original"
-to indicate that changes have occurred.
+#### Modifications of the work 
+
+If a work has been modified, some licenses may require that this is indicated (e.g., with a note "adapted from original"). 
+Other licenses forbid that a work is modified.
+For example, the `NoDerivatives` clause of the `CC-BY-ND-4.0` licenses say:
+
+> If you remix, transform, or build upon the material, you may not distribute the modified material.
+
+Hence, in this case you are free to reuse and redistribute the material - as long as you don't change it.
+
+#### Commercial reuse
+
+The NC clause in the Creative Commons BY-NC (Attribution–NonCommercial) license stands for "NonCommercial", meaning that others are allowed to use, share, adapt, and build upon the work -- but not for commercial purposes. This restriction prohibits any use that is primarily intended for or directed toward commercial advantage or monetary compensation. For example, using the work in an advertisement, selling it, or incorporating it into a product for sale would not be permitted without additional permission from the copyright holder. However, non-profit educational use, personal projects, or sharing within a non-commercial community is generally allowed, as long as proper attribution is given to the original creator.
 
 #### Indicate License / Add License Text
 
 Licenses may either require that one mentions the applicable license
 by name and possibly link ("Indicate license")
 or they even require to copy the full license text along with the used work ("Add license text").
-Of course, the latter may not be feasible
-if the work is printed and smaller than the license text.
-For example, if the license of an image requires to print the full license text,
-the image mostly cannot be used in newspapers [see @Wikipedia2024FDL].
-
-#### Disclose Code
-
-There are various situations in which one interacts with software
-without having access to the underlying source code.
-For example, software can be distributed as a binary ("executable") file
-or it can be used over the internet.
-In both cases, licenses may require that the source code is provided to its users.
-
-#### Anti-DRM
-
-You may have encountered images or videos which you could not download due to a copy protection.
-Such a protection is also called **d**igital **r**ights **m**anagement (DRM).
-For works published under a license with an anti-DRM clause,
-reusers may not apply DRM to the work or must provide a DRM-free version in parallel
-(depending on the exact license).
 
 #### Copyleft
 
-If you modified the work and put a sufficient amount of creativity into it,
-the result is called a _derivative work_.
-It is (again) protected by copyright and even if you share it,
-nobody except you is allowed to copy, modify, or distribute it further.
-You can put it under a free/open license but don't have to.[^still-abide]
-The only exception is if the original work has been made available under a "copyleft" license.
-In that case, if you share the work with others
-you must put it under the same license as the original work[^or-compatible]
--- or you commit a copyright violation.[^not-automatic]
-This explains the origin of the term _copyleft_,
-as it "turns copyright around" to make works permanently free: ©\ →\ 🄯.
-In the realm of Creative Commons licenses, copyleft is also called _share alike_.
-The opposite of a copyleft license is sometimes also called a _permissive_ license.
+If the original work has been made available under a "copyleft" license, 
+any derivative work that is shared with others
+must be put under the same license as the original work[^or-compatible]
+-- or you commit a copyright violation.
 
-[^still-abide]: Of course, you still need to abide
-by the license conditions of the original work, such as attribution.
+This explains the origin of the term _copyleft_,
+as it "turns copyright around" to make works permanently free.
+In the realm of Creative Commons licenses, copyleft is also called _share alike_ (e.g. in the `CC-BY-SA-4.0` license).
 
 [^or-compatible]: or sometimes also under a later version or under a compatible license
-
-[^not-automatic]: Note, however, that [copyleft licenses are not automatic][commons-automatic]:
-A derivative work of a copylefted work is not "implicitly" under the same license
--- others would commit a copyright violation if they just took it.
-Only if the derivative author explicitly makes it available under the same license,
-others may use the derivative work under the same terms.
-
-[commons-automatic]: https://commons.wikimedia.org/wiki/Commons:Viral_licenses_are_not_automatic
 
 What is considered creation of a derivative work varies between jurisdictions,
 but the following are typical examples:
@@ -722,38 +488,9 @@ However, due to a lack of case law, there is only little guidance
 on what constitutes a derivative work in general.
 
 Also note that the copyleft licenses we discuss here do not mandate sharing.
-Copyleft (and attribution) clauses are only triggered if the work is shared [@CC2015].
+Copyleft (and attribution) clauses are only triggered *if* the work is shared [@CC2015].
 This means that if you only use a work internally, you do not need to share your derivative works.
 
-::: {#nte-weak-strong-copyleft .callout-note collapse="true"}
-##### Weak and Strong Copyleft
-
-For software, copyleft licenses come in two flavors:
-
-- __Weak copyleft licenses__ only require that modifications to the software itself
-  are licensed under the same or a compatible license if shared.
-  For example, if you create and publish software under a weak copyleft license,
-  others who modify it and put their version on the internet have to apply the same license.
-  However, people who merely _use_ your software in their own work which they make publicly available
-  can choose any license for it.
-- __Strong copyleft licenses,__ on the other side, insist that any larger works
-  that use the copyleft-licensed software must also be licensed
-  under the same or a compatible license if shared.
-  For example, if your software were to be put under a strong copyleft license,
-  everybody publishing software that uses your software would need to put it under the same license.
-  Because of only few rulings in courts, the extent of this requirement is disputed [@Wikipedia2024GPL].
-:::
-
-### Further Remarks
-
-The description of the conditions above is a simplified summary
--- read the full text of the license before sharing the respective work with others.
-For example, Creative Commons licenses other than CC0 also require that
-
-- you retain a notice about the disclaimer of warranties,
-- you retain an indication of any previous modifications,
-- the attribution does not imply endorsement by the original author, and
-- you remove the attribution again upon request by the original author.
 
 ::: {#tip-cc-licenses-checklist .callout-tip}
 #### Required Information under Creative Commons Licenses
@@ -761,7 +498,7 @@ For example, Creative Commons licenses other than CC0 also require that
 For most Creative Commons licenses,
 providing the following information is required (if available):
 
-- [ ] Author name
+- [ ] Original author name
 - [ ] Copyright notice
 - [ ] Title of the work
   - [ ] Link to the work
@@ -773,17 +510,12 @@ providing the following information is required (if available):
 
 Obviously, if you are in doubt whether a condition of the license applies in your use case,
 it is better to either follow it or to ask the author for clarification or explicit permission.
-This is especially important given the existence of [_copyleft trolls_][commons-trolls]:
-People who distribute works under a free/open license
-but send out statutory damages claims after minor violations
-without providing reusers an opportunity to fix their error.
-In addition, in many European countries attribution may be necessary regardless
-due to the author's moral rights.
-For these reasons, we recommend that you provide attribution
-for all works under a free/open license
+
+
+We recommend that you always provide attribution for all works under a free/open license
 -- even if the license does not strictly require it (e.g., CC0).
-Also, you should take note of every foreign work
-included in your project folder and record its license.
+This also follows from the rules of good scientific practice (and not only from copyright law).
+
 
 ::: {#imp-non-copyright-restrictions .callout-important}
 #### Non-copyright Restrictions
@@ -794,13 +526,11 @@ Therefore, you may lack other rights such as personality, privacy, moral, or tra
 For example, [sharing photos that depict people][commons-photographs]
 is not only a matter of copyright, but also of privacy rights.
 Also, their commercial use may require the consent of the depicted person.
-Finally, note that even if attribution is not a requirement of the license,
-good scientific practice demands that appropriate citations are made.
 :::
 
 [commons-photographs]: https://commons.wikimedia.org/wiki/Commons:Photographs_of_identifiable_people
 
-## Adding an Image
+## ✍️ Practical Exercise: Adding an Image
 
 Let's practice what you learned by adding an image to the manuscript.
 We'll use [this picture of a penguin from Flickr](https://flic.kr/p/2pEKnUr).
@@ -808,27 +538,23 @@ First, try to answer the following questions:
 
 1. Under which license is the picture available?
 2. Is it free/open?
-3. Is it appropriate for the type of work and use case?
-4. Under which conditions may the work be shared?
+3. Under which conditions may the work be shared?
 
 ::: {#tip-example-license .callout-tip collapse="true"}
 ### License of Penguin Picture (Solution)
 
 1. The picture has been put under the license [CC0\ 1.0][cc0]
 2. The license is free/open
-3. The license is appropriate for images
-4. The license contains no (major) conditions
+3. The license contains no (major) conditions
 :::
 
 [cc0]: https://creativecommons.org/publicdomain/zero/1.0/
 
-You can now download the image[^image-resolution]
+You can now download the image
 and move it to your project folder (maybe call it `penguin.jpg`).
 In your manuscript file, find the line that says "add image here", remove it,
 and add the image instead, including proper attribution.
 
-[^image-resolution]: If you are unsure which image resolution (size) is required,
-just download it in the largest possible resolution so it can be printed.
 
 ::: {#tip-example-license .callout-tip collapse="true"}
 ### Attribution for Penguin Picture (Solution)
@@ -890,6 +616,7 @@ git commit -m "Add image"
 If you would like to learn more about copyright and licenses
 you might find the following resources interesting:
 
+- Our own [in-depth material on copyright and licenses](in_depth_material/introduction_copyright.qmd) (which is an extension of this chapter)
 - "Open Content -- Navigating Creative Commons Licenses"
   by @Kreutzer2024
 - "Creative Commons Certificate for Educators, Academic Librarians,

@@ -1,5 +1,5 @@
 ---
-title: "Add Data"
+title: "Add Data and Data Dictionary"
 engine: knitr
 ---
 
@@ -10,13 +10,21 @@ engine: knitr
 
 invisible(loadNamespace("palmerpenguins")) # Tell renv that we need this package
 stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
+
+# write both in the top folder and in the in-depth folder
+# (so that both scripts can reference the data without relative paths)
 write.csv(palmerpenguins::penguins, file = "data.csv", row.names = FALSE)
+write.csv(
+  palmerpenguins::penguins,
+  file = "in_depth_material/data.csv",
+  row.names = FALSE
+)
 ```
 
 You can now download the data set we have prepared for you
 and put it into your project folder:
 
-[data.csv](data.csv){.btn .btn-lg .btn-info download=""}
+[data.csv](data.csv){.btn .btn-lg .btn-info download="data.csv"}
 
 ::: {.column-margin}
 ![palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data](images/palmerpenguins.png){width=250px}
@@ -58,392 +66,95 @@ Another resource to look at is the presentation
 [Synthpop](https://www.synthpop.org.uk/), [OpenDP](https://opendp.org/),
 or [Greenmask](https://www.greenmask.io/).
 
-## Add Data Dictionary
+## Add a Data Dictionary
 
 Whether or not distributing the data set,
 it is important to document the meaning (e.g., units)
 and values of its variables.
 This is typically done with a _data dictionary_ (also called a _codebook_).
-In the following, we will demonstrate how to create a simple data dictionary
-using the R package [`datawizard`][datawizard].
-You can install it now using:
 
-[datawizard]: https://easystats.github.io/datawizard/
+The recommendation for data dictionaries vary between fields - 
+both in terms of the recommended content (i.e., what exactly should be documented) 
+and the technical implementation (i.e., which file formats should be used).
 
-```{.r filename="R Console"}
-renv::install("datawizard")
-```
+*For the purpose of this exercise, we keep it easy and propose that you 
+manually create a file with the data dictionary
+(e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), 
+documenting only the bare minimum.*
 
-You can put the code that follows in a separate document.
-Create it by clicking on _File_ > _New File_  > _Quarto Document..._.
-Choose a title such as `Data Dictionary`,
-select _HTML_ as format,
-uncheck the use of the visual markdown editor, and click on _Create_.
-Remove everything except the YAML header (between the `---`).
-To make the HTML file self-contained,
-also set `embed-resources: true` such that the YAML header looks as follows:
+<!-- TODO: Add a link to the forthcoming data dictionary OSC tutorial -->
 
-```{.yml filename="data_dictionary.qmd"}
----
-title: "Data Dictionary"
-date: "today"
-format:
-  html:
-    embed-resources: true
----
-```
+::: {#tip-in-depth .callout-tip collapse="false"}
+### Manual is too much work? Automatic generation of (machine-readable) data dictionaries
+Our in-depth supplementary material "[Automatic Generation of Data Dictionaries](in_depth_material/data_dic_generation.qmd)" explains how you can automatically create
+a data dictionary with an R package. The package reads the data set and extracts relevant information from it. 
+This approach is in particular useful if you need to document data sets with many variables.
 
-Then, save it as `data_dictionary.qmd` by clicking on _File_ > _Save_.
-
-To create the actual data dictionary, first write a description for every column
-so others can understand what the variable names mean.
-Where necessary, also document their value
--- this is especially important if their meaning is non-obvious.
-In the following, we demonstrate this by storing the penguins' binomial name
-along with the English name.
-
-``````{cat}
-#| engine.opts: { file: "_data_dictionary.qmd" }
-#| class.source: "md"
-#| filename: "data_dictionary.qmd"
-
-```{r}
-#| echo: false
-
-# Store the description of variables
-vars <- c(
-  species = "a character string denoting penguin species",
-  island = "a character string denoting island in Palmer Archipelago, Antarctica",
-  bill_length_mm = "a number denoting bill length (millimeters)",
-  bill_depth_mm = "a number denoting bill depth (millimeters)",
-  flipper_length_mm = "an integer denoting flipper length (millimeters)",
-  body_mass_g = "an integer denoting body mass (grams)",
-  sex = "a character string denoting penguin sex",
-  year = "an integer denoting the study year"
-)
-
-# Store the description of variable values
-vals <- list(
-  species = c(
-    Adelie = "Pygoscelis adeliae",
-    Gentoo = "Pygoscelis papua",
-    Chinstrap = "Pygoscelis antarcticus"
-  )
-)
-```
-``````
-
-Then, load the data and use `datawizard`
-to add the descriptions to the `data.frame`:[^not-permanent]
-
-[^not-permanent]: Note that the code provided does not alter the data file
--- no description will be added to `data.csv`.
-The descriptions are only added to a (temporary) copy of the data set within R
-to create the data dictionary.
-
-::: {.column-margin}
-![datawizard: Easy Data Wrangling and Statistical Transformations](images/datawizard.png){width=250px}
+This advanced chapter also contains a section on how to create machine-readable data dictionaries.
 :::
 
-``````{cat}
-#| engine.opts: { file: "_data_dictionary.qmd", append: TRUE }
-#| class.source: "md"
-#| filename: "data_dictionary.qmd"
+### A bare minimum data dictionary
 
-```{r}
-#| echo: false
+Most standards for data dictionaries require at least 
+this information for each variable in your data set:
 
-dat <- read.csv("data.csv")
+- `name`: The (machine‑readable) name of the variable  
+- `label`: A short, human‑readable title or label for the variable  
+- `type`: The data type of the variable (e.g., `integer`, `float`, `string`, `date`)  
+- `description`: A brief description of what the variable measures or represents  
+- `values` (for categorical variables): A mapping of codes to their meanings, for example:  1 = Male, 2 = Female, 9 = Missing)
+- `units` (for numeric measures): The units of measurement (e.g., `kg`, `USD`, `years`, or the scale of a survey response), 
+- `missing_codes`: Any special codes used to denote missing or non‑applicable values (e.g., `-99 = Not answered`)
 
-for (x in names(vars)) {
-  if (x %in% names(vals)) {
-    dat <- datawizard::assign_labels(
-      dat,
-      select = I(x),
-      variable = vars[[x]],
-      values = vals[[x]]
-    )
-  } else {
-    dat <- datawizard::assign_labels(
-      dat,
-      select = I(x),
-      variable = vars[[x]]
-    )
-  }
-}
-```
+Here's an example from a different data set, with variables in rows, and the dictionary in columns:
 
-``````
+| name              | label                     | type    | description                             | values                                                                                  | units       | missing_codes      |
+| ----------------- | ------------------------- | ------- | --------------------------------------- | --------------------------------------------------------------------------------------- | ----------- | ------------------ |
+| gender            | Gender                    | integer | self‑identified gender                  | 1 = Male; 2 = Female; 3 = Other; 9 = Missing                                            |             | 9 = Missing        |
+| age               | Age                       | integer | age in years                            |                                                                                         | years       | -99 = Not answered |
+| blood_pressure    | Blood Pressure (systolic) | integer | systolic blood pressure                 |                                                                                         | mmHg        | -99 = Not measured |
+| life_satisfaction | Life Satisfaction         | integer | "How satisfied are you with your life?" | 1 = Very dissatisfied; 2 = Dissatisfied; 3 = Neutral; 4 = Satisfied; 5 = Very satisfied | scale (1–5) | -99 = Not answered |
 
-Then, you can create the data dictionary containing the descriptions,
-but also some other information about each variable
-(e.g., the number of missing values) and print it.
 
-``````{cat}
-#| engine.opts: { file: "_data_dictionary.qmd", append: TRUE }
-#| class.source: "md"
-#| filename: "data_dictionary.qmd"
+### ✍️ Practical Exercise: Add your own data dictionary
 
-```{r}
-#| echo: false
-#| column: "body-outset"
-#| classes: plain
-#| tbl-cap: "{.borderless .hover}"
+Now go ahead and create a data dictionary for the penguins data set, 
+in a software (text or spreadsheet) of your choice.
 
-datawizard::data_codebook(dat) |>
-  datawizard::data_select(exclude = ID) |>
-  datawizard::data_filter(N != "") |>
-  datawizard::print_md()
-```
+Save the data dictionary in the same folder as the actual data set file.
 
-``````
+::: {#tip-data_dic .callout-tip collapse="true"}
+#### Data dictionary for penguins data set (Solution)
 
-```{r}
-#| child: "_data_dictionary.qmd"
+| name              | label          | type    | description                          | values                    | units | missing_codes |
+| ----------------- | -------------- | ------- | ------------------------------------ | ------------------------- | ----- | ------------- |
+| species           | Species        | string  | Penguin species                      | Adelie; Gentoo; Chinstrap |       | NA = Missing  |
+| island            | Island         | string  | Island where individual was observed | Torgersen; Biscoe; Dream  |       | NA = Missing  |
+| bill_length_mm    | Bill length    | float   | Length of the bill (beak)            |                           | mm    | NA = Missing  |
+| bill_depth_mm     | Bill depth     | float   | Depth of the bill (beak)             |                           | mm    | NA = Missing  |
+| flipper_length_mm | Flipper length | integer | Length of the flipper                |                           | mm    | NA = Missing  |
+| body_mass_g       | Body mass      | integer | Body mass                            |                           | g     | NA = Missing  |
+| sex               | Sex            | string  | Sex of the penguin                   | male; female              |       | NA = Missing  |
+| year              | Year           | integer | Year of data collection              | 2007; 2008; 2009          |       |               |
 
-```
-
-Depending on the type of data, it may also be necessary
-to describe sampling procedures (e.g., selection criteria),
-measurement instruments (e.g., questionnaires),
-appropriate weighting,
-already applied preprocessing steps, or contact information.
-In our case, as the data has already been published,
-we only store a reference to its source.
-
-The data set is from the R package `palmerpenguins`.
-If you had it installed
-you could use the function `citation()` to create such a reference:
-
-```{r}
-#| label: "data-citation"
-#| eval: false
-
-citation("palmerpenguins", auto = TRUE) |>
-  format(bibtex = FALSE, style = "text")
-```
-
-Without the package `palmerpenguins` installed,
-you can find a [suggested citation on its website][palmerpenguins-citation]
-and add that to your data dictionary:
-
-[palmerpenguins-citation]: https://allisonhorst.github.io/palmerpenguins/#citation
-
-```{r}
-#| ref.label = "data-citation",
-#| render = function(x, options) gsub("\\n", " ", x = x),
-#| echo = FALSE,
-#| class.output = "md code-overflow-wrap",
-#| attr.output = 'filename="data_dictionary.qmd"'
-
-# This chunk takes the output from the chunk "data-citation"
-# and renders it with all newlines replaced by whitespaces.
-```
-
-Finally, you can render the data dictionary by running the following:
-
-```{.bash filename="Terminal"}
-quarto render data_dictionary.qmd
-```
-
-This should create the file `data_dictionary.html`
-which you can open and view in your web browser.
-
-One could go even further by making the information machine-readable in a standardized way.
-We provide an optional example of that in @nte-frictionless.
-If you want to learn more about the sharing of research data,
-have a look at the tutorial "[FAIR research data management][fair-tutorial]".
-
-[fair-tutorial]: https://lmu-osc.github.io/FAIR-Data-Management/
-
-::: {#nte-frictionless .callout-note collapse="true"}
-### Create Machine-Readable Variable Documentation
-
-This example demonstrates how the title and description of the data set,
-the description of the variables and their valid values are stored in a machine-readable way.
-We'll reuse the descriptions we already created[^value-labels] and add a few others.
-
-[^value-labels]: Unfortunately, the descriptions of values are not reused in this example,
-as they are [not supported][enum-labels] by the specification we are using.
-
-[enum-labels]: https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering
-
-First, store the title and description of the data set as a whole:
-
-```{.r filename="R Console"}
-table_info <- c(
-  title = "penguins data set",
-  description = "Size measurements for adult foraging penguins near Palmer Station, Antarctica"
-)
-```
-
-As before, also provide a reference to the source.
-
-```{r}
-#| echo: false
-#| class-output: "r code-overflow-wrap"
-#| attr-output: 'filename="R Console"'
-
-# We have provided the data set as CSV file to the readers.
-# Therefore, we cannot assume or require that readers have
-# the R package palmerpenguins installed. Instead, we create
-# the citation on our end and hide how we obtained it.
-
-citation("palmerpenguins", auto = TRUE)$url |>
-  paste0("dat_source <- \"", ... = _, "\"") |>
-  cat()
-```
-
-Next, create a list of the categorical variables' valid values:
-
-```{.r filename="R Console"}
-valid_vals <- list(
-  species = c("Adelie", "Gentoo", "Chinstrap"),
-  island = c("Torgersen", "Biscoe", "Dream"),
-  sex = c("male", "female"),
-  year = c(2007, 2008, 2009)
-)
-```
-
-Finally, store the descriptions of the variables we already created earlier:
-
-```{.r filename="R Console"}
-# Store the description of variables
-vars <- c(
-  species = "a character string denoting penguin species",
-  island = "a character string denoting island in Palmer Archipelago, Antarctica",
-  bill_length_mm = "a number denoting bill length (millimeters)",
-  bill_depth_mm = "a number denoting bill depth (millimeters)",
-  flipper_length_mm = "an integer denoting flipper length (millimeters)",
-  body_mass_g = "an integer denoting body mass (grams)",
-  sex = "a character string denoting penguin sex",
-  year = "an integer denoting the study year"
-)
-```
-
-Generally, metadata are either stored embedded into the data or externally,
-for example, in a separate file.
-We will use the "[frictionless data](https://specs.frictionlessdata.io/)" standard,
-where metadata are stored separately.
-Alternatives would be [RO-Crate](https://www.researchobject.org/ro-crate/)
-and [Psych-DS](https://psych-ds.github.io/).
-
-Specifically, one can use the R package [`frictionless`][frictionless]
-to create a _schema_ which describes the structure of the data.[^frictionless-note]
-For the purpose of the following code,
-it is just a nested list that we edit to include our own information.
-We also explicitly record in the schema
-that missing values are stored in the data file as `NA`
-and that the data are licensed under CC0\ 1.0.
-Finally, the package is used to create a metadata file that contains the schema.
-
-[frictionless]: https://docs.ropensci.org/frictionless/
-
-[^frictionless-note]: In June 2024, [version 2](https://datapackage.org/)
-of the frictionless data standard has been released.
-As of November 2024, the R package `frictionless` only supports the first version,
-though support for v2 is [planned](https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2).
-
-```{.r filename="R Console"}
-# Install {frictionless} and the required dependency {stringi}
-renv::install(c(
-  "frictionless",
-  "stringi"
-))
-
-# Read data and create schema
-dat_filename <- "data.csv"
-dat <- read.csv(dat_filename)
-dat_schema <- frictionless::create_schema(dat)
-
-# Add descriptions to the fields
-dat_schema$fields <- lapply(dat_schema$fields, \(x) {
-  c(x, description = vars[[x$name]])
-})
-
-# Record valid values
-dat_schema$fields <- lapply(dat_schema$fields, \(x) {
-  if (x[["name"]] %in% names(valid_vals)) {
-    modifyList(x, list(constraints = list(enum = valid_vals[[x$name]])))
-  } else {
-    x
-  }
-})
-
-# Define missing values
-dat_schema$missingValues <- c("", "NA")
-
-# Create package with license info and write it
-dat_package <- frictionless::create_package() |>
-  frictionless::add_resource(
-    resource_name = "penguins",
-    data = dat_filename,
-    schema = dat_schema,
-    title = table_info[["title"]],
-    description = table_info[["description"]],
-    licenses = list(list(
-      name = "CC0-1.0",
-      path = "https://creativecommons.org/publicdomain/zero/1.0/",
-      title = "CC0 1.0 Universal"
-    )),
-    sources = list(list(
-      title = "CRAN",
-      path = dat_source
-    ))
-  )
-frictionless::write_package(dat_package, directory = ".")
-```
-
-This creates the metadata file `datapackage.json` in the current directory.
-Make sure it is located in the same folder as `data.csv`,
-as together they comprise a [data package](https://specs.frictionlessdata.io/data-package/).
 :::
 
-Having added the data and its documentation,
-one can view and record the utilized packages with `renv`,
-thus bringing the project into a consistent state:
-
-```{.r filename="R Console"}
-renv::status()
-renv::snapshot()
-```
-
-## Add Data Citation and Attribution
+## ✍️ Practical Exercise: Add Data Citation and Attribution
 
 All data relied upon should be cited in the manuscript
 to allow for precise identification and access.
-From the "eight core principles of data citation" by @Starr2015,
-licensed under [CC0\ 1.0][cc0]:
-
-> **Principle 1 – Importance**: "Data should be considered legitimate,
-> citable products of research. Data citations should be accorded the same
-> importance in the scholarly record as citations of other research objects,
-> such as publications."
-
-> **Principle 3 – Evidence**: "In scholarly literature, whenever and wherever a
-> claim relies upon data, the corresponding data should be cited."
-
-> **Principle 5 – Access**: "Data citations should facilitate access to the data
-> themselves and to such associated metadata, documentation, code, and other
-> materials, as are necessary for both humans and machines to make informed use
-> of the referenced data."
-
-> **Principle 7 – Specificity and Verifiability**: "Data citations should
-> facilitate identification of, access to, and verification of the specific data
-> that support a claim. Citations or citation metadata should include
-> information about provenance and fixity sufficient to facilitate verifying
-> that the specific time slice, version and/or granular portion of data
-> retrieved subsequently is the same as was originally cited."
-
 Now, it's your turn to add an appropriate citation for the data set to the manuscript.
-Does your citation adhere to the principles above?
+
+Hints:
+
+- You can find an appropriate BibTeX entry on [the package website](https://allisonhorst.github.io/palmerpenguins/#citation)
+  or with the function `citation()`^[Note that this function requires to have the respective package installed.].
+- Add the citation in the manuscript where it says "cite data here".
 
 ::: {#tip-cite-palmerpenguins .callout-tip collapse="true"}
 #### Citing the Data Set (Solution)
 
-You can find an appropriate BibTeX entry on [the package website][palmerpenguins-citation]
-or with the function `citation()`:^[Note that this function requires
-to have the respective package installed.]
+Show the correct reference of the data set:
 
 ```{r}
 #| class.output: "bib code-overflow-scroll"
@@ -468,27 +179,12 @@ quarto render Manuscript.qmd
 ```
 :::
 
-While citation happens in the manuscript for reasons of academic integrity and reproducibility,
-to comply with any licenses you also may need to provide attribution within your project folder.
-Even though the data file we use here does not require attribution,
-we recommend adding a short paragraph to `LICENSE.txt`:
 
-```{r}
-#| echo: false
-#| class-output: "txt code-overflow-wrap"
-#| attr-output: 'filename="LICENSE.txt"'
+## Wrap up
 
-cat(paste0(
-  "The penguins data stored in \"data.csv\" by Allison Horst, Alison Hill, and Kristen Gorman available from <",
-  citation("palmerpenguins", auto = TRUE)$url,
-  "> are licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>"
-))
-```
+Congrats! You documented your data set and cited it correctly.
 
-As before, if the license required adding the full license text,
-you would also need to copy it to the project folder (if not already in there).
-
-Finally, you can go through the commit routine:
+To finalize this step, you can go through the commit routine:
 
 ```{.bash filename="Terminal"}
 git status

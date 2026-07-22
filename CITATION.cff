@@ -3,39 +3,45 @@ message: "If you use this tutorial, please cite it as below."
 authors:
   - given-names: Florian
     family-names: Kohrt
-    orcid: 'https://orcid.org/0000-0003-0374-5625'
+    orcid: "https://orcid.org/0000-0003-0374-5625"
     affiliation: "LMU Munich"
     email: fkohrt@anche.no
   - given-names: Josephine
     family-names: Zerna
-    orcid: 'https://orcid.org/0000-0003-2892-884X'
+    orcid: "https://orcid.org/0000-0003-2892-884X"
   - given-names: Christoph
     family-names: Scheffel
-    orcid: 'https://orcid.org/0000-0001-5963-9229'
+    orcid: "https://orcid.org/0000-0001-5963-9229"
+  - given-names: Felix
+    family-names: Schönbrodt
+    orcid: "https://orcid.org/0000-0002-8282-3910"
+    affiliation: "LMU Munich"
+    email: felix.schoenbrodt@psy.lmu.de
+
 title: "Code Publishing Tutorial"
 version: 0.1.0
 doi: "10.5281/zenodo.16631977"
 date-released: 2025-07-31
-repository-code: 'https://github.com/lmu-osc/code-publishing'
-url: 'https://lmu-osc.github.io/code-publishing/'
+repository-code: "https://github.com/lmu-osc/code-publishing"
+url: "https://lmu-osc.github.io/code-publishing/"
 preferred-citation:
   authors:
-   - given-names: Florian
-     family-names: Kohrt
-     orcid: 'https://orcid.org/0000-0003-0374-5625'
-     email: fkohrt@anche.no
-   - given-names: Josephine
-     family-names: Zerna
-     orcid: "https://orcid.org/0000-0003-2892-884X"
-   - given-names: Christoph
-     family-names: Scheffel
-     orcid: 'https://orcid.org/0000-0001-5963-9229'
+    - given-names: Florian
+      family-names: Kohrt
+      orcid: "https://orcid.org/0000-0003-0374-5625"
+      email: fkohrt@anche.no
+    - given-names: Josephine
+      family-names: Zerna
+      orcid: "https://orcid.org/0000-0003-2892-884X"
+    - given-names: Christoph
+      family-names: Scheffel
+      orcid: "https://orcid.org/0000-0001-5963-9229"
   title: "Code Publishing Tutorial"
   year: 2025
   doi: "10.5281/zenodo.16631977"
   publisher:
     name: "LMU Open Science Center"
     ror: "https://ror.org/029e6qe04"
-  repository-code: 'https://github.com/lmu-osc/code-publishing'
-  url: 'https://lmu-osc.github.io/code-publishing/'
+  repository-code: "https://github.com/lmu-osc/code-publishing"
+  url: "https://lmu-osc.github.io/code-publishing/"
   type: "book"

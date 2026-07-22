@@ -2,7 +2,7 @@
 title: "Code Publishing Tutorial"
 ---
 
-This tutorial covers how to make your code available to others.
+This tutorial covers how to make your code and material available to others.
 It wraps up a series of tutorials which we recommend to go through in advance:
 
 - [Introduction to version control with git and GitHub within RStudio](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/):

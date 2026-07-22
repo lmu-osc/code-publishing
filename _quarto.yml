@@ -1,8 +1,15 @@
+# Begin Project
 project:
   type: website
+  pre-render: wget -nc https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-custom.scss
+  post-render: rm lmu-osc-custom.scss
+# End Project
 
+
+
+# Begin Website
 website:
-  title: "Code Publishing Tutorial"
+  title: "Code Publishing Tutorial (Short version)"
   page-footer:
     center: |
       A recommended citation and license information for this tutorial
@@ -17,6 +24,8 @@ website:
   favicon: images/LMU-OSC_favicon.jpg
   margin-header: |
     ![](/images/LMU-OSC_logo.jpg){width="175"}
+
+
   navbar:
     right:
       - about.qmd
@@ -32,7 +41,9 @@ website:
             url:  https://github.com/lmu-osc/code-publishing/issues
       - icon: house-heart
         url: https://www.osc.uni-muenchen.de/
+
   sidebar:
+    style: "docked"
     contents:
       - intro.qmd
       - setup.qmd
@@ -42,12 +53,23 @@ website:
       - choose-license.qmd
       - make-readme.qmd
       - archive.qmd
+      - section: "💡 In-depth material"
+        contents:
+          - href: in_depth_material/introduction_copyright.qmd
+            text: "Introduction to Copyright and Licensing"
+          - href: in_depth_material/data_dic_generation.qmd
+            text: "Automatic Generation of Data Dictionaries"
+# End Website
 
+
+# Begin Format
 format:
   html:
     theme:
       - cosmo
-      - custom.scss
+      - lmu-osc-custom.scss
+    css: 
+      - https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css
     toc: true
     fontsize: 13pt
     grid:
@@ -56,6 +78,8 @@ format:
       theme: neutral
     include-in-header:
       - file: matomo_analytics.html
+# End Format
+
 
 csl: apa.csl
 bibliography: literature.bib

@@ -62,6 +62,6 @@ _outline.md
 
 # Other files created by the project
 grateful-refs.bib
-data.csv
+#data.csv  # we keep this file in the repo
 _data_dictionary.qmd
 **/*.quarto_ipynb

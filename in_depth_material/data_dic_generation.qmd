@@ -1,0 +1,342 @@
+---
+title: "Automatic Generation of Data Dictionaries"
+engine: knitr
+---
+
+**Note: This is an add-on to the Chapter "[Add Data and Data Dictionary](/data.qmd)". It describes how you can (a) automatically generate data dictionaries with an R package, and (b) how to create a machine readable documentation of your data.**
+
+## Automatic Generation of Data Dictionaries
+
+First, we will demonstrate how to create a simple data dictionary
+using the R package [`datawizard`][datawizard]. We will use the penguin data set which is introduced in the Chapter "[Add Data and Data Dictionary](/data.qmd)".
+You can download it and put it into your project folder:
+
+[data.csv](../data.csv){.btn .btn-lg .btn-info download="data.csv"}
+
+You can install the `datawizard` package into our `renv` environment using:
+
+[datawizard]: https://easystats.github.io/datawizard/
+
+```{.r filename="Console"}
+renv::install("datawizard")
+```
+
+We create a separate Quarto file for the data dictionary.
+Create it by clicking on _File_ > _New File_  > _Quarto Document..._.
+Choose a title such as `Data Dictionary`,
+select _HTML_ as format,
+uncheck the use of the visual markdown editor, and click on _Create_.
+Remove everything except the YAML header (between the `---`).
+To make the HTML file self-contained,
+also set `embed-resources: true` such that the YAML header looks as follows:
+
+```{.yml filename="data_dictionary.qmd"}
+---
+title: "Data Dictionary"
+format:
+  html:
+    embed-resources: true
+---
+```
+
+Then, save it as `data_dictionary.qmd` by clicking on _File_ > _Save_.
+
+To create the actual data dictionary, first write a description for all columns
+so others can understand what the variable names mean.
+Where necessary, also document their value
+-- this is especially important if their meaning is non-obvious.
+In the following, we demonstrate this by storing the penguins' binomial name
+along with the English name.
+
+``````{cat}
+#| engine.opts: { file: "_data_dictionary.qmd" }
+#| class.source: "md"
+#| filename: "data_dictionary.qmd"
+
+```{r}
+#| echo: false
+
+# Store the description of variables
+vars <- c(
+  species = "a character string denoting penguin species",
+  island = "a character string denoting island in Palmer Archipelago, Antarctica",
+  bill_length_mm = "a number denoting bill length (millimeters)",
+  bill_depth_mm = "a number denoting bill depth (millimeters)",
+  flipper_length_mm = "an integer denoting flipper length (millimeters)",
+  body_mass_g = "an integer denoting body mass (grams)",
+  sex = "a character string denoting penguin sex",
+  year = "an integer denoting the study year"
+)
+
+# Store the description of variable values
+vals <- list(
+  species = c(
+    Adelie = "Pygoscelis adeliae",
+    Gentoo = "Pygoscelis papua",
+    Chinstrap = "Pygoscelis antarcticus"
+  )
+)
+```
+``````
+
+Then, load the data and use `datawizard`
+to add the descriptions to the `data.frame`:[^not-permanent]
+
+[^not-permanent]: Note that the code provided does not alter the data file
+-- no description will be added to `data.csv`.
+The descriptions are only added to a (temporary) copy of the data set within R
+to create the data dictionary.
+
+::: {.column-margin}
+![datawizard: Easy Data Wrangling and Statistical Transformations](../images/datawizard.png){width=250px}
+:::
+
+``````{cat}
+#| engine.opts: { file: "_data_dictionary.qmd", append: TRUE }
+#| class.source: "md"
+#| filename: "data_dictionary.qmd"
+
+```{r}
+#| echo: false
+
+dat <- read.csv("data.csv")
+
+for (x in names(vars)) {
+  if (x %in% names(vals)) {
+    dat <- datawizard::assign_labels(
+      dat,
+      select = I(x),
+      variable = vars[[x]],
+      values = vals[[x]]
+    )
+  } else {
+    dat <- datawizard::assign_labels(
+      dat,
+      select = I(x),
+      variable = vars[[x]]
+    )
+  }
+}
+```
+
+``````
+
+Then, you can create the data dictionary containing the descriptions,
+but also some other information about each variable
+(e.g., the number of missing values) and print it.
+
+``````{cat}
+#| engine.opts: { file: "_data_dictionary.qmd", append: TRUE }
+#| class.source: "md"
+#| filename: "data_dictionary.qmd"
+
+```{r}
+#| echo: false
+#| column: "body-outset"
+#| classes: plain
+
+datawizard::data_codebook(dat) |>
+  datawizard::data_select(exclude = ID) |>
+  datawizard::data_filter(N != "") |>
+  datawizard::print_md()
+```
+
+``````
+
+```{r}
+#| child: "_data_dictionary.qmd"
+
+```
+
+Depending on the type of data, it may also be necessary
+to describe sampling procedures (e.g., selection criteria),
+measurement instruments (e.g., questionnaires),
+appropriate weighting,
+already applied preprocessing steps, or contact information.
+In our case, as the data has already been published,
+we only store a reference to its source.
+
+The data set is from the R package `palmerpenguins`.
+If you had it installed
+you could use the function `citation()` to create such a reference:
+
+```{r}
+#| label: "data-citation"
+#| eval: false
+
+citation("palmerpenguins", auto = TRUE) |>
+  format(bibtex = FALSE, style = "text")
+```
+
+Without the package `palmerpenguins` installed,
+you can find a [suggested citation on its website][palmerpenguins-citation]
+and add that to your data dictionary:
+
+[palmerpenguins-citation]: https://allisonhorst.github.io/palmerpenguins/#citation
+
+```{r}
+#| ref.label = "data-citation",
+#| render = function(x, options) gsub("\\n", " ", x = x),
+#| echo = FALSE,
+#| class.output = "md code-overflow-wrap",
+#| attr.output = 'filename="data_dictionary.qmd"'
+
+# This chunk takes the output from the chunk "data-citation"
+# and renders it with all newlines replaced by whitespaces.
+```
+
+Finally, you can render the data dictionary by running the following:
+
+```{.bash filename="Terminal"}
+quarto render data_dictionary.qmd
+```
+
+This should create the file `data_dictionary.html`
+which you open and view in your web browser.
+
+If you want to learn more about the sharing of research data,
+have a look at the tutorial "[FAIR research data management][fair-tutorial]".
+
+[fair-tutorial]: https://lmu-osc.github.io/FAIR-Data-Management/
+
+## Create Machine-Readable Variable Documentation
+
+One could go even further by making the information machine-readable in a standardized way.
+
+This section demonstrates how the title and description of the data set,
+the description of the variables and their valid values are stored in a machine-readable way.
+We'll reuse the descriptions we already created[^value-labels] and add a few others.
+
+[^value-labels]: Unfortunately, the descriptions of values are not reused in this example,
+as they are [not supported][enum-labels] by the specification we are using.
+
+[enum-labels]: https://specs.frictionlessdata.io/patterns/#table-schema-enum-labels-and-ordering
+
+First, store the title and description of the data set as a whole:
+
+```{.r filename="Console"}
+table_info <- c(
+  title = "penguins data set",
+  description = "Size measurements for adult foraging penguins near Palmer Station, Antarctica"
+)
+```
+
+As before, also provide a reference to the source.
+
+```{r}
+#| echo: false
+#| class-output: "r code-overflow-wrap"
+#| attr-output: 'filename="Console"'
+
+# We have provided the data set as CSV file to the readers.
+# Therefore, we cannot assume or require that readers have
+# the R package palmerpenguins installed. Instead, we create
+# the citation on our end and hide how we obtained it.
+
+citation("palmerpenguins", auto = TRUE)$url |>
+  paste0("dat_source <- \"", ... = _, "\"") |>
+  cat()
+```
+
+Next, create a list of the categorical variables' valid values:
+
+```{.r filename="Console"}
+valid_vals <- list(
+  species = c("Adelie", "Gentoo", "Chinstrap"),
+  island = c("Torgersen", "Biscoe", "Dream"),
+  sex = c("male", "female"),
+  year = c(2007, 2008, 2009)
+)
+```
+
+Finally, store the descriptions of the variables we already created earlier:
+
+```{.r filename="Console"}
+# Store the description of variables
+vars <- c(
+  species = "a character string denoting penguin species",
+  island = "a character string denoting island in Palmer Archipelago, Antarctica",
+  bill_length_mm = "a number denoting bill length (millimeters)",
+  bill_depth_mm = "a number denoting bill depth (millimeters)",
+  flipper_length_mm = "an integer denoting flipper length (millimeters)",
+  body_mass_g = "an integer denoting body mass (grams)",
+  sex = "a character string denoting penguin sex",
+  year = "an integer denoting the study year"
+)
+```
+
+Generally, metadata are either stored embedded into the data or externally,
+for example, in a separate file.
+We will use the "[frictionless data](https://frictionlessdata.io/)" standard,
+where metadata are stored separately.
+Another alternative would be [RO-Crate](https://www.researchobject.org/ro-crate/).
+
+Specifically, one can use the R package [`frictionless`][frictionless]
+to create a _schema_ which describes the structure of the data.[^frictionless-note]
+For the purpose of the following code,
+it is just a nested list that we edit to include our own information.
+We also explicitly record in the schema
+that missing values are stored in the data file as `NA`
+and that the data are licensed under CC0\ 1.0.
+Finally, the package is used to create a metadata file that contains the schema.
+
+[frictionless]: https://docs.ropensci.org/frictionless/
+
+[^frictionless-note]: In June 2024, [version 2](https://datapackage.org/)
+of the frictionless data standard has been released.
+As of November 2024, the R package `frictionless` only supports the first version,
+though support for v2 is [planned](https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2).
+
+```{.r filename="Console"}
+# Install {frictionless} and the required dependency {stringi}
+renv::install(c(
+  "frictionless",
+  "stringi"
+))
+
+# Read data and create schema
+dat_filename <- "data.csv"
+dat <- read.csv(dat_filename)
+dat_schema <- frictionless::create_schema(dat)
+
+# Add descriptions to the fields
+dat_schema$fields <- lapply(dat_schema$fields, \(x) {
+  c(x, description = vars[[x$name]])
+})
+
+# Record valid values
+dat_schema$fields <- lapply(dat_schema$fields, \(x) {
+  if (x[["name"]] %in% names(valid_vals)) {
+    modifyList(x, list(constraints = list(enum = valid_vals[[x$name]])))
+  } else {
+    x
+  }
+})
+
+# Define missing values
+dat_schema$missingValues <- c("", "NA")
+
+# Create package with license info and write it
+dat_package <- frictionless::create_package() |>
+  frictionless::add_resource(
+    resource_name = "penguins",
+    data = dat_filename,
+    schema = dat_schema,
+    title = table_info[["title"]],
+    description = table_info[["description"]],
+    licenses = list(list(
+      name = "CC0-1.0",
+      path = "https://creativecommons.org/publicdomain/zero/1.0/",
+      title = "CC0 1.0 Universal"
+    )),
+    sources = list(list(
+      title = "CRAN",
+      path = dat_source
+    ))
+  )
+frictionless::write_package(dat_package, directory = ".")
+```
+
+This creates the metadata file `datapackage.json` in the current directory.
+Make sure it is located in the same folder as `data.csv`,
+as together they comprise a [data package](https://specs.frictionlessdata.io/data-package/).
