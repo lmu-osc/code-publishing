@@ -16,7 +16,7 @@ format:
           </style>
 ---
 
-**Note: This is an expanded version of the Chapter "[Sharing work of others: Copyright](/copyright.qmd)". Here you find more details on the choice of licenses.**
+*Note: This is an expanded version of the Chapter "[Sharing work of others: Copyright](/copyright.qmd)". Here you find more details on the choice of licenses.*
 
 By default, everything you put into the project folder will be shared publicly.
 In many instances, this will also include works by others than yourself or your co-authors,
