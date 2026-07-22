@@ -42,7 +42,7 @@ grateful::cite_packages(
   withr::with_options(new = list(warnPartialMatchDollar = FALSE))
 ```
 
-Quarto `r library(quarto); quarto_version()` was utilized to render the files.
+Quarto {{< version >}} was utilized to render the files.
 
 ```{r}
 #| class-output: "txt code-overflow-scroll"
