@@ -1,11 +1,7 @@
 # Begin Project
 project:
   type: website
-  pre-render: wget -nc https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-custom.scss
-  post-render: rm lmu-osc-custom.scss
 # End Project
-
-
 
 # Begin Website
 website:
@@ -25,7 +21,6 @@ website:
   margin-header: |
     ![](/images/LMU-OSC_logo.jpg){width="175"}
 
-
   navbar:
     right:
       - about.qmd
@@ -36,9 +31,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            url:  https://github.com/lmu-osc/code-publishing
+            url: https://github.com/lmu-osc/code-publishing
           - text: Report a Bug
-            url:  https://github.com/lmu-osc/code-publishing/issues
+            url: https://github.com/lmu-osc/code-publishing/issues
       - icon: house-heart
         url: https://www.osc.uni-muenchen.de/
 
@@ -61,14 +56,13 @@ website:
             text: "Automatic Generation of Data Dictionaries"
 # End Website
 
-
 # Begin Format
 format:
   html:
     theme:
       - cosmo
       - lmu-osc-custom.scss
-    css: 
+    css:
       - https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css
     toc: true
     fontsize: 13pt
@@ -79,7 +73,6 @@ format:
     include-in-header:
       - file: matomo_analytics.html
 # End Format
-
 
 csl: apa.csl
 bibliography: literature.bib
