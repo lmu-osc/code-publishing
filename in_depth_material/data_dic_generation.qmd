@@ -11,7 +11,20 @@ First, we will demonstrate how to create a simple data dictionary
 using the R package [`datawizard`][datawizard]. We will use the penguin data set which is introduced in the Chapter "[Add Data and Data Dictionary](/data.qmd)".
 You can download it and put it into your project folder:
 
-[data.csv](../data.csv){.btn .btn-lg .btn-info download="data.csv"}
+```{r}
+#| include: false
+
+invisible(loadNamespace("palmerpenguins")) # Tell renv that we need this package
+stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
+
+write.csv(
+  palmerpenguins::penguins,
+  file = "data.csv",
+  row.names = FALSE
+)
+```
+
+[data.csv](data.csv){.btn .btn-lg .btn-info download="data.csv"}
 
 You can install the `datawizard` package into our `renv` environment using:
 

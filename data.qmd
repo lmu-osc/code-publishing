@@ -11,14 +11,7 @@ engine: knitr
 invisible(loadNamespace("palmerpenguins")) # Tell renv that we need this package
 stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
 
-# write both in the top folder and in the in-depth folder
-# (so that both scripts can reference the data without relative paths)
 write.csv(palmerpenguins::penguins, file = "data.csv", row.names = FALSE)
-write.csv(
-  palmerpenguins::penguins,
-  file = "in_depth_material/data.csv",
-  row.names = FALSE
-)
 ```
 
 You can now download the data set we have prepared for you
@@ -73,7 +66,7 @@ it is important to document the meaning (e.g., units)
 and values of its variables.
 This is typically done with a _data dictionary_ (also called a _codebook_).
 
-The recommendation for data dictionaries vary between fields - 
+The recommendation for data dictionaries vary between fields -- 
 both in terms of the recommended content (i.e., what exactly should be documented) 
 and the technical implementation (i.e., which file formats should be used).
 
