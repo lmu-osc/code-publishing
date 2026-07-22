@@ -53,7 +53,7 @@ website:
           - href: in_depth_material/introduction_copyright.qmd
             text: "Introduction to Copyright and Licensing"
           - href: in_depth_material/licenses-continued.qmd
-            text: "Licenses Extra"
+            text: "Licenses Continued"
           - href: in_depth_material/data_dic_generation.qmd
             text: "Automatic Generation of Data Dictionaries"
 # End Website
