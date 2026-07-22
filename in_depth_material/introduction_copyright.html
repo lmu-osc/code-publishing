@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sharing work of others: Copyright – Code Publishing Tutorial (Short version)</title>
+<title>Introduction to Copyright and Licensing – Code Publishing Tutorial (Short version)</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,41 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 /* CSS for citations */
 div.csl-bib-body { }
@@ -81,26 +46,26 @@ div.csl-indent {
 }</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./data.html" rel="next">
-<link href="./setup.html" rel="prev">
-<link href="./images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7541c2c414157bd907098ab804077509.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../in_depth_material/data_dic_generation.html" rel="next">
+<link href="../archive.html" rel="prev">
+<link href="../images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7541c2c414157bd907098ab804077509.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -165,7 +130,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Code Publishing Tutorial (Short version)</span>
     </a>
   </div>
@@ -175,13 +140,13 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -211,7 +176,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./copyright.html">Sharing work of others: Copyright</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../in_depth_material/introduction_copyright.html">💡 In-depth material</a></li><li class="breadcrumb-item"><a href="../in_depth_material/introduction_copyright.html">Introduction to Copyright and Licensing</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -233,49 +198,49 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./copyright.html" class="sidebar-item-text sidebar-link active">
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sharing work of others: Copyright</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link">
+  <a href="../data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Add Data and Data Dictionary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code.html" class="sidebar-item-text sidebar-link">
+  <a href="../code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Add Code</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./choose-license.html" class="sidebar-item-text sidebar-link">
+  <a href="../choose-license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Choose a License</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./make-readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../make-readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Make a README</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive Your Project</span></a>
   </div>
 </li>
@@ -290,13 +255,13 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="../in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Introduction to Copyright and Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
+  <a href="../in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automatic Generation of Data Dictionaries</span></a>
   </div>
 </li>
@@ -308,28 +273,28 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
+<p><img src="../images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#short-introduction-to-copyright-and-licenses" id="toc-short-introduction-to-copyright-and-licenses" class="nav-link active" data-scroll-target="#short-introduction-to-copyright-and-licenses">Short Introduction to Copyright and Licenses</a></li>
-  <li><a href="#can-i-share-the-work-of-others" id="toc-can-i-share-the-work-of-others" class="nav-link" data-scroll-target="#can-i-share-the-work-of-others">Can I Share the Work of Others?</a>
+  <li><a href="#introduction-to-copyright-and-licenses" id="toc-introduction-to-copyright-and-licenses" class="nav-link active" data-scroll-target="#introduction-to-copyright-and-licenses">Introduction to Copyright and Licenses</a>
   <ul class="collapse">
+  <li><a href="#can-i-share-that-work" id="toc-can-i-share-that-work" class="nav-link" data-scroll-target="#can-i-share-that-work">Can I Share That Work?</a></li>
   <li><a href="#under-which-conditions" id="toc-under-which-conditions" class="nav-link" data-scroll-target="#under-which-conditions">Under Which Conditions?</a></li>
+  <li><a href="#further-remarks" id="toc-further-remarks" class="nav-link" data-scroll-target="#further-remarks">Further Remarks</a></li>
   </ul></li>
-  <li><a href="#practical-exercise-adding-an-image" id="toc-practical-exercise-adding-an-image" class="nav-link" data-scroll-target="#practical-exercise-adding-an-image">✍️ Practical Exercise: Adding an Image</a></li>
   <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap-up</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/copyright.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/in_depth_material/introduction_copyright.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content page-columns page-full" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../in_depth_material/introduction_copyright.html">💡 In-depth material</a></li><li class="breadcrumb-item"><a href="../in_depth_material/introduction_copyright.html">Introduction to Copyright and Licensing</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Sharing work of others: Copyright</h1>
+<h1 class="title">Introduction to Copyright and Licensing</h1>
 </div>
 
 
@@ -346,39 +311,93 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </header>
 
 
-<p>By default, everything you put into the project folder will be shared publicly. This typically includes:</p>
-<ul>
-<li><strong>works by others</strong> than yourself or your co-authors, because you may use existing data, images or software. Make sure to only share those to the extent you are allowed to.</li>
-<li><strong>work that was created by yourself</strong> or your co-authors.</li>
-</ul>
-<p>Copyright and licensing can be complicated. In this chapter, we focus on rather simple (but typical) situations. For an in-depth explanation of copyright and licenses, see our supplementary in-depth material “<a href="./in_depth_material/introduction_copyright.html">Introduction to Copyright and Licenses</a>”.</p>
-<section id="short-introduction-to-copyright-and-licenses" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="short-introduction-to-copyright-and-licenses">Short Introduction to Copyright and Licenses</h2>
-<p>Whenever authors create a literary or artistic work (such as a text, image, video, or software), the copyright law<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in most countries limits other people from copying, modifying, and sharing it without the author’s express permission. Copyright licenses enable authors to free up their works for reuse by others.</p>
-<p>A license is a legal document that regulates what other people than the author can and cannot do with a copyright-protected work, and under which conditions. We strongly recommend to use <em>existing boilerplate licenses</em> (and not to craft your own license text).</p>
+<p><strong>Note: This is an expanded version of the Chapter “<a href="../copyright.html">Sharing work of others: Copyright</a>”. Here you find more details on the choice of licenses.</strong></p>
+<p>By default, everything you put into the project folder will be shared publicly. In many instances, this will also include works by others than yourself or your co-authors, because you may use existing data, images or software. In these cases, you should make sure to only share them to the extent you are allowed to. In the following, we will be focusing on copyright, but of course, there can also be other restrictions.</p>
+<div id="nte-copyright-tldr" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;1: Copyright TL;DR
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Every expression of an idea, such as a literary or an artistic works, is automatically covered by copyright. Put simply, this means that nobody else than the copyright holder is allowed to copy, modify, or share it. Copyright licenses can grant others some of the necessary rights, but mostly don’t cover publicity, privacy, moral, patent, or trademark rights. Certain exceptions and limitations to copyright (such as fair use or the right to quote) may obviate the need for a license.</p>
+<p>With regard to copyright, free/open licenses can give permission to share a work by others. These licenses often require to attribute the authors, indicate whether changes were made, and provide the text of the license, among other things.</p>
+<p>The following video by <span class="citation" data-cites="Brinken2021">Brinken et al. (<a href="#ref-Brinken2021" role="doc-biblioref">2021</a>)</span> embedded from the TIB AV-Portal (<a href="https://av.tib.eu/privacy">Data Privacy Statement</a>) explains the correct attribution of works under Creative Commons licenses.</p>
+<details>
+  <summary>Load video</summary>
+  <p></p><div style="position: relative; width: 100%; aspect-ratio: 16 / 9;">
+    <iframe loading="lazy" src="https://av.tib.eu/player/53550" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+  </div><p></p>
+  <p>The video “The correct indication of a license: Aspects to consider when reusing the work of others” by Helene Brinken, Jonas Hauss, and Jessika Rücknagel is licensed under <a href="https://creativecommons.org/licenses/by/3.0/de/deed.de">CC&nbsp;BY&nbsp;3.0&nbsp;DE</a>.</p>
+</details>
+</div>
+</div>
+<section id="introduction-to-copyright-and-licenses" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="introduction-to-copyright-and-licenses">Introduction to Copyright and Licenses</h2>
+<p>Whenever authors create a literary or artistic work (such as a text, image, video, or software), the copyright law<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> in most countries limits other people from copying, modifying, and sharing it without the author’s express permission. This even applies if the author makes it available to others (e.g., on their website): First and foremost others are not allowed to copy, modify, or share it. Importantly, this legal default of “all rights reserved” was created to benefit publishers, not authors <span class="citation" data-cites="Fogel2006">(<a href="#ref-Fogel2006" role="doc-biblioref">Fogel, 2006</a>)</span>, and runs counter to many cultural and scientific processes. Copyright licenses enable authors to free up their works for reuse by others.</p>
+<p>Note that copyright law <a href="https://commons.wikimedia.org/wiki/Commons:Copyright_rules_by_territory">varies between countries</a> and the rule of territoriality (<em>lex loci protectionis</em>) applies: Applicable are the laws of the country where a work is used. Also, if the work was created as part of the author’s job, it might be their employer who holds the copyright to the work, depending on the country and contract.</p>
+<p>A license is a legal document that regulates what other people than the author can and cannot do with a copyright-protected work, and under which conditions. The license may be exclusive, such that it is only granted to one recipient, effectively limiting the author in dealing with their own work. It can also be non-exclusive, thus giving rights to others without the author losing them. To avoid that every author who would like to share their work writes their own license, pre-formulated “boilerplate” licenses have been created. For example, you might have heard about <a href="https://creativecommons.org/share-your-work/cclicenses/">“Creative Commons” licenses</a>, which are used by Wikipedia. Recognizing them facilitates both sharing (on the side of the author) and re-using (on the side of the recipient).<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
-<p>For the purpose of this chapter, by <em>license</em> we mean <em>copyright license</em>.</p>
-</div></div><p>Works under a free/open license “can be freely studied, applied, copied and/or modified, by anyone, for any purpose” <span class="citation" data-cites="Moller2015">(<a href="#ref-Moller2015" role="doc-biblioref">Möller et al., 2015</a>)</span>. Importantly, this also means that others do not need to ask or notify the author and that they can use it also for commercial purposes. If you modified the work and put a sufficient amount of creativity into it, the result is called a <em>derivative work</em>.</p>
-<p>Even for free licenses, authors can place certain demands on re-users of their material. For example, they can (optionally) …</p>
+<p>For the purpose of this tutorial, by <em>license</em> we mean <em>copyright license</em>.</p>
+</div></div><p>An important class of boilerplate licenses are <em>free/open</em> licenses. Put simply, works under a free/open license “can be freely studied, applied, copied and/or modified, by anyone, for any purpose” <span class="citation" data-cites="Moller2015">(<a href="#ref-Moller2015" role="doc-biblioref">Möller et al., 2015</a>)</span>. Importantly, this also means that others do not need to ask or notify the author and that they can use it for commercial purposes. Coming back to the example of Creative Commons licenses, not all of them are free/open. For example, some restrict commercial use and modification. The Creative Commons license “<a href="https://creativecommons.org/licenses/by-sa/4.0/">Attribution-ShareAlike 4.0</a>” is an example of a free/open license, however, and we will cover several others below.</p>
+<p>By the choice of license, authors can demand that they are credited, that the original license is indicated, that modifications are indicated, that derivative works are only shared under the same license, and that no further restrictions are imposed on the work. Software licenses may additionally require to make the source code available to everybody the software is shared with and often require to display the full text of the license upon distribution.</p>
+<div id="nte-terminology" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;2: A Note on Terminology
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The terms <em>free</em> and <em>open</em>, especially with regard to software, come with a history. The Free Software Foundation (FSF) was founded in 1985 to protect “four essential freedoms” <span class="citation" data-cites="FSF2024">(<a href="#ref-FSF2024" role="doc-biblioref">2024</a>)</span> of a program’s user. These are the freedoms to use, study, share, and improve a program. Software whose users legally and practically have these freedoms (because, among other things, they have access to its source code) is considered <em>free</em>. The four freedoms are seen as vital for a society as a whole in the sense that they enable sharing, cooperation and ultimately freedom in general. The FSF maintains <a href="https://www.gnu.org/licenses/license-list.html#SoftwareLicenses">a list of software licenses</a> that it considers to be protecting the four freedoms. Sometimes the term <em>libre</em> (Spanish and French for <em>free</em>) is used to make a distinction from <em>gratis</em> software. You can learn more about free software at <a href="https://writefreesoftware.org/learn">Write Free Software</a>.</p>
+<p>The Open Source Initiative (OSI), which was founded in 1998, follows a more pragmatic approach. It is concerned with developing high-quality software, for which everyone’s ability to obtain, modify and contribute back the source code is considered beneficial. Access to the source code is one out of multiple conditions for software to be considered <em>open source</em> by the OSI <span class="citation" data-cites="OSI2007">(<a href="#ref-OSI2007" role="doc-biblioref">2007</a>)</span>, which equally maintains <a href="https://opensource.org/licenses">a list of approved licenses</a>.</p>
+<p>Access to the source code is a necessary, but not sufficient requirement both for <em>free software</em> and for <em>open source software</em>. Conversely, both can (and frequently are) sold for money, as their respective criteria only apply once one has access to the software. Throughout this tutorial, we write “free/open license” to mean a license that is approved by either the FSF or the OSI. Software which is neither but makes available its source code is sometimes referred to as <em>source-available software</em>.</p>
+<p>Apart from software, the term <em>open access</em> has often been used for works that are available at no cost. For example, this is the commonality of bronze, green, hybrid, gold, and diamond/platinum open access <em>articles</em>, which otherwise vary in the rights that are granted to readers. In 2002, the Budapest Open Access Initiative declared that <em>open access</em> additionally includes the right to use articles for any purpose, and in 2003, the Bethesda Statement and the Berlin Declaration added the right to make derivative works.</p>
+<p>Two other notable definitions include the <em>Open Definition</em> <span class="citation" data-cites="OKFN2016">(<a href="#ref-OKFN2016" role="doc-biblioref">Open Knowledge Foundation, 2016</a>)</span>, which was first drafted in 2005, and the definition of <em>Free Cultural Works</em> <span class="citation" data-cites="Moller2015">(<a href="#ref-Moller2015" role="doc-biblioref">Möller et al., 2015</a>)</span>, for which the open editing phase began in 2006. They are largely viewed as compatible with one another.</p>
+
+</div>
+</div>
+</div>
+<div class="no-row-height column-margin column-container"><div class="callout-2-contents callout-collapse collapse callout-margin-content">
+<p><img src="images/Definition_of_Free_Cultural_Works.svg" class="img-fluid" width="250"></p>
+</div></div><section id="can-i-share-that-work" class="level3">
+<h3 class="anchored" data-anchor-id="can-i-share-that-work">Can I Share That Work?</h3>
+<p>To determine whether a particular work can be included in the project folder and shared publicly, the first step is to search for its license. For example, this tutorial has an <a href="../about.html">about page</a> detailing its licensing, whereas other websites sometimes state the license in the footer. Other places to look include a project’s <code>README</code> file or a dedicated <code>LICENSE</code> or <code>COPYING</code> file. If a project has been stored in a research repository, yet another means of communicating its copyright status might exist. For media from Wikimedia Commons, an <a href="https://lizenzhinweisgenerator.de/?lang=en">Attribution Generator</a> exists.</p>
+<div id="tip-private-use" class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip&nbsp;1: Consider Complicated Licensing Situations
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For works by one or only few authors, it is possible that one license consistently applies to the whole content. More often than not, however, the situation is a little more complicated:</p>
 <ul>
-<li>demand that they are credited as the creators of a work,</li>
-<li>that the original license must be indicated when a work is reused,</li>
-<li>that modifications are indicated,</li>
-<li>that derivative works are only shared under the same license, or</li>
-<li>that no further restrictions are imposed on the derivative work.</li>
+<li>Different parts of a work may be available under different licenses: A document may incorporate direct quotes or images by others. In this case, the license of the document may not cover those. In the best case, the authors indicate which parts of the work are covered by which license.</li>
+<li>A work may be available under different licenses at the choice of the (re-)user. This is also called multi-licensing. For example, authors might allow to use a work under any version of a license.</li>
+<li>In contrast, it may also be the case that one has to comply with the conditions of multiple licenses at the same time. This is the case, for example, if a derivative work is published under a different license than the original work.</li>
 </ul>
-<p>We explain below how to choose a license that brings the desired “settings”.</p>
-</section>
-<section id="can-i-share-the-work-of-others" class="level2">
-<h2 class="anchored" data-anchor-id="can-i-share-the-work-of-others">Can I Share the Work of Others?</h2>
-<p>To determine whether a particular work can be included in the project folder and shared publicly, the first step is to search for its license. For example, this tutorial has an <a href="./about.html">About</a> page detailing its licensing, whereas other websites sometimes state the license in the footer.</p>
-<p>Other places to look include a project’s README file or a dedicated <code>LICENSE</code> or <code>COPYING</code> file. If a project has been stored in a research repository, yet another means of communicating its copyright status might exist. For media from Wikimedia Commons, an [Attribution Generator][commons-gen] exists.</p>
-<p>If you cannot find any license, the work might be in the <strong>public domain</strong> (see details <a href="./in_depth_material/introduction_copyright.html#public-domain">here</a>). In this case, you can simply reuse it.</p>
-<p>If no license notice is present and the work is <em>not</em> in the public domain, it is by default <em>in copyright</em> and you are generally not allowed to share it with others. You can, however, ask the author to put the corresponding work under a free/open license – Wikimedia Commons provides an <a href="https://commons.wikimedia.org/wiki/Commons:Email_templates">email template</a> to obtain such a permission.</p>
-<p>Without permission you can check your national laws for limitations and exceptions to copyright.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Examples include the right to quote, [trivial use][commons-minimis], scientific research exceptions, and the US-American [fair use][wiki-fair-use].</p>
-<p>Once you found a license, you need to determine whether it is a standard (boilerplate) license and whether it is a free/open. Then you can share the reused material in your repository.</p>
-<p>Here are typical licenses that are free/open:</p>
+</div>
+</div>
+<section id="public-domain" class="level4">
+<h4 class="anchored" data-anchor-id="public-domain">Public domain</h4>
+<p>If you cannot find any license, the work might be in the public domain<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> depending on national law. For example, the work may not cross the <a href="https://commons.wikimedia.org/wiki/Commons:Threshold_of_originality">threshold of originality</a>, it may not <a href="https://commons.wikimedia.org/wiki/Commons:Unprotected_works">qualify for copyright protection</a> – such as official works by the government –, or the copyright protection might have expired. According to the <a href="https://en.wikipedia.org/wiki/Berne_Convention">Berne convention</a>, copyright expires at earliest 50 years after the author’s death, but in <a href="https://commons.wikimedia.org/wiki/Help:Public_domain#Copyright_terms_by_country">many countries</a> it expires even later – you can use a <a href="https://lawflow.org/public-domain-calculators/">public domain calculator</a> to check. If no license notice is present and the work is not in the public domain, it is <em>in copyright</em> and you are generally not allowed to share it with others. You can, however, ask the author to put the corresponding work under a free/open license – Wikimedia Commons provides an <a href="https://commons.wikimedia.org/wiki/Commons:Email_templates">email template</a> to obtain such a permission. Without permission you can check your national laws for limitations and exceptions to copyright.<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> Examples include the right to quote, <a href="https://commons.wikimedia.org/wiki/Commons:De_minimis">trivial use</a>, and the US-American <a href="https://en.wikipedia.org/wiki/Wikipedia:FAQ/Copyright#What_is_fair_use?">fair use</a>.</p>
+<p>Having found a license, you need to determine (1) whether it is a standard (boilerplate) license, (2) whether it is a free/open, and (3) whether it is appropriate for the particular type of work and use case.</p>
+<ol type="1">
+<li><strong>Standard licenses</strong> are usually stated by their name (or an abbreviation), which may include a version number. Most standard licenses were assigned an <a href="https://spdx.dev/ids">SPDX identifier</a> for unambiguous identification, though the identifier is often not indicated for a particular work (which would be best practice). Also, not all standard licenses have SPDX identifiers. You can view a <a href="https://spdx.org/licenses/">list of all licenses with SPDX identifiers here</a>.</li>
+<li><strong>Free/open</strong>: We have compiled lists of the most common free/open licenses below, categorized by the type of work they apply to. Be sure to look for an exact match, as there are often many licenses with very similar names. If a particular license is not listed below, we also provide links to other resources which you can use to determine whether a license is free/open.</li>
+<li><strong>Type of work and use case</strong>: Many licenses were written with a particular type of work in mind, along with a certain use case. Software licenses, for example, may consider that the source code is the preferred form for making modifications and that software can be encumbered by patents, while licenses for data can differentiate between the database and any works produced from it. Take caution if a license applies to a type work for which it was not originally created and conflicts with your use case. Sometimes, the license name hints at the intended type of work, but when in doubt always read the full license text (and/or consult with a lawyer) to determine whether the conditions are acceptable to you.</li>
+</ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Software</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Writing, Images, Audio, Video</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Data</a></li></ul>
 <div class="tab-content">
@@ -390,7 +409,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>GNU Affero General Public License v3.0 (<code>AGPL-3.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -404,7 +423,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>GNU General Public License v3.0 (<code>GPL-3.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -418,7 +437,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>GNU Lesser General Public License v3.0 (<code>LGPL-3.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -432,7 +451,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Apache License 2.0 (<code>Apache-2.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -444,7 +463,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Mozilla Public License 2.0 (<code>MPL-2.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -457,7 +476,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>MIT License (<code>MIT</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -468,7 +487,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>BSD 3-Clause “New” or “Revised” License (<code>BSD-3-Clause</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -479,7 +498,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>BSD 2-Clause “Simplified” License (<code>BSD-2-Clause</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Add license text</li>
@@ -498,14 +517,14 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>CC0 1.0 (<code>CC0-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>: (none)</p>
+<p><strong>Major conditions when sharing works</strong>: (none)</p>
 <p><a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode#legal-code-title">Link to full text</a></p>
 </details></li>
 <li><details>
 <summary>
 <p>Creative Commons Attribution 4.0 (<code>CC-BY-4.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -518,7 +537,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Creative Commons Attribution-ShareAlike 4.0 (<code>CC-BY-SA-4.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -541,14 +560,14 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>CC0 1.0 (<code>CC0-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>: (none)</p>
+<p><strong>Major conditions when sharing works</strong>: (none)</p>
 <p><a href="https://creativecommons.org/publicdomain/zero/1.0/legalcode#legal-code-title">Link to full text</a></p>
 </details></li>
 <li><details>
 <summary>
 <p>Creative Commons Attribution 4.0 (<code>CC-BY-4.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -561,7 +580,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Creative Commons Attribution-ShareAlike 4.0 (<code>CC-BY-SA-4.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -580,14 +599,14 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Open Data Commons Public Domain Dedication &amp; License 1.0 (<code>PDDL-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>: (none)</p>
+<p><strong>Major conditions when sharing works</strong>: (none)</p>
 <p><a href="https://opendatacommons.org/licenses/pddl/1-0/">Link to full text</a></p>
 </details></li>
 <li><details>
 <summary>
 <p>Community Data License Agreement Permissive 2.0 (<code>CDLA-Permissive-2.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Add license text</li>
 </ul>
@@ -597,7 +616,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Community Data License Agreement Permissive 1.0 (<code>CDLA-Permissive-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -608,7 +627,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Community Data License Agreement Sharing 1.0 (<code>CDLA-Sharing-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -626,7 +645,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Open Data Commons Open Database License v1.0 (<code>ODbL-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -639,7 +658,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <summary>
 <p>Open Data Commons Attribution License v1.0 (<code>ODC-By-1.0</code>)</p>
 </summary>
-<p><strong>You can share under these conditions</strong>:</p>
+<p><strong>Major conditions when sharing works</strong>:</p>
 <ul>
 <li>Attribution</li>
 <li>Indicate license</li>
@@ -652,17 +671,32 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </div>
 </div>
 </div>
+<div id="cau-license-versions" class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution&nbsp;1: License Versions Are Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may have noticed that in many cases a version number is part of the license name. This is because the organizations that created the licenses sometimes publish updated versions to accommodate for developments in copyright law and the communities that use the licenses. For example, the Creative Commons licenses (that start with <code>CC</code>) were <a href="https://creativecommons.org/weblog/entry/3476">first published in 2002</a>. Since then, the possibility to relicense under later (<a href="https://creativecommons.org/weblog/entry/4216#:~:text=Share%20Alike%20Across%20Borders">v2.0</a>, 2004) and compatible licenses (<a href="https://creativecommons.org/weblog/entry/7249#:~:text=BY-SA%20%E2%80%94%20Compatibility%20Structure%20Now%20Included">v3.0</a>, 2007) has been added, a 30-day window to correct license violations has been established to combat <a href="https://commons.wikimedia.org/wiki/Commons:Copyleft_trolling">copyleft trolls</a>, and <em>sui generis</em> database rights have been covered explicitly (<a href="https://creativecommons.org/weblog/entry/40768">v4.0</a>, 2013). There are many more <a href="https://wiki.creativecommons.org/wiki/License_Versions">subtle differences between license versions</a>, therefore it is important to indicate which license version exactly one is referring to, as the license of a work does not “update” automatically (i.e., you have to follow the terms of that exact version). CC0, officially introduced in 2009, is still at version <a href="https://www.creativecommons.org/weblog/entry/13304">1.0</a>.</p>
+<p>For the GNU licenses it is even recommended to state whether a work is licensed <em>only</em> under the indicated version of the license or, alternatively, also under newer versions of the license <span class="citation" data-cites="Stallman2022Version">(<a href="#ref-Stallman2022Version" role="doc-biblioref">Stallman, 2022</a>)</span>.</p>
+</div>
+</div>
+</section>
+</section>
 <section id="under-which-conditions" class="level3">
 <h3 class="anchored" data-anchor-id="under-which-conditions">Under Which Conditions?</h3>
-<p>Finally, if you verified that the work has been made available to you under a free/open license, you need to understand the conditions under which you are allowed to include the work in your project folder and share it with others – regardless of whether you modified it.</p>
-<p>In the following, we will explain the most important conditions of the licenses listed above. For other licenses we recommend reading their text in full and/or consulting with a lawyer. The conditions of many popular free/open licenses are also <a href="https://choosealicense.com/appendix/">summarized on ChooseALicense.com</a>, which you can use to get a general idea of a license. Specifically for software licenses the <em>Open Source Automation Development Lab</em> provides <a href="https://www.osadl.org/Checklists/">useful checklists detailing the respective obligations</a>.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<p>Finally, if you verified that the work has been made available to you under a free/open license, you need to understand the conditions under which you are allowed to include the work in your project folder and share it with others – regardless of whether you modified it. In the following, we will explain the most important conditions of the licenses listed above. For other licenses we recommend reading their text in full and/or consulting with a lawyer. The conditions of many popular free/open licenses are also <a href="https://choosealicense.com/appendix/">summarized on ChooseALicense.com</a>, which you can use to get a general idea of a license (but which does not obviate reading the license text in full). Specifically for software licenses the <em>Open Source Automation Development Lab</em> provides <a href="https://www.osadl.org/Checklists/">useful checklists detailing the respective obligations</a>.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a></p>
 <div id="nte-private-use" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;1: Private Use
+Note&nbsp;3: Private Use
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -671,46 +705,76 @@ Note&nbsp;1: Private Use
 </div>
 <section id="attribution" class="level4">
 <h4 class="anchored" data-anchor-id="attribution">Attribution</h4>
-<p>Licenses may require that you provide attribution to the author(s)<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a> and to retain any copyright notices,<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> although the specifics vary between licenses. For example, Creative Commons licenses other than CC0 require that the name of the author, the title of the work, and a link to the work are provided and that existing copyright notices are retained.</p>
-<p>Projects with many authors often explicitly allow for an attribution to the collective as a whole rather than being mentioned individually. Software projects may use copyright notices that only contain the project name, such as <code>Copyright (c) 2020-2025 The XYZ Project Contributors</code> <span class="citation" data-cites="Winslow2020">(<a href="#ref-Winslow2020" role="doc-biblioref">Winslow, 2020</a>)</span>.</p>
-<p>Where to put the attribution depends on the type of the work, but in general it is best to keep it close to where the work is used and to provide all required information. For images, for example, this can be a small text next to the image.</p>
+<p>Licenses may require that you provide attribution to the author(s)<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> and to retain any copyright notices,<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> although the specifics vary between licenses. For example, Creative Commons licenses other than CC0 require that the name of the author, the title of the work, and a link to the work are provided.</p>
+<p>Projects with many authors often explicitly allow for an attribution to the collective as a whole rather than being mentioned individually. For example, the flexible attribution requirements of Creative Commons licenses allow that Wikipedia authors agree to be attributed through a link to the article <span class="citation" data-cites="Linksvayer2009">(<a href="#ref-Linksvayer2009" role="doc-biblioref">Linksvayer, 2009</a>)</span>. And software projects may use copyright notices that only contain the project name, such as <code>Copyright (c) 2020-2025 The XYZ Project Contributors</code> <span class="citation" data-cites="Winslow2020">(<a href="#ref-Winslow2020" role="doc-biblioref">Winslow, 2020</a>)</span>.</p>
+<p>Where to put the attribution depends on the type of the work, but in general it is best to keep it close to where the work is used and to provide all required information. Only linking to a page that provides the attribution (as with Wikipedia articles) most likely will not suffice in general.</p>
 </section>
-<section id="modifications-of-the-work" class="level4">
-<h4 class="anchored" data-anchor-id="modifications-of-the-work">Modifications of the work</h4>
-<p>If a work has been modified, some licenses may require that this is indicated (e.g., with a note “adapted from original”). Other licenses forbid that a work is modified. For example, the <code>NoDerivatives</code> clause of the <code>CC-BY-ND-4.0</code> licenses say:</p>
-<blockquote class="blockquote">
-<p>If you remix, transform, or build upon the material, you may not distribute the modified material.</p>
-</blockquote>
-<p>Hence, in this case you are free to reuse and redistribute the material - as long as you don’t change it.</p>
-</section>
-<section id="commercial-reuse" class="level4">
-<h4 class="anchored" data-anchor-id="commercial-reuse">Commercial reuse</h4>
-<p>The NC clause in the Creative Commons BY-NC (Attribution–NonCommercial) license stands for “NonCommercial”, meaning that others are allowed to use, share, adapt, and build upon the work – but not for commercial purposes. This restriction prohibits any use that is primarily intended for or directed toward commercial advantage or monetary compensation. For example, using the work in an advertisement, selling it, or incorporating it into a product for sale would not be permitted without additional permission from the copyright holder. However, non-profit educational use, personal projects, or sharing within a non-commercial community is generally allowed, as long as proper attribution is given to the original creator.</p>
+<section id="state-changes" class="level4">
+<h4 class="anchored" data-anchor-id="state-changes">State Changes</h4>
+<p>If a work has been modified, licenses may require that this is indicated. For example, if an image under a Creative Commons license other than CC0 is reused in a cropped version, reusers could add “adapted from original” to indicate that changes have occurred.</p>
 </section>
 <section id="indicate-license-add-license-text" class="level4">
 <h4 class="anchored" data-anchor-id="indicate-license-add-license-text">Indicate License / Add License Text</h4>
-<p>Licenses may either require that one mentions the applicable license by name and possibly link (“Indicate license”) or they even require to copy the full license text along with the used work (“Add license text”).</p>
+<p>Licenses may either require that one mentions the applicable license by name and possibly link (“Indicate license”) or they even require to copy the full license text along with the used work (“Add license text”). Of course, the latter may not be feasible if the work is printed and smaller than the license text. For example, if the license of an image requires to print the full license text, the image mostly cannot be used in newspapers <span class="citation" data-cites="Wikipedia2024FDL">(see <a href="#ref-Wikipedia2024FDL" role="doc-biblioref">Wikipedia contributors, 2025</a>)</span>.</p>
+</section>
+<section id="disclose-code" class="level4">
+<h4 class="anchored" data-anchor-id="disclose-code">Disclose Code</h4>
+<p>There are various situations in which one interacts with software without having access to the underlying source code. For example, software can be distributed as a binary (“executable”) file or it can be used over the internet. In both cases, licenses may require that the source code is provided to its users.</p>
+</section>
+<section id="anti-drm" class="level4">
+<h4 class="anchored" data-anchor-id="anti-drm">Anti-DRM</h4>
+<p>You may have encountered images or videos which you could not download due to a copy protection. Such a protection is also called <strong>d</strong>igital <strong>r</strong>ights <strong>m</strong>anagement (DRM). For works published under a license with an anti-DRM clause, reusers may not apply DRM to the work or must provide a DRM-free version in parallel (depending on the exact license).</p>
 </section>
 <section id="copyleft" class="level4">
 <h4 class="anchored" data-anchor-id="copyleft">Copyleft</h4>
-<p>If the original work has been made available under a “copyleft” license, any derivative work that is shared with others must be put under the same license as the original work<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a> – or you commit a copyright violation.</p>
-<p>This explains the origin of the term <em>copyleft</em>, as it “turns copyright around” to make works permanently free. In the realm of Creative Commons licenses, copyleft is also called <em>share alike</em> (e.g.&nbsp;in the <code>CC-BY-SA-4.0</code> license).</p>
-<p>What is considered creation of a derivative work varies between jurisdictions, but the following are typical examples: translating a text into a different language, taking a picture of an artwork, adding a song to a video, adapting a computer program to fit own use cases, or taking a <a href="https://commons.wikimedia.org/wiki/Commons:Screenshots">screenshot of a computer program</a>. In all of these cases, if the original work is under a copyleft license, then sharing of the resulting derivative work is only allowed if it is put under the same license.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a></p>
+<p>If you modified the work and put a sufficient amount of creativity into it, the result is called a <em>derivative work</em>. It is (again) protected by copyright and even if you share it, nobody except you is allowed to copy, modify, or distribute it further. You can put it under a free/open license but don’t have to.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a> The only exception is if the original work has been made available under a “copyleft” license. In that case, if you share the work with others you must put it under the same license as the original work<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a> – or you commit a copyright violation.<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a> This explains the origin of the term <em>copyleft</em>, as it “turns copyright around” to make works permanently free: ©&nbsp;→&nbsp;🄯. In the realm of Creative Commons licenses, copyleft is also called <em>share alike</em>. The opposite of a copyleft license is sometimes also called a <em>permissive</em> license.</p>
+<p>What is considered creation of a derivative work varies between jurisdictions, but the following are typical examples: translating a text into a different language, taking a picture of an artwork, adding a song to a video, adapting a computer program to fit own use cases, or taking a <a href="https://commons.wikimedia.org/wiki/Commons:Screenshots">screenshot of a computer program</a>. In all of these cases, if the original work is under a copyleft license, then sharing of the resulting derivative work is only allowed if it is put under the same license.</p>
 <p>The question is then: Which uses of a work do not create a derivative work? In many cases, if an unaltered excerpt “is used to illuminate an idea or provide an example in another larger work” <span class="citation" data-cites="CC2024NoDerivs">(<a href="#ref-CC2024NoDerivs" role="doc-biblioref">Creative Commons, 2024a</a>)</span> no derivative work is made. The excerpt needs to “remain separate and distinct in the new context” <span class="citation" data-cites="Kreutzer2024">(<a href="#ref-Kreutzer2024" role="doc-biblioref">Kreutzer, 2024, p. 44</a>)</span> and not be “merged with other material into a new and larger work” <span class="citation" data-cites="Kreutzer2024">(<a href="#ref-Kreutzer2024" role="doc-biblioref">Kreutzer, 2024, p. 45</a>)</span>. For example, embedding images in a document and clearly separating them from the rest or assembling works as part of a collection typically would not create a derivative work. However, due to a lack of case law, there is only little guidance on what constitutes a derivative work in general.</p>
-<p>Also note that the copyleft licenses we discuss here do not mandate sharing. Copyleft (and attribution) clauses are only triggered <em>if</em> the work is shared <span class="citation" data-cites="CC2015">(<a href="#ref-CC2015" role="doc-biblioref">Creative Commons, 2015</a>)</span>. This means that if you only use a work internally, you do not need to share your derivative works.</p>
+<p>Also note that the copyleft licenses we discuss here do not mandate sharing. Copyleft (and attribution) clauses are only triggered if the work is shared <span class="citation" data-cites="CC2015">(<a href="#ref-CC2015" role="doc-biblioref">Creative Commons, 2015</a>)</span>. This means that if you only use a work internally, you do not need to share your derivative works.</p>
+<div id="nte-weak-strong-copyleft" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;4: Weak and Strong Copyleft
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>For software, copyleft licenses come in two flavors:</p>
+<ul>
+<li><strong>Weak copyleft licenses</strong> only require that modifications to the software itself are licensed under the same or a compatible license if shared. For example, if you create and publish software under a weak copyleft license, others who modify it and put their version on the internet have to apply the same license. However, people who merely <em>use</em> your software in their own work which they make publicly available can choose any license for it.</li>
+<li><strong>Strong copyleft licenses,</strong> on the other side, insist that any larger works that use the copyleft-licensed software must also be licensed under the same or a compatible license if shared. For example, if your software were to be put under a strong copyleft license, everybody publishing software that uses your software would need to put it under the same license. Because of only few rulings in courts, the extent of this requirement is disputed <span class="citation" data-cites="Wikipedia2024GPL">(<a href="#ref-Wikipedia2024GPL" role="doc-biblioref">Wikipedia contributors, 2024</a>)</span>.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="further-remarks" class="level3">
+<h3 class="anchored" data-anchor-id="further-remarks">Further Remarks</h3>
+<p>The description of the conditions above is a simplified summary – read the full text of the license before sharing the respective work with others. For example, Creative Commons licenses other than CC0 also require that</p>
+<ul>
+<li>you retain a notice about the disclaimer of warranties,</li>
+<li>you retain an indication of any previous modifications,</li>
+<li>the attribution does not imply endorsement by the original author, and</li>
+<li>you remove the attribution again upon request by the original author.</li>
+</ul>
 <div id="tip-cc-licenses-checklist" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip&nbsp;1: Required Information under Creative Commons Licenses
+Tip&nbsp;2: Required Information under Creative Commons Licenses
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p>For most Creative Commons licenses, providing the following information is required (if available):</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Original author name</label></li>
+<li><label><input type="checkbox">Author name</label></li>
 <li><label><input type="checkbox">Copyright notice</label></li>
 <li><label><input type="checkbox">Title of the work</label>
 <ul class="task-list">
@@ -725,8 +789,7 @@ Tip&nbsp;1: Required Information under Creative Commons Licenses
 </ul>
 </div>
 </div>
-<p>Obviously, if you are in doubt whether a condition of the license applies in your use case, it is better to either follow it or to ask the author for clarification or explicit permission.</p>
-<p>We recommend that you always provide attribution for all works under a free/open license – even if the license does not strictly require it (e.g., CC0). This also follows from the rules of good scientific practice (and not only from copyright law).</p>
+<p>Obviously, if you are in doubt whether a condition of the license applies in your use case, it is better to either follow it or to ask the author for clarification or explicit permission. This is especially important given the existence of <a href="https://commons.wikimedia.org/wiki/Commons:Copyleft_trolling"><em>copyleft trolls</em></a>: People who distribute works under a free/open license but send out statutory damages claims after minor violations without providing reusers an opportunity to fix their error. In addition, in many European countries attribution may be necessary regardless due to the author’s moral rights. For these reasons, we recommend that you provide attribution for all works under a free/open license – even if the license does not strictly require it (e.g., CC0). Also, you should take note of every foreign work included in your project folder and record its license.</p>
 <div id="imp-non-copyright-restrictions" class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -737,105 +800,16 @@ Important&nbsp;1: Non-copyright Restrictions
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The free/open licenses we discuss here mostly grant copyrights (with some of them explicitly granting patent rights and <em>sui generis</em> database rights). Therefore, you may lack other rights such as personality, privacy, moral, or trademark rights. For example, <a href="https://commons.wikimedia.org/wiki/Commons:Photographs_of_identifiable_people">sharing photos that depict people</a> is not only a matter of copyright, but also of privacy rights. Also, their commercial use may require the consent of the depicted person.</p>
+<p>The free/open licenses we discuss here mostly grant copyrights (with some of them explicitly granting patent rights and <em>sui generis</em> database rights). Therefore, you may lack other rights such as personality, privacy, moral, or trademark rights. For example, <a href="https://commons.wikimedia.org/wiki/Commons:Photographs_of_identifiable_people">sharing photos that depict people</a> is not only a matter of copyright, but also of privacy rights. Also, their commercial use may require the consent of the depicted person. Finally, note that even if attribution is not a requirement of the license, good scientific practice demands that appropriate citations are made.</p>
 </div>
 </div>
 </section>
-</section>
-</section>
-<section id="practical-exercise-adding-an-image" class="level2">
-<h2 class="anchored" data-anchor-id="practical-exercise-adding-an-image">✍️ Practical Exercise: Adding an Image</h2>
-<p>Let’s practice what you learned by adding an image to the manuscript. We’ll use <a href="https://flic.kr/p/2pEKnUr">this picture of a penguin from Flickr</a>. First, try to answer the following questions:</p>
-<ol type="1">
-<li>Under which license is the picture available?</li>
-<li>Is it free/open?</li>
-<li>Under which conditions may the work be shared?</li>
-</ol>
-<div id="tip-example-license" class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip&nbsp;2: License of Penguin Picture (Solution)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="1">
-<li>The picture has been put under the license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a></li>
-<li>The license is free/open</li>
-<li>The license contains no (major) conditions</li>
-</ol>
-</div>
-</div>
-</div>
-<p>You can now download the image and move it to your project folder (maybe call it <code>penguin.jpg</code>). In your manuscript file, find the line that says “add image here”, remove it, and add the image instead, including proper attribution.</p>
-<div id="tip-example-license" class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip&nbsp;3: Attribution for Penguin Picture (Solution)
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Although the license CC0 doesn’t require it, we still recommend providing proper attribution.</p>
-<ul>
-<li>Author name: <code>steve b</code></li>
-<li>Copyright notice: (not available)</li>
-<li>Title of the work: <code>Chinstrap Penguin</code>
-<ul>
-<li>Link to the work: <a href="https://www.flickr.com/photos/192320315@N02/53603388557/" class="uri">https://www.flickr.com/photos/192320315@N02/53603388557/</a> or <a href="https://flic.kr/p/2pEKnUr" class="uri">https://flic.kr/p/2pEKnUr</a></li>
-</ul></li>
-<li>License name: <code>CC0 1.0</code>
-<ul>
-<li>Link to the license: <a href="https://creativecommons.org/publicdomain/zero/1.0/" class="uri">https://creativecommons.org/publicdomain/zero/1.0/</a></li>
-</ul></li>
-<li>Link to warranty disclaimer: (not available)</li>
-<li>Indicate modification: (no existing modification notices)</li>
-</ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>!<span class="co">[</span><span class="ot">"[Chinstrap Penguin](https://flic.kr/p/2pEKnUr)" by "steve b" licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)</span><span class="co">](penguin.jpg)</span>{width=50%}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If it is likely that the article gets printed, you might want to ensure that the link to the work is retained in that case:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode md code-overflow-wrap code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>!<span class="co">[</span><span class="ot">"[Chinstrap Penguin](https://flic.kr/p/2pEKnUr)" by "steve b" available under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) from [`flic.kr/p/2pEKnUr`](https://flic.kr/p/2pEKnUr)</span><span class="co">](penguin.jpg)</span>{width=50%}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
-<p>Let’s render the document and see if the changes were successful (open <code>Manuscript.pdf</code> afterwards):</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>In addition, we recommend creating a file called <code>LICENSE.txt</code> to describe the license of the image. Click on <em>File</em> &gt; <em>New File</em> &gt; <em>Text File</em>, then on <em>File</em> &gt; <em>Save</em>, and choose <code>LICENSE.txt</code> as filename. The license description can be worded as follows:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>LICENSE.txt</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="LICENSE.txt"><pre class="sourceCode txt code-overflow-wrap code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>"Chinstrap Penguin" stored in "penguin.jpg" by "steve b" available from &lt;https://flic.kr/p/2pEKnUr&gt; is licensed under CC0 1.0: &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>If the license required adding the full license text, you would also need to copy it to the project folder.</p>
-<p>Finally, you can store the changes in the version control system:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal</strong></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add image"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 </section>
 <section id="wrap-up" class="level2">
 <h2 class="anchored" data-anchor-id="wrap-up">Wrap-up</h2>
 <p>If you would like to learn more about copyright and licenses you might find the following resources interesting:</p>
 <ul>
-<li>Our own <a href="./in_depth_material/introduction_copyright.html">in-depth material on copyright and licenses</a> (which is an extension of this chapter)</li>
-<li>“Open Content – Navigating Creative Commons Licenses” by <span class="citation" data-cites="Kreutzer2024">Kreutzer (<a href="#ref-Kreutzer2024" role="doc-biblioref">2024</a>)</span></li>
+<li>“Open Content – A Practical Guide to Using Creative Commons Licences” by <span class="citation" data-cites="Kreutzer2024">Kreutzer (<a href="#ref-Kreutzer2024" role="doc-biblioref">2024</a>)</span></li>
 <li>“Creative Commons Certificate for Educators, Academic Librarians, and Open Culture” by <span class="citation" data-cites="CC2024Certificate">Creative Commons (<a href="#ref-CC2024Certificate" role="doc-biblioref">2024b</a>)</span></li>
 <li>“Freie Software – Zwischen Privat- und Gemeineigentum” by <span class="citation" data-cites="Grassmuck2004">Grassmuck (<a href="#ref-Grassmuck2004" role="doc-biblioref">2004</a>)</span></li>
 <li>“Rechtsfragen bei Open Science: Ein Leitfaden” by <span class="citation" data-cites="Kreutzer2021">Kreutzer &amp; Lahmann (<a href="#ref-Kreutzer2021" role="doc-biblioref">2021</a>)</span></li>
@@ -847,6 +821,9 @@ Tip&nbsp;3: Attribution for Penguin Picture (Solution)
 
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-Brinken2021" class="csl-entry" role="listitem">
+Brinken, H., Hauss, J., &amp; Rücknagel, J. (2021). <em>The correct indication of a license</em> [Video recording]. <a href="https://doi.org/10.5446/53550">https://doi.org/10.5446/53550</a>
+</div>
 <div id="ref-CC2015" class="csl-entry" role="listitem">
 Creative Commons. (2015, August 8). <em><span>ShareAlike</span> compatibility analysis: <span>GPL</span></em>. <a href="https://wiki.creativecommons.org/index.php?title=ShareAlike_compatibility_analysis:_GPL&amp;oldid=114476">https://wiki.creativecommons.org/index.php?title=ShareAlike_compatibility_analysis:_GPL&amp;oldid=114476</a>
 </div>
@@ -855,6 +832,12 @@ Creative Commons. (2024a). Can <span>I</span> reuse an excerpt of a larger work 
 </div>
 <div id="ref-CC2024Certificate" class="csl-entry" role="listitem">
 Creative Commons. (2024b). <em><span>Creative Commons</span> certificate for educators, academic librarians, and open culture</em>. <a href="https://certificates.creativecommons.org/cccertedu/">https://certificates.creativecommons.org/cccertedu/</a>
+</div>
+<div id="ref-Fogel2006" class="csl-entry" role="listitem">
+Fogel, K. (2006, May 27). <em>The surprising history of copyright and the promise of a post-copyright world. Question copyright</em>. <a href="https://web.archive.org/web/20250618091020id_/https://questioncopyright.org/promise/index.html">https://web.archive.org/web/20250618091020id_/https://questioncopyright.org/promise/index.html</a>
+</div>
+<div id="ref-FSF2024" class="csl-entry" role="listitem">
+Free Software Foundation. (2024). Is there some way that <span>I</span> can <span>GPL</span> the output people get from use of my program? For example, if my program is used to develop hardware designs, can <span>I</span> require that these designs must be free? In <em>Frequently asked questions about the <span>GNU</span> licenses</em>. Free Software Foundation. <a href="https://www.gnu.org/licenses/gpl-faq.en.html#GPLOutput">https://www.gnu.org/licenses/gpl-faq.en.html#GPLOutput</a>
 </div>
 <div id="ref-Grassmuck2004" class="csl-entry" role="listitem">
 Grassmuck, V. (2004). <em>Freie Software: zwischen Privat- und Gemeineigentum</em> (2., korrigierte Aufl). Bundeszentrale für politische Bildung. <a href="https://web.archive.org/web/20240105071919/https://freie-software.bpb.de/">https://web.archive.org/web/20240105071919/https://freie-software.bpb.de/</a>
@@ -865,8 +848,26 @@ Kreutzer, T. (2024). <em>Open content – navigating <span>Creative Commons</spa
 <div id="ref-Kreutzer2021" class="csl-entry" role="listitem">
 Kreutzer, T., &amp; Lahmann, H. (2021). <em>Rechtsfragen bei Open Science: Ein Leitfaden</em>. Hamburg University Press. <a href="https://doi.org/10.15460/HUP.211">https://doi.org/10.15460/HUP.211</a>
 </div>
+<div id="ref-Linksvayer2009" class="csl-entry" role="listitem">
+Linksvayer, M. (2009, March 9). <em>Wikipedia and attribution. <span>Creative Commons</span></em>. <a href="https://creativecommons.org/weblog/entry/13232">https://creativecommons.org/weblog/entry/13232</a>
+</div>
 <div id="ref-Moller2015" class="csl-entry" role="listitem">
 Möller, E., Hill, B. M., Garlick, M., Stark, E., Knapp, J. A., Kadlec, P., Stallman, R., Lessig, L., &amp; Beesley, A. (2015, February 17). <em>Definition of free cultural works</em>. <a href="https://freedomdefined.org/Definition/1.1">https://freedomdefined.org/Definition/1.1</a>
+</div>
+<div id="ref-OKFN2016" class="csl-entry" role="listitem">
+Open Knowledge Foundation. (2016). <em>The open definition - open definition - defining open in open data, open content and open knowledge</em>. <a href="https://opendefinition.org/">https://opendefinition.org/</a>
+</div>
+<div id="ref-OSI2007" class="csl-entry" role="listitem">
+Open Source Initiative. (2007, March 22). <em>The open source definition</em>. <a href="https://opensource.org/osd">https://opensource.org/osd</a>
+</div>
+<div id="ref-Stallman2022Version" class="csl-entry" role="listitem">
+Stallman, R. (2022, January 22). <em>For clarity’s sake, please don’t say <span>“licensed under <span>GNU</span> <span>GPL</span> 2”</span>!</em> <a href="https://www.gnu.org/licenses/identify-licenses-clearly.html">https://www.gnu.org/licenses/identify-licenses-clearly.html</a>
+</div>
+<div id="ref-Wikipedia2024GPL" class="csl-entry" role="listitem">
+Wikipedia contributors. (2024). <span>GNU General Public License</span> – linking and derived works. In <em>Wikipedia</em>. Wikipedia, The Free Encyclopedia. <a href="https://en.wikipedia.org/w/index.php?title=GNU_General_Public_License&amp;oldid=1244139410#Linking_and_derived_works">https://en.wikipedia.org/w/index.php?title=GNU_General_Public_License&amp;oldid=1244139410#Linking_and_derived_works</a>
+</div>
+<div id="ref-Wikipedia2024FDL" class="csl-entry" role="listitem">
+Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – burdens when printing. In <em>Wikipedia</em>. Wikipedia, The Free Encyclopedia. <a href="https://en.wikipedia.org/w/index.php?title=GNU_Free_Documentation_License&amp;oldid=1269991857#Burdens_when_printing">https://en.wikipedia.org/w/index.php?title=GNU_Free_Documentation_License&amp;oldid=1269991857#Burdens_when_printing</a>
 </div>
 <div id="ref-Winslow2020" class="csl-entry" role="listitem">
 Winslow, S. (2020, January 10). <em>Copyright notices in open source software projects. <span>Linux Foundation</span></em>. <a href="https://www.linuxfoundation.org/blog/copyright-notices-in-open-source-software-projects">https://www.linuxfoundation.org/blog/copyright-notices-in-open-source-software-projects</a>
@@ -875,12 +876,15 @@ Winslow, S. (2020, January 10). <em>Copyright notices in open source software pr
 
 <ol>
 <li id="fn1"><p>in Germany: <em>Urheberrecht</em><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>in Germany: <em>Schranken des Urheberrechts</em><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>Accessing the checklists requires a (free) account on their website.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>or others whose names are provided with the original work<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Such as <code>Copyright (c) 2025 Jane Doe</code><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>or sometimes also under a later version or under a compatible license<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Of course, if the original work is not made available under a free/open license (permissive or copyleft), then sharing your derivative work is, in general, not allowed.<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In fact, authors should not create their own license texts if the purpose is to share their work freely and openly with others. By using a boilerplate license others know what to expect, also because it may have already been <a href="https://sfconservancy.org/copyleft-compliance/">tested</a> in <a href="https://legaldb.creativecommons.org/">courts</a>.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>in Germany: <em>Gemeinfreiheit</em><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>in Germany: <em>Schranken des Urheberrechts</em><a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>Accessing the checklists requires a (free) account on their website.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>or others whose names are provided with the original work<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Such as <code>Copyright (c) 2025 Jane Doe</code><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Of course, you still need to abide by the license conditions of the original work, such as attribution.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>or sometimes also under a later version or under a compatible license<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>Note, however, that <a href="https://commons.wikimedia.org/wiki/Commons:Viral_licenses_are_not_automatic">copyleft licenses are not automatic</a>: A derivative work of a copylefted work is not “implicitly” under the same license – others would commit a copyright violation if they just took it. Only if the derivative author explicitly makes it available under the same license, others may use the derivative work under the same terms.<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1285,13 +1289,13 @@ Winslow, S. (2020, January 10). <em>Copyright notices in open source software pr
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./setup.html" class="pagination-link" aria-label="Project Setup">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Project Setup</span>
+      <a href="../archive.html" class="pagination-link" aria-label="Archive Your Project">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Archive Your Project</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./data.html" class="pagination-link" aria-label="Add Data and Data Dictionary">
-        <span class="nav-page-text">Add Data and Data Dictionary</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../in_depth_material/data_dic_generation.html" class="pagination-link" aria-label="Automatic Generation of Data Dictionaries">
+        <span class="nav-page-text">Automatic Generation of Data Dictionaries</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1302,8 +1306,8 @@ Winslow, S. (2020, January 10). <em>Copyright notices in open source software pr
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>A recommended citation and license information for this tutorial are provided on the <a href="./about.html">about page</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/copyright.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>A recommended citation and license information for this tutorial are provided on the <a href="about.qmd">about page</a>.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/in_depth_material/introduction_copyright.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
