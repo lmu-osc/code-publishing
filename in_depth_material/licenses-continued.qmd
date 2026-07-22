@@ -1,0 +1,87 @@
+---
+title: Licenses Continued
+---
+
+
+
+
+## Additional Figures 
+
+### Software, Writing, Images, Audio, and Video 
+
+::: {#fig-flowchart-non-data}
+```{mermaid}
+flowchart TB
+  start("We want to choose a<br>license for software,<br>writing, image, audio,<br>or video.") --"We adapted a work by<br>others shared under a<br>free/open license."--> use_existing_license["<em>Use its license</em>"]
+  start --"We created the work<br>entirely by ourselves."--> regulation("Other regulation<br>(by community or funder)<br>concerning license?")
+  
+  regulation --"Exists"--> follow_existing_norms["<em>Follow that</em>"]
+  regulation --"Does not<br>exist"--> type("Work type?")
+  
+  type --"Software"--> code_sa("Attribution?<br>Indicate license?<br>Add license text?<br>State changes?<br>Disclose code?<br>Copyleft?")
+  type --"Writing, image, audio, video"--> nocode_cc("Attribution?<br>Indicate license?<br>State changes?<br>Anti-DRM?<br>Copyleft?")
+  
+  code_sa --"Attribution &<br>Add license text &<br>State changes"--> apache["Apache 2.0"]
+  code_sa --"Attribution &<br>Indicate license &<br>Disclose code &<br>Weak copyleft"--> mpl["MPL 2.0"]
+  code_sa --"Attribution &<br>Add license text &<br>State changes &<br>Disclose code &<br>Strong copyleft"--> agpl["AGPLv3"]
+  
+  nocode_cc --"Neither"--> cc0["CC0 1.0"]
+  nocode_cc --"Attribution &<br>Indicate license &<br>State changes &<br>Anti-DRM"--> cc_by["CC BY 4.0"]
+  nocode_cc --"Attribution &<br>Indicate license &<br>State changes &<br>Anti-DRM &<br>Copyleft"--> cc_by_sa["CC BY-SA 4.0"]
+  
+  click apache href "https://choosealicense.com/licenses/apache-2.0/"
+  click mpl href "https://choosealicense.com/licenses/mpl-2.0/"
+  click agpl href "https://choosealicense.com/licenses/agpl-3.0/"
+  click cc0 href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click cc_by href "https://creativecommons.org/licenses/by/4.0/"
+  click cc_by_sa href "https://creativecommons.org/licenses/by-sa/4.0/"
+```
+
+_Note._ DRM = digital rights management
+
+Advanced License Flowchart for Software, Writing, Images, Audio, and Video
+:::
+
+### Data and Databases
+
+::: {#fig-flowchart-data}
+```{mermaid}
+flowchart TB
+  start("We want to choose a<br>license for data.") --"We adapted a database by<br>others shared under a<br>free/open license."--> use_existing_license_db["<em>Use its license(s)<br>for content and database</em>"]
+  start --"We created a database<br>entirely by ourselves."--> regulation("Other regulation<br>(by community or funder)<br>concerning license?")
+  
+  regulation --"Exists"--> follow_existing_norms["<em>Follow that</em>"]
+  regulation --"Does not<br>exist"--> existing_license_content("Adapting content<br> by others?")
+  
+  subgraph content["<strong>License for content</strong>"]
+  existing_license_content --"No, we created the content<br>entirely by ourselves."--> facts("Entries are facts<br>(like measurements<br>or metadata)?")
+  existing_license_content --"Yes, it was<br>shared under a<br>free/open license."--> use_existing_license_content["<em>Use that license</em>"]
+  facts --"Yes"--> cc0_content_metadata["CC0 1.0"]
+  facts --"No"--> choose_license["<em>Consult flowchart for<br>software, writing,<br>image, audio, and video</em>"]
+  end
+  
+  subgraph database["<strong>License for database</strong>"]
+  choose_license --> switch_license["<em>Depending on<br>content license</em>"]
+  use_existing_license_content --> switch_license
+  
+  cc0_content_metadata --> cc0_db["CC0 1.0"]
+  switch_license --"CC0 or<br>non-CC license"--> sa("Attribution?<br>Indicate license?<br>Anti-DRM?<br>Copyleft?")
+  switch_license --"CC BY or<br>CC BY-SA"--> same["<em>Same license for DB</em>"]
+  
+  sa --"Neither"--> cc0_db
+  sa --"Attribution &<br>Indicate license &<br>Anti-DRM &<br>Copyleft"--> odbl["ODbL 1.0"]
+  
+  %% the following link is only added to have terminal nodes on the same level
+  sa ~~~ same
+  end
+  
+  click cc0_content_metadata href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click cc0_db href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click odbl href "https://opendatacommons.org/licenses/odbl/summary/"
+```
+
+_Note._ DRM = digital rights management
+
+Advanced License Flowchart for Data(base)
+:::
+
