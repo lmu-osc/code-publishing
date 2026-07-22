@@ -88,7 +88,7 @@ using the function `pak::pkg_sysreqs()`.
 In combination with `renv`, we can obtain the system dependencies
 of all R packages the current project directly depends on:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # Find all R package dependencies
 deps <- renv::dependencies()$Package |>
   unique() |>
@@ -184,10 +184,9 @@ The most important file in this project folder is `Manuscript.qmd` which contain
 
 - `Bibliography.bib`: bibliographic references used in the manuscript
 - `data.csv`: a data set containing the simplified `palmerpenguins` data
-- `data_dictionary.html`: a dictionary to the data file,
-  created using `data_dictionary.qmd`
+- `data_dictionary.html`: a dictionary to the data file, created using `data_dictionary.qmd`
 
-The folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF accoording to APA guidelines.
+The folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF according to APA guidelines.
 ```
 :::
 
@@ -292,3 +291,11 @@ Of course, you would use the same license for the manuscript that you chose in t
 The manuscript files `Manuscript.qmd`, `Manuscript.tex`, and `Manuscript.pdf` by Josephine Zerna, Christoph Scheffel, and <YOUR NAME> are available under [CC\ BY-SA\ 4.0](https://creativecommons.org/licenses/by-sa/4.0/) or (at your option) under the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) (or later). For further copyright information, see `LICENSE.txt`.
 ```
 :::
+
+After adding a README, commit your changes:
+
+```{.bash filename="Terminal"}
+git status
+git add .
+git commit -m "Add README"
+```

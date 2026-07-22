@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/791698287.svg)](https://doi.org/10.5281/zenodo.16631976)
+
 # Code Publishing Tutorial
 
 This repository contains a tutorial on code publishing created for the LMU Open Science Center.

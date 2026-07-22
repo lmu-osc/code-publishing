@@ -10,7 +10,7 @@ For the purpose of this tutorial, we suggest to conduct a simple analysis
 that explores whether the bill lengths of penguins vary depending on their sex.
 You can write your own or use the following example:
 
-::: {#tip-t-test .callout-tip collapse="true"}
+::: {#tip-data-analysis-example .callout-tip collapse="true"}
 ### Data Analysis Example
 
 You can copy the following code into the _results_ section of the manuscript:
@@ -64,9 +64,10 @@ report::report_sample(dat_clean, by = "sex", total = FALSE) |>
 #| echo: false
 #| fig-cap: "Scatter Plot of Bill Lengths by Sex With Violin Plot Showing Quartiles"
 
-ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex), group = sex) +
+ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex)) +
   ggplot2::geom_violin(
-    draw_quantiles = c(0.25, 0.5, 0.75),
+    quantiles = c(0.25, 0.5, 0.75),
+    quantile.linetype = 1,
     show.legend = FALSE
   ) +
   ggplot2::geom_jitter(width = 0.15, show.legend = FALSE) +
@@ -77,13 +78,13 @@ ggplot2::ggplot(dat_clean, ggplot2::aes(x = sex, y = bill_length_mm, fill = sex)
 
 This code uses some new packages, one can use `renv` to view them:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::status()
 ```
 
 Then, install and record them with:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::install()
 renv::snapshot()
 ```
@@ -159,7 +160,7 @@ Their version is recorded by `renv`,
 but you also need to ensure that they are available for download.
 First, identify the source from which you installed your packages:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # First, install {pak} and {sessioninfo}
 renv::install(c(
   "pak",
@@ -181,7 +182,7 @@ sessioninfo::package_info(deps)
 
 If the `source` column only contains the entries `CRAN`, `RSPM`, or `Bioconductor`,
 they are already archived.
-If the `source` column instead mentions something else (e.g., `GitHub`),
+If the `source` column instead mentions something else (e.g., `Github`),
 you need to make sure yourself that the package is available to users of your project.
 You can either archive the package,
 for example in the [Software Heritage archive](https://archive.softwareheritage.org/).
@@ -225,7 +226,6 @@ format:
   apaquarto-pdf:
     documentmode: man
     keep-tex: true
-    pdf-engine: lualatex
     a4paper: true
 ```
 
@@ -263,7 +263,8 @@ Under which license is `apaquarto` made available?
 ### `apaquarto` License (Solution)
 
 According to its GitHub page, `apaquarto` is licensed under CC0\ 1.0.
-This means that it can be used and distributed even without attribution.
+This means that with regards to copyright
+it can be used and distributed even without attribution.
 :::
 
 We recommend adding a short paragraph to `LICENSE.txt` to describe its license.
@@ -302,7 +303,7 @@ licensed under [CC\ BY\ 4.0](https://creativecommons.org/licenses/by/4.0/):
 > other research product such as a paper or a book, that is, authors should cite
 > the appropriate set of software products just as they cite the appropriate set
 > of papers.
-> 
+
 > **5\. Accessibility**: Software citations should facilitate access to the
 > software itself and to its associated metadata, documentation, data, and other
 > materials necessary for both humans and machines to make informed use of the
@@ -399,7 +400,7 @@ bibliography:
 
 Use `renv` to view, install, and record the newly used package:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::status()
 renv::install()
 renv::snapshot()
@@ -499,7 +500,7 @@ If you want to dive deeper we recommend the following resources:
 `renv` only records the versions of R packages and of R itself.
 This means that everything we have not decided to cite or attribute
 is not documented anywhere.
-We will cover system dependencies when [creating a `README`](make_readme.qmd).
+We will cover system dependencies when [creating a README](make-readme.qmd).
 For now, however, there is one simple step you can take
 to record the version of Quarto (and a few other dependencies).
 Do run the following:

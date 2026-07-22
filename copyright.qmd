@@ -72,8 +72,10 @@ and shared publicly, the first step is to search for its license.
 For example, this tutorial has an [About](about.qmd) page detailing its licensing,
 whereas other websites sometimes state the license in the footer.
 
-Other places to look for license statements include a project's `README` file or a dedicated `LICENSE` or `COPYING` file.
-If a project has been stored in a research repository, sometimes the license is stored in the metadata of the project and displayed somewhere on the project's page.
+Other places to look include a project's README file or a dedicated `LICENSE` or `COPYING` file.
+If a project has been stored in a research repository,
+yet another means of communicating its copyright status might exist.
+For media from Wikimedia Commons, an [Attribution Generator][commons-gen] exists.
 
 If you cannot find any license, the work might be
 in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it.
@@ -82,6 +84,11 @@ If no license notice is present and the work is *not* in the public domain,
 it is by default  _in copyright_ and you are generally not allowed to share it with others.
 You can, however, ask the author to put the corresponding work under a free/open license
 -- Wikimedia Commons provides an [email template][commons-templates] to obtain such a permission.
+
+Without permission you can check your national laws
+for limitations and exceptions to copyright.^[in Germany: _Schranken des Urheberrechts_]
+Examples include the right to quote, [trivial use][commons-minimis],
+scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 
 [commons-templates]: https://commons.wikimedia.org/wiki/Commons:Email_templates
 
@@ -404,7 +411,8 @@ Licenses may require that you provide attribution to the author(s)[^others]
 and to retain any copyright notices,[^example-notice]
 although the specifics vary between licenses.
 For example, Creative Commons licenses other than CC0 require
-that the name of the author, the title of the work, and a link to the work are provided.
+that the name of the author, the title of the work, and a link to the work are provided
+and that existing copyright notices are retained.
 
 [^others]: or others whose names are provided with the original work
 [^example-notice]: Such as `Copyright (c) 2025 Jane Doe`
@@ -461,7 +469,11 @@ adding a song to a video, adapting a computer program to fit own use cases,
 or taking a [screenshot of a computer program][commons-screenshots].
 In all of these cases, if the original work is under a copyleft license,
 then sharing of the resulting derivative work is only allowed
-if it is put under the same license.
+if it is put under the same license.[^not-free-open]
+
+[^not-free-open]: Of course, if the original work is not made available
+under a free/open license (permissive or copyleft),
+then sharing your derivative work is, in general, not allowed.
 
 [commons-screenshots]: https://commons.wikimedia.org/wiki/Commons:Screenshots
 
@@ -582,6 +594,7 @@ In addition, we recommend creating a file called `LICENSE.txt`
 to describe the license of the image.
 Click on _File_ > _New File_ > _Text File_,
 then on _File_ > _Save_, and choose `LICENSE.txt` as filename.
+The license description can be worded as follows:
 
 ```{.txt .code-overflow-wrap filename="LICENSE.txt"}
 "Chinstrap Penguin" stored in "penguin.jpg" by "steve b" available from <https://flic.kr/p/2pEKnUr> is licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>
@@ -604,7 +617,7 @@ If you would like to learn more about copyright and licenses
 you might find the following resources interesting:
 
 - Our own [in-depth material on copyright and licenses](in_depth_material/introduction_copyright.qmd) (which is an extension of this chapter)
-- "Open Content -- A Practical Guide to Using Creative Commons Licences"
+- "Open Content -- Navigating Creative Commons Licenses"
   by @Kreutzer2024
 - "Creative Commons Certificate for Educators, Academic Librarians,
   and Open Culture" by @CC2024Certificate

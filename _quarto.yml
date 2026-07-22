@@ -11,7 +11,9 @@ project:
 website:
   title: "Code Publishing Tutorial (Short version)"
   page-footer:
-    center: "© 2024–2025 Open Science Center at LMU Munich"
+    center: |
+      A recommended citation and license information for this tutorial
+      are provided on the [about page](about.qmd).
     border: false
   search:
     location: sidebar
@@ -48,8 +50,8 @@ website:
       - copyright.qmd
       - data.qmd
       - code.qmd
-      - choose_license.qmd
-      - make_readme.qmd
+      - choose-license.qmd
+      - make-readme.qmd
       - archive.qmd
       - section: "💡 In-depth material"
         contents:
