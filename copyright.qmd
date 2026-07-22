@@ -95,7 +95,7 @@ scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 Once you found a license, you need to determine whether it is a standard (boilerplate) license and
 whether it is a free/open. Then you can share the reused material in your repository.
 
-Here are typical licenses that are free/open:
+Below are listed typical licenses that are free/open. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our [Copyright Conditions](in_depth_material/copyright-conditions.qmd) page.
 
 [osi-list]: https://opensource.org/licenses
 [fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses

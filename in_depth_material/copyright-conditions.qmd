@@ -1,0 +1,155 @@
+---
+title: Conditions for Copyright
+subtitle: A More Detailed Explanation of Likely Scenarios
+---
+
+
+### Under Which Conditions?
+
+Finally, if you verified that the work has been made available to you under a free/open license,
+you need to understand the conditions under which you are allowed to include the work in your project folder
+and share it with others -- regardless of whether you modified it.
+
+In the following, we will explain the most important conditions of the licenses listed above.
+For other licenses we recommend reading their text in full and/or consulting with a lawyer.
+The conditions of many popular free/open licenses are also [summarized on ChooseALicense.com][cal-appendix],
+which you can use to get a general idea of a license.
+Specifically for software licenses the _Open Source Automation Development Lab_
+provides [useful checklists detailing the respective obligations][osadl].[^osadl-note]
+
+[cal-appendix]: https://choosealicense.com/appendix/
+[osadl]: https://www.osadl.org/Checklists/
+[^osadl-note]: Accessing the checklists requires a (free) account on their website.
+
+::: {#nte-private-use .callout-note}
+#### Private Use
+
+In the following, we only discuss the conditions under which works may be _shared_.
+This is because free/open licenses put no conditions on private use,
+where the work is not made available to others.
+:::
+
+#### Attribution
+
+Licenses may require that you provide attribution to the author(s)[^others]
+and to retain any copyright notices,[^example-notice]
+although the specifics vary between licenses.
+For example, Creative Commons licenses other than CC0 require
+that the name of the author, the title of the work, and a link to the work are provided
+and that existing copyright notices are retained.
+
+[^others]: or others whose names are provided with the original work
+[^example-notice]: Such as `Copyright (c) 2025 Jane Doe`
+
+Projects with many authors often explicitly allow for an attribution
+to the collective as a whole rather than being mentioned individually.
+Software projects may use copyright notices that only contain the project name,
+such as `Copyright (c) 2020-2025 The XYZ Project Contributors` [@Winslow2020].
+
+Where to put the attribution depends on the type of the work,
+but in general it is best to keep it close to where the work is used
+and to provide all required information. 
+For images, for example, this can be a small text next to the image.
+
+
+#### Modifications of the work 
+
+If a work has been modified, some licenses may require that this is indicated (e.g., with a note "adapted from original"). 
+Other licenses forbid that a work is modified.
+For example, the `NoDerivatives` clause of the `CC-BY-ND-4.0` licenses say:
+
+> If you remix, transform, or build upon the material, you may not distribute the modified material.
+
+Hence, in this case you are free to reuse and redistribute the material - as long as you don't change it.
+
+#### Commercial reuse
+
+The NC clause in the Creative Commons BY-NC (Attribution–NonCommercial) license stands for "NonCommercial", meaning that others are allowed to use, share, adapt, and build upon the work -- but not for commercial purposes. This restriction prohibits any use that is primarily intended for or directed toward commercial advantage or monetary compensation. For example, using the work in an advertisement, selling it, or incorporating it into a product for sale would not be permitted without additional permission from the copyright holder. However, non-profit educational use, personal projects, or sharing within a non-commercial community is generally allowed, as long as proper attribution is given to the original creator.
+
+#### Indicate License / Add License Text
+
+Licenses may either require that one mentions the applicable license
+by name and possibly link ("Indicate license")
+or they even require to copy the full license text along with the used work ("Add license text").
+
+#### Copyleft
+
+If the original work has been made available under a "copyleft" license, 
+any derivative work that is shared with others
+must be put under the same license as the original work[^or-compatible]
+-- or you commit a copyright violation.
+
+This explains the origin of the term _copyleft_,
+as it "turns copyright around" to make works permanently free.
+In the realm of Creative Commons licenses, copyleft is also called _share alike_ (e.g. in the `CC-BY-SA-4.0` license).
+
+[^or-compatible]: or sometimes also under a later version or under a compatible license
+
+What is considered creation of a derivative work varies between jurisdictions,
+but the following are typical examples:
+translating a text into a different language,
+taking a picture of an artwork,
+adding a song to a video, adapting a computer program to fit own use cases,
+or taking a [screenshot of a computer program][commons-screenshots].
+In all of these cases, if the original work is under a copyleft license,
+then sharing of the resulting derivative work is only allowed
+if it is put under the same license.[^not-free-open]
+
+[^not-free-open]: Of course, if the original work is not made available
+under a free/open license (permissive or copyleft),
+then sharing your derivative work is, in general, not allowed.
+
+[commons-screenshots]: https://commons.wikimedia.org/wiki/Commons:Screenshots
+
+The question is then: Which uses of a work do not create a derivative work?
+In many cases, if an unaltered excerpt "is used to illuminate an idea
+or provide an example in another larger work" [@CC2024NoDerivs] no derivative work is made.
+The excerpt needs to "remain separate and distinct in the new context" [@Kreutzer2024, p. 44]
+and not be "merged with other material into a new and larger work" [@Kreutzer2024, p. 45].
+For example, embedding images in a document and clearly separating them from the rest
+or assembling works as part of a collection typically would not create a derivative work.
+However, due to a lack of case law, there is only little guidance
+on what constitutes a derivative work in general.
+
+Also note that the copyleft licenses we discuss here do not mandate sharing.
+Copyleft (and attribution) clauses are only triggered *if* the work is shared [@CC2015].
+This means that if you only use a work internally, you do not need to share your derivative works.
+
+
+::: {#tip-cc-licenses-checklist .callout-tip}
+#### Required Information under Creative Commons Licenses
+
+For most Creative Commons licenses,
+providing the following information is required (if available):
+
+- [ ] Original author name
+- [ ] Copyright notice
+- [ ] Title of the work
+  - [ ] Link to the work
+- [ ] License name
+  - [ ] Link to the license
+- [ ] Link to warranty disclaimer
+- [ ] Indicate modification
+:::
+
+Obviously, if you are in doubt whether a condition of the license applies in your use case,
+it is better to either follow it or to ask the author for clarification or explicit permission.
+
+
+We recommend that you always provide attribution for all works under a free/open license
+-- even if the license does not strictly require it (e.g., CC0).
+This also follows from the rules of good scientific practice (and not only from copyright law).
+
+
+::: {#imp-non-copyright-restrictions .callout-important}
+#### Non-copyright Restrictions
+
+The free/open licenses we discuss here mostly grant copyrights
+(with some of them explicitly granting patent rights and _sui generis_ database rights).
+Therefore, you may lack other rights such as personality, privacy, moral, or trademark rights.
+For example, [sharing photos that depict people][commons-photographs]
+is not only a matter of copyright, but also of privacy rights.
+Also, their commercial use may require the consent of the depicted person.
+:::
+
+[commons-photographs]: https://commons.wikimedia.org/wiki/Commons:Photographs_of_identifiable_people
