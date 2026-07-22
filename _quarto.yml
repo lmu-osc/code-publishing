@@ -52,6 +52,8 @@ website:
         contents:
           - href: in_depth_material/introduction_copyright.qmd
             text: "Introduction to Copyright and Licensing"
+          - href: in_depth_material/copyright-conditions.qmd
+            text: "Copyright Conditions"
           - href: in_depth_material/data_dic_generation.qmd
             text: "Automatic Generation of Data Dictionaries"
 # End Website
