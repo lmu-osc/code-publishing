@@ -28,7 +28,7 @@ This typically includes:
 Copyright and licensing can be complicated. 
 In this chapter, we focus on rather simple (but typical) situations.
 For an in-depth explanation of copyright and licenses, 
-see our supplementary in-depth material "[Introduction to Copyright and Licenses](in_depth_material/introduction_copyright.qmd)".
+see our supplementary material "[Introduction to Copyright and Licenses](in_depth_material/introduction_copyright.qmd)".
 
 
 ## Short Introduction to Copyright and Licenses
@@ -45,7 +45,7 @@ We strongly recommend to use *existing boilerplate licenses*
 (and not to craft your own license text).
 
 ::: {.column-margin}
-For the purpose of this chapter, by _license_ we mean _copyright license_.
+For the purpose of this tutorial, by _license_ we mean _copyright license_.
 :::
 
 Works under a free/open license "can be freely studied, applied, copied and/or modified,
@@ -54,8 +54,8 @@ Importantly, this also means that others do not need to ask or notify the author
 and that they can use it also for commercial purposes. If you modified the work and put a sufficient amount of creativity into it,
 the result is called a _derivative work_.
 
-Even for free licenses, authors can place certain demands on re-users of their material.
-For example, they can (optionally) ...
+Even for free/open licenses, authors can place certain demands on re-users of their material.
+For example, they can (optionally)...
 
 - demand that they are credited as the creators of a work,
 - that the original license must be indicated when a work is reused, 
@@ -78,7 +78,7 @@ yet another means of communicating its copyright status might exist.
 For media from Wikimedia Commons, an [Attribution Generator][commons-gen] exists.
 
 If you cannot find any license, the work might be
-in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it.
+in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it, but still should credit the original creator(s) in accordance with good scientific practice.
 
 If no license notice is present and the work is *not* in the public domain,
 it is by default  _in copyright_ and you are generally not allowed to share it with others.
@@ -93,7 +93,7 @@ scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 [commons-templates]: https://commons.wikimedia.org/wiki/Commons:Email_templates
 
 Once you found a license, you need to determine whether it is a standard (boilerplate) license and
-whether it is a free/open. Then you can share the reused material in your repository.
+whether it is a free/open. Then you can share the reused material in your repository according to the terms of the license.
 
 Below are listed typical licenses that are free/open. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our supplementary [Copyright Conditions](in_depth_material/copyright-conditions.qmd) page.
 
@@ -220,7 +220,7 @@ In their most recent version this includes the following licenses:
   [Link to full text][cc0-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
+  <summary>Creative Commons Attribution 4.0 (CC\ BY\ 4.0)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -231,7 +231,7 @@ In their most recent version this includes the following licenses:
   [Link to full text][cc-by-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
+  <summary>Creative Commons Attribution-ShareAlike 4.0 (CC\ BY-SA\ 4.0`)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -275,6 +275,9 @@ Watch out for any signs that the license for the database and its content are no
 In the following, we list some popular free/open data licenses:
 
 :::: unstyled-list
+
+*Note*: The listed conditions are the *major* conditions for sharing (there might be additional conditions defined in the license).
+
 - <details>
   <summary>CC0 1.0 (`CC0-1.0`)</summary>
   __You can share under these conditions__: (none)
@@ -282,7 +285,7 @@ In the following, we list some popular free/open data licenses:
   [Link to full text][cc0-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
+  <summary>Creative Commons Attribution 4.0 (CC\ BY\ 4.0)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -293,7 +296,7 @@ In the following, we list some popular free/open data licenses:
   [Link to full text][cc-by-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
+  <summary>Creative Commons Attribution-ShareAlike 4.0 (CC\ BY-SA\ 4.0)</summary>
   __You can share under these conditions__:
   
   - Attribution

@@ -63,15 +63,20 @@ For images, for example, this can be a small text next to the image.
 
 If a work has been modified, some licenses may require that this is indicated (e.g., with a note "adapted from original"). 
 Other licenses forbid that a work is modified.
-For example, the `NoDerivatives` clause of the `CC-BY-ND-4.0` licenses say:
+For example, the `NoDerivatives` clause of the CC\ BY-ND\ 4.0 licenses say:
 
 > If you remix, transform, or build upon the material, you may not distribute the modified material.
 
-Hence, in this case you are free to reuse and redistribute the material - as long as you don't change it.
+Hence, in this case you are free to reuse and redistribute the material -- as long as you don't change it.
 
 #### Commercial reuse
 
-The NC clause in the Creative Commons BY-NC (Attribution–NonCommercial) license stands for "NonCommercial", meaning that others are allowed to use, share, adapt, and build upon the work -- but not for commercial purposes. This restriction prohibits any use that is primarily intended for or directed toward commercial advantage or monetary compensation. For example, using the work in an advertisement, selling it, or incorporating it into a product for sale would not be permitted without additional permission from the copyright holder. However, non-profit educational use, personal projects, or sharing within a non-commercial community is generally allowed, as long as proper attribution is given to the original creator.
+The NC clause in the Creative Commons BY-NC (Attribution–NonCommercial) license stands for "NonCommercial",
+ meaning that others are allowed to use, share, adapt, and build upon the work -- 
+ but not for commercial purposes. 
+ This restriction prohibits any use that is primarily intended for or directed toward commercial advantage or monetary compensation. 
+ For example, using the work in an advertisement, selling it, or incorporating it into a product for sale would not be permitted without additional permission from the copyright holder. 
+ However, non-profit educational use, personal projects, or sharing within a non-commercial community is generally allowed, as long as proper attribution is given to the original creator.
 
 #### Indicate License / Add License Text
 
@@ -88,7 +93,7 @@ must be put under the same license as the original work[^or-compatible]
 
 This explains the origin of the term _copyleft_,
 as it "turns copyright around" to make works permanently free.
-In the realm of Creative Commons licenses, copyleft is also called _share alike_ (e.g. in the `CC-BY-SA-4.0` license).
+In the realm of Creative Commons licenses, copyleft is also called _share alike_ (e.g. in the CC\ BY-SA\ 4.0 license).
 
 [^or-compatible]: or sometimes also under a later version or under a compatible license
 

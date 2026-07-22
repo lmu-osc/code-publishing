@@ -215,7 +215,7 @@ More often than not, however, the situation is a little more complicated:
   under a different license than the original work.
 :::
 
-#### Public domain
+#### {#public-domain} Public domain
 
 If you cannot find any license, the work might be
 in the public domain^[in Germany: _Gemeinfreiheit_] depending on national law.
@@ -289,7 +289,7 @@ Some of the most common free/open software licenses are listed below:
 :::: unstyled-list
 - <details>
   <summary>GNU Affero General Public License v3.0 (`AGPL-3.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -301,7 +301,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>GNU General Public License v3.0 (`GPL-3.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -313,7 +313,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>GNU Lesser General Public License v3.0 (`LGPL-3.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -325,7 +325,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>Apache License 2.0 (`Apache-2.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -335,7 +335,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>Mozilla Public License 2.0 (`MPL-2.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -346,7 +346,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>MIT License (`MIT`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -355,7 +355,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>BSD 3-Clause "New" or "Revised" License (`BSD-3-Clause`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -364,7 +364,7 @@ Some of the most common free/open software licenses are listed below:
   </details>
 - <details>
   <summary>BSD 2-Clause "Simplified" License (`BSD-2-Clause`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Add license text
@@ -393,13 +393,13 @@ In their most recent version this includes the following licenses:
 :::: unstyled-list
 - <details>
   <summary>CC0 1.0 (`CC0-1.0`)</summary>
-  __Major conditions when sharing works__: (none)
+  __You can share under these conditions__: (none)
   
   [Link to full text][cc0-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
-  __Major conditions when sharing works__:
+  <summary>Creative Commons Attribution 4.0 (CC\ BY\ 4.0)</summary>
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -409,8 +409,8 @@ In their most recent version this includes the following licenses:
   [Link to full text][cc-by-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
-  __Major conditions when sharing works__:
+  <summary>Creative Commons Attribution-ShareAlike 4.0 (CC\ BY-SA\ 4.0)</summary>
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -450,18 +450,21 @@ For example, with a database of artworks, the artworks may be licensed individua
 but the license for the database as a whole might have been chosen by the curator,
 including the selection of entries, field names and any _sui generis_ database rights.
 Watch out for any signs that the license for the database and its content are not the same.
-In the following, we list some popular free/open data licenses:
+In the following, we list some popular free/open data licenses and the major conditions under which works can be shared:
 
 :::: unstyled-list
+
+*Note*: The listed conditions are the *major* conditions for sharing (there might be additional conditions defined in the license).
+
 - <details>
   <summary>CC0 1.0 (`CC0-1.0`)</summary>
-  __Major conditions when sharing works__: (none)
+  __You can share under these conditions__: (none)
   
   [Link to full text][cc0-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
-  __Major conditions when sharing works__:
+  <summary>Creative Commons Attribution 4.0 (CC\ BY\ 4.0)</summary>
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -471,8 +474,8 @@ In the following, we list some popular free/open data licenses:
   [Link to full text][cc-by-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
-  __Major conditions when sharing works__:
+  <summary>Creative Commons Attribution-ShareAlike 4.0 (CC\ BY-SA\ 4.0)</summary>
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -490,13 +493,13 @@ You might also encounter the following, less popular free/open data licenses:
 :::: unstyled-list
 - <details>
   <summary>Open Data Commons Public Domain Dedication & License 1.0 (`PDDL-1.0`)</summary>
-  __Major conditions when sharing works__: (none)
+  __You can share under these conditions__: (none)
   
   [Link to full text](https://opendatacommons.org/licenses/pddl/1-0/)
   </details>
 - <details>
   <summary>Community Data License Agreement Permissive 2.0 (`CDLA-Permissive-2.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Add license text
   
@@ -504,7 +507,7 @@ You might also encounter the following, less popular free/open data licenses:
   </details>
 - <details>
   <summary>Community Data License Agreement Permissive 1.0 (`CDLA-Permissive-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -513,7 +516,7 @@ You might also encounter the following, less popular free/open data licenses:
   </details>
 - <details>
   <summary>Community Data License Agreement Sharing 1.0 (`CDLA-Sharing-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -531,7 +534,7 @@ If any of these licenses is used, the license for the content must be stated sep
 :::: unstyled-list
 - <details>
   <summary>Open Data Commons Open Database License v1.0 (`ODbL-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -542,7 +545,7 @@ If any of these licenses is used, the license for the content must be stated sep
   </details>
 - <details>
   <summary>Open Data Commons Attribution License v1.0 (`ODC-By-1.0`)</summary>
-  __Major conditions when sharing works__:
+  __You can share under these conditions__:
   
   - Attribution
   - Indicate license
@@ -760,7 +763,7 @@ For example, Creative Commons licenses other than CC0 also require that
 For most Creative Commons licenses,
 providing the following information is required (if available):
 
-- [ ] Author name
+- [ ] Original author name
 - [ ] Copyright notice
 - [ ] Title of the work
   - [ ] Link to the work
