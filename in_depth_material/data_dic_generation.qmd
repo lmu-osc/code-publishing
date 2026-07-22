@@ -1,5 +1,5 @@
 ---
-title: "Automatic Generation of Data Dictionaries"
+title: "Generation of Data Dictionaries Using R"
 date: "today"
 engine: knitr
 ---
@@ -15,14 +15,7 @@ You can download it and put it into your project folder:
 ```{r}
 #| include: false
 
-invisible(loadNamespace("palmerpenguins")) # Tell renv that we need this package
-stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
-
-write.csv(
-  palmerpenguins::penguins,
-  file = "data.csv",
-  row.names = FALSE
-)
+stopifnot(file.exists("data.csv"))
 ```
 
 [data.csv](data.csv){.btn .btn-lg .btn-info download="data.csv"}

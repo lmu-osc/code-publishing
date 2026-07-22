@@ -12,7 +12,29 @@ engine: knitr
 invisible(loadNamespace("palmerpenguins")) # Tell renv that we need this package
 stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
 
-write.csv(palmerpenguins::penguins, file = "data.csv", row.names = FALSE)
+dat <- palmerpenguins::penguins
+
+# Convert factors to integers
+idx <- sapply(dat, is.factor)
+dat[idx] <- lapply(dat[idx], as.integer)
+
+dat[is.na(dat)] <- -99L
+
+# Add extra column for training purposes
+set.seed(1056517553L)
+dat$cuteness <- sample.int(10, nrow(dat), replace = TRUE)
+
+write.csv(
+  dat,
+  file = "data.csv",
+  row.names = FALSE
+)
+write.csv(
+  dat,
+  file = "in_depth_material/data.csv",
+  row.names = FALSE
+)
+rm(idx, dat)
 ```
 
 You can now download the data set we have prepared for you
@@ -30,6 +52,7 @@ and contains the recorded bill lengths and sex of penguins
 living on three islands in the Palmer Archipelago, Antarctica.
 It was made available by Allison Horst, Alison Hill, and Kristen Gorman
 under the license [CC0\ 1.0][cc0].
+For educational purposes, we added the fictitious column `cuteness`.
 
 [palmerpenguins]: https://allisonhorst.github.io/palmerpenguins/
 [cc0]: https://creativecommons.org/publicdomain/zero/1.0/
@@ -60,6 +83,32 @@ Another resource to look at is the presentation
 [Synthpop](https://www.synthpop.org.uk/), [OpenDP](https://opendp.org/),
 or [Greenmask](https://www.greenmask.io/).
 
+Let's take a first look at our data:
+
+```{r}
+#| class-output: "txt code-overflow-scroll"
+#| attr-output: 'filename="R Console"'
+
+dat <- read.csv("data.csv")
+str(dat)
+```
+
+We can see that the variables `species`, `island`, and `sex` are stored as integers:
+
+- species
+  - 1 = Adelie
+  - 2 = Chinstrap
+  - 3 = Gentoo
+- island
+  - 1 = Biscoe
+  - 2 = Dream
+  - 3 = Torgersen
+- sex
+  - 1 = female
+  - 2 = male
+
+Further, missing values are stored as `-99`. We need to document this information somewhere!
+
 ## Add a Data Dictionary
 
 Whether or not distributing the data set,
@@ -71,19 +120,17 @@ The recommendation for data dictionaries vary between fields --
 both in terms of the recommended content (i.e., what exactly should be documented) 
 and the technical implementation (i.e., which file formats should be used).
 
-*For the purpose of this exercise, we keep it easy and propose that you 
+_For the purpose of this exercise, we keep it easy and propose that you 
 manually create a file with the data dictionary
 (e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), 
-documenting only the bare minimum.*
+documenting only the bare minimum._
 
 <!-- TODO: Add a link to the forthcoming data dictionary OSC tutorial -->
 
 ::: {#tip-in-depth .callout-tip collapse="false"}
-### Manual is too much work? Automatic generation of (machine-readable) data dictionaries
-Our in-depth supplementary material "[Automatic Generation of Data Dictionaries](in_depth_material/data_dic_generation.qmd)" explains how you can automatically create
-a data dictionary with an R package. The package reads the data set and extracts relevant information from it. 
-This approach is in particular useful if you need to document data sets with many variables.
-
+### Creating data dictionaries using R
+Our in-depth supplementary material "[Generation of Data Dictionaries Using R](in_depth_material/data_dic_generation.qmd)"
+explains how you can create a data dictionary with R.
 This advanced chapter also contains a section on how to create machine-readable data dictionaries.
 :::
 
@@ -109,7 +156,6 @@ Here's an example from a different data set, with variables in rows, and the dic
 | blood_pressure    | Blood Pressure (systolic) | integer | systolic blood pressure                 |                                                                                         | mmHg        | -99 = Not measured |
 | life_satisfaction | Life Satisfaction         | integer | "How satisfied are you with your life?" | 1 = Very dissatisfied; 2 = Dissatisfied; 3 = Neutral; 4 = Satisfied; 5 = Very satisfied | scale (1–5) | -99 = Not answered |
 
-
 ### Practical Exercise: Add your own data dictionary
 
 Now go ahead and create a data dictionary for the penguins data set, 
@@ -120,16 +166,23 @@ Save the data dictionary in the same folder as the actual data set file.
 ::: {#tip-data_dic .callout-tip collapse="true"}
 #### Data dictionary for penguins data set (Solution)
 
-| name              | label          | type    | description                          | values                    | units | missing_codes |
-| ----------------- | -------------- | ------- | ------------------------------------ | ------------------------- | ----- | ------------- |
-| species           | Species        | string  | Penguin species                      | Adelie; Gentoo; Chinstrap |       | NA = Missing  |
-| island            | Island         | string  | Island where individual was observed | Torgersen; Biscoe; Dream  |       | NA = Missing  |
-| bill_length_mm    | Bill length    | float   | Length of the bill (beak)            |                           | mm    | NA = Missing  |
-| bill_depth_mm     | Bill depth     | float   | Depth of the bill (beak)             |                           | mm    | NA = Missing  |
-| flipper_length_mm | Flipper length | integer | Length of the flipper                |                           | mm    | NA = Missing  |
-| body_mass_g       | Body mass      | integer | Body mass                            |                           | g     | NA = Missing  |
-| sex               | Sex            | string  | Sex of the penguin                   | male; female              |       | NA = Missing  |
-| year              | Year           | integer | Year of data collection              | 2007; 2008; 2009          |       |               |
+| name              | label          | type    | description                          | item_text                              | values                                | units | missing_codes |
+| ----------------- | -------------- | ------- | ------------------------------------ | -------------------------------------- | ------------------------------------- | ----- | ------------- |
+| species           | Species        | string  | Penguin species                      |                                        | 1 = Adelie; 2 = Chinstrap; 3 = Gentoo |       | -99 = Missing |
+| island            | Island         | string  | Island where individual was observed |                                        | 1 = Biscoe; 2 = Dream; 3 = Torgersen  |       | -99 = Missing |
+| bill_length_mm    | Bill length    | float   | Length of the bill (beak)            |                                        |                                       | mm    | -99 = Missing |
+| bill_depth_mm     | Bill depth     | float   | Depth of the bill (beak)             |                                        |                                       | mm    | -99 = Missing |
+| flipper_length_mm | Flipper length | integer | Length of the flipper                |                                        |                                       | mm    | -99 = Missing |
+| body_mass_g       | Body mass      | integer | Body mass                            |                                        |                                       | g     | -99 = Missing |
+| sex               | Sex            | string  | Sex of the penguin                   |                                        | 1 = female; 2 = male                  |       | -99 = Missing |
+| year              | Year           | integer | Year of data collection              |                                        | 2007; 2008; 2009                      |       |               |
+| cuteness          | Cuteness       | integer | Subjective cuteness                  | How cute do you think this penguin is? | 2007; 2008; 2009                      |       |               |
+
+Depending on the type of data, it may also be necessary
+to describe sampling procedures (e.g., selection criteria),
+measurement instruments (e.g., established questionnaires),
+appropriate weighting,
+already applied preprocessing steps, or contact information.
 
 :::
 
