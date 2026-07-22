@@ -1,5 +1,6 @@
 ---
 title: "Automatic Generation of Data Dictionaries"
+date: "today"
 engine: knitr
 ---
 
@@ -30,7 +31,7 @@ You can install the `datawizard` package into our `renv` environment using:
 
 [datawizard]: https://easystats.github.io/datawizard/
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 renv::install("datawizard")
 ```
 
@@ -54,7 +55,7 @@ format:
 
 Then, save it as `data_dictionary.qmd` by clicking on _File_ > _Save_.
 
-To create the actual data dictionary, first write a description for all columns
+To create the actual data dictionary, first write a description for every column
 so others can understand what the variable names mean.
 Where necessary, also document their value
 -- this is especially important if their meaning is non-obvious.
@@ -147,6 +148,7 @@ but also some other information about each variable
 #| echo: false
 #| column: "body-outset"
 #| classes: plain
+#| tbl-cap: "{.borderless .hover}"
 
 datawizard::data_codebook(dat) |>
   datawizard::data_select(exclude = ID) |>
@@ -205,7 +207,7 @@ quarto render data_dictionary.qmd
 ```
 
 This should create the file `data_dictionary.html`
-which you open and view in your web browser.
+which you can open and view in your web browser.
 
 If you want to learn more about the sharing of research data,
 have a look at the tutorial "[FAIR research data management][fair-tutorial]".
@@ -227,7 +229,7 @@ as they are [not supported][enum-labels] by the specification we are using.
 
 First, store the title and description of the data set as a whole:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 table_info <- c(
   title = "penguins data set",
   description = "Size measurements for adult foraging penguins near Palmer Station, Antarctica"
@@ -239,7 +241,7 @@ As before, also provide a reference to the source.
 ```{r}
 #| echo: false
 #| class-output: "r code-overflow-wrap"
-#| attr-output: 'filename="Console"'
+#| attr-output: 'filename="R Console"'
 
 # We have provided the data set as CSV file to the readers.
 # Therefore, we cannot assume or require that readers have
@@ -253,7 +255,7 @@ citation("palmerpenguins", auto = TRUE)$url |>
 
 Next, create a list of the categorical variables' valid values:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 valid_vals <- list(
   species = c("Adelie", "Gentoo", "Chinstrap"),
   island = c("Torgersen", "Biscoe", "Dream"),
@@ -264,7 +266,7 @@ valid_vals <- list(
 
 Finally, store the descriptions of the variables we already created earlier:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # Store the description of variables
 vars <- c(
   species = "a character string denoting penguin species",
@@ -280,9 +282,10 @@ vars <- c(
 
 Generally, metadata are either stored embedded into the data or externally,
 for example, in a separate file.
-We will use the "[frictionless data](https://frictionlessdata.io/)" standard,
+We will use the "[frictionless data](https://specs.frictionlessdata.io/)" standard,
 where metadata are stored separately.
-Another alternative would be [RO-Crate](https://www.researchobject.org/ro-crate/).
+Alternatives would be [RO-Crate](https://www.researchobject.org/ro-crate/)
+and [Psych-DS](https://psych-ds.github.io/).
 
 Specifically, one can use the R package [`frictionless`][frictionless]
 to create a _schema_ which describes the structure of the data.[^frictionless-note]
@@ -300,7 +303,7 @@ of the frictionless data standard has been released.
 As of November 2024, the R package `frictionless` only supports the first version,
 though support for v2 is [planned](https://github.com/frictionlessdata/frictionless-r/labels/datapackage%3Av2).
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 # Install {frictionless} and the required dependency {stringi}
 renv::install(c(
   "frictionless",
