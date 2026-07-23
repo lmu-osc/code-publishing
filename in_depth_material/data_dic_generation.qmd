@@ -4,7 +4,7 @@ date: "today"
 engine: knitr
 ---
 
-**Note: This is an add-on to the Chapter "[Add Data and Data Dictionary](/data.qmd)". It describes how you can (a) automatically generate data dictionaries with an R package, and (b) how to create a machine readable documentation of your data.**
+_Note: This is an add-on to the Chapter "[Add Data and Data Dictionary](/data.qmd)". It describes how to (a) generate data dictionaries with R, and (b) how to create a machine readable documentation of the data._
 
 ## Automatic Generation of Data Dictionaries
 
