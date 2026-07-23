@@ -9,6 +9,13 @@ author:
     orcid: "0000-0001-5963-9229"
   - name: "Felix Schönbrodt"
     orcid: "0000-0002-8282-3910"
+doi: "10.5281/zenodo.16631977"
+citation:
+  type: "book"
+  title: "Code Publishing Tutorial"
+  url: "https://lmu-osc.github.io/code-publishing/"
+  issued: 2025-07-31
+  publisher: "LMU Open Science Center"
 bibliography: grateful-refs.bib
 ---
 

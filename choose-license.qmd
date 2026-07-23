@@ -206,7 +206,7 @@ One should take special care when applying license to the following types of wor
   the output is subject to the restrictions laid out in the license.
   For example, if geospatial data were to be licensed under [CC\ BY\ 4.0][cc-by],
   all maps produced from the data would likely need to fulfill
-  this license's obligation for unrestricted access (its Anti-DRM provision)
+  this license's obligation for unrestricted access (its anti-DRM provision)
   if shared [see @Poole2017].
   Similarly, following an example from @Matt2009,
   if one were to choose the copyleft license [CC\ BY-SA\ 4.0][cc-by-sa]
@@ -218,7 +218,7 @@ One should take special care when applying license to the following types of wor
   as it was specifically designed not to apply to works produced from the data in the database.
   Otherwise [CC0\ 1.0][cc0] is an excellent choice for data.
 - __works in the public domain__: If a work is already in the public domain,
-  it should be marked using the [PDM 1.0][pdm],
+  it should be marked using the [PDM\ 1.0][pdm],
   rather than applying a waiver such as the [CC0\ 1.0][cc0] (or another license).
 :::
 
@@ -244,7 +244,7 @@ Therefore, if you use an R package under a copyleft license to create a figure,
 you are likely the copyright owner.
 However, if the output is based on data,
 it can be considered a derivative work of the data and the license of the data also applies.
-For example, maps may be considered as a derivative of the geographic data they are based on.
+For example, maps may be considered a derivative work of the geographic data they are based on.
 
 [^output-exception]: The exception is when the software is part of the output [see @FSF2024].
 
@@ -262,7 +262,7 @@ You can learn which license an installed package uses via
 And to identify which licenses are being used by the R packages your project depends on,
 you can use the following code:
 
-```{.r filename="Console"}
+```{.r filename="R Console"}
 deps <- renv::dependencies()$Package |>
   unique() |>
   pak::pkg_deps(dependencies = NA) |>
@@ -372,8 +372,8 @@ There are multiple standards on how to do so:
   Alternatively, it details which license applies to what
   and the individual licenses are stored in the same or in different files.
 
-- A summary of the licensing situation is often given in a `README` file,
-  whose creation will be discussed [later](make_readme.qmd).
+- A summary of the licensing situation is often given in a README file,
+  whose creation will be discussed [later](make-readme.qmd).
 
 - If only parts of a file are covered by a certain license,
   then it might make sense to indicate this directly in the file.
@@ -549,27 +549,35 @@ are made available to you under [CC0\ 1.0][cc0]
 as is all code in this tutorial (e.g., for the data analysis).
 Therefore, you can apply any license to your modified version.
 Please apply the license of your choice now,
-using any of the methods mentioned above (except the `README`,
-which we will [cover later](make_readme.qmd)).
+using any of the methods mentioned above (except the README,
+which we will [cover later](make-readme.qmd)).
 
 ::: {#tip-manuscript-licensetxt .callout-tip collapse="true"}
 ### Addition to `LICENSE.txt` (Solution)
 
 In the following example, the edited manuscript files have been multi-licensed
-under [AGPLv3][agpl] (or later) or (at option of the reuser) under [CC\ BY-SA\ 4.0][cc-by-sa],
+under [AGPLv3][agpl] (or later) or (at the option of the reuser) under [CC\ BY-SA\ 4.0][cc-by-sa],
 while the bibliography is made available under CC0\ 1.0.
 
 [agpl]: https://www.gnu.org/licenses/agpl-3.0.html
 
 ```{.txt .code-overflow-wrap filename="LICENSE.txt"}
-The Quarto documents stored in "Manuscript.qmd", "Manuscript.tex", and "Manuscript.pdf" by Josephine Zerna, Christoph Scheffel, and <YOUR NAME> are available under AGPLv3 (or later) <https://www.gnu.org/licenses/agpl-3.0.html> or (at your option) under CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>.
+The Quarto documents stored in "Manuscript.qmd", "Manuscript.tex", and "Manuscript.pdf" by Josephine Zerna, Christoph Scheffel, and <YOUR NAME> are available under AGPLv3 (or later) <https://www.gnu.org/licenses/agpl-3.0.html> or (at your option) under CC\ BY-SA\ 4.0 <https://creativecommons.org/licenses/by-sa/4.0/>.
 
-The bibliography (stored in "Bibliography.bib") by Florian Kohrt and <YOUR NAME> is available under CC0 1.0 <https://creativecommons.org/publicdomain/zero/1.0/>.
+The bibliography (stored in "Bibliography.bib") by Florian Kohrt and <YOUR NAME> is available under CC0\ 1.0 <https://creativecommons.org/publicdomain/zero/1.0/>.
 ```
 
 As the AGPLv3 requires reusers adding the [full license text](https://www.gnu.org/licenses/agpl-3.0.txt),
 we recommend to also copy it to the project folder (if not already in there).
 :::
+
+After choosing a license, commit your changes:
+
+```{.bash filename="Terminal"}
+git status
+git add .
+git commit -m "Add license"
+```
 
 ## Additional Figures {.appendix}
 

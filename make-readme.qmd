@@ -76,7 +76,12 @@ If you just write "We used R to analyze the data" in your manuscript or in the *
 
 R itself and the R packages are already documented as our tutorial project uses `renv`: The information is stored in the `renv.lock` file at the root of the project, which tracks each package’s version and source. In this case, you can simply refer to that in the README file and all is done:
 
-> The R and packages versions used to compute the results are stored in the `renv` environment (see `renv.lock` file).
+```{.r filename="R Console"}
+# Find all R package dependencies
+deps <- renv::dependencies()$Package |>
+  unique() |>
+  pak::pkg_deps(dependencies = NA) |>
+  getElement("package")
 
 If you do *not* use `renv`, the easiest solution to get a list of all needed packages is the `sessionInfo()` command. *Call it **after** you loaded all necessary packages!*
 
@@ -133,8 +138,7 @@ The most important file in this project folder is `Manuscript.qmd` which contain
 
 - `Bibliography.bib`: bibliographic references used in the manuscript
 - `data.csv`: a data set containing the simplified `palmerpenguins` data
-- `data_dictionary.html`: a dictionary to the data file,
-  created using `data_dictionary.qmd`
+- `data_dictionary.html`: a dictionary to the data file, created using `data_dictionary.qmd`
 
 The folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF according to APA guidelines.
 ```
@@ -231,3 +235,11 @@ Of course, you would use the same license for the manuscript that you chose in t
 The manuscript files `Manuscript.qmd`, `Manuscript.tex`, and `Manuscript.pdf` by Josephine Zerna, Christoph Scheffel, and <YOUR NAME> are available under [CC\ BY-SA\ 4.0](https://creativecommons.org/licenses/by-sa/4.0/). For further copyright information, see `LICENSE.txt`.
 ```
 :::
+
+After adding a README, commit your changes:
+
+```{.bash filename="Terminal"}
+git status
+git add .
+git commit -m "Add README"
+```

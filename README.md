@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/791698287.svg)](https://doi.org/10.5281/zenodo.16631976)
+
 # Code Publishing Tutorial
 
 This repository contains a tutorial on code publishing created for the LMU Open Science Center.
@@ -52,8 +54,8 @@ please read the [contributing notes](CONTRIBUTING.md) before.
 
 ## License
 
-Except where noted otherwise, the narrative text in this tutorial is licensed under [CC BY-SA 4.0][cc-by-sa];
-the code without any narrative text is also (at your option) available under [CC0 1.0][cc0].
+Except where noted otherwise, the narrative text in this tutorial is licensed under [CC\ BY-SA\ 4.0][cc-by-sa];
+the code without any narrative text is also (at your option) available under [CC0\ 1.0][cc0].
 
 [cc-by-sa]: LICENSE-CC-BY-SA.txt
 [cc0]: LICENSE-CC0.txt

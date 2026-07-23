@@ -14,7 +14,11 @@ stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
 # write both in the top folder and in the in-depth folder
 # (so that both scripts can reference the data without relative paths)
 write.csv(palmerpenguins::penguins, file = "data.csv", row.names = FALSE)
-write.csv(palmerpenguins::penguins, file = "in_depth_material/data.csv", row.names = FALSE)
+write.csv(
+  palmerpenguins::penguins,
+  file = "in_depth_material/data.csv",
+  row.names = FALSE
+)
 ```
 
 You can now download the data set we have prepared for you
@@ -59,7 +63,8 @@ Another resource to look at is the presentation
 
 [^anon-synth-tools]: For example, using [Amnesia](https://amnesia.openaire.eu/),
 [ARX](https://arx.deidentifier.org/), [sdcTools](https://github.com/sdcTools),
-[Synthpop](https://www.synthpop.org.uk/), or [OpenDP](https://opendp.org/).
+[Synthpop](https://www.synthpop.org.uk/), [OpenDP](https://opendp.org/),
+or [Greenmask](https://www.greenmask.io/).
 
 ## Add a Data Dictionary
 
@@ -111,7 +116,7 @@ Here's an example from a different data set, with variables in rows, and the dic
 | life_satisfaction | Life Satisfaction         | integer | "How satisfied are you with your life?" | 1 = Very dissatisfied; 2 = Dissatisfied; 3 = Neutral; 4 = Satisfied; 5 = Very satisfied | scale (1–5) | -99 = Not answered |
 
 
-### ✍️ Practical Exercise: Add your own data dictionary
+### Practical Exercise: Add your own data dictionary
 
 Now go ahead and create a data dictionary for the penguins data set, 
 in a software (text or spreadsheet) of your choice.
@@ -134,7 +139,7 @@ Save the data dictionary in the same folder as the actual data set file.
 
 :::
 
-## ✍️ Practical Exercise: Add Data Citation and Attribution
+## Practical Exercise: Add Data Citation and Attribution
 
 All data relied upon should be cited in the manuscript
 to allow for precise identification and access.
@@ -154,7 +159,6 @@ Show the correct reference of the data set:
 ```{r}
 #| class.output: "bib code-overflow-scroll"
 #| attr-output: 'filename="Bibliography.bib"'
-
 citation("palmerpenguins", auto = TRUE) |>
   transform(key = "horst2020") |>
   toBibtex()
