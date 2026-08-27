@@ -215,7 +215,7 @@ More often than not, however, the situation is a little more complicated:
   under a different license than the original work.
 :::
 
-#### {#public-domain} Public domain
+#### Public domain {#public-domain}
 
 If you cannot find any license, the work might be
 in the public domain^[in Germany: _Gemeinfreiheit_] depending on national law.
