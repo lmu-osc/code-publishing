@@ -28,7 +28,7 @@ This typically includes:
 Copyright and licensing can be complicated. 
 In this chapter, we focus on rather simple (but typical) situations.
 For an in-depth explanation of copyright and licenses, 
-see our supplementary in-depth material "[Introduction to Copyright and Licenses](in_depth_material/introduction_copyright.qmd)".
+see our supplementary material "[Introduction to Copyright and Licenses](in_depth_material/introduction_copyright.qmd)".
 
 
 ## Short Introduction to Copyright and Licenses
@@ -45,7 +45,7 @@ We strongly recommend to use *existing boilerplate licenses*
 (and not to craft your own license text).
 
 ::: {.column-margin}
-For the purpose of this chapter, by _license_ we mean _copyright license_.
+For the purpose of this tutorial, by _license_ we mean _copyright license_.
 :::
 
 Works under a free/open license "can be freely studied, applied, copied and/or modified,
@@ -54,8 +54,8 @@ Importantly, this also means that others do not need to ask or notify the author
 and that they can use it also for commercial purposes. If you modified the work and put a sufficient amount of creativity into it,
 the result is called a _derivative work_.
 
-Even for free licenses, authors can place certain demands on re-users of their material.
-For example, they can (optionally) ...
+Even for free/open licenses, authors can place certain demands on re-users of their material.
+For example, they can (optionally)...
 
 - demand that they are credited as the creators of a work,
 - that the original license must be indicated when a work is reused, 
@@ -65,7 +65,7 @@ For example, they can (optionally) ...
 
 We explain below how to choose a license that brings the desired "settings".
 
-## Can I Share the Work of Others?
+## Can I Share the Work of Others? {#can-i-share-others-works}
 
 To determine whether a particular work can be included in the project folder
 and shared publicly, the first step is to search for its license.
@@ -78,7 +78,7 @@ yet another means of communicating its copyright status might exist.
 For media from Wikimedia Commons, an [Attribution Generator][commons-gen] exists.
 
 If you cannot find any license, the work might be
-in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it.
+in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it, but still should credit the original creator(s) in accordance with good scientific practice.
 
 If no license notice is present and the work is *not* in the public domain,
 it is by default  _in copyright_ and you are generally not allowed to share it with others.
@@ -93,9 +93,9 @@ scientific research exceptions, and the US-American [fair use][wiki-fair-use].
 [commons-templates]: https://commons.wikimedia.org/wiki/Commons:Email_templates
 
 Once you found a license, you need to determine whether it is a standard (boilerplate) license and
-whether it is a free/open. Then you can share the reused material in your repository.
+whether it is a free/open. Then you can share the reused material in your repository according to the terms of the license.
 
-Here are typical licenses that are free/open:
+Below are listed typical licenses that are free/open. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our supplementary [Copyright Conditions](in_depth_material/copyright-conditions.qmd) page.
 
 [osi-list]: https://opensource.org/licenses
 [fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses
@@ -220,7 +220,7 @@ In their most recent version this includes the following licenses:
   [Link to full text][cc0-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
+  <summary>Creative Commons Attribution 4.0 (CC\ BY\ 4.0)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -231,7 +231,7 @@ In their most recent version this includes the following licenses:
   [Link to full text][cc-by-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
+  <summary>Creative Commons Attribution-ShareAlike 4.0 (CC\ BY-SA\ 4.0`)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -275,6 +275,9 @@ Watch out for any signs that the license for the database and its content are no
 In the following, we list some popular free/open data licenses:
 
 :::: unstyled-list
+
+*Note*: The listed conditions are the *major* conditions for sharing (there might be additional conditions defined in the license).
+
 - <details>
   <summary>CC0 1.0 (`CC0-1.0`)</summary>
   __You can share under these conditions__: (none)
@@ -282,7 +285,7 @@ In the following, we list some popular free/open data licenses:
   [Link to full text][cc0-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution 4.0 (`CC-BY-4.0`)</summary>
+  <summary>Creative Commons Attribution 4.0 (CC\ BY\ 4.0)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -293,7 +296,7 @@ In the following, we list some popular free/open data licenses:
   [Link to full text][cc-by-text]
   </details>
 - <details>
-  <summary>Creative Commons Attribution-ShareAlike 4.0 (`CC-BY-SA-4.0`)</summary>
+  <summary>Creative Commons Attribution-ShareAlike 4.0 (CC\ BY-SA\ 4.0)</summary>
   __You can share under these conditions__:
   
   - Attribution
@@ -378,118 +381,6 @@ you can consult the [lists of licenses accepted at Wikimedia Commons][commons-ta
 Note, however, that some of the licenses there might be inappropriate for data,
 because they do not mention _sui generis_ database rights.
 :::
-
-
-### Under Which Conditions?
-
-Finally, if you verified that the work has been made available to you under a free/open license,
-you need to understand the conditions under which you are allowed to include the work in your project folder
-and share it with others -- regardless of whether you modified it.
-
-In the following, we will explain the most important conditions of the licenses listed above.
-For other licenses we recommend reading their text in full and/or consulting with a lawyer.
-The conditions of many popular free/open licenses are also [summarized on ChooseALicense.com][cal-appendix],
-which you can use to get a general idea of a license.
-Specifically for software licenses the _Open Source Automation Development Lab_
-provides [useful checklists detailing the respective obligations][osadl].[^osadl-note]
-
-[cal-appendix]: https://choosealicense.com/appendix/
-[osadl]: https://www.osadl.org/Checklists/
-[^osadl-note]: Accessing the checklists requires a (free) account on their website.
-
-::: {#nte-private-use .callout-note}
-#### Private Use
-
-In the following, we only discuss the conditions under which works may be _shared_.
-This is because free/open licenses put no conditions on private use,
-where the work is not made available to others.
-:::
-
-#### Attribution
-
-Licenses may require that you provide attribution to the author(s)[^others]
-and to retain any copyright notices,[^example-notice]
-although the specifics vary between licenses.
-For example, Creative Commons licenses other than CC0 require
-that the name of the author, the title of the work, and a link to the work are provided
-and that existing copyright notices are retained.
-
-[^others]: or others whose names are provided with the original work
-[^example-notice]: Such as `Copyright (c) 2025 Jane Doe`
-
-Projects with many authors often explicitly allow for an attribution
-to the collective as a whole rather than being mentioned individually.
-Software projects may use copyright notices that only contain the project name,
-such as `Copyright (c) 2020-2025 The XYZ Project Contributors` [@Winslow2020].
-
-Where to put the attribution depends on the type of the work,
-but in general it is best to keep it close to where the work is used
-and to provide all required information. 
-For images, for example, this can be a small text next to the image.
-
-
-#### Modifications of the work 
-
-If a work has been modified, some licenses may require that this is indicated (e.g., with a note "adapted from original"). 
-Other licenses forbid that a work is modified.
-For example, the `NoDerivatives` clause of the `CC-BY-ND-4.0` licenses say:
-
-> If you remix, transform, or build upon the material, you may not distribute the modified material.
-
-Hence, in this case you are free to reuse and redistribute the material - as long as you don't change it.
-
-#### Commercial reuse
-
-The NC clause in the Creative Commons BY-NC (Attribution–NonCommercial) license stands for "NonCommercial", meaning that others are allowed to use, share, adapt, and build upon the work -- but not for commercial purposes. This restriction prohibits any use that is primarily intended for or directed toward commercial advantage or monetary compensation. For example, using the work in an advertisement, selling it, or incorporating it into a product for sale would not be permitted without additional permission from the copyright holder. However, non-profit educational use, personal projects, or sharing within a non-commercial community is generally allowed, as long as proper attribution is given to the original creator.
-
-#### Indicate License / Add License Text
-
-Licenses may either require that one mentions the applicable license
-by name and possibly link ("Indicate license")
-or they even require to copy the full license text along with the used work ("Add license text").
-
-#### Copyleft
-
-If the original work has been made available under a "copyleft" license, 
-any derivative work that is shared with others
-must be put under the same license as the original work[^or-compatible]
--- or you commit a copyright violation.
-
-This explains the origin of the term _copyleft_,
-as it "turns copyright around" to make works permanently free.
-In the realm of Creative Commons licenses, copyleft is also called _share alike_ (e.g. in the `CC-BY-SA-4.0` license).
-
-[^or-compatible]: or sometimes also under a later version or under a compatible license
-
-What is considered creation of a derivative work varies between jurisdictions,
-but the following are typical examples:
-translating a text into a different language,
-taking a picture of an artwork,
-adding a song to a video, adapting a computer program to fit own use cases,
-or taking a [screenshot of a computer program][commons-screenshots].
-In all of these cases, if the original work is under a copyleft license,
-then sharing of the resulting derivative work is only allowed
-if it is put under the same license.[^not-free-open]
-
-[^not-free-open]: Of course, if the original work is not made available
-under a free/open license (permissive or copyleft),
-then sharing your derivative work is, in general, not allowed.
-
-[commons-screenshots]: https://commons.wikimedia.org/wiki/Commons:Screenshots
-
-The question is then: Which uses of a work do not create a derivative work?
-In many cases, if an unaltered excerpt "is used to illuminate an idea
-or provide an example in another larger work" [@CC2024NoDerivs] no derivative work is made.
-The excerpt needs to "remain separate and distinct in the new context" [@Kreutzer2024, p. 44]
-and not be "merged with other material into a new and larger work" [@Kreutzer2024, p. 45].
-For example, embedding images in a document and clearly separating them from the rest
-or assembling works as part of a collection typically would not create a derivative work.
-However, due to a lack of case law, there is only little guidance
-on what constitutes a derivative work in general.
-
-Also note that the copyleft licenses we discuss here do not mandate sharing.
-Copyleft (and attribution) clauses are only triggered *if* the work is shared [@CC2015].
-This means that if you only use a work internally, you do not need to share your derivative works.
 
 
 ::: {#tip-cc-licenses-checklist .callout-tip}
