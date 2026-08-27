@@ -5,7 +5,7 @@ project:
 
 # Begin Website
 website:
-  title: "Code Publishing Tutorial (Short version)"
+  title: "Code Publishing Tutorial"
   page-footer:
     center: |
       A recommended citation and license information for this tutorial
