@@ -48,7 +48,7 @@ website:
       - choose-license.qmd
       - make-readme.qmd
       - archive.qmd
-      - section: "In-depth material"
+      - section: "Excursus: In-depth material 💡"
         contents:
           - href: in_depth_material/introduction_copyright.qmd
             text: "Introduction to Copyright and Licensing"
@@ -56,6 +56,8 @@ website:
             text: "Copyright Conditions"
           - href: in_depth_material/data_dic_generation.qmd
             text: "Automatic Generation of Data Dictionaries"
+          - href: in_depth_material/other_dependencies.qmd
+            text: "Identify additional system dependencies for the README"
 # End Website
 
 # Begin Format

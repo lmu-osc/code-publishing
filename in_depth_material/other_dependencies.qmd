@@ -1,0 +1,96 @@
+---
+title: "Identify additional system dependencies for the README"
+engine: knitr
+---
+
+The specific version of R and the loaded packages is the most crucial information that should go into the README (or that is stored in the `renv` lockfile). Ideally, you list other system dependencies, such as the version of Quarto[^renv-quarto] that you used to render your paper.
+
+[^renv-quarto]: As of August 2024, a proposal for `renv` to record the version of Quarto
+has not been implemented, see [rstudio/renv#1143](https://github.com/rstudio/renv/issues/1143).
+
+An overview over the system dependencies of R packages can be created
+using the function `pak::pkg_sysreqs()`.
+In combination with `renv`, we can obtain the system dependencies
+of all R packages the current project directly depends on:
+
+```{.r filename="Console"}
+# Find all R package dependencies
+deps <- renv::dependencies()$Package |>
+  unique() |>
+  pak::pkg_deps(dependencies = NA) |>
+  getElement("package")
+
+# Identify their system dependencies
+pak::pkg_sysreqs(deps)
+```
+
+The output may look like the following:
+
+```txt
+── Install scripts ────────────────── Fedora 40 ── 
+dnf install -y make pandoc git
+
+── Packages and their system dependencies ────────
+fs        – make
+knitr     – pandoc
+remotes   – git
+rmarkdown – pandoc
+sass      – make
+```
+
+We can see that the programs `make`, `pandoc`,
+and `git` were identified as system dependencies.
+Often, one can obtain their version by running them with the `--version` argument:
+
+```{.bash filename="Terminal"}
+make --version
+pandoc --version
+git --version
+```
+
+However, this does not work for all system dependencies.
+Specifically, it does not work for libraries -- software that is not supposed to be run on its own.
+Identifying their version is beyond the scope of this tutorial.
+
+We also know that we need Quarto to create the PDF,
+so let's find out its version as well:
+
+```{.bash filename="Terminal"}
+quarto --version
+```
+
+If you installed `apaquarto` or any other Quarto extension,
+one can query their versions as follows:[^already-included]
+
+[^already-included]: Luckily, the extensions are included in the project folder,
+so technically their version is already recorded in the project's files.
+
+```{.bash filename="Terminal"}
+quarto list extensions
+```
+
+Finally, we know that we installed a $\TeX$ distribution to create the PDF,
+so let's find out its version by running:
+
+```{.bash filename="Terminal"}
+quarto check
+```
+
+The output is quite long and it might look slightly different for you,
+but the relevant sections are the following:
+
+```txt
+[✓] Checking tools....................OK
+      TinyTeX: v2024.09
+      Chromium: (not installed)
+
+[✓] Checking LaTeX....................OK
+      Using: TinyTex
+      Path: /home/r155953/.TinyTeX/bin/x86_64-linux
+      Version: 2024
+```
+
+Add these dependencies to the section **Computational Requirements / Dependencies** of your README file.
+
+Of course, all the system dependencies identified until now
+may have dependencies on their own. Use your own judgement to decide when not to dig deeper.
