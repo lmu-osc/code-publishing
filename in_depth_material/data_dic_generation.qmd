@@ -1,6 +1,5 @@
 ---
 title: "Generation of Data Dictionaries Using R"
-date: "today"
 engine: knitr
 ---
 
