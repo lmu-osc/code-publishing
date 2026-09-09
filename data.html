@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2026-09-09">
 
 <title>Add Data and Data Dictionary – Code Publishing Tutorial</title>
 <style>
@@ -344,6 +345,12 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 9, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -365,7 +372,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <figcaption>palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</figcaption>
 </figure>
 </div>
-</div></div><p>The data set is from the package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a> (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>.</p>
+</div></div><p>The data set is from the package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a> (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. For educational purposes, we added the fictitious column <code>cuteness</code>.</p>
 <div id="imp-legal-restrictions" class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -380,11 +387,54 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <p>Privacy laws and contractual obligations may require you to create an anonymized or synthetic data set<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, in which case you should provide a reference to a repository where the originally measured data can be obtained from. For further information, you can watch the talk “<a href="https://osf.io/j6fy8">Data anonymity</a>” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at <a href="https://osf.io/z6gcu">the accompanying slides</a>. Another resource to look at is the presentation “Creating reproducible packages when data are confidential” by <span class="citation" data-cites="Vilhuber2024">Vilhuber (<a href="#ref-Vilhuber2024" role="doc-biblioref">2024</a>)</span>.</p>
 </div>
 </div>
+<p>Let’s take a first look at our data:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data.csv"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>R Console</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="R Console"><pre class="sourceCode txt code-overflow-scroll code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>'data.frame':   344 obs. of  9 variables:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> $ species          : int  1 1 1 1 1 1 1 1 1 1 ...</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a> $ island           : int  3 3 3 3 3 3 3 3 3 3 ...</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a> $ bill_length_mm   : num  39.1 39.5 40.3 -99 36.7 39.3 38.9 39.2 34.1 42 ...</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a> $ bill_depth_mm    : num  18.7 17.4 18 -99 19.3 20.6 17.8 19.6 18.1 20.2 ...</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> $ flipper_length_mm: int  181 186 195 -99 193 190 181 195 193 190 ...</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a> $ body_mass_g      : int  3750 3800 3250 -99 3450 3650 3625 4675 3475 4250 ...</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> $ sex              : int  2 1 1 -99 1 2 1 2 -99 -99 ...</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> $ year             : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> $ cuteness         : int  2 3 7 3 7 8 7 2 1 10 ...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>We can see that the variables <code>species</code>, <code>island</code>, and <code>sex</code> are stored as integers:</p>
+<ul>
+<li>species
+<ul>
+<li>1 = Adelie</li>
+<li>2 = Chinstrap</li>
+<li>3 = Gentoo</li>
+</ul></li>
+<li>island
+<ul>
+<li>1 = Biscoe</li>
+<li>2 = Dream</li>
+<li>3 = Torgersen</li>
+</ul></li>
+<li>sex
+<ul>
+<li>1 = female</li>
+<li>2 = male</li>
+</ul></li>
+</ul>
+<p>Further, missing values are stored as <code>-99</code>. We need to document this information somewhere!</p>
 </section>
 <section id="add-a-data-dictionary" class="level2">
 <h2 class="anchored" data-anchor-id="add-a-data-dictionary">Add a Data Dictionary</h2>
 <p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>).</p>
-<p>The recommendation for data dictionaries vary between fields - both in terms of the recommended content (i.e., what exactly should be documented) and the technical implementation (i.e., which file formats should be used).</p>
+<p>The recommendation for data dictionaries vary between fields – both in terms of the recommended content (i.e., what exactly should be documented) and the technical implementation (i.e., which file formats should be used).</p>
 <p><em>For the purpose of this exercise, we keep it easy and propose that you manually create a file with the data dictionary (e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), documenting only the bare minimum.</em></p>
 <!-- TODO: Add a link to the forthcoming data dictionary OSC tutorial -->
 <div id="tip-in-depth" class="callout callout-style-default callout-tip callout-titled">
@@ -393,14 +443,13 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip&nbsp;1: Manual is too much work? Automatic generation of (machine-readable) data dictionaries
+Tip&nbsp;1: Creating data dictionaries using R
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Our in-depth supplementary material “<a href="./in_depth_material/data_dic_generation.html">Automatic Generation of Data Dictionaries</a>” explains how you can automatically create a data dictionary with an R package. The package reads the data set and extracts relevant information from it. This approach is in particular useful if you need to document data sets with many variables.</p>
-<p>This advanced chapter also contains a section on how to create machine-readable data dictionaries.</p>
+<p>Our in-depth supplementary material “<a href="./in_depth_material/data_dic_generation.html">Generation of Data Dictionaries Using R</a>” explains how you can create a data dictionary with R. This advanced chapter also contains a section on how to create machine-readable data dictionaries.</p>
 </div>
 </div>
 </div>
@@ -500,13 +549,14 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 14%">
-<col style="width: 11%">
-<col style="width: 5%">
-<col style="width: 30%">
-<col style="width: 21%">
+<col style="width: 10%">
+<col style="width: 8%">
 <col style="width: 4%">
-<col style="width: 11%">
+<col style="width: 21%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 2%">
+<col style="width: 7%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -514,6 +564,7 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <th>label</th>
 <th>type</th>
 <th>description</th>
+<th>item_text</th>
 <th>values</th>
 <th>units</th>
 <th>missing_codes</th>
@@ -525,18 +576,20 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <td>Species</td>
 <td>string</td>
 <td>Penguin species</td>
-<td>Adelie; Gentoo; Chinstrap</td>
 <td></td>
-<td>NA = Missing</td>
+<td>1 = Adelie; 2 = Chinstrap; 3 = Gentoo</td>
+<td></td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="even">
 <td>island</td>
 <td>Island</td>
 <td>string</td>
 <td>Island where individual was observed</td>
-<td>Torgersen; Biscoe; Dream</td>
 <td></td>
-<td>NA = Missing</td>
+<td>1 = Biscoe; 2 = Dream; 3 = Torgersen</td>
+<td></td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="odd">
 <td>bill_length_mm</td>
@@ -544,8 +597,9 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <td>float</td>
 <td>Length of the bill (beak)</td>
 <td></td>
+<td></td>
 <td>mm</td>
-<td>NA = Missing</td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="even">
 <td>bill_depth_mm</td>
@@ -553,8 +607,9 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <td>float</td>
 <td>Depth of the bill (beak)</td>
 <td></td>
+<td></td>
 <td>mm</td>
-<td>NA = Missing</td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="odd">
 <td>flipper_length_mm</td>
@@ -562,8 +617,9 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <td>integer</td>
 <td>Length of the flipper</td>
 <td></td>
+<td></td>
 <td>mm</td>
-<td>NA = Missing</td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="even">
 <td>body_mass_g</td>
@@ -571,29 +627,43 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <td>integer</td>
 <td>Body mass</td>
 <td></td>
+<td></td>
 <td>g</td>
-<td>NA = Missing</td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="odd">
 <td>sex</td>
 <td>Sex</td>
 <td>string</td>
 <td>Sex of the penguin</td>
-<td>male; female</td>
 <td></td>
-<td>NA = Missing</td>
+<td>1 = female; 2 = male</td>
+<td></td>
+<td>-99 = Missing</td>
 </tr>
 <tr class="even">
 <td>year</td>
 <td>Year</td>
 <td>integer</td>
 <td>Year of data collection</td>
+<td></td>
+<td>2007; 2008; 2009</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>cuteness</td>
+<td>Cuteness</td>
+<td>integer</td>
+<td>Subjective cuteness</td>
+<td>How cute do you think this penguin is?</td>
 <td>2007; 2008; 2009</td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
+<p>Depending on the type of data, it may also be necessary to describe sampling procedures (e.g., selection criteria), measurement instruments (e.g., established questionnaires), appropriate weighting, already applied preprocessing steps, or contact information.</p>
 </div>
 </div>
 </div>
@@ -621,21 +691,21 @@ Tip&nbsp;3: Citing the Data Set (Solution)
 <div class="callout-body-container callout-body">
 <p>Show the correct reference of the data set:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">key =</span> <span class="st">"horst2020"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">toBibtex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">key =</span> <span class="st">"horst2020"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">toBibtex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Bibliography.bib</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="Bibliography.bib"><pre class="sourceCode bib code-overflow-scroll code-with-copy"><code class="sourceCode bibtex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">@Manual</span>{<span class="ot">horst2020</span>,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Allison Horst and Alison Hill and Kristen Gorman},</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2022},</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span> = {R package version 0.1.1},</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://allisonhorst.github.io/palmerpenguins/},</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="Bibliography.bib"><pre class="sourceCode bib code-overflow-scroll code-with-copy"><code class="sourceCode bibtex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="va">@Manual</span>{<span class="ot">horst2020</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span> = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">author</span> = {Allison Horst and Alison Hill and Kristen Gorman},</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span> = {2022},</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">note</span> = {R package version 0.1.1},</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">url</span> = {https://allisonhorst.github.io/palmerpenguins/},</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -644,14 +714,14 @@ Tip&nbsp;3: Citing the Data Set (Solution)
 <div class="code-with-filename-file">
 <pre><strong>Manuscript.qmd</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-filename="Manuscript.qmd"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>The analyzed data are by @horst2020.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Manuscript.qmd"><pre class="sourceCode md code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>The analyzed data are by @horst2020.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Render the document to check that the citation is displayed properly.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -665,9 +735,9 @@ Tip&nbsp;3: Citing the Data Set (Solution)
 <div class="code-with-filename-file">
 <pre><strong>Terminal</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7" data-filename="Terminal"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
