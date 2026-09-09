@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Introduction – Code Publishing Tutorial</title>
+<title>Licenses Continued – Code Publishing Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,48 +26,28 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./setup.html" rel="next">
-<link href="./images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-246ab2cf33138a90f884b07186797933.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../in_depth_material/data_dic_generation.html" rel="prev">
+<link href="../images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-246ab2cf33138a90f884b07186797933.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -94,6 +74,10 @@ div.csl-indent {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <!-- Matomo -->
 <script>
 if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
@@ -123,7 +107,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Code Publishing Tutorial</span>
     </a>
   </div>
@@ -133,13 +117,13 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -169,7 +153,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../in_depth_material/introduction_copyright.html">In-depth material</a></li><li class="breadcrumb-item"><a href="../in_depth_material/licenses-continued.html">Licenses Continued</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -191,49 +175,49 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link active">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sharing work of others: Copyright</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link">
+  <a href="../data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Add Data and Data Dictionary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code.html" class="sidebar-item-text sidebar-link">
+  <a href="../code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Add Code</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./choose-license.html" class="sidebar-item-text sidebar-link">
+  <a href="../choose-license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Choose a License</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./make-readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../make-readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Make a README</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive Your Project</span></a>
   </div>
 </li>
@@ -248,25 +232,25 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="../in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Copyright and Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
+  <a href="../in_depth_material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copyright Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
+  <a href="../in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automatic Generation of Data Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/licenses-continued.html" class="sidebar-item-text sidebar-link">
+  <a href="../in_depth_material/licenses-continued.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Licenses Continued</span></a>
   </div>
 </li>
@@ -278,25 +262,26 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
+<p><img src="../images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
 </div></div>
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-importance-of-sharing" id="toc-the-importance-of-sharing" class="nav-link active" data-scroll-target="#the-importance-of-sharing">The Importance of Sharing</a></li>
-  <li><a href="#document-materials" id="toc-document-materials" class="nav-link" data-scroll-target="#document-materials">Document Materials</a></li>
-  <li><a href="#linking-results-and-computations" id="toc-linking-results-and-computations" class="nav-link" data-scroll-target="#linking-results-and-computations">Linking Results and Computations</a></li>
-  <li><a href="#best-practices" id="toc-best-practices" class="nav-link" data-scroll-target="#best-practices">Best Practices</a></li>
+  <li><a href="#additional-figures" id="toc-additional-figures" class="nav-link active" data-scroll-target="#additional-figures">Additional Figures</a>
+  <ul class="collapse">
+  <li><a href="#software-writing-images-audio-and-video" id="toc-software-writing-images-audio-and-video" class="nav-link" data-scroll-target="#software-writing-images-audio-and-video">Software, Writing, Images, Audio, and Video</a></li>
+  <li><a href="#data-and-databases" id="toc-data-and-databases" class="nav-link" data-scroll-target="#data-and-databases">Data and Databases</a></li>
+  </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/in_depth_material/licenses-continued.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../in_depth_material/introduction_copyright.html">In-depth material</a></li><li class="breadcrumb-item"><a href="../in_depth_material/licenses-continued.html">Licenses Continued</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Introduction</h1>
+<h1 class="title">Licenses Continued</h1>
 </div>
 
 
@@ -313,103 +298,117 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </header>
 
 
-<p>In the following, we will set the stage by highlighting the importance of sharing all materials, documenting their usage, and linking results with their computations.</p>
-<section id="the-importance-of-sharing" class="level2">
-<h2 class="anchored" data-anchor-id="the-importance-of-sharing">The Importance of Sharing</h2>
-<p>Suppose you are reading an article about a new imaging method to turn seismological data into subsurface images. The article describes the ideas that went into developing this method and presents a few examples to illustrate its superiority over previous approaches. You got interested and would like to apply this method to your own data. However, with only the article available, it could take months to come up with a working solution, if possible at all. This situation has been put aptly by Buckheit &amp; Donoho <span class="citation" data-cites="Buckheit1995">(<a href="#ref-Buckheit1995" role="doc-biblioref">1995, p. 59</a>, emphasis in original)</span>, distilling an idea by the geophysicist Jon Claerbout:</p>
-<blockquote class="blockquote">
-<p>“An article about computational science in a scientific publication is <strong>not</strong> the scholarship itself, it is merely <strong>advertising</strong> of the scholarship. The actual scholarship is the complete software development environment and the complete set of instructions which generated the figures.”</p>
-</blockquote>
-<p>Even when researchers merely apply existing methods (rather than report on a new method), sharing the source code and being transparent about the computational environment is imperative to making their results reproducible <span class="citation" data-cites="Ince2012">(<a href="#ref-Ince2012" role="doc-biblioref">Ince et al., 2012</a>)</span>. By reproducibility, we mean “obtaining consistent results using the same input data; computational steps, methods, and code; and conditions of analysis” <span class="citation" data-cites="NASEM2019">(<a href="#ref-NASEM2019" role="doc-biblioref">National Academies of Sciences, Engineering, and Medicine, 2019, p. 46</a>)</span>.</p>
+<section id="additional-figures" class="level2">
+<h2 class="anchored" data-anchor-id="additional-figures">Additional Figures</h2>
+<section id="software-writing-images-audio-and-video" class="level3">
+<h3 class="anchored" data-anchor-id="software-writing-images-audio-and-video">Software, Writing, Images, Audio, and Video</h3>
+<div id="fig-flowchart-non-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flowchart-non-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  start("We want to choose a&lt;br&gt;license for software,&lt;br&gt;writing, image, audio,&lt;br&gt;or video.") --"We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license["&lt;em&gt;Use its license&lt;/em&gt;"]
+  start --"We created the work&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?")
+  
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
+  
+  type --"Software"--&gt; code_sa("Attribution?&lt;br&gt;Indicate license?&lt;br&gt;Add license text?&lt;br&gt;State changes?&lt;br&gt;Disclose code?&lt;br&gt;Copyleft?")
+  type --"Writing, image, audio, video"--&gt; nocode_cc("Attribution?&lt;br&gt;Indicate license?&lt;br&gt;State changes?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
+  
+  code_sa --"Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes"--&gt; apache["Apache 2.0"]
+  code_sa --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Weak copyleft"--&gt; mpl["MPL 2.0"]
+  code_sa --"Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Strong copyleft"--&gt; agpl["AGPLv3"]
+  
+  nocode_cc --"Neither"--&gt; cc0["CC0 1.0"]
+  nocode_cc --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM"--&gt; cc_by["CC BY 4.0"]
+  nocode_cc --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft"--&gt; cc_by_sa["CC BY-SA 4.0"]
+  
+  click apache href "https://choosealicense.com/licenses/apache-2.0/"
+  click mpl href "https://choosealicense.com/licenses/mpl-2.0/"
+  click agpl href "https://choosealicense.com/licenses/agpl-3.0/"
+  click cc0 href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click cc_by href "https://creativecommons.org/licenses/by/4.0/"
+  click cc_by_sa href "https://creativecommons.org/licenses/by-sa/4.0/"
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><em>Note.</em> DRM = digital rights management</p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flowchart-non-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Advanced License Flowchart for Software, Writing, Images, Audio, and Video
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="document-materials" class="level2">
-<h2 class="anchored" data-anchor-id="document-materials">Document Materials</h2>
-<p>However, there’s more to code publishing than sharing. Researchers should document (i.e., track) which data, software, images, texts, and other materials contributed to their work. In more elaborate terms, researchers should preserve the <em>provenance</em> of shared materials, for at least three tangible reasons:</p>
-<ul>
-<li><strong>Academic integrity</strong>: Providing citations for works that are not one’s own avoids plagiarism.</li>
-<li><strong>Complying with the law</strong>: Providing attribution and license texts (among other things) may be a legal obligation when redistributing materials.</li>
-<li><strong>Facilitating reproductions</strong>: Stating utilized software and data with their exact versions helps reproducers.</li>
-</ul>
-<p>Of course, when and how to preserve provenance varies for these reasons. Rephrasing someone’s text avoids issues of copyright, but may be plagiarism. And bibliographies of various styles may comply with scientific citation standards, but if they omit the first names of authors or the version number of computer programs, they might not help with matters of copyright or reproducibility.</p>
-<p>In this tutorial, we’ll consider all of these reasons important. And there are even more: Documenting the provenance puts research into context and allows others to understand how it came about. Also, cited authors benefit from the citation as they gain potential readers.</p>
+<section id="data-and-databases" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-databases">Data and Databases</h3>
+<div id="fig-flowchart-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flowchart-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  start("We want to choose a&lt;br&gt;license for data.") --"We adapted a database by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license_db["&lt;em&gt;Use its license(s)&lt;br&gt;for content and database&lt;/em&gt;"]
+  start --"We created a database&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?")
+  
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; existing_license_content("Adapting content&lt;br&gt; by others?")
+  
+  subgraph content["&lt;strong&gt;License for content&lt;/strong&gt;"]
+  existing_license_content --"No, we created the content&lt;br&gt;entirely by ourselves."--&gt; facts("Entries are facts&lt;br&gt;(like measurements&lt;br&gt;or metadata)?")
+  existing_license_content --"Yes, it was&lt;br&gt;shared under a&lt;br&gt;free/open license."--&gt; use_existing_license_content["&lt;em&gt;Use that license&lt;/em&gt;"]
+  facts --"Yes"--&gt; cc0_content_metadata["CC0 1.0"]
+  facts --"No"--&gt; choose_license["&lt;em&gt;Consult flowchart for&lt;br&gt;software, writing,&lt;br&gt;image, audio, and video&lt;/em&gt;"]
+  end
+  
+  subgraph database["&lt;strong&gt;License for database&lt;/strong&gt;"]
+  choose_license --&gt; switch_license["&lt;em&gt;Depending on&lt;br&gt;content license&lt;/em&gt;"]
+  use_existing_license_content --&gt; switch_license
+  
+  cc0_content_metadata --&gt; cc0_db["CC0 1.0"]
+  switch_license --"CC0 or&lt;br&gt;non-CC license"--&gt; sa("Attribution?&lt;br&gt;Indicate license?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
+  switch_license --"CC BY or&lt;br&gt;CC BY-SA"--&gt; same["&lt;em&gt;Same license for DB&lt;/em&gt;"]
+  
+  sa --"Neither"--&gt; cc0_db
+  sa --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft"--&gt; odbl["ODbL 1.0"]
+  
+  %% the following link is only added to have terminal nodes on the same level
+  sa ~~~ same
+  end
+  
+  click cc0_content_metadata href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click cc0_db href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click odbl href "https://opendatacommons.org/licenses/odbl/summary/"
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><em>Note.</em> DRM = digital rights management</p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flowchart-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Advanced License Flowchart for Data(base)
+</figcaption>
+</figure>
+</div>
+
+
 </section>
-<section id="linking-results-and-computations" class="level2">
-<h2 class="anchored" data-anchor-id="linking-results-and-computations">Linking Results and Computations</h2>
-<p>For the purpose of this tutorial, tracking the provenance of results deserves particular attention. This means connecting them to the source code through the creation of dynamic documents. Rather than manually copying numerical results, figures, or tables, they are inserted automatically upon rendering of the article. Dynamic documents bundled together with any necessary data and auxiliary software are called <a href="https://research-compendium.science/">research compendia</a> <span class="citation" data-cites="Gentleman2007">(<a href="#ref-Gentleman2007" role="doc-biblioref">Gentleman &amp; Temple Lang, 2007</a>)</span>.</p>
-<p>The practice to interleave narrative text with code has its roots in the paradigm of literate programming, where documentation and source code are treated as equals and are arranged in a way to maximize understanding <span class="citation" data-cites="Knuth1984">(<a href="#ref-Knuth1984" role="doc-biblioref">Knuth, 1984</a>)</span>. Alternating text and code can be also found in notebook interfaces for exploratory programming <span class="citation" data-cites="Kluyver2016">(e.g., Wolfram Mathematica or Jupyter Notebooks, see <a href="#ref-Kluyver2016" role="doc-biblioref">Kluyver et al., 2016</a>)</span> that also have the capability to execute code and embed its output. With <em>Sweave</em> <span class="citation" data-cites="Leisch2002">(<a href="#ref-Leisch2002" role="doc-biblioref">Leisch, 2002</a>)</span>, ideas from both worlds – literate programming and embedding program output – were combined into one tool for rendering dynamic documents using the R programming language. It is the predecessor of the R package <code>knitr</code> <span class="citation" data-cites="Xie2015">(<a href="#ref-Xie2015" role="doc-biblioref">Xie, 2015</a>)</span> which is being used under the hood in this tutorial.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Linking results with their computations has benefits for authors and readers. For the author, articles always contain the most recent version of figures, as they are updated automatically when the computation changes. For the readers, it enables understanding exactly how a particular result was obtained if they get access to the underlying research compendium.</p>
-</section>
-<section id="best-practices" class="level2">
-<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
-<p>To recap, in this tutorial you will share your materials, document their usage, and connect results to the underlying source code through the creation of a research compendium. Make sure to consider the following things along the way <span class="citation" data-cites="Arguillas2022">(by <a href="#ref-Arguillas2022" role="doc-biblioref">Arguillas et al., 2022</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>)</span>:</p>
-<blockquote class="blockquote">
-<p><strong>Does the research compendium contain everything needed to reproduce a predefined outcome in an organized and parsimonious way?</strong></p>
-<ol type="1">
-<li><strong>Completeness:</strong> The research compendium contains all of the objects needed to reproduce a predefined outcome.</li>
-<li><strong>Organization:</strong> It is easy to understand and keep track of the various objects in the research compendium and their relationship over time.</li>
-<li><strong>Economy:</strong> Fewer extraneous objects in the compendium mean fewer things that can break and require less maintenance over time.</li>
-</ol>
-<p><strong>Is descriptive information about the research compendium and its components available and easy to understand?</strong></p>
-<ol start="4" type="1">
-<li><strong>Transparency:</strong> The research compendium provides full disclosure of the research process that produced the scientific claim.</li>
-<li><strong>Documentation:</strong> Information describing compendium objects is provided in enough detail to enable independent understanding and use of the compendium.</li>
-</ol>
-<p><strong>Is information about how the research compendium and its components can be used available and easy to understand?</strong></p>
-<ol start="6" type="1">
-<li><strong>Access:</strong> It is clear who can use what, how, and under what conditions, with open access preferred.</li>
-<li><strong>Provenance:</strong> The origin of the components of the research compendium and how each has changed over time is evident.</li>
-</ol>
-<p><strong>Is information about the research compendium and its components embedded in code?</strong></p>
-<ol start="8" type="1">
-<li><strong>Metadata:</strong> Information about the research compendium and its component is embedded in a standardized, machine-readable code.</li>
-<li><strong>Automation:</strong> As much as possible, the computational workflow is script- or workflow-based so that the workflow can be re-executed using minimal actions.</li>
-</ol>
-<p><strong>Is there a plan for reviewing the research compendium for FAIR and computational reproducibility standards over time?</strong></p>
-<ol start="10" type="1">
-<li><strong>Review:</strong> A series of managed activities are needed to ensure continued access to and functionality of the research compendium and its components for as long as necessary.</li>
-</ol>
-</blockquote>
-<p>Although this tutorial guides you through the creation of a research compendium, you are invited to revisit these questions after completion and check whether and how each point was addressed (or not). Further, you can consult them as a checklist for future projects.</p>
-
-
-
 </section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-Arguillas2022" class="csl-entry" role="listitem">
-Arguillas, F., Christian, T.-M., Gooch, M., Honeyman, T., Peer, L., &amp; CURE-FAIR WG. (2022). <em>10 things for curating reproducible and <span>FAIR</span> research</em>. Research Data Alliance; <a href="https://curating4reproducibility.org/10things/" class="uri">https://curating4reproducibility.org/10things/</a>. <a href="https://doi.org/10.15497/RDA00074">https://doi.org/10.15497/RDA00074</a>
-</div>
-<div id="ref-Buckheit1995" class="csl-entry" role="listitem">
-Buckheit, J. B., &amp; Donoho, D. L. (1995). <span>WaveLab</span> and reproducible research. In A. Antoniadis &amp; G. Oppenheim (Eds.), <em>Wavelets and statistics</em> (Vol. 103, pp. 55–81). Springer New York. <a href="https://doi.org/10.1007/978-1-4612-2544-7_5">https://doi.org/10.1007/978-1-4612-2544-7_5</a>
-</div>
-<div id="ref-Gentleman2007" class="csl-entry" role="listitem">
-Gentleman, R., &amp; Temple Lang, D. (2007). Statistical analyses and reproducible research. <em>Journal of Computational and Graphical Statistics</em>, <em>16</em>(1), 1–23. <a href="https://doi.org/10.1198/106186007X178663">https://doi.org/10.1198/106186007X178663</a>
-</div>
-<div id="ref-Ince2012" class="csl-entry" role="listitem">
-Ince, D. C., Hatton, L., &amp; Graham-Cumming, J. (2012). The case for open computer programs. <em>Nature</em>, <em>482</em>(7386), 485–488. <a href="https://doi.org/10.1038/nature10836">https://doi.org/10.1038/nature10836</a>
-</div>
-<div id="ref-Kluyver2016" class="csl-entry" role="listitem">
-Kluyver, T., Ragan-Kelley, B., Pérez, F., Granger, B., Bussonnier, M., Frederic, J., Kelley, K., Hamrick, J., Grout, J., Corlay, S., Ivanov, P., Avila, D., Abdalla, S., Willing, C., &amp; Jupyter development team. (2016). Jupyter notebooks – a publishing format for reproducible computational workflows. In F. Loizides &amp; B. Scmidt (Eds.), <em>Positioning and power in academic publishing: Players, agents and agendas</em> (pp. 87–90). IOS Press. <a href="https://doi.org/10.3233/978-1-61499-649-1-87">https://doi.org/10.3233/978-1-61499-649-1-87</a>
-</div>
-<div id="ref-Knuth1984" class="csl-entry" role="listitem">
-Knuth, D. E. (1984). Literate programming. <em>The Computer Journal</em>, <em>27</em>(2), 97–111. <a href="https://doi.org/10.1093/comjnl/27.2.97">https://doi.org/10.1093/comjnl/27.2.97</a>
-</div>
-<div id="ref-Leisch2002" class="csl-entry" role="listitem">
-Leisch, F. (2002). Sweave: Dynamic generation of statistical reports using literate data analysis. In W. Härdle &amp; B. Rönz (Eds.), <em>Compstat</em> (pp. 575–580). Physica-Verlag <span>HD</span>. <a href="https://doi.org/10.1007/978-3-642-57489-4_89">https://doi.org/10.1007/978-3-642-57489-4_89</a>
-</div>
-<div id="ref-NASEM2019" class="csl-entry" role="listitem">
-National Academies of Sciences, Engineering, and Medicine. (2019). <em>Reproducibility and replicability in science</em>. National Academies Press. <a href="https://doi.org/10.17226/25303">https://doi.org/10.17226/25303</a>
-</div>
-<div id="ref-Xie2015" class="csl-entry" role="listitem">
-Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (Second edition). <span>CRC</span> Press.
-</div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>Specifically, Quarto employs <code>knitr</code> to execute chunks of R code.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -812,11 +811,11 @@ Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (Second
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../in_depth_material/data_dic_generation.html" class="pagination-link" aria-label="Automatic Generation of Data Dictionaries">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Automatic Generation of Data Dictionaries</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./setup.html" class="pagination-link" aria-label="Project Setup">
-        <span class="nav-page-text">Project Setup</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -826,8 +825,8 @@ Xie, Y. (2015). <em>Dynamic documents with <span>R</span> and knitr</em> (Second
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>A recommended citation and license information for this tutorial are provided on the <a href="./about.html">about page</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/intro.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>A recommended citation and license information for this tutorial are provided on the <a href="../about.html">about page</a>.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/in_depth_material/licenses-continued.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
