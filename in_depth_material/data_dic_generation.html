@@ -369,25 +369,34 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the description of variables</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>vars <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="st">"a character string denoting penguin species"</span>,</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="st">"a character string denoting island in Palmer Archipelago, Antarctica"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="st">"an integer denoting penguin species"</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="st">"an integer denoting island in Palmer Archipelago, Antarctica"</span>,</span>
 <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">bill_length_mm =</span> <span class="st">"a number denoting bill length (millimeters)"</span>,</span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">bill_depth_mm =</span> <span class="st">"a number denoting bill depth (millimeters)"</span>,</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">flipper_length_mm =</span> <span class="st">"an integer denoting flipper length (millimeters)"</span>,</span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">body_mass_g =</span> <span class="st">"an integer denoting body mass (grams)"</span>,</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"a character string denoting penguin sex"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="st">"an integer denoting penguin sex"</span>,</span>
 <span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">year =</span> <span class="st">"an integer denoting the study year"</span></span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Store the description of variable values</span></span>
 <span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>vals <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
 <span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">species =</span> <span class="fu">c</span>(</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">Adelie =</span> <span class="st">"Pygoscelis adeliae"</span>,</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">Gentoo =</span> <span class="st">"Pygoscelis papua"</span>,</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">Chinstrap =</span> <span class="st">"Pygoscelis antarcticus"</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Adelie"</span>,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2"</span> <span class="ot">=</span> <span class="st">"Chinstrap"</span>,</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="st">"3"</span> <span class="ot">=</span> <span class="st">"Gentoo"</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">island =</span> <span class="fu">c</span>(</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"Biscoe"</span>,</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2"</span> <span class="ot">=</span> <span class="st">"Dream"</span>,</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="st">"3"</span> <span class="ot">=</span> <span class="st">"Torgersen"</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>  <span class="at">sex =</span> <span class="fu">c</span>(</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"female"</span>,</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    <span class="st">"2"</span> <span class="ot">=</span> <span class="st">"male"</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>Then, load the data and use <code>datawizard</code> to add the descriptions to the <code>data.frame</code>:<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
@@ -408,24 +417,25 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data.csv"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (x <span class="cf">in</span> <span class="fu">names</span>(vars)) {</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">%in%</span> <span class="fu">names</span>(vals)) {</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    dat <span class="ot">&lt;-</span> datawizard<span class="sc">::</span><span class="fu">assign_labels</span>(</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      dat,</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">select =</span> <span class="fu">I</span>(x),</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">variable =</span> vars[[x]],</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">values =</span> vals[[x]]</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    dat <span class="ot">&lt;-</span> datawizard<span class="sc">::</span><span class="fu">assign_labels</span>(</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>      dat,</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      <span class="at">select =</span> <span class="fu">I</span>(x),</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">variable =</span> vars[[x]]</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dat[dat <span class="sc">==</span> <span class="sc">-</span><span class="dv">99</span>L] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (x <span class="cf">in</span> <span class="fu">names</span>(vars)) {</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (x <span class="sc">%in%</span> <span class="fu">names</span>(vals)) {</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    dat <span class="ot">&lt;-</span> datawizard<span class="sc">::</span><span class="fu">assign_labels</span>(</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>      dat,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="at">select =</span> <span class="fu">I</span>(x),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">variable =</span> vars[[x]],</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">values =</span> vals[[x]]</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    dat <span class="ot">&lt;-</span> datawizard<span class="sc">::</span><span class="fu">assign_labels</span>(</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>      dat,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>      <span class="at">select =</span> <span class="fu">I</span>(x),</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>      <span class="at">variable =</span> vars[[x]]</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 <p>Then, you can create the data dictionary containing the descriptions, but also some other information about each variable (e.g., the number of missing values) and print it.</p>
@@ -451,13 +461,13 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <div class="cell-output-display column-body-outset">
 <table class="table-borderless table-hover caption-top table">
 <colgroup>
-<col style="width: 11%">
-<col style="width: 44%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 8%">
-<col style="width: 14%">
+<col style="width: 13%">
+<col style="width: 45%">
+<col style="width: 5%">
 <col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 9%">
+<col style="width: 8%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -473,11 +483,11 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">species</td>
-<td style="text-align: left;">a character string denoting penguin species</td>
-<td style="text-align: left;">character</td>
+<td style="text-align: left;">an integer denoting penguin species</td>
+<td style="text-align: left;">integer</td>
 <td style="text-align: right;">0 (0.0%)</td>
-<td style="text-align: right;">Adelie</td>
-<td style="text-align: left;">Pygoscelis adeliae</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Adelie</td>
 <td style="text-align: right;">152 (44.2%)</td>
 </tr>
 <tr class="even">
@@ -485,8 +495,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">Chinstrap</td>
-<td style="text-align: left;">Pygoscelis antarcticus</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Chinstrap</td>
 <td style="text-align: right;">68 (19.8%)</td>
 </tr>
 <tr class="odd">
@@ -494,17 +504,17 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">Gentoo</td>
-<td style="text-align: left;">Pygoscelis papua</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Gentoo</td>
 <td style="text-align: right;">124 (36.0%)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">island</td>
-<td style="text-align: left;">a character string denoting island in Palmer Archipelago, Antarctica</td>
-<td style="text-align: left;">character</td>
+<td style="text-align: left;">an integer denoting island in Palmer Archipelago, Antarctica</td>
+<td style="text-align: left;">integer</td>
 <td style="text-align: right;">0 (0.0%)</td>
-<td style="text-align: right;">Biscoe</td>
-<td style="text-align: left;"></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Biscoe</td>
 <td style="text-align: right;">168 (48.8%)</td>
 </tr>
 <tr class="odd">
@@ -512,8 +522,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">Dream</td>
-<td style="text-align: left;"></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Dream</td>
 <td style="text-align: right;">124 (36.0%)</td>
 </tr>
 <tr class="even">
@@ -521,8 +531,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">Torgersen</td>
-<td style="text-align: left;"></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Torgersen</td>
 <td style="text-align: right;">52 (15.1%)</td>
 </tr>
 <tr class="odd">
@@ -563,11 +573,11 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </tr>
 <tr class="odd">
 <td style="text-align: left;">sex</td>
-<td style="text-align: left;">a character string denoting penguin sex</td>
-<td style="text-align: left;">character</td>
+<td style="text-align: left;">an integer denoting penguin sex</td>
+<td style="text-align: left;">integer</td>
 <td style="text-align: right;">11 (3.2%)</td>
-<td style="text-align: right;">female</td>
-<td style="text-align: left;"></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">female</td>
 <td style="text-align: right;">165 (49.5%)</td>
 </tr>
 <tr class="even">
@@ -575,8 +585,8 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
-<td style="text-align: right;">male</td>
-<td style="text-align: left;"></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">male</td>
 <td style="text-align: right;">168 (50.5%)</td>
 </tr>
 <tr class="odd">
@@ -605,6 +615,15 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <td style="text-align: right;">2009</td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;">120 (34.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cuteness</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">integer</td>
+<td style="text-align: right;">0 (0.0%)</td>
+<td style="text-align: right;">[1, 10]</td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">344</td>
 </tr>
 </tbody>
 </table>

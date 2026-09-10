@@ -311,7 +311,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   <ul class="collapse">
   <li><a href="#r-package-dependencies" id="toc-r-package-dependencies" class="nav-link" data-scroll-target="#r-package-dependencies">R &amp; Package Dependencies</a></li>
   </ul></li>
-  <li><a href="#practical-exercise-create-your-readme" id="toc-practical-exercise-create-your-readme" class="nav-link" data-scroll-target="#practical-exercise-create-your-readme">✍️ Practical Exercise: Create your README!</a></li>
+  <li><a href="#practical-exercise-create-your-readme" id="toc-practical-exercise-create-your-readme" class="nav-link" data-scroll-target="#practical-exercise-create-your-readme">Practical Exercise: Create your README!</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/make-readme.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -388,56 +388,18 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </ul>
 <section id="r-package-dependencies" class="level3">
 <h3 class="anchored" data-anchor-id="r-package-dependencies">R &amp; Package Dependencies</h3>
-<p>R itself and the R packages are already documented as our tutorial project uses <code>renv</code>: The information is stored in the <code>renv.lock</code> file at the root of the project, which tracks each package’s version and source. In this case, you can simply refer to that in the README file and all is done:</p>
+<p>R itself and the R packages are already documented as our tutorial project uses <code>renv</code>: The information is stored in the <code>renv.lock</code> file at the root of the project, which tracks each package’s version and source. In this case, you can simply refer to that in the README file and all is done.</p>
+<p>If your project has no <code>renv.lock</code> file, you can still use <code>renv</code> together with the package <code>sessioninfo</code> to get an overview of all used packages and their versions:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find all R package dependencies</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  pak<span class="sc">::</span><span class="fu">pkg_deps</span>(<span class="at">dependencies =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getElement</span>(<span class="st">"package"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>If you do <span class="sc">*</span>not<span class="sc">*</span> use <span class="st">`</span><span class="at">renv</span><span class="st">`</span>, the easiest solution to get a list of all needed packages is the <span class="st">`</span><span class="at">sessionInfo()</span><span class="st">`</span> command. <span class="sc">*</span>Call it <span class="sc">**</span>after<span class="sc">**</span> you loaded all necessary packages<span class="sc">!</span><span class="er">*</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>It lists all packages including their versions, and you can copy <span class="sc">&amp;</span> paste that information into your README file. Here<span class="st">'s an example for a project:</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="st">```txt</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="st">&gt; sessionInfo()</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="st">R version 4.4.1 (2024-06-14)</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="st">Platform: aarch64-apple-darwin20</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="st">Running under: macOS 15.5</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="st">Matrix products: default</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="st">BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib </span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="st">LAPACK: /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.0</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="st">locale:</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="st">[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="st">time zone: Europe/Berlin</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="st">tzcode source: internal</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="st">attached base packages:</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="st">[1] parallel  stats     graphics  grDevices utils     datasets  methods   base     </span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="st">other attached packages:</span></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="st"> [1] rio_1.2.2            doRNG_1.8.6          rngtools_1.5.2      </span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="st"> [4] doParallel_1.0.17    iterators_1.0.14     foreach_1.5.2       </span></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="st"> [7] fitPCurve_0.0.0.9000 testthat_3.2.3       prettycode_1.1.0    </span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="st">[10] colorDF_0.1.7       </span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="st">loaded via a namespace (and not attached):</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="st"> [1] gtable_0.3.6       ggplot2_3.5.2      htmlwidgets_1.6.4  devtools_2.4.5    </span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="st"> [5] remotes_2.5.0      TruncExpFam_1.2.1  vctrs_0.6.5        tools_4.4.1       </span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="st"> [9] generics_0.1.4     tibble_3.2.1       pkgconfig_2.0.3    R.oo_1.26.0       </span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="st">[13] data.table_1.17.4  RColorBrewer_1.1-3 desc_1.4.3         lifecycle_1.0.4 </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>(<span class="at">pkgs =</span> <span class="fu">unique</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
 <section id="practical-exercise-create-your-readme" class="level2">
-<h2 class="anchored" data-anchor-id="practical-exercise-create-your-readme">✍️ Practical Exercise: Create your README!</h2>
+<h2 class="anchored" data-anchor-id="practical-exercise-create-your-readme">Practical Exercise: Create your README!</h2>
 <p>Create your README now as the file <code>README.md</code>, located at the top level folder.</p>
 <p>If you feel stuck, you can have a look at the following examples:</p>
 <div id="tip-name-description" class="callout callout-style-default callout-tip callout-titled">
