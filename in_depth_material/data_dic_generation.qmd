@@ -14,7 +14,27 @@ You can download it and put it into your project folder:
 ```{r}
 #| include: false
 
-stopifnot(file.exists("data.csv"))
+invisible(loadNamespace("palmerpenguins")) # Tell renv that we need this package
+stopifnot(packageDescription("palmerpenguins", fields = "License") == "CC0")
+
+dat <- palmerpenguins::penguins
+
+# Convert factors to integers
+idx <- sapply(dat, is.factor)
+dat[idx] <- lapply(dat[idx], as.integer)
+
+dat[is.na(dat)] <- -99L
+
+# Add extra column for training purposes
+set.seed(1056517553L)
+dat$cuteness <- sample.int(10, nrow(dat), replace = TRUE)
+
+write.csv(
+  dat,
+  file = "data.csv",
+  row.names = FALSE
+)
+rm(idx, dat)
 ```
 
 [data.csv](data.csv){.btn .btn-lg .btn-info download="data.csv"}

@@ -28,11 +28,6 @@ write.csv(
   file = "data.csv",
   row.names = FALSE
 )
-write.csv(
-  dat,
-  file = "in_depth_material/data.csv",
-  row.names = FALSE
-)
 rm(idx, dat)
 ```
 
