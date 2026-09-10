@@ -119,10 +119,10 @@ The recommendation for data dictionaries vary between fields --
 both in terms of the recommended content (i.e., what exactly should be documented) 
 and the technical implementation (i.e., which file formats should be used).
 
-_For the purpose of this exercise, we keep it easy and propose that you 
+For the purpose of this exercise, we keep it easy and propose that you 
 manually create a file with the data dictionary
 (e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), 
-documenting only the bare minimum._
+documenting only the bare minimum.
 
 <!-- TODO: Add a link to the forthcoming data dictionary OSC tutorial -->
 
@@ -138,44 +138,21 @@ This advanced chapter also contains a section on how to create machine-readable 
 Most standards for data dictionaries require at least 
 this information for each variable in your data set:
 
-- `name`: The (machine‑readable) name of the variable  
-- `label`: A short, human‑readable title or label for the variable  
-- `type`: The data type of the variable (e.g., `integer`, `float`, `string`, `date`)  
-- `description`: A brief description of what the variable measures or represents  
-- `values` (for categorical variables): A mapping of codes to their meanings, for example:  1 = Male, 2 = Female, 9 = Missing)
-- `units` (for numeric measures): The units of measurement (e.g., `kg`, `USD`, `years`, or the scale of a survey response), 
-- `missing_codes`: Any special codes used to denote missing or non‑applicable values (e.g., `-99 = Not answered`)
+- `name`: Column name of the variable in the data set
+- `label`: Short title for the variable
+- `description`: Brief description of what the variable measures or represents
+- `item_text`: Exact wording of a question in a survey
+- `values`: A mapping of stored answers to their meanings (especially for categorical variables). For example: 1 = male, 2 = female, 9 = missing
+- `units`: The units of measurement (only for numeric variables). For example: `kg`, `USD`, `years`
 
-Here's an example from a different data set, with variables in rows, and the dictionary in columns:
+Here's an example from a different data set, with one row for each variable:
 
-| name              | label                     | type    | description                             | values                                                                                  | units       | missing_codes      |
-| ----------------- | ------------------------- | ------- | --------------------------------------- | --------------------------------------------------------------------------------------- | ----------- | ------------------ |
-| gender            | Gender                    | integer | self‑identified gender                  | 1 = Male; 2 = Female; 3 = Other; 9 = Missing                                            |             | 9 = Missing        |
-| age               | Age                       | integer | age in years                            |                                                                                         | years       | -99 = Not answered |
-| blood_pressure    | Blood Pressure (systolic) | integer | systolic blood pressure                 |                                                                                         | mmHg        | -99 = Not measured |
-| life_satisfaction | Life Satisfaction         | integer | "How satisfied are you with your life?" | 1 = Very dissatisfied; 2 = Dissatisfied; 3 = Neutral; 4 = Satisfied; 5 = Very satisfied | scale (1–5) | -99 = Not answered |
-
-### Practical Exercise: Add your own data dictionary
-
-Now go ahead and create a data dictionary for the penguins data set, 
-in a software (text or spreadsheet) of your choice.
-
-Save the data dictionary in the same folder as the actual data set file.
-
-::: {#tip-data_dic .callout-tip collapse="true"}
-#### Data dictionary for penguins data set (Solution)
-
-| name              | label          | type    | description                          | item_text                              | values                                | units | missing_codes |
-| ----------------- | -------------- | ------- | ------------------------------------ | -------------------------------------- | ------------------------------------- | ----- | ------------- |
-| species           | Species        | string  | Penguin species                      |                                        | 1 = Adelie; 2 = Chinstrap; 3 = Gentoo |       | -99 = Missing |
-| island            | Island         | string  | Island where individual was observed |                                        | 1 = Biscoe; 2 = Dream; 3 = Torgersen  |       | -99 = Missing |
-| bill_length_mm    | Bill length    | float   | Length of the bill (beak)            |                                        |                                       | mm    | -99 = Missing |
-| bill_depth_mm     | Bill depth     | float   | Depth of the bill (beak)             |                                        |                                       | mm    | -99 = Missing |
-| flipper_length_mm | Flipper length | integer | Length of the flipper                |                                        |                                       | mm    | -99 = Missing |
-| body_mass_g       | Body mass      | integer | Body mass                            |                                        |                                       | g     | -99 = Missing |
-| sex               | Sex            | string  | Sex of the penguin                   |                                        | 1 = female; 2 = male                  |       | -99 = Missing |
-| year              | Year           | integer | Year of data collection              |                                        | 2007; 2008; 2009                      |       |               |
-| cuteness          | Cuteness       | integer | Subjective cuteness                  | How cute do you think this penguin is? | 2007; 2008; 2009                      |       |               |
+| name              | label                     | description             | item_text                             | values                                                                                                      | units |
+| ----------------- | ------------------------- | ----------------------- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----- |
+| gender            | Gender                    | self‑identified gender  |                                       | 1 = male, 2 = female, 3 = other, 9 = missing                                                                |       |
+| age               | Age                       | age in years            |                                       | -99 = Not answered                                                                                          | years |
+| blood_pressure    | Blood Pressure (systolic) | systolic blood pressure |                                       | -99 = Not answered                                                                                          | mmHg  |
+| life_satisfaction | Life Satisfaction         | 5-point scale           | How satisfied are you with your life? | 1 = very dissatisfied, 2 = dissatisfied, 3 = neutral, 4 = satisfied, 5 = very satisfied, -99 = not answered |       |
 
 Depending on the type of data, it may also be necessary
 to describe sampling procedures (e.g., selection criteria),
@@ -183,26 +160,67 @@ measurement instruments (e.g., established questionnaires),
 appropriate weighting,
 already applied preprocessing steps, or contact information.
 
+### Practical Exercise: Add your own data dictionary
+
+Now it's your turn. Fill in the missing information (denoted by a bold question mark "**?**") in the following data dictionary.
+
+<details>
+<summary>Show data dictionary</summary>
+| name              | label          | description                                                            | item_text                              | values                                               | units |
+| ----------------- | -------------- | ---------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------- | ----- |
+| species           | Species        | Penguin species                                                        |                                        | 1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing |       |
+| island            | Island         | Island in Palmer Archipelago, Antarctica where individual was observed |                                        | 1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing  |       |
+| bill_length_mm    | Bill length    | Length of the bill (beak)                                              |                                        | -99 = missing                                        | mm    |
+| bill_depth_mm     | Bill depth     | **?**                                                                  |                                        | -99 = missing                                        | mm    |
+| flipper_length_mm | Flipper length | Length of the flipper                                                  |                                        | -99 = missing                                        | mm    |
+| body_mass_g       | **?**          | Body mass                                                              |                                        | -99 = missing                                        | **?** |
+| sex               | Sex            | Sex of the penguin                                                     |                                        | 1 = female, 2 = male, -99 = missing                  |       |
+| **?**             | Year           | Study year                                                             |                                        |                                                      |       |
+| cuteness          | Cuteness       | Subjective cuteness rated on 10-point scale                            | How cute do you think this penguin is? | 1 = not at all, **?** = extremely                    |       |
+</details>
+
+[data-dictionary.ods](data-dictionary.ods){.btn .btn-lg .btn-info download="data-dictionary.ods"}
+
+Then save the data dictionary in the same folder as the actual data set file.
+
+::: {#tip-data_dic .callout-tip collapse="true"}
+#### Data dictionary for penguins data set (Solution)
+
+| name              | label          | description                                                            | item_text                              | values                                               | units |
+| ----------------- | -------------- | ---------------------------------------------------------------------- | -------------------------------------- | ---------------------------------------------------- | ----- |
+| species           | Species        | Penguin species                                                        |                                        | 1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing |       |
+| island            | Island         | Island in Palmer Archipelago, Antarctica where individual was observed |                                        | 1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing  |       |
+| bill_length_mm    | Bill length    | Length of the bill (beak)                                              |                                        | -99 = missing                                        | mm    |
+| bill_depth_mm     | Bill depth     | Depth of the bill (beak)                                               |                                        | -99 = missing                                        | mm    |
+| flipper_length_mm | Flipper length | Length of the flipper                                                  |                                        | -99 = missing                                        | mm    |
+| body_mass_g       | Mass           | Body mass                                                              |                                        | -99 = missing                                        | g     |
+| sex               | Sex            | Sex of the penguin                                                     |                                        | 1 = female, 2 = male, -99 = missing                  |       |
+| year              | Year           | Study year                                                             |                                        |                                                      |       |
+| cuteness          | Cuteness       | Subjective cuteness rated on 10-point scale                            | How cute do you think this penguin is? | 1 = not at all, 10 = extremely                       |       |
+
+[data-dictionary-solution.ods](data-dictionary-solution.ods){.btn .btn-lg .btn-info download="data-dictionary-solution.ods"}
 :::
 
 ## Practical Exercise: Add Data Citation and Attribution
 
 All data relied upon should be cited in the manuscript
 to allow for precise identification and access.
-Now, it's your turn to add an appropriate citation for the data set to the manuscript.
+Please add an appropriate citation for the data set to the manuscript
+where it says "cite data here".
 
-Hints:
+::: {#tip-cite-palmerpenguins-hint .callout-tip collapse="true"}
+#### Citing the Data Set (Hint)
 
-- You can find an appropriate BibTeX entry on [the package website](https://allisonhorst.github.io/palmerpenguins/#citation)
-  or with the function `citation()`^[Note that this function requires to have the respective package installed.].
-- Add the citation in the manuscript where it says "cite data here".
+You can find an appropriate BibTeX entry on [the `palmerpenguins` package website](https://allisonhorst.github.io/palmerpenguins/#citation).
+:::
 
 ::: {#tip-cite-palmerpenguins .callout-tip collapse="true"}
 #### Citing the Data Set (Solution)
 
-Show the correct reference of the data set:
+Copy the following BibTeX entry to the file `Bibliography.bib`:
 
 ```{r}
+#| echo: false
 #| class.output: "bib code-overflow-scroll"
 #| attr-output: 'filename="Bibliography.bib"'
 citation("palmerpenguins", auto = TRUE) |>
@@ -210,7 +228,6 @@ citation("palmerpenguins", auto = TRUE) |>
   toBibtex()
 ```
 
-Copy the BibTeX entry to the file `Bibliography.bib`.
 Then, find the line in the manuscript that says "cite data here"
 and replace it with a sentence such as the following:
 
@@ -225,6 +242,22 @@ quarto render Manuscript.qmd
 ```
 :::
 
+While citation happens in the manuscript for reasons of academic integrity and reproducibility,
+to comply with any licenses you also may need to provide attribution within your project folder.
+Even though the data file we use here does not require attribution,
+we recommend adding a short paragraph to `LICENSE.txt`:
+
+```{r}
+#| echo: false
+#| class-output: "txt code-overflow-wrap"
+#| attr-output: 'filename="LICENSE.txt"'
+
+cat(paste0(
+  "The penguins data stored in \"data.csv\" by Allison Horst, Alison Hill, and Kristen Gorman available from <",
+  citation("palmerpenguins", auto = TRUE)$url,
+  "> are licensed under CC0 1.0: <https://creativecommons.org/publicdomain/zero/1.0/>"
+))
+```
 
 ## Wrap up
 

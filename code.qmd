@@ -26,7 +26,28 @@ Descriptive statistics of the data set are given in @tbl-descriptive-statistics 
 # Load penguins data set
 dat <- read.csv("data.csv")
 
-# Remove rows with NA
+# Add value labels
+dat <- dat |>
+  transform(
+    species = factor(
+      species,
+      levels = 1:3,
+      labels = c("Adelie", "Chinstrap", "Gentoo")
+    ),
+    island = factor(
+      island,
+      levels = 1:3,
+      labels = c("Biscoe", "Dream", "Torgersen")
+    ),
+    sex = factor(
+      sex,
+      levels = 1:2,
+      labels = c("female", "male")
+    )
+  )
+
+# Remove rows with missing data
+dat[dat == -99L] <- NA
 dat_clean <- dat[complete.cases(dat), ]
 
 # Treat year as categorical variable
