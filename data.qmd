@@ -149,6 +149,8 @@ Here's an example from a different data set, with one row for each variable:
 | blood_pressure    | Blood Pressure (systolic) | systolic blood pressure |                                       | -99 = Not answered                                                                                          | mmHg  |
 | life_satisfaction | Life Satisfaction         | 5-point scale           | How satisfied are you with your life? | 1 = very dissatisfied, 2 = dissatisfied, 3 = neutral, 4 = satisfied, 5 = very satisfied, -99 = not answered |       |
 
+You can download this example data dictionary as an ODS file [here](data-dictionary-solution.ods){download="data-dictionary-solution.ods"}.
+
 Depending on the type of data, it may also be necessary
 to describe sampling procedures (e.g., selection criteria),
 measurement instruments (e.g., established questionnaires),
@@ -193,7 +195,7 @@ Then save the data dictionary in the same folder as the actual data set file.
 | year              | Year           | Study year                                                             |                                        |                                                      |       |
 | cuteness          | Cuteness       | Subjective cuteness rated on 10-point scale                            | How cute do you think this penguin is? | 1 = not at all, 10 = extremely                       |       |
 
-[data-dictionary-solution.ods](data-dictionary-solution.ods){.btn .btn-lg .btn-info download="data-dictionary-solution.ods"}
+You can download the solution [here](data-dictionary-solution.ods){.btn .btn-lg .btn-info download="data-dictionary-solution.ods"}.
 :::
 
 ## Practical Exercise: Add Data Citation and Attribution

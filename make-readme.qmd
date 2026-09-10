@@ -82,6 +82,7 @@ If your project has no `renv.lock` file, you can still use `renv` together with 
 sessioninfo::session_info(pkgs = unique(renv::dependencies()$Package))
 ```
 
+You can copy & paste that information into your README file.
 
 ## Practical Exercise: Create your README!
 
