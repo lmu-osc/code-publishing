@@ -59,9 +59,14 @@ rsconnect/
 .quarto
 _site/
 _outline.md
+**_files/
+
+**/*.quarto_ipynb
 
 # Other files created by the project
 grateful-refs.bib
 #data.csv  # we keep this file in the repo
 _data_dictionary.qmd
-**/*.quarto_ipynb
+
+# ignore posit assistant settings
+.posit/assistant

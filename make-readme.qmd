@@ -44,7 +44,7 @@ If the code has particular hardware requirements
 Finally, for steps that take more than a couple of seconds,
 indicate the approximate runtime.
 
-For an R project, the most important information for enabling reproducibility are the specific version of R and the loaded packages. Ideally, you also list other system dependencies. The in-depth supplementary material [*Identify additional system dependencies for the README*](/in_depth_material/other_dependencies.qmd) provides more information on determining the dependencies of an R project.
+For an R project, the most important information for enabling reproducibility are the specific version of R and the loaded packages. Ideally, you also list other system dependencies. The in-depth supplementary material [*Identify additional system dependencies for the README*](/in-depth-material/other-dependencies.qmd) provides more information on determining the dependencies of an R project.
 *For the purpose of this tutorial, however, you can skip this step.*
 
 **How to reproduce the results**

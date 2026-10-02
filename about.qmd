@@ -1,25 +1,50 @@
 ---
 title: "About"
-author:
-  - name: "Florian Kohrt"
-    orcid: "0000-0003-0374-5625"
-  - name: "Josephine Zerna"
-    orcid: "0000-0003-2892-884X"
-  - name: "Christoph Scheffel"
-    orcid: "0000-0001-5963-9229"
-  - name: "Felix Schönbrodt"
-    orcid: "0000-0002-8282-3910"
+date: 2025-07-31
 doi: "10.5281/zenodo.16631977"
 citation:
   type: "book"
   title: "Code Publishing Tutorial"
-  url: "https://lmu-osc.github.io/code-publishing/"
-  issued: 2025-07-31
   publisher: "LMU Open Science Center"
-bibliography: grateful-refs.bib
+  url: "https://lmu-osc.github.io/code-publishing/"
+  doi: "10.5281/zenodo.16631977"
+  version: 0.1.0
+author:
+  - name: Florian Kohrt
+    orcid: 0000-0003-0374-5625
+    email: fkohrt@anche.no
+    affiliation:
+      - id: osc
+        name: LMU Open Science Center
+        ror: https://ror.org/05591te55
+        isni: 000000041936973X
+  - name: Josephine Zerna
+    orcid: 0000-0003-2892-884X
+  - name: Christoph Scheffel
+    orcid: 0000-0001-5963-9229
+  - name: Felix Schönbrodt
+    orcid: 0000-0002-8282-3910
+    email: felix.schoenbrodt@psy.lmu.de
+    affiliation:
+      - id: osc
+        name: LMU Open Science Center
+        ror: https://ror.org/05591te55
+        isni: 000000041936973X
+  - name: Pat Callahan
+    orcid: 0000-0003-1769-7580
+    affiliation:
+      - id: osc
+        name: LMU Open Science Center
+        ror: https://ror.org/05591te55
+        isni: 000000041936973X
+google-scholar: true
+bibliography: [grateful-refs.bib, references.bib]
 ---
 
----
+## Contributors
+
+This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel,
+Felix Schönbrodt, and Pat Callahan.
 
 This tutorial was created by Florian Kohrt.
 It is based on previous work by Josephine Zerna and Christoph Scheffel.
@@ -27,6 +52,31 @@ Comments on earlier versions were kindly provided by
 Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt,
 and Sarah von Grebmer zu Wolfsthurn.
 Felix Schönbrodt created this short version of the [longer original tutorial](https://lmu-osc.github.io/code-publishing/).
+
+## License and Disclaimer
+
+None of the discussion in this tutorial constitutes legal advice.
+
+Except where noted otherwise, the narrative text in this tutorial
+is licensed under [CC\ BY-SA\ 4.0](LICENSE-CC-BY-SA.txt);
+the code without any narrative text is also (at your option)
+available under [CC0\ 1.0](LICENSE-CC0.txt).
+
+The files `Manuscript.qmd` and `Bibliography.bib` are made available
+by Josephine Zerna and Christoph Scheffel under [CC0\ 1.0](LICENSE-CC0.txt).
+
+The screenshots of the [RStudio IDE](https://github.com/rstudio/rstudio)
+are Copyright (C) 2024 Posit PBC and are available
+under the [GNU Affero General Public License v3](LICENSE-AGPL.txt).
+The source code is available on [GitHub](https://github.com/rstudio/rstudio/tree/v2024.04.2%2B764).
+
+## Notes
+
+This tutorial was primarily written in 2025 using [R](https://cloud.r-project.org/)
+and [Quarto](https://quarto.org/docs/download/release.html).
+Major changes to either can be found at the websites linked above,
+for the most up-to-date information,
+and to confirm that our tutorial is not out-of-date.
 
 ## Utilized Software
 
@@ -50,27 +100,20 @@ Quarto {{< version >}} was utilized to render the files.
 sessioninfo::session_info()
 ```
 
-## License and Disclaimer
 
-None of the discussion in this tutorial constitutes legal advice.
+This tutorial was written using the [`lmu-osc/tutorial-template`](https://github.com/lmu-osc/tutorial-template) Quarto extension [@callahan2026].
 
-Except where noted otherwise, the narrative text in this tutorial
-is licensed under [CC\ BY-SA\ 4.0](LICENSE-CC-BY-SA.txt);
-the code without any narrative text is also (at your option)
-available under [CC0\ 1.0](LICENSE-CC0.txt).
+::: {#refs}
+:::
 
-The files `Manuscript.qmd` and `Bibliography.bib` are made available
-by Josephine Zerna and Christoph Scheffel under [CC0\ 1.0](LICENSE-CC0.txt).
+## How to Cite
 
-The screenshots of the [RStudio IDE](https://github.com/rstudio/rstudio)
-are Copyright (C) 2024 Posit PBC and are available
-under the [GNU Affero General Public License v3](LICENSE-AGPL.txt).
-The source code is available on [GitHub](https://github.com/rstudio/rstudio/tree/v2024.04.2%2B764).
+**To cite this tutorial, please refer to the project's [CITATION.cff](CITATION.cff) file or use the BibTeX citation provided in the appendix below.**
 
 ## Funding
 
 ::: {.column-margin}
-![](images/bitss.png){width=250px}
+![](assets/bitss.png){width=250px}
 :::
 
 This work was partly funded by the Berkeley Initiative

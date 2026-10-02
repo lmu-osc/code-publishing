@@ -1,9 +1,48 @@
 ---
 title: "Code Publishing Tutorial"
+subtitle: "Make your code and material available to others"
+description: "A self-paced tutorial on preparing code and research materials for publication, covering copyright and licensing, documenting data and code, writing a README, and archiving your project."
 ---
 
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+library(downlit)
+library(xml2)
+```
+
 This tutorial covers how to make your code and material available to others.
-It wraps up a series of tutorials which we recommend to go through in advance:
+It wraps up a series of tutorials which we recommend to go through in advance.
+
+## Tutorial Overview
+
+This **self-paced tutorial** is intended to be worked through in order, one section after the other.
+
+The tutorial is split into the following sections:
+
+1. [**Introduction**](intro.qmd) motivates why you should publish your code and material.
+2. [**Project Setup**](setup.qmd) prepares the project folder and the example manuscript used throughout.
+3. [**Sharing work of others: Copyright**](copyright.qmd) explains what you are allowed to share and under which conditions.
+4. [**Add Data and Data Dictionary**](data.qmd) adds the underlying data and documents it.
+5. [**Add Code**](code.qmd) adds the analysis code and makes the project reproducible.
+6. [**Choose a License**](choose-license.qmd) picks an appropriate license for your content and code.
+7. [**Make a README**](make-readme.qmd) writes the high-level documentation others need to reuse your project.
+8. [**Archive Your Project**](archive.qmd) uploads the project to a repository and obtains a DOI.
+
+We will start with creating a simple report which incorporates R code.
+Then, we will focus on what is required to publish your work:
+
+- removing legal barriers: adding an appropriate license
+- high-level documentation: creating a README file
+- archival: uploading it to a repository
+
+## Prerequisite Tutorials
+
+While the general principles taught in this tutorial apply to most researchers
+publishing code, we will focus on the programming language R
+and the publishing system Quarto.
+You may want to work through the following tutorials in advance:
 
 - [Introduction to version control with git and GitHub within RStudio](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/):
   This tutorial explains how to set up a simple project with version control.
@@ -20,17 +59,17 @@ It wraps up a series of tutorials which we recommend to go through in advance:
 - [FAIR research data management](https://lmu-osc.github.io/FAIR-Data-Management/):
   Learn how to make your data findable, accessible, interoperable, and reusable.
 
-While the general principles taught in this tutorial apply to most researchers
-publishing code, we will focus on the programming language R
-and the publishing system Quarto.
+::: {.callout-warning title="Recommended Software"}
+This tutorial assumes you have the following software installed:
 
-To follow the tutorial you need to have installed
-[Git](https://git-scm.com/downloads),
-[R](https://cloud.r-project.org/), and
-[Quarto](https://quarto.org/docs/download/release.html).
-Windows users may additionally need [RTools](https://cloud.r-project.org/bin/windows/Rtools/).
+- [Git](https://git-scm.com/downloads)
+- [R](https://cloud.r-project.org/)
+- [Quarto](https://quarto.org/docs/download/release.html)
+- [RTools](https://cloud.r-project.org/bin/windows/Rtools/) (Windows users only)
+
 Some things will be explained using the [RStudio IDE](https://posit.co/download/rstudio-desktop/#:~:text=2%3A%20Install%20RStudio),
 but you are free to use any IDE you like.
+:::
 
 ::: {#nte-quarto-alternatives .callout-note collapse="true"}
 ## Alternatives to Quarto
@@ -57,11 +96,28 @@ you can also create dynamic documents with the following tools:
 - [StatTag](https://sites.northwestern.edu/stattag/)
 :::
 
-We will start with creating a simple report which incorporates R code.
-Then, we will focus on what is required to publish your work:
-
-- removing legal barriers: adding an appropriate license
-- high-level documentation: creating a README file
-- archival: uploading it to a repository
-
 [Get started](intro.qmd){.btn .btn-lg .btn-success}
+
+:::: {.columns}
+
+::: {.column width="47.5%"}
+
+::: {.callout-tip title="Support the LMU Open Science Center!"}
+
+**Like this tutorial? Be sure to give [the repository]({{< meta repo-url >}}) a star and [follow us on GitHub](https://github.com/lmu-osc)!**
+:::
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="47.5%"}
+
+::: {.callout-tip title="Questions about this tutorial?"}
+**If you have questions for the author of this tutorial, please take a look at the [About](about.qmd) page.**
+:::
+
+:::
+
+::::

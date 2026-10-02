@@ -1,25 +1,16 @@
 # Begin Project
 project:
-  type: website
+  type: tutorial-template
+  # FYI: the tutorial-template project type is defined in the lmu-osc/tutorial-template extension
 # End Project
 
 # Begin Website
+repo-url: https://github.com/lmu-osc/code-publishing
 website:
   title: "Code Publishing Tutorial"
   page-footer:
-    center: |
-      A recommended citation and license information for this tutorial
-      are provided on the [about page](/about.qmd).
     border: false
-  search:
-    location: sidebar
-  repo-url: https://github.com/lmu-osc/code-publishing
-  repo-actions: [edit, issue]
-  back-to-top-navigation: false
-  page-navigation: true
-  favicon: images/LMU-OSC_favicon.jpg
-  margin-header: |
-    ![](/images/LMU-OSC_logo.jpg){width="175"}
+    center: © 2025 Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, Pat Callahan. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.
 
   navbar:
     right:
@@ -31,15 +22,17 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            url: https://github.com/lmu-osc/code-publishing
+            href: https://github.com/lmu-osc/code-publishing
           - text: Report a Bug
-            url: https://github.com/lmu-osc/code-publishing/issues
+            href: https://github.com/lmu-osc/code-publishing/issues
       - icon: house-heart
-        url: https://www.osc.uni-muenchen.de/
+        url: https://www.osc.lmu.de/
 
   sidebar:
     style: "docked"
     contents:
+      - text: "Overview"
+        href: index.qmd
       - intro.qmd
       - setup.qmd
       - copyright.qmd
@@ -50,35 +43,40 @@ website:
       - archive.qmd
       - section: "In-depth material"
         contents:
-          - href: in_depth_material/introduction_copyright.qmd
+          - href: in-depth-material/introduction-copyright.qmd
             text: "Introduction to Copyright and Licensing"
-          - href: in_depth_material/copyright-conditions.qmd
+          - href: in-depth-material/copyright-conditions.qmd
             text: "Copyright Conditions"
-          - href: in_depth_material/data_dic_generation.qmd
+          - href: in-depth-material/data-dic-generation.qmd
             text: "Automatic Generation of Data Dictionaries"
-          - href: in_depth_material/licenses-continued.qmd
+          - href: in-depth-material/licenses-continued.qmd
             text: "Licenses Continued"
-          - href: in_depth_material/other_dependencies.qmd
+          - href: in-depth-material/other-dependencies.qmd
             text: "Identify additional system dependencies for the README"
 # End Website
 
+# Begin Includes
+include-in-header:
+  - file: matomo-analytics.html
+# End Includes
+
 # Begin Format
+# use only if needed. the default format for `tutorial-template` projects is tutorial-template-html+tutorial
 format:
-  html:
-    theme:
-      - cosmo
-    css:
-      - https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css
-    toc: true
+  tutorial-template-html+tutorial:
     fontsize: 13pt
-    grid:
-      sidebar-width: 300px
     mermaid:
       theme: neutral
-    include-in-header:
-      - file: matomo_analytics.html
+    css:
+      - footer/footer-style.css
+    include-after-body:
+      - file: footer/footer.html
 # End Format
 
+# Begin Editor
+editor: source
+# End Editor
+
 csl: apa.csl
-bibliography: literature.bib
+bibliography: references.bib
 lang: en-US

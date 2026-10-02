@@ -272,8 +272,8 @@ unique(installed.packages(fields="License")[deps, "License"])
 :::
 
 We have prepared two advanced license flowcharts,
-[one for software, writing, images, audio, and video](/in_depth_material/licenses-continued.qmd#fig-flowchart-non-data)
-and [one for data](/in_depth_material/licenses-continued.qmd#fig-flowchart-data) where you can make additional choices.
+[one for software, writing, images, audio, and video](/in-depth-material/licenses-continued.qmd#fig-flowchart-non-data)
+and [one for data](/in-depth-material/licenses-continued.qmd#fig-flowchart-data) where you can make additional choices.
 Note, however, that especially the advanced flowchart for licensing data is quite complex
 and we recommend you to seek legal counsel if you want to be sure.
 
@@ -284,11 +284,11 @@ such as whether attribution should be a condition of redistribution.
 As you have learned, even if attribution is not a condition of the license,
 there are other reasons for attributing you as an author
 (such as scientific citation standards or moral rights).
-All conditions are explained on the supplementary page on [copyright conditions](in_depth_material/copyright-conditions.qmd).
+All conditions are explained on the supplementary page on [copyright conditions](in-depth-material/copyright-conditions.qmd).
 
 From the Creative Commons licenses,
 only [CC0\ 1.0][cc0] does not require providing attribution,
-and all software licenses in [the first advanced license flowchart](/in_depth_material/licenses-continued.qmd#fig-flowchart-non-data) require providing attribution.
+and all software licenses in [the first advanced license flowchart](/in-depth-material/licenses-continued.qmd#fig-flowchart-non-data) require providing attribution.
 As an author, you are free to waive license conditions such as attribution, however.
 
 ::: {#nte-silos .callout-note collapse="true"}
@@ -311,7 +311,7 @@ we recommend you to read the article
 "A Quick Guide to Software Licensing for the Scientist-Programmer" by @Morin2012.
 The following diagram provides an overview of the compatibility of various licenses:
 
-!["Open data-capable license interoperability" by Robbie Morrison [-@Morrison2024] licensed under [CC\ BY\ 4.0][cc-by]](images/Morrison2024.jpg){.lightbox}
+!["Open data-capable license interoperability" by Robbie Morrison [-@Morrison2024] licensed under [CC\ BY\ 4.0][cc-by]](assets/Morrison2024.jpg){.lightbox}
 :::
 
 ## Applying the License

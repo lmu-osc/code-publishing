@@ -1,5 +1,6 @@
 ---
 title: Licenses Continued
+aliases: [in_depth_material/licenses-continued.html]
 ---
 
 ## Additional Figures 

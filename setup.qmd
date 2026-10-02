@@ -13,15 +13,15 @@ If you haven't already, open RStudio
 -- see @nte-terminal for how to use the terminal instead.
 Then, click on _File_ > _New Project..._ to open the _New Project Wizard_.
 
-![](images/setup_01.png){width=500px fig-align="center"}
+![](assets/setup-01.png){width=500px fig-align="center"}
 
 Here, select _New Directory_
 
-![](images/setup_02.png){width=600px fig-align="center"}
+![](assets/setup-02.png){width=600px fig-align="center"}
 
 And choose the project type _Quarto Project_.
 
-![](images/setup_03.png){width=600px fig-align="center"}
+![](assets/setup-03.png){width=600px fig-align="center"}
 
 Finally, enter the name of the directory where our report will be created in,
 for example `code-publishing-exercise`.
@@ -34,7 +34,7 @@ If you don't know what Git is, have a look at the tutorial
 [git-tutorial]: https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/
 
 ::: {.column-margin}
-![renv: A dependency management toolkit for R](images/renv.svg){width=250px}
+![renv: A dependency management toolkit for R](assets/renv.svg){width=250px}
 :::
 
 Also, we will utilize the package [`renv`][renv]
@@ -52,12 +52,12 @@ have a look at the tutorial "[Introduction to {renv}][renv-tutorial]".
 If you are already familiar with Markdown and Quarto,
 you can uncheck the box _Use visual markdown editor_.
 
-![](images/setup_04.png){width=600px fig-align="center"}
+![](assets/setup-04.png){width=600px fig-align="center"}
 
 Click on _Create Project_.
 Your RStudio window should now look similar to this:
 
-![](images/setup_05.png){.lightbox fig-align="center" alt="The project `code-publishing-exercise` opened in RStudio. The source pane to the top left has a Quarto file open called \"code-publishing-exercise.qmd\". The console pane to the bottom left indicates by its output that renv is active in the current project. The environment pane to the top right indicates that the environment is currently empty. The output pane to the bottom right shows the files in the current project."}
+![](assets/setup-05.png){.lightbox fig-align="center" alt="The project `code-publishing-exercise` opened in RStudio. The source pane to the top left has a Quarto file open called \"code-publishing-exercise.qmd\". The console pane to the bottom left indicates by its output that renv is active in the current project. The environment pane to the top right indicates that the environment is currently empty. The output pane to the bottom right shows the files in the current project."}
 
 If, like in the image, a Quarto file with some demo content was opened automatically,
 you can close and delete it, for example, using RStudio's file manager.
@@ -181,7 +181,7 @@ In this simple project, we will explore differences in bill length
 between male and female penguins.
 You can put all your files in the root folder of your project.
 
-![Artwork by \@allison_horst, licensed under [CC0\ 1.0](https://creativecommons.org/publicdomain/zero/1.0/), adapted from [original](https://allisonhorst.github.io/palmerpenguins/articles/art.html)](images/culmen_depth.png)
+![Artwork by \@allison_horst, licensed under [CC0\ 1.0](https://creativecommons.org/publicdomain/zero/1.0/), adapted from [original](https://allisonhorst.github.io/palmerpenguins/articles/art.html)](assets/culmen-depth.png)
 
 ## Add Manuscript
 

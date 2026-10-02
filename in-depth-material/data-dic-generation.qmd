@@ -1,6 +1,7 @@
 ---
 title: "Generation of Data Dictionaries Using R"
 engine: knitr
+aliases: [in_depth_material/data_dic_generation.html]
 ---
 
 _Note: This is an add-on to the Chapter "[Add Data and Data Dictionary](/data.qmd)". It describes how to (a) generate data dictionaries with R, and (b) how to create a machine readable documentation of the data._
@@ -123,7 +124,7 @@ The descriptions are only added to a (temporary) copy of the data set within R
 to create the data dictionary.
 
 ::: {.column-margin}
-![datawizard: Easy Data Wrangling and Statistical Transformations](../images/datawizard.png){width=250px}
+![datawizard: Easy Data Wrangling and Statistical Transformations](../assets/datawizard.png){width=250px}
 :::
 
 ``````{cat}

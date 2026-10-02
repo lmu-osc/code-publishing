@@ -2,7 +2,7 @@
 title: "Sharing work of others: Copyright"
 engine: knitr
 format:
-  html:
+  tutorial-template-html+tutorial:
     include-in-header:
       - text: |
           <style>
@@ -28,7 +28,7 @@ which is the topic of this chapter.
 As copyright and licensing can be complicated,
 we focus on rather simple (but typical) situations.
 For an in-depth explanation of copyright and licenses, 
-see our supplementary in-depth material "[Introduction to Copyright and Licenses](in_depth_material/introduction_copyright.qmd)".
+see our supplementary in-depth material "[Introduction to Copyright and Licenses](in-depth-material/introduction-copyright.qmd)".
 
 ## Short Introduction to Copyright and Licenses
 
@@ -83,7 +83,7 @@ you can determine the license using the website [lizenzhinweisgenerator.de][comm
 [commons-gen]: https://lizenzhinweisgenerator.de/?lang=en
 
 If you cannot find any license, the work might be
-in the **public domain** (see details [here](in_depth_material/introduction_copyright.qmd#public-domain)). In this case, you can simply reuse it, but still should credit the original creator(s) in accordance with good scientific practice.
+in the **public domain** (see details [here](in-depth-material/introduction-copyright.qmd#public-domain)). In this case, you can simply reuse it, but still should credit the original creator(s) in accordance with good scientific practice.
 
 If no license notice is present and the work is *not* in the public domain,
 it is by default  _in copyright_ and you are generally not allowed to share it with others.
@@ -106,7 +106,7 @@ you need to determine
 (2) whether it is a free/open,
 and (3) whether it is appropriate for the particular type of work and use case.
 
-Below are listed several standard free/open licenses. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our supplementary [Copyright Conditions](in_depth_material/copyright-conditions.qmd) page.
+Below are listed several standard free/open licenses. To better understand the conditions under which you are allowed to include others' works in your project folder, please take a look at our supplementary [Copyright Conditions](in-depth-material/copyright-conditions.qmd) page.
 
 [osi-list]: https://opensource.org/licenses
 [fsf-list]: https://www.gnu.org/licenses/license-list.html#SoftwareLicenses
@@ -513,7 +513,7 @@ git commit -m "Add image"
 If you would like to learn more about copyright and licenses
 you might find the following resources interesting:
 
-- Our own [in-depth material on copyright and licenses](in_depth_material/introduction_copyright.qmd) (which is an extension of this chapter)
+- Our own [in-depth material on copyright and licenses](in-depth-material/introduction-copyright.qmd) (which is an extension of this chapter)
 - "Open Content -- Navigating Creative Commons Licenses"
   by @Kreutzer2024
 - "Creative Commons Certificate for Educators, Academic Librarians,

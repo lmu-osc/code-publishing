@@ -446,8 +446,8 @@ when it comes to writing code that is readable and maintainable.
 - __Use project-relative paths.__
   When you refer to a file within your project folder,
   write paths relative to the root (the uppermost folder in your project).
-  For example, don't write `C:/Users/Public/Documents/my_project/images/result.png`,
-  instead write `images/result.png`.
+  For example, don't write `C:/Users/Public/Documents/my_project/assets/result.png`,
+  instead write `assets/result.png`.
 
 - __Keep it simple.__
   Add complexity only when you must.

@@ -37,7 +37,7 @@ and put it into your project folder:
 [data.csv](data.csv){.btn .btn-lg .btn-info download="data.csv"}
 
 ::: {.column-margin}
-![palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data](images/palmerpenguins.png){width=250px}
+![palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data](assets/palmerpenguins.png){width=250px}
 :::
 
 The data set is from the package [`palmerpenguins`][palmerpenguins]
@@ -123,7 +123,7 @@ documenting only the bare minimum.
 
 ::: {#tip-in-depth .callout-tip collapse="false"}
 ### Creating data dictionaries using R
-Our in-depth supplementary material "[Generation of Data Dictionaries Using R](in_depth_material/data_dic_generation.qmd)"
+Our in-depth supplementary material "[Generation of Data Dictionaries Using R](in-depth-material/data-dic-generation.qmd)"
 explains how you can create a data dictionary with R.
 This advanced chapter also contains a section on how to create machine-readable data dictionaries.
 :::

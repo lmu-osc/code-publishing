@@ -1,8 +1,9 @@
 ---
 title: "Introduction to Copyright and Licensing"
 engine: knitr
+aliases: [in_depth_material/introduction_copyright.html]
 format:
-  html:
+  tutorial-template-html+tutorial:
     include-in-header:
       - text: |
           <style>
@@ -178,7 +179,7 @@ for which the open editing phase began in 2006.
 They are largely viewed as compatible with one another.
 
 :::: {.column-margin}
-![](/images/Definition_of_Free_Cultural_Works.svg){width=250px}
+![](/assets/definition-of-free-cultural-works.svg){width=250px}
 ::::
 :::
 

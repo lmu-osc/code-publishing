@@ -1,6 +1,7 @@
 ---
 title: "Identify additional system dependencies for the README"
 engine: knitr
+aliases: [in_depth_material/other_dependencies.html]
 ---
 
 The specific version of R and the loaded packages is the most crucial information that should go into the README (or that is stored in the `renv` lockfile). Ideally, you list other system dependencies, such as the version of Quarto[^renv-quarto] that you used to render your paper.
