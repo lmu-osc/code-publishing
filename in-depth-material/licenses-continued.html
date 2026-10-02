@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<meta name="description" content="A self-paced tutorial on preparing code and research materials for publication, covering copyright and licensing, documenting data and code, writing a README, and archiving your project.">
-<title>Code Publishing Tutorial</title>
+
+
+<title>Licenses Continued – Code Publishing Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -61,29 +63,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./intro.html" rel="next">
-<link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-ef984e901dd5d1c5cb17c9d77ad3c99b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../in-depth-material/other-dependencies.html" rel="next">
+<link href="../in-depth-material/data-dic-generation.html" rel="prev">
+<link href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-ef984e901dd5d1c5cb17c9d77ad3c99b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -108,8 +113,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><style>html{ scroll-behavior: smooth; }</style>
-<!-- Matomo --><script>
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<!-- Matomo -->
+<script>
 if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -123,9 +134,14 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 }
-</script><!-- End Matomo Code --><link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
-<link rel="stylesheet" href="footer/footer-style.css">
+</script>
+<!-- End Matomo Code -->
+
+
+<link rel="stylesheet" href="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+<link rel="stylesheet" href="../footer/footer-style.css">
 </head>
+
 <body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
@@ -291,11 +307,15 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content"></a>
-    <a class="navbar-brand" href="./index.html">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content">
+    <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Code Publishing Tutorial</span>
     </a>
   </div>
@@ -304,23 +324,23 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-<li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
-<ul class="navbar-nav navbar-nav-scroll ms-auto">
-<li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
-</div> <!-- /navcollapse -->
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools tools-wide">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-<li>
+          <li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lmu-osc/code-publishing">
             Source Code
             </a>
@@ -331,7 +351,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
             </a>
           </li>
       </ul>
-</div>
+    </div>
     <a href="https://www.osc.lmu.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
   <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
@@ -341,22 +361,30 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../in-depth-material/introduction-copyright.html">In-depth material</a></li><li class="breadcrumb-item"><a href="../in-depth-material/licenses-continued.html">Licenses Continued</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="./index.html" class="sidebar-logo-link">
-      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="../site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -365,57 +393,57 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Project Setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="../copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sharing work of others: Copyright</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data.html" class="sidebar-item-text sidebar-link">
+  <a href="../data.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Add Data and Data Dictionary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./code.html" class="sidebar-item-text sidebar-link">
+  <a href="../code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Add Code</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./choose-license.html" class="sidebar-item-text sidebar-link">
+  <a href="../choose-license.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Choose a License</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./make-readme.html" class="sidebar-item-text sidebar-link">
+  <a href="../make-readme.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Make a README</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./archive.html" class="sidebar-item-text sidebar-link">
+  <a href="../archive.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Archive Your Project</span></a>
   </div>
 </li>
@@ -427,60 +455,65 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in-depth-material/introduction-copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="../in-depth-material/introduction-copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Copyright and Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in-depth-material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
+  <a href="../in-depth-material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copyright Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in-depth-material/data-dic-generation.html" class="sidebar-item-text sidebar-link">
+  <a href="../in-depth-material/data-dic-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automatic Generation of Data Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in-depth-material/licenses-continued.html" class="sidebar-item-text sidebar-link">
+  <a href="../in-depth-material/licenses-continued.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Licenses Continued</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in-depth-material/other-dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="../in-depth-material/other-dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identify additional system dependencies for the README</span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><ul>
-<li><a href="#tutorial-overview" id="toc-tutorial-overview" class="nav-link active" data-scroll-target="#tutorial-overview">Tutorial Overview</a></li>
-  <li><a href="#prerequisite-tutorials" id="toc-prerequisite-tutorials" class="nav-link" data-scroll-target="#prerequisite-tutorials">Prerequisite Tutorials</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+   
+  <ul>
+  <li><a href="#additional-figures" id="toc-additional-figures" class="nav-link active" data-scroll-target="#additional-figures">Additional Figures</a>
+  <ul class="collapse">
+  <li><a href="#software-writing-images-audio-and-video" id="toc-software-writing-images-audio-and-video" class="nav-link" data-scroll-target="#software-writing-images-audio-and-video">Software, Writing, Images, Audio, and Video</a></li>
+  <li><a href="#data-and-databases" id="toc-data-and-databases" class="nav-link" data-scroll-target="#data-and-databases">Data and Databases</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/in-depth-material/licenses-continued.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/in-depth-material/licenses-continued.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Code Publishing Tutorial</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
-<p class="subtitle lead">Make your code and material available to others</p>
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../in-depth-material/introduction-copyright.html">In-depth material</a></li><li class="breadcrumb-item"><a href="../in-depth-material/licenses-continued.html">Licenses Continued</a></li></ol></nav>
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Licenses Continued</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
-<div>
-  <div class="description">
-    A self-paced tutorial on preparing code and research materials for publication, covering copyright and licensing, documenting data and code, writing a README, and archiving your project.
-  </div>
-</div>
 
 
 <div class="quarto-title-meta">
@@ -492,139 +525,123 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   
 
 
-</header><p>This tutorial covers how to make your code and material available to others. It wraps up a series of tutorials which we recommend to go through in advance.</p>
-<section id="tutorial-overview" class="level2"><h2 class="anchored" data-anchor-id="tutorial-overview">Tutorial Overview</h2>
-<p>This <strong>self-paced tutorial</strong> is intended to be worked through in order, one section after the other.</p>
-<p>The tutorial is split into the following sections:</p>
-<ol type="1">
-<li>
-<a href="./intro.html"><strong>Introduction</strong></a> motivates why you should publish your code and material.</li>
-<li>
-<a href="./setup.html"><strong>Project Setup</strong></a> prepares the project folder and the example manuscript used throughout.</li>
-<li>
-<a href="./copyright.html"><strong>Sharing work of others: Copyright</strong></a> explains what you are allowed to share and under which conditions.</li>
-<li>
-<a href="./data.html"><strong>Add Data and Data Dictionary</strong></a> adds the underlying data and documents it.</li>
-<li>
-<a href="./code.html"><strong>Add Code</strong></a> adds the analysis code and makes the project reproducible.</li>
-<li>
-<a href="./choose-license.html"><strong>Choose a License</strong></a> picks an appropriate license for your content and code.</li>
-<li>
-<a href="./make-readme.html"><strong>Make a README</strong></a> writes the high-level documentation others need to reuse your project.</li>
-<li>
-<a href="./archive.html"><strong>Archive Your Project</strong></a> uploads the project to a repository and obtains a DOI.</li>
-</ol>
-<p>We will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:</p>
-<ul>
-<li>removing legal barriers: adding an appropriate license</li>
-<li>high-level documentation: creating a README file</li>
-<li>archival: uploading it to a repository</li>
-</ul></section><section id="prerequisite-tutorials" class="level2"><h2 class="anchored" data-anchor-id="prerequisite-tutorials">Prerequisite Tutorials</h2>
-<p>While the general principles taught in this tutorial apply to most researchers publishing code, we will focus on the programming language R and the publishing system Quarto. You may want to work through the following tutorials in advance:</p>
-<ul>
-<li>
-<a href="https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/">Introduction to version control with git and GitHub within RStudio</a>: This tutorial explains how to set up a simple project with version control.</li>
-<li>
-<a href="https://lmu-osc.github.io/Collaborative-RStudio-GitHub/">Collaborative coding with GitHub and RStudio</a>: Here you can learn how to collaborate with others on code projects using GitHub.</li>
-<li>
-<a href="https://lmu-osc.github.io/introduction-to-R/">Introduction to R</a>: This is an introduction to the R programming language.</li>
-<li>
-<a href="https://lmu-osc.github.io/introduction-to-renv/">Introduction to {renv}</a>: Here you can learn how to manage the dependencies of an R project.</li>
-<li>
-<a href="https://lmu-osc.github.io/introduction-to-Quarto/">Introduction to Quarto</a>: Learn how to combine prose and code to make documents more reproducible.</li>
-<li>
-<a href="https://lmu-osc.github.io/introduction-to-zotero/">Introduction to Zotero</a>: Get introduced to the reference management software Zotero.</li>
-<li>
-<a href="https://lmu-osc.github.io/FAIR-Data-Management/">FAIR research data management</a>: Learn how to make your data findable, accessible, interoperable, and reusable.</li>
-</ul>
-<div class="callout callout-style-default callout-warning callout-titled" title="Recommended Software">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Recommended Software
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This tutorial assumes you have the following software installed:</p>
-<ul>
-<li><a href="https://git-scm.com/downloads">Git</a></li>
-<li><a href="https://cloud.r-project.org/">R</a></li>
-<li><a href="https://quarto.org/docs/download/release.html">Quarto</a></li>
-<li>
-<a href="https://cloud.r-project.org/bin/windows/Rtools/">RTools</a> (Windows users only)</li>
-</ul>
-<p>Some things will be explained using the <a href="https://posit.co/download/rstudio-desktop/#:~:text=2%3A%20Install%20RStudio">RStudio IDE</a>, but you are free to use any IDE you like.</p>
-</div>
-</div>
-<div id="nte-quarto-alternatives" class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note&nbsp;1: Alternatives to Quarto
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>Quarto is a tool to render dynamic documents, but not the only one.</p>
-<p>It is the successor of the R package <a href="https://pkgs.rstudio.com/rmarkdown/"><code>rmarkdown</code></a> and mostly backwards-compatible. <code>rmarkdown</code> continues to be supported, but the development of new features happens in Quarto. The main difference is that Quarto has first-class support for Python. In other words, Python users of Quarto do not need to have R installed.</p>
-<p>While this tutorial focuses on Quarto, you can also create dynamic documents with the following tools:</p>
-<ul>
-<li><a href="https://jupyterbook.org/">Jupyter Book</a></li>
-<li><a href="https://plutojl.org/">Pluto</a></li>
-<li><a href="https://marimo.io/">marimo</a></li>
-<li><a href="https://stencila.io/">Stencila</a></li>
-<li><a href="https://curvenote.dev/">Curvenote</a></li>
-<li><a href="https://show-your.work/">showyourwork!</a></li>
-<li><a href="https://orgmode.org/">Org Mode</a></li>
-<li><a href="https://sites.northwestern.edu/stattag/">StatTag</a></li>
-</ul>
-</div>
-</div>
-</div>
-<p><a href="./intro.html" class="btn btn-lg btn-success">Get started</a></p>
-<div class="columns">
-<div class="column" style="width:47.5%;">
-<div class="callout callout-style-default callout-tip callout-titled" title="Support the LMU Open Science Center!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Support the LMU Open Science Center!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Like this tutorial? Be sure to give <a href="https://github.com/lmu-osc/code-publishing">the repository</a> a star and <a href="https://github.com/lmu-osc">follow us on GitHub</a>!</strong></p>
-</div>
-</div>
-</div><div class="column" style="width:5%;">
+</header>
 
-</div><div class="column" style="width:47.5%;">
-<div class="callout callout-style-default callout-tip callout-titled" title="Questions about this tutorial?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+
+<section id="additional-figures" class="level2">
+<h2 class="anchored" data-anchor-id="additional-figures">Additional Figures</h2>
+<section id="software-writing-images-audio-and-video" class="level3">
+<h3 class="anchored" data-anchor-id="software-writing-images-audio-and-video">Software, Writing, Images, Audio, and Video</h3>
+<div id="fig-flowchart-non-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flowchart-non-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  start("We want to choose a&lt;br&gt;license for software,&lt;br&gt;writing, image, audio,&lt;br&gt;or video.") --"We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license["&lt;em&gt;Use its license&lt;/em&gt;"]
+  start --"We created the work&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?")
+  
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; type("Work type?")
+  
+  type --"Software"--&gt; code_sa("Attribution?&lt;br&gt;Indicate license?&lt;br&gt;Add license text?&lt;br&gt;State changes?&lt;br&gt;Disclose code?&lt;br&gt;Copyleft?")
+  type --"Writing, image, audio, video"--&gt; nocode_cc("Attribution?&lt;br&gt;Indicate license?&lt;br&gt;State changes?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
+  
+  code_sa --"Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes"--&gt; apache["Apache 2.0"]
+  code_sa --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Weak copyleft"--&gt; mpl["MPL 2.0"]
+  code_sa --"Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Strong copyleft"--&gt; agpl["AGPLv3"]
+  
+  nocode_cc --"Neither"--&gt; cc0["CC0 1.0"]
+  nocode_cc --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM"--&gt; cc_by["CC BY 4.0"]
+  nocode_cc --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft"--&gt; cc_by_sa["CC BY-SA 4.0"]
+  
+  click apache href "https://choosealicense.com/licenses/apache-2.0/"
+  click mpl href "https://choosealicense.com/licenses/mpl-2.0/"
+  click agpl href "https://choosealicense.com/licenses/agpl-3.0/"
+  click cc0 href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click cc_by href "https://creativecommons.org/licenses/by/4.0/"
+  click cc_by_sa href "https://creativecommons.org/licenses/by-sa/4.0/"
+</pre>
 </div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Questions about this tutorial?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>If you have questions for the author of this tutorial, please take a look at the <a href="./about.html">About</a> page.</strong></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
+<p><em>Note.</em> DRM = digital rights management</p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flowchart-non-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Advanced License Flowchart for Software, Writing, Images, Audio, and Video
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="data-and-databases" class="level3">
+<h3 class="anchored" data-anchor-id="data-and-databases">Data and Databases</h3>
+<div id="fig-flowchart-data" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flowchart-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  start("We want to choose a&lt;br&gt;license for data.") --"We adapted a database by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license_db["&lt;em&gt;Use its license(s)&lt;br&gt;for content and database&lt;/em&gt;"]
+  start --"We created a database&lt;br&gt;entirely by ourselves."--&gt; regulation("Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?")
+  
+  regulation --"Exists"--&gt; follow_existing_norms["&lt;em&gt;Follow that&lt;/em&gt;"]
+  regulation --"Does not&lt;br&gt;exist"--&gt; existing_license_content("Adapting content&lt;br&gt; by others?")
+  
+  subgraph content["&lt;strong&gt;License for content&lt;/strong&gt;"]
+  existing_license_content --"No, we created the content&lt;br&gt;entirely by ourselves."--&gt; facts("Entries are facts&lt;br&gt;(like measurements&lt;br&gt;or metadata)?")
+  existing_license_content --"Yes, it was&lt;br&gt;shared under a&lt;br&gt;free/open license."--&gt; use_existing_license_content["&lt;em&gt;Use that license&lt;/em&gt;"]
+  facts --"Yes"--&gt; cc0_content_metadata["CC0 1.0"]
+  facts --"No"--&gt; choose_license["&lt;em&gt;Consult flowchart for&lt;br&gt;software, writing,&lt;br&gt;image, audio, and video&lt;/em&gt;"]
+  end
+  
+  subgraph database["&lt;strong&gt;License for database&lt;/strong&gt;"]
+  choose_license --&gt; switch_license["&lt;em&gt;Depending on&lt;br&gt;content license&lt;/em&gt;"]
+  use_existing_license_content --&gt; switch_license
+  
+  cc0_content_metadata --&gt; cc0_db["CC0 1.0"]
+  switch_license --"CC0 or&lt;br&gt;non-CC license"--&gt; sa("Attribution?&lt;br&gt;Indicate license?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?")
+  switch_license --"CC BY or&lt;br&gt;CC BY-SA"--&gt; same["&lt;em&gt;Same license for DB&lt;/em&gt;"]
+  
+  sa --"Neither"--&gt; cc0_db
+  sa --"Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft"--&gt; odbl["ODbL 1.0"]
+  
+  %% the following link is only added to have terminal nodes on the same level
+  sa ~~~ same
+  end
+  
+  click cc0_content_metadata href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click cc0_db href "https://creativecommons.org/publicdomain/zero/1.0/"
+  click odbl href "https://opendatacommons.org/licenses/odbl/summary/"
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p><em>Note.</em> DRM = digital rights management</p>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flowchart-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Advanced License Flowchart for Data(base)
+</figcaption>
+</figure>
 </div>
 
 
 <!-- -->
 
-</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
     if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1094,152 +1111,121 @@ Note&nbsp;1: Alternatives to Quarto
       }
     }
   });
-  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../in-depth-material/data-dic-generation.html" class="pagination-link" aria-label="Automatic Generation of Data Dictionaries">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Automatic Generation of Data Dictionaries</span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./intro.html" class="pagination-link" aria-label="Introduction">
-        <span class="nav-page-text">Introduction</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../in-depth-material/other-dependencies.html" class="pagination-link" aria-label="Identify additional system dependencies for the README">
+        <span class="nav-page-text">Identify additional system dependencies for the README</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Code Publishing Tutorial"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Make your code and material available to others"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="an">description:</span><span class="co"> "A self-paced tutorial on preparing code and research materials for publication, covering copyright and licensing, documenting data and code, writing a README, and archiving your project."</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval: true</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#| warning: false</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(downlit)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(xml2)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>This tutorial covers how to make your code and material available to others.</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>It wraps up a series of tutorials which we recommend to go through in advance.</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="fu">## Tutorial Overview</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>This **self-paced tutorial** is intended to be worked through in order, one section after the other.</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>The tutorial is split into the following sections:</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span><span class="co">[</span><span class="ot">**Introduction**</span><span class="co">](intro.qmd)</span> motivates why you should publish your code and material.</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span><span class="co">[</span><span class="ot">**Project Setup**</span><span class="co">](setup.qmd)</span> prepares the project folder and the example manuscript used throughout.</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span><span class="co">[</span><span class="ot">**Sharing work of others: Copyright**</span><span class="co">](copyright.qmd)</span> explains what you are allowed to share and under which conditions.</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span><span class="co">[</span><span class="ot">**Add Data and Data Dictionary**</span><span class="co">](data.qmd)</span> adds the underlying data and documents it.</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span><span class="co">[</span><span class="ot">**Add Code**</span><span class="co">](code.qmd)</span> adds the analysis code and makes the project reproducible.</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span><span class="co">[</span><span class="ot">**Choose a License**</span><span class="co">](choose-license.qmd)</span> picks an appropriate license for your content and code.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">7. </span><span class="co">[</span><span class="ot">**Make a README**</span><span class="co">](make-readme.qmd)</span> writes the high-level documentation others need to reuse your project.</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span><span class="co">[</span><span class="ot">**Archive Your Project**</span><span class="co">](archive.qmd)</span> uploads the project to a repository and obtains a DOI.</span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>We will start with creating a simple report which incorporates R code.</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>Then, we will focus on what is required to publish your work:</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>removing legal barriers: adding an appropriate license</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>high-level documentation: creating a README file</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>archival: uploading it to a repository</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> Licenses Continued</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="an">aliases:</span><span class="co"> [in_depth_material/licenses-continued.html]</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Additional Figures </span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">### Software, Writing, Images, Audio, and Video </span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>::: {#fig-flowchart-non-data}</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  start(<span class="ot">"</span><span class="st">We want to choose a&lt;br&gt;license for software,&lt;br&gt;writing, image, audio,&lt;br&gt;or video.</span><span class="ot">"</span>) --<span class="ot">"</span><span class="st">We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license.</span><span class="ot">"</span>--&gt; use_existing_license[<span class="ot">"</span><span class="st">&lt;em&gt;Use its license&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  start --<span class="ot">"</span><span class="st">We created the work&lt;br&gt;entirely by ourselves.</span><span class="ot">"</span>--&gt; regulation(<span class="ot">"</span><span class="st">Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?</span><span class="ot">"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  regulation --<span class="ot">"</span><span class="st">Exists</span><span class="ot">"</span>--&gt; follow_existing_norms[<span class="ot">"</span><span class="st">&lt;em&gt;Follow that&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  regulation --<span class="ot">"</span><span class="st">Does not&lt;br&gt;exist</span><span class="ot">"</span>--&gt; type(<span class="ot">"</span><span class="st">Work type?</span><span class="ot">"</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  type --<span class="ot">"</span><span class="st">Software</span><span class="ot">"</span>--&gt; code_sa(<span class="ot">"</span><span class="st">Attribution?&lt;br&gt;Indicate license?&lt;br&gt;Add license text?&lt;br&gt;State changes?&lt;br&gt;Disclose code?&lt;br&gt;Copyleft?</span><span class="ot">"</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>  type --<span class="ot">"</span><span class="st">Writing, image, audio, video</span><span class="ot">"</span>--&gt; nocode_cc(<span class="ot">"</span><span class="st">Attribution?&lt;br&gt;Indicate license?&lt;br&gt;State changes?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?</span><span class="ot">"</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>  code_sa --<span class="ot">"</span><span class="st">Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes</span><span class="ot">"</span>--&gt; apache[<span class="ot">"</span><span class="st">Apache 2.0</span><span class="ot">"</span>]</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>  code_sa --<span class="ot">"</span><span class="st">Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Weak copyleft</span><span class="ot">"</span>--&gt; mpl[<span class="ot">"</span><span class="st">MPL 2.0</span><span class="ot">"</span>]</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>  code_sa --<span class="ot">"</span><span class="st">Attribution &amp;&lt;br&gt;Add license text &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Disclose code &amp;&lt;br&gt;Strong copyleft</span><span class="ot">"</span>--&gt; agpl[<span class="ot">"</span><span class="st">AGPLv3</span><span class="ot">"</span>]</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  nocode_cc --<span class="ot">"</span><span class="st">Neither</span><span class="ot">"</span>--&gt; cc0[<span class="ot">"</span><span class="st">CC0 1.0</span><span class="ot">"</span>]</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  nocode_cc --<span class="ot">"</span><span class="st">Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM</span><span class="ot">"</span>--&gt; cc_by[<span class="ot">"</span><span class="st">CC BY 4.0</span><span class="ot">"</span>]</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>  nocode_cc --<span class="ot">"</span><span class="st">Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;State changes &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft</span><span class="ot">"</span>--&gt; cc_by_sa[<span class="ot">"</span><span class="st">CC BY-SA 4.0</span><span class="ot">"</span>]</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>  click apache href <span class="ot">"</span><span class="st">https://choosealicense.com/licenses/apache-2.0/</span><span class="ot">"</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>  click mpl href <span class="ot">"</span><span class="st">https://choosealicense.com/licenses/mpl-2.0/</span><span class="ot">"</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>  click agpl href <span class="ot">"</span><span class="st">https://choosealicense.com/licenses/agpl-3.0/</span><span class="ot">"</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>  click cc0 href <span class="ot">"</span><span class="st">https://creativecommons.org/publicdomain/zero/1.0/</span><span class="ot">"</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>  click cc_by href <span class="ot">"</span><span class="st">https://creativecommons.org/licenses/by/4.0/</span><span class="ot">"</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>  click cc_by_sa href <span class="ot">"</span><span class="st">https://creativecommons.org/licenses/by-sa/4.0/</span><span class="ot">"</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>_Note._ DRM = digital rights management</span>
 <span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## Prerequisite Tutorials</span></span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>While the general principles taught in this tutorial apply to most researchers</span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>publishing code, we will focus on the programming language R</span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>and the publishing system Quarto.</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>You may want to work through the following tutorials in advance:</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to version control with git and GitHub within RStudio</span><span class="co">](https://lmu-osc.github.io/Introduction-RStudio-Git-GitHub/)</span>:</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>  This tutorial explains how to set up a simple project with version control.</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Collaborative coding with GitHub and RStudio</span><span class="co">](https://lmu-osc.github.io/Collaborative-RStudio-GitHub/)</span>:</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  Here you can learn how to collaborate with others on code projects using GitHub.</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to R</span><span class="co">](https://lmu-osc.github.io/introduction-to-R/)</span>:</span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  This is an introduction to the R programming language.</span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to {renv}</span><span class="co">](https://lmu-osc.github.io/introduction-to-renv/)</span>:</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  Here you can learn how to manage the dependencies of an R project.</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to Quarto</span><span class="co">](https://lmu-osc.github.io/introduction-to-Quarto/)</span>:</span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  Learn how to combine prose and code to make documents more reproducible.</span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Introduction to Zotero</span><span class="co">](https://lmu-osc.github.io/introduction-to-zotero/)</span>:</span>
-<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  Get introduced to the reference management software Zotero.</span>
-<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">FAIR research data management</span><span class="co">](https://lmu-osc.github.io/FAIR-Data-Management/)</span>:</span>
-<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  Learn how to make your data findable, accessible, interoperable, and reusable.</span>
-<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>::: {.callout-warning title="Recommended Software"}</span>
-<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>This tutorial assumes you have the following software installed:</span>
-<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Git</span><span class="co">](https://git-scm.com/downloads)</span></span>
-<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">R</span><span class="co">](https://cloud.r-project.org/)</span></span>
-<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/docs/download/release.html)</span></span>
-<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">RTools</span><span class="co">](https://cloud.r-project.org/bin/windows/Rtools/)</span> (Windows users only)</span>
-<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>Some things will be explained using the <span class="co">[</span><span class="ot">RStudio IDE</span><span class="co">](https://posit.co/download/rstudio-desktop/#:~:text=2%3A%20Install%20RStudio)</span>,</span>
-<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>but you are free to use any IDE you like.</span>
-<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>::: {#nte-quarto-alternatives .callout-note collapse="true"}</span>
-<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a><span class="fu">## Alternatives to Quarto</span></span>
-<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>Quarto is a tool to render dynamic documents, but not the only one.</span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>It is the successor of the R package <span class="co">[</span><span class="ot">`rmarkdown`</span><span class="co">](https://pkgs.rstudio.com/rmarkdown/)</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>and mostly backwards-compatible.</span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="in">`rmarkdown`</span> continues to be supported,</span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>but the development of new features happens in Quarto.</span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>The main difference is that Quarto has first-class support for Python.</span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>In other words, Python users of Quarto do not need to have R installed.</span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>While this tutorial focuses on Quarto,</span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>you can also create dynamic documents with the following tools:</span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Jupyter Book</span><span class="co">](https://jupyterbook.org/)</span></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Pluto</span><span class="co">](https://plutojl.org/)</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">marimo</span><span class="co">](https://marimo.io/)</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Stencila</span><span class="co">](https://stencila.io/)</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Curvenote</span><span class="co">](https://curvenote.dev/)</span></span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">showyourwork!</span><span class="co">](https://show-your.work/)</span></span>
-<span id="cb1-97"><a href="#cb1-97" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Org Mode</span><span class="co">](https://orgmode.org/)</span></span>
-<span id="cb1-98"><a href="#cb1-98" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">StatTag</span><span class="co">](https://sites.northwestern.edu/stattag/)</span></span>
-<span id="cb1-99"><a href="#cb1-99" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-100"><a href="#cb1-100" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-101"><a href="#cb1-101" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Get started</span><span class="co">](intro.qmd)</span>{.btn .btn-lg .btn-success}</span>
-<span id="cb1-102"><a href="#cb1-102" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-103"><a href="#cb1-103" aria-hidden="true" tabindex="-1"></a>:::: {.columns}</span>
-<span id="cb1-104"><a href="#cb1-104" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-105"><a href="#cb1-105" aria-hidden="true" tabindex="-1"></a>::: {.column width="47.5%"}</span>
-<span id="cb1-106"><a href="#cb1-106" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-107"><a href="#cb1-107" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Support the LMU Open Science Center!"}</span>
-<span id="cb1-108"><a href="#cb1-108" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-109"><a href="#cb1-109" aria-hidden="true" tabindex="-1"></a>**Like this tutorial? Be sure to give [the repository]({{&lt; meta repo-url &gt;}}) a star and [follow us on GitHub](https://github.com/lmu-osc)!**</span>
-<span id="cb1-110"><a href="#cb1-110" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-111"><a href="#cb1-111" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-112"><a href="#cb1-112" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-113"><a href="#cb1-113" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-114"><a href="#cb1-114" aria-hidden="true" tabindex="-1"></a>::: {.column width="5%"}</span>
-<span id="cb1-115"><a href="#cb1-115" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-116"><a href="#cb1-116" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-117"><a href="#cb1-117" aria-hidden="true" tabindex="-1"></a>::: {.column width="47.5%"}</span>
-<span id="cb1-118"><a href="#cb1-118" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-119"><a href="#cb1-119" aria-hidden="true" tabindex="-1"></a>::: {.callout-tip title="Questions about this tutorial?"}</span>
-<span id="cb1-120"><a href="#cb1-120" aria-hidden="true" tabindex="-1"></a>**If you have questions for the author of this tutorial, please take a look at the [About](about.qmd) page.**</span>
-<span id="cb1-121"><a href="#cb1-121" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-122"><a href="#cb1-122" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-123"><a href="#cb1-123" aria-hidden="true" tabindex="-1"></a>:::</span>
-<span id="cb1-124"><a href="#cb1-124" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-125"><a href="#cb1-125" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>Advanced License Flowchart for Software, Writing, Images, Audio, and Video</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="fu">### Data and Databases</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>::: {#fig-flowchart-data}</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>  start(<span class="ot">"</span><span class="st">We want to choose a&lt;br&gt;license for data.</span><span class="ot">"</span>) --<span class="ot">"</span><span class="st">We adapted a database by&lt;br&gt;others shared under a&lt;br&gt;free/open license.</span><span class="ot">"</span>--&gt; use_existing_license_db[<span class="ot">"</span><span class="st">&lt;em&gt;Use its license(s)&lt;br&gt;for content and database&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>  start --<span class="ot">"</span><span class="st">We created a database&lt;br&gt;entirely by ourselves.</span><span class="ot">"</span>--&gt; regulation(<span class="ot">"</span><span class="st">Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?</span><span class="ot">"</span>)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>  regulation --<span class="ot">"</span><span class="st">Exists</span><span class="ot">"</span>--&gt; follow_existing_norms[<span class="ot">"</span><span class="st">&lt;em&gt;Follow that&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>  regulation --<span class="ot">"</span><span class="st">Does not&lt;br&gt;exist</span><span class="ot">"</span>--&gt; existing_license_content(<span class="ot">"</span><span class="st">Adapting content&lt;br&gt; by others?</span><span class="ot">"</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>  subgraph content[<span class="ot">"</span><span class="st">&lt;strong&gt;License for content&lt;/strong&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>  existing_license_content --<span class="ot">"</span><span class="st">No, we created the content&lt;br&gt;entirely by ourselves.</span><span class="ot">"</span>--&gt; facts(<span class="ot">"</span><span class="st">Entries are facts&lt;br&gt;(like measurements&lt;br&gt;or metadata)?</span><span class="ot">"</span>)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  existing_license_content --<span class="ot">"</span><span class="st">Yes, it was&lt;br&gt;shared under a&lt;br&gt;free/open license.</span><span class="ot">"</span>--&gt; use_existing_license_content[<span class="ot">"</span><span class="st">&lt;em&gt;Use that license&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  facts --<span class="ot">"</span><span class="st">Yes</span><span class="ot">"</span>--&gt; cc0_content_metadata[<span class="ot">"</span><span class="st">CC0 1.0</span><span class="ot">"</span>]</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  facts --<span class="ot">"</span><span class="st">No</span><span class="ot">"</span>--&gt; choose_license[<span class="ot">"</span><span class="st">&lt;em&gt;Consult flowchart for&lt;br&gt;software, writing,&lt;br&gt;image, audio, and video&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  end</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>  subgraph database[<span class="ot">"</span><span class="st">&lt;strong&gt;License for database&lt;/strong&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>  choose_license --&gt; switch_license[<span class="ot">"</span><span class="st">&lt;em&gt;Depending on&lt;br&gt;content license&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>  use_existing_license_content --&gt; switch_license</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a>  cc0_content_metadata --&gt; cc0_db[<span class="ot">"</span><span class="st">CC0 1.0</span><span class="ot">"</span>]</span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>  switch_license --<span class="ot">"</span><span class="st">CC0 or&lt;br&gt;non-CC license</span><span class="ot">"</span>--&gt; sa(<span class="ot">"</span><span class="st">Attribution?&lt;br&gt;Indicate license?&lt;br&gt;Anti-DRM?&lt;br&gt;Copyleft?</span><span class="ot">"</span>)</span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>  switch_license --<span class="ot">"</span><span class="st">CC BY or&lt;br&gt;CC BY-SA</span><span class="ot">"</span>--&gt; same[<span class="ot">"</span><span class="st">&lt;em&gt;Same license for DB&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>  sa --<span class="ot">"</span><span class="st">Neither</span><span class="ot">"</span>--&gt; cc0_db</span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>  sa --<span class="ot">"</span><span class="st">Attribution &amp;&lt;br&gt;Indicate license &amp;&lt;br&gt;Anti-DRM &amp;&lt;br&gt;Copyleft</span><span class="ot">"</span>--&gt; odbl[<span class="ot">"</span><span class="st">ODbL 1.0</span><span class="ot">"</span>]</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>  %% the following <span class="fu">link</span> is only added to have terminal nodes on the same level</span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>  sa ~~~ same</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>  end</span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>  click cc0_content_metadata href <span class="ot">"</span><span class="st">https://creativecommons.org/publicdomain/zero/1.0/</span><span class="ot">"</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>  click cc0_db href <span class="ot">"</span><span class="st">https://creativecommons.org/publicdomain/zero/1.0/</span><span class="ot">"</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>  click odbl href <span class="ot">"</span><span class="st">https://opendatacommons.org/licenses/odbl/summary/</span><span class="ot">"</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>_Note._ DRM = digital rights management</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>Advanced License Flowchart for Data(base)</span>
+<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>:::</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
 <p>© 2025 Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, Pat Callahan. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/index.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/in-depth-material/licenses-continued.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/in-depth-material/licenses-continued.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
-</footer><footer class="osc-footer-card py-5"><div class="container">
+</footer>
+<footer class="osc-footer-card py-5">
+  <div class="container">
     <div class="row gy-4">
       <div class="col-12 col-md-6 col-lg-3">
         <h4 class="fw-bold fs-5 fs-lg-4">
@@ -1255,7 +1241,7 @@ Note&nbsp;1: Alternatives to Quarto
       <div class="col-12 col-md-6 col-lg-3">
         <h4 class="fw-semibold fs-5">Contact</h4>
         <ul class="list-unstyled mt-2 mb-0">
-<li>
+          <li>
             <a href="mailto:felix.schoenbrodt@psy.lmu.de" class="text-decoration-underline">
               <i class="bi bi-envelope me-1"></i>
               Prof. Dr. Felix Schönbrodt (Managing Director)
@@ -1274,12 +1260,12 @@ Note&nbsp;1: Alternatives to Quarto
             </a>
           </li>
         </ul>
-</div>
+      </div>
 
       <div class="col-12 col-md-6 col-lg-3">
         <h4 class="fw-semibold fs-5">Join Us</h4>
         <ul class="list-unstyled mt-2 mb-0">
-<li>
+          <li>
             <a href="https://lists.lrz.de/mailman/listinfo/lmu-osc" class="text-decoration-underline" aria-label="Subscribe to our announcement list (opens in new window)">
               Subscribe to our announcement list
             </a>
@@ -1295,7 +1281,7 @@ Note&nbsp;1: Alternatives to Quarto
             </a>
           </li>
         </ul>
-</div>
+      </div>
 
       <div class="col-12 col-md-6 col-lg-3 d-flex align-items-start gap-3 osc-footer-socials">
         <a href="https://github.com/lmu-osc" class="fs-3" aria-label="LMU Open Science Center on GitHub (opens in new window)">
@@ -1314,16 +1300,19 @@ Note&nbsp;1: Alternatives to Quarto
     </div>
 
     <hr class="my-4">
-<div class="d-flex flex-wrap gap-3 small">
-      <a href="./footer/imprint.html" class="text-decoration-underline">Imprint</a>
+
+    <div class="d-flex flex-wrap gap-3 small">
+      <a href="../footer/imprint.html" class="text-decoration-underline">Imprint</a>
       <span aria-hidden="true">|</span>
-      <a href="./footer/privacy.html" class="text-decoration-underline">Privacy Policy</a>
+      <a href="../footer/privacy.html" class="text-decoration-underline">Privacy Policy</a>
       <span aria-hidden="true">|</span>
-      <a href="./footer/accessibilty.html" class="text-decoration-underline">Accessibility</a>
+      <a href="../footer/accessibilty.html" class="text-decoration-underline">Accessibility</a>
     </div>
   </div>
 </footer>
 
 
-<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+
+
+<script src="../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Add Data and Data Dictionary – Code Publishing Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
@@ -83,7 +80,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -93,18 +89,21 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./code.html" rel="next">
 <link href="./copyright.html" rel="prev">
-<link href="./images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
+<link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b4ad72a1f6e234c8129f430da57d6c08.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ef984e901dd5d1c5cb17c9d77ad3c99b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -129,9 +128,8 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<!-- Matomo -->
-<script>
+}</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Matomo --><script>
 if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -145,20 +143,178 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 }
-</script>
-<!-- End Matomo Code -->
-
-
-<link rel="stylesheet" href="https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css">
+</script><!-- End Matomo Code --><link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+<link rel="stylesheet" href="footer/footer-style.css">
 </head>
-
-<body class="nav-sidebar docked nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content"></a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Code Publishing Tutorial</span>
     </a>
@@ -168,23 +324,23 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+<li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lmu-osc/code-publishing">
             Source Code
             </a>
@@ -195,13 +351,17 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
             </a>
           </li>
       </ul>
-    </div>
-    <a href="https://www.osc.uni-muenchen.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+</div>
+    <a href="https://www.osc.lmu.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -212,12 +372,12 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -225,6 +385,12 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
@@ -281,68 +447,60 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/introduction-copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Copyright and Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copyright Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/data-dic-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automatic Generation of Data Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/licenses-continued.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/licenses-continued.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Licenses Continued</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/other_dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/other-dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identify additional system dependencies for the README</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
-</div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#add-data-file" id="toc-add-data-file" class="nav-link active" data-scroll-target="#add-data-file">Add Data File</a></li>
-  <li><a href="#add-a-data-dictionary" id="toc-add-a-data-dictionary" class="nav-link" data-scroll-target="#add-a-data-dictionary">Add a Data Dictionary</a>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><ul>
+<li><a href="#add-data-file" id="toc-add-data-file" class="nav-link active" data-scroll-target="#add-data-file">Add Data File</a></li>
+  <li>
+<a href="#add-a-data-dictionary" id="toc-add-a-data-dictionary" class="nav-link" data-scroll-target="#add-a-data-dictionary">Add a Data Dictionary</a>
   <ul class="collapse">
-  <li><a href="#a-bare-minimum-data-dictionary" id="toc-a-bare-minimum-data-dictionary" class="nav-link" data-scroll-target="#a-bare-minimum-data-dictionary">A bare minimum data dictionary</a></li>
+<li><a href="#a-bare-minimum-data-dictionary" id="toc-a-bare-minimum-data-dictionary" class="nav-link" data-scroll-target="#a-bare-minimum-data-dictionary">A bare minimum data dictionary</a></li>
   <li><a href="#practical-exercise-add-your-own-data-dictionary" id="toc-practical-exercise-add-your-own-data-dictionary" class="nav-link" data-scroll-target="#practical-exercise-add-your-own-data-dictionary">Practical Exercise: Add your own data dictionary</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#practical-exercise-add-data-citation-and-attribution" id="toc-practical-exercise-add-data-citation-and-attribution" class="nav-link" data-scroll-target="#practical-exercise-add-data-citation-and-attribution">Practical Exercise: Add Data Citation and Attribution</a></li>
   <li><a href="#wrap-up" id="toc-wrap-up" class="nav-link" data-scroll-target="#wrap-up">Wrap up</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/data.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Add Data and Data Dictionary</h1>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Add Data and Data Dictionary</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -356,20 +514,14 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   
 
 
-</header>
-
-
-<section id="add-data-file" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="add-data-file">Add Data File</h2>
+</header><section id="add-data-file" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="add-data-file">Add Data File</h2>
 <p>You can now download the data set we have prepared for you and put it into your project folder:</p>
 <p><a href="data.csv" class="btn btn-lg btn-info" download="data.csv">data.csv</a></p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/palmerpenguins.png" class="img-fluid figure-img" width="250"></p>
-<figcaption>palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</figcaption>
-</figure>
+<figure class="figure"><p><img src="assets/palmerpenguins.png" class="img-fluid figure-img" width="250"></p>
+<figcaption>palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data</figcaption></figure>
 </div>
 </div></div><p>The data set is from the package <a href="https://allisonhorst.github.io/palmerpenguins/"><code>palmerpenguins</code></a> (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a>. For educational purposes, we added the fictitious column <code>cuteness</code>.</p>
 <div id="imp-legal-restrictions" class="callout callout-style-default callout-important callout-titled">
@@ -388,8 +540,8 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 </div>
 <p>Let’s take a first look at our data:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data.csv"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="st">"data.csv"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span><span class="op">(</span><span class="va">dat</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -415,23 +567,24 @@ Important&nbsp;1: Consider Legal Restrictions Before Sharing
 <li>1 = Adelie</li>
 <li>2 = Chinstrap</li>
 <li>3 = Gentoo</li>
-</ul></li>
+</ul>
+</li>
 <li>island
 <ul>
 <li>1 = Biscoe</li>
 <li>2 = Dream</li>
 <li>3 = Torgersen</li>
-</ul></li>
+</ul>
+</li>
 <li>sex
 <ul>
 <li>1 = female</li>
 <li>2 = male</li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <p>Further, missing values are stored as <code>-99</code>. We need to document this information somewhere!</p>
-</section>
-<section id="add-a-data-dictionary" class="level2">
-<h2 class="anchored" data-anchor-id="add-a-data-dictionary">Add a Data Dictionary</h2>
+</section><section id="add-a-data-dictionary" class="level2"><h2 class="anchored" data-anchor-id="add-a-data-dictionary">Add a Data Dictionary</h2>
 <p>Whether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a <em>data dictionary</em> (also called a <em>codebook</em>).</p>
 <p>The recommendation for data dictionaries vary between fields – both in terms of the recommended content (i.e., what exactly should be documented) and the technical implementation (i.e., which file formats should be used).</p>
 <p>For the purpose of this exercise, we keep it easy and propose that you manually create a file with the data dictionary (e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), documenting only the bare minimum.</p>
@@ -448,20 +601,26 @@ Tip&nbsp;1: Creating data dictionaries using R
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>Our in-depth supplementary material “<a href="./in_depth_material/data_dic_generation.html">Generation of Data Dictionaries Using R</a>” explains how you can create a data dictionary with R. This advanced chapter also contains a section on how to create machine-readable data dictionaries.</p>
+<p>Our in-depth supplementary material “<a href="./in-depth-material/data-dic-generation.html">Generation of Data Dictionaries Using R</a>” explains how you can create a data dictionary with R. This advanced chapter also contains a section on how to create machine-readable data dictionaries.</p>
 </div>
 </div>
 </div>
-<section id="a-bare-minimum-data-dictionary" class="level3">
-<h3 class="anchored" data-anchor-id="a-bare-minimum-data-dictionary">A bare minimum data dictionary</h3>
+<section id="a-bare-minimum-data-dictionary" class="level3"><h3 class="anchored" data-anchor-id="a-bare-minimum-data-dictionary">A bare minimum data dictionary</h3>
 <p>Most standards for data dictionaries require at least this information for each variable in your data set:</p>
 <ul>
-<li><code>name</code>: Column name of the variable in the data set</li>
-<li><code>label</code>: Short title for the variable</li>
-<li><code>description</code>: Brief description of what the variable measures or represents</li>
-<li><code>item_text</code>: Exact wording of a question in a survey</li>
-<li><code>values</code>: A mapping of stored answers to their meanings (especially for categorical variables). For example: 1 = male, 2 = female, 9 = missing</li>
-<li><code>units</code>: The units of measurement (only for numeric variables). For example: <code>kg</code>, <code>USD</code>, <code>years</code></li>
+<li>
+<code>name</code>: Column name of the variable in the data set</li>
+<li>
+<code>label</code>: Short title for the variable</li>
+<li>
+<code>description</code>: Brief description of what the variable measures or represents</li>
+<li>
+<code>item_text</code>: Exact wording of a question in a survey</li>
+<li>
+<code>values</code>: A mapping of stored answers to their meanings (especially for categorical variables). For example: 1 = male, 2 = female, 9 = missing</li>
+<li>
+<code>units</code>: The units of measurement (only for numeric variables). For example: <code>kg</code>, <code>USD</code>, <code>years</code>
+</li>
 </ul>
 <p>Here’s an example from a different data set, with one row for each variable:</p>
 <table class="caption-top table">
@@ -473,16 +632,14 @@ Tip&nbsp;1: Creating data dictionaries using R
 <col style="width: 50%">
 <col style="width: 2%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>name</th>
 <th>label</th>
 <th>description</th>
 <th>item_text</th>
 <th>values</th>
 <th>units</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>gender</td>
@@ -520,15 +677,11 @@ Tip&nbsp;1: Creating data dictionaries using R
 </table>
 <p>You can download this example data dictionary as an ODS file <a href="data-dictionary-solution.ods" download="data-dictionary-solution.ods">here</a>.</p>
 <p>Depending on the type of data, it may also be necessary to describe sampling procedures (e.g., selection criteria), measurement instruments (e.g., established questionnaires), appropriate weighting, already applied preprocessing steps, or contact information.</p>
-</section>
-<section id="practical-exercise-add-your-own-data-dictionary" class="level3">
-<h3 class="anchored" data-anchor-id="practical-exercise-add-your-own-data-dictionary">Practical Exercise: Add your own data dictionary</h3>
+</section><section id="practical-exercise-add-your-own-data-dictionary" class="level3"><h3 class="anchored" data-anchor-id="practical-exercise-add-your-own-data-dictionary">Practical Exercise: Add your own data dictionary</h3>
 <p>Now it’s your turn. Fill in the missing information (denoted by a bold question mark “<strong>?</strong>”) in the following data dictionary.</p>
-<details>
-<summary>
+<details><summary>
 Show data dictionary
-</summary>
-<table class="caption-top table">
+</summary><table class="caption-top table">
 <colgroup>
 <col style="width: 8%">
 <col style="width: 7%">
@@ -537,16 +690,14 @@ Show data dictionary
 <col style="width: 26%">
 <col style="width: 2%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>name</th>
 <th>label</th>
 <th>description</th>
 <th>item_text</th>
 <th>values</th>
 <th>units</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>species</td>
@@ -621,9 +772,7 @@ Show data dictionary
 <td></td>
 </tr>
 </tbody>
-</table>
-</details>
-<p><a href="data-dictionary.ods" class="btn btn-lg btn-info" download="data-dictionary.ods">data-dictionary.ods</a></p>
+</table></details><p><a href="data-dictionary.ods" class="btn btn-lg btn-info" download="data-dictionary.ods">data-dictionary.ods</a></p>
 <p>Then save the data dictionary in the same folder as the actual data set file.</p>
 <div id="tip-data_dic" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -646,16 +795,14 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 <col style="width: 26%">
 <col style="width: 2%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th>name</th>
 <th>label</th>
 <th>description</th>
 <th>item_text</th>
 <th>values</th>
 <th>units</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>species</td>
@@ -735,10 +882,7 @@ Tip&nbsp;2: Data dictionary for penguins data set (Solution)
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="practical-exercise-add-data-citation-and-attribution" class="level2">
-<h2 class="anchored" data-anchor-id="practical-exercise-add-data-citation-and-attribution">Practical Exercise: Add Data Citation and Attribution</h2>
+</section></section><section id="practical-exercise-add-data-citation-and-attribution" class="level2"><h2 class="anchored" data-anchor-id="practical-exercise-add-data-citation-and-attribution">Practical Exercise: Add Data Citation and Attribution</h2>
 <p>All data relied upon should be cited in the manuscript to allow for precise identification and access. Please add an appropriate citation for the data set to the manuscript where it says “cite data here”.</p>
 <div id="tip-cite-palmerpenguins-hint" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -813,9 +957,7 @@ Tip&nbsp;4: Citing the Data Set (Solution)
 </div>
 </div>
 </div>
-</section>
-<section id="wrap-up" class="level2">
-<h2 class="anchored" data-anchor-id="wrap-up">Wrap up</h2>
+</section><section id="wrap-up" class="level2"><h2 class="anchored" data-anchor-id="wrap-up">Wrap up</h2>
 <p>Congrats! You documented your data set and cited it correctly.</p>
 <p>To finalize this step, you can go through the commit routine:</p>
 <div class="code-with-filename">
@@ -828,22 +970,31 @@ Tip&nbsp;4: Citing the Data Set (Solution)
 </div>
 
 
+<!-- -->
 
-</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-Vilhuber2024" class="csl-entry" role="listitem">
 Vilhuber, L. (2024, October 14). <em>Creating reproducible packages when data are confidential</em>. <a href="https://labordynamicsinstitute.github.io/reproducibility-confidential/" class="uri">https://labordynamicsinstitute.github.io/reproducibility-confidential/</a>; Zenodo. <a href="https://doi.org/10.5281/zenodo.13927702">https://doi.org/10.5281/zenodo.13927702</a>
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
 <ol>
 <li id="fn1"><p>For example, using <a href="https://amnesia.openaire.eu/">Amnesia</a>, <a href="https://arx.deidentifier.org/">ARX</a>, <a href="https://github.com/sdcTools">sdcTools</a>, <a href="https://www.synthpop.org.uk/">Synthpop</a>, <a href="https://opendp.org/">OpenDP</a>, or <a href="https://www.greenmask.io/">Greenmask</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -913,6 +1064,57 @@ Vilhuber, L. (2024, October 14). <em>Creating reproducible packages when data ar
       });
       clipboardModal.on('success', onCopySuccess);
     }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/lmu-osc\.github\.io\/code-publishing\/");
@@ -929,6 +1131,13 @@ Vilhuber, L. (2024, October 14). <em>Creating reproducible packages when data ar
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1241,9 +1450,7 @@ Vilhuber, L. (2024, October 14). <em>Creating reproducible packages when data ar
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./copyright.html" class="pagination-link" aria-label="Sharing work of others: Copyright">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sharing work of others: Copyright</span>
       </a>          
@@ -1253,23 +1460,375 @@ Vilhuber, L. (2024, October 14). <em>Creating reproducible packages when data ar
         <span class="nav-page-text">Add Code</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Add Data and Data Dictionary"</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">## Add Data File</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#| include: false</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="fu">invisible</span>(<span class="fu">loadNamespace</span>(<span class="st">"palmerpenguins"</span>)) <span class="co"># Tell renv that we need this package</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">stopifnot</span>(<span class="fu">packageDescription</span>(<span class="st">"palmerpenguins"</span>, <span class="at">fields =</span> <span class="st">"License"</span>) <span class="sc">==</span> <span class="st">"CC0"</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> palmerpenguins<span class="sc">::</span>penguins</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert factors to integers</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> <span class="fu">sapply</span>(dat, is.factor)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>dat[idx] <span class="ot">&lt;-</span> <span class="fu">lapply</span>(dat[idx], as.integer)</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>dat[<span class="fu">is.na</span>(dat)] <span class="ot">&lt;-</span> <span class="sc">-</span><span class="dv">99</span>L</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Add extra column for training purposes</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1056517553</span>L)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>dat<span class="sc">$</span>cuteness <span class="ot">&lt;-</span> <span class="fu">sample.int</span>(<span class="dv">10</span>, <span class="fu">nrow</span>(dat), <span class="at">replace =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>  dat,</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">file =</span> <span class="st">"data.csv"</span>,</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">row.names =</span> <span class="cn">FALSE</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(idx, dat)</span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>You can now download the data set we have prepared for you</span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>and put it into your project folder:</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">data.csv</span><span class="co">](data.csv)</span>{.btn .btn-lg .btn-info download="data.csv"}</span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a><span class="al">![palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data](assets/palmerpenguins.png)</span>{width=250px}</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>The data set is from the package <span class="co">[</span><span class="ot">`palmerpenguins`</span><span class="co">][palmerpenguins]</span></span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>(v<span class="in">`r packageVersion("palmerpenguins")`</span>)</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>and contains the recorded bill lengths and sex of penguins</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>living on three islands in the Palmer Archipelago, Antarctica.</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>It was made available by Allison Horst, Alison Hill, and Kristen Gorman</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>under the license <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span>.</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>For educational purposes, we added the fictitious column <span class="in">`cuteness`</span>.</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a><span class="ot">[palmerpenguins]: https://allisonhorst.github.io/palmerpenguins/</span></span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a><span class="ot">[cc0]: https://creativecommons.org/publicdomain/zero/1.0/</span></span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>::: {#imp-legal-restrictions .callout-important}</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a><span class="fu">### Consider Legal Restrictions Before Sharing</span></span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a>Everything you put into the project folder will be shared publicly.</span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a>For reasons of reproducibility, this should include the data you analyze.</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a>Of course, you should only share them to the extent you are allowed to.</span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>Besides copyright and similar rights, you need to take into account</span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>applicable privacy laws (e.g., the GDPR for European citizens)</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>and contractual obligations (e.g., with your data provider).</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>Privacy laws and contractual obligations may require you</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>to create an anonymized or synthetic data set<span class="ot">[^anon-synth-tools]</span>,</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>in which case you should provide a reference</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>to a repository where the originally measured data can be obtained from.</span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>For further information, you can watch the talk "<span class="co">[</span><span class="ot">Data anonymity</span><span class="co">](https://osf.io/j6fy8)</span>"</span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023</span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>and have a look at <span class="co">[</span><span class="ot">the accompanying slides</span><span class="co">](https://osf.io/z6gcu)</span>.</span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>Another resource to look at is the presentation</span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a>"Creating reproducible packages when data are confidential" by @Vilhuber2024.</span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a><span class="ot">[^anon-synth-tools]: </span>For example, using <span class="co">[</span><span class="ot">Amnesia</span><span class="co">](https://amnesia.openaire.eu/)</span>,</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">ARX</span><span class="co">](https://arx.deidentifier.org/)</span>, <span class="co">[</span><span class="ot">sdcTools</span><span class="co">](https://github.com/sdcTools)</span>,</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">Synthpop</span><span class="co">](https://www.synthpop.org.uk/)</span>, <span class="co">[</span><span class="ot">OpenDP</span><span class="co">](https://opendp.org/)</span>,</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>or <span class="co">[</span><span class="ot">Greenmask</span><span class="co">](https://www.greenmask.io/)</span>.</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>Let's take a first look at our data:</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a><span class="co">#| class-output: "txt code-overflow-scroll"</span></span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a><span class="co">#| attr-output: 'filename="R Console"'</span></span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data.csv"</span>)</span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(dat)</span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>We can see that the variables <span class="in">`species`</span>, <span class="in">`island`</span>, and <span class="in">`sex`</span> are stored as integers:</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>species</span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>1 = Adelie</span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>2 = Chinstrap</span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>3 = Gentoo</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>island</span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>1 = Biscoe</span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>2 = Dream</span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>3 = Torgersen</span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>sex</span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>1 = female</span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span>2 = male</span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>Further, missing values are stored as <span class="in">`-99`</span>. We need to document this information somewhere!</span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a><span class="fu">## Add a Data Dictionary</span></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>Whether or not distributing the data set,</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a>it is important to document the meaning (e.g., units)</span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>and values of its variables.</span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>This is typically done with a _data dictionary_ (also called a _codebook_).</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a>The recommendation for data dictionaries vary between fields -- </span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a>both in terms of the recommended content (i.e., what exactly should be documented) </span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>and the technical implementation (i.e., which file formats should be used).</span>
+<span id="cb8-120"><a href="#cb8-120" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-121"><a href="#cb8-121" aria-hidden="true" tabindex="-1"></a>For the purpose of this exercise, we keep it easy and propose that you </span>
+<span id="cb8-122"><a href="#cb8-122" aria-hidden="true" tabindex="-1"></a>manually create a file with the data dictionary</span>
+<span id="cb8-123"><a href="#cb8-123" aria-hidden="true" tabindex="-1"></a>(e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), </span>
+<span id="cb8-124"><a href="#cb8-124" aria-hidden="true" tabindex="-1"></a>documenting only the bare minimum.</span>
+<span id="cb8-125"><a href="#cb8-125" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-126"><a href="#cb8-126" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- </span><span class="al">TODO</span><span class="co">: Add a link to the forthcoming data dictionary OSC tutorial --&gt;</span></span>
+<span id="cb8-127"><a href="#cb8-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a>::: {#tip-in-depth .callout-tip collapse="false"}</span>
+<span id="cb8-129"><a href="#cb8-129" aria-hidden="true" tabindex="-1"></a><span class="fu">### Creating data dictionaries using R</span></span>
+<span id="cb8-130"><a href="#cb8-130" aria-hidden="true" tabindex="-1"></a>Our in-depth supplementary material "<span class="co">[</span><span class="ot">Generation of Data Dictionaries Using R</span><span class="co">](in-depth-material/data-dic-generation.qmd)</span>"</span>
+<span id="cb8-131"><a href="#cb8-131" aria-hidden="true" tabindex="-1"></a>explains how you can create a data dictionary with R.</span>
+<span id="cb8-132"><a href="#cb8-132" aria-hidden="true" tabindex="-1"></a>This advanced chapter also contains a section on how to create machine-readable data dictionaries.</span>
+<span id="cb8-133"><a href="#cb8-133" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-134"><a href="#cb8-134" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-135"><a href="#cb8-135" aria-hidden="true" tabindex="-1"></a><span class="fu">### A bare minimum data dictionary</span></span>
+<span id="cb8-136"><a href="#cb8-136" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-137"><a href="#cb8-137" aria-hidden="true" tabindex="-1"></a>Most standards for data dictionaries require at least </span>
+<span id="cb8-138"><a href="#cb8-138" aria-hidden="true" tabindex="-1"></a>this information for each variable in your data set:</span>
+<span id="cb8-139"><a href="#cb8-139" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-140"><a href="#cb8-140" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`name`</span>: Column name of the variable in the data set</span>
+<span id="cb8-141"><a href="#cb8-141" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`label`</span>: Short title for the variable</span>
+<span id="cb8-142"><a href="#cb8-142" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`description`</span>: Brief description of what the variable measures or represents</span>
+<span id="cb8-143"><a href="#cb8-143" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`item_text`</span>: Exact wording of a question in a survey</span>
+<span id="cb8-144"><a href="#cb8-144" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`values`</span>: A mapping of stored answers to their meanings (especially for categorical variables). For example: 1 = male, 2 = female, 9 = missing</span>
+<span id="cb8-145"><a href="#cb8-145" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`units`</span>: The units of measurement (only for numeric variables). For example: <span class="in">`kg`</span>, <span class="in">`USD`</span>, <span class="in">`years`</span></span>
+<span id="cb8-146"><a href="#cb8-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-147"><a href="#cb8-147" aria-hidden="true" tabindex="-1"></a>Here's an example from a different data set, with one row for each variable:</span>
+<span id="cb8-148"><a href="#cb8-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-149"><a href="#cb8-149" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> name              <span class="pp">|</span> label                     <span class="pp">|</span> description             <span class="pp">|</span> item_text                             <span class="pp">|</span> values                                                                                                      <span class="pp">|</span> units <span class="pp">|</span></span>
+<span id="cb8-150"><a href="#cb8-150" aria-hidden="true" tabindex="-1"></a><span class="pp">| -----------------</span> <span class="pp">| -------------------------</span> <span class="pp">| -----------------------</span> <span class="pp">| -------------------------------------</span> <span class="pp">| -----------------------------------------------------------------------------------------------------------</span> <span class="pp">| -----</span> <span class="pp">|</span></span>
+<span id="cb8-151"><a href="#cb8-151" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> gender            <span class="pp">|</span> Gender                    <span class="pp">|</span> self‑identified gender  <span class="pp">|</span>                                       <span class="pp">|</span> 1 = male, 2 = female, 3 = other, 9 = missing                                                                <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-152"><a href="#cb8-152" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> age               <span class="pp">|</span> Age                       <span class="pp">|</span> age in years            <span class="pp">|</span>                                       <span class="pp">|</span> -99 = Not answered                                                                                          <span class="pp">|</span> years <span class="pp">|</span></span>
+<span id="cb8-153"><a href="#cb8-153" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> blood_pressure    <span class="pp">|</span> Blood Pressure (systolic) <span class="pp">|</span> systolic blood pressure <span class="pp">|</span>                                       <span class="pp">|</span> -99 = Not answered                                                                                          <span class="pp">|</span> mmHg  <span class="pp">|</span></span>
+<span id="cb8-154"><a href="#cb8-154" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> life_satisfaction <span class="pp">|</span> Life Satisfaction         <span class="pp">|</span> 5-point scale           <span class="pp">|</span> How satisfied are you with your life? <span class="pp">|</span> 1 = very dissatisfied, 2 = dissatisfied, 3 = neutral, 4 = satisfied, 5 = very satisfied, -99 = not answered <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-155"><a href="#cb8-155" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-156"><a href="#cb8-156" aria-hidden="true" tabindex="-1"></a>You can download this example data dictionary as an ODS file <span class="co">[</span><span class="ot">here</span><span class="co">](data-dictionary-solution.ods)</span>{download="data-dictionary-solution.ods"}.</span>
+<span id="cb8-157"><a href="#cb8-157" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-158"><a href="#cb8-158" aria-hidden="true" tabindex="-1"></a>Depending on the type of data, it may also be necessary</span>
+<span id="cb8-159"><a href="#cb8-159" aria-hidden="true" tabindex="-1"></a>to describe sampling procedures (e.g., selection criteria),</span>
+<span id="cb8-160"><a href="#cb8-160" aria-hidden="true" tabindex="-1"></a>measurement instruments (e.g., established questionnaires),</span>
+<span id="cb8-161"><a href="#cb8-161" aria-hidden="true" tabindex="-1"></a>appropriate weighting,</span>
+<span id="cb8-162"><a href="#cb8-162" aria-hidden="true" tabindex="-1"></a>already applied preprocessing steps, or contact information.</span>
+<span id="cb8-163"><a href="#cb8-163" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-164"><a href="#cb8-164" aria-hidden="true" tabindex="-1"></a><span class="fu">### Practical Exercise: Add your own data dictionary</span></span>
+<span id="cb8-165"><a href="#cb8-165" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-166"><a href="#cb8-166" aria-hidden="true" tabindex="-1"></a>Now it's your turn. Fill in the missing information (denoted by a bold question mark "**?**") in the following data dictionary.</span>
+<span id="cb8-167"><a href="#cb8-167" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-168"><a href="#cb8-168" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb8-169"><a href="#cb8-169" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">summary</span><span class="dt">&gt;</span>Show data dictionary<span class="dt">&lt;/</span><span class="kw">summary</span><span class="dt">&gt;</span></span>
+<span id="cb8-170"><a href="#cb8-170" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> name              <span class="pp">|</span> label          <span class="pp">|</span> description                                                            <span class="pp">|</span> item_text                              <span class="pp">|</span> values                                               <span class="pp">|</span> units <span class="pp">|</span></span>
+<span id="cb8-171"><a href="#cb8-171" aria-hidden="true" tabindex="-1"></a><span class="pp">| -----------------</span> <span class="pp">| --------------</span> <span class="pp">| ----------------------------------------------------------------------</span> <span class="pp">| --------------------------------------</span> <span class="pp">| ----------------------------------------------------</span> <span class="pp">| -----</span> <span class="pp">|</span></span>
+<span id="cb8-172"><a href="#cb8-172" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> species           <span class="pp">|</span> Species        <span class="pp">|</span> Penguin species                                                        <span class="pp">|</span>                                        <span class="pp">|</span> 1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-173"><a href="#cb8-173" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> island            <span class="pp">|</span> Island         <span class="pp">|</span> Island in Palmer Archipelago, Antarctica where individual was observed <span class="pp">|</span>                                        <span class="pp">|</span> 1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing  <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-174"><a href="#cb8-174" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bill_length_mm    <span class="pp">|</span> Bill length    <span class="pp">|</span> Length of the bill (beak)                                              <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> mm    <span class="pp">|</span></span>
+<span id="cb8-175"><a href="#cb8-175" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bill_depth_mm     <span class="pp">|</span> Bill depth     <span class="pp">|</span> **?**                                                                  <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> mm    <span class="pp">|</span></span>
+<span id="cb8-176"><a href="#cb8-176" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> flipper_length_mm <span class="pp">|</span> Flipper length <span class="pp">|</span> Length of the flipper                                                  <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> mm    <span class="pp">|</span></span>
+<span id="cb8-177"><a href="#cb8-177" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> body_mass_g       <span class="pp">|</span> **?**          | Body mass                                                              |                                        | -99 = missing                                        | **?** <span class="pp">|</span></span>
+<span id="cb8-178"><a href="#cb8-178" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> sex               <span class="pp">|</span> Sex            <span class="pp">|</span> Sex of the penguin                                                     <span class="pp">|</span>                                        <span class="pp">|</span> 1 = female, 2 = male, -99 = missing                  <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-179"><a href="#cb8-179" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **?**             <span class="pp">|</span> Year           <span class="pp">|</span> Study year                                                             <span class="pp">|</span>                                        <span class="pp">|</span>                                                      <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-180"><a href="#cb8-180" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cuteness          <span class="pp">|</span> Cuteness       <span class="pp">|</span> Subjective cuteness rated on 10-point scale                            <span class="pp">|</span> How cute do you think this penguin is? <span class="pp">|</span> 1 = not at all, **?** = extremely                    <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-181"><a href="#cb8-181" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">details</span><span class="dt">&gt;</span></span>
+<span id="cb8-182"><a href="#cb8-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-183"><a href="#cb8-183" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">data-dictionary.ods</span><span class="co">](data-dictionary.ods)</span>{.btn .btn-lg .btn-info download="data-dictionary.ods"}</span>
+<span id="cb8-184"><a href="#cb8-184" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-185"><a href="#cb8-185" aria-hidden="true" tabindex="-1"></a>Then save the data dictionary in the same folder as the actual data set file.</span>
+<span id="cb8-186"><a href="#cb8-186" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-187"><a href="#cb8-187" aria-hidden="true" tabindex="-1"></a>::: {#tip-data_dic .callout-tip collapse="true"}</span>
+<span id="cb8-188"><a href="#cb8-188" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Data dictionary for penguins data set (Solution)</span></span>
+<span id="cb8-189"><a href="#cb8-189" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-190"><a href="#cb8-190" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> name              <span class="pp">|</span> label          <span class="pp">|</span> description                                                            <span class="pp">|</span> item_text                              <span class="pp">|</span> values                                               <span class="pp">|</span> units <span class="pp">|</span></span>
+<span id="cb8-191"><a href="#cb8-191" aria-hidden="true" tabindex="-1"></a><span class="pp">| -----------------</span> <span class="pp">| --------------</span> <span class="pp">| ----------------------------------------------------------------------</span> <span class="pp">| --------------------------------------</span> <span class="pp">| ----------------------------------------------------</span> <span class="pp">| -----</span> <span class="pp">|</span></span>
+<span id="cb8-192"><a href="#cb8-192" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> species           <span class="pp">|</span> Species        <span class="pp">|</span> Penguin species                                                        <span class="pp">|</span>                                        <span class="pp">|</span> 1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-193"><a href="#cb8-193" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> island            <span class="pp">|</span> Island         <span class="pp">|</span> Island in Palmer Archipelago, Antarctica where individual was observed <span class="pp">|</span>                                        <span class="pp">|</span> 1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing  <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-194"><a href="#cb8-194" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bill_length_mm    <span class="pp">|</span> Bill length    <span class="pp">|</span> Length of the bill (beak)                                              <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> mm    <span class="pp">|</span></span>
+<span id="cb8-195"><a href="#cb8-195" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> bill_depth_mm     <span class="pp">|</span> Bill depth     <span class="pp">|</span> Depth of the bill (beak)                                               <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> mm    <span class="pp">|</span></span>
+<span id="cb8-196"><a href="#cb8-196" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> flipper_length_mm <span class="pp">|</span> Flipper length <span class="pp">|</span> Length of the flipper                                                  <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> mm    <span class="pp">|</span></span>
+<span id="cb8-197"><a href="#cb8-197" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> body_mass_g       <span class="pp">|</span> Mass           <span class="pp">|</span> Body mass                                                              <span class="pp">|</span>                                        <span class="pp">|</span> -99 = missing                                        <span class="pp">|</span> g     <span class="pp">|</span></span>
+<span id="cb8-198"><a href="#cb8-198" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> sex               <span class="pp">|</span> Sex            <span class="pp">|</span> Sex of the penguin                                                     <span class="pp">|</span>                                        <span class="pp">|</span> 1 = female, 2 = male, -99 = missing                  <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-199"><a href="#cb8-199" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> year              <span class="pp">|</span> Year           <span class="pp">|</span> Study year                                                             <span class="pp">|</span>                                        <span class="pp">|</span>                                                      <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-200"><a href="#cb8-200" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> cuteness          <span class="pp">|</span> Cuteness       <span class="pp">|</span> Subjective cuteness rated on 10-point scale                            <span class="pp">|</span> How cute do you think this penguin is? <span class="pp">|</span> 1 = not at all, 10 = extremely                       <span class="pp">|</span>       <span class="pp">|</span></span>
+<span id="cb8-201"><a href="#cb8-201" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-202"><a href="#cb8-202" aria-hidden="true" tabindex="-1"></a>You can download the solution <span class="co">[</span><span class="ot">here</span><span class="co">](data-dictionary-solution.ods)</span>{.btn .btn-lg .btn-info download="data-dictionary-solution.ods"}.</span>
+<span id="cb8-203"><a href="#cb8-203" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-204"><a href="#cb8-204" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-205"><a href="#cb8-205" aria-hidden="true" tabindex="-1"></a><span class="fu">## Practical Exercise: Add Data Citation and Attribution</span></span>
+<span id="cb8-206"><a href="#cb8-206" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-207"><a href="#cb8-207" aria-hidden="true" tabindex="-1"></a>All data relied upon should be cited in the manuscript</span>
+<span id="cb8-208"><a href="#cb8-208" aria-hidden="true" tabindex="-1"></a>to allow for precise identification and access.</span>
+<span id="cb8-209"><a href="#cb8-209" aria-hidden="true" tabindex="-1"></a>Please add an appropriate citation for the data set to the manuscript</span>
+<span id="cb8-210"><a href="#cb8-210" aria-hidden="true" tabindex="-1"></a>where it says "cite data here".</span>
+<span id="cb8-211"><a href="#cb8-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-212"><a href="#cb8-212" aria-hidden="true" tabindex="-1"></a>::: {#tip-cite-palmerpenguins-hint .callout-tip collapse="true"}</span>
+<span id="cb8-213"><a href="#cb8-213" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Citing the Data Set (Hint)</span></span>
+<span id="cb8-214"><a href="#cb8-214" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-215"><a href="#cb8-215" aria-hidden="true" tabindex="-1"></a>You can find an appropriate BibTeX entry on <span class="co">[</span><span class="ot">the `palmerpenguins` package website</span><span class="co">](https://allisonhorst.github.io/palmerpenguins/#citation)</span>.</span>
+<span id="cb8-216"><a href="#cb8-216" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-217"><a href="#cb8-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-218"><a href="#cb8-218" aria-hidden="true" tabindex="-1"></a>::: {#tip-cite-palmerpenguins .callout-tip collapse="true"}</span>
+<span id="cb8-219"><a href="#cb8-219" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Citing the Data Set (Solution)</span></span>
+<span id="cb8-220"><a href="#cb8-220" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-221"><a href="#cb8-221" aria-hidden="true" tabindex="-1"></a>Copy the following BibTeX entry to the file <span class="in">`Bibliography.bib`</span>:</span>
+<span id="cb8-222"><a href="#cb8-222" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-225"><a href="#cb8-225" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-226"><a href="#cb8-226" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb8-227"><a href="#cb8-227" aria-hidden="true" tabindex="-1"></a><span class="co">#| class.output: "bib code-overflow-scroll"</span></span>
+<span id="cb8-228"><a href="#cb8-228" aria-hidden="true" tabindex="-1"></a><span class="co">#| attr-output: 'filename="Bibliography.bib"'</span></span>
+<span id="cb8-229"><a href="#cb8-229" aria-hidden="true" tabindex="-1"></a><span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-230"><a href="#cb8-230" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">key =</span> <span class="st">"horst2020"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-231"><a href="#cb8-231" aria-hidden="true" tabindex="-1"></a>  <span class="fu">toBibtex</span>()</span>
+<span id="cb8-232"><a href="#cb8-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-233"><a href="#cb8-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-234"><a href="#cb8-234" aria-hidden="true" tabindex="-1"></a>Then, find the line in the manuscript that says "cite data here"</span>
+<span id="cb8-235"><a href="#cb8-235" aria-hidden="true" tabindex="-1"></a>and replace it with a sentence such as the following:</span>
+<span id="cb8-236"><a href="#cb8-236" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-237"><a href="#cb8-237" aria-hidden="true" tabindex="-1"></a><span class="in">```{.md filename="Manuscript.qmd"}</span></span>
+<span id="cb8-238"><a href="#cb8-238" aria-hidden="true" tabindex="-1"></a>The analyzed data are by @horst2020.</span>
+<span id="cb8-239"><a href="#cb8-239" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-240"><a href="#cb8-240" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-241"><a href="#cb8-241" aria-hidden="true" tabindex="-1"></a>Render the document to check that the citation is displayed properly.</span>
+<span id="cb8-242"><a href="#cb8-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-243"><a href="#cb8-243" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash filename="Terminal"}</span></span>
+<span id="cb8-244"><a href="#cb8-244" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render Manuscript.qmd</span>
+<span id="cb8-245"><a href="#cb8-245" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-246"><a href="#cb8-246" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb8-247"><a href="#cb8-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-248"><a href="#cb8-248" aria-hidden="true" tabindex="-1"></a>While citation happens in the manuscript for reasons of academic integrity and reproducibility,</span>
+<span id="cb8-249"><a href="#cb8-249" aria-hidden="true" tabindex="-1"></a>to comply with any licenses you also may need to provide attribution within your project folder.</span>
+<span id="cb8-250"><a href="#cb8-250" aria-hidden="true" tabindex="-1"></a>Even though the data file we use here does not require attribution,</span>
+<span id="cb8-251"><a href="#cb8-251" aria-hidden="true" tabindex="-1"></a>we recommend adding a short paragraph to <span class="in">`LICENSE.txt`</span>:</span>
+<span id="cb8-252"><a href="#cb8-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-255"><a href="#cb8-255" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb8-256"><a href="#cb8-256" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb8-257"><a href="#cb8-257" aria-hidden="true" tabindex="-1"></a><span class="co">#| class-output: "txt code-overflow-wrap"</span></span>
+<span id="cb8-258"><a href="#cb8-258" aria-hidden="true" tabindex="-1"></a><span class="co">#| attr-output: 'filename="LICENSE.txt"'</span></span>
+<span id="cb8-259"><a href="#cb8-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-260"><a href="#cb8-260" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="fu">paste0</span>(</span>
+<span id="cb8-261"><a href="#cb8-261" aria-hidden="true" tabindex="-1"></a>  <span class="st">"The penguins data stored in </span><span class="sc">\"</span><span class="st">data.csv</span><span class="sc">\"</span><span class="st"> by Allison Horst, Alison Hill, and Kristen Gorman available from &lt;"</span>,</span>
+<span id="cb8-262"><a href="#cb8-262" aria-hidden="true" tabindex="-1"></a>  <span class="fu">citation</span>(<span class="st">"palmerpenguins"</span>, <span class="at">auto =</span> <span class="cn">TRUE</span>)<span class="sc">$</span>url,</span>
+<span id="cb8-263"><a href="#cb8-263" aria-hidden="true" tabindex="-1"></a>  <span class="st">"&gt; are licensed under CC0 1.0: &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;"</span></span>
+<span id="cb8-264"><a href="#cb8-264" aria-hidden="true" tabindex="-1"></a>))</span>
+<span id="cb8-265"><a href="#cb8-265" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb8-266"><a href="#cb8-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-267"><a href="#cb8-267" aria-hidden="true" tabindex="-1"></a><span class="fu">## Wrap up</span></span>
+<span id="cb8-268"><a href="#cb8-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-269"><a href="#cb8-269" aria-hidden="true" tabindex="-1"></a>Congrats! You documented your data set and cited it correctly.</span>
+<span id="cb8-270"><a href="#cb8-270" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-271"><a href="#cb8-271" aria-hidden="true" tabindex="-1"></a>To finalize this step, you can go through the commit routine:</span>
+<span id="cb8-272"><a href="#cb8-272" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-273"><a href="#cb8-273" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash filename="Terminal"}</span></span>
+<span id="cb8-274"><a href="#cb8-274" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb8-275"><a href="#cb8-275" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb8-276"><a href="#cb8-276" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add data"</span></span>
+<span id="cb8-277"><a href="#cb8-277" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>A recommended citation and license information for this tutorial are provided on the <a href="./about.html">about page</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>© 2025 Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, Pat Callahan. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/data.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
+    </div>
+  </div>
+</footer><footer class="osc-footer-card py-5"><div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-bold fs-5 fs-lg-4">
+          Ludwig-Maximilians-Universität<br>
+          LMU Open Science Center
+        </h4>
+        <p class="mb-0 mt-1 fw-normal fs-5">
+          Leopoldstr. 13<br>
+          80802 München
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5">Contact</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+<li>
+            <a href="mailto:felix.schoenbrodt@psy.lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Prof. Dr. Felix Schönbrodt (Managing Director)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:malika.ihle@lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Dr. Malika Ihle (Coordinator)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:osc@lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              OSC team
+            </a>
+          </li>
+        </ul>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5">Join Us</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+<li>
+            <a href="https://lists.lrz.de/mailman/listinfo/lmu-osc" class="text-decoration-underline" aria-label="Subscribe to our announcement list (opens in new window)">
+              Subscribe to our announcement list
+            </a>
+          </li>
+          <li>
+            <a href="https://www.osc.lmu.de/about/join-us.html" class="text-decoration-underline" aria-label="Become a member (opens in new window)">
+              Become a member
+            </a>
+          </li>
+          <li>
+            <a href="https://matrix.to/#/#lmu-open-science-center:matrix.lmu.de" class="text-decoration-underline" aria-label="Chat with us on Matrix (opens in new window)">
+              Chat with us on Matrix
+            </a>
+          </li>
+        </ul>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-3 d-flex align-items-start gap-3 osc-footer-socials">
+        <a href="https://github.com/lmu-osc" class="fs-3" aria-label="LMU Open Science Center on GitHub (opens in new window)">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/lmu-open-science-center/" class="fs-3" aria-label="LMU Open Science Center on LinkedIn (opens in new window)">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://bsky.app/profile/lmu-osc.bsky.social" class="fs-3" aria-label="LMU Open Science Center on Bluesky (opens in new window)">
+          <i class="bi bi-bluesky"></i>
+        </a>
+        <a href="https://scicomm.xyz/@lmu_osc" class="fs-3" aria-label="LMU Open Science Center on Mastodon (opens in new window)">
+          <i class="bi bi-mastodon"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="my-4">
+<div class="d-flex flex-wrap gap-3 small">
+      <a href="./footer/imprint.html" class="text-decoration-underline">Imprint</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/privacy.html" class="text-decoration-underline">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/accessibilty.html" class="text-decoration-underline">Accessibility</a>
     </div>
   </div>
 </footer>
 
 
-
-
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Florian Kohrt">
 <meta name="author" content="Josephine Zerna">
 <meta name="author" content="Christoph Scheffel">
 <meta name="author" content="Felix Schönbrodt">
-
+<meta name="author" content="Pat Callahan">
+<meta name="dcterms.date" content="2025-07-31">
 <title>About – Code Publishing Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
@@ -87,7 +86,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -95,18 +93,21 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
+<link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b4ad72a1f6e234c8129f430da57d6c08.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ef984e901dd5d1c5cb17c9d77ad3c99b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -131,9 +132,8 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<!-- Matomo -->
-<script>
+}</script><style>html{ scroll-behavior: smooth; }</style>
+<!-- Matomo --><script>
 if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -147,20 +147,271 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 }
-</script>
-<!-- End Matomo Code -->
-
-
-<link rel="stylesheet" href="https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css">
+</script><!-- End Matomo Code --><link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+<link rel="stylesheet" href="footer/footer-style.css">
+<meta name="citation_title" content="Code Publishing Tutorial">
+<meta name="citation_author" content="Florian Kohrt">
+<meta name="citation_author" content="Josephine Zerna">
+<meta name="citation_author" content="Christoph Scheffel">
+<meta name="citation_author" content="Felix Schönbrodt">
+<meta name="citation_author" content="Pat Callahan">
+<meta name="citation_publication_date" content="2025-07-31">
+<meta name="citation_cover_date" content="2025-07-31">
+<meta name="citation_year" content="2025">
+<meta name="citation_online_date" content="2025-07-31">
+<meta name="citation_fulltext_html_url" content="https://lmu-osc.github.io/code-publishing/">
+<meta name="citation_doi" content="10.5281/zenodo.16631977">
+<meta name="citation_language" content="en-US">
+<meta name="citation_reference" content="citation_title=datawizard: An R package for easy data preparation and statistical transformations;,citation_author=Indrajeet Patil;,citation_author=Dominique Makowski;,citation_author=Mattan S. Ben-Shachar;,citation_author=Brenton M. Wiernik;,citation_author=Etienne Bacher;,citation_author=Daniel Lüdecke;,citation_publication_date=2022;,citation_cover_date=2022;,citation_year=2022;,citation_issue=78;,citation_doi=10.21105/joss.04684;,citation_volume=7;,citation_journal_title=Journal of Open Source Software;">
+<meta name="citation_reference" content="citation_title=downlit: Syntax highlighting and automatic linking;,citation_author=Hadley Wickham;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://downlit.r-lib.org/;">
+<meta name="citation_reference" content="citation_title=grateful: Facilitate citation of R packages;,citation_author=Francisco Rodriguez-Sanchez;,citation_author=Connor P. Jackson;,citation_publication_date=2025;,citation_cover_date=2025;,citation_year=2025;,citation_fulltext_html_url=https://pakillo.github.io/grateful/;">
+<meta name="citation_reference" content="citation_title=palmerpenguins: Palmer archipelago (antarctica) penguin data;,citation_author=Allison Marie Horst;,citation_author=Alison Presmanes Hill;,citation_author=Kristen B Gorman;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://allisonhorst.github.io/palmerpenguins/;,citation_doi=10.5281/zenodo.3960218;">
+<meta name="citation_reference" content="citation_title=renv: Project environments;,citation_author=Kevin Ushey;,citation_author=Hadley Wickham;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://rstudio.github.io/renv/;">
+<meta name="citation_reference" content="citation_title=rmarkdown: Dynamic documents for r;,citation_author=JJ Allaire;,citation_author=Yihui Xie;,citation_author=Christophe Dervieux;,citation_author=Jonathan McPherson;,citation_author=Javier Luraschi;,citation_author=Kevin Ushey;,citation_author=Aron Atkins;,citation_author=Hadley Wickham;,citation_author=Joe Cheng;,citation_author=Winston Chang;,citation_author=Richard Iannone;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_fulltext_html_url=https://github.com/rstudio/rmarkdown;">
+<meta name="citation_reference" content="citation_title=R markdown: The definitive guide;,citation_author=Yihui Xie;,citation_author=J. J. Allaire;,citation_author=Garrett Grolemund;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://yihui.org/rmarkdown/;,citation_isbn=9781138359338;">
+<meta name="citation_reference" content="citation_title=R markdown cookbook;,citation_author=Yihui Xie;,citation_author=Christophe Dervieux;,citation_author=Emily Riederer;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://yihui.org/rmarkdown-cookbook;,citation_isbn=9780367563837;">
+<meta name="citation_reference" content="citation_title=sessioninfo: R session information;,citation_author=Hadley Wickham;,citation_author=Winston Chang;,citation_author=Robert Flight;,citation_author=Kirill Müller;,citation_author=Jim Hester;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_fulltext_html_url=https://sessioninfo.r-lib.org;">
+<meta name="citation_reference" content="citation_title=withr: Run code “With” temporarily modified global state;,citation_author=Jim Hester;,citation_author=Lionel Henry;,citation_author=Kirill Müller;,citation_author=Kevin Ushey;,citation_author=Hadley Wickham;,citation_author=Winston Chang;,citation_publication_date=2026;,citation_cover_date=2026;,citation_year=2026;,citation_fulltext_html_url=https://withr.r-lib.org;">
+<meta name="citation_reference" content="citation_title=Welcome to the tidyverse;,citation_author=Hadley Wickham;,citation_author=Mara Averick;,citation_author=Jennifer Bryan;,citation_author=Winston Chang;,citation_author=Lucy D’Agostino McGowan;,citation_author=Romain François;,citation_author=Garrett Grolemund;,citation_author=Alex Hayes;,citation_author=Lionel Henry;,citation_author=Jim Hester;,citation_author=Max Kuhn;,citation_author=Thomas Lin Pedersen;,citation_author=Evan Miller;,citation_author=Stephan Milton Bache;,citation_author=Kirill Müller;,citation_author=Jeroen Ooms;,citation_author=David Robinson;,citation_author=Dana Paige Seidel;,citation_author=Vitalie Spinu;,citation_author=Kohske Takahashi;,citation_author=Davis Vaughan;,citation_author=Claus Wilke;,citation_author=Kara Woo;,citation_author=Hiroaki Yutani;,citation_publication_date=2019;,citation_cover_date=2019;,citation_year=2019;,citation_issue=43;,citation_doi=10.21105/joss.01686;,citation_volume=4;,citation_journal_title=Journal of Open Source Software;">
+<meta name="citation_reference" content="citation_title=Good enough practices in scientific computing;,citation_abstract=Author summary Computers are now essential in all branches of science, but most researchers are never taught the equivalent of basic lab skills for research computing. As a result, data can get lost, analyses can take much longer than necessary, and researchers are limited in how effectively they can work with software and data. Computing workflows need to follow the same practices as lab projects and notebooks, with organized data, documented steps, and the project structured for reproducibility, but researchers new to computing often don’t know where to start. This paper presents a set of good computing practices that every researcher can adopt, regardless of their current level of computational skill. These practices, which encompass data management, programming, collaborating with colleagues, organizing projects, tracking work, and writing manuscripts, are drawn from a wide variety of published sources from our daily lives and from our work with volunteer organizations that have delivered workshops to over 11,000 people since 2010.;,citation_author=Greg Wilson;,citation_author=Jennifer Bryan;,citation_author=Karen Cranston;,citation_author=Justin Kitzes;,citation_author=Lex Nederbragt;,citation_author=Tracy K. Teal;,citation_publication_date=2017-06;,citation_cover_date=2017-06;,citation_year=2017;,citation_fulltext_html_url=https://doi.org/10.1371/journal.pcbi.1005510;,citation_issue=6;,citation_doi=10.1371/journal.pcbi.1005510;,citation_volume=13;,citation_journal_title=PLOS Computational Biology;,citation_publisher=Public Library of Science;">
+<meta name="citation_reference" content="citation_title=TIER protocol 4.0;,citation_author=Project TIER;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_fulltext_html_url=https://www.projecttier.org/tier-protocol/protocol-4-0/;">
+<meta name="citation_reference" content="citation_title=Packaging data analytical work reproducibly using R (and friends);,citation_abstract=Computers are a central tool in the research process, enabling complex and large-scale data analysis. As computer-based research has increased in complexity, so have the challenges of ensuring that this research is reproducible. To address this challenge, we review the concept of the research compendium as a solution for providing a standard and easily recognizable way for organizing the digital materials of a research project to enable other researchers to inspect, reproduce, and extend the research. We investigate how the structure and tooling of software packages of the R programming language are being used to produce research compendia in a variety of disciplines. We also describe how software engineering tools and services are being used by researchers to streamline working with research compendia. Using real-world examples, we show how researchers can improve the reproducibility of their work using research compendia based on R packages and related tools.;,citation_author=Ben Marwick;,citation_author=Carl Boettiger;,citation_author=Lincoln Mullen;,citation_publication_date=2018;,citation_cover_date=2018;,citation_year=2018;,citation_fulltext_html_url=https://doi.org/10.1080/00031305.2017.1375986;,citation_issue=1;,citation_doi=10.1080/00031305.2017.1375986;,citation_volume=72;,citation_journal_title=The American Statistician;,citation_publisher=ASA Website;">
+<meta name="citation_reference" content="citation_title=Sharing and organizing research products as R packages;,citation_abstract=A consensus on the importance of open data and reproducible code is emerging. How should data and code be shared to maximize the key desiderata of reproducibility, permanence, and accessibility? Research assets should be stored persistently in formats that are not software restrictive, and documented so that others can reproduce and extend the required computations. The sharing method should be easy to adopt by already busy researchers. We suggest the R package standard as a solution for creating, curating, and communicating research assets. The R package standard, with extensions discussed herein, provides a format for assets and metadata that satisfies the above desiderata, facilitates reproducibility, open access, and sharing of materials through online platforms like GitHub and Open Science Framework. We discuss a stack of R resources that help users create reproducible collections of research assets, from experiments to manuscripts, in the RStudio interface. We created an R package, vertical, to help researchers incorporate these tools into their workflows, and discuss its functionality at length in an online supplement. Together, these tools may increase the reproducibility and openness of psychological science.;,citation_author=Matti Vuorre;,citation_author=Matthew J. C. Crump;,citation_publication_date=2021-04-01;,citation_cover_date=2021-04-01;,citation_year=2021;,citation_fulltext_html_url=https://doi.org/10.3758/s13428-020-01436-x;,citation_issue=2;,citation_doi=10.3758/s13428-020-01436-x;,citation_issn=1554-3528;,citation_volume=53;,citation_journal_title=Behavior Research Methods;">
+<meta name="citation_reference" content="citation_title=Preparing your files for verification. Office of the AEA data editor;,citation_author=Lars Vilhuber;,citation_publication_date=2021-04-08;,citation_cover_date=2021-04-08;,citation_year=2021;,citation_fulltext_html_url=https://aeadataeditor.github.io/aea-de-guidance/preparing-for-data-deposit;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Style guide for python code. Python enhancement proposals (PEPs);,citation_abstract=This document gives coding conventions for the Python code comprising the standard library in the main Python distribution. Please see the companion informational PEP describing style guidelines for the C code in the C implementation of Python.;,citation_author=Guido Rossum;,citation_author=Barry Warsaw;,citation_author=Alyssa Coghlan;,citation_publication_date=2013-08-01;,citation_cover_date=2013-08-01;,citation_year=2013;,citation_fulltext_html_url=https://peps.python.org/pep-0008/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=The tidyverse style guide;,citation_author=Hadley Wickham;,citation_publication_date=2022-07-24;,citation_cover_date=2022-07-24;,citation_year=2022;,citation_fulltext_html_url=https://style.tidyverse.org/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Tidy design principles;,citation_author=Hadley Wickham;,citation_publication_date=2023-11-20;,citation_cover_date=2023-11-20;,citation_year=2023;,citation_fulltext_html_url=https://design.tidyverse.org/;">
+<meta name="citation_reference" content="citation_title=The art of UNIX programming: With contributions from thirteen UNIX pioneers, including its inventor, Ken Thompson;,citation_author=Eric S. Raymond;,citation_publication_date=2003-09-17;,citation_cover_date=2003-09-17;,citation_year=2003;,citation_fulltext_html_url=https://www.arp242.net/the-art-of-unix-programming/;,citation_isbn=978-0-13-142901-7;,citation_series_title=Addison-wesley professional computing series;">
+<meta name="citation_reference" content="citation_title=The good research code handbook;,citation_author=Patrick Mineault;,citation_author=Kento Nozawa;,citation_publication_date=2021-12-21;,citation_cover_date=2021-12-21;,citation_year=2021;,citation_fulltext_html_url=https://goodresearch.dev/;,citation_doi=10.5281/zenodo.5796873;,citation_publisher=https://goodresearch.dev/;">
+<meta name="citation_reference" content="citation_title=Removing a file from every commit;,citation_author=Scott Chacon;,citation_author=Ben Straub;,citation_publication_date=2024-08-20;,citation_cover_date=2024-08-20;,citation_year=2024;,citation_fulltext_html_url=https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History#_removing_file_every_commit;,citation_isbn=978-1-4842-0077-3;,citation_language=en-US;,citation_inbook_title=Pro git;">
+<meta name="citation_reference" content="citation_title=Definition of free cultural works;,citation_author=Erik Möller;,citation_author=Benjamin Mako Hill;,citation_author=Mia Garlick;,citation_author=Elizabeth Stark;,citation_author=Justin Anthony Knapp;,citation_author=Petr Kadlec;,citation_author=Richard Stallman;,citation_author=Lawrence Lessig;,citation_author=Angela Beesley;,citation_publication_date=2015-02-17;,citation_cover_date=2015-02-17;,citation_year=2015;,citation_fulltext_html_url=https://freedomdefined.org/Definition/1.1;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=What is free software?;,citation_author=Free Software Foundation;,citation_publication_date=2021-02-02;,citation_cover_date=2021-02-02;,citation_year=2021;,citation_fulltext_html_url=https://www.gnu.org/philosophy/free-sw.html;">
+<meta name="citation_reference" content="citation_title=The open source definition;,citation_author=Open Source Initiative;,citation_publication_date=2007-03-22;,citation_cover_date=2007-03-22;,citation_year=2007;,citation_fulltext_html_url=https://opensource.org/osd;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=The open definition - open definition - defining open in open data, open content and open knowledge;,citation_author=Open Knowledge Foundation;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=https://opendefinition.org/;">
+<meta name="citation_reference" content="citation_title=Make your open source software GPL-compatible. Or else.;,citation_author=David A. Wheeler;,citation_publication_date=2014-02-16;,citation_cover_date=2014-02-16;,citation_year=2014;,citation_fulltext_html_url=https://dwheeler.com/essays/gpl-compatible.html;">
+<meta name="citation_reference" content="citation_title=Why CC BY-SA is unsuitable. OpenStreetMap foundation;,citation_author=Matt;,citation_publication_date=2009-10-23;,citation_cover_date=2009-10-23;,citation_year=2009;,citation_fulltext_html_url=https://osmfoundation.org/w/index.php?title=Licence_and_Legal_FAQ/Why_CC_BY-SA_is_Unsuitable&amp;amp;amp;oldid=3927;">
+<meta name="citation_reference" content="citation_title=Use of CC BY 4.0 licensed data in OpenStreetMap. OpenStreetMap blog;,citation_author=Simon Poole;,citation_publication_date=2017-03-17;,citation_cover_date=2017-03-17;,citation_year=2017;,citation_fulltext_html_url=https://blog.openstreetmap.org/2017/03/17/use-of-cc-by-data/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Is there some way that I can GPL the output people get from use of my program? For example, if my program is used to develop hardware designs, can I require that these designs must be free?;,citation_author=Free Software Foundation;,citation_publication_date=2024-10-15;,citation_cover_date=2024-10-15;,citation_year=2024;,citation_fulltext_html_url=https://www.gnu.org/licenses/gpl-faq.en.html#GPLOutput;,citation_inbook_title=Frequently asked questions about the GNU licenses;">
+<meta name="citation_reference" content="citation_title=A quick guide to software licensing for the scientist-programmer;,citation_author=Andrew Morin;,citation_author=Jennifer Urban;,citation_author=Piotr Sliz;,citation_editor=Fran Lewitter;,citation_publication_date=2012-07-26;,citation_cover_date=2012-07-26;,citation_year=2012;,citation_fulltext_html_url=https://dx.plos.org/10.1371/journal.pcbi.1002598;,citation_issue=7;,citation_doi=10.1371/journal.pcbi.1002598;,citation_issn=1553-7358;,citation_volume=8;,citation_language=en-US;,citation_journal_title=PLoS Computational Biology;,citation_journal_abbrev=PLoS Comput Biol;">
+<meta name="citation_reference" content="citation_title=Avoiding data use silos: How governments can simplify the open licensing landscape;,citation_author=Danny Lämmerhirt;,citation_publication_date=2017-12;,citation_cover_date=2017-12;,citation_year=2017;,citation_fulltext_html_url=https://web.archive.org/web/20231002141440/https://research.okfn.org/avoiding-data-use-silos/;,citation_technical_report_institution=Open Knowledge International;">
+<meta name="citation_reference" content="citation_title=Which open data license? Open energy modelling initiative forum;,citation_author=Robbie Morrison;,citation_publication_date=2024-08-27;,citation_cover_date=2024-08-27;,citation_year=2024;,citation_fulltext_html_url=https://forum.openmod.org/t/which-open-data-license/2611;,citation_language=en-GB;">
+<meta name="citation_reference" content="citation_title=For clarity’s sake, please don’t say “licensed under GNU GPL 2”!;,citation_author=Richard Stallman;,citation_publication_date=2022-01-22;,citation_cover_date=2022-01-22;,citation_year=2022;,citation_fulltext_html_url=https://www.gnu.org/licenses/identify-licenses-clearly.html;">
+<meta name="citation_reference" content="citation_title=When should you take a dependency?;,citation_author=Hadley Wickham;,citation_author=Jennifer Bryan;,citation_publication_date=2023-07-23;,citation_cover_date=2023-07-23;,citation_year=2023;,citation_fulltext_html_url=https://r-pkgs.org/dependencies-mindset-background.html#sec-dependencies-pros-cons;,citation_isbn=978-1-09-813494-5;,citation_inbook_title=R packages;">
+<meta name="citation_reference" content="citation_title=Licensing;,citation_author=Hadley Wickham;,citation_author=Jennifer Bryan;,citation_publication_date=2023-07-23;,citation_cover_date=2023-07-23;,citation_year=2023;,citation_fulltext_html_url=https://r-pkgs.org/license.html;,citation_isbn=978-1-09-813494-5;,citation_inbook_title=R packages;">
+<meta name="citation_reference" content="citation_title=Considerations for licensors and licensees;,citation_author=Creative Commons;,citation_publication_date=2013-11-25;,citation_cover_date=2013-11-25;,citation_year=2013;,citation_fulltext_html_url=https://creativecommons.org/share-your-work/licensing-considerations/version4/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Exclusive licence to publish – now here’s a thing. Plan S;,citation_author=Sally Rumsey;,citation_author=Ignasi Labastida;,citation_publication_date=2022-07-25;,citation_cover_date=2022-07-25;,citation_year=2022;,citation_fulltext_html_url=https://www.coalition-s.org/blog/exclusive-licence-to-publish-now-heres-a-thing/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Publishing without exclusive rights;,citation_author=Peter Suber;,citation_publication_date=2022-04-26;,citation_cover_date=2022-04-26;,citation_year=2022;,citation_fulltext_html_url=https://journals.publishing.umich.edu/jep/article/id/1869/;,citation_issue=1;,citation_doi=10.3998/jep.1869;,citation_issn=1080-2711;,citation_volume=25;,citation_journal_title=The Journal of Electronic Publishing;">
+<meta name="citation_reference" content="citation_title=Retaining copyright for figures in academic publications to allow easy citation and reuse. Medium;,citation_abstract=tl;dr 1. Scientists routinely cannot reuse or quote figures in publications, even their own, due to copyright agreements. 2. Figures can be…;,citation_author=Malte Elson;,citation_publication_date=2016-11-11;,citation_cover_date=2016-11-11;,citation_year=2016;,citation_fulltext_html_url=https://medium.com/@malte.elson/retaining-copyright-for-figures-in-academic-publications-to-allow-easy-citation-and-reuse-77c6e2b511fe;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Creative Commons certificate for educators, academic librarians, and open culture;,citation_author=Creative Commons;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://certificates.creativecommons.org/cccertedu/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Freie Software: zwischen Privat- und Gemeineigentum;,citation_author=Volker Grassmuck;,citation_publication_date=2004;,citation_cover_date=2004;,citation_year=2004;,citation_fulltext_html_url=https://web.archive.org/web/20240105071919/https://freie-software.bpb.de/;,citation_isbn=978-3-89331-569-7;,citation_language=de;,citation_series_title=Schriftenreihe;">
+<meta name="citation_reference" content="citation_title=Open content – navigating Creative Commons licenses;,citation_author=Till Kreutzer;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://www.unesco.de/assets/dokumente/Kommunikation/01_Kommunikation_allgemein/Open-Content_Dez_2024.pdf;,citation_isbn=978-3-947675-61-6;">
+<meta name="citation_reference" content="citation_title=ShareAlike compatibility analysis: GPL;,citation_author=Creative Commons;,citation_publication_date=2015-08-08;,citation_cover_date=2015-08-08;,citation_year=2015;,citation_fulltext_html_url=https://wiki.creativecommons.org/index.php?title=ShareAlike_compatibility_analysis:_GPL&amp;amp;amp;oldid=114476;">
+<meta name="citation_reference" content="citation_title=Software deposit: Where to deposit software;,citation_author=Michael Jackson;,citation_author=The Software Sustainability Institute;,citation_publication_date=2018-08-07;,citation_cover_date=2018-08-07;,citation_year=2018;,citation_fulltext_html_url=https://softwaresaved.github.io/software-deposit-guidance/WhereToDepositSoftware.html;,citation_doi=10.5281/zenodo.1327329;,citation_language=en-US;,citation_publisher=https://softwaresaved.github.io/software-deposit-guidance/WhereToDepositSoftware.html;">
+<meta name="citation_reference" content="citation_title=Software deposit: Guidance for researchers;,citation_author=Michael Jackson;,citation_author=The Software Sustainability Institute;,citation_publication_date=2018-08-07;,citation_cover_date=2018-08-07;,citation_year=2018;,citation_fulltext_html_url=https://softwaresaved.github.io/software-deposit-guidance/SoftwareDepositGuidance.html;,citation_doi=10.5281/zenodo.1327310;,citation_language=en-US;,citation_publisher=https://softwaresaved.github.io/software-deposit-guidance/SoftwareDepositGuidance.html;">
+<meta name="citation_reference" content="citation_title=FAIREST: A framework for assessing research repositories;,citation_abstract=ABSTRACT The open science movement has gained significant momentum within the last few years. This comes along with the need to store and share research artefacts, such as publications and research data. For this purpose, research repositories need to be established. A variety of solutions exist for implementing such repositories, covering diverse features, ranging from custom depositing workflows to social media-like functions. In this article, we introduce the FAIREST principles, a framework inspired by the well-known FAIR principles, but designed to provide a set of metrics for assessing and selecting solutions for creating digital repositories for research artefacts. The goal is to support decision makers in choosing such a solution when planning for a repository, especially at an institutional level. The metrics included are therefore based on two pillars: (1) an analysis of established features and functionalities, drawn from existing dedicated, general purpose and commonly used solutions, and (2) a literature review on general requirements for digital repositories for research artefacts and related systems. We further describe an assessment of 11 widespread solutions, with the goal to provide an overview of the current landscape of research data repository solutions, identifying gaps and research challenges to be addressed.;,citation_author=Mathieu Aquin;,citation_author=Fabian Kirstein;,citation_author=Daniela Oliveira;,citation_author=Sonja Schimmler;,citation_author=Sebastian Urbanek;,citation_publication_date=2023-03-08;,citation_cover_date=2023-03-08;,citation_year=2023;,citation_fulltext_html_url=https://direct.mit.edu/dint/article/5/1/202/113179/FAIREST-A-Framework-for-Assessing-Research;,citation_issue=1;,citation_doi=10.1162/dint_a_00159;,citation_issn=2641-435X;,citation_volume=5;,citation_language=en-US;,citation_journal_title=Data Intelligence;">
+<meta name="citation_reference" content="citation_title=Nine best practices for research software registries and repositories;,citation_abstract=Scientific software registries and repositories improve software findability and research transparency, provide information for software citations, and foster preservation of computational methods in a wide range of disciplines. Registries and repositories play a critical role by supporting research reproducibility and replicability, but developing them takes effort and few guidelines are available to help prospective creators of these resources. To address this need, the FORCE11 Software Citation Implementation Working Group convened a Task Force to distill the experiences of the managers of existing resources in setting expectations for all stakeholders. In this article, we describe the resultant best practices which include defining the scope, policies, and rules that govern individual registries and repositories, along with the background, examples, and collaborative work that went into their development. We believe that establishing specific policies such as those presented here will help other scientific software registries and repositories better serve their users and their disciplines.;,citation_author=Daniel Garijo;,citation_author=Hervé Ménager;,citation_author=Lorraine Hwang;,citation_author=Ana Trisovic;,citation_author=Michael Hucka;,citation_author=Thomas Morrell;,citation_author=Alice Allen;,citation_author=Task Force on Best Practices for Software Registries;,citation_author=SciCodes Consortium;,citation_publication_date=2022-08-08;,citation_cover_date=2022-08-08;,citation_year=2022;,citation_fulltext_html_url=https://peerj.com/articles/cs-1023;,citation_doi=10.7717/peerj-cs.1023;,citation_issn=2376-5992;,citation_volume=8;,citation_language=en-US;,citation_journal_title=PeerJ Computer Science;">
+<meta name="citation_reference" content="citation_title=10 things for curating reproducible and FAIR research;,citation_abstract=This document, &amp;amp;amp;quot;10 Things for Curating Reproducible and FAIRFAIR Research,&amp;quot; describes the key issues of curating reproducible and FAIRFAIR research (CURECURE-FAIRFAIR). It lists standards-based guidelines for ten practices, focusing primarily on research compendia produced by quantitative data-driven social science.The &quot;10 CURECURE-FAIRFAIR Things&quot; are intended primarily for data curators and information professionals who are charged with publication and archival of FAIRFAIR and computationally reproducible research. Often the first re-users of the research compendium, they have the opportunity to verify that a computation can be executed and that it can reproduce pre-specified results. Secondarily, the &quot;10 CURECURE-FAIRFAIR Things&quot; will be of interest to researchers, publishers, editors, reviewers, and others who have a stake in creating, using, sharing, publishing, or preserving reproducible research.;,citation_author=Florio Arguillas;,citation_author=Thu-Mai Christian;,citation_author=Mandy Gooch;,citation_author=Tom Honeyman;,citation_author=Limor Peer;,citation_author=CURE-FAIR WG;,citation_publication_date=2022-06-27;,citation_cover_date=2022-06-27;,citation_year=2022;,citation_fulltext_html_url=https://curating4reproducibility.org/10things/;,citation_doi=10.15497/RDA00074;,citation_technical_report_institution=Research Data Alliance; https://curating4reproducibility.org/10things/;">
+<meta name="citation_reference" content="citation_title=GNU General Public License – linking and derived works;,citation_author=Wikipedia contributors;,citation_publication_date=2024-09-05;,citation_cover_date=2024-09-05;,citation_year=2024;,citation_fulltext_html_url=https://en.wikipedia.org/w/index.php?title=GNU_General_Public_License&amp;amp;amp;oldid=1244139410#Linking_and_derived_works;,citation_language=en-US;,citation_journal_title=Wikipedia;,citation_publisher=Wikipedia, The Free Encyclopedia;">
+<meta name="citation_reference" content="citation_title=GNU Free Documentation License – burdens when printing;,citation_author=Wikipedia contributors;,citation_publication_date=2025-01-17;,citation_cover_date=2025-01-17;,citation_year=2025;,citation_fulltext_html_url=https://en.wikipedia.org/w/index.php?title=GNU_Free_Documentation_License&amp;amp;amp;oldid=1269991857#Burdens_when_printing;,citation_language=en-US;,citation_journal_title=Wikipedia;,citation_publisher=Wikipedia, The Free Encyclopedia;">
+<meta name="citation_reference" content="citation_title=Publication manual of the American Psychological Association;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_doi=10.1037/0000165-000;,citation_isbn=978-1-4338-3217-8 978-1-4338-3218-5 978-1-4338-3215-4 978-1-4338-3216-1;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Practical guide to the international alignment of research data management - extended edition;,citation_abstract=This resource offers targeted guidance for organisations, scientific communities, as well as individual researchers, to organise research data and preserve it appropriately Originally released in 2019, and following its successful uptake by many organisations, the extended edition features a brand-new rubric to facilitate the evaluation of a data management plan (DMP). The guide also presents core requirements for DMPs, criteria for the selection of trustworthy repositories, and guidance for researchers to comply with organisational requirements.;,citation_author=Science Europe;,citation_publication_date=2021-01-27;,citation_cover_date=2021-01-27;,citation_year=2021;,citation_fulltext_html_url=https://zenodo.org/record/4915861;,citation_doi=10.5281/zenodo.4915861;,citation_technical_report_institution=https://scienceeurope.org/our-resources/practical-guide-to-the-international-alignment-of-research-data-management/;">
+<meta name="citation_reference" content="citation_title=The surprising history of copyright and the promise of a post-copyright world. Question copyright;,citation_author=Karl Fogel;,citation_publication_date=2006-05-27;,citation_cover_date=2006-05-27;,citation_year=2006;,citation_fulltext_html_url=https://web.archive.org/web/20250618091020id_/https://questioncopyright.org/promise/index.html;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Quality assurance of code for analysis and research;,citation_author=UK Government Analytical Community;,citation_publication_date=2020;,citation_cover_date=2020;,citation_year=2020;,citation_fulltext_html_url=https://best-practice-and-impact.github.io/qa-of-code-guidance/;">
+<meta name="citation_reference" content="citation_title=WaveLab and reproducible research;,citation_author=Jonathan B. Buckheit;,citation_author=David L. Donoho;,citation_editor=Anestis Antoniadis;,citation_editor=Georges Oppenheim;,citation_publication_date=1995;,citation_cover_date=1995;,citation_year=1995;,citation_fulltext_html_url=http://link.springer.com/10.1007/978-1-4612-2544-7_5;,citation_doi=10.1007/978-1-4612-2544-7_5;,citation_isbn=978-0-387-94564-4 978-1-4612-2544-7;,citation_volume=103;,citation_inbook_title=Wavelets and statistics;">
+<meta name="citation_reference" content="citation_title=Statistical analyses and reproducible research;,citation_author=Robert Gentleman;,citation_author=Duncan Temple Lang;,citation_publication_date=2007-03;,citation_cover_date=2007-03;,citation_year=2007;,citation_issue=1;,citation_doi=10.1198/106186007X178663;,citation_issn=1061-8600, 1537-2715;,citation_volume=16;,citation_language=en-US;,citation_journal_title=Journal of Computational and Graphical Statistics;,citation_journal_abbrev=Journal of Computational and Graphical Statistics;">
+<meta name="citation_reference" content="citation_title=The case for open computer programs;,citation_author=Darrel C. Ince;,citation_author=Leslie Hatton;,citation_author=John Graham-Cumming;,citation_publication_date=2012-02;,citation_cover_date=2012-02;,citation_year=2012;,citation_fulltext_html_url=https://www.nature.com/articles/nature10836;,citation_issue=7386;,citation_doi=10.1038/nature10836;,citation_issn=0028-0836, 1476-4687;,citation_volume=482;,citation_language=en-US;,citation_journal_title=Nature;,citation_journal_abbrev=Nature;">
+<meta name="citation_reference" content="citation_title=Reproducibility and replicability in science;,citation_author=National Academies of Sciences, Engineering, and Medicine;,citation_publication_date=2019-09-20;,citation_cover_date=2019-09-20;,citation_year=2019;,citation_doi=10.17226/25303;,citation_isbn=978-0-309-48616-3;">
+<meta name="citation_reference" content="citation_title=Literate programming;,citation_author=D. E. Knuth;,citation_publication_date=1984-02-01;,citation_cover_date=1984-02-01;,citation_year=1984;,citation_issue=2;,citation_doi=10.1093/comjnl/27.2.97;,citation_issn=0010-4620, 1460-2067;,citation_volume=27;,citation_language=en-US;,citation_journal_title=The Computer Journal;,citation_journal_abbrev=The Computer Journal;">
+<meta name="citation_reference" content="citation_title=Sweave: Dynamic generation of statistical reports using literate data analysis;,citation_author=Friedrich Leisch;,citation_editor=Wolfgang Härdle;,citation_editor=Bernd Rönz;,citation_publication_date=2002;,citation_cover_date=2002;,citation_year=2002;,citation_fulltext_html_url=http://link.springer.com/10.1007/978-3-642-57489-4_89;,citation_doi=10.1007/978-3-642-57489-4_89;,citation_isbn=978-3-7908-1517-7 978-3-642-57489-4;,citation_language=en-US;,citation_inbook_title=Compstat;">
+<meta name="citation_reference" content="citation_title=Dynamic documents with R and knitr;,citation_abstract=Quickly and Easily Write Dynamic Documents Suitable for both beginners and advanced users, Dynamic Documents with R and knitr, Second Edition makes writing statistical reports easier by integrating computing directly with reporting. Reports range from homework, projects, exams, books, blogs, and web pages to virtually any documents related to statistical graphics, computing, and data analysis. The book covers basic applications for beginners while guiding power users in understanding the extensibility of the knitr package. New to the Second Edition A new chapter that introduces R Markdown v2 Changes that reflect improvements in the knitr package New sections on generating tables, defining custom printing methods for objects in code chunks, the C/Fortran engines, the Stan engine, running engines in a persistent session, and starting a local server to serve dynamic documents Boost Your Productivity in Statistical Report Writing and Make Your Scientific Computing with R Reproducible Like its highly praised predecessor, this edition shows you how to improve your efficiency in writing reports. The book takes you from program output to publication-quality reports, helping you fine-tune every aspect of your report;,citation_author=Yihui Xie;,citation_publication_date=2015;,citation_cover_date=2015;,citation_year=2015;,citation_isbn=978-1-4987-1697-0 978-1-315-36070-6 978-1-4987-8739-0 978-1-315-38248-7;,citation_series_title=The r series;">
+<meta name="citation_reference" content="citation_title=Jupyter notebooks – a publishing format for reproducible computational workflows;,citation_abstract=It is increasingly necessary for researchers in all fields to write computer code, and in order to reproduce research results, it is important that this code is published. We present Jupyter notebooks, a document format for publishing code, results and explanations in a form that is both readable and executable. We discuss various tools and use cases for notebook documents.;,citation_author=Thomas Kluyver;,citation_author=Benjamin Ragan-Kelley;,citation_author=Fernando Pérez;,citation_author=Brian Granger;,citation_author=Matthias Bussonnier;,citation_author=Jonathan Frederic;,citation_author=Kyle Kelley;,citation_author=Jessica Hamrick;,citation_author=Jason Grout;,citation_author=Sylvain Corlay;,citation_author=Paul Ivanov;,citation_author=Damián Avila;,citation_author=Safia Abdalla;,citation_author=Carol Willing;,citation_author=Jupyter development team;,citation_editor=Fernando Loizides;,citation_editor=Birgit Scmidt;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_doi=10.3233/978-1-61499-649-1-87;,citation_conference_title=Positioning and power in academic publishing: Players, agents and agendas;,citation_conference=IOS Press;">
+<meta name="citation_reference" content="citation_title=Refactoring: Improving the design of existing code;,citation_author=Martin Fowler;,citation_author=Kent Beck;,citation_author=William Opdyke;,citation_author=Don Roberts;,citation_publication_date=1999;,citation_cover_date=1999;,citation_year=1999;">
+<meta name="citation_reference" content="citation_title=Should you cite this particular piece of software?;,citation_author=Louise Brown;,citation_author=Michael R. Crusoe;,citation_author=Dmitrijs Miļajevs;,citation_author=Iza Romanowska;,citation_publication_date=2016;,citation_cover_date=2016;,citation_year=2016;,citation_fulltext_html_url=https://mr-c.github.io/shouldacite/;,citation_doi=10.5281/zenodo.2559142;,citation_publisher=https://mr-c.github.io/shouldacite/;">
+<meta name="citation_reference" content="citation_title=Achieving human and machine accessibility of cited data in scholarly publications;,citation_author=Joan Starr;,citation_author=Eleni Castro;,citation_author=Mercè Crosas;,citation_author=Michel Dumontier;,citation_author=Robert R. Downs;,citation_author=Ruth Duerr;,citation_author=Laurel L. Haak;,citation_author=Melissa Haendel;,citation_author=Ivan Herman;,citation_author=Simon Hodson;,citation_author=Joe Hourclé;,citation_author=John Ernest Kratz;,citation_author=Jennifer Lin;,citation_author=Lars Holm Nielsen;,citation_author=Amy Nurnberger;,citation_author=Stefan Proell;,citation_author=Andreas Rauber;,citation_author=Simone Sacchi;,citation_author=Arthur Smith;,citation_author=Mike Taylor;,citation_author=Tim Clark;,citation_publication_date=2015-05-27;,citation_cover_date=2015-05-27;,citation_year=2015;,citation_doi=10.7717/peerj-cs.1;,citation_issn=2376-5992;,citation_volume=1;,citation_language=en-US;,citation_journal_title=PeerJ Computer Science;">
+<meta name="citation_reference" content="citation_title=Software citation principles;,citation_abstract=Software is a critical part of modern research and yet there is little support across the scholarly ecosystem for its acknowledgement and citation. Inspired by the activities of the FORCE11 working group focused on data citation, this document summarizes the recommendations of the FORCE11 Software Citation Working Group and its activities between June 2015 and April 2016. Based on a review of existing community practices, the goal of the working group was to produce a consolidated set of citation principles that may encourage broad adoption of a consistent policy for software citation across disciplines and venues. Our work is presented here as a set of software citation principles, a discussion of the motivations for developing the principles, reviews of existing community practice, and a discussion of the requirements these principles would place upon different stakeholders. Working examples and possible technical solutions for how these principles can be implemented will be discussed in a separate paper.;,citation_author=Arfon M. Smith;,citation_author=Daniel S. Katz;,citation_author=Kyle E. Niemeyer;,citation_author=FORCE11 Software Citation Working Group;,citation_publication_date=2016-09-19;,citation_cover_date=2016-09-19;,citation_year=2016;,citation_fulltext_html_url=https://peerj.com/articles/cs-86;,citation_doi=10.7717/peerj-cs.86;,citation_issn=2376-5992;,citation_volume=2;,citation_language=en-US;,citation_journal_title=PeerJ Computer Science;">
+<meta name="citation_reference" content="citation_title=Copyleft, attribution, and data: Other considerations. Luis Villa: Open tech and policy;,citation_abstract=Public licenses for databases don’t work well. Before going into solutions to that problem, though, I wanted to talk briefly about some things that are important to consider when thinking abo…;,citation_author=Luis Villa;,citation_publication_date=2016-09-21;,citation_cover_date=2016-09-21;,citation_year=2016;,citation_fulltext_html_url=https://lu.is/2016/09/copyleft-attribution-and-data-other-considerations/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Public licenses and data: So what to do instead? Luis Villa: Open tech and policy;,citation_abstract=I just explained why open and copyleft licensing, which work fairly well in the software context, might not be legally workable, or practically a good idea, around data. So what to do instead? tl;d…;,citation_author=Luis Villa;,citation_publication_date=2016-09-26;,citation_cover_date=2016-09-26;,citation_year=2016;,citation_fulltext_html_url=https://lu.is/2016/09/public-licenses-and-data-so-what-to-do-instead/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Rights retention strategy: A primer from UKRN;,citation_abstract=This guide describes how authors can retain rights on their “author’s accepted manuscripts” using the Rights Retention Strategy.;,citation_author=UK Reproducibility Network;,citation_author=Stephen Eglen;,citation_publication_date=2023-04-18;,citation_cover_date=2023-04-18;,citation_year=2023;,citation_fulltext_html_url=https://osf.io/2ajsg;,citation_doi=10.31219/osf.io/2ajsg;,citation_publisher=Open Science Framework;">
+<meta name="citation_reference" content="citation_title=Author rights: Using the SPARC author addendum;,citation_author=SPARC;,citation_publication_date=2006;,citation_cover_date=2006;,citation_year=2006;,citation_fulltext_html_url=https://sparcopen.org/our-work/author-rights/brochure-html/;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Wikipedia and attribution. Creative Commons;,citation_abstract=The potential migration of Wikipedia and other Wikimedia projects to using CC BY-SA as their primary content license has spurred some interesting discussions about attribution — how to give credit for a massively collaborative work in a variety of mediums? This question is relevant regardless of migration, but clearly migration has prompted the discussion and…;,citation_author=Mike Linksvayer;,citation_publication_date=2009-03-09;,citation_cover_date=2009-03-09;,citation_year=2009;,citation_fulltext_html_url=https://creativecommons.org/weblog/entry/13232;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Copyright notices in open source software projects. Linux Foundation;,citation_abstract=Learn which copyright notice should appear at the top of an open source project with many contributors.;,citation_author=Steve Winslow;,citation_publication_date=2020-01-10;,citation_cover_date=2020-01-10;,citation_year=2020;,citation_fulltext_html_url=https://www.linuxfoundation.org/blog/copyright-notices-in-open-source-software-projects;,citation_language=en-US;">
+<meta name="citation_reference" content="citation_title=Rechtsfragen bei Open Science: Ein Leitfaden;,citation_abstract=Die Digitalisierung ermöglicht eine offene Wissenschaft (Open Science). Diese hat viele Aspekte, insbesondere den freien Zugang zu wissenschaftlichen Veröffentlichungen und Materialien (Open Access), transparente Begutachtungsverfahren (Open Peer Review) oder quelloffene Technologien (Open Source). Das Programm Hamburg Open Science (Laufzeit 2018–2020) unterstützt unter anderem den Kulturwandel in der Wissenschaft. In diesem Kontext entstand der nun vorliegende Leitfaden, der das rechtliche Umfeld greifbar machen soll. Der Leitfaden erarbeitet die betroffenen Rechtsgebiete zunächst systematisch. Im zweiten Teil werden rechtliche Fragen zu Open Science beantwortet, die direkt aus den Universitäten und Bibliotheken kommen. So gelingt eine praxisnahe Aufbereitung und Vermittlung. Autoren des Leitfadens sind Dr. Till Kreutzer, Partner der Kanzlei iRights.Law, und deren wissenschaftlicher Mitarbeiter Henning Lahmann. Die vorliegende zweite, vollständig überarbeitete und erweiterte Auflage ist unter Mitarbeit von Dr. Ina Kaulen, Staats- und Universitätsbibliothek Hamburg Carl von Ossietzky, entstanden.&nbsp; AUCH ALS EPUB FÜR MOBILE ENDGERÄTE zum kostenfreien Herunterladen und Weiterverbreiten unter &amp;amp;amp;quot;Frei verfügbarer Volltext&amp;quot;.;,citation_author=Till Kreutzer;,citation_author=Henning Lahmann;,citation_publication_date=2021-05-25;,citation_cover_date=2021-05-25;,citation_year=2021;,citation_fulltext_html_url=https://hup.sub.uni-hamburg.de/oa-pub/catalog/book/205;,citation_doi=10.15460/HUP.211;,citation_isbn=978-3-943423-89-1;,citation_language=de-DE;">
+<meta name="citation_reference" content="citation_title=Can I reuse an excerpt of a larger work that is licensed with the NoDerivs restriction?;,citation_author=Creative Commons;,citation_publication_date=2024-06-03;,citation_cover_date=2024-06-03;,citation_year=2024;,citation_fulltext_html_url=https://creativecommons.org/faq/#can-i-reuse-an-excerpt-of-a-larger-work-that-is-licensed-with-the-noderivs-restriction;,citation_inbook_title=Frequently asked questions;">
+<meta name="citation_reference" content="citation_title=Can I apply a Creative Commons license to software?;,citation_author=Creative Commons;,citation_publication_date=2024-06-03;,citation_cover_date=2024-06-03;,citation_year=2024;,citation_fulltext_html_url=https://creativecommons.org/faq/#can-i-apply-a-creative-commons-license-to-software;,citation_inbook_title=Frequently asked questions;">
+<meta name="citation_reference" content="citation_title=Creating reproducible packages when data are confidential;,citation_abstract=In this presentation, I focus on techniques to improve reproducibility for scholars using confidential data, in particular in the US FSRDC.;,citation_author=Lars Vilhuber;,citation_publication_date=2024-10-14;,citation_cover_date=2024-10-14;,citation_year=2024;,citation_fulltext_html_url=https://labordynamicsinstitute.github.io/reproducibility-confidential/;,citation_doi=10.5281/zenodo.13927702;,citation_publisher=https://labordynamicsinstitute.github.io/reproducibility-confidential/; Zenodo;">
+<meta name="citation_reference" content="citation_title=Sketchy: Create custom research compendiums;,citation_author=Marcelo Araya-Salas;,citation_author=Andrea Yure Arriaga Madrigal;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;,citation_fulltext_html_url=https://github.com/maRce10/sketchy;">
+<meta name="citation_reference" content="citation_title=The correct indication of a license;,citation_author=Helene Brinken;,citation_author=Jonas Hauss;,citation_author=Jessika Rücknagel;,citation_publication_date=2021;,citation_cover_date=2021;,citation_year=2021;,citation_doi=10.5446/53550;">
+<meta name="citation_reference" content="citation_title=LMU open science center tutorial template: A quarto extension;,citation_author=Patrick Callahan;,citation_publication_date=2026-07;,citation_cover_date=2026-07;,citation_year=2026;,citation_fulltext_html_url=https://github.com/lmu-osc/tutorial-template;,citation_doi=10.5281/zenodo.21263721;">
 </head>
-
-<body class="nav-sidebar docked nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content"></a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Code Publishing Tutorial</span>
     </a>
@@ -170,23 +421,23 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+<li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lmu-osc/code-publishing">
             Source Code
             </a>
@@ -197,13 +448,17 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
             </a>
           </li>
       </ul>
-    </div>
-    <a href="https://www.osc.uni-muenchen.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+</div>
+    <a href="https://www.osc.lmu.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -214,12 +469,12 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -227,6 +482,12 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
@@ -283,79 +544,108 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/introduction-copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Copyright and Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copyright Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/data-dic-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automatic Generation of Data Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/licenses-continued.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/licenses-continued.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Licenses Continued</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/other_dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/other-dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identify additional system dependencies for the README</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
-</div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#utilized-software" id="toc-utilized-software" class="nav-link active" data-scroll-target="#utilized-software">Utilized Software</a></li>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><ul>
+<li><a href="#contributors" id="toc-contributors" class="nav-link active" data-scroll-target="#contributors">Contributors</a></li>
   <li><a href="#license-and-disclaimer" id="toc-license-and-disclaimer" class="nav-link" data-scroll-target="#license-and-disclaimer">License and Disclaimer</a></li>
+  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#utilized-software" id="toc-utilized-software" class="nav-link" data-scroll-target="#utilized-software">Utilized Software</a></li>
+  <li><a href="#how-to-cite" id="toc-how-to-cite" class="nav-link" data-scroll-target="#how-to-cite">How to Cite</a></li>
   <li><a href="#funding" id="toc-funding" class="nav-link" data-scroll-target="#funding">Funding</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/about.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/about.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/about.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">About</h1>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">About</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
+<div class="quarto-title-meta-author">
+  <div class="quarto-title-meta-heading">Authors</div>
+  <div class="quarto-title-meta-heading">Affiliation</div>
+  
+    <div class="quarto-title-meta-contents">
+    <p class="author">Florian Kohrt <a href="mailto:fkohrt@anche.no" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0003-0374-5625" class="quarto-title-author-orcid" aria-label="ORCID profile for Florian Kohrt"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            LMU Open Science Center
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Josephine Zerna <a href="https://orcid.org/0000-0003-2892-884X" class="quarto-title-author-orcid" aria-label="ORCID profile for Josephine Zerna"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Christoph Scheffel <a href="https://orcid.org/0000-0001-5963-9229" class="quarto-title-author-orcid" aria-label="ORCID profile for Christoph Scheffel"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Felix Schönbrodt <a href="mailto:felix.schoenbrodt@psy.lmu.de" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> <a href="https://orcid.org/0000-0002-8282-3910" class="quarto-title-author-orcid" aria-label="ORCID profile for Felix Schönbrodt"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            LMU Open Science Center
+          </p>
+      </div>
+    <div class="quarto-title-meta-contents">
+    <p class="author">Pat Callahan <a href="https://orcid.org/0000-0003-1769-7580" class="quarto-title-author-orcid" aria-label="ORCID profile for Pat Callahan"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
+  </div>
+  <div class="quarto-title-meta-contents">
+        <p class="affiliation">
+            LMU Open Science Center
+          </p>
+      </div>
+  </div>
 
 <div class="quarto-title-meta">
 
+      
     <div>
-    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-             <p>Florian Kohrt <a href="https://orcid.org/0000-0003-0374-5625" class="quarto-title-author-orcid" aria-label="ORCID profile for Florian Kohrt"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Josephine Zerna <a href="https://orcid.org/0000-0003-2892-884X" class="quarto-title-author-orcid" aria-label="ORCID profile for Josephine Zerna"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Christoph Scheffel <a href="https://orcid.org/0000-0001-5963-9229" class="quarto-title-author-orcid" aria-label="ORCID profile for Christoph Scheffel"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-             <p>Felix Schönbrodt <a href="https://orcid.org/0000-0002-8282-3910" class="quarto-title-author-orcid" aria-label="ORCID profile for Felix Schönbrodt"> <img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a></p>
-          </div>
+      <p class="date">July 31, 2025</p>
+    </div>
   </div>
-    
   
     
     <div>
@@ -370,21 +660,25 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   
 
 
-</header>
-
-
-<hr>
+</header><section id="contributors" class="level2"><h2 class="anchored" data-anchor-id="contributors">Contributors</h2>
+<p>This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, and Pat Callahan.</p>
 <p>This tutorial was created by Florian Kohrt. It is based on previous work by Josephine Zerna and Christoph Scheffel. Comments on earlier versions were kindly provided by Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt, and Sarah von Grebmer zu Wolfsthurn. Felix Schönbrodt created this short version of the <a href="https://lmu-osc.github.io/code-publishing/">longer original tutorial</a>.</p>
-<section id="utilized-software" class="level2">
-<h2 class="anchored" data-anchor-id="utilized-software">Utilized Software</h2>
+</section><section id="license-and-disclaimer" class="level2"><h2 class="anchored" data-anchor-id="license-and-disclaimer">License and Disclaimer</h2>
+<p>None of the discussion in this tutorial constitutes legal advice.</p>
+<p>Except where noted otherwise, the narrative text in this tutorial is licensed under <a href="LICENSE-CC-BY-SA.txt">CC&nbsp;BY-SA&nbsp;4.0</a>; the code without any narrative text is also (at your option) available under <a href="LICENSE-CC0.txt">CC0&nbsp;1.0</a>.</p>
+<p>The files <code>Manuscript.qmd</code> and <code>Bibliography.bib</code> are made available by Josephine Zerna and Christoph Scheffel under <a href="LICENSE-CC0.txt">CC0&nbsp;1.0</a>.</p>
+<p>The screenshots of the <a href="https://github.com/rstudio/rstudio">RStudio IDE</a> are Copyright (C) 2024 Posit PBC and are available under the <a href="LICENSE-AGPL.txt">GNU Affero General Public License v3</a>. The source code is available on <a href="https://github.com/rstudio/rstudio/tree/v2024.04.2%2B764">GitHub</a>.</p>
+</section><section id="notes" class="level2"><h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<p>This tutorial was primarily written in 2025 using <a href="https://cloud.r-project.org/">R</a> and <a href="https://quarto.org/docs/download/release.html">Quarto</a>. Major changes to either can be found at the websites linked above, for the most up-to-date information, and to confirm that our tutorial is not out-of-date.</p>
+</section><section id="utilized-software" class="level2"><h2 class="anchored" data-anchor-id="utilized-software">Utilized Software</h2>
 <div class="cell">
 <div class="cell-output-display">
-<p>This work was completed using the following R packages: datawizard v. 1.3.1 <span class="citation" data-cites="datawizard">(<a href="#ref-datawizard" role="doc-biblioref">Patil et al., 2022</a>)</span>, grateful v. 0.3.0 <span class="citation" data-cites="grateful">(<a href="#ref-grateful" role="doc-biblioref">Rodriguez-Sanchez &amp; Jackson, 2025</a>)</span>, palmerpenguins v. 0.1.1 <span class="citation" data-cites="palmerpenguins">(<a href="#ref-palmerpenguins" role="doc-biblioref">Horst et al., 2020</a>)</span>, renv v. 1.0.7 <span class="citation" data-cites="renv">(<a href="#ref-renv" role="doc-biblioref">Ushey &amp; Wickham, 2024</a>)</span>, rmarkdown v. 2.31 <span class="citation" data-cites="rmarkdown2018 rmarkdown2020 rmarkdown2026">(<a href="#ref-rmarkdown2026" role="doc-biblioref">Allaire et al., 2026</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie et al., 2018</a>, <a href="#ref-rmarkdown2020" role="doc-biblioref">2020</a>)</span>, sessioninfo v. 1.2.4 <span class="citation" data-cites="sessioninfo">(<a href="#ref-sessioninfo" role="doc-biblioref">Wickham et al., 2026</a>)</span>, withr v. 3.0.3 <span class="citation" data-cites="withr">(<a href="#ref-withr" role="doc-biblioref">Hester et al., 2026</a>)</span>.</p>
+<p>This work was completed using the following R packages: datawizard v. 1.3.1 <span class="citation" data-cites="datawizard">(<a href="#ref-datawizard" role="doc-biblioref">Patil et al., 2022</a>)</span>, downlit v. 0.4.5 <span class="citation" data-cites="downlit">(<a href="#ref-downlit" role="doc-biblioref">Wickham, 2025</a>)</span>, grateful v. 0.3.0 <span class="citation" data-cites="grateful">(<a href="#ref-grateful" role="doc-biblioref">Rodriguez-Sanchez &amp; Jackson, 2025</a>)</span>, palmerpenguins v. 0.1.1 <span class="citation" data-cites="palmerpenguins">(<a href="#ref-palmerpenguins" role="doc-biblioref">Horst et al., 2020</a>)</span>, renv v. 1.0.7 <span class="citation" data-cites="renv">(<a href="#ref-renv" role="doc-biblioref">Ushey &amp; Wickham, 2024</a>)</span>, rmarkdown v. 2.31 <span class="citation" data-cites="rmarkdown2018 rmarkdown2020 rmarkdown2026">(<a href="#ref-rmarkdown2026" role="doc-biblioref">Allaire et al., 2026</a>; <a href="#ref-rmarkdown2018" role="doc-biblioref">Xie et al., 2018</a>, <a href="#ref-rmarkdown2020" role="doc-biblioref">2020</a>)</span>, sessioninfo v. 1.2.4 <span class="citation" data-cites="sessioninfo">(<a href="#ref-sessioninfo" role="doc-biblioref">Wickham et al., 2026</a>)</span>, tidyverse v. 2.0.0 <span class="citation" data-cites="tidyverse">(<a href="#ref-tidyverse" role="doc-biblioref">Wickham et al., 2019</a>)</span>, withr v. 3.0.3 <span class="citation" data-cites="withr">(<a href="#ref-withr" role="doc-biblioref">Hester et al., 2026</a>)</span>.</p>
 </div>
 </div>
 <p>Quarto 1.10.18 was utilized to render the files.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">sessioninfo</span><span class="fu">::</span><span class="fu"><a href="https://sessioninfo.r-lib.org/reference/session_info.html">session_info</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode txt code-overflow-scroll code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>─ Session info ───────────────────────────────────────────────────────────────</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a> setting  value</span>
@@ -396,7 +690,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> collate  C.UTF-8</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> ctype    C.UTF-8</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> tz       UTC</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> date     2026-09-28</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> date     2026-10-02</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a> pandoc   3.10 @ /opt/quarto/bin/tools/ (via rmarkdown)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a> quarto   1.10.18 @ /usr/local/bin/quarto</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
@@ -426,28 +720,13 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
 <span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>──────────────────────────────────────────────────────────────────────────────</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-</section>
-<section id="license-and-disclaimer" class="level2">
-<h2 class="anchored" data-anchor-id="license-and-disclaimer">License and Disclaimer</h2>
-<p>None of the discussion in this tutorial constitutes legal advice.</p>
-<p>Except where noted otherwise, the narrative text in this tutorial is licensed under <a href="LICENSE-CC-BY-SA.txt">CC&nbsp;BY-SA&nbsp;4.0</a>; the code without any narrative text is also (at your option) available under <a href="LICENSE-CC0.txt">CC0&nbsp;1.0</a>.</p>
-<p>The files <code>Manuscript.qmd</code> and <code>Bibliography.bib</code> are made available by Josephine Zerna and Christoph Scheffel under <a href="LICENSE-CC0.txt">CC0&nbsp;1.0</a>.</p>
-<p>The screenshots of the <a href="https://github.com/rstudio/rstudio">RStudio IDE</a> are Copyright (C) 2024 Posit PBC and are available under the <a href="LICENSE-AGPL.txt">GNU Affero General Public License v3</a>. The source code is available on <a href="https://github.com/rstudio/rstudio/tree/v2024.04.2%2B764">GitHub</a>.</p>
-</section>
-<section id="funding" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="funding">Funding</h2>
-
-<div class="no-row-height column-margin column-container"><div class="">
-<p><img src="images/bitss.png" class="img-fluid" width="250"></p>
-</div></div><p>This work was partly funded by the Berkeley Initiative for Transparency in the Social Sciences (BITSS), managed by the Center for Effective Global Action (CEGA).</p>
-
-
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<p>This tutorial was written using the <a href="https://github.com/lmu-osc/tutorial-template"><code>lmu-osc/tutorial-template</code></a> Quarto extension <span class="citation" data-cites="callahan2026">(<a href="#ref-callahan2026" role="doc-biblioref">Callahan, 2026</a>)</span>.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-rmarkdown2026" class="csl-entry" role="listitem">
 Allaire, J., Xie, Y., Dervieux, C., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W., &amp; Iannone, R. (2026). <em><span class="nocase">rmarkdown</span>: Dynamic documents for r</em>. <a href="https://github.com/rstudio/rmarkdown">https://github.com/rstudio/rmarkdown</a>
+</div>
+<div id="ref-callahan2026" class="csl-entry" role="listitem">
+Callahan, P. (2026). <em>LMU open science center tutorial template: A quarto extension</em>. <a href="https://doi.org/10.5281/zenodo.21263721">https://doi.org/10.5281/zenodo.21263721</a>
 </div>
 <div id="ref-withr" class="csl-entry" role="listitem">
 Hester, J., Henry, L., Müller, K., Ushey, K., Wickham, H., &amp; Chang, W. (2026). <em><span class="nocase">withr</span>: Run code <span>“<span>With</span>”</span> temporarily modified global state</em>. <a href="https://withr.r-lib.org">https://withr.r-lib.org</a>
@@ -464,6 +743,12 @@ Rodriguez-Sanchez, F., &amp; Jackson, C. P. (2025). <em><span class="nocase">gra
 <div id="ref-renv" class="csl-entry" role="listitem">
 Ushey, K., &amp; Wickham, H. (2024). <em><span class="nocase">renv</span>: Project environments</em>. <a href="https://rstudio.github.io/renv/">https://rstudio.github.io/renv/</a>
 </div>
+<div id="ref-downlit" class="csl-entry" role="listitem">
+Wickham, H. (2025). <em><span class="nocase">downlit</span>: Syntax highlighting and automatic linking</em>. <a href="https://downlit.r-lib.org/">https://downlit.r-lib.org/</a>
+</div>
+<div id="ref-tidyverse" class="csl-entry" role="listitem">
+Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the <span class="nocase">tidyverse</span>. <em>Journal of Open Source Software</em>, <em>4</em>(43), 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>
+</div>
 <div id="ref-sessioninfo" class="csl-entry" role="listitem">
 Wickham, H., Chang, W., Flight, R., Müller, K., &amp; Hester, J. (2026). <em><span class="nocase">sessioninfo</span>: R session information</em>. <a href="https://sessioninfo.r-lib.org">https://sessioninfo.r-lib.org</a>
 </div>
@@ -473,22 +758,48 @@ Xie, Y., Allaire, J. J., &amp; Grolemund, G. (2018). <em>R markdown: The definit
 <div id="ref-rmarkdown2020" class="csl-entry" role="listitem">
 Xie, Y., Dervieux, C., &amp; Riederer, E. (2020). <em>R markdown cookbook</em>. Chapman; Hall/CRC. <a href="https://yihui.org/rmarkdown-cookbook">https://yihui.org/rmarkdown-cookbook</a>
 </div>
-</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@book{kohrt2025,
+</div>
+</section><section id="how-to-cite" class="level2"><h2 class="anchored" data-anchor-id="how-to-cite">How to Cite</h2>
+<p><strong>To cite this tutorial, please refer to the project’s <a href="CITATION.cff">CITATION.cff</a> file or use the BibTeX citation provided in the appendix below.</strong></p>
+</section><section id="funding" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="funding">Funding</h2>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><img src="assets/bitss.png" class="img-fluid" width="250"></p>
+</div></div><p>This work was partly funded by the Berkeley Initiative for Transparency in the Social Sciences (BITSS), managed by the Center for Effective Global Action (CEGA).</p>
+
+
+<!-- -->
+
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@book{kohrt2025,
   author = {Kohrt, Florian and Zerna, Josephine and Scheffel, Christoph
-    and Schönbrodt, Felix},
+    and Schönbrodt, Felix and Callahan, Pat},
   publisher = {LMU Open Science Center},
   title = {Code {Publishing} {Tutorial}},
+  version = {0.1.0},
   date = {2025-07-31},
   url = {https://lmu-osc.github.io/code-publishing/},
   doi = {10.5281/zenodo.16631977},
   langid = {en-US}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-kohrt2025" class="csl-entry quarto-appendix-citeas" role="listitem">
-Kohrt, F., Zerna, J., Scheffel, C., &amp; Schönbrodt, F. (2025).
-<em>Code Publishing Tutorial</em>. LMU Open Science Center. <a href="https://doi.org/10.5281/zenodo.16631977">https://doi.org/10.5281/zenodo.16631977</a>
-</div></div></section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+Kohrt, F., Zerna, J., Scheffel, C., Schönbrodt, F., &amp; Callahan, P.
+(2025). <em>Code Publishing Tutorial</em> (Version 0.1.0). LMU Open
+Science Center. <a href="https://doi.org/10.5281/zenodo.16631977">https://doi.org/10.5281/zenodo.16631977</a>
+</div></div></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -558,6 +869,57 @@ Kohrt, F., Zerna, J., Scheffel, C., &amp; Schönbrodt, F. (2025).
       });
       clipboardModal.on('success', onCopySuccess);
     }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/lmu-osc\.github\.io\/code-publishing\/");
@@ -574,6 +936,13 @@ Kohrt, F., Zerna, J., Scheffel, C., &amp; Schönbrodt, F. (2025).
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -886,23 +1255,227 @@ Kohrt, F., Zerna, J., Scheffel, C., &amp; Schönbrodt, F. (2025).
       }
     }
   });
-  </script>
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "About"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="an">date:</span><span class="co"> 2025-07-31</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="an">doi:</span><span class="co"> "10.5281/zenodo.16631977"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="an">citation:</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">  type: "book"</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">  title: "Code Publishing Tutorial"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">  publisher: "LMU Open Science Center"</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">  url: "https://lmu-osc.github.io/code-publishing/"</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">  doi: "10.5281/zenodo.16631977"</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">  version: 0.1.0</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="an">author:</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Florian Kohrt</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0003-0374-5625</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">    email: fkohrt@anche.no</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation:</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">      - id: osc</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">        name: LMU Open Science Center</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">        ror: https://ror.org/05591te55</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">        isni: 000000041936973X</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Josephine Zerna</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0003-2892-884X</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Christoph Scheffel</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0001-5963-9229</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Felix Schönbrodt</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0002-8282-3910</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">    email: felix.schoenbrodt@psy.lmu.de</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation:</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">      - id: osc</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">        name: LMU Open Science Center</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">        ror: https://ror.org/05591te55</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="co">        isni: 000000041936973X</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="co">  - name: Pat Callahan</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co">    orcid: 0000-0003-1769-7580</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co">    affiliation:</span></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a><span class="co">      - id: osc</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="co">        name: LMU Open Science Center</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co">        ror: https://ror.org/05591te55</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co">        isni: 000000041936973X</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="an">google-scholar:</span><span class="co"> true</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a><span class="an">bibliography:</span><span class="co"> [grateful-refs.bib, references.bib]</span></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="fu">## Contributors</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel,</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>Felix Schönbrodt, and Pat Callahan.</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>This tutorial was created by Florian Kohrt.</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>It is based on previous work by Josephine Zerna and Christoph Scheffel.</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>Comments on earlier versions were kindly provided by</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt,</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>and Sarah von Grebmer zu Wolfsthurn.</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>Felix Schönbrodt created this short version of the <span class="co">[</span><span class="ot">longer original tutorial</span><span class="co">](https://lmu-osc.github.io/code-publishing/)</span>.</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a><span class="fu">## License and Disclaimer</span></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>None of the discussion in this tutorial constitutes legal advice.</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>Except where noted otherwise, the narrative text in this tutorial</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>is licensed under <span class="co">[</span><span class="ot">CC\ BY-SA\ 4.0</span><span class="co">](LICENSE-CC-BY-SA.txt)</span>;</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>the code without any narrative text is also (at your option)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>available under <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">](LICENSE-CC0.txt)</span>.</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a>The files <span class="in">`Manuscript.qmd`</span> and <span class="in">`Bibliography.bib`</span> are made available</span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>by Josephine Zerna and Christoph Scheffel under <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">](LICENSE-CC0.txt)</span>.</span>
+<span id="cb3-67"><a href="#cb3-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-68"><a href="#cb3-68" aria-hidden="true" tabindex="-1"></a>The screenshots of the <span class="co">[</span><span class="ot">RStudio IDE</span><span class="co">](https://github.com/rstudio/rstudio)</span></span>
+<span id="cb3-69"><a href="#cb3-69" aria-hidden="true" tabindex="-1"></a>are Copyright (C) 2024 Posit PBC and are available</span>
+<span id="cb3-70"><a href="#cb3-70" aria-hidden="true" tabindex="-1"></a>under the <span class="co">[</span><span class="ot">GNU Affero General Public License v3</span><span class="co">](LICENSE-AGPL.txt)</span>.</span>
+<span id="cb3-71"><a href="#cb3-71" aria-hidden="true" tabindex="-1"></a>The source code is available on <span class="co">[</span><span class="ot">GitHub</span><span class="co">](https://github.com/rstudio/rstudio/tree/v2024.04.2%2B764)</span>.</span>
+<span id="cb3-72"><a href="#cb3-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-73"><a href="#cb3-73" aria-hidden="true" tabindex="-1"></a><span class="fu">## Notes</span></span>
+<span id="cb3-74"><a href="#cb3-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-75"><a href="#cb3-75" aria-hidden="true" tabindex="-1"></a>This tutorial was primarily written in 2025 using <span class="co">[</span><span class="ot">R</span><span class="co">](https://cloud.r-project.org/)</span></span>
+<span id="cb3-76"><a href="#cb3-76" aria-hidden="true" tabindex="-1"></a>and <span class="co">[</span><span class="ot">Quarto</span><span class="co">](https://quarto.org/docs/download/release.html)</span>.</span>
+<span id="cb3-77"><a href="#cb3-77" aria-hidden="true" tabindex="-1"></a>Major changes to either can be found at the websites linked above,</span>
+<span id="cb3-78"><a href="#cb3-78" aria-hidden="true" tabindex="-1"></a>for the most up-to-date information,</span>
+<span id="cb3-79"><a href="#cb3-79" aria-hidden="true" tabindex="-1"></a>and to confirm that our tutorial is not out-of-date.</span>
+<span id="cb3-80"><a href="#cb3-80" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-81"><a href="#cb3-81" aria-hidden="true" tabindex="-1"></a><span class="fu">## Utilized Software</span></span>
+<span id="cb3-82"><a href="#cb3-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-85"><a href="#cb3-85" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-86"><a href="#cb3-86" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo: false</span></span>
+<span id="cb3-87"><a href="#cb3-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-88"><a href="#cb3-88" aria-hidden="true" tabindex="-1"></a>grateful<span class="sc">::</span><span class="fu">cite_packages</span>(</span>
+<span id="cb3-89"><a href="#cb3-89" aria-hidden="true" tabindex="-1"></a>  <span class="at">output =</span> <span class="st">"paragraph"</span>,</span>
+<span id="cb3-90"><a href="#cb3-90" aria-hidden="true" tabindex="-1"></a>  <span class="at">out.dir =</span> <span class="st">"."</span>,</span>
+<span id="cb3-91"><a href="#cb3-91" aria-hidden="true" tabindex="-1"></a>  <span class="at">pkgs =</span> <span class="fu">unique</span>(renv<span class="sc">::</span><span class="fu">dependencies</span>(<span class="at">progress =</span> <span class="cn">FALSE</span>)<span class="sc">$</span>Package),</span>
+<span id="cb3-92"><a href="#cb3-92" aria-hidden="true" tabindex="-1"></a>  <span class="at">passive.voice =</span> <span class="cn">TRUE</span></span>
+<span id="cb3-93"><a href="#cb3-93" aria-hidden="true" tabindex="-1"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb3-94"><a href="#cb3-94" aria-hidden="true" tabindex="-1"></a>  withr<span class="sc">::</span><span class="fu">with_options</span>(<span class="at">new =</span> <span class="fu">list</span>(<span class="at">warnPartialMatchDollar =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb3-95"><a href="#cb3-95" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-96"><a href="#cb3-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-97"><a href="#cb3-97" aria-hidden="true" tabindex="-1"></a>Quarto {{&lt; version &gt;}} was utilized to render the files.</span>
+<span id="cb3-98"><a href="#cb3-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-101"><a href="#cb3-101" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb3-102"><a href="#cb3-102" aria-hidden="true" tabindex="-1"></a><span class="co">#| class-output: "txt code-overflow-scroll"</span></span>
+<span id="cb3-103"><a href="#cb3-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-104"><a href="#cb3-104" aria-hidden="true" tabindex="-1"></a>sessioninfo<span class="sc">::</span><span class="fu">session_info</span>()</span>
+<span id="cb3-105"><a href="#cb3-105" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb3-106"><a href="#cb3-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-107"><a href="#cb3-107" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-108"><a href="#cb3-108" aria-hidden="true" tabindex="-1"></a>This tutorial was written using the <span class="co">[</span><span class="ot">`lmu-osc/tutorial-template`</span><span class="co">](https://github.com/lmu-osc/tutorial-template)</span> Quarto extension <span class="co">[</span><span class="ot">@callahan2026</span><span class="co">]</span>.</span>
+<span id="cb3-109"><a href="#cb3-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>::: {#refs}</span>
+<span id="cb3-111"><a href="#cb3-111" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-112"><a href="#cb3-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-113"><a href="#cb3-113" aria-hidden="true" tabindex="-1"></a><span class="fu">## How to Cite</span></span>
+<span id="cb3-114"><a href="#cb3-114" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-115"><a href="#cb3-115" aria-hidden="true" tabindex="-1"></a>**To cite this tutorial, please refer to the project's [CITATION.cff](CITATION.cff) file or use the BibTeX citation provided in the appendix below.**</span>
+<span id="cb3-116"><a href="#cb3-116" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-117"><a href="#cb3-117" aria-hidden="true" tabindex="-1"></a><span class="fu">## Funding</span></span>
+<span id="cb3-118"><a href="#cb3-118" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-119"><a href="#cb3-119" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb3-120"><a href="#cb3-120" aria-hidden="true" tabindex="-1"></a><span class="al">![](assets/bitss.png)</span>{width=250px}</span>
+<span id="cb3-121"><a href="#cb3-121" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb3-122"><a href="#cb3-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-123"><a href="#cb3-123" aria-hidden="true" tabindex="-1"></a>This work was partly funded by the Berkeley Initiative</span>
+<span id="cb3-124"><a href="#cb3-124" aria-hidden="true" tabindex="-1"></a>for Transparency in the Social Sciences (BITSS),</span>
+<span id="cb3-125"><a href="#cb3-125" aria-hidden="true" tabindex="-1"></a>managed by the Center for Effective Global Action (CEGA).</span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>A recommended citation and license information for this tutorial are provided on the <a href="./about.html">about page</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/about.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>© 2025 Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, Pat Callahan. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/about.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/about.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
+    </div>
+  </div>
+</footer><footer class="osc-footer-card py-5"><div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-bold fs-5 fs-lg-4">
+          Ludwig-Maximilians-Universität<br>
+          LMU Open Science Center
+        </h4>
+        <p class="mb-0 mt-1 fw-normal fs-5">
+          Leopoldstr. 13<br>
+          80802 München
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5">Contact</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+<li>
+            <a href="mailto:felix.schoenbrodt@psy.lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Prof. Dr. Felix Schönbrodt (Managing Director)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:malika.ihle@lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Dr. Malika Ihle (Coordinator)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:osc@lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              OSC team
+            </a>
+          </li>
+        </ul>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5">Join Us</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+<li>
+            <a href="https://lists.lrz.de/mailman/listinfo/lmu-osc" class="text-decoration-underline" aria-label="Subscribe to our announcement list (opens in new window)">
+              Subscribe to our announcement list
+            </a>
+          </li>
+          <li>
+            <a href="https://www.osc.lmu.de/about/join-us.html" class="text-decoration-underline" aria-label="Become a member (opens in new window)">
+              Become a member
+            </a>
+          </li>
+          <li>
+            <a href="https://matrix.to/#/#lmu-open-science-center:matrix.lmu.de" class="text-decoration-underline" aria-label="Chat with us on Matrix (opens in new window)">
+              Chat with us on Matrix
+            </a>
+          </li>
+        </ul>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-3 d-flex align-items-start gap-3 osc-footer-socials">
+        <a href="https://github.com/lmu-osc" class="fs-3" aria-label="LMU Open Science Center on GitHub (opens in new window)">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/lmu-open-science-center/" class="fs-3" aria-label="LMU Open Science Center on LinkedIn (opens in new window)">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://bsky.app/profile/lmu-osc.bsky.social" class="fs-3" aria-label="LMU Open Science Center on Bluesky (opens in new window)">
+          <i class="bi bi-bluesky"></i>
+        </a>
+        <a href="https://scicomm.xyz/@lmu_osc" class="fs-3" aria-label="LMU Open Science Center on Mastodon (opens in new window)">
+          <i class="bi bi-mastodon"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="my-4">
+<div class="d-flex flex-wrap gap-3 small">
+      <a href="./footer/imprint.html" class="text-decoration-underline">Imprint</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/privacy.html" class="text-decoration-underline">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/accessibilty.html" class="text-decoration-underline">Accessibility</a>
     </div>
   </div>
 </footer>
 
 
-
-
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

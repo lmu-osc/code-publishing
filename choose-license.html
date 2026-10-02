@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.10.18">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>Choose a License – Code Publishing Tutorial</title>
 <style>
 /* Default styles provided by pandoc.
@@ -83,7 +80,6 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -93,21 +89,24 @@ div.csl-indent {
 <meta name="quarto:offset" content="./">
 <link href="./make-readme.html" rel="next">
 <link href="./code.html" rel="prev">
-<link href="./images/LMU-OSC_favicon.jpg" rel="icon" type="image/jpeg">
+<link href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" rel="icon" type="image/jpeg">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-97e28f47ad423cfcb72627c3f906fd98.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-3c3f1368ed8db972a012dae01a8e5220.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-b4ad72a1f6e234c8129f430da57d6c08.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-ef984e901dd5d1c5cb17c9d77ad3c99b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-7967ca576641f1fb4c568b572f70a6f5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -132,13 +131,10 @@ div.csl-indent {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
+}</script><style>html{ scroll-behavior: smooth; }</style>
 <meta name="mermaid-theme" content="neutral">
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
-<!-- Matomo -->
-<script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<!-- Matomo --><script>
 if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
   var _paq = window._paq = window._paq || [];
   /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -152,13 +148,7 @@ if (location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 }
-</script>
-<!-- End Matomo Code -->
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
-<script type="text/javascript">
+</script><!-- End Matomo Code --><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -183,18 +173,178 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script>
-
-<link rel="stylesheet" href="https://raw.githubusercontent.com/lmu-osc/branding-resources/refs/heads/main/lmu-osc-styles.css">
+</script><link rel="stylesheet" href="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/assets/bootstrap-grid.min.css">
+<link rel="stylesheet" href="footer/footer-style.css">
 </head>
-
-<body class="nav-sidebar docked nav-fixed slimcontent quarto-light">
+<body class="nav-sidebar docked nav-fixed slimcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo light-content"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-favicon.jpg" alt="LMU Open Science Center open book icon" class="navbar-logo dark-content"></a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Code Publishing Tutorial</span>
     </a>
@@ -204,23 +354,23 @@ window.Quarto = {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+<li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item">
     <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+</div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools tools-wide">
     <div class="dropdown">
       <a href="" title="" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label=""><i class="bi bi-github"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item quarto-navbar-tools-item" href="https://github.com/lmu-osc/code-publishing">
             Source Code
             </a>
@@ -231,13 +381,17 @@ window.Quarto = {
             </a>
           </li>
       </ul>
-    </div>
-    <a href="https://www.osc.uni-muenchen.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+</div>
+    <a href="https://www.osc.lmu.de/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-heart"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+  <a href="" class="quarto-reader-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleReader(); return false;" title="Toggle reader mode">
+  <div class="quarto-reader-toggle-btn">
+  <i class="bi"></i>
+  </div>
+</a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+    </nav><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -248,12 +402,12 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo.svg" alt="LMU Open Science Center logo" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="site_libs/quarto-contrib/quarto-project/lmu-osc/tutorial-template/_extensions/lmu-osc/osc-brand/lmu-osc-logo-dark.svg" alt="LMU Open Science Center logo" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
+      </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -261,6 +415,12 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
@@ -317,68 +477,60 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/introduction_copyright.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/introduction-copyright.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to Copyright and Licensing</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/copyright-conditions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Copyright Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/data_dic_generation.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/data-dic-generation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Automatic Generation of Data Dictionaries</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/licenses-continued.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/licenses-continued.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Licenses Continued</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./in_depth_material/other_dependencies.html" class="sidebar-item-text sidebar-link">
+  <a href="./in-depth-material/other-dependencies.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Identify additional system dependencies for the README</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar"><div class="quarto-margin-header"><div class="margin-header-item">
-<p><img src="./images/LMU-OSC_logo.jpg" class="img-fluid" width="175"></p>
-</div></div>
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#which-license-to-choose-for-a-work" id="toc-which-license-to-choose-for-a-work" class="nav-link active" data-scroll-target="#which-license-to-choose-for-a-work">Which License to Choose for a Work?</a>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><ul>
+<li>
+<a href="#which-license-to-choose-for-a-work" id="toc-which-license-to-choose-for-a-work" class="nav-link active" data-scroll-target="#which-license-to-choose-for-a-work">Which License to Choose for a Work?</a>
   <ul class="collapse">
-  <li><a href="#existing-license" id="toc-existing-license" class="nav-link" data-scroll-target="#existing-license">Existing License?</a></li>
+<li><a href="#existing-license" id="toc-existing-license" class="nav-link" data-scroll-target="#existing-license">Existing License?</a></li>
   <li><a href="#work-type" id="toc-work-type" class="nav-link" data-scroll-target="#work-type">Work Type?</a></li>
   <li><a href="#copyleft" id="toc-copyleft" class="nav-link" data-scroll-target="#copyleft">Copyleft?</a></li>
   <li><a href="#additional-considerations" id="toc-additional-considerations" class="nav-link" data-scroll-target="#additional-considerations">Additional considerations</a></li>
-  </ul></li>
-  <li><a href="#applying-the-license" id="toc-applying-the-license" class="nav-link" data-scroll-target="#applying-the-license">Applying the License</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/choose-license.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</li>
+  <li><a href="#applying-the-license" id="toc-applying-the-license" class="nav-link" data-scroll-target="#applying-the-license">Applying the License</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/choose-license.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/choose-license.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content page-columns page-full" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Choose a License</h1>
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Choose a License</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
 
@@ -392,10 +544,7 @@ window.Quarto = {
   
 
 
-</header>
-
-
-<p>So far, you took care to legally include works by others in your project folder. Up next, you will free up your project for reuse. This means ensuring that every bit (co-)authored by you in the project is put under a free/open license. It may be that your project (i.e., its files and folders) is not one work, but rather consists of multiple works available under different licenses. In that case, you need to indicate the license on a per-file or per-folder basis (rather than choosing one for the whole project). Sometimes, even different parts of a file might be subject to different licenses. For the purpose of this tutorial, we will consider the manuscript and the bibliography which you edited.</p>
+</header><p>So far, you took care to legally include works by others in your project folder. Up next, you will free up your project for reuse. This means ensuring that every bit (co-)authored by you in the project is put under a free/open license. It may be that your project (i.e., its files and folders) is not one work, but rather consists of multiple works available under different licenses. In that case, you need to indicate the license on a per-file or per-folder basis (rather than choosing one for the whole project). Sometimes, even different parts of a file might be subject to different licenses. For the purpose of this tutorial, we will consider the manuscript and the bibliography which you edited.</p>
 <div id="wrn-exclusive-rights" class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -426,18 +575,14 @@ Note&nbsp;1: License Choice TL;DR
 </blockquote>
 </div>
 </div>
-<section id="which-license-to-choose-for-a-work" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="which-license-to-choose-for-a-work">Which License to Choose for a Work?</h2>
+<section id="which-license-to-choose-for-a-work" class="level2 page-columns page-full"><h2 class="anchored" data-anchor-id="which-license-to-choose-for-a-work">Which License to Choose for a Work?</h2>
 <p>Many boilerplate licenses are available to apply to your work. Which license is appropriate depends on several factors, including existing licenses in place and the type of work, but also your personal considerations. We strongly recommend to apply a <em>free/open</em> license to your work that fits to the work type and potential use cases. Because there are many free/open licenses available, the licenses discussed here only represent a recommended subset.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <p>If you would like to choose a license not listed here, it should be appropriate for the type of work in question and be compatible with the dominant copyleft license in the respective community (see also <a href="#nte-silos" class="quarto-xref">Note&nbsp;3</a>). For software that’s almost universally the (A)GPLv3 and for writing, image, audio, and video that’s mostly the <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>. For databases, no dominant copyleft license has emerged yet, so any of <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a>, <a href="https://cdla.dev/sharing-1-0/">CDLA&nbsp;Sharing&nbsp;1.0</a>, and <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> are acceptable.</p>
-</div></div><section id="existing-license" class="level3">
-<h3 class="anchored" data-anchor-id="existing-license">Existing License?</h3>
+</div></div><section id="existing-license" class="level3"><h3 class="anchored" data-anchor-id="existing-license">Existing License?</h3>
 <p>First, if you adapt (i.e., modify, remix, build on) a work by others you need to determine if it is provided to you under a free/open license. If yes, we recommend you to make your contribution available under the same license.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> For example, if you adapt code published in another paper, choose the same license for your modifications. The same applies if there are strong community norms to use a particular free/open license<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> or if a particular license choice is mandated by your funder. Importantly, as discussed before, you are generally not allowed to adapt a work <em>not</em> published under a free/open license.</p>
-</section>
-<section id="work-type" class="level3">
-<h3 class="anchored" data-anchor-id="work-type">Work Type?</h3>
+</section><section id="work-type" class="level3"><h3 class="anchored" data-anchor-id="work-type">Work Type?</h3>
 <p>If you create a new work and no strong community norms suggest a particular license, you need to choose the license yourself. Which license to choose depends on the type of work you create. We have created a flowchart that covers the most likely types of works you will create as a researcher: software, writing (i.e., text), images, audio, video, and data (see <a href="#fig-flowchart-simple" class="quarto-xref">Figure&nbsp;1</a>). This flowchart always recommends the most permissive license possible to maximize reuse – though we provide two additional flowcharts below that allow for more choices. Click on the name of a license to learn more about it.</p>
 <div id="tip-multi-licensing" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -463,12 +608,11 @@ Tip&nbsp;1: Multi-licensing
 </div>
 <p>We already mentioned that a database may be licensed differently than its content. However, if the content was created by you, we recommend you to choose the same license for both content and database. Factual data (like measurements or metadata) should be made available with <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> <span class="citation" data-cites="Villa2016Copyleft Villa2016CC0">(<a href="#ref-Villa2016Copyleft" role="doc-biblioref">Villa, 2016a</a>, <a href="#ref-Villa2016CC0" role="doc-biblioref">2016b</a>)</span> – otherwise, consult <a href="#nte-other-work-types" class="quarto-xref">Note&nbsp;2</a> for some caveats.</p>
 <div id="fig-flowchart-simple" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-flowchart-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-flowchart-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
-<p></p><figure class="figure"><p></p>
+<p></p><figure class="figure"></figure><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TB
   start("We want&lt;br&gt;to choose&lt;br&gt;a license.") --"We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license."--&gt; use_existing_license["&lt;em&gt;Use its license&lt;/em&gt;"]
@@ -489,15 +633,14 @@ Tip&nbsp;1: Multi-licensing
   click cc0_data href "https://creativecommons.org/publicdomain/zero/1.0/"
 </pre>
 </div>
-<p></p></figure><p></p>
+<p></p>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flowchart-simple-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Flowchart for Choosing a License
-</figcaption>
-</figure>
+</figcaption></figure>
 </div>
 <div id="nte-other-work-types" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -513,17 +656,19 @@ Note&nbsp;2: Other Work Types
 <div class="callout-body-container callout-body">
 <p>One should take special care when applying license to the following types of works:</p>
 <ul>
-<li><strong>fonts:</strong> Copyleft licenses applied to fonts can be a special case: If a font is put under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, any documents containing texts using that font will probably be derivative works and have to be put under the same license if shared. The <a href="https://openfontlicense.org/">SIL Open Font License&nbsp;1.1</a> is the <em>de facto</em> standard license for fonts, requiring that derived fonts, if published, have to be put under the same license. It doesn’t require attribution for usage (e.g., when embedded in a document), but forbids that the font is sold by itself. Selling the font is allowed, however, if it is bundled with other software.</li>
-<li><strong>templates and TeX packages:</strong> If a template or, for this purpose, a <span class="math inline">\(\TeX\)</span> package, is licensed under a copyleft license such as the (A)GPLv3, every work that is a derivative of it has to be put under the same license if shared. If a document contained source code covered by the (A)GPLv3, it depends on the individual case whether the same license needs to be applied to the document if shared.</li>
-<li><strong>database content:</strong> If the work produced from a database (the “output”) is a derivative of the content in the database, the output is subject to the restrictions laid out in the license. For example, if geospatial data were to be licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, all maps produced from the data would likely need to fulfill this license’s obligation for unrestricted access (its anti-DRM provision) if shared <span class="citation" data-cites="Poole2017">(see <a href="#ref-Poole2017" role="doc-biblioref">Poole, 2017</a>)</span>. Similarly, following an example from <span class="citation" data-cites="Matt2009">Matt (<a href="#ref-Matt2009" role="doc-biblioref">2009</a>)</span>, if one were to choose the copyleft license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> for this purpose, any map that is a derivative of the data would also need to be licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> (or a compatible license) if shared. If the intention is to only have <a href="https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline">derivative databases</a> under the same license, one might want to choose the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> for the database, as it was specifically designed not to apply to works produced from the data in the database. Otherwise <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> is an excellent choice for data.</li>
-<li><strong>works in the public domain</strong>: If a work is already in the public domain, it should be marked using the <a href="https://creativecommons.org/publicdomain/mark/1.0/">PDM&nbsp;1.0</a>, rather than applying a waiver such as the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> (or another license).</li>
+<li>
+<strong>fonts:</strong> Copyleft licenses applied to fonts can be a special case: If a font is put under the license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a>, any documents containing texts using that font will probably be derivative works and have to be put under the same license if shared. The <a href="https://openfontlicense.org/">SIL Open Font License&nbsp;1.1</a> is the <em>de facto</em> standard license for fonts, requiring that derived fonts, if published, have to be put under the same license. It doesn’t require attribution for usage (e.g., when embedded in a document), but forbids that the font is sold by itself. Selling the font is allowed, however, if it is bundled with other software.</li>
+<li>
+<strong>templates and TeX packages:</strong> If a template or, for this purpose, a <span class="math inline">\(\TeX\)</span> package, is licensed under a copyleft license such as the (A)GPLv3, every work that is a derivative of it has to be put under the same license if shared. If a document contained source code covered by the (A)GPLv3, it depends on the individual case whether the same license needs to be applied to the document if shared.</li>
+<li>
+<strong>database content:</strong> If the work produced from a database (the “output”) is a derivative of the content in the database, the output is subject to the restrictions laid out in the license. For example, if geospatial data were to be licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a>, all maps produced from the data would likely need to fulfill this license’s obligation for unrestricted access (its anti-DRM provision) if shared <span class="citation" data-cites="Poole2017">(see <a href="#ref-Poole2017" role="doc-biblioref">Poole, 2017</a>)</span>. Similarly, following an example from <span class="citation" data-cites="Matt2009">Matt (<a href="#ref-Matt2009" role="doc-biblioref">2009</a>)</span>, if one were to choose the copyleft license <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> for this purpose, any map that is a derivative of the data would also need to be licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC&nbsp;BY-SA&nbsp;4.0</a> (or a compatible license) if shared. If the intention is to only have <a href="https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline">derivative databases</a> under the same license, one might want to choose the <a href="https://opendatacommons.org/licenses/odbl/summary/">ODbL&nbsp;1.0</a> for the database, as it was specifically designed not to apply to works produced from the data in the database. Otherwise <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> is an excellent choice for data.</li>
+<li>
+<strong>works in the public domain</strong>: If a work is already in the public domain, it should be marked using the <a href="https://creativecommons.org/publicdomain/mark/1.0/">PDM&nbsp;1.0</a>, rather than applying a waiver such as the <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> (or another license).</li>
 </ul>
 </div>
 </div>
 </div>
-</section>
-<section id="copyleft" class="level3">
-<h3 class="anchored" data-anchor-id="copyleft">Copyleft?</h3>
+</section><section id="copyleft" class="level3"><h3 class="anchored" data-anchor-id="copyleft">Copyleft?</h3>
 <p>You may prefer that adaptations of your work stay free/open and thus choose a copyleft license. Of course, this does not restrict you as the original author: You are still permitted to distribute the work under a different license and without sharing the source code.</p>
 <div id="tip-license-r" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -542,20 +687,18 @@ Tip&nbsp;2: Projects Involving R Code
 <div class="code-with-filename-file">
 <pre><strong>R Console</strong></pre>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R Console"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  pak<span class="sc">::</span><span class="fu">pkg_deps</span>(<span class="at">dependencies =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getElement</span>(<span class="st">"package"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">installed.packages</span>(<span class="at">fields=</span><span class="st">"License"</span>)[deps, <span class="st">"License"</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" data-filename="R Console"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">deps</span> <span class="op">&lt;-</span> <span class="fu">renv</span><span class="fu">::</span><span class="fu"><a href="https://rstudio.github.io/renv/reference/dependencies.html">dependencies</a></span><span class="op">(</span><span class="op">)</span><span class="op">$</span><span class="va">Package</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu">pak</span><span class="fu">::</span><span class="fu">pkg_deps</span><span class="op">(</span>dependencies <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/Extract.html">getElement</a></span><span class="op">(</span><span class="st">"package"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span>fields<span class="op">=</span><span class="st">"License"</span><span class="op">)</span><span class="op">[</span><span class="va">deps</span>, <span class="st">"License"</span><span class="op">]</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
-<p>We have prepared two advanced license flowcharts, <a href="./in_depth_material/licenses-continued.html#fig-flowchart-non-data">one for software, writing, images, audio, and video</a> and <a href="./in_depth_material/licenses-continued.html#fig-flowchart-data">one for data</a> where you can make additional choices. Note, however, that especially the advanced flowchart for licensing data is quite complex and we recommend you to seek legal counsel if you want to be sure.</p>
-</section>
-<section id="additional-considerations" class="level3">
-<h3 class="anchored" data-anchor-id="additional-considerations">Additional considerations</h3>
-<p>The advanced license flowcharts also allow you to make additional decisions, such as whether attribution should be a condition of redistribution. As you have learned, even if attribution is not a condition of the license, there are other reasons for attributing you as an author (such as scientific citation standards or moral rights). All conditions are explained on the supplementary page on <a href="./in_depth_material/copyright-conditions.html">copyright conditions</a>.</p>
-<p>From the Creative Commons licenses, only <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> does not require providing attribution, and all software licenses in <a href="./in_depth_material/licenses-continued.html#fig-flowchart-non-data">the first advanced license flowchart</a> require providing attribution. As an author, you are free to waive license conditions such as attribution, however.</p>
+<p>We have prepared two advanced license flowcharts, <a href="./in-depth-material/licenses-continued.html#fig-flowchart-non-data">one for software, writing, images, audio, and video</a> and <a href="./in-depth-material/licenses-continued.html#fig-flowchart-data">one for data</a> where you can make additional choices. Note, however, that especially the advanced flowchart for licensing data is quite complex and we recommend you to seek legal counsel if you want to be sure.</p>
+</section><section id="additional-considerations" class="level3"><h3 class="anchored" data-anchor-id="additional-considerations">Additional considerations</h3>
+<p>The advanced license flowcharts also allow you to make additional decisions, such as whether attribution should be a condition of redistribution. As you have learned, even if attribution is not a condition of the license, there are other reasons for attributing you as an author (such as scientific citation standards or moral rights). All conditions are explained on the supplementary page on <a href="./in-depth-material/copyright-conditions.html">copyright conditions</a>.</p>
+<p>From the Creative Commons licenses, only <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0&nbsp;1.0</a> does not require providing attribution, and all software licenses in <a href="./in-depth-material/licenses-continued.html#fig-flowchart-non-data">the first advanced license flowchart</a> require providing attribution. As an author, you are free to waive license conditions such as attribution, however.</p>
 <div id="nte-silos" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -570,18 +713,13 @@ Note&nbsp;3: Other Restrictions
 <div class="callout-body-container callout-body">
 <p>Creative Commons also offers licenses which prevent commercial use of a work and/or sharing of derivative works. A free/open license, however, must allow creating derivative works and must allow exercising the rights granted by it <em>for any purpose</em>, including commercial use. Otherwise, creating adaptations from multiple works by different authors would either limit commercial use for everybody (including the authors) or would not be possible at all (when including materials with a copyleft license), effectively creating <em>silos</em> of works which are mutually incompatible with each other. This is especially relevant for work types for which adaptations are created frequently, such as text, data, and source code. In order to avoid silos, one should only choose licenses which are compatible with the dominant copyleft license in the respective community <span class="citation" data-cites="Lammerhirt2017 Wheeler2014">(<a href="#ref-Lammerhirt2017" role="doc-biblioref">Lämmerhirt, 2017</a>; <a href="#ref-Wheeler2014" role="doc-biblioref">Wheeler, 2014</a>)</span>. If you would like to learn more about the different types of compatibility, we recommend you to read the article “A Quick Guide to Software Licensing for the Scientist-Programmer” by <span class="citation" data-cites="Morin2012">Morin et al. (<a href="#ref-Morin2012" role="doc-biblioref">2012</a>)</span>. The following diagram provides an overview of the compatibility of various licenses:</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/Morrison2024.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="“Open data-capable license interoperability” by Robbie Morrison [-@Morrison2024] licensed under CC&nbsp;BY&nbsp;4.0"><img src="images/Morrison2024.jpg" class="img-fluid figure-img" alt="“Open data-capable license interoperability” by Robbie Morrison (2024) licensed under CC&nbsp;BY&nbsp;4.0"></a></p>
-<figcaption>“Open data-capable license interoperability” by Robbie Morrison <span class="citation" data-cites="Morrison2024">(<a href="#ref-Morrison2024" role="doc-biblioref">2024</a>)</span> licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a></figcaption>
-</figure>
+<figure class="figure"><p><a href="assets/Morrison2024.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="“Open data-capable license interoperability” by Robbie Morrison [-@Morrison2024] licensed under CC&nbsp;BY&nbsp;4.0"><img src="assets/Morrison2024.jpg" class="img-fluid figure-img" alt="“Open data-capable license interoperability” by Robbie Morrison (2024) licensed under CC&nbsp;BY&nbsp;4.0"></a></p>
+<figcaption>“Open data-capable license interoperability” by Robbie Morrison <span class="citation" data-cites="Morrison2024">(<a href="#ref-Morrison2024" role="doc-biblioref">2024</a>)</span> licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC&nbsp;BY&nbsp;4.0</a></figcaption></figure>
 </div>
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="applying-the-license" class="level2">
-<h2 class="anchored" data-anchor-id="applying-the-license">Applying the License</h2>
+</section></section><section id="applying-the-license" class="level2"><h2 class="anchored" data-anchor-id="applying-the-license">Applying the License</h2>
 <p>Having selected the license(s) of your choice, we encourage you to read through the full license text (or at least a legal summary) to understand the legal effect. The following applies to all licenses mentioned here:</p>
 <ul>
 <li>Applying the license is irrevocable. You may stop distributing your work, but everybody who already received it may continue to share it.</li>
@@ -620,11 +758,13 @@ Note&nbsp;4: For Researchers at LMU Munich
 <li><p>The license of embedded elements (e.g., images) is either given directly beneath to where they are embedded, at the end of the respective page, or collectively on a separate page.</p></li>
 <li><p>Individual programming languages also have their own way of stating which license a package is distributed under. For R packages, this is usually set by the field <code>License</code> in the file <code>DESCRIPTION</code> <span class="citation" data-cites="Wickham2023PackagesLicense">(<a href="#ref-Wickham2023PackagesLicense" role="doc-biblioref">Wickham &amp; Bryan, 2023</a>)</span>.</p></li>
 <li><p>Software projects often indicate the license in every file, following the <a href="https://reuse.software/">REUSE</a> specification to make the choice of license machine-readable (explained in <a href="#nte-reuse" class="quarto-xref">Note&nbsp;5</a>).</p></li>
-<li><p>The following two metadata standards for increasing citability also allow to indicate the license:</p>
+<li>
+<p>The following two metadata standards for increasing citability also allow to indicate the license:</p>
 <ul>
 <li><p><a href="https://codemeta.github.io/">CodeMeta</a>: All information are stored in a file called <code>codemeta.json</code>, which can be created <a href="https://codemeta.github.io/codemeta-generator/">on their website</a>. Alternatively, one can use the R package <a href="https://docs.ropensci.org/codemetar/"><code>codemetar</code></a> to create this file.</p></li>
 <li><p><a href="https://citation-file-format.github.io/">Citation File Format</a> (CFF): Here, everything is stored in a file called <code>CITATION.cff</code>. It is used by GitHub to directly show a recommended citation for a repository. The file can be created <a href="https://citation-file-format.github.io/cff-initializer-javascript/">on their website</a>. Alternatively, the R package <a href="https://cran.r-project.org/package=cffr"><code>cffr</code></a> may be used for that purpose.</p></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 <div id="tip-license-help" class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -788,11 +928,10 @@ Tip&nbsp;4: Addition to <code>LICENSE.txt</code> (Solution)
 </div>
 
 
+<!-- -->
 
-</section>
 
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+</section><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-CC2013" class="csl-entry" role="listitem">
 Creative Commons. (2013, November 25). <em>Considerations for licensors and licensees</em>. <a href="https://creativecommons.org/share-your-work/licensing-considerations/version4/">https://creativecommons.org/share-your-work/licensing-considerations/version4/</a>
 </div>
@@ -848,7 +987,6 @@ Wickham, H., &amp; Bryan, J. (2023). Licensing. In <em>R packages</em> (Second e
 Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – burdens when printing. In <em>Wikipedia</em>. Wikipedia, The Free Encyclopedia. <a href="https://en.wikipedia.org/w/index.php?title=GNU_Free_Documentation_License&amp;oldid=1269991857#Burdens_when_printing">https://en.wikipedia.org/w/index.php?title=GNU_Free_Documentation_License&amp;oldid=1269991857#Burdens_when_printing</a>
 </div>
 </div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
 <ol>
 <li id="fn1"><p>Copyleft licenses even require you to choose the same or a compatible license.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Of course, this is only a heuristic and there might be good reasons to deviate from community norms.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -859,10 +997,21 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
 <li id="fn7"><p>a variant of the AGPLv3 that does not cover software running as a service<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>in Germany: <em>Verwertungsgesellschaft</em><a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn9"><p>For licenses that require that modifications are indicated, this is an easy way to comply with them. Also, you do not need to provide your real name.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</ol></section></div></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -932,6 +1081,57 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
       });
       clipboardModal.on('success', onCopySuccess);
     }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const cellDetails = window.document.querySelectorAll(".cell details.code-fold");
+        for (let i=0; i<cellDetails.length; i++) {
+          const details = cellDetails[i];
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell div.sourceCode.cell-code");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
         var filterRegex = new RegExp("https:\/\/lmu-osc\.github\.io\/code-publishing\/");
@@ -948,6 +1148,13 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+            // default icon
+            link.classList.add("external");
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1260,9 +1467,7 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
       }
     }
   });
-  </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+  </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./code.html" class="pagination-link" aria-label="Add Code">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Add Code</span>
       </a>          
@@ -1272,22 +1477,677 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
         <span class="nav-page-text">Make a README</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
-</nav>
+</nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Choose a License"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="an">engine:</span><span class="co"> knitr</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>So far, you took care to legally include works by others in your project folder.</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>Up next, you will free up your project for reuse.</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>This means ensuring that every bit (co-)authored by you in the project</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>is put under a free/open license.</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>It may be that your project (i.e., its files and folders) is not one work,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>but rather consists of multiple works available under different licenses.</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>In that case, you need to indicate the license on a per-file or per-folder basis</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>(rather than choosing one for the whole project).</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>Sometimes, even different parts of a file might be subject to different licenses.</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>For the purpose of this tutorial,</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>we will consider the manuscript and the bibliography which you edited.</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>::: {#wrn-exclusive-rights .callout-warning}</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="fu">### Giving Publishers Exclusive Rights</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>Some journals offer to publish your article under a free/open license,</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>but still demand an exclusive publishing and distribution license</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>or a copyright assignment from you.</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>This would give them more rights than the readers of the article have</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>through the respective free/open license <span class="co">[</span><span class="ot">@Rumsey2022</span><span class="co">]</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>and exceeds by far what is necessary to make publication possible <span class="co">[</span><span class="ot">@Suber2022</span><span class="co">]</span>.</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>Consequently, authors should oppose this practice and grant publishers the same rights</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>that every other reader of the article has.</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>To facilitate self-archiving, one can also modify the contract with publishers</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>via a rights retention statement <span class="co">[</span><span class="ot">@UKRN2023</span><span class="co">]</span> / author's addendum <span class="co">[</span><span class="ot">@SPARC2006</span><span class="co">]</span>.</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>If you have published a closed-access paper before,</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>you can consult <span class="co">[</span><span class="ot">ShareYourPaper</span><span class="co">](https://shareyourpaper.org/)</span></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>for legal options to still make it available free of charge to readers.</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>If your chosen publisher insists on an exclusive license,</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>you may at least retain the copyright for your figures</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>-- follow the guide "Retaining copyright for figures in academic publications</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>to allow easy citation and reuse" by @Elson2016 to learn how to do that.</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>::: {#nte-license-choice-tldr .callout-note}</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a><span class="fu">## License Choice TL;DR</span></span>
+<span id="cb13-43"><a href="#cb13-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-44"><a href="#cb13-44" aria-hidden="true" tabindex="-1"></a>We recommend to choose free/open licenses suitable to the type of work</span>
+<span id="cb13-45"><a href="#cb13-45" aria-hidden="true" tabindex="-1"></a>(e.g., code, data, image etc.).</span>
+<span id="cb13-46"><a href="#cb13-46" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span> and <span class="co">[</span><span class="ot">Apache\ 2.0</span><span class="co">][apache2]</span> are good choices</span>
+<span id="cb13-47"><a href="#cb13-47" aria-hidden="true" tabindex="-1"></a>to apply simultaneously to all own works.</span>
+<span id="cb13-48"><a href="#cb13-48" aria-hidden="true" tabindex="-1"></a>Take your time to read the summaries behind the links</span>
+<span id="cb13-49"><a href="#cb13-49" aria-hidden="true" tabindex="-1"></a>and/or the actual license text to understand the legal effect.</span>
+<span id="cb13-50"><a href="#cb13-50" aria-hidden="true" tabindex="-1"></a>You can adapt the following wording to your use case:</span>
+<span id="cb13-51"><a href="#cb13-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-52"><a href="#cb13-52" aria-hidden="true" tabindex="-1"></a><span class="ot">[cc0]: https://creativecommons.org/publicdomain/zero/1.0/</span></span>
+<span id="cb13-53"><a href="#cb13-53" aria-hidden="true" tabindex="-1"></a><span class="ot">[apache2]: https://choosealicense.com/licenses/apache-2.0/</span></span>
+<span id="cb13-54"><a href="#cb13-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-55"><a href="#cb13-55" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; Except where noted otherwise, all files in this project</span></span>
+<span id="cb13-56"><a href="#cb13-56" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; are made available under CC0\ 1.0</span></span>
+<span id="cb13-57"><a href="#cb13-57" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; or (at your option) under the terms of the Apache License\ 2.0.</span></span>
+<span id="cb13-58"><a href="#cb13-58" aria-hidden="true" tabindex="-1"></a><span class="at">:::</span></span>
+<span id="cb13-59"><a href="#cb13-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-60"><a href="#cb13-60" aria-hidden="true" tabindex="-1"></a><span class="fu">## Which License to Choose for a Work?</span></span>
+<span id="cb13-61"><a href="#cb13-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-62"><a href="#cb13-62" aria-hidden="true" tabindex="-1"></a>Many boilerplate licenses are available to apply to your work.</span>
+<span id="cb13-63"><a href="#cb13-63" aria-hidden="true" tabindex="-1"></a>Which license is appropriate depends on several factors,</span>
+<span id="cb13-64"><a href="#cb13-64" aria-hidden="true" tabindex="-1"></a>including existing licenses in place and the type of work,</span>
+<span id="cb13-65"><a href="#cb13-65" aria-hidden="true" tabindex="-1"></a>but also your personal considerations.</span>
+<span id="cb13-66"><a href="#cb13-66" aria-hidden="true" tabindex="-1"></a>We strongly recommend to apply a _free/open_ license to your work</span>
+<span id="cb13-67"><a href="#cb13-67" aria-hidden="true" tabindex="-1"></a>that fits to the work type and potential use cases.</span>
+<span id="cb13-68"><a href="#cb13-68" aria-hidden="true" tabindex="-1"></a>Because there are many free/open licenses available,</span>
+<span id="cb13-69"><a href="#cb13-69" aria-hidden="true" tabindex="-1"></a>the licenses discussed here only represent a recommended subset.</span>
+<span id="cb13-70"><a href="#cb13-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-71"><a href="#cb13-71" aria-hidden="true" tabindex="-1"></a>::: {.column-margin}</span>
+<span id="cb13-72"><a href="#cb13-72" aria-hidden="true" tabindex="-1"></a>If you would like to choose a license not listed here,</span>
+<span id="cb13-73"><a href="#cb13-73" aria-hidden="true" tabindex="-1"></a>it should be appropriate for the type of work in question</span>
+<span id="cb13-74"><a href="#cb13-74" aria-hidden="true" tabindex="-1"></a>and be compatible with the dominant copyleft license in the respective community</span>
+<span id="cb13-75"><a href="#cb13-75" aria-hidden="true" tabindex="-1"></a>(see also @nte-silos).</span>
+<span id="cb13-76"><a href="#cb13-76" aria-hidden="true" tabindex="-1"></a>For software that's almost universally the (A)GPLv3</span>
+<span id="cb13-77"><a href="#cb13-77" aria-hidden="true" tabindex="-1"></a>and for writing, image, audio, and video that's mostly the <span class="co">[</span><span class="ot">CC\ BY-SA\ 4.0</span><span class="co">][cc-by-sa]</span>.</span>
+<span id="cb13-78"><a href="#cb13-78" aria-hidden="true" tabindex="-1"></a>For databases, no dominant copyleft license has emerged yet,</span>
+<span id="cb13-79"><a href="#cb13-79" aria-hidden="true" tabindex="-1"></a>so any of <span class="co">[</span><span class="ot">ODbL\ 1.0</span><span class="co">][odbl]</span>, <span class="co">[</span><span class="ot">CDLA\ Sharing\ 1.0</span><span class="co">][cdla-sharing]</span>,</span>
+<span id="cb13-80"><a href="#cb13-80" aria-hidden="true" tabindex="-1"></a>and <span class="co">[</span><span class="ot">CC\ BY-SA\ 4.0</span><span class="co">][cc-by-sa]</span> are acceptable.</span>
+<span id="cb13-81"><a href="#cb13-81" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-82"><a href="#cb13-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-83"><a href="#cb13-83" aria-hidden="true" tabindex="-1"></a><span class="ot">[cc-by-sa]: https://creativecommons.org/licenses/by-sa/4.0/</span></span>
+<span id="cb13-84"><a href="#cb13-84" aria-hidden="true" tabindex="-1"></a><span class="ot">[odbl]: https://opendatacommons.org/licenses/odbl/summary/</span></span>
+<span id="cb13-85"><a href="#cb13-85" aria-hidden="true" tabindex="-1"></a><span class="ot">[cdla-sharing]: https://cdla.dev/sharing-1-0/</span></span>
+<span id="cb13-86"><a href="#cb13-86" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-87"><a href="#cb13-87" aria-hidden="true" tabindex="-1"></a><span class="fu">### Existing License?</span></span>
+<span id="cb13-88"><a href="#cb13-88" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-89"><a href="#cb13-89" aria-hidden="true" tabindex="-1"></a>First, if you adapt (i.e., modify, remix, build on) a work by others</span>
+<span id="cb13-90"><a href="#cb13-90" aria-hidden="true" tabindex="-1"></a>you need to determine if it is provided to you under a free/open license.</span>
+<span id="cb13-91"><a href="#cb13-91" aria-hidden="true" tabindex="-1"></a>If yes, we recommend you to make your contribution available</span>
+<span id="cb13-92"><a href="#cb13-92" aria-hidden="true" tabindex="-1"></a>under the same license.<span class="ot">[^required-with-copyleft]</span></span>
+<span id="cb13-93"><a href="#cb13-93" aria-hidden="true" tabindex="-1"></a>For example, if you adapt code published in another paper,</span>
+<span id="cb13-94"><a href="#cb13-94" aria-hidden="true" tabindex="-1"></a>choose the same license for your modifications.</span>
+<span id="cb13-95"><a href="#cb13-95" aria-hidden="true" tabindex="-1"></a>The same applies if there are strong community norms</span>
+<span id="cb13-96"><a href="#cb13-96" aria-hidden="true" tabindex="-1"></a>to use a particular free/open license<span class="ot">[^heuristic]</span></span>
+<span id="cb13-97"><a href="#cb13-97" aria-hidden="true" tabindex="-1"></a>or if a particular license choice is mandated by your funder.</span>
+<span id="cb13-98"><a href="#cb13-98" aria-hidden="true" tabindex="-1"></a>Importantly, as discussed before, you are generally not allowed</span>
+<span id="cb13-99"><a href="#cb13-99" aria-hidden="true" tabindex="-1"></a>to adapt a work _not_ published under a free/open license.</span>
+<span id="cb13-100"><a href="#cb13-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-101"><a href="#cb13-101" aria-hidden="true" tabindex="-1"></a><span class="ot">[^required-with-copyleft]: </span>Copyleft licenses even require you to choose the same</span>
+<span id="cb13-102"><a href="#cb13-102" aria-hidden="true" tabindex="-1"></a>or a compatible license.</span>
+<span id="cb13-103"><a href="#cb13-103" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-104"><a href="#cb13-104" aria-hidden="true" tabindex="-1"></a><span class="ot">[^heuristic]: </span>Of course, this is only a heuristic</span>
+<span id="cb13-105"><a href="#cb13-105" aria-hidden="true" tabindex="-1"></a>and there might be good reasons to deviate from community norms.</span>
+<span id="cb13-106"><a href="#cb13-106" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-107"><a href="#cb13-107" aria-hidden="true" tabindex="-1"></a><span class="fu">### Work Type?</span></span>
+<span id="cb13-108"><a href="#cb13-108" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-109"><a href="#cb13-109" aria-hidden="true" tabindex="-1"></a>If you create a new work and no strong community norms suggest a particular license,</span>
+<span id="cb13-110"><a href="#cb13-110" aria-hidden="true" tabindex="-1"></a>you need to choose the license yourself.</span>
+<span id="cb13-111"><a href="#cb13-111" aria-hidden="true" tabindex="-1"></a>Which license to choose depends on the type of work you create.</span>
+<span id="cb13-112"><a href="#cb13-112" aria-hidden="true" tabindex="-1"></a>We have created a flowchart that covers</span>
+<span id="cb13-113"><a href="#cb13-113" aria-hidden="true" tabindex="-1"></a>the most likely types of works you will create as a researcher:</span>
+<span id="cb13-114"><a href="#cb13-114" aria-hidden="true" tabindex="-1"></a>software, writing (i.e., text), images, audio, video, and data</span>
+<span id="cb13-115"><a href="#cb13-115" aria-hidden="true" tabindex="-1"></a>(see @fig-flowchart-simple).</span>
+<span id="cb13-116"><a href="#cb13-116" aria-hidden="true" tabindex="-1"></a>This flowchart always recommends the most permissive license possible to maximize reuse</span>
+<span id="cb13-117"><a href="#cb13-117" aria-hidden="true" tabindex="-1"></a>-- though we provide two additional flowcharts below that allow for more choices.</span>
+<span id="cb13-118"><a href="#cb13-118" aria-hidden="true" tabindex="-1"></a>Click on the name of a license to learn more about it.</span>
+<span id="cb13-119"><a href="#cb13-119" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-120"><a href="#cb13-120" aria-hidden="true" tabindex="-1"></a>::: {#tip-multi-licensing .callout-tip}</span>
+<span id="cb13-121"><a href="#cb13-121" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Multi-licensing</span></span>
+<span id="cb13-122"><a href="#cb13-122" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-123"><a href="#cb13-123" aria-hidden="true" tabindex="-1"></a>Sometimes, the type of a work is not obvious. For example, a Quarto document...</span>
+<span id="cb13-124"><a href="#cb13-124" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-125"><a href="#cb13-125" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>...contains both R code and writing, and</span>
+<span id="cb13-126"><a href="#cb13-126" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>...may be distributed in the source format or as rendered document, possibly including images.</span>
+<span id="cb13-127"><a href="#cb13-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-128"><a href="#cb13-128" aria-hidden="true" tabindex="-1"></a>One may wonder which license to apply in this case,</span>
+<span id="cb13-129"><a href="#cb13-129" aria-hidden="true" tabindex="-1"></a>because Creative Commons licenses are not recommended for source code<span class="ot">[^disclaim-patents]</span></span>
+<span id="cb13-130"><a href="#cb13-130" aria-hidden="true" tabindex="-1"></a>and applying software licenses to PDFs or images</span>
+<span id="cb13-131"><a href="#cb13-131" aria-hidden="true" tabindex="-1"></a>can lead to confusion or nuisance.<span class="ot">[^require-full-text]</span></span>
+<span id="cb13-132"><a href="#cb13-132" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-133"><a href="#cb13-133" aria-hidden="true" tabindex="-1"></a><span class="ot">[^disclaim-patents]: </span>because (among other reasons) they explicitly disclaim</span>
+<span id="cb13-134"><a href="#cb13-134" aria-hidden="true" tabindex="-1"></a>any conveyance of patent rights <span class="co">[</span><span class="ot">see @CC2024Software</span><span class="co">]</span></span>
+<span id="cb13-135"><a href="#cb13-135" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-136"><a href="#cb13-136" aria-hidden="true" tabindex="-1"></a><span class="ot">[^require-full-text]: </span>because they often require</span>
+<span id="cb13-137"><a href="#cb13-137" aria-hidden="true" tabindex="-1"></a>to display the full text of the license <span class="co">[</span><span class="ot">see @Wikipedia2024FDL</span><span class="co">]</span></span>
+<span id="cb13-138"><a href="#cb13-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-139"><a href="#cb13-139" aria-hidden="true" tabindex="-1"></a>One solution is to make such a work simultaneously available</span>
+<span id="cb13-140"><a href="#cb13-140" aria-hidden="true" tabindex="-1"></a>under two (or more) licenses, at the choice of the recipient:</span>
+<span id="cb13-141"><a href="#cb13-141" aria-hidden="true" tabindex="-1"></a>Either under a specified software license,</span>
+<span id="cb13-142"><a href="#cb13-142" aria-hidden="true" tabindex="-1"></a>or under a Creative Commons license.<span class="ot">[^media]</span></span>
+<span id="cb13-143"><a href="#cb13-143" aria-hidden="true" tabindex="-1"></a>This is called multi-licensing and makes it easier</span>
+<span id="cb13-144"><a href="#cb13-144" aria-hidden="true" tabindex="-1"></a>to reuse both the rendered document as well as the code.</span>
+<span id="cb13-145"><a href="#cb13-145" aria-hidden="true" tabindex="-1"></a>For example, one could write:</span>
+<span id="cb13-146"><a href="#cb13-146" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-147"><a href="#cb13-147" aria-hidden="true" tabindex="-1"></a><span class="ot">[^media]: </span>that is, a license for writing, image, audio, and video</span>
+<span id="cb13-148"><a href="#cb13-148" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-149"><a href="#cb13-149" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; The Quarto documents in this project are made available under CC0\ 1.0</span></span>
+<span id="cb13-150"><a href="#cb13-150" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; or (at your option) under the terms of the Apache License\ 2.0.</span></span>
+<span id="cb13-151"><a href="#cb13-151" aria-hidden="true" tabindex="-1"></a><span class="at">:::</span></span>
+<span id="cb13-152"><a href="#cb13-152" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-153"><a href="#cb13-153" aria-hidden="true" tabindex="-1"></a>We already mentioned that a database may be licensed differently than its content.</span>
+<span id="cb13-154"><a href="#cb13-154" aria-hidden="true" tabindex="-1"></a>However, if the content was created by you,</span>
+<span id="cb13-155"><a href="#cb13-155" aria-hidden="true" tabindex="-1"></a>we recommend you to choose the same license for both content and database.</span>
+<span id="cb13-156"><a href="#cb13-156" aria-hidden="true" tabindex="-1"></a>Factual data (like measurements or metadata) should be made available</span>
+<span id="cb13-157"><a href="#cb13-157" aria-hidden="true" tabindex="-1"></a>with <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span> <span class="co">[</span><span class="ot">@Villa2016Copyleft; @Villa2016CC0</span><span class="co">]</span></span>
+<span id="cb13-158"><a href="#cb13-158" aria-hidden="true" tabindex="-1"></a>-- otherwise, consult @nte-other-work-types for some caveats.</span>
+<span id="cb13-159"><a href="#cb13-159" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-160"><a href="#cb13-160" aria-hidden="true" tabindex="-1"></a>::: {#fig-flowchart-simple}</span>
+<span id="cb13-163"><a href="#cb13-163" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb13-164"><a href="#cb13-164" aria-hidden="true" tabindex="-1"></a>flowchart TB</span>
+<span id="cb13-165"><a href="#cb13-165" aria-hidden="true" tabindex="-1"></a>  start(<span class="ot">"</span><span class="st">We want&lt;br&gt;to choose&lt;br&gt;a license.</span><span class="ot">"</span>) --<span class="ot">"</span><span class="st">We adapted a work by&lt;br&gt;others shared under a&lt;br&gt;free/open license.</span><span class="ot">"</span>--&gt; use_existing_license[<span class="ot">"</span><span class="st">&lt;em&gt;Use its license&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb13-166"><a href="#cb13-166" aria-hidden="true" tabindex="-1"></a>  start --<span class="ot">"</span><span class="st">We created the work&lt;br&gt;entirely by ourselves.</span><span class="ot">"</span>--&gt; regulation(<span class="ot">"</span><span class="st">Other regulation&lt;br&gt;(by community or funder)&lt;br&gt;concerning license?</span><span class="ot">"</span>)</span>
+<span id="cb13-167"><a href="#cb13-167" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-168"><a href="#cb13-168" aria-hidden="true" tabindex="-1"></a>  regulation --<span class="ot">"</span><span class="st">Exists</span><span class="ot">"</span>--&gt; follow_existing_norms[<span class="ot">"</span><span class="st">&lt;em&gt;Follow that&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb13-169"><a href="#cb13-169" aria-hidden="true" tabindex="-1"></a>  regulation --<span class="ot">"</span><span class="st">Does not&lt;br&gt;exist</span><span class="ot">"</span>--&gt; type(<span class="ot">"</span><span class="st">Work type?</span><span class="ot">"</span>)</span>
+<span id="cb13-170"><a href="#cb13-170" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-171"><a href="#cb13-171" aria-hidden="true" tabindex="-1"></a>  type --<span class="ot">"</span><span class="st">Software</span><span class="ot">"</span>--&gt; apache[<span class="ot">"</span><span class="st">Apache 2.0</span><span class="ot">"</span>]</span>
+<span id="cb13-172"><a href="#cb13-172" aria-hidden="true" tabindex="-1"></a>  type --<span class="ot">"</span><span class="st">Writing, image, audio, video</span><span class="ot">"</span>--&gt; cc0[<span class="ot">"</span><span class="st">CC0 1.0</span><span class="ot">"</span>]</span>
+<span id="cb13-173"><a href="#cb13-173" aria-hidden="true" tabindex="-1"></a>  type --<span class="ot">"</span><span class="st">Data(base)</span><span class="ot">"</span>--&gt; existing_license_data(<span class="ot">"</span><span class="st">Adapting individual&lt;br&gt;data entries by others?</span><span class="ot">"</span>)</span>
+<span id="cb13-174"><a href="#cb13-174" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-175"><a href="#cb13-175" aria-hidden="true" tabindex="-1"></a>  existing_license_data --<span class="ot">"</span><span class="st">No, we created them&lt;br&gt;entirely by ourselves.</span><span class="ot">"</span>--&gt; cc0_data[<span class="ot">"</span><span class="st">CC0 1.0 &lt;em&gt;for database&lt;br&gt;and its content&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb13-176"><a href="#cb13-176" aria-hidden="true" tabindex="-1"></a>  existing_license_data --<span class="ot">"</span><span class="st">Yes, they were&lt;br&gt;shared under a&lt;br&gt;free/open license.</span><span class="ot">"</span>--&gt; use_existing_license_data[<span class="ot">"</span><span class="st">&lt;em&gt;Use their license&lt;br&gt;for content and&lt;/em&gt;&lt;br&gt;CC0 1.0 &lt;em&gt;for&lt;br&gt;the database&lt;/em&gt;</span><span class="ot">"</span>]</span>
+<span id="cb13-177"><a href="#cb13-177" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-178"><a href="#cb13-178" aria-hidden="true" tabindex="-1"></a>  click apache href <span class="ot">"</span><span class="st">https://choosealicense.com/licenses/apache-2.0/</span><span class="ot">"</span></span>
+<span id="cb13-179"><a href="#cb13-179" aria-hidden="true" tabindex="-1"></a>  click cc0 href <span class="ot">"</span><span class="st">https://creativecommons.org/publicdomain/zero/1.0/</span><span class="ot">"</span></span>
+<span id="cb13-180"><a href="#cb13-180" aria-hidden="true" tabindex="-1"></a>  click cc0_data href <span class="ot">"</span><span class="st">https://creativecommons.org/publicdomain/zero/1.0/</span><span class="ot">"</span></span>
+<span id="cb13-181"><a href="#cb13-181" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-182"><a href="#cb13-182" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-183"><a href="#cb13-183" aria-hidden="true" tabindex="-1"></a>Flowchart for Choosing a License</span>
+<span id="cb13-184"><a href="#cb13-184" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-185"><a href="#cb13-185" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-186"><a href="#cb13-186" aria-hidden="true" tabindex="-1"></a>::: {#nte-other-work-types .callout-note collapse="true"}</span>
+<span id="cb13-187"><a href="#cb13-187" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Other Work Types</span></span>
+<span id="cb13-188"><a href="#cb13-188" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-189"><a href="#cb13-189" aria-hidden="true" tabindex="-1"></a>One should take special care when applying license to the following types of works:</span>
+<span id="cb13-190"><a href="#cb13-190" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-191"><a href="#cb13-191" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>__fonts:__ Copyleft licenses applied to fonts can be a special case:</span>
+<span id="cb13-192"><a href="#cb13-192" aria-hidden="true" tabindex="-1"></a>  If a font is put under the license <span class="co">[</span><span class="ot">CC\ BY-SA\ 4.0</span><span class="co">][cc-by-sa]</span>,</span>
+<span id="cb13-193"><a href="#cb13-193" aria-hidden="true" tabindex="-1"></a>  any documents containing texts using that font will probably be derivative works</span>
+<span id="cb13-194"><a href="#cb13-194" aria-hidden="true" tabindex="-1"></a>  and have to be put under the same license if shared.</span>
+<span id="cb13-195"><a href="#cb13-195" aria-hidden="true" tabindex="-1"></a>  The <span class="co">[</span><span class="ot">SIL Open Font License\ 1.1</span><span class="co">][ofl]</span> is the _de facto_ standard license for fonts,</span>
+<span id="cb13-196"><a href="#cb13-196" aria-hidden="true" tabindex="-1"></a>  requiring that derived fonts, if published, have to be put under the same license.</span>
+<span id="cb13-197"><a href="#cb13-197" aria-hidden="true" tabindex="-1"></a>  It doesn't require attribution for usage (e.g., when embedded in a document),</span>
+<span id="cb13-198"><a href="#cb13-198" aria-hidden="true" tabindex="-1"></a>  but forbids that the font is sold by itself.</span>
+<span id="cb13-199"><a href="#cb13-199" aria-hidden="true" tabindex="-1"></a>  Selling the font is allowed, however, if it is bundled with other software.</span>
+<span id="cb13-200"><a href="#cb13-200" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>__templates and TeX packages:__ If a template or, for this purpose, a $\TeX$ package,</span>
+<span id="cb13-201"><a href="#cb13-201" aria-hidden="true" tabindex="-1"></a>  is licensed under a copyleft license such as the (A)GPLv3,</span>
+<span id="cb13-202"><a href="#cb13-202" aria-hidden="true" tabindex="-1"></a>  every work that is a derivative of it has to be put under the same license if shared.</span>
+<span id="cb13-203"><a href="#cb13-203" aria-hidden="true" tabindex="-1"></a>  If a document contained source code covered by the (A)GPLv3,</span>
+<span id="cb13-204"><a href="#cb13-204" aria-hidden="true" tabindex="-1"></a>  it depends on the individual case</span>
+<span id="cb13-205"><a href="#cb13-205" aria-hidden="true" tabindex="-1"></a>  whether the same license needs to be applied to the document if shared.</span>
+<span id="cb13-206"><a href="#cb13-206" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>__database content:__ If the work produced from a database (the "output")</span>
+<span id="cb13-207"><a href="#cb13-207" aria-hidden="true" tabindex="-1"></a>  is a derivative of the content in the database,</span>
+<span id="cb13-208"><a href="#cb13-208" aria-hidden="true" tabindex="-1"></a>  the output is subject to the restrictions laid out in the license.</span>
+<span id="cb13-209"><a href="#cb13-209" aria-hidden="true" tabindex="-1"></a>  For example, if geospatial data were to be licensed under <span class="co">[</span><span class="ot">CC\ BY\ 4.0</span><span class="co">][cc-by]</span>,</span>
+<span id="cb13-210"><a href="#cb13-210" aria-hidden="true" tabindex="-1"></a>  all maps produced from the data would likely need to fulfill</span>
+<span id="cb13-211"><a href="#cb13-211" aria-hidden="true" tabindex="-1"></a>  this license's obligation for unrestricted access (its anti-DRM provision)</span>
+<span id="cb13-212"><a href="#cb13-212" aria-hidden="true" tabindex="-1"></a>  if shared <span class="co">[</span><span class="ot">see @Poole2017</span><span class="co">]</span>.</span>
+<span id="cb13-213"><a href="#cb13-213" aria-hidden="true" tabindex="-1"></a>  Similarly, following an example from @Matt2009,</span>
+<span id="cb13-214"><a href="#cb13-214" aria-hidden="true" tabindex="-1"></a>  if one were to choose the copyleft license <span class="co">[</span><span class="ot">CC\ BY-SA\ 4.0</span><span class="co">][cc-by-sa]</span></span>
+<span id="cb13-215"><a href="#cb13-215" aria-hidden="true" tabindex="-1"></a>  for this purpose, any map that is a derivative of the data</span>
+<span id="cb13-216"><a href="#cb13-216" aria-hidden="true" tabindex="-1"></a>  would also need to be licensed under <span class="co">[</span><span class="ot">CC\ BY-SA\ 4.0</span><span class="co">][cc-by-sa]</span></span>
+<span id="cb13-217"><a href="#cb13-217" aria-hidden="true" tabindex="-1"></a>  (or a compatible license) if shared.</span>
+<span id="cb13-218"><a href="#cb13-218" aria-hidden="true" tabindex="-1"></a>  If the intention is to only have <span class="co">[</span><span class="ot">derivative databases</span><span class="co">][osm-produced-work]</span></span>
+<span id="cb13-219"><a href="#cb13-219" aria-hidden="true" tabindex="-1"></a>  under the same license, one might want to choose the <span class="co">[</span><span class="ot">ODbL\ 1.0</span><span class="co">][odbl]</span> for the database,</span>
+<span id="cb13-220"><a href="#cb13-220" aria-hidden="true" tabindex="-1"></a>  as it was specifically designed not to apply to works produced from the data in the database.</span>
+<span id="cb13-221"><a href="#cb13-221" aria-hidden="true" tabindex="-1"></a>  Otherwise <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span> is an excellent choice for data.</span>
+<span id="cb13-222"><a href="#cb13-222" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>__works in the public domain__: If a work is already in the public domain,</span>
+<span id="cb13-223"><a href="#cb13-223" aria-hidden="true" tabindex="-1"></a>  it should be marked using the <span class="co">[</span><span class="ot">PDM\ 1.0</span><span class="co">][pdm]</span>,</span>
+<span id="cb13-224"><a href="#cb13-224" aria-hidden="true" tabindex="-1"></a>  rather than applying a waiver such as the <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span> (or another license).</span>
+<span id="cb13-225"><a href="#cb13-225" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-226"><a href="#cb13-226" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-227"><a href="#cb13-227" aria-hidden="true" tabindex="-1"></a><span class="ot">[ofl]: https://openfontlicense.org/</span></span>
+<span id="cb13-228"><a href="#cb13-228" aria-hidden="true" tabindex="-1"></a><span class="ot">[cc-by]: https://creativecommons.org/licenses/by/4.0/</span></span>
+<span id="cb13-229"><a href="#cb13-229" aria-hidden="true" tabindex="-1"></a><span class="ot">[pdm]: https://creativecommons.org/publicdomain/mark/1.0/</span></span>
+<span id="cb13-230"><a href="#cb13-230" aria-hidden="true" tabindex="-1"></a><span class="ot">[osm-produced-work]: https://osmfoundation.org/wiki/Licence/Community_Guidelines/Produced_Work_-_Guideline</span></span>
+<span id="cb13-231"><a href="#cb13-231" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-232"><a href="#cb13-232" aria-hidden="true" tabindex="-1"></a><span class="fu">### Copyleft?</span></span>
+<span id="cb13-233"><a href="#cb13-233" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-234"><a href="#cb13-234" aria-hidden="true" tabindex="-1"></a>You may prefer that adaptations of your work stay free/open</span>
+<span id="cb13-235"><a href="#cb13-235" aria-hidden="true" tabindex="-1"></a>and thus choose a copyleft license.</span>
+<span id="cb13-236"><a href="#cb13-236" aria-hidden="true" tabindex="-1"></a>Of course, this does not restrict you as the original author:</span>
+<span id="cb13-237"><a href="#cb13-237" aria-hidden="true" tabindex="-1"></a>You are still permitted to distribute the work under a different license</span>
+<span id="cb13-238"><a href="#cb13-238" aria-hidden="true" tabindex="-1"></a>and without sharing the source code.</span>
+<span id="cb13-239"><a href="#cb13-239" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-240"><a href="#cb13-240" aria-hidden="true" tabindex="-1"></a>::: {#tip-license-r .callout-tip}</span>
+<span id="cb13-241"><a href="#cb13-241" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Projects Involving R Code</span></span>
+<span id="cb13-242"><a href="#cb13-242" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-243"><a href="#cb13-243" aria-hidden="true" tabindex="-1"></a>In most cases, the output of software, like images or tables,</span>
+<span id="cb13-244"><a href="#cb13-244" aria-hidden="true" tabindex="-1"></a>does not depend on the software's license.<span class="ot">[^output-exception]</span></span>
+<span id="cb13-245"><a href="#cb13-245" aria-hidden="true" tabindex="-1"></a>Therefore, if you use an R package under a copyleft license to create a figure,</span>
+<span id="cb13-246"><a href="#cb13-246" aria-hidden="true" tabindex="-1"></a>you are likely the copyright owner.</span>
+<span id="cb13-247"><a href="#cb13-247" aria-hidden="true" tabindex="-1"></a>However, if the output is based on data,</span>
+<span id="cb13-248"><a href="#cb13-248" aria-hidden="true" tabindex="-1"></a>it can be considered a derivative work of the data and the license of the data also applies.</span>
+<span id="cb13-249"><a href="#cb13-249" aria-hidden="true" tabindex="-1"></a>For example, maps may be considered a derivative work of the geographic data they are based on.</span>
+<span id="cb13-250"><a href="#cb13-250" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-251"><a href="#cb13-251" aria-hidden="true" tabindex="-1"></a><span class="ot">[^output-exception]: </span>The exception is when the software is part of the output <span class="co">[</span><span class="ot">see @FSF2024</span><span class="co">]</span>.</span>
+<span id="cb13-252"><a href="#cb13-252" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-253"><a href="#cb13-253" aria-hidden="true" tabindex="-1"></a>It is disputed whether software that uses an R package</span>
+<span id="cb13-254"><a href="#cb13-254" aria-hidden="true" tabindex="-1"></a>under AGPLv3 or GPLv3<span class="ot">[^gplv3-explanation]</span></span>
+<span id="cb13-255"><a href="#cb13-255" aria-hidden="true" tabindex="-1"></a>can only be published under a GPL-compatible license</span>
+<span id="cb13-256"><a href="#cb13-256" aria-hidden="true" tabindex="-1"></a>-- or even has to be published under the same license.</span>
+<span id="cb13-257"><a href="#cb13-257" aria-hidden="true" tabindex="-1"></a>Posit, the company behind RStudio,</span>
+<span id="cb13-258"><a href="#cb13-258" aria-hidden="true" tabindex="-1"></a>does not believe that to be the case <span class="co">[</span><span class="ot">see also @Wickham2023PackagesLicense</span><span class="co">]</span>.</span>
+<span id="cb13-259"><a href="#cb13-259" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-260"><a href="#cb13-260" aria-hidden="true" tabindex="-1"></a><span class="ot">[^gplv3-explanation]: </span>a variant of the AGPLv3 that does not cover software running as a service</span>
+<span id="cb13-261"><a href="#cb13-261" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-262"><a href="#cb13-262" aria-hidden="true" tabindex="-1"></a>You can learn which license an installed package uses via</span>
+<span id="cb13-263"><a href="#cb13-263" aria-hidden="true" tabindex="-1"></a><span class="in">`packageDescription("&lt;PACKAGE_NAME&gt;", fields = "License")`</span>.</span>
+<span id="cb13-264"><a href="#cb13-264" aria-hidden="true" tabindex="-1"></a>And to identify which licenses are being used by the R packages your project depends on,</span>
+<span id="cb13-265"><a href="#cb13-265" aria-hidden="true" tabindex="-1"></a>you can use the following code:</span>
+<span id="cb13-266"><a href="#cb13-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-267"><a href="#cb13-267" aria-hidden="true" tabindex="-1"></a><span class="in">```{.r filename="R Console"}</span></span>
+<span id="cb13-268"><a href="#cb13-268" aria-hidden="true" tabindex="-1"></a>deps <span class="ot">&lt;-</span> renv<span class="sc">::</span><span class="fu">dependencies</span>()<span class="sc">$</span>Package <span class="sc">|&gt;</span></span>
+<span id="cb13-269"><a href="#cb13-269" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unique</span>() <span class="sc">|&gt;</span></span>
+<span id="cb13-270"><a href="#cb13-270" aria-hidden="true" tabindex="-1"></a>  pak<span class="sc">::</span><span class="fu">pkg_deps</span>(<span class="at">dependencies =</span> <span class="cn">NA</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-271"><a href="#cb13-271" aria-hidden="true" tabindex="-1"></a>  <span class="fu">getElement</span>(<span class="st">"package"</span>)</span>
+<span id="cb13-272"><a href="#cb13-272" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(<span class="fu">installed.packages</span>(<span class="at">fields=</span><span class="st">"License"</span>)[deps, <span class="st">"License"</span>])</span>
+<span id="cb13-273"><a href="#cb13-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-274"><a href="#cb13-274" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-275"><a href="#cb13-275" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-276"><a href="#cb13-276" aria-hidden="true" tabindex="-1"></a>We have prepared two advanced license flowcharts,</span>
+<span id="cb13-277"><a href="#cb13-277" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">one for software, writing, images, audio, and video</span><span class="co">](/in-depth-material/licenses-continued.qmd#fig-flowchart-non-data)</span></span>
+<span id="cb13-278"><a href="#cb13-278" aria-hidden="true" tabindex="-1"></a>and <span class="co">[</span><span class="ot">one for data</span><span class="co">](/in-depth-material/licenses-continued.qmd#fig-flowchart-data)</span> where you can make additional choices.</span>
+<span id="cb13-279"><a href="#cb13-279" aria-hidden="true" tabindex="-1"></a>Note, however, that especially the advanced flowchart for licensing data is quite complex</span>
+<span id="cb13-280"><a href="#cb13-280" aria-hidden="true" tabindex="-1"></a>and we recommend you to seek legal counsel if you want to be sure.</span>
+<span id="cb13-281"><a href="#cb13-281" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-282"><a href="#cb13-282" aria-hidden="true" tabindex="-1"></a><span class="fu">### Additional considerations</span></span>
+<span id="cb13-283"><a href="#cb13-283" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-284"><a href="#cb13-284" aria-hidden="true" tabindex="-1"></a>The advanced license flowcharts also allow you to make additional decisions,</span>
+<span id="cb13-285"><a href="#cb13-285" aria-hidden="true" tabindex="-1"></a>such as whether attribution should be a condition of redistribution.</span>
+<span id="cb13-286"><a href="#cb13-286" aria-hidden="true" tabindex="-1"></a>As you have learned, even if attribution is not a condition of the license,</span>
+<span id="cb13-287"><a href="#cb13-287" aria-hidden="true" tabindex="-1"></a>there are other reasons for attributing you as an author</span>
+<span id="cb13-288"><a href="#cb13-288" aria-hidden="true" tabindex="-1"></a>(such as scientific citation standards or moral rights).</span>
+<span id="cb13-289"><a href="#cb13-289" aria-hidden="true" tabindex="-1"></a>All conditions are explained on the supplementary page on <span class="co">[</span><span class="ot">copyright conditions</span><span class="co">](in-depth-material/copyright-conditions.qmd)</span>.</span>
+<span id="cb13-290"><a href="#cb13-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-291"><a href="#cb13-291" aria-hidden="true" tabindex="-1"></a>From the Creative Commons licenses,</span>
+<span id="cb13-292"><a href="#cb13-292" aria-hidden="true" tabindex="-1"></a>only <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span> does not require providing attribution,</span>
+<span id="cb13-293"><a href="#cb13-293" aria-hidden="true" tabindex="-1"></a>and all software licenses in <span class="co">[</span><span class="ot">the first advanced license flowchart</span><span class="co">](/in-depth-material/licenses-continued.qmd#fig-flowchart-non-data)</span> require providing attribution.</span>
+<span id="cb13-294"><a href="#cb13-294" aria-hidden="true" tabindex="-1"></a>As an author, you are free to waive license conditions such as attribution, however.</span>
+<span id="cb13-295"><a href="#cb13-295" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-296"><a href="#cb13-296" aria-hidden="true" tabindex="-1"></a>::: {#nte-silos .callout-note collapse="true"}</span>
+<span id="cb13-297"><a href="#cb13-297" aria-hidden="true" tabindex="-1"></a><span class="fu">### Other Restrictions</span></span>
+<span id="cb13-298"><a href="#cb13-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-299"><a href="#cb13-299" aria-hidden="true" tabindex="-1"></a>Creative Commons also offers licenses which prevent commercial use of a work</span>
+<span id="cb13-300"><a href="#cb13-300" aria-hidden="true" tabindex="-1"></a>and/or sharing of derivative works.</span>
+<span id="cb13-301"><a href="#cb13-301" aria-hidden="true" tabindex="-1"></a>A free/open license, however, must allow creating derivative works</span>
+<span id="cb13-302"><a href="#cb13-302" aria-hidden="true" tabindex="-1"></a>and must allow exercising the rights granted by it _for any purpose_, including commercial use.</span>
+<span id="cb13-303"><a href="#cb13-303" aria-hidden="true" tabindex="-1"></a>Otherwise, creating adaptations from multiple works by different authors would either</span>
+<span id="cb13-304"><a href="#cb13-304" aria-hidden="true" tabindex="-1"></a>limit commercial use for everybody (including the authors)</span>
+<span id="cb13-305"><a href="#cb13-305" aria-hidden="true" tabindex="-1"></a>or would not be possible at all (when including materials with a copyleft license),</span>
+<span id="cb13-306"><a href="#cb13-306" aria-hidden="true" tabindex="-1"></a>effectively creating _silos_ of works which are mutually incompatible with each other.</span>
+<span id="cb13-307"><a href="#cb13-307" aria-hidden="true" tabindex="-1"></a>This is especially relevant for work types for which adaptations are created frequently,</span>
+<span id="cb13-308"><a href="#cb13-308" aria-hidden="true" tabindex="-1"></a>such as text, data, and source code.</span>
+<span id="cb13-309"><a href="#cb13-309" aria-hidden="true" tabindex="-1"></a>In order to avoid silos, one should only choose licenses which are compatible</span>
+<span id="cb13-310"><a href="#cb13-310" aria-hidden="true" tabindex="-1"></a>with the dominant copyleft license in the respective community <span class="co">[</span><span class="ot">@Lammerhirt2017; @Wheeler2014</span><span class="co">]</span>.</span>
+<span id="cb13-311"><a href="#cb13-311" aria-hidden="true" tabindex="-1"></a>If you would like to learn more about the different types of compatibility,</span>
+<span id="cb13-312"><a href="#cb13-312" aria-hidden="true" tabindex="-1"></a>we recommend you to read the article</span>
+<span id="cb13-313"><a href="#cb13-313" aria-hidden="true" tabindex="-1"></a>"A Quick Guide to Software Licensing for the Scientist-Programmer" by @Morin2012.</span>
+<span id="cb13-314"><a href="#cb13-314" aria-hidden="true" tabindex="-1"></a>The following diagram provides an overview of the compatibility of various licenses:</span>
+<span id="cb13-315"><a href="#cb13-315" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-316"><a href="#cb13-316" aria-hidden="true" tabindex="-1"></a>!<span class="co">[</span><span class="ot">"Open data-capable license interoperability" by Robbie Morrison [-@Morrison2024] licensed under [CC\ BY\ 4.0][cc-by]</span><span class="co">](assets/Morrison2024.jpg)</span>{.lightbox}</span>
+<span id="cb13-317"><a href="#cb13-317" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-318"><a href="#cb13-318" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-319"><a href="#cb13-319" aria-hidden="true" tabindex="-1"></a><span class="fu">## Applying the License</span></span>
+<span id="cb13-320"><a href="#cb13-320" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-321"><a href="#cb13-321" aria-hidden="true" tabindex="-1"></a>Having selected the license(s) of your choice,</span>
+<span id="cb13-322"><a href="#cb13-322" aria-hidden="true" tabindex="-1"></a>we encourage you to read through the full license text (or at least a legal summary)</span>
+<span id="cb13-323"><a href="#cb13-323" aria-hidden="true" tabindex="-1"></a>to understand the legal effect.</span>
+<span id="cb13-324"><a href="#cb13-324" aria-hidden="true" tabindex="-1"></a>The following applies to all licenses mentioned here:</span>
+<span id="cb13-325"><a href="#cb13-325" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-326"><a href="#cb13-326" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Applying the license is irrevocable.</span>
+<span id="cb13-327"><a href="#cb13-327" aria-hidden="true" tabindex="-1"></a>  You may stop distributing your work,</span>
+<span id="cb13-328"><a href="#cb13-328" aria-hidden="true" tabindex="-1"></a>  but everybody who already received it may continue to share it.</span>
+<span id="cb13-329"><a href="#cb13-329" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>As an author applying the license, you are not bound by the license terms.</span>
+<span id="cb13-330"><a href="#cb13-330" aria-hidden="true" tabindex="-1"></a>  You cannot, however, give others an exclusive license to your content anymore</span>
+<span id="cb13-331"><a href="#cb13-331" aria-hidden="true" tabindex="-1"></a>  (as some journals needlessly demand, see @wrn-exclusive-rights).</span>
+<span id="cb13-332"><a href="#cb13-332" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>By applying the license you share with others your right</span>
+<span id="cb13-333"><a href="#cb13-333" aria-hidden="true" tabindex="-1"></a>  to use your work for commercial purposes, including selling it.</span>
+<span id="cb13-334"><a href="#cb13-334" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you apply the license to an image,</span>
+<span id="cb13-335"><a href="#cb13-335" aria-hidden="true" tabindex="-1"></a>  the license <span class="co">[</span><span class="ot">may also apply</span><span class="co">][commons-same-work]</span> to a higher resolution version of your image.</span>
+<span id="cb13-336"><a href="#cb13-336" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you apply a copyleft license to an image, a document</span>
+<span id="cb13-337"><a href="#cb13-337" aria-hidden="true" tabindex="-1"></a>  in which the image is used may not constitute a derivative work</span>
+<span id="cb13-338"><a href="#cb13-338" aria-hidden="true" tabindex="-1"></a>  and, as such, may not be affected by the copyleft condition.</span>
+<span id="cb13-339"><a href="#cb13-339" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If you are a member of a collecting society^<span class="co">[</span><span class="ot">in Germany: _Verwertungsgesellschaft_</span><span class="co">]</span></span>
+<span id="cb13-340"><a href="#cb13-340" aria-hidden="true" tabindex="-1"></a>  or if the work was created as part of your job,</span>
+<span id="cb13-341"><a href="#cb13-341" aria-hidden="true" tabindex="-1"></a>  you may not be able to apply the license.</span>
+<span id="cb13-342"><a href="#cb13-342" aria-hidden="true" tabindex="-1"></a>  Check with your collecting society or your employer in that case.</span>
+<span id="cb13-343"><a href="#cb13-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-344"><a href="#cb13-344" aria-hidden="true" tabindex="-1"></a><span class="ot">[commons-same-work]: https://commons.wikimedia.org/wiki/Commons:Same_work</span></span>
+<span id="cb13-345"><a href="#cb13-345" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-346"><a href="#cb13-346" aria-hidden="true" tabindex="-1"></a>::: {#nte-situation-lmu .callout-note collapse="true"}</span>
+<span id="cb13-347"><a href="#cb13-347" aria-hidden="true" tabindex="-1"></a><span class="fu">### For Researchers at LMU Munich</span></span>
+<span id="cb13-348"><a href="#cb13-348" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-349"><a href="#cb13-349" aria-hidden="true" tabindex="-1"></a>If you are an employee at LMU and your funder does not mandate the use of a particular license,</span>
+<span id="cb13-350"><a href="#cb13-350" aria-hidden="true" tabindex="-1"></a>the decision of which license to use lies with the holder of your chair (_Lehrstuhlinhaber\*in_).</span>
+<span id="cb13-351"><a href="#cb13-351" aria-hidden="true" tabindex="-1"></a>The only exception is the case that you developed an invention</span>
+<span id="cb13-352"><a href="#cb13-352" aria-hidden="true" tabindex="-1"></a>you would like to exploit commercially with a patent.</span>
+<span id="cb13-353"><a href="#cb13-353" aria-hidden="true" tabindex="-1"></a>Then, you are required to officially report your invention to the IP management team of the LMU,</span>
+<span id="cb13-354"><a href="#cb13-354" aria-hidden="true" tabindex="-1"></a>which will work out the next steps with you.</span>
+<span id="cb13-355"><a href="#cb13-355" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-356"><a href="#cb13-356" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-357"><a href="#cb13-357" aria-hidden="true" tabindex="-1"></a>For Creative Commons licenses, the following is additionally important to know:</span>
+<span id="cb13-358"><a href="#cb13-358" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-359"><a href="#cb13-359" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>By applying the license you waive any moral, publicity, privacy,</span>
+<span id="cb13-360"><a href="#cb13-360" aria-hidden="true" tabindex="-1"></a>  or other similar personality rights to the extent necessary to use the work.</span>
+<span id="cb13-361"><a href="#cb13-361" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The attribution requirement may be implemented "in any reasonable manner",</span>
+<span id="cb13-362"><a href="#cb13-362" aria-hidden="true" tabindex="-1"></a>  possibly not conforming to your precise expectations.</span>
+<span id="cb13-363"><a href="#cb13-363" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-364"><a href="#cb13-364" aria-hidden="true" tabindex="-1"></a>Applying a license to a work mostly just means indicating</span>
+<span id="cb13-365"><a href="#cb13-365" aria-hidden="true" tabindex="-1"></a>which file or folder is covered by which license(s)</span>
+<span id="cb13-366"><a href="#cb13-366" aria-hidden="true" tabindex="-1"></a>(no sort of registration is required).</span>
+<span id="cb13-367"><a href="#cb13-367" aria-hidden="true" tabindex="-1"></a>There are multiple standards on how to do so:</span>
+<span id="cb13-368"><a href="#cb13-368" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-369"><a href="#cb13-369" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>You have already learned about the file <span class="in">`LICENSE.txt`</span>.</span>
+<span id="cb13-370"><a href="#cb13-370" aria-hidden="true" tabindex="-1"></a>  Either it contains the full text of one license that applies to the whole project folder</span>
+<span id="cb13-371"><a href="#cb13-371" aria-hidden="true" tabindex="-1"></a>  -- this is a practice propagated by GitHub,</span>
+<span id="cb13-372"><a href="#cb13-372" aria-hidden="true" tabindex="-1"></a>  which provides instructions for and comparisons of many licenses</span>
+<span id="cb13-373"><a href="#cb13-373" aria-hidden="true" tabindex="-1"></a>  via <span class="co">[</span><span class="ot">ChooseALicense.com</span><span class="co">](https://choosealicense.com/licenses/)</span>.</span>
+<span id="cb13-374"><a href="#cb13-374" aria-hidden="true" tabindex="-1"></a>  Alternatively, it details which license applies to what</span>
+<span id="cb13-375"><a href="#cb13-375" aria-hidden="true" tabindex="-1"></a>  and the individual licenses are stored in the same or in different files.</span>
+<span id="cb13-376"><a href="#cb13-376" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-377"><a href="#cb13-377" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>A summary of the licensing situation is often given in a README file,</span>
+<span id="cb13-378"><a href="#cb13-378" aria-hidden="true" tabindex="-1"></a>  whose creation will be discussed <span class="co">[</span><span class="ot">later</span><span class="co">](make-readme.qmd)</span>.</span>
+<span id="cb13-379"><a href="#cb13-379" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-380"><a href="#cb13-380" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>If only parts of a file are covered by a certain license,</span>
+<span id="cb13-381"><a href="#cb13-381" aria-hidden="true" tabindex="-1"></a>  then it might make sense to indicate this directly in the file.</span>
+<span id="cb13-382"><a href="#cb13-382" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-383"><a href="#cb13-383" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The license of embedded elements (e.g., images) is either given</span>
+<span id="cb13-384"><a href="#cb13-384" aria-hidden="true" tabindex="-1"></a>  directly beneath to where they are embedded,</span>
+<span id="cb13-385"><a href="#cb13-385" aria-hidden="true" tabindex="-1"></a>  at the end of the respective page,</span>
+<span id="cb13-386"><a href="#cb13-386" aria-hidden="true" tabindex="-1"></a>  or collectively on a separate page.</span>
+<span id="cb13-387"><a href="#cb13-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-388"><a href="#cb13-388" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Individual programming languages also have their own way</span>
+<span id="cb13-389"><a href="#cb13-389" aria-hidden="true" tabindex="-1"></a>  of stating which license a package is distributed under.</span>
+<span id="cb13-390"><a href="#cb13-390" aria-hidden="true" tabindex="-1"></a>  For R packages, this is usually set by the field <span class="in">`License`</span></span>
+<span id="cb13-391"><a href="#cb13-391" aria-hidden="true" tabindex="-1"></a>  in the file <span class="in">`DESCRIPTION`</span> <span class="co">[</span><span class="ot">@Wickham2023PackagesLicense</span><span class="co">]</span>.</span>
+<span id="cb13-392"><a href="#cb13-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-393"><a href="#cb13-393" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Software projects often indicate the license in every file,</span>
+<span id="cb13-394"><a href="#cb13-394" aria-hidden="true" tabindex="-1"></a>  following the <span class="co">[</span><span class="ot">REUSE</span><span class="co">](https://reuse.software/)</span> specification</span>
+<span id="cb13-395"><a href="#cb13-395" aria-hidden="true" tabindex="-1"></a>  to make the choice of license machine-readable (explained in @nte-reuse).</span>
+<span id="cb13-396"><a href="#cb13-396" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-397"><a href="#cb13-397" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>The following two metadata standards for increasing citability</span>
+<span id="cb13-398"><a href="#cb13-398" aria-hidden="true" tabindex="-1"></a>  also allow to indicate the license:</span>
+<span id="cb13-399"><a href="#cb13-399" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-400"><a href="#cb13-400" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">CodeMeta</span><span class="co">](https://codemeta.github.io/)</span>:</span>
+<span id="cb13-401"><a href="#cb13-401" aria-hidden="true" tabindex="-1"></a>    All information are stored in a file called <span class="in">`codemeta.json`</span>,</span>
+<span id="cb13-402"><a href="#cb13-402" aria-hidden="true" tabindex="-1"></a>    which can be created <span class="co">[</span><span class="ot">on their website</span><span class="co">][codemeta-gen]</span>.</span>
+<span id="cb13-403"><a href="#cb13-403" aria-hidden="true" tabindex="-1"></a>    Alternatively, one can use the R package <span class="co">[</span><span class="ot">`codemetar`</span><span class="co">][codemetar]</span></span>
+<span id="cb13-404"><a href="#cb13-404" aria-hidden="true" tabindex="-1"></a>    to create this file.</span>
+<span id="cb13-405"><a href="#cb13-405" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-406"><a href="#cb13-406" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="co">[</span><span class="ot">Citation File Format</span><span class="co">](https://citation-file-format.github.io/)</span> (CFF):</span>
+<span id="cb13-407"><a href="#cb13-407" aria-hidden="true" tabindex="-1"></a>    Here, everything is stored in a file called <span class="in">`CITATION.cff`</span>.</span>
+<span id="cb13-408"><a href="#cb13-408" aria-hidden="true" tabindex="-1"></a>    It is used by GitHub to directly show a recommended citation for a repository.</span>
+<span id="cb13-409"><a href="#cb13-409" aria-hidden="true" tabindex="-1"></a>    The file can be created <span class="co">[</span><span class="ot">on their website</span><span class="co">][cff-gen]</span>.</span>
+<span id="cb13-410"><a href="#cb13-410" aria-hidden="true" tabindex="-1"></a>    Alternatively, the R package <span class="co">[</span><span class="ot">`cffr`</span><span class="co">][cffr]</span> may be used for that purpose.</span>
+<span id="cb13-411"><a href="#cb13-411" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-412"><a href="#cb13-412" aria-hidden="true" tabindex="-1"></a><span class="ot">[codemeta-gen]: https://codemeta.github.io/codemeta-generator/</span></span>
+<span id="cb13-413"><a href="#cb13-413" aria-hidden="true" tabindex="-1"></a><span class="ot">[codemetar]: https://docs.ropensci.org/codemetar/</span></span>
+<span id="cb13-414"><a href="#cb13-414" aria-hidden="true" tabindex="-1"></a><span class="ot">[cff-gen]: https://citation-file-format.github.io/cff-initializer-javascript/</span></span>
+<span id="cb13-415"><a href="#cb13-415" aria-hidden="true" tabindex="-1"></a><span class="ot">[cffr]: https://cran.r-project.org/package=cffr</span></span>
+<span id="cb13-416"><a href="#cb13-416" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-417"><a href="#cb13-417" aria-hidden="true" tabindex="-1"></a>::: {#tip-license-help .callout-tip}</span>
+<span id="cb13-418"><a href="#cb13-418" aria-hidden="true" tabindex="-1"></a><span class="fu">### Follow the Help Provided by the License Authors</span></span>
+<span id="cb13-419"><a href="#cb13-419" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-420"><a href="#cb13-420" aria-hidden="true" tabindex="-1"></a>For all the licenses recommended in this tutorial,</span>
+<span id="cb13-421"><a href="#cb13-421" aria-hidden="true" tabindex="-1"></a>the organizations that created these licenses provide more information</span>
+<span id="cb13-422"><a href="#cb13-422" aria-hidden="true" tabindex="-1"></a>on how to apply them to your work:</span>
+<span id="cb13-423"><a href="#cb13-423" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-424"><a href="#cb13-424" aria-hidden="true" tabindex="-1"></a>::: {layout-ncol=2}</span>
+<span id="cb13-425"><a href="#cb13-425" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-426"><a href="#cb13-426" aria-hidden="true" tabindex="-1"></a>:::: {}</span>
+<span id="cb13-427"><a href="#cb13-427" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">Apache\ 2.0</span><span class="co">](https://www.apache.org/licenses/LICENSE-2.0#apply)</span></span>
+<span id="cb13-428"><a href="#cb13-428" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">MPL\ 2.0</span><span class="co">](https://www.mozilla.org/MPL/2.0/FAQ/#license-use)</span></span>
+<span id="cb13-429"><a href="#cb13-429" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">AGPLv3</span><span class="co">](https://www.gnu.org/licenses/gpl-howto.html)</span></span>
+<span id="cb13-430"><a href="#cb13-430" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb13-431"><a href="#cb13-431" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-432"><a href="#cb13-432" aria-hidden="true" tabindex="-1"></a>:::: {}</span>
+<span id="cb13-433"><a href="#cb13-433" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">CC licenses</span><span class="co">](https://creativecommons.org/faq/#how-do-i-apply-a-creative-commons-license-to-my-material)</span></span>
+<span id="cb13-434"><a href="#cb13-434" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="co">[</span><span class="ot">ODbL\ 1.0</span><span class="co">](https://opendatacommons.org/licenses/odbl/)</span></span>
+<span id="cb13-435"><a href="#cb13-435" aria-hidden="true" tabindex="-1"></a>::::</span>
+<span id="cb13-436"><a href="#cb13-436" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-437"><a href="#cb13-437" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-438"><a href="#cb13-438" aria-hidden="true" tabindex="-1"></a>Creative Commons even provides a range of considerations for licensors and licensees <span class="co">[</span><span class="ot">@CC2013</span><span class="co">]</span></span>
+<span id="cb13-439"><a href="#cb13-439" aria-hidden="true" tabindex="-1"></a>and an <span class="co">[</span><span class="ot">interactive chooser</span><span class="co">](https://creativecommons.org/choose/)</span></span>
+<span id="cb13-440"><a href="#cb13-440" aria-hidden="true" tabindex="-1"></a>which you can use to create text snippet that you can copy and paste to the desired location.</span>
+<span id="cb13-441"><a href="#cb13-441" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-442"><a href="#cb13-442" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-443"><a href="#cb13-443" aria-hidden="true" tabindex="-1"></a>::: {#nte-reuse .callout-note collapse="true"}</span>
+<span id="cb13-444"><a href="#cb13-444" aria-hidden="true" tabindex="-1"></a><span class="fu">### Using REUSE to Record Licenses</span></span>
+<span id="cb13-445"><a href="#cb13-445" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-446"><a href="#cb13-446" aria-hidden="true" tabindex="-1"></a>Every major free/open license has a unique <span class="co">[</span><span class="ot">SPDX identifier</span><span class="co">](https://spdx.org/licenses/)</span></span>
+<span id="cb13-447"><a href="#cb13-447" aria-hidden="true" tabindex="-1"></a>which allows communicating the license choice unequivocally.</span>
+<span id="cb13-448"><a href="#cb13-448" aria-hidden="true" tabindex="-1"></a>We will be using that to indicate the license for every file in your project folder,</span>
+<span id="cb13-449"><a href="#cb13-449" aria-hidden="true" tabindex="-1"></a>along with the year of publication and the copyright holder.</span>
+<span id="cb13-450"><a href="#cb13-450" aria-hidden="true" tabindex="-1"></a>To do this, we add a comment to the beginning of every file</span>
+<span id="cb13-451"><a href="#cb13-451" aria-hidden="true" tabindex="-1"></a>and include the two tags <span class="in">`SPDX-FileCopyrightText`</span> and <span class="in">`SPDX-License-Identifier`</span>.</span>
+<span id="cb13-452"><a href="#cb13-452" aria-hidden="true" tabindex="-1"></a>How this works depends on the file type, as the syntax for a comment varies.</span>
+<span id="cb13-453"><a href="#cb13-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-454"><a href="#cb13-454" aria-hidden="true" tabindex="-1"></a>For example, the file <span class="in">`Manuscript.qmd`</span> was provided to you under <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span>.</span>
+<span id="cb13-455"><a href="#cb13-455" aria-hidden="true" tabindex="-1"></a>You can indicate that by adding the following comment to the beginning of the file:</span>
+<span id="cb13-456"><a href="#cb13-456" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-457"><a href="#cb13-457" aria-hidden="true" tabindex="-1"></a><span class="in">```{.html filename="Manuscript.qmd"}</span></span>
+<span id="cb13-458"><a href="#cb13-458" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!--</span></span>
+<span id="cb13-459"><a href="#cb13-459" aria-hidden="true" tabindex="-1"></a>SPDX<span class="op">-</span>FileCopyrightText<span class="op">:</span> <span class="dv">2024</span> Christoph Scheffel</span>
+<span id="cb13-460"><a href="#cb13-460" aria-hidden="true" tabindex="-1"></a>SPDX<span class="op">-</span>FileCopyrightText<span class="op">:</span> <span class="dv">2024</span> Josephine Zerna</span>
+<span id="cb13-461"><a href="#cb13-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-462"><a href="#cb13-462" aria-hidden="true" tabindex="-1"></a>SPDX<span class="op">-</span>License<span class="op">-</span>Identifier<span class="op">:</span> CC0<span class="op">-</span><span class="fl">1.0</span></span>
+<span id="cb13-463"><a href="#cb13-463" aria-hidden="true" tabindex="-1"></a><span class="op">--&gt;</span></span>
+<span id="cb13-464"><a href="#cb13-464" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-465"><a href="#cb13-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-466"><a href="#cb13-466" aria-hidden="true" tabindex="-1"></a>You need to use <span class="in">`&lt;!--`</span> and <span class="in">`--&gt;`</span> to start and end the comment</span>
+<span id="cb13-467"><a href="#cb13-467" aria-hidden="true" tabindex="-1"></a>because this is the convention that starts comment lines in Quarto files.</span>
+<span id="cb13-468"><a href="#cb13-468" aria-hidden="true" tabindex="-1"></a>Alternatively, you can use the <span class="co">[</span><span class="ot">reuse tool</span><span class="co">](https://github.com/fsfe/reuse-tool)</span></span>
+<span id="cb13-469"><a href="#cb13-469" aria-hidden="true" tabindex="-1"></a>to add these information for you.</span>
+<span id="cb13-470"><a href="#cb13-470" aria-hidden="true" tabindex="-1"></a>After installing it with...</span>
+<span id="cb13-471"><a href="#cb13-471" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-472"><a href="#cb13-472" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash filename="Terminal"}</span></span>
+<span id="cb13-473"><a href="#cb13-473" aria-hidden="true" tabindex="-1"></a><span class="ex">pipx</span> install reuse</span>
+<span id="cb13-474"><a href="#cb13-474" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-475"><a href="#cb13-475" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-476"><a href="#cb13-476" aria-hidden="true" tabindex="-1"></a>...you can add the copyright information using the following command</span>
+<span id="cb13-477"><a href="#cb13-477" aria-hidden="true" tabindex="-1"></a>-- the current year will be added automatically.</span>
+<span id="cb13-478"><a href="#cb13-478" aria-hidden="true" tabindex="-1"></a>In many cases, the reuse tool will figure out the appropriate comment style for you.</span>
+<span id="cb13-479"><a href="#cb13-479" aria-hidden="true" tabindex="-1"></a>If this is not the case, as currently with Quarto files,</span>
+<span id="cb13-480"><a href="#cb13-480" aria-hidden="true" tabindex="-1"></a>you can tell it directly which comment style to use (<span class="in">`html`</span> in this case):</span>
+<span id="cb13-481"><a href="#cb13-481" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-482"><a href="#cb13-482" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash .code-overflow-wrap filename="Terminal"}</span></span>
+<span id="cb13-483"><a href="#cb13-483" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"Josephine Zerna"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Christoph Scheffel"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> <span class="at">--style</span><span class="op">=</span>html Manuscript.qmd</span>
+<span id="cb13-484"><a href="#cb13-484" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-485"><a href="#cb13-485" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-486"><a href="#cb13-486" aria-hidden="true" tabindex="-1"></a>As you edited the file throughout this tutorial,</span>
+<span id="cb13-487"><a href="#cb13-487" aria-hidden="true" tabindex="-1"></a>you may also add yourself.^[For licenses that require that modifications are indicated,</span>
+<span id="cb13-488"><a href="#cb13-488" aria-hidden="true" tabindex="-1"></a>this is an easy way to comply with them.</span>
+<span id="cb13-489"><a href="#cb13-489" aria-hidden="true" tabindex="-1"></a>Also, you do not need to provide your real name.]</span>
+<span id="cb13-490"><a href="#cb13-490" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-491"><a href="#cb13-491" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash .code-overflow-wrap filename="Terminal"}</span></span>
+<span id="cb13-492"><a href="#cb13-492" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"&lt;YOUR NAME&gt;"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> <span class="at">--style</span><span class="op">=</span>html Manuscript.qmd</span>
+<span id="cb13-493"><a href="#cb13-493" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-494"><a href="#cb13-494" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-495"><a href="#cb13-495" aria-hidden="true" tabindex="-1"></a>Sometimes, there are file types which do not allow</span>
+<span id="cb13-496"><a href="#cb13-496" aria-hidden="true" tabindex="-1"></a>for adding the license information inside them, such as PDF and CSV files.</span>
+<span id="cb13-497"><a href="#cb13-497" aria-hidden="true" tabindex="-1"></a>For these, a corresponding <span class="in">`.license`</span> file can be created.</span>
+<span id="cb13-498"><a href="#cb13-498" aria-hidden="true" tabindex="-1"></a>Try the following command which indicates that the data were published</span>
+<span id="cb13-499"><a href="#cb13-499" aria-hidden="true" tabindex="-1"></a>under <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span>:</span>
+<span id="cb13-500"><a href="#cb13-500" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-501"><a href="#cb13-501" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash .code-overflow-wrap filename="Terminal"}</span></span>
+<span id="cb13-502"><a href="#cb13-502" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> annotate <span class="at">--copyright</span><span class="op">=</span><span class="st">"Allison Horst"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Alison Hill"</span> <span class="at">--copyright</span><span class="op">=</span><span class="st">"Kristen Gorman"</span> <span class="at">--license</span><span class="op">=</span><span class="st">"CC0-1.0"</span> data.csv</span>
+<span id="cb13-503"><a href="#cb13-503" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-504"><a href="#cb13-504" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-505"><a href="#cb13-505" aria-hidden="true" tabindex="-1"></a>You will notice that this creates another file called <span class="in">`data.csv.license`</span></span>
+<span id="cb13-506"><a href="#cb13-506" aria-hidden="true" tabindex="-1"></a>containing the relevant information:</span>
+<span id="cb13-507"><a href="#cb13-507" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-508"><a href="#cb13-508" aria-hidden="true" tabindex="-1"></a><span class="in">```{.yml filename="data.csv.license"}</span></span>
+<span id="cb13-509"><a href="#cb13-509" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Allison Horst</span></span>
+<span id="cb13-510"><a href="#cb13-510" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Alison Hill</span></span>
+<span id="cb13-511"><a href="#cb13-511" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-FileCopyrightText</span><span class="kw">:</span><span class="at"> 2024 Kristen Gorman</span></span>
+<span id="cb13-512"><a href="#cb13-512" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-513"><a href="#cb13-513" aria-hidden="true" tabindex="-1"></a><span class="fu">SPDX-License-Identifier</span><span class="kw">:</span><span class="at"> CC0-1.0</span></span>
+<span id="cb13-514"><a href="#cb13-514" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-515"><a href="#cb13-515" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-516"><a href="#cb13-516" aria-hidden="true" tabindex="-1"></a>If you want to indicate the license for all files in a particular folder,</span>
+<span id="cb13-517"><a href="#cb13-517" aria-hidden="true" tabindex="-1"></a>you can create a file called <span class="in">`REUSE.toml`</span> and add an <span class="in">`[[annotations]]`</span> table for them:</span>
+<span id="cb13-518"><a href="#cb13-518" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-519"><a href="#cb13-519" aria-hidden="true" tabindex="-1"></a><span class="in">```{.toml filename="REUSE.toml"}</span></span>
+<span id="cb13-520"><a href="#cb13-520" aria-hidden="true" tabindex="-1"></a><span class="in">version = 1</span></span>
+<span id="cb13-521"><a href="#cb13-521" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-522"><a href="#cb13-522" aria-hidden="true" tabindex="-1"></a><span class="in"># apaquarto extension from https://github.com/wjschne/apaquarto</span></span>
+<span id="cb13-523"><a href="#cb13-523" aria-hidden="true" tabindex="-1"></a><span class="in">[[annotations]]</span></span>
+<span id="cb13-524"><a href="#cb13-524" aria-hidden="true" tabindex="-1"></a><span class="in">path = "_extensions/wjschne/apaquarto/*"</span></span>
+<span id="cb13-525"><a href="#cb13-525" aria-hidden="true" tabindex="-1"></a><span class="in">SPDX-FileCopyrightText = "2024 William Joel Schneider &lt;w.joel.schneider@gmail.com&gt;"</span></span>
+<span id="cb13-526"><a href="#cb13-526" aria-hidden="true" tabindex="-1"></a><span class="in">SPDX-License-Identifier = "CC0-1.0"</span></span>
+<span id="cb13-527"><a href="#cb13-527" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-528"><a href="#cb13-528" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-529"><a href="#cb13-529" aria-hidden="true" tabindex="-1"></a>Finally, there may be some minor files which are build artifacts.</span>
+<span id="cb13-530"><a href="#cb13-530" aria-hidden="true" tabindex="-1"></a>You can either add them to your <span class="in">`.gitignore`</span> file or use CC0\ 1.0</span>
+<span id="cb13-531"><a href="#cb13-531" aria-hidden="true" tabindex="-1"></a>with a copyright tag such as <span class="in">`SPDX-FileCopyrightText: NONE`</span></span>
+<span id="cb13-532"><a href="#cb13-532" aria-hidden="true" tabindex="-1"></a>to assert that there is no copyright holder.</span>
+<span id="cb13-533"><a href="#cb13-533" aria-hidden="true" tabindex="-1"></a>For more information, also discussing other corner cases,</span>
+<span id="cb13-534"><a href="#cb13-534" aria-hidden="true" tabindex="-1"></a>you can read their <span class="co">[</span><span class="ot">Frequently Asked Questions</span><span class="co">](https://reuse.software/faq/)</span>.</span>
+<span id="cb13-535"><a href="#cb13-535" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-536"><a href="#cb13-536" aria-hidden="true" tabindex="-1"></a>Once you are done, you can download the texts of all indicated licenses using...</span>
+<span id="cb13-537"><a href="#cb13-537" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-538"><a href="#cb13-538" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash filename="Terminal"}</span></span>
+<span id="cb13-539"><a href="#cb13-539" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> download <span class="at">--all</span></span>
+<span id="cb13-540"><a href="#cb13-540" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-541"><a href="#cb13-541" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-542"><a href="#cb13-542" aria-hidden="true" tabindex="-1"></a>...and verify that you did not miss a file by running...</span>
+<span id="cb13-543"><a href="#cb13-543" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-544"><a href="#cb13-544" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash filename="Terminal"}</span></span>
+<span id="cb13-545"><a href="#cb13-545" aria-hidden="true" tabindex="-1"></a><span class="ex">reuse</span> lint</span>
+<span id="cb13-546"><a href="#cb13-546" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-547"><a href="#cb13-547" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-548"><a href="#cb13-548" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-549"><a href="#cb13-549" aria-hidden="true" tabindex="-1"></a>The manuscript and the bibliography file you downloaded for this tutorial</span>
+<span id="cb13-550"><a href="#cb13-550" aria-hidden="true" tabindex="-1"></a>are made available to you under <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span></span>
+<span id="cb13-551"><a href="#cb13-551" aria-hidden="true" tabindex="-1"></a>as is all code in this tutorial (e.g., for the data analysis).</span>
+<span id="cb13-552"><a href="#cb13-552" aria-hidden="true" tabindex="-1"></a>Therefore, you could apply any license to your modified version.</span>
+<span id="cb13-553"><a href="#cb13-553" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-554"><a href="#cb13-554" aria-hidden="true" tabindex="-1"></a>Please practice this now by dual-licensing the manuscript and the bibliography</span>
+<span id="cb13-555"><a href="#cb13-555" aria-hidden="true" tabindex="-1"></a>under the licenses <span class="co">[</span><span class="ot">CC0\ 1.0</span><span class="co">][cc0]</span> and <span class="co">[</span><span class="ot">Apache\ 2.0</span><span class="co">][apache2]</span></span>
+<span id="cb13-556"><a href="#cb13-556" aria-hidden="true" tabindex="-1"></a>(as recommended in @nte-license-choice-tldr) by updating the file <span class="in">`LICENSE.txt`</span>.</span>
+<span id="cb13-557"><a href="#cb13-557" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-558"><a href="#cb13-558" aria-hidden="true" tabindex="-1"></a>::: {#tip-manuscript-licensetxt .callout-tip collapse="true"}</span>
+<span id="cb13-559"><a href="#cb13-559" aria-hidden="true" tabindex="-1"></a><span class="fu">### Addition to `LICENSE.txt` (Solution)</span></span>
+<span id="cb13-560"><a href="#cb13-560" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-561"><a href="#cb13-561" aria-hidden="true" tabindex="-1"></a><span class="in">```{.txt .code-overflow-wrap filename="LICENSE.txt"}</span></span>
+<span id="cb13-562"><a href="#cb13-562" aria-hidden="true" tabindex="-1"></a><span class="in">The Quarto documents stored in "Manuscript.qmd", "Manuscript.tex", and "Manuscript.pdf" by Josephine Zerna, Christoph Scheffel, and &lt;YOUR NAME&gt; are available under CC0\ 1.0 &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt; or (at your option) under Apache License\ 2.0 &lt;https://choosealicense.com/licenses/apache-2.0/&gt;.</span></span>
+<span id="cb13-563"><a href="#cb13-563" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-564"><a href="#cb13-564" aria-hidden="true" tabindex="-1"></a><span class="in">The bibliography (stored in "Bibliography.bib") by Florian Kohrt and &lt;YOUR NAME&gt; is available under CC0\ 1.0 or (at your option) under Apache License\ 2.0.</span></span>
+<span id="cb13-565"><a href="#cb13-565" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb13-566"><a href="#cb13-566" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb13-567"><a href="#cb13-567" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-568"><a href="#cb13-568" aria-hidden="true" tabindex="-1"></a>Now, commit your changes:</span>
+<span id="cb13-569"><a href="#cb13-569" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-570"><a href="#cb13-570" aria-hidden="true" tabindex="-1"></a><span class="in">```{.bash filename="Terminal"}</span></span>
+<span id="cb13-571"><a href="#cb13-571" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb13-572"><a href="#cb13-572" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb13-573"><a href="#cb13-573" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Add license"</span></span>
+<span id="cb13-574"><a href="#cb13-574" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+</code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>A recommended citation and license information for this tutorial are provided on the <a href="./about.html">about page</a>.</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/choose-license.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+<p>© 2025 Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, Pat Callahan. Published by LMU Open Science Center. Licensed under CC BY-SA 4.0.</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lmu-osc/code-publishing/edit/main/choose-license.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/lmu-osc/code-publishing/blob/main/choose-license.qmd" class="toc-action"><i class="bi empty"></i>View source</a></li><li><a href="https://github.com/lmu-osc/code-publishing/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+</footer><footer class="osc-footer-card py-5"><div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-bold fs-5 fs-lg-4">
+          Ludwig-Maximilians-Universität<br>
+          LMU Open Science Center
+        </h4>
+        <p class="mb-0 mt-1 fw-normal fs-5">
+          Leopoldstr. 13<br>
+          80802 München
+        </p>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5">Contact</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+<li>
+            <a href="mailto:felix.schoenbrodt@psy.lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Prof. Dr. Felix Schönbrodt (Managing Director)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:malika.ihle@lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              Dr. Malika Ihle (Coordinator)
+            </a>
+          </li>
+          <li>
+            <a href="mailto:osc@lmu.de" class="text-decoration-underline">
+              <i class="bi bi-envelope me-1"></i>
+              OSC team
+            </a>
+          </li>
+        </ul>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <h4 class="fw-semibold fs-5">Join Us</h4>
+        <ul class="list-unstyled mt-2 mb-0">
+<li>
+            <a href="https://lists.lrz.de/mailman/listinfo/lmu-osc" class="text-decoration-underline" aria-label="Subscribe to our announcement list (opens in new window)">
+              Subscribe to our announcement list
+            </a>
+          </li>
+          <li>
+            <a href="https://www.osc.lmu.de/about/join-us.html" class="text-decoration-underline" aria-label="Become a member (opens in new window)">
+              Become a member
+            </a>
+          </li>
+          <li>
+            <a href="https://matrix.to/#/#lmu-open-science-center:matrix.lmu.de" class="text-decoration-underline" aria-label="Chat with us on Matrix (opens in new window)">
+              Chat with us on Matrix
+            </a>
+          </li>
+        </ul>
+</div>
+
+      <div class="col-12 col-md-6 col-lg-3 d-flex align-items-start gap-3 osc-footer-socials">
+        <a href="https://github.com/lmu-osc" class="fs-3" aria-label="LMU Open Science Center on GitHub (opens in new window)">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/lmu-open-science-center/" class="fs-3" aria-label="LMU Open Science Center on LinkedIn (opens in new window)">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://bsky.app/profile/lmu-osc.bsky.social" class="fs-3" aria-label="LMU Open Science Center on Bluesky (opens in new window)">
+          <i class="bi bi-bluesky"></i>
+        </a>
+        <a href="https://scicomm.xyz/@lmu_osc" class="fs-3" aria-label="LMU Open Science Center on Mastodon (opens in new window)">
+          <i class="bi bi-mastodon"></i>
+        </a>
+      </div>
+    </div>
+
+    <hr class="my-4">
+<div class="d-flex flex-wrap gap-3 small">
+      <a href="./footer/imprint.html" class="text-decoration-underline">Imprint</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/privacy.html" class="text-decoration-underline">Privacy Policy</a>
+      <span aria-hidden="true">|</span>
+      <a href="./footer/accessibilty.html" class="text-decoration-underline">Accessibility</a>
+    </div>
+  </div>
+</footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
@@ -1321,6 +2181,5 @@ Wikipedia contributors. (2025). <span>GNU Free Documentation License</span> – 
           </script>
 
 
-
-
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>
