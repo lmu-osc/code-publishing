@@ -12,7 +12,6 @@ citation:
 author:
   - name: Florian Kohrt
     orcid: 0000-0003-0374-5625
-    email: fkohrt@anche.no
     affiliation:
       - id: osc
         name: LMU Open Science Center
