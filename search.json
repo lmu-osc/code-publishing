@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "footer/accessibilty.html",
+    "href": "footer/accessibilty.html",
+    "title": "Accessibility",
+    "section": "",
+    "text": "The Ludwig-Maximilians-Universität München strives to make its offers accessible in accordance with § 9 Act on Digitalisation in the Free State of Bavaria (Bayerisches Digitalgesetz – BayDig).\nThis Accessibility Statement applies to applications available at https://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages."
+  },
+  {
+    "objectID": "footer/accessibilty.html#status-of-compliance",
+    "href": "footer/accessibilty.html#status-of-compliance",
+    "title": "Accessibility",
+    "section": "Status of Compliance",
+    "text": "Status of Compliance\nPartially compliant: This application partially corresponds to § 1 BayEGovV.\n\nLegal Name\nLudwig-Maximilians-Universität München\n\n\nWebsite(s):\nhttps://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages."
+  },
+  {
+    "objectID": "footer/accessibilty.html#known-accessibility-issues",
+    "href": "footer/accessibilty.html#known-accessibility-issues",
+    "title": "Accessibility",
+    "section": "Known Accessibility Issues",
+    "text": "Known Accessibility Issues\nList and explanation of the problems encountered when implementing the accessibility of these websites\n\nContent Not Accessible to People With Disabilities\n\nApart from the main pages, alternative text-based content for images and tables may be missing. There may also be errors in content hierarchy and links may be unintelligible.\nPDF documents created before 09/23/2018 have not yet been converted to a fully accessible format.\nSome documents have been provided by institutions of the LMU, which are not yet all available in a fully accessible version.\nMany of our videos also lack subtitles and audio descriptions. We will be adding written directions for the maps used to give directions.\nQuotes are often not indicated as such using the appropriate HTML tag.\nResponsive design (for viewing on mobile devices) is only partially available for the websites, screen orientation is otherwise limited to landscape format. For non-responsive pages, texts do not wrap correctly in a small viewport.\nFields for inputting user data are not always sufficiently designated as such.\nWords or passages in other languages are not always indicated as such.\nBecause of the Google Search plugin, the criteria for “valid HTML text” is not being fulfilled."
+  },
+  {
+    "objectID": "footer/accessibilty.html#explanation",
+    "href": "footer/accessibilty.html#explanation",
+    "title": "Accessibility",
+    "section": "Explanation",
+    "text": "Explanation\nAll LMU websites are currently undergoing a complete relaunch. It therefore no longer makes sense to revise the existing websites.\nThe deficiencies of the old website have been listed above.\nCreation Date: 09/22/2019\nMethodology: Self-assessment"
+  },
+  {
+    "objectID": "footer/accessibilty.html#feedback-mechanism",
+    "href": "footer/accessibilty.html#feedback-mechanism",
+    "title": "Accessibility",
+    "section": "Feedback Mechanism",
+    "text": "Feedback Mechanism\nAs a user, you can inform us of any shortcomings in complying with accessibility requirements or request information in an accessible format that is not required to be displayed in an accessible format.\n\nContact Information\nUnit VI.5 Internet Services\nMartiusstraße 4\n80802 Munich\nMail: it.internet@verwaltung.uni-muenchen.de\nPhone: +49 (0) 89 / 2180-9832"
+  },
+  {
+    "objectID": "footer/accessibilty.html#enforcement-procedure",
+    "href": "footer/accessibilty.html#enforcement-procedure",
+    "title": "Accessibility",
+    "section": "Enforcement Procedure",
+    "text": "Enforcement Procedure\nIf a request for contact remains unanswered in whole or in part within six weeks, the Landesamt für Digitalisierung, Breitband und Vermessung (Agency for Digitisation, High-Speed Internet and Surveying) will, at the request of the user, examine whether measures are necessary with regard to the monitoring of the obligated party.\n\nContact information of the agency responsible for the enforcement procedure\nLandesamt für Digitalisierung, Breitband und Vermessung Alexandrastraße 4\n80538 Munich\nPhone: +49 89 2129-1111\nFax: +49 89 2129-1113\nEmail:service@geodaten.bayern.de\nhttps://www.ldbv.bayern.de/service/kontakt/\n\n\nOther Help Services\nStudents with disabilities are supported by the Beratungsstelle für Studierende mit Behinderung und chronischer Erkrankung (Counselling Center for Students with Disabilities and Chronic Illnesses).\nThe Schwerbehindertenvertretung (Representative for Disabled Persons) (access protected on the service portal) can support employees."
+  },
+  {
     "objectID": "footer/imprint.html",
     "href": "footer/imprint.html",
     "title": "Imprint and Disclaimer",
@@ -61,20 +103,6 @@
     "title": "Imprint and Disclaimer",
     "section": "Disclaimer",
     "text": "Disclaimer\nThe information offered by the LMU contains cross-references (“links”) to other internet offers by the LMU or by external, third-parties. Basically the internet pages will open automatically in a new window.\nThrough this cross-reference, the LMU handles access for use of this content (§ 5 Telemedia Law). We are not responsible for this “foreign” content since we do not initiate the transmission of the information, have not selected the addressee of the transmitted information and also have not selected or changed the transmitted information.\nAn automatic, short-term interim saving of this “foreign information” by the LMU does not occur due to the selected call-up and linking method, so that the LMU does not thereby assume any responsibility for this foreign content.\nHowever, upon initial linking with these internet offers, the LMU has checked the foreign content to determine whether it may trigger a potential responsibility under civil or penal law. But we do not receive any automatic information about changes to the foreign internet offers and thus cannot constantly monitor their content for any changes. Therefore we also cannot assume any responsibility for them. Solely the particular merchant of the foreign internet offer is liable for illegal, erroneous or incomplete content, and in particular for damages which arise from the use or non-use of information by third parties. However, we endeavor to check the included links regularly with regard to these named criteria."
-  },
-  {
-    "objectID": "footer/privacy.html",
-    "href": "footer/privacy.html",
-    "title": "Privacy Policy",
-    "section": "",
-    "text": "For data collected by the LMU Open Science Center, LMU’s general privacy policy  applies.\nAdditionally, this site is hosted on the webhosting service GitHub Pages (https://docs.github.com/en/pages) with it’s own privacy policy available at https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement."
-  },
-  {
-    "objectID": "footer/privacy.html#matomo-tracking-opt-out",
-    "href": "footer/privacy.html#matomo-tracking-opt-out",
-    "title": "Privacy Policy",
-    "section": "Matomo Tracking Opt-Out",
-    "text": "Matomo Tracking Opt-Out\nThis opt-out is only for the Matomo web analytics tool in use directly the LMU Open Science Center website. It does not affect any other tracking or analytics tools that may be in use on this site, including those used by GitHub Pages."
   },
   {
     "objectID": "intro.html",
@@ -143,54 +171,113 @@
     ]
   },
   {
-    "objectID": "CONTRIBUTING.html",
-    "href": "CONTRIBUTING.html",
-    "title": "",
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "Add Data and Data Dictionary",
     "section": "",
-    "text": "Code\n\n\n\n\n\n\nContributing Notes\nThere are some things to consider when contributing to this repo:\n\nMake screenshots in high resolution by temporarily increasing the font scaling factor in your OS and using a large display.\nLimit the width of images and center them, for example, as follows:\n![](assets/my_image.png){width=500px fig-align=\"center\"}\nAnnotate code blocks with filename=\"Terminal\" and filename=\"R Console\" to differentiate Bash and R that should be entered by the user (if there is no file from which the code is an excerpt).\nPut optional content into a collapsed note.\nPut important content into warning.\nhierarchy of callouts\n\nnote\ntip\ncaution\nwarning\nimportant\n\nHeadings (including tabset tabs and callout titles) are written in title case.\nOn any page, start headings at level 2 (i.e., use ##) and above because the page title is already at level 1.\nMaintain the hierarchy of headings, that is, only create headings at level n if there’s already a heading at level n-1.\nAlso maintain the hierarchy of headings for callouts: Callouts use heading levels that are one below the current heading level.\nFilenames and R package names are typeset in monospace.\nNo special formatting of terms in headings (e.g., $\\TeX$).\nPrefer R packages that follow the tinyverse philosophy, that is, have a lightweight dependency footprint. All packages need to be downloaded by renv and (worst case) compiled during the tutorial, which better not take too long. Use pak::pkg_deps() to count the total number of package dependencies.\nWrite license abbreviations with no-break spaces (e.g., write CC\\ BY\\ 4.0 rather than CC BY 4.0).\nWhen writing markdown:\n\nUse semantic linefeeds to ease change tracking, except for exact quotes (as they won’t be updated) and for example code in code blocks (to allow for wrapping on the website depending on the user’s screen width).\nUse regular footnotes rather than inline footnotes to increase the readability of markdown (except for short notes or at the end of lines).\nUse reference links rather than inline links to increase the readability of markdown (except for short links or at the end of a line).\n\nIf the (R package/system) dependencies that are required to work through the tutorial change, make sure to adjust the respective section in make-readme.qmd accordingly.\nWhen making significant contributions, add people to the CITATION.cff file and mention them in about.qmd. Also adjust choose-license.qmd, _01_Example/Manuscript.qmd, and LICENSE.txt where necessary.\nKeep usage of terms consistent, for example:\n\nAlways write data dictionary or always write codebook (but don’t mix).\n\nIn the case of this tutorial, the convention is to write data dictionary.\n\nAlways write data set or always write dataset (but don’t mix).\n\nIn the case of this tutorial, the convention is to write data set.\n\n\nWhen preparing a new release:\n\nIn the file CITATION.cff update the fields version, date-released, year, and doi (twice).\nIn the file about.qmd update the fields issued and doi.\n\n\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "make-readme.html",
-    "href": "make-readme.html",
-    "title": "Make a README",
-    "section": "",
-    "text": "Having settled on a license, it is time to add a final touch. Imagine returning to your project in five years, having forgotten most of the details of what you did exactly. What would your future self want to know in order to quickly understand what is going on in the project?\nThis is what needs to be described in the README file. It should be the primary entry point into your project, the place where new users go first to get an orientation.\nThere is no common standard how to structure a README file, but you should usually provide at least the following information, structured by sections:\nName and Description\n\nHow is the project called?\nWhat is it about?\nWhich files does the project folder contain?\nHow are they organized?\n\nData\n\nAre any (empirical) data involved (e.g., being analyzed or used as input)?\nAre they already included in the project folder? If not: From which sources can they be obtained?\nWhere is their data dictionary located?\nWhich terms, usage restrictions, or licenses apply?\n(optionally) If they are not publicly available, is an alternative, synthesized version provided?\n\nComputational Requirements / Dependencies\n\nWhat software needs to be installed to run the analysis?\n\nFor every dependency (e.g., packages that you load in R), describe where it can be obtained from. If the code has particular hardware requirements (e.g., in terms of processor or memory), these should be also noted. Finally, for steps that take more than a couple of seconds, indicate the approximate runtime.\nFor an R project, the most important information for enabling reproducibility are the specific version of R and the loaded packages. Ideally, you also list other system dependencies. The in-depth supplementary material Identify additional system dependencies for the README provides more information on determining the dependencies of an R project. For the purpose of this tutorial, however, you can skip this step.\nHow to reproduce the results\n\nProvide step-by-step instructions that are necessary to reproduce all reported results.\n\nIs there a master script or a particular order in which any scripts need to be executed?\nCitation\n\nIs there a recommended way to cite this project?\nIs there a published article associated with it that you would like to have cited?\n\nLicense\n\nUnder which licenses are the works in this project folder available?",
+    "text": "You can now download the data set we have prepared for you and put it into your project folder:\ndata.csv\n\n\n\n\npalmerpenguins: Palmer Archipelago (Antarctica) Penguin Data\n\nThe data set is from the package palmerpenguins (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license CC0 1.0. For educational purposes, we added the fictitious column cuteness.\n\n\n\n\n\n\nImportant 1: Consider Legal Restrictions Before Sharing\n\n\n\nEverything you put into the project folder will be shared publicly. For reasons of reproducibility, this should include the data you analyze. Of course, you should only share them to the extent you are allowed to. Besides copyright and similar rights, you need to take into account applicable privacy laws (e.g., the GDPR for European citizens) and contractual obligations (e.g., with your data provider).\nPrivacy laws and contractual obligations may require you to create an anonymized or synthetic data set1, in which case you should provide a reference to a repository where the originally measured data can be obtained from. For further information, you can watch the talk “Data anonymity” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at the accompanying slides. Another resource to look at is the presentation “Creating reproducible packages when data are confidential” by Vilhuber (2024).\n\n\nLet’s take a first look at our data:\n\ndat &lt;- read.csv(\"data.csv\")\nstr(dat)\n\n\n\nR Console\n\n'data.frame':   344 obs. of  9 variables:\n $ species          : int  1 1 1 1 1 1 1 1 1 1 ...\n $ island           : int  3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num  39.1 39.5 40.3 -99 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num  18.7 17.4 18 -99 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int  181 186 195 -99 193 190 181 195 193 190 ...\n $ body_mass_g      : int  3750 3800 3250 -99 3450 3650 3625 4675 3475 4250 ...\n $ sex              : int  2 1 1 -99 1 2 1 2 -99 -99 ...\n $ year             : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...\n $ cuteness         : int  2 3 7 3 7 8 7 2 1 10 ...\n\n\n\nWe can see that the variables species, island, and sex are stored as integers:\n\nspecies\n\n1 = Adelie\n2 = Chinstrap\n3 = Gentoo\n\n\nisland\n\n1 = Biscoe\n2 = Dream\n3 = Torgersen\n\n\nsex\n\n1 = female\n2 = male\n\n\n\nFurther, missing values are stored as -99. We need to document this information somewhere!",
     "crumbs": [
       "Home",
-      "Make a README"
+      "Add Data and Data Dictionary"
     ]
   },
   {
-    "objectID": "make-readme.html#what-does-a-readme-contain",
-    "href": "make-readme.html#what-does-a-readme-contain",
-    "title": "Make a README",
+    "objectID": "data.html#add-data-file",
+    "href": "data.html#add-data-file",
+    "title": "Add Data and Data Dictionary",
     "section": "",
-    "text": "Having settled on a license, it is time to add a final touch. Imagine returning to your project in five years, having forgotten most of the details of what you did exactly. What would your future self want to know in order to quickly understand what is going on in the project?\nThis is what needs to be described in the README file. It should be the primary entry point into your project, the place where new users go first to get an orientation.\nThere is no common standard how to structure a README file, but you should usually provide at least the following information, structured by sections:\nName and Description\n\nHow is the project called?\nWhat is it about?\nWhich files does the project folder contain?\nHow are they organized?\n\nData\n\nAre any (empirical) data involved (e.g., being analyzed or used as input)?\nAre they already included in the project folder? If not: From which sources can they be obtained?\nWhere is their data dictionary located?\nWhich terms, usage restrictions, or licenses apply?\n(optionally) If they are not publicly available, is an alternative, synthesized version provided?\n\nComputational Requirements / Dependencies\n\nWhat software needs to be installed to run the analysis?\n\nFor every dependency (e.g., packages that you load in R), describe where it can be obtained from. If the code has particular hardware requirements (e.g., in terms of processor or memory), these should be also noted. Finally, for steps that take more than a couple of seconds, indicate the approximate runtime.\nFor an R project, the most important information for enabling reproducibility are the specific version of R and the loaded packages. Ideally, you also list other system dependencies. The in-depth supplementary material Identify additional system dependencies for the README provides more information on determining the dependencies of an R project. For the purpose of this tutorial, however, you can skip this step.\nHow to reproduce the results\n\nProvide step-by-step instructions that are necessary to reproduce all reported results.\n\nIs there a master script or a particular order in which any scripts need to be executed?\nCitation\n\nIs there a recommended way to cite this project?\nIs there a published article associated with it that you would like to have cited?\n\nLicense\n\nUnder which licenses are the works in this project folder available?",
+    "text": "You can now download the data set we have prepared for you and put it into your project folder:\ndata.csv\n\n\n\n\npalmerpenguins: Palmer Archipelago (Antarctica) Penguin Data\n\nThe data set is from the package palmerpenguins (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license CC0 1.0. For educational purposes, we added the fictitious column cuteness.\n\n\n\n\n\n\nImportant 1: Consider Legal Restrictions Before Sharing\n\n\n\nEverything you put into the project folder will be shared publicly. For reasons of reproducibility, this should include the data you analyze. Of course, you should only share them to the extent you are allowed to. Besides copyright and similar rights, you need to take into account applicable privacy laws (e.g., the GDPR for European citizens) and contractual obligations (e.g., with your data provider).\nPrivacy laws and contractual obligations may require you to create an anonymized or synthetic data set1, in which case you should provide a reference to a repository where the originally measured data can be obtained from. For further information, you can watch the talk “Data anonymity” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at the accompanying slides. Another resource to look at is the presentation “Creating reproducible packages when data are confidential” by Vilhuber (2024).\n\n\nLet’s take a first look at our data:\n\ndat &lt;- read.csv(\"data.csv\")\nstr(dat)\n\n\n\nR Console\n\n'data.frame':   344 obs. of  9 variables:\n $ species          : int  1 1 1 1 1 1 1 1 1 1 ...\n $ island           : int  3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num  39.1 39.5 40.3 -99 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num  18.7 17.4 18 -99 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int  181 186 195 -99 193 190 181 195 193 190 ...\n $ body_mass_g      : int  3750 3800 3250 -99 3450 3650 3625 4675 3475 4250 ...\n $ sex              : int  2 1 1 -99 1 2 1 2 -99 -99 ...\n $ year             : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...\n $ cuteness         : int  2 3 7 3 7 8 7 2 1 10 ...\n\n\n\nWe can see that the variables species, island, and sex are stored as integers:\n\nspecies\n\n1 = Adelie\n2 = Chinstrap\n3 = Gentoo\n\n\nisland\n\n1 = Biscoe\n2 = Dream\n3 = Torgersen\n\n\nsex\n\n1 = female\n2 = male\n\n\n\nFurther, missing values are stored as -99. We need to document this information somewhere!",
     "crumbs": [
       "Home",
-      "Make a README"
+      "Add Data and Data Dictionary"
     ]
   },
   {
-    "objectID": "make-readme.html#identifying-r-dependencies",
-    "href": "make-readme.html#identifying-r-dependencies",
-    "title": "Make a README",
-    "section": "Identifying R Dependencies",
-    "text": "Identifying R Dependencies\nIf you just write “We used R to analyze the data” in your manuscript or in the Computational Requirements / Dependencies section of your README file, this would be too underspecified. To enable someone else to really reproduce your results, you need specific information on …\n\nThe exact version of R\nAll packages and their versions that you loaded in your project\n(optionally) Further system dependencies\n\nR & Package Dependencies\nR itself and the R packages are already documented as our tutorial project uses renv: The information is stored in the renv.lock file at the root of the project, which tracks each package’s version and source. In this case, you can simply refer to that in the README file and all is done.\nIf your project has no renv.lock file, you can still use renv together with the package sessioninfo to get an overview of all used packages and their versions:\n\n\nR Console\n\nsessioninfo::session_info(pkgs = unique(renv::dependencies()$Package))\n\nYou can copy & paste that information into your README file.",
+    "objectID": "data.html#add-a-data-dictionary",
+    "href": "data.html#add-a-data-dictionary",
+    "title": "Add Data and Data Dictionary",
+    "section": "Add a Data Dictionary",
+    "text": "Add a Data Dictionary\nWhether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a data dictionary (also called a codebook).\nThe recommendation for data dictionaries vary between fields – both in terms of the recommended content (i.e., what exactly should be documented) and the technical implementation (i.e., which file formats should be used).\nFor the purpose of this exercise, we keep it easy and propose that you manually create a file with the data dictionary (e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), documenting only the bare minimum.\n\n\n\n\n\n\n\nTip 1: Creating data dictionaries using R\n\n\n\n\n\nOur in-depth supplementary material “Generation of Data Dictionaries Using R” explains how you can create a data dictionary with R. This advanced chapter also contains a section on how to create machine-readable data dictionaries.\n\n\n\nA bare minimum data dictionary\nMost standards for data dictionaries require at least this information for each variable in your data set:\n\n\nname: Column name of the variable in the data set\n\nlabel: Short title for the variable\n\ndescription: Brief description of what the variable measures or represents\n\nitem_text: Exact wording of a question in a survey\n\nvalues: A mapping of stored answers to their meanings (especially for categorical variables). For example: 1 = male, 2 = female, 9 = missing\n\nunits: The units of measurement (only for numeric variables). For example: kg, USD, years\n\n\nHere’s an example from a different data set, with one row for each variable:\n\n\n\n\n\n\n\n\n\n\nname\nlabel\ndescription\nitem_text\nvalues\nunits\n\n\n\ngender\nGender\nself‑identified gender\n\n1 = male, 2 = female, 3 = other, 9 = missing\n\n\n\nage\nAge\nage in years\n\n-99 = Not answered\nyears\n\n\nblood_pressure\nBlood Pressure (systolic)\nsystolic blood pressure\n\n-99 = Not answered\nmmHg\n\n\nlife_satisfaction\nLife Satisfaction\n5-point scale\nHow satisfied are you with your life?\n1 = very dissatisfied, 2 = dissatisfied, 3 = neutral, 4 = satisfied, 5 = very satisfied, -99 = not answered\n\n\n\n\nYou can download this example data dictionary as an ODS file here.\nDepending on the type of data, it may also be necessary to describe sampling procedures (e.g., selection criteria), measurement instruments (e.g., established questionnaires), appropriate weighting, already applied preprocessing steps, or contact information.\nPractical Exercise: Add your own data dictionary\nNow it’s your turn. Fill in the missing information (denoted by a bold question mark “?”) in the following data dictionary.\n\nShow data dictionary\n\n\n\n\n\n\n\n\n\n\nname\nlabel\ndescription\nitem_text\nvalues\nunits\n\n\n\nspecies\nSpecies\nPenguin species\n\n1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing\n\n\n\nisland\nIsland\nIsland in Palmer Archipelago, Antarctica where individual was observed\n\n1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing\n\n\n\nbill_length_mm\nBill length\nLength of the bill (beak)\n\n-99 = missing\nmm\n\n\nbill_depth_mm\nBill depth\n?\n\n-99 = missing\nmm\n\n\nflipper_length_mm\nFlipper length\nLength of the flipper\n\n-99 = missing\nmm\n\n\nbody_mass_g\n?\nBody mass\n\n-99 = missing\n?\n\n\nsex\nSex\nSex of the penguin\n\n1 = female, 2 = male, -99 = missing\n\n\n\n?\nYear\nStudy year\n\n\n\n\n\ncuteness\nCuteness\nSubjective cuteness rated on 10-point scale\nHow cute do you think this penguin is?\n1 = not at all, ? = extremely\n\n\n\ndata-dictionary.ods\nThen save the data dictionary in the same folder as the actual data set file.\n\n\n\n\n\n\nTip 2: Data dictionary for penguins data set (Solution)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nname\nlabel\ndescription\nitem_text\nvalues\nunits\n\n\n\nspecies\nSpecies\nPenguin species\n\n1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing\n\n\n\nisland\nIsland\nIsland in Palmer Archipelago, Antarctica where individual was observed\n\n1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing\n\n\n\nbill_length_mm\nBill length\nLength of the bill (beak)\n\n-99 = missing\nmm\n\n\nbill_depth_mm\nBill depth\nDepth of the bill (beak)\n\n-99 = missing\nmm\n\n\nflipper_length_mm\nFlipper length\nLength of the flipper\n\n-99 = missing\nmm\n\n\nbody_mass_g\nMass\nBody mass\n\n-99 = missing\ng\n\n\nsex\nSex\nSex of the penguin\n\n1 = female, 2 = male, -99 = missing\n\n\n\nyear\nYear\nStudy year\n\n\n\n\n\ncuteness\nCuteness\nSubjective cuteness rated on 10-point scale\nHow cute do you think this penguin is?\n1 = not at all, 10 = extremely\n\n\n\n\nYou can download the solution here.",
     "crumbs": [
       "Home",
-      "Make a README"
+      "Add Data and Data Dictionary"
     ]
   },
   {
-    "objectID": "make-readme.html#practical-exercise-create-your-readme",
-    "href": "make-readme.html#practical-exercise-create-your-readme",
-    "title": "Make a README",
-    "section": "Practical Exercise: Create your README!",
-    "text": "Practical Exercise: Create your README!\nCreate your README now as the file README.md, located at the top level folder.\nIf you feel stuck, you can have a look at the following examples:\n\n\n\n\n\n\nTip 1: Name and Description\n\n\n\n\n\n\n\nREADME.md\n\n# Penguin Paper\n\nThis project contains the Quarto manuscript of our study on penguins (\"Manuscript.qmd\"). It is written in R and uses `renv` to track its dependencies.\n\nThe most important file in this project folder is `Manuscript.qmd` which contains the text of the article as well as the code for its computations. It is accompanied by the following files:\n\n- `Bibliography.bib`: bibliographic references used in the manuscript\n- `data.csv`: a data set containing the simplified `palmerpenguins` data\n- `data_dictionary.html`: a dictionary to the data file, created using `data_dictionary.qmd`\n\nThe folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF according to APA guidelines.\n\n\n\n\n\n\n\n\n\n\nTip 2: Data\n\n\n\n\n\n\n\nREADME.md\n\n## Data\n\nThe manuscript analyzes the \"palmerpenguins\" data set available from &lt;https://cran.r-project.org/package=palmerpenguins&gt;. The data is stored as \"data.csv\" and documented in the file \"data_dictionary.html\". It is made available under CC0 1.0.\n\n\n\n\n\n\n\n\n\n\nTip 3: Computational Requirements\n\n\n\n\n\n\n\nREADME.md\n\n## Computational Requirements\n\nThis manuscript requires the following system software to be installed. In addition, we provide the version numbers this manuscript has last been run with:\n\n- [Quarto](https://quarto.org/docs/download/) 1.6.9\n- GNU Make 4.4.1\n- Pandoc 3.3\n- TinyTeX 2024.09\n- [R](https://cloud.r-project.org/) 4.4.1\n\nOn Fedora Linux, Make and Pandoc can be installed as follows:\n\n```bash\ndnf install -y make pandoc\n```\n\nQuarto and R can be installed using the links provided. TinyTeX can be installed using Quarto by entering the following into the terminal:\n\n```bash\nquarto install tinytex\n```\n\nAll R packages that this project requires are managed using [`renv`](https://cran.r-project.org/package=renv). Therefore, `renv` needs to be installed first, by entering the following in the R console:\n\n```r\ninstall.packages(\"renv\")\n```\n\nNext, one can open a new R session in the root folder of this project and run the following command, which should install all required R packages at their recorded versions:\n\n```r\nrenv::restore()\n```\n\n\n\n\n\n\n\n\n\n\nTip 4: How to reproduce the results\n\n\n\n\n\n\n\nREADME.md\n\n## How to reproduce the results\n\nThe manuscript can be rendered to PDF using the following command:\n\n```bash\nquarto render Manuscript.qmd\n```\n\n\n\n\n\n\n\n\n\n\nTip 5: Citation\n\n\n\n\n\nYou need to add your name in the following example:\n\n\nREADME.md\n\n## Citation\n\nPlease cite this draft as follows:\n\n&gt; Zerna, Scheffel, & &lt;YOUR NAME&gt; (2024): \"A Study on Penguins: A Minimal Reproducible Example\". Unpublished manuscript.\n\n\n\n\n\n\n\n\n\n\nTip 6: License\n\n\n\n\n\nOf course, you would use the same license for the manuscript that you chose in the previous step. You need to add your name in the following example:\n\n\nREADME.md\n\n## License\n\nThe manuscript files `Manuscript.qmd`, `Manuscript.tex`, and `Manuscript.pdf` by Josephine Zerna, Christoph Scheffel, and &lt;YOUR NAME&gt; are available under [CC\\ BY-SA\\ 4.0](https://creativecommons.org/licenses/by-sa/4.0/). For further copyright information, see `LICENSE.txt`.\n\n\n\n\nAfter adding a README, commit your changes:\n\n\nTerminal\n\ngit status\ngit add .\ngit commit -m \"Add README\"",
+    "objectID": "data.html#practical-exercise-add-data-citation-and-attribution",
+    "href": "data.html#practical-exercise-add-data-citation-and-attribution",
+    "title": "Add Data and Data Dictionary",
+    "section": "Practical Exercise: Add Data Citation and Attribution",
+    "text": "Practical Exercise: Add Data Citation and Attribution\nAll data relied upon should be cited in the manuscript to allow for precise identification and access. Please add an appropriate citation for the data set to the manuscript where it says “cite data here”.\n\n\n\n\n\n\nTip 3: Citing the Data Set (Hint)\n\n\n\n\n\nYou can find an appropriate BibTeX entry on the palmerpenguins package website.\n\n\n\n\n\n\n\n\n\nTip 4: Citing the Data Set (Solution)\n\n\n\n\n\nCopy the following BibTeX entry to the file Bibliography.bib:\n\n\n\n\nBibliography.bib\n\n@Manual{horst2020,\n  title = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},\n  author = {Allison Horst and Alison Hill and Kristen Gorman},\n  year = {2022},\n  note = {R package version 0.1.1},\n  url = {https://allisonhorst.github.io/palmerpenguins/},\n}\n\n\n\nThen, find the line in the manuscript that says “cite data here” and replace it with a sentence such as the following:\n\n\nManuscript.qmd\n\nThe analyzed data are by @horst2020.\n\nRender the document to check that the citation is displayed properly.\n\n\nTerminal\n\nquarto render Manuscript.qmd\n\n\n\n\nWhile citation happens in the manuscript for reasons of academic integrity and reproducibility, to comply with any licenses you also may need to provide attribution within your project folder. Even though the data file we use here does not require attribution, we recommend adding a short paragraph to LICENSE.txt:\n\n\n\n\nLICENSE.txt\n\nThe penguins data stored in \"data.csv\" by Allison Horst, Alison Hill, and Kristen Gorman available from &lt;https://allisonhorst.github.io/palmerpenguins/&gt; are licensed under CC0 1.0: &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;",
     "crumbs": [
       "Home",
-      "Make a README"
+      "Add Data and Data Dictionary"
+    ]
+  },
+  {
+    "objectID": "data.html#wrap-up",
+    "href": "data.html#wrap-up",
+    "title": "Add Data and Data Dictionary",
+    "section": "Wrap up",
+    "text": "Wrap up\nCongrats! You documented your data set and cited it correctly.\nTo finalize this step, you can go through the commit routine:\n\n\nTerminal\n\ngit status\ngit add .\ngit commit -m \"Add data\"",
+    "crumbs": [
+      "Home",
+      "Add Data and Data Dictionary"
+    ]
+  },
+  {
+    "objectID": "data.html#footnotes",
+    "href": "data.html#footnotes",
+    "title": "Add Data and Data Dictionary",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nFor example, using Amnesia, ARX, sdcTools, Synthpop, OpenDP, or Greenmask.↩︎",
+    "crumbs": [
+      "Home",
+      "Add Data and Data Dictionary"
+    ]
+  },
+  {
+    "objectID": "archive.html",
+    "href": "archive.html",
+    "title": "Archive Your Project",
+    "section": "",
+    "text": "The project folder is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder (excerpt from Jackson & The Software Sustainability Institute, 2018b, with footnotes removed, licensed under CC BY 4.0):\n\nDoes the digital repository give you a unique persistent digital identifier for your deposit?\nPersistent digital identifiers are identifiers that are provided under the assumption that they, and the digital objects they refer to, will remain available long term. Examples of unique persistent digital identifiers include DOIs and ARKs. The use of persistent digital identifiers for research outputs, including papers, data and software, and the use of these for citation purposes, is becoming prevalent in research.\nCan the digital repository accommodate the size of your deposit?\nDigital repositories may have constraints on the size of deposits they accept. For example, Zenodo has a limit of 50 GB and the University of Edinburgh DataShare has a limit of 20 GB for deposits done via a browser and 100 GB otherwise.\nHas your funder or publisher recommended or mandated a digital repository to use?\nIf both a funder and publisher mandate two different digital repositories you could deposit within them both, or discuss with each to see if they will agree for you to use one only, even if it is not the one they mandate.\nAre the policies of the digital repository acceptable to you?\nThese can include terms and conditions of use; availability of the service (e.g. does the service regularly go down for updates or does it run 24/7); how resilient the service is to breakdowns; where deposits are stored; how they are stored; what are the plans for stored deposits if the repository goes out of business; how secure the storage is; how regularly it is backed up; how long backups are kept for; and what disaster recovery plans are in place. Knowing the quality of service can help you judge whether your deposit will be available to others, and yourself, even in the face of disaster. It also allows you, and your institution, to develop contingency plans should such drastic circumstances arise.\nIs the longevity of the digital repository acceptable to you?\nYou want to know that the digital repository will host your deposit for as long as you need it too, not just 6 months or so. The policies or terms and conditions of the digital repository should state this. For example, Zenodo states that their lifetime is currently 20 years and figshare guarantees 10 years of persistent availability.\nIs the digital repository free or do you have to pay a fee? If there is a fee, is this a one-off payment and can you afford it?\nIf a digital repository expects a one-off payment, to subsidise its hosting, you may be able to pay for this out of your project budget or your institution may pay this for you. It is recommended that you avoid any digital repository that expects a regular fee for the duration for which they hold the deposit, since it would most likely be unsustainable for your institution to commit to ever-increasing fees over a long term. There are many free digital repositories available.\nIs the digital repository accredited or certified?\nThe digital repository may be accredited or certified by an independent agency that reviews digital repositories according to various criteria related to its policies and processes. The presence of an accreditation or certification may provide you with an additional degree of confidence that the digital repository meets your requirements. For example, the Data Seal of Approval can be awarded to digital repositories who satisfy a set of quality guidelines relating to how they manage, preserve and make available the deposits they hold. The presence of a Data Seal of Approval could give you additional confidence that a digital repository is suitable for holding your deposit.\n\nAdditional guidance is provided by d’Aquin et al. (2023), Garijo et al. (2022), and Science Europe (2021). You can use the registry of research data repositories re3data.org to find one that matches your criteria. We think that the Software Heritage code archive and Zenodo are good choices, but don’t forget to also check your local institutions for recommendations. Note that the Open Science Framework (OSF) is not recommended because it allows the deletion of files and projects after their publication.",
+    "crumbs": [
+      "Home",
+      "Archive Your Project"
+    ]
+  },
+  {
+    "objectID": "archive.html#where-to-deposit-software",
+    "href": "archive.html#where-to-deposit-software",
+    "title": "Archive Your Project",
+    "section": "",
+    "text": "The project folder is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder (excerpt from Jackson & The Software Sustainability Institute, 2018b, with footnotes removed, licensed under CC BY 4.0):\n\nDoes the digital repository give you a unique persistent digital identifier for your deposit?\nPersistent digital identifiers are identifiers that are provided under the assumption that they, and the digital objects they refer to, will remain available long term. Examples of unique persistent digital identifiers include DOIs and ARKs. The use of persistent digital identifiers for research outputs, including papers, data and software, and the use of these for citation purposes, is becoming prevalent in research.\nCan the digital repository accommodate the size of your deposit?\nDigital repositories may have constraints on the size of deposits they accept. For example, Zenodo has a limit of 50 GB and the University of Edinburgh DataShare has a limit of 20 GB for deposits done via a browser and 100 GB otherwise.\nHas your funder or publisher recommended or mandated a digital repository to use?\nIf both a funder and publisher mandate two different digital repositories you could deposit within them both, or discuss with each to see if they will agree for you to use one only, even if it is not the one they mandate.\nAre the policies of the digital repository acceptable to you?\nThese can include terms and conditions of use; availability of the service (e.g. does the service regularly go down for updates or does it run 24/7); how resilient the service is to breakdowns; where deposits are stored; how they are stored; what are the plans for stored deposits if the repository goes out of business; how secure the storage is; how regularly it is backed up; how long backups are kept for; and what disaster recovery plans are in place. Knowing the quality of service can help you judge whether your deposit will be available to others, and yourself, even in the face of disaster. It also allows you, and your institution, to develop contingency plans should such drastic circumstances arise.\nIs the longevity of the digital repository acceptable to you?\nYou want to know that the digital repository will host your deposit for as long as you need it too, not just 6 months or so. The policies or terms and conditions of the digital repository should state this. For example, Zenodo states that their lifetime is currently 20 years and figshare guarantees 10 years of persistent availability.\nIs the digital repository free or do you have to pay a fee? If there is a fee, is this a one-off payment and can you afford it?\nIf a digital repository expects a one-off payment, to subsidise its hosting, you may be able to pay for this out of your project budget or your institution may pay this for you. It is recommended that you avoid any digital repository that expects a regular fee for the duration for which they hold the deposit, since it would most likely be unsustainable for your institution to commit to ever-increasing fees over a long term. There are many free digital repositories available.\nIs the digital repository accredited or certified?\nThe digital repository may be accredited or certified by an independent agency that reviews digital repositories according to various criteria related to its policies and processes. The presence of an accreditation or certification may provide you with an additional degree of confidence that the digital repository meets your requirements. For example, the Data Seal of Approval can be awarded to digital repositories who satisfy a set of quality guidelines relating to how they manage, preserve and make available the deposits they hold. The presence of a Data Seal of Approval could give you additional confidence that a digital repository is suitable for holding your deposit.\n\nAdditional guidance is provided by d’Aquin et al. (2023), Garijo et al. (2022), and Science Europe (2021). You can use the registry of research data repositories re3data.org to find one that matches your criteria. We think that the Software Heritage code archive and Zenodo are good choices, but don’t forget to also check your local institutions for recommendations. Note that the Open Science Framework (OSF) is not recommended because it allows the deletion of files and projects after their publication.",
+    "crumbs": [
+      "Home",
+      "Archive Your Project"
+    ]
+  },
+  {
+    "objectID": "archive.html#using-zenodo-to-archive-your-project-folder",
+    "href": "archive.html#using-zenodo-to-archive-your-project-folder",
+    "title": "Archive Your Project",
+    "section": "Using Zenodo to Archive Your Project Folder",
+    "text": "Using Zenodo to Archive Your Project Folder\nIn the following we will demonstrate how to use Zenodo to archive one’s project folder and obtain a DOI.\n\n\n\n\n\n\nCaution 1: Zenodo Sandbox\n\n\n\nNote that during this tutorial, we will be using Zenodo’s sandbox instance located at sandbox.zenodo.org in order to learn how to use it while not wasting Zenodo’s resources. For real projects, use the production instance at zenodo.org, which requires a separate account.\n\n\nFirst, create an account on the Zenodo Sandbox by clicking on Sign up in the upper right corner and submitting the provided form. Then, confirm your email address (also check your spam folder if you cannot find the confirmation email).\nNow you can follow the guide “Create new upload”, taking into account the following notes specific to each step:\n\nAdd/remove files: To circumvent the file limit on Zenodo, you can bundle your project folder in one ZIP file and upload that instead. Be sure to exclude all files mentioned in your .gitignore file!\nFill in metadata\n\nDigital Object Identifier (DOI): Usually, you will want a DOI, therefore you need to choose No for the question whether you already have a DOI for this upload, and click on Get a DOI now!.\nResource type: Select the most appropriate one, for example, Publication / Preprint.\nLicenses: If your project folder only contains content by you and if you previously only chose one license, you can select that by choosing Add standard. Otherwise, click on Add custom and describe how each file is licensed. If you have been using REUSE to record license information, you can enter SPDX Document as title and run the reuse tool with reuse spdx -o reuse.spdx to create the file reuse.spdx. Then you can paste the content of reuse.spdx into the description field of the custom license as it contains information about the license of each file.\n\n\nIf you previously uploaded your project folder to a public Git repository (which we didn’t cover during this tutorial), you could also add the new DOI to your README, for example, under the section “Citation”.",
+    "crumbs": [
+      "Home",
+      "Archive Your Project"
+    ]
+  },
+  {
+    "objectID": "archive.html#final-remarks",
+    "href": "archive.html#final-remarks",
+    "title": "Archive Your Project",
+    "section": "Final Remarks",
+    "text": "Final Remarks\nThere are situations in which you are not allowed to share your data publicly. In this case, consider using a repository specifically for research data, which later grants access for valid uses individually.\nFor further information, you may be interested in “Software Deposit: Guidance for Researchers” (Jackson & The Software Sustainability Institute, 2018a).",
+    "crumbs": [
+      "Home",
+      "Archive Your Project"
     ]
   },
   {
@@ -218,27 +305,84 @@
     ]
   },
   {
-    "objectID": "in-depth-material/other-dependencies.html",
-    "href": "in-depth-material/other-dependencies.html",
-    "title": "Identify additional system dependencies for the README",
+    "objectID": "in-depth-material/data-dic-generation.html",
+    "href": "in-depth-material/data-dic-generation.html",
+    "title": "Generation of Data Dictionaries Using R",
     "section": "",
-    "text": "The specific version of R and the loaded packages is the most crucial information that should go into the README (or that is stored in the renv lockfile). Ideally, you list other system dependencies, such as the version of Quarto1 that you used to render your paper.\nAn overview over the system dependencies of R packages can be created using the function pak::pkg_sysreqs(). In combination with renv, we can obtain the system dependencies of all R packages the current project directly depends on:\nThe output may look like the following:\nWe can see that the programs make, pandoc, and git were identified as system dependencies. Often, one can obtain their version by running them with the --version argument:\nHowever, this does not work for all system dependencies. Specifically, it does not work for libraries – software that is not supposed to be run on its own. Identifying their version is beyond the scope of this tutorial.\nWe also know that we need Quarto to create the PDF, so let’s find out its version as well:\nIf you installed apaquarto or any other Quarto extension, one can query their versions as follows:2\nFinally, we know that we installed a \\(\\TeX\\) distribution to create the PDF, so let’s find out its version by running:\nThe output is quite long and it might look slightly different for you, but the relevant sections are the following:\nAdd these dependencies to the section Computational Requirements / Dependencies of your README file.\nOf course, all the system dependencies identified until now may have dependencies on their own. Use your own judgement to decide when not to dig deeper.",
+    "text": "Note: This is an add-on to the Chapter “Add Data and Data Dictionary”. It describes how to (a) generate data dictionaries with R, and (b) how to create a machine readable documentation of the data.",
     "crumbs": [
       "Home",
       "In-depth material",
-      "Identify additional system dependencies for the README"
+      "Automatic Generation of Data Dictionaries"
     ]
   },
   {
-    "objectID": "in-depth-material/other-dependencies.html#footnotes",
-    "href": "in-depth-material/other-dependencies.html#footnotes",
-    "title": "Identify additional system dependencies for the README",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nAs of August 2024, a proposal for renv to record the version of Quarto has not been implemented, see rstudio/renv#1143.↩︎\nLuckily, the extensions are included in the project folder, so technically their version is already recorded in the project’s files.↩︎",
+    "objectID": "in-depth-material/data-dic-generation.html#automatic-generation-of-data-dictionaries",
+    "href": "in-depth-material/data-dic-generation.html#automatic-generation-of-data-dictionaries",
+    "title": "Generation of Data Dictionaries Using R",
+    "section": "Automatic Generation of Data Dictionaries",
+    "text": "Automatic Generation of Data Dictionaries\nFirst, we will demonstrate how to create a simple data dictionary using the R package datawizard. We will use the penguin data set which is introduced in the Chapter “Add Data and Data Dictionary”. You can download it and put it into your project folder:\ndata.csv\nYou can install the datawizard package into our renv environment using:\n\n\nR Console\n\nrenv::install(\"datawizard\")\n\nWe create a separate Quarto file for the data dictionary. Create it by clicking on File &gt; New File &gt; Quarto Document…. Choose a title such as Data Dictionary, select HTML as format, uncheck the use of the visual markdown editor, and click on Create. Remove everything except the YAML header (between the ---). To make the HTML file self-contained, also set embed-resources: true such that the YAML header looks as follows:\n\n\ndata_dictionary.qmd\n\n---\ntitle: \"Data Dictionary\"\nformat:\n  html:\n    embed-resources: true\n---\n\nThen, save it as data_dictionary.qmd by clicking on File &gt; Save.\nTo create the actual data dictionary, first write a description for every column so others can understand what the variable names mean. Where necessary, also document their value – this is especially important if their meaning is non-obvious. In the following, we demonstrate this by storing the penguins’ binomial name along with the English name.\n\n\n\ndata_dictionary.qmd\n\n```{r}\n#| echo: false\n\n# Store the description of variables\nvars &lt;- c(\n  species = \"an integer denoting penguin species\",\n  island = \"an integer denoting island in Palmer Archipelago, Antarctica\",\n  bill_length_mm = \"a number denoting bill length (millimeters)\",\n  bill_depth_mm = \"a number denoting bill depth (millimeters)\",\n  flipper_length_mm = \"an integer denoting flipper length (millimeters)\",\n  body_mass_g = \"an integer denoting body mass (grams)\",\n  sex = \"an integer denoting penguin sex\",\n  year = \"an integer denoting the study year\"\n)\n\n# Store the description of variable values\nvals &lt;- list(\n  species = c(\n    \"1\" = \"Adelie\",\n    \"2\" = \"Chinstrap\",\n    \"3\" = \"Gentoo\"\n  ),\n  island = c(\n    \"1\" = \"Biscoe\",\n    \"2\" = \"Dream\",\n    \"3\" = \"Torgersen\"\n  ),\n  sex = c(\n    \"1\" = \"female\",\n    \"2\" = \"male\"\n  )\n)\n```\n\n\nThen, load the data and use datawizard to add the descriptions to the data.frame:1\n\n\n\n\ndatawizard: Easy Data Wrangling and Statistical Transformations\n\n\n\n\ndata_dictionary.qmd\n\n```{r}\n#| echo: false\n\ndat &lt;- read.csv(\"data.csv\")\ndat[dat == -99L] &lt;- NA\n\nfor (x in names(vars)) {\n  if (x %in% names(vals)) {\n    dat &lt;- datawizard::assign_labels(\n      dat,\n      select = I(x),\n      variable = vars[[x]],\n      values = vals[[x]]\n    )\n  } else {\n    dat &lt;- datawizard::assign_labels(\n      dat,\n      select = I(x),\n      variable = vars[[x]]\n    )\n  }\n}\n```\n\n\nThen, you can create the data dictionary containing the descriptions, but also some other information about each variable (e.g., the number of missing values) and print it.\n\n\n\ndata_dictionary.qmd\n\n```{r}\n#| echo: false\n#| column: \"body-outset\"\n#| classes: plain\n#| tbl-cap: \"{.borderless .hover}\"\n\ndatawizard::data_codebook(dat) |&gt;\n  datawizard::data_select(exclude = ID) |&gt;\n  datawizard::data_filter(N != \"\") |&gt;\n  datawizard::print_md()\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nLabel\nType\nMissings\nValues\nValue Labels\nN\n\n\n\nspecies\nan integer denoting penguin species\ninteger\n0 (0.0%)\n1\nAdelie\n152 (44.2%)\n\n\n\n\n\n\n2\nChinstrap\n68 (19.8%)\n\n\n\n\n\n\n3\nGentoo\n124 (36.0%)\n\n\nisland\nan integer denoting island in Palmer Archipelago, Antarctica\ninteger\n0 (0.0%)\n1\nBiscoe\n168 (48.8%)\n\n\n\n\n\n\n2\nDream\n124 (36.0%)\n\n\n\n\n\n\n3\nTorgersen\n52 (15.1%)\n\n\nbill_length_mm\na number denoting bill length (millimeters)\nnumeric\n2 (0.6%)\n[32.1, 59.6]\n\n342\n\n\nbill_depth_mm\na number denoting bill depth (millimeters)\nnumeric\n2 (0.6%)\n[13.1, 21.5]\n\n342\n\n\nflipper_length_mm\nan integer denoting flipper length (millimeters)\ninteger\n2 (0.6%)\n[172, 231]\n\n342\n\n\nbody_mass_g\nan integer denoting body mass (grams)\ninteger\n2 (0.6%)\n[2700, 6300]\n\n342\n\n\nsex\nan integer denoting penguin sex\ninteger\n11 (3.2%)\n1\nfemale\n165 (49.5%)\n\n\n\n\n\n\n2\nmale\n168 (50.5%)\n\n\nyear\nan integer denoting the study year\ninteger\n0 (0.0%)\n2007\n\n110 (32.0%)\n\n\n\n\n\n\n2008\n\n114 (33.1%)\n\n\n\n\n\n\n2009\n\n120 (34.9%)\n\n\ncuteness\n\ninteger\n0 (0.0%)\n[1, 10]\n\n344\n\n\n\n\n\nDepending on the type of data, it may also be necessary to describe sampling procedures (e.g., selection criteria), measurement instruments (e.g., questionnaires), appropriate weighting, already applied preprocessing steps, or contact information. In our case, as the data has already been published, we only store a reference to its source.\nThe data set is from the R package palmerpenguins. If you had it installed you could use the function citation() to create such a reference:\n\ncitation(\"palmerpenguins\", auto = TRUE) |&gt;\n  format(bibtex = FALSE, style = \"text\")\n\nWithout the package palmerpenguins installed, you can find a suggested citation on its website and add that to your data dictionary:\n\n\n\n\ndata_dictionary.qmd\n\nHorst A, Hill A, Gorman K (2022). _palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data_. R package version 0.1.1, &lt;https://allisonhorst.github.io/palmerpenguins/&gt;.\n\n\n\nFinally, you can render the data dictionary by running the following:\n\n\nTerminal\n\nquarto render data_dictionary.qmd\n\nThis should create the file data_dictionary.html which you can open and view in your web browser.\nIf you want to learn more about the sharing of research data, have a look at the tutorial “FAIR research data management”.",
     "crumbs": [
       "Home",
       "In-depth material",
-      "Identify additional system dependencies for the README"
+      "Automatic Generation of Data Dictionaries"
+    ]
+  },
+  {
+    "objectID": "in-depth-material/data-dic-generation.html#create-machine-readable-variable-documentation",
+    "href": "in-depth-material/data-dic-generation.html#create-machine-readable-variable-documentation",
+    "title": "Generation of Data Dictionaries Using R",
+    "section": "Create Machine-Readable Variable Documentation",
+    "text": "Create Machine-Readable Variable Documentation\nOne could go even further by making the information machine-readable in a standardized way.\nThis section demonstrates how the title and description of the data set, the description of the variables and their valid values are stored in a machine-readable way. We’ll reuse the descriptions we already created2 and add a few others.\nFirst, store the title and description of the data set as a whole:\n\n\nR Console\n\ntable_info &lt;- c(\n  title = \"penguins data set\",\n  description = \"Size measurements for adult foraging penguins near Palmer Station, Antarctica\"\n)\n\nAs before, also provide a reference to the source.\n\n\n\n\nR Console\n\ndat_source &lt;- \"https://allisonhorst.github.io/palmerpenguins/\"\n\n\n\nNext, create a list of the categorical variables’ valid values:\n\n\nR Console\n\nvalid_vals &lt;- list(\n  species = c(\"Adelie\", \"Gentoo\", \"Chinstrap\"),\n  island = c(\"Torgersen\", \"Biscoe\", \"Dream\"),\n  sex = c(\"male\", \"female\"),\n  year = c(2007, 2008, 2009)\n)\n\nFinally, store the descriptions of the variables we already created earlier:\n\n\nR Console\n\n# Store the description of variables\nvars &lt;- c(\n  species = \"a character string denoting penguin species\",\n  island = \"a character string denoting island in Palmer Archipelago, Antarctica\",\n  bill_length_mm = \"a number denoting bill length (millimeters)\",\n  bill_depth_mm = \"a number denoting bill depth (millimeters)\",\n  flipper_length_mm = \"an integer denoting flipper length (millimeters)\",\n  body_mass_g = \"an integer denoting body mass (grams)\",\n  sex = \"a character string denoting penguin sex\",\n  year = \"an integer denoting the study year\"\n)\n\nGenerally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “frictionless data” standard, where metadata are stored separately. Alternatives would be RO-Crate and Psych-DS.\nSpecifically, one can use the R package frictionless to create a schema which describes the structure of the data.3 For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as NA and that the data are licensed under CC0 1.0. Finally, the package is used to create a metadata file that contains the schema.\n\n\nR Console\n\n# Install {frictionless} and the required dependency {stringi}\nrenv::install(c(\n  \"frictionless\",\n  \"stringi\"\n))\n\n# Read data and create schema\ndat_filename &lt;- \"data.csv\"\ndat &lt;- read.csv(dat_filename)\ndat_schema &lt;- frictionless::create_schema(dat)\n\n# Add descriptions to the fields\ndat_schema$fields &lt;- lapply(dat_schema$fields, \\(x) {\n  c(x, description = vars[[x$name]])\n})\n\n# Record valid values\ndat_schema$fields &lt;- lapply(dat_schema$fields, \\(x) {\n  if (x[[\"name\"]] %in% names(valid_vals)) {\n    modifyList(x, list(constraints = list(enum = valid_vals[[x$name]])))\n  } else {\n    x\n  }\n})\n\n# Define missing values\ndat_schema$missingValues &lt;- c(\"\", \"NA\")\n\n# Create package with license info and write it\ndat_package &lt;- frictionless::create_package() |&gt;\n  frictionless::add_resource(\n    resource_name = \"penguins\",\n    data = dat_filename,\n    schema = dat_schema,\n    title = table_info[[\"title\"]],\n    description = table_info[[\"description\"]],\n    licenses = list(list(\n      name = \"CC0-1.0\",\n      path = \"https://creativecommons.org/publicdomain/zero/1.0/\",\n      title = \"CC0 1.0 Universal\"\n    )),\n    sources = list(list(\n      title = \"CRAN\",\n      path = dat_source\n    ))\n  )\nfrictionless::write_package(dat_package, directory = \".\")\n\nThis creates the metadata file datapackage.json in the current directory. Make sure it is located in the same folder as data.csv, as together they comprise a data package.",
+    "crumbs": [
+      "Home",
+      "In-depth material",
+      "Automatic Generation of Data Dictionaries"
+    ]
+  },
+  {
+    "objectID": "in-depth-material/data-dic-generation.html#footnotes",
+    "href": "in-depth-material/data-dic-generation.html#footnotes",
+    "title": "Generation of Data Dictionaries Using R",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nNote that the code provided does not alter the data file – no description will be added to data.csv. The descriptions are only added to a (temporary) copy of the data set within R to create the data dictionary.↩︎\nUnfortunately, the descriptions of values are not reused in this example, as they are not supported by the specification we are using.↩︎\nIn June 2024, version 2 of the frictionless data standard has been released. As of November 2024, the R package frictionless only supports the first version, though support for v2 is planned.↩︎",
+    "crumbs": [
+      "Home",
+      "In-depth material",
+      "Automatic Generation of Data Dictionaries"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Code Publishing Tutorial",
+    "section": "",
+    "text": "This tutorial covers how to make your code and material available to others. It wraps up a series of tutorials which we recommend to go through in advance.",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#tutorial-overview",
+    "href": "index.html#tutorial-overview",
+    "title": "Code Publishing Tutorial",
+    "section": "Tutorial Overview",
+    "text": "Tutorial Overview\nThis self-paced tutorial is intended to be worked through in order, one section after the other.\nThe tutorial is split into the following sections:\n\n\nIntroduction motivates why you should publish your code and material.\n\nProject Setup prepares the project folder and the example manuscript used throughout.\n\nSharing work of others: Copyright explains what you are allowed to share and under which conditions.\n\nAdd Data and Data Dictionary adds the underlying data and documents it.\n\nAdd Code adds the analysis code and makes the project reproducible.\n\nChoose a License picks an appropriate license for your content and code.\n\nMake a README writes the high-level documentation others need to reuse your project.\n\nArchive Your Project uploads the project to a repository and obtains a DOI.\n\nWe will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:\n\nremoving legal barriers: adding an appropriate license\nhigh-level documentation: creating a README file\narchival: uploading it to a repository",
+    "crumbs": [
+      "Home",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html#prerequisite-tutorials",
+    "href": "index.html#prerequisite-tutorials",
+    "title": "Code Publishing Tutorial",
+    "section": "Prerequisite Tutorials",
+    "text": "Prerequisite Tutorials\nWhile the general principles taught in this tutorial apply to most researchers publishing code, we will focus on the programming language R and the publishing system Quarto. You may want to work through the following tutorials in advance:\n\n\nIntroduction to version control with git and GitHub within RStudio: This tutorial explains how to set up a simple project with version control.\n\nCollaborative coding with GitHub and RStudio: Here you can learn how to collaborate with others on code projects using GitHub.\n\nIntroduction to R: This is an introduction to the R programming language.\n\nIntroduction to {renv}: Here you can learn how to manage the dependencies of an R project.\n\nIntroduction to Quarto: Learn how to combine prose and code to make documents more reproducible.\n\nIntroduction to Zotero: Get introduced to the reference management software Zotero.\n\nFAIR research data management: Learn how to make your data findable, accessible, interoperable, and reusable.\n\n\n\n\n\n\n\nWarningRecommended Software\n\n\n\nThis tutorial assumes you have the following software installed:\n\nGit\nR\nQuarto\n\nRTools (Windows users only)\n\nSome things will be explained using the RStudio IDE, but you are free to use any IDE you like.\n\n\n\n\n\n\n\n\nNote 1: Alternatives to Quarto\n\n\n\n\n\nQuarto is a tool to render dynamic documents, but not the only one.\nIt is the successor of the R package rmarkdown and mostly backwards-compatible. rmarkdown continues to be supported, but the development of new features happens in Quarto. The main difference is that Quarto has first-class support for Python. In other words, Python users of Quarto do not need to have R installed.\nWhile this tutorial focuses on Quarto, you can also create dynamic documents with the following tools:\n\nJupyter Book\nPluto\nmarimo\nStencila\nCurvenote\nshowyourwork!\nOrg Mode\nStatTag\n\n\n\n\nGet started\n\n\n\n\n\n\n\n\nTipSupport the LMU Open Science Center!\n\n\n\nLike this tutorial? Be sure to give the repository a star and follow us on GitHub!\n\n\n\n\n\n\n\n\n\n\n\nTipQuestions about this tutorial?\n\n\n\nIf you have questions for the author of this tutorial, please take a look at the About page.",
+    "crumbs": [
+      "Home",
+      "Overview"
     ]
   },
   {
@@ -352,6 +496,55 @@
     ]
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, and Pat Callahan.\nThis tutorial was created by Florian Kohrt. It is based on previous work by Josephine Zerna and Christoph Scheffel. Comments on earlier versions were kindly provided by Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt, and Sarah von Grebmer zu Wolfsthurn. Felix Schönbrodt created this short version of the longer original tutorial."
+  },
+  {
+    "objectID": "about.html#contributors",
+    "href": "about.html#contributors",
+    "title": "About",
+    "section": "",
+    "text": "This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, and Pat Callahan.\nThis tutorial was created by Florian Kohrt. It is based on previous work by Josephine Zerna and Christoph Scheffel. Comments on earlier versions were kindly provided by Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt, and Sarah von Grebmer zu Wolfsthurn. Felix Schönbrodt created this short version of the longer original tutorial."
+  },
+  {
+    "objectID": "about.html#license-and-disclaimer",
+    "href": "about.html#license-and-disclaimer",
+    "title": "About",
+    "section": "License and Disclaimer",
+    "text": "License and Disclaimer\nNone of the discussion in this tutorial constitutes legal advice.\nExcept where noted otherwise, the narrative text in this tutorial is licensed under CC BY-SA 4.0; the code without any narrative text is also (at your option) available under CC0 1.0.\nThe files Manuscript.qmd and Bibliography.bib are made available by Josephine Zerna and Christoph Scheffel under CC0 1.0.\nThe screenshots of the RStudio IDE are Copyright (C) 2024 Posit PBC and are available under the GNU Affero General Public License v3. The source code is available on GitHub."
+  },
+  {
+    "objectID": "about.html#notes",
+    "href": "about.html#notes",
+    "title": "About",
+    "section": "Notes",
+    "text": "Notes\nThis tutorial was primarily written in 2025 using R and Quarto. Major changes to either can be found at the websites linked above, for the most up-to-date information, and to confirm that our tutorial is not out-of-date."
+  },
+  {
+    "objectID": "about.html#utilized-software",
+    "href": "about.html#utilized-software",
+    "title": "About",
+    "section": "Utilized Software",
+    "text": "Utilized Software\n\n\nThis work was completed using the following R packages: datawizard v. 1.3.1 (Patil et al., 2022), downlit v. 0.4.5 (Wickham, 2025), grateful v. 0.3.0 (Rodriguez-Sanchez & Jackson, 2025), palmerpenguins v. 0.1.1 (Horst et al., 2020), renv v. 1.0.7 (Ushey & Wickham, 2024), rmarkdown v. 2.31 (Allaire et al., 2026; Xie et al., 2018, 2020), sessioninfo v. 1.2.4 (Wickham et al., 2026), tidyverse v. 2.0.0 (Wickham et al., 2019), withr v. 3.0.3 (Hester et al., 2026).\n\n\nQuarto 1.11.9 was utilized to render the files.\n\nsessioninfo::session_info()\n\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.6.1 (2026-06-24)\n os       Ubuntu 26.04.1 LTS\n system   x86_64, linux-gnu\n ui       X11\n language (EN)\n collate  C.UTF-8\n ctype    C.UTF-8\n tz       UTC\n date     2026-11-23\n pandoc   3.10 @ /opt/quarto/bin/tools/ (via rmarkdown)\n quarto   1.11.9 @ /usr/local/bin/quarto\n\n─ Packages ───────────────────────────────────────────────────────────────────\n ! package     * version date (UTC) lib source\n P cli           3.6.6   2026-04-09 [?] RSPM (R 4.6.0)\n P digest        0.6.39  2025-11-19 [?] RSPM (R 4.6.0)\n P evaluate      1.0.5   2025-08-27 [?] RSPM (R 4.6.0)\n P fastmap       1.2.0   2024-05-15 [?] RSPM (R 4.6.0)\n P grateful      0.3.0   2025-09-04 [?] RSPM (R 4.6.0)\n P htmltools     0.5.9   2025-12-04 [?] RSPM (R 4.6.0)\n P jsonlite      2.0.0   2025-03-27 [?] RSPM (R 4.6.0)\n P knitr         1.51    2025-12-20 [?] RSPM (R 4.6.0)\n   renv          1.0.7   2024-04-11 [1] RSPM (R 4.6.1)\n P rlang         1.3.0   2026-07-05 [?] RSPM (R 4.6.0)\n P rmarkdown     2.31    2026-03-26 [?] RSPM (R 4.6.0)\n P sessioninfo   1.2.4   2026-06-04 [?] RSPM (R 4.6.0)\n P withr         3.0.3   2026-06-19 [?] RSPM (R 4.6.0)\n P xfun          0.60    2026-07-09 [?] RSPM (R 4.6.0)\n P yaml          2.3.12  2025-12-10 [?] RSPM (R 4.6.0)\n\n [1] /home/runner/work/code-publishing/code-publishing/renv/library/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu\n [2] /home/runner/.cache/R/renv/sandbox/linux-ubuntu-resolute/R-4.6/x86_64-pc-linux-gnu/e7c0fad7\n\n P ── Loaded and on-disk path mismatch.\n\n──────────────────────────────────────────────────────────────────────────────\n\n\nThis tutorial was written using the lmu-osc/tutorial-template Quarto extension (Callahan, 2026).\n\n\nAllaire, J., Xie, Y., Dervieux, C., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W., & Iannone, R. (2026). rmarkdown: Dynamic documents for r. https://github.com/rstudio/rmarkdown\n\n\nCallahan, P. (2026). LMU open science center tutorial template: A quarto extension. https://doi.org/10.5281/zenodo.21263721\n\n\nHester, J., Henry, L., Müller, K., Ushey, K., Wickham, H., & Chang, W. (2026). withr: Run code “With” temporarily modified global state. https://withr.r-lib.org\n\n\nHorst, A. M., Hill, A. P., & Gorman, K. B. (2020). palmerpenguins: Palmer archipelago (antarctica) penguin data. https://doi.org/10.5281/zenodo.3960218\n\n\nPatil, I., Makowski, D., Ben-Shachar, M. S., Wiernik, B. M., Bacher, E., & Lüdecke, D. (2022). datawizard: An R package for easy data preparation and statistical transformations. Journal of Open Source Software, 7(78), 4684. https://doi.org/10.21105/joss.04684\n\n\nRodriguez-Sanchez, F., & Jackson, C. P. (2025). grateful: Facilitate citation of R packages. https://pakillo.github.io/grateful/\n\n\nUshey, K., & Wickham, H. (2024). renv: Project environments. https://rstudio.github.io/renv/\n\n\nWickham, H. (2025). downlit: Syntax highlighting and automatic linking. https://downlit.r-lib.org/\n\n\nWickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686. https://doi.org/10.21105/joss.01686\n\n\nWickham, H., Chang, W., Flight, R., Müller, K., & Hester, J. (2026). sessioninfo: R session information. https://sessioninfo.r-lib.org\n\n\nXie, Y., Allaire, J. J., & Grolemund, G. (2018). R markdown: The definitive guide. Chapman; Hall/CRC. https://yihui.org/rmarkdown/\n\n\nXie, Y., Dervieux, C., & Riederer, E. (2020). R markdown cookbook. Chapman; Hall/CRC. https://yihui.org/rmarkdown-cookbook"
+  },
+  {
+    "objectID": "about.html#how-to-cite",
+    "href": "about.html#how-to-cite",
+    "title": "About",
+    "section": "How to Cite",
+    "text": "How to Cite\nTo cite this tutorial, please refer to the project’s CITATION.cff file or use the BibTeX citation provided in the appendix below."
+  },
+  {
+    "objectID": "about.html#funding",
+    "href": "about.html#funding",
+    "title": "About",
+    "section": "Funding",
+    "text": "Funding\n\n\n\nThis work was partly funded by the Berkeley Initiative for Transparency in the Social Sciences (BITSS), managed by the Center for Effective Global Action (CEGA)."
+  },
+  {
     "objectID": "code.html",
     "href": "code.html",
     "title": "Add Code",
@@ -429,213 +622,6 @@
     ]
   },
   {
-    "objectID": "archive.html",
-    "href": "archive.html",
-    "title": "Archive Your Project",
-    "section": "",
-    "text": "The project folder is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder (excerpt from Jackson & The Software Sustainability Institute, 2018b, with footnotes removed, licensed under CC BY 4.0):\n\nDoes the digital repository give you a unique persistent digital identifier for your deposit?\nPersistent digital identifiers are identifiers that are provided under the assumption that they, and the digital objects they refer to, will remain available long term. Examples of unique persistent digital identifiers include DOIs and ARKs. The use of persistent digital identifiers for research outputs, including papers, data and software, and the use of these for citation purposes, is becoming prevalent in research.\nCan the digital repository accommodate the size of your deposit?\nDigital repositories may have constraints on the size of deposits they accept. For example, Zenodo has a limit of 50 GB and the University of Edinburgh DataShare has a limit of 20 GB for deposits done via a browser and 100 GB otherwise.\nHas your funder or publisher recommended or mandated a digital repository to use?\nIf both a funder and publisher mandate two different digital repositories you could deposit within them both, or discuss with each to see if they will agree for you to use one only, even if it is not the one they mandate.\nAre the policies of the digital repository acceptable to you?\nThese can include terms and conditions of use; availability of the service (e.g. does the service regularly go down for updates or does it run 24/7); how resilient the service is to breakdowns; where deposits are stored; how they are stored; what are the plans for stored deposits if the repository goes out of business; how secure the storage is; how regularly it is backed up; how long backups are kept for; and what disaster recovery plans are in place. Knowing the quality of service can help you judge whether your deposit will be available to others, and yourself, even in the face of disaster. It also allows you, and your institution, to develop contingency plans should such drastic circumstances arise.\nIs the longevity of the digital repository acceptable to you?\nYou want to know that the digital repository will host your deposit for as long as you need it too, not just 6 months or so. The policies or terms and conditions of the digital repository should state this. For example, Zenodo states that their lifetime is currently 20 years and figshare guarantees 10 years of persistent availability.\nIs the digital repository free or do you have to pay a fee? If there is a fee, is this a one-off payment and can you afford it?\nIf a digital repository expects a one-off payment, to subsidise its hosting, you may be able to pay for this out of your project budget or your institution may pay this for you. It is recommended that you avoid any digital repository that expects a regular fee for the duration for which they hold the deposit, since it would most likely be unsustainable for your institution to commit to ever-increasing fees over a long term. There are many free digital repositories available.\nIs the digital repository accredited or certified?\nThe digital repository may be accredited or certified by an independent agency that reviews digital repositories according to various criteria related to its policies and processes. The presence of an accreditation or certification may provide you with an additional degree of confidence that the digital repository meets your requirements. For example, the Data Seal of Approval can be awarded to digital repositories who satisfy a set of quality guidelines relating to how they manage, preserve and make available the deposits they hold. The presence of a Data Seal of Approval could give you additional confidence that a digital repository is suitable for holding your deposit.\n\nAdditional guidance is provided by d’Aquin et al. (2023), Garijo et al. (2022), and Science Europe (2021). You can use the registry of research data repositories re3data.org to find one that matches your criteria. We think that the Software Heritage code archive and Zenodo are good choices, but don’t forget to also check your local institutions for recommendations. Note that the Open Science Framework (OSF) is not recommended because it allows the deletion of files and projects after their publication.",
-    "crumbs": [
-      "Home",
-      "Archive Your Project"
-    ]
-  },
-  {
-    "objectID": "archive.html#where-to-deposit-software",
-    "href": "archive.html#where-to-deposit-software",
-    "title": "Archive Your Project",
-    "section": "",
-    "text": "The project folder is now ready to be deposited for long-term archival. When considering an appropriate repository, there are a few questions to ponder (excerpt from Jackson & The Software Sustainability Institute, 2018b, with footnotes removed, licensed under CC BY 4.0):\n\nDoes the digital repository give you a unique persistent digital identifier for your deposit?\nPersistent digital identifiers are identifiers that are provided under the assumption that they, and the digital objects they refer to, will remain available long term. Examples of unique persistent digital identifiers include DOIs and ARKs. The use of persistent digital identifiers for research outputs, including papers, data and software, and the use of these for citation purposes, is becoming prevalent in research.\nCan the digital repository accommodate the size of your deposit?\nDigital repositories may have constraints on the size of deposits they accept. For example, Zenodo has a limit of 50 GB and the University of Edinburgh DataShare has a limit of 20 GB for deposits done via a browser and 100 GB otherwise.\nHas your funder or publisher recommended or mandated a digital repository to use?\nIf both a funder and publisher mandate two different digital repositories you could deposit within them both, or discuss with each to see if they will agree for you to use one only, even if it is not the one they mandate.\nAre the policies of the digital repository acceptable to you?\nThese can include terms and conditions of use; availability of the service (e.g. does the service regularly go down for updates or does it run 24/7); how resilient the service is to breakdowns; where deposits are stored; how they are stored; what are the plans for stored deposits if the repository goes out of business; how secure the storage is; how regularly it is backed up; how long backups are kept for; and what disaster recovery plans are in place. Knowing the quality of service can help you judge whether your deposit will be available to others, and yourself, even in the face of disaster. It also allows you, and your institution, to develop contingency plans should such drastic circumstances arise.\nIs the longevity of the digital repository acceptable to you?\nYou want to know that the digital repository will host your deposit for as long as you need it too, not just 6 months or so. The policies or terms and conditions of the digital repository should state this. For example, Zenodo states that their lifetime is currently 20 years and figshare guarantees 10 years of persistent availability.\nIs the digital repository free or do you have to pay a fee? If there is a fee, is this a one-off payment and can you afford it?\nIf a digital repository expects a one-off payment, to subsidise its hosting, you may be able to pay for this out of your project budget or your institution may pay this for you. It is recommended that you avoid any digital repository that expects a regular fee for the duration for which they hold the deposit, since it would most likely be unsustainable for your institution to commit to ever-increasing fees over a long term. There are many free digital repositories available.\nIs the digital repository accredited or certified?\nThe digital repository may be accredited or certified by an independent agency that reviews digital repositories according to various criteria related to its policies and processes. The presence of an accreditation or certification may provide you with an additional degree of confidence that the digital repository meets your requirements. For example, the Data Seal of Approval can be awarded to digital repositories who satisfy a set of quality guidelines relating to how they manage, preserve and make available the deposits they hold. The presence of a Data Seal of Approval could give you additional confidence that a digital repository is suitable for holding your deposit.\n\nAdditional guidance is provided by d’Aquin et al. (2023), Garijo et al. (2022), and Science Europe (2021). You can use the registry of research data repositories re3data.org to find one that matches your criteria. We think that the Software Heritage code archive and Zenodo are good choices, but don’t forget to also check your local institutions for recommendations. Note that the Open Science Framework (OSF) is not recommended because it allows the deletion of files and projects after their publication.",
-    "crumbs": [
-      "Home",
-      "Archive Your Project"
-    ]
-  },
-  {
-    "objectID": "archive.html#using-zenodo-to-archive-your-project-folder",
-    "href": "archive.html#using-zenodo-to-archive-your-project-folder",
-    "title": "Archive Your Project",
-    "section": "Using Zenodo to Archive Your Project Folder",
-    "text": "Using Zenodo to Archive Your Project Folder\nIn the following we will demonstrate how to use Zenodo to archive one’s project folder and obtain a DOI.\n\n\n\n\n\n\nCaution 1: Zenodo Sandbox\n\n\n\nNote that during this tutorial, we will be using Zenodo’s sandbox instance located at sandbox.zenodo.org in order to learn how to use it while not wasting Zenodo’s resources. For real projects, use the production instance at zenodo.org, which requires a separate account.\n\n\nFirst, create an account on the Zenodo Sandbox by clicking on Sign up in the upper right corner and submitting the provided form. Then, confirm your email address (also check your spam folder if you cannot find the confirmation email).\nNow you can follow the guide “Create new upload”, taking into account the following notes specific to each step:\n\nAdd/remove files: To circumvent the file limit on Zenodo, you can bundle your project folder in one ZIP file and upload that instead. Be sure to exclude all files mentioned in your .gitignore file!\nFill in metadata\n\nDigital Object Identifier (DOI): Usually, you will want a DOI, therefore you need to choose No for the question whether you already have a DOI for this upload, and click on Get a DOI now!.\nResource type: Select the most appropriate one, for example, Publication / Preprint.\nLicenses: If your project folder only contains content by you and if you previously only chose one license, you can select that by choosing Add standard. Otherwise, click on Add custom and describe how each file is licensed. If you have been using REUSE to record license information, you can enter SPDX Document as title and run the reuse tool with reuse spdx -o reuse.spdx to create the file reuse.spdx. Then you can paste the content of reuse.spdx into the description field of the custom license as it contains information about the license of each file.\n\n\nIf you previously uploaded your project folder to a public Git repository (which we didn’t cover during this tutorial), you could also add the new DOI to your README, for example, under the section “Citation”.",
-    "crumbs": [
-      "Home",
-      "Archive Your Project"
-    ]
-  },
-  {
-    "objectID": "archive.html#final-remarks",
-    "href": "archive.html#final-remarks",
-    "title": "Archive Your Project",
-    "section": "Final Remarks",
-    "text": "Final Remarks\nThere are situations in which you are not allowed to share your data publicly. In this case, consider using a repository specifically for research data, which later grants access for valid uses individually.\nFor further information, you may be interested in “Software Deposit: Guidance for Researchers” (Jackson & The Software Sustainability Institute, 2018a).",
-    "crumbs": [
-      "Home",
-      "Archive Your Project"
-    ]
-  },
-  {
-    "objectID": "data.html",
-    "href": "data.html",
-    "title": "Add Data and Data Dictionary",
-    "section": "",
-    "text": "You can now download the data set we have prepared for you and put it into your project folder:\ndata.csv\n\n\n\n\npalmerpenguins: Palmer Archipelago (Antarctica) Penguin Data\n\nThe data set is from the package palmerpenguins (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license CC0 1.0. For educational purposes, we added the fictitious column cuteness.\n\n\n\n\n\n\nImportant 1: Consider Legal Restrictions Before Sharing\n\n\n\nEverything you put into the project folder will be shared publicly. For reasons of reproducibility, this should include the data you analyze. Of course, you should only share them to the extent you are allowed to. Besides copyright and similar rights, you need to take into account applicable privacy laws (e.g., the GDPR for European citizens) and contractual obligations (e.g., with your data provider).\nPrivacy laws and contractual obligations may require you to create an anonymized or synthetic data set1, in which case you should provide a reference to a repository where the originally measured data can be obtained from. For further information, you can watch the talk “Data anonymity” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at the accompanying slides. Another resource to look at is the presentation “Creating reproducible packages when data are confidential” by Vilhuber (2024).\n\n\nLet’s take a first look at our data:\n\ndat &lt;- read.csv(\"data.csv\")\nstr(dat)\n\n\n\nR Console\n\n'data.frame':   344 obs. of  9 variables:\n $ species          : int  1 1 1 1 1 1 1 1 1 1 ...\n $ island           : int  3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num  39.1 39.5 40.3 -99 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num  18.7 17.4 18 -99 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int  181 186 195 -99 193 190 181 195 193 190 ...\n $ body_mass_g      : int  3750 3800 3250 -99 3450 3650 3625 4675 3475 4250 ...\n $ sex              : int  2 1 1 -99 1 2 1 2 -99 -99 ...\n $ year             : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...\n $ cuteness         : int  2 3 7 3 7 8 7 2 1 10 ...\n\n\n\nWe can see that the variables species, island, and sex are stored as integers:\n\nspecies\n\n1 = Adelie\n2 = Chinstrap\n3 = Gentoo\n\n\nisland\n\n1 = Biscoe\n2 = Dream\n3 = Torgersen\n\n\nsex\n\n1 = female\n2 = male\n\n\n\nFurther, missing values are stored as -99. We need to document this information somewhere!",
-    "crumbs": [
-      "Home",
-      "Add Data and Data Dictionary"
-    ]
-  },
-  {
-    "objectID": "data.html#add-data-file",
-    "href": "data.html#add-data-file",
-    "title": "Add Data and Data Dictionary",
-    "section": "",
-    "text": "You can now download the data set we have prepared for you and put it into your project folder:\ndata.csv\n\n\n\n\npalmerpenguins: Palmer Archipelago (Antarctica) Penguin Data\n\nThe data set is from the package palmerpenguins (v0.1.1) and contains the recorded bill lengths and sex of penguins living on three islands in the Palmer Archipelago, Antarctica. It was made available by Allison Horst, Alison Hill, and Kristen Gorman under the license CC0 1.0. For educational purposes, we added the fictitious column cuteness.\n\n\n\n\n\n\nImportant 1: Consider Legal Restrictions Before Sharing\n\n\n\nEverything you put into the project folder will be shared publicly. For reasons of reproducibility, this should include the data you analyze. Of course, you should only share them to the extent you are allowed to. Besides copyright and similar rights, you need to take into account applicable privacy laws (e.g., the GDPR for European citizens) and contractual obligations (e.g., with your data provider).\nPrivacy laws and contractual obligations may require you to create an anonymized or synthetic data set1, in which case you should provide a reference to a repository where the originally measured data can be obtained from. For further information, you can watch the talk “Data anonymity” by Felix Schönbrodt recorded during the LMU Open Science Center Summer School 2023 and have a look at the accompanying slides. Another resource to look at is the presentation “Creating reproducible packages when data are confidential” by Vilhuber (2024).\n\n\nLet’s take a first look at our data:\n\ndat &lt;- read.csv(\"data.csv\")\nstr(dat)\n\n\n\nR Console\n\n'data.frame':   344 obs. of  9 variables:\n $ species          : int  1 1 1 1 1 1 1 1 1 1 ...\n $ island           : int  3 3 3 3 3 3 3 3 3 3 ...\n $ bill_length_mm   : num  39.1 39.5 40.3 -99 36.7 39.3 38.9 39.2 34.1 42 ...\n $ bill_depth_mm    : num  18.7 17.4 18 -99 19.3 20.6 17.8 19.6 18.1 20.2 ...\n $ flipper_length_mm: int  181 186 195 -99 193 190 181 195 193 190 ...\n $ body_mass_g      : int  3750 3800 3250 -99 3450 3650 3625 4675 3475 4250 ...\n $ sex              : int  2 1 1 -99 1 2 1 2 -99 -99 ...\n $ year             : int  2007 2007 2007 2007 2007 2007 2007 2007 2007 2007 ...\n $ cuteness         : int  2 3 7 3 7 8 7 2 1 10 ...\n\n\n\nWe can see that the variables species, island, and sex are stored as integers:\n\nspecies\n\n1 = Adelie\n2 = Chinstrap\n3 = Gentoo\n\n\nisland\n\n1 = Biscoe\n2 = Dream\n3 = Torgersen\n\n\nsex\n\n1 = female\n2 = male\n\n\n\nFurther, missing values are stored as -99. We need to document this information somewhere!",
-    "crumbs": [
-      "Home",
-      "Add Data and Data Dictionary"
-    ]
-  },
-  {
-    "objectID": "data.html#add-a-data-dictionary",
-    "href": "data.html#add-a-data-dictionary",
-    "title": "Add Data and Data Dictionary",
-    "section": "Add a Data Dictionary",
-    "text": "Add a Data Dictionary\nWhether or not distributing the data set, it is important to document the meaning (e.g., units) and values of its variables. This is typically done with a data dictionary (also called a codebook).\nThe recommendation for data dictionaries vary between fields – both in terms of the recommended content (i.e., what exactly should be documented) and the technical implementation (i.e., which file formats should be used).\nFor the purpose of this exercise, we keep it easy and propose that you manually create a file with the data dictionary (e.g., as a table in .xlsx, .docx, .ods, or as a Markdown table), documenting only the bare minimum.\n\n\n\n\n\n\n\nTip 1: Creating data dictionaries using R\n\n\n\n\n\nOur in-depth supplementary material “Generation of Data Dictionaries Using R” explains how you can create a data dictionary with R. This advanced chapter also contains a section on how to create machine-readable data dictionaries.\n\n\n\nA bare minimum data dictionary\nMost standards for data dictionaries require at least this information for each variable in your data set:\n\n\nname: Column name of the variable in the data set\n\nlabel: Short title for the variable\n\ndescription: Brief description of what the variable measures or represents\n\nitem_text: Exact wording of a question in a survey\n\nvalues: A mapping of stored answers to their meanings (especially for categorical variables). For example: 1 = male, 2 = female, 9 = missing\n\nunits: The units of measurement (only for numeric variables). For example: kg, USD, years\n\n\nHere’s an example from a different data set, with one row for each variable:\n\n\n\n\n\n\n\n\n\n\nname\nlabel\ndescription\nitem_text\nvalues\nunits\n\n\n\ngender\nGender\nself‑identified gender\n\n1 = male, 2 = female, 3 = other, 9 = missing\n\n\n\nage\nAge\nage in years\n\n-99 = Not answered\nyears\n\n\nblood_pressure\nBlood Pressure (systolic)\nsystolic blood pressure\n\n-99 = Not answered\nmmHg\n\n\nlife_satisfaction\nLife Satisfaction\n5-point scale\nHow satisfied are you with your life?\n1 = very dissatisfied, 2 = dissatisfied, 3 = neutral, 4 = satisfied, 5 = very satisfied, -99 = not answered\n\n\n\n\nYou can download this example data dictionary as an ODS file here.\nDepending on the type of data, it may also be necessary to describe sampling procedures (e.g., selection criteria), measurement instruments (e.g., established questionnaires), appropriate weighting, already applied preprocessing steps, or contact information.\nPractical Exercise: Add your own data dictionary\nNow it’s your turn. Fill in the missing information (denoted by a bold question mark “?”) in the following data dictionary.\n\nShow data dictionary\n\n\n\n\n\n\n\n\n\n\nname\nlabel\ndescription\nitem_text\nvalues\nunits\n\n\n\nspecies\nSpecies\nPenguin species\n\n1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing\n\n\n\nisland\nIsland\nIsland in Palmer Archipelago, Antarctica where individual was observed\n\n1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing\n\n\n\nbill_length_mm\nBill length\nLength of the bill (beak)\n\n-99 = missing\nmm\n\n\nbill_depth_mm\nBill depth\n?\n\n-99 = missing\nmm\n\n\nflipper_length_mm\nFlipper length\nLength of the flipper\n\n-99 = missing\nmm\n\n\nbody_mass_g\n?\nBody mass\n\n-99 = missing\n?\n\n\nsex\nSex\nSex of the penguin\n\n1 = female, 2 = male, -99 = missing\n\n\n\n?\nYear\nStudy year\n\n\n\n\n\ncuteness\nCuteness\nSubjective cuteness rated on 10-point scale\nHow cute do you think this penguin is?\n1 = not at all, ? = extremely\n\n\n\ndata-dictionary.ods\nThen save the data dictionary in the same folder as the actual data set file.\n\n\n\n\n\n\nTip 2: Data dictionary for penguins data set (Solution)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nname\nlabel\ndescription\nitem_text\nvalues\nunits\n\n\n\nspecies\nSpecies\nPenguin species\n\n1 = Adelie, 2 = Chinstrap, 3 = Gentoo, -99 = missing\n\n\n\nisland\nIsland\nIsland in Palmer Archipelago, Antarctica where individual was observed\n\n1 = Biscoe, 2 = Dream, 3 = Torgersen, -99 = missing\n\n\n\nbill_length_mm\nBill length\nLength of the bill (beak)\n\n-99 = missing\nmm\n\n\nbill_depth_mm\nBill depth\nDepth of the bill (beak)\n\n-99 = missing\nmm\n\n\nflipper_length_mm\nFlipper length\nLength of the flipper\n\n-99 = missing\nmm\n\n\nbody_mass_g\nMass\nBody mass\n\n-99 = missing\ng\n\n\nsex\nSex\nSex of the penguin\n\n1 = female, 2 = male, -99 = missing\n\n\n\nyear\nYear\nStudy year\n\n\n\n\n\ncuteness\nCuteness\nSubjective cuteness rated on 10-point scale\nHow cute do you think this penguin is?\n1 = not at all, 10 = extremely\n\n\n\n\nYou can download the solution here.",
-    "crumbs": [
-      "Home",
-      "Add Data and Data Dictionary"
-    ]
-  },
-  {
-    "objectID": "data.html#practical-exercise-add-data-citation-and-attribution",
-    "href": "data.html#practical-exercise-add-data-citation-and-attribution",
-    "title": "Add Data and Data Dictionary",
-    "section": "Practical Exercise: Add Data Citation and Attribution",
-    "text": "Practical Exercise: Add Data Citation and Attribution\nAll data relied upon should be cited in the manuscript to allow for precise identification and access. Please add an appropriate citation for the data set to the manuscript where it says “cite data here”.\n\n\n\n\n\n\nTip 3: Citing the Data Set (Hint)\n\n\n\n\n\nYou can find an appropriate BibTeX entry on the palmerpenguins package website.\n\n\n\n\n\n\n\n\n\nTip 4: Citing the Data Set (Solution)\n\n\n\n\n\nCopy the following BibTeX entry to the file Bibliography.bib:\n\n\n\n\nBibliography.bib\n\n@Manual{horst2020,\n  title = {palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data},\n  author = {Allison Horst and Alison Hill and Kristen Gorman},\n  year = {2022},\n  note = {R package version 0.1.1},\n  url = {https://allisonhorst.github.io/palmerpenguins/},\n}\n\n\n\nThen, find the line in the manuscript that says “cite data here” and replace it with a sentence such as the following:\n\n\nManuscript.qmd\n\nThe analyzed data are by @horst2020.\n\nRender the document to check that the citation is displayed properly.\n\n\nTerminal\n\nquarto render Manuscript.qmd\n\n\n\n\nWhile citation happens in the manuscript for reasons of academic integrity and reproducibility, to comply with any licenses you also may need to provide attribution within your project folder. Even though the data file we use here does not require attribution, we recommend adding a short paragraph to LICENSE.txt:\n\n\n\n\nLICENSE.txt\n\nThe penguins data stored in \"data.csv\" by Allison Horst, Alison Hill, and Kristen Gorman available from &lt;https://allisonhorst.github.io/palmerpenguins/&gt; are licensed under CC0 1.0: &lt;https://creativecommons.org/publicdomain/zero/1.0/&gt;",
-    "crumbs": [
-      "Home",
-      "Add Data and Data Dictionary"
-    ]
-  },
-  {
-    "objectID": "data.html#wrap-up",
-    "href": "data.html#wrap-up",
-    "title": "Add Data and Data Dictionary",
-    "section": "Wrap up",
-    "text": "Wrap up\nCongrats! You documented your data set and cited it correctly.\nTo finalize this step, you can go through the commit routine:\n\n\nTerminal\n\ngit status\ngit add .\ngit commit -m \"Add data\"",
-    "crumbs": [
-      "Home",
-      "Add Data and Data Dictionary"
-    ]
-  },
-  {
-    "objectID": "data.html#footnotes",
-    "href": "data.html#footnotes",
-    "title": "Add Data and Data Dictionary",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nFor example, using Amnesia, ARX, sdcTools, Synthpop, OpenDP, or Greenmask.↩︎",
-    "crumbs": [
-      "Home",
-      "Add Data and Data Dictionary"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, and Pat Callahan.\nThis tutorial was created by Florian Kohrt. It is based on previous work by Josephine Zerna and Christoph Scheffel. Comments on earlier versions were kindly provided by Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt, and Sarah von Grebmer zu Wolfsthurn. Felix Schönbrodt created this short version of the longer original tutorial."
-  },
-  {
-    "objectID": "about.html#contributors",
-    "href": "about.html#contributors",
-    "title": "About",
-    "section": "",
-    "text": "This site was authored by Florian Kohrt, Josephine Zerna, Christoph Scheffel, Felix Schönbrodt, and Pat Callahan.\nThis tutorial was created by Florian Kohrt. It is based on previous work by Josephine Zerna and Christoph Scheffel. Comments on earlier versions were kindly provided by Malika Ihle, Florian Pargent, Jonas Hagenberg, Felix Schönbrodt, and Sarah von Grebmer zu Wolfsthurn. Felix Schönbrodt created this short version of the longer original tutorial."
-  },
-  {
-    "objectID": "about.html#license-and-disclaimer",
-    "href": "about.html#license-and-disclaimer",
-    "title": "About",
-    "section": "License and Disclaimer",
-    "text": "License and Disclaimer\nNone of the discussion in this tutorial constitutes legal advice.\nExcept where noted otherwise, the narrative text in this tutorial is licensed under CC BY-SA 4.0; the code without any narrative text is also (at your option) available under CC0 1.0.\nThe files Manuscript.qmd and Bibliography.bib are made available by Josephine Zerna and Christoph Scheffel under CC0 1.0.\nThe screenshots of the RStudio IDE are Copyright (C) 2024 Posit PBC and are available under the GNU Affero General Public License v3. The source code is available on GitHub."
-  },
-  {
-    "objectID": "about.html#notes",
-    "href": "about.html#notes",
-    "title": "About",
-    "section": "Notes",
-    "text": "Notes\nThis tutorial was primarily written in 2025 using R and Quarto. Major changes to either can be found at the websites linked above, for the most up-to-date information, and to confirm that our tutorial is not out-of-date."
-  },
-  {
-    "objectID": "about.html#utilized-software",
-    "href": "about.html#utilized-software",
-    "title": "About",
-    "section": "Utilized Software",
-    "text": "Utilized Software\n\n\nThis work was completed using the following R packages: datawizard v. 1.3.1 (Patil et al., 2022), downlit v. 0.4.5 (Wickham, 2025), grateful v. 0.3.0 (Rodriguez-Sanchez & Jackson, 2025), palmerpenguins v. 0.1.1 (Horst et al., 2020), renv v. 1.0.7 (Ushey & Wickham, 2024), rmarkdown v. 2.31 (Allaire et al., 2026; Xie et al., 2018, 2020), sessioninfo v. 1.2.4 (Wickham et al., 2026), tidyverse v. 2.0.0 (Wickham et al., 2019), withr v. 3.0.3 (Hester et al., 2026).\n\n\nQuarto 1.11.9 was utilized to render the files.\n\nsessioninfo::session_info()\n\n─ Session info ───────────────────────────────────────────────────────────────\n setting  value\n version  R version 4.6.1 (2026-06-24)\n os       Ubuntu 24.04.5 LTS\n system   x86_64, linux-gnu\n ui       X11\n language (EN)\n collate  C.UTF-8\n ctype    C.UTF-8\n tz       UTC\n date     2026-11-09\n pandoc   3.10 @ /opt/quarto/bin/tools/ (via rmarkdown)\n quarto   1.11.9 @ /usr/local/bin/quarto\n\n─ Packages ───────────────────────────────────────────────────────────────────\n ! package     * version date (UTC) lib source\n P cli           3.6.6   2026-04-09 [?] RSPM (R 4.6.0)\n P digest        0.6.39  2025-11-19 [?] RSPM (R 4.6.0)\n P evaluate      1.0.5   2025-08-27 [?] RSPM (R 4.6.0)\n P fastmap       1.2.0   2024-05-15 [?] RSPM (R 4.6.0)\n P grateful      0.3.0   2025-09-04 [?] RSPM (R 4.6.0)\n P htmltools     0.5.9   2025-12-04 [?] RSPM (R 4.6.0)\n P jsonlite      2.0.0   2025-03-27 [?] RSPM (R 4.6.0)\n P knitr         1.51    2025-12-20 [?] RSPM (R 4.6.0)\n   renv          1.0.7   2024-04-11 [1] RSPM (R 4.6.1)\n P rlang         1.3.0   2026-07-05 [?] RSPM (R 4.6.0)\n P rmarkdown     2.31    2026-03-26 [?] RSPM (R 4.6.0)\n P sessioninfo   1.2.4   2026-06-04 [?] RSPM (R 4.6.0)\n P withr         3.0.3   2026-06-19 [?] RSPM (R 4.6.0)\n P xfun          0.60    2026-07-09 [?] RSPM (R 4.6.0)\n P yaml          2.3.12  2025-12-10 [?] RSPM (R 4.6.0)\n\n [1] /home/runner/work/code-publishing/code-publishing/renv/library/linux-ubuntu-noble/R-4.6/x86_64-pc-linux-gnu\n [2] /home/runner/.cache/R/renv/sandbox/linux-ubuntu-noble/R-4.6/x86_64-pc-linux-gnu/e7c0fad7\n\n P ── Loaded and on-disk path mismatch.\n\n──────────────────────────────────────────────────────────────────────────────\n\n\nThis tutorial was written using the lmu-osc/tutorial-template Quarto extension (Callahan, 2026).\n\n\nAllaire, J., Xie, Y., Dervieux, C., McPherson, J., Luraschi, J., Ushey, K., Atkins, A., Wickham, H., Cheng, J., Chang, W., & Iannone, R. (2026). rmarkdown: Dynamic documents for r. https://github.com/rstudio/rmarkdown\n\n\nCallahan, P. (2026). LMU open science center tutorial template: A quarto extension. https://doi.org/10.5281/zenodo.21263721\n\n\nHester, J., Henry, L., Müller, K., Ushey, K., Wickham, H., & Chang, W. (2026). withr: Run code “With” temporarily modified global state. https://withr.r-lib.org\n\n\nHorst, A. M., Hill, A. P., & Gorman, K. B. (2020). palmerpenguins: Palmer archipelago (antarctica) penguin data. https://doi.org/10.5281/zenodo.3960218\n\n\nPatil, I., Makowski, D., Ben-Shachar, M. S., Wiernik, B. M., Bacher, E., & Lüdecke, D. (2022). datawizard: An R package for easy data preparation and statistical transformations. Journal of Open Source Software, 7(78), 4684. https://doi.org/10.21105/joss.04684\n\n\nRodriguez-Sanchez, F., & Jackson, C. P. (2025). grateful: Facilitate citation of R packages. https://pakillo.github.io/grateful/\n\n\nUshey, K., & Wickham, H. (2024). renv: Project environments. https://rstudio.github.io/renv/\n\n\nWickham, H. (2025). downlit: Syntax highlighting and automatic linking. https://downlit.r-lib.org/\n\n\nWickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., Grolemund, G., Hayes, A., Henry, L., Hester, J., Kuhn, M., Pedersen, T. L., Miller, E., Bache, S. M., Müller, K., Ooms, J., Robinson, D., Seidel, D. P., Spinu, V., … Yutani, H. (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686. https://doi.org/10.21105/joss.01686\n\n\nWickham, H., Chang, W., Flight, R., Müller, K., & Hester, J. (2026). sessioninfo: R session information. https://sessioninfo.r-lib.org\n\n\nXie, Y., Allaire, J. J., & Grolemund, G. (2018). R markdown: The definitive guide. Chapman; Hall/CRC. https://yihui.org/rmarkdown/\n\n\nXie, Y., Dervieux, C., & Riederer, E. (2020). R markdown cookbook. Chapman; Hall/CRC. https://yihui.org/rmarkdown-cookbook"
-  },
-  {
-    "objectID": "about.html#how-to-cite",
-    "href": "about.html#how-to-cite",
-    "title": "About",
-    "section": "How to Cite",
-    "text": "How to Cite\nTo cite this tutorial, please refer to the project’s CITATION.cff file or use the BibTeX citation provided in the appendix below."
-  },
-  {
-    "objectID": "about.html#funding",
-    "href": "about.html#funding",
-    "title": "About",
-    "section": "Funding",
-    "text": "Funding\n\n\n\nThis work was partly funded by the Berkeley Initiative for Transparency in the Social Sciences (BITSS), managed by the Center for Effective Global Action (CEGA)."
-  },
-  {
-    "objectID": "in-depth-material/data-dic-generation.html",
-    "href": "in-depth-material/data-dic-generation.html",
-    "title": "Generation of Data Dictionaries Using R",
-    "section": "",
-    "text": "Note: This is an add-on to the Chapter “Add Data and Data Dictionary”. It describes how to (a) generate data dictionaries with R, and (b) how to create a machine readable documentation of the data.",
-    "crumbs": [
-      "Home",
-      "In-depth material",
-      "Automatic Generation of Data Dictionaries"
-    ]
-  },
-  {
-    "objectID": "in-depth-material/data-dic-generation.html#automatic-generation-of-data-dictionaries",
-    "href": "in-depth-material/data-dic-generation.html#automatic-generation-of-data-dictionaries",
-    "title": "Generation of Data Dictionaries Using R",
-    "section": "Automatic Generation of Data Dictionaries",
-    "text": "Automatic Generation of Data Dictionaries\nFirst, we will demonstrate how to create a simple data dictionary using the R package datawizard. We will use the penguin data set which is introduced in the Chapter “Add Data and Data Dictionary”. You can download it and put it into your project folder:\ndata.csv\nYou can install the datawizard package into our renv environment using:\n\n\nR Console\n\nrenv::install(\"datawizard\")\n\nWe create a separate Quarto file for the data dictionary. Create it by clicking on File &gt; New File &gt; Quarto Document…. Choose a title such as Data Dictionary, select HTML as format, uncheck the use of the visual markdown editor, and click on Create. Remove everything except the YAML header (between the ---). To make the HTML file self-contained, also set embed-resources: true such that the YAML header looks as follows:\n\n\ndata_dictionary.qmd\n\n---\ntitle: \"Data Dictionary\"\nformat:\n  html:\n    embed-resources: true\n---\n\nThen, save it as data_dictionary.qmd by clicking on File &gt; Save.\nTo create the actual data dictionary, first write a description for every column so others can understand what the variable names mean. Where necessary, also document their value – this is especially important if their meaning is non-obvious. In the following, we demonstrate this by storing the penguins’ binomial name along with the English name.\n\n\n\ndata_dictionary.qmd\n\n```{r}\n#| echo: false\n\n# Store the description of variables\nvars &lt;- c(\n  species = \"an integer denoting penguin species\",\n  island = \"an integer denoting island in Palmer Archipelago, Antarctica\",\n  bill_length_mm = \"a number denoting bill length (millimeters)\",\n  bill_depth_mm = \"a number denoting bill depth (millimeters)\",\n  flipper_length_mm = \"an integer denoting flipper length (millimeters)\",\n  body_mass_g = \"an integer denoting body mass (grams)\",\n  sex = \"an integer denoting penguin sex\",\n  year = \"an integer denoting the study year\"\n)\n\n# Store the description of variable values\nvals &lt;- list(\n  species = c(\n    \"1\" = \"Adelie\",\n    \"2\" = \"Chinstrap\",\n    \"3\" = \"Gentoo\"\n  ),\n  island = c(\n    \"1\" = \"Biscoe\",\n    \"2\" = \"Dream\",\n    \"3\" = \"Torgersen\"\n  ),\n  sex = c(\n    \"1\" = \"female\",\n    \"2\" = \"male\"\n  )\n)\n```\n\n\nThen, load the data and use datawizard to add the descriptions to the data.frame:1\n\n\n\n\ndatawizard: Easy Data Wrangling and Statistical Transformations\n\n\n\n\ndata_dictionary.qmd\n\n```{r}\n#| echo: false\n\ndat &lt;- read.csv(\"data.csv\")\ndat[dat == -99L] &lt;- NA\n\nfor (x in names(vars)) {\n  if (x %in% names(vals)) {\n    dat &lt;- datawizard::assign_labels(\n      dat,\n      select = I(x),\n      variable = vars[[x]],\n      values = vals[[x]]\n    )\n  } else {\n    dat &lt;- datawizard::assign_labels(\n      dat,\n      select = I(x),\n      variable = vars[[x]]\n    )\n  }\n}\n```\n\n\nThen, you can create the data dictionary containing the descriptions, but also some other information about each variable (e.g., the number of missing values) and print it.\n\n\n\ndata_dictionary.qmd\n\n```{r}\n#| echo: false\n#| column: \"body-outset\"\n#| classes: plain\n#| tbl-cap: \"{.borderless .hover}\"\n\ndatawizard::data_codebook(dat) |&gt;\n  datawizard::data_select(exclude = ID) |&gt;\n  datawizard::data_filter(N != \"\") |&gt;\n  datawizard::print_md()\n```\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nName\nLabel\nType\nMissings\nValues\nValue Labels\nN\n\n\n\nspecies\nan integer denoting penguin species\ninteger\n0 (0.0%)\n1\nAdelie\n152 (44.2%)\n\n\n\n\n\n\n2\nChinstrap\n68 (19.8%)\n\n\n\n\n\n\n3\nGentoo\n124 (36.0%)\n\n\nisland\nan integer denoting island in Palmer Archipelago, Antarctica\ninteger\n0 (0.0%)\n1\nBiscoe\n168 (48.8%)\n\n\n\n\n\n\n2\nDream\n124 (36.0%)\n\n\n\n\n\n\n3\nTorgersen\n52 (15.1%)\n\n\nbill_length_mm\na number denoting bill length (millimeters)\nnumeric\n2 (0.6%)\n[32.1, 59.6]\n\n342\n\n\nbill_depth_mm\na number denoting bill depth (millimeters)\nnumeric\n2 (0.6%)\n[13.1, 21.5]\n\n342\n\n\nflipper_length_mm\nan integer denoting flipper length (millimeters)\ninteger\n2 (0.6%)\n[172, 231]\n\n342\n\n\nbody_mass_g\nan integer denoting body mass (grams)\ninteger\n2 (0.6%)\n[2700, 6300]\n\n342\n\n\nsex\nan integer denoting penguin sex\ninteger\n11 (3.2%)\n1\nfemale\n165 (49.5%)\n\n\n\n\n\n\n2\nmale\n168 (50.5%)\n\n\nyear\nan integer denoting the study year\ninteger\n0 (0.0%)\n2007\n\n110 (32.0%)\n\n\n\n\n\n\n2008\n\n114 (33.1%)\n\n\n\n\n\n\n2009\n\n120 (34.9%)\n\n\ncuteness\n\ninteger\n0 (0.0%)\n[1, 10]\n\n344\n\n\n\n\n\nDepending on the type of data, it may also be necessary to describe sampling procedures (e.g., selection criteria), measurement instruments (e.g., questionnaires), appropriate weighting, already applied preprocessing steps, or contact information. In our case, as the data has already been published, we only store a reference to its source.\nThe data set is from the R package palmerpenguins. If you had it installed you could use the function citation() to create such a reference:\n\ncitation(\"palmerpenguins\", auto = TRUE) |&gt;\n  format(bibtex = FALSE, style = \"text\")\n\nWithout the package palmerpenguins installed, you can find a suggested citation on its website and add that to your data dictionary:\n\n\n\n\ndata_dictionary.qmd\n\nHorst A, Hill A, Gorman K (2022). _palmerpenguins: Palmer Archipelago (Antarctica) Penguin Data_. R package version 0.1.1, &lt;https://allisonhorst.github.io/palmerpenguins/&gt;.\n\n\n\nFinally, you can render the data dictionary by running the following:\n\n\nTerminal\n\nquarto render data_dictionary.qmd\n\nThis should create the file data_dictionary.html which you can open and view in your web browser.\nIf you want to learn more about the sharing of research data, have a look at the tutorial “FAIR research data management”.",
-    "crumbs": [
-      "Home",
-      "In-depth material",
-      "Automatic Generation of Data Dictionaries"
-    ]
-  },
-  {
-    "objectID": "in-depth-material/data-dic-generation.html#create-machine-readable-variable-documentation",
-    "href": "in-depth-material/data-dic-generation.html#create-machine-readable-variable-documentation",
-    "title": "Generation of Data Dictionaries Using R",
-    "section": "Create Machine-Readable Variable Documentation",
-    "text": "Create Machine-Readable Variable Documentation\nOne could go even further by making the information machine-readable in a standardized way.\nThis section demonstrates how the title and description of the data set, the description of the variables and their valid values are stored in a machine-readable way. We’ll reuse the descriptions we already created2 and add a few others.\nFirst, store the title and description of the data set as a whole:\n\n\nR Console\n\ntable_info &lt;- c(\n  title = \"penguins data set\",\n  description = \"Size measurements for adult foraging penguins near Palmer Station, Antarctica\"\n)\n\nAs before, also provide a reference to the source.\n\n\n\n\nR Console\n\ndat_source &lt;- \"https://allisonhorst.github.io/palmerpenguins/\"\n\n\n\nNext, create a list of the categorical variables’ valid values:\n\n\nR Console\n\nvalid_vals &lt;- list(\n  species = c(\"Adelie\", \"Gentoo\", \"Chinstrap\"),\n  island = c(\"Torgersen\", \"Biscoe\", \"Dream\"),\n  sex = c(\"male\", \"female\"),\n  year = c(2007, 2008, 2009)\n)\n\nFinally, store the descriptions of the variables we already created earlier:\n\n\nR Console\n\n# Store the description of variables\nvars &lt;- c(\n  species = \"a character string denoting penguin species\",\n  island = \"a character string denoting island in Palmer Archipelago, Antarctica\",\n  bill_length_mm = \"a number denoting bill length (millimeters)\",\n  bill_depth_mm = \"a number denoting bill depth (millimeters)\",\n  flipper_length_mm = \"an integer denoting flipper length (millimeters)\",\n  body_mass_g = \"an integer denoting body mass (grams)\",\n  sex = \"a character string denoting penguin sex\",\n  year = \"an integer denoting the study year\"\n)\n\nGenerally, metadata are either stored embedded into the data or externally, for example, in a separate file. We will use the “frictionless data” standard, where metadata are stored separately. Alternatives would be RO-Crate and Psych-DS.\nSpecifically, one can use the R package frictionless to create a schema which describes the structure of the data.3 For the purpose of the following code, it is just a nested list that we edit to include our own information. We also explicitly record in the schema that missing values are stored in the data file as NA and that the data are licensed under CC0 1.0. Finally, the package is used to create a metadata file that contains the schema.\n\n\nR Console\n\n# Install {frictionless} and the required dependency {stringi}\nrenv::install(c(\n  \"frictionless\",\n  \"stringi\"\n))\n\n# Read data and create schema\ndat_filename &lt;- \"data.csv\"\ndat &lt;- read.csv(dat_filename)\ndat_schema &lt;- frictionless::create_schema(dat)\n\n# Add descriptions to the fields\ndat_schema$fields &lt;- lapply(dat_schema$fields, \\(x) {\n  c(x, description = vars[[x$name]])\n})\n\n# Record valid values\ndat_schema$fields &lt;- lapply(dat_schema$fields, \\(x) {\n  if (x[[\"name\"]] %in% names(valid_vals)) {\n    modifyList(x, list(constraints = list(enum = valid_vals[[x$name]])))\n  } else {\n    x\n  }\n})\n\n# Define missing values\ndat_schema$missingValues &lt;- c(\"\", \"NA\")\n\n# Create package with license info and write it\ndat_package &lt;- frictionless::create_package() |&gt;\n  frictionless::add_resource(\n    resource_name = \"penguins\",\n    data = dat_filename,\n    schema = dat_schema,\n    title = table_info[[\"title\"]],\n    description = table_info[[\"description\"]],\n    licenses = list(list(\n      name = \"CC0-1.0\",\n      path = \"https://creativecommons.org/publicdomain/zero/1.0/\",\n      title = \"CC0 1.0 Universal\"\n    )),\n    sources = list(list(\n      title = \"CRAN\",\n      path = dat_source\n    ))\n  )\nfrictionless::write_package(dat_package, directory = \".\")\n\nThis creates the metadata file datapackage.json in the current directory. Make sure it is located in the same folder as data.csv, as together they comprise a data package.",
-    "crumbs": [
-      "Home",
-      "In-depth material",
-      "Automatic Generation of Data Dictionaries"
-    ]
-  },
-  {
-    "objectID": "in-depth-material/data-dic-generation.html#footnotes",
-    "href": "in-depth-material/data-dic-generation.html#footnotes",
-    "title": "Generation of Data Dictionaries Using R",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nNote that the code provided does not alter the data file – no description will be added to data.csv. The descriptions are only added to a (temporary) copy of the data set within R to create the data dictionary.↩︎\nUnfortunately, the descriptions of values are not reused in this example, as they are not supported by the specification we are using.↩︎\nIn June 2024, version 2 of the frictionless data standard has been released. As of November 2024, the R package frictionless only supports the first version, though support for v2 is planned.↩︎",
-    "crumbs": [
-      "Home",
-      "In-depth material",
-      "Automatic Generation of Data Dictionaries"
-    ]
-  },
-  {
     "objectID": "in-depth-material/introduction-copyright.html",
     "href": "in-depth-material/introduction-copyright.html",
     "title": "Introduction to Copyright and Licensing",
@@ -708,6 +694,74 @@
     ]
   },
   {
+    "objectID": "in-depth-material/other-dependencies.html",
+    "href": "in-depth-material/other-dependencies.html",
+    "title": "Identify additional system dependencies for the README",
+    "section": "",
+    "text": "The specific version of R and the loaded packages is the most crucial information that should go into the README (or that is stored in the renv lockfile). Ideally, you list other system dependencies, such as the version of Quarto1 that you used to render your paper.\nAn overview over the system dependencies of R packages can be created using the function pak::pkg_sysreqs(). In combination with renv, we can obtain the system dependencies of all R packages the current project directly depends on:\nThe output may look like the following:\nWe can see that the programs make, pandoc, and git were identified as system dependencies. Often, one can obtain their version by running them with the --version argument:\nHowever, this does not work for all system dependencies. Specifically, it does not work for libraries – software that is not supposed to be run on its own. Identifying their version is beyond the scope of this tutorial.\nWe also know that we need Quarto to create the PDF, so let’s find out its version as well:\nIf you installed apaquarto or any other Quarto extension, one can query their versions as follows:2\nFinally, we know that we installed a \\(\\TeX\\) distribution to create the PDF, so let’s find out its version by running:\nThe output is quite long and it might look slightly different for you, but the relevant sections are the following:\nAdd these dependencies to the section Computational Requirements / Dependencies of your README file.\nOf course, all the system dependencies identified until now may have dependencies on their own. Use your own judgement to decide when not to dig deeper.",
+    "crumbs": [
+      "Home",
+      "In-depth material",
+      "Identify additional system dependencies for the README"
+    ]
+  },
+  {
+    "objectID": "in-depth-material/other-dependencies.html#footnotes",
+    "href": "in-depth-material/other-dependencies.html#footnotes",
+    "title": "Identify additional system dependencies for the README",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nAs of August 2024, a proposal for renv to record the version of Quarto has not been implemented, see rstudio/renv#1143.↩︎\nLuckily, the extensions are included in the project folder, so technically their version is already recorded in the project’s files.↩︎",
+    "crumbs": [
+      "Home",
+      "In-depth material",
+      "Identify additional system dependencies for the README"
+    ]
+  },
+  {
+    "objectID": "make-readme.html",
+    "href": "make-readme.html",
+    "title": "Make a README",
+    "section": "",
+    "text": "Having settled on a license, it is time to add a final touch. Imagine returning to your project in five years, having forgotten most of the details of what you did exactly. What would your future self want to know in order to quickly understand what is going on in the project?\nThis is what needs to be described in the README file. It should be the primary entry point into your project, the place where new users go first to get an orientation.\nThere is no common standard how to structure a README file, but you should usually provide at least the following information, structured by sections:\nName and Description\n\nHow is the project called?\nWhat is it about?\nWhich files does the project folder contain?\nHow are they organized?\n\nData\n\nAre any (empirical) data involved (e.g., being analyzed or used as input)?\nAre they already included in the project folder? If not: From which sources can they be obtained?\nWhere is their data dictionary located?\nWhich terms, usage restrictions, or licenses apply?\n(optionally) If they are not publicly available, is an alternative, synthesized version provided?\n\nComputational Requirements / Dependencies\n\nWhat software needs to be installed to run the analysis?\n\nFor every dependency (e.g., packages that you load in R), describe where it can be obtained from. If the code has particular hardware requirements (e.g., in terms of processor or memory), these should be also noted. Finally, for steps that take more than a couple of seconds, indicate the approximate runtime.\nFor an R project, the most important information for enabling reproducibility are the specific version of R and the loaded packages. Ideally, you also list other system dependencies. The in-depth supplementary material Identify additional system dependencies for the README provides more information on determining the dependencies of an R project. For the purpose of this tutorial, however, you can skip this step.\nHow to reproduce the results\n\nProvide step-by-step instructions that are necessary to reproduce all reported results.\n\nIs there a master script or a particular order in which any scripts need to be executed?\nCitation\n\nIs there a recommended way to cite this project?\nIs there a published article associated with it that you would like to have cited?\n\nLicense\n\nUnder which licenses are the works in this project folder available?",
+    "crumbs": [
+      "Home",
+      "Make a README"
+    ]
+  },
+  {
+    "objectID": "make-readme.html#what-does-a-readme-contain",
+    "href": "make-readme.html#what-does-a-readme-contain",
+    "title": "Make a README",
+    "section": "",
+    "text": "Having settled on a license, it is time to add a final touch. Imagine returning to your project in five years, having forgotten most of the details of what you did exactly. What would your future self want to know in order to quickly understand what is going on in the project?\nThis is what needs to be described in the README file. It should be the primary entry point into your project, the place where new users go first to get an orientation.\nThere is no common standard how to structure a README file, but you should usually provide at least the following information, structured by sections:\nName and Description\n\nHow is the project called?\nWhat is it about?\nWhich files does the project folder contain?\nHow are they organized?\n\nData\n\nAre any (empirical) data involved (e.g., being analyzed or used as input)?\nAre they already included in the project folder? If not: From which sources can they be obtained?\nWhere is their data dictionary located?\nWhich terms, usage restrictions, or licenses apply?\n(optionally) If they are not publicly available, is an alternative, synthesized version provided?\n\nComputational Requirements / Dependencies\n\nWhat software needs to be installed to run the analysis?\n\nFor every dependency (e.g., packages that you load in R), describe where it can be obtained from. If the code has particular hardware requirements (e.g., in terms of processor or memory), these should be also noted. Finally, for steps that take more than a couple of seconds, indicate the approximate runtime.\nFor an R project, the most important information for enabling reproducibility are the specific version of R and the loaded packages. Ideally, you also list other system dependencies. The in-depth supplementary material Identify additional system dependencies for the README provides more information on determining the dependencies of an R project. For the purpose of this tutorial, however, you can skip this step.\nHow to reproduce the results\n\nProvide step-by-step instructions that are necessary to reproduce all reported results.\n\nIs there a master script or a particular order in which any scripts need to be executed?\nCitation\n\nIs there a recommended way to cite this project?\nIs there a published article associated with it that you would like to have cited?\n\nLicense\n\nUnder which licenses are the works in this project folder available?",
+    "crumbs": [
+      "Home",
+      "Make a README"
+    ]
+  },
+  {
+    "objectID": "make-readme.html#identifying-r-dependencies",
+    "href": "make-readme.html#identifying-r-dependencies",
+    "title": "Make a README",
+    "section": "Identifying R Dependencies",
+    "text": "Identifying R Dependencies\nIf you just write “We used R to analyze the data” in your manuscript or in the Computational Requirements / Dependencies section of your README file, this would be too underspecified. To enable someone else to really reproduce your results, you need specific information on …\n\nThe exact version of R\nAll packages and their versions that you loaded in your project\n(optionally) Further system dependencies\n\nR & Package Dependencies\nR itself and the R packages are already documented as our tutorial project uses renv: The information is stored in the renv.lock file at the root of the project, which tracks each package’s version and source. In this case, you can simply refer to that in the README file and all is done.\nIf your project has no renv.lock file, you can still use renv together with the package sessioninfo to get an overview of all used packages and their versions:\n\n\nR Console\n\nsessioninfo::session_info(pkgs = unique(renv::dependencies()$Package))\n\nYou can copy & paste that information into your README file.",
+    "crumbs": [
+      "Home",
+      "Make a README"
+    ]
+  },
+  {
+    "objectID": "make-readme.html#practical-exercise-create-your-readme",
+    "href": "make-readme.html#practical-exercise-create-your-readme",
+    "title": "Make a README",
+    "section": "Practical Exercise: Create your README!",
+    "text": "Practical Exercise: Create your README!\nCreate your README now as the file README.md, located at the top level folder.\nIf you feel stuck, you can have a look at the following examples:\n\n\n\n\n\n\nTip 1: Name and Description\n\n\n\n\n\n\n\nREADME.md\n\n# Penguin Paper\n\nThis project contains the Quarto manuscript of our study on penguins (\"Manuscript.qmd\"). It is written in R and uses `renv` to track its dependencies.\n\nThe most important file in this project folder is `Manuscript.qmd` which contains the text of the article as well as the code for its computations. It is accompanied by the following files:\n\n- `Bibliography.bib`: bibliographic references used in the manuscript\n- `data.csv`: a data set containing the simplified `palmerpenguins` data\n- `data_dictionary.html`: a dictionary to the data file, created using `data_dictionary.qmd`\n\nThe folder `_extensions` contains the `apaquarto` extension which is used to typeset the PDF according to APA guidelines.\n\n\n\n\n\n\n\n\n\n\nTip 2: Data\n\n\n\n\n\n\n\nREADME.md\n\n## Data\n\nThe manuscript analyzes the \"palmerpenguins\" data set available from &lt;https://cran.r-project.org/package=palmerpenguins&gt;. The data is stored as \"data.csv\" and documented in the file \"data_dictionary.html\". It is made available under CC0 1.0.\n\n\n\n\n\n\n\n\n\n\nTip 3: Computational Requirements\n\n\n\n\n\n\n\nREADME.md\n\n## Computational Requirements\n\nThis manuscript requires the following system software to be installed. In addition, we provide the version numbers this manuscript has last been run with:\n\n- [Quarto](https://quarto.org/docs/download/) 1.6.9\n- GNU Make 4.4.1\n- Pandoc 3.3\n- TinyTeX 2024.09\n- [R](https://cloud.r-project.org/) 4.4.1\n\nOn Fedora Linux, Make and Pandoc can be installed as follows:\n\n```bash\ndnf install -y make pandoc\n```\n\nQuarto and R can be installed using the links provided. TinyTeX can be installed using Quarto by entering the following into the terminal:\n\n```bash\nquarto install tinytex\n```\n\nAll R packages that this project requires are managed using [`renv`](https://cran.r-project.org/package=renv). Therefore, `renv` needs to be installed first, by entering the following in the R console:\n\n```r\ninstall.packages(\"renv\")\n```\n\nNext, one can open a new R session in the root folder of this project and run the following command, which should install all required R packages at their recorded versions:\n\n```r\nrenv::restore()\n```\n\n\n\n\n\n\n\n\n\n\nTip 4: How to reproduce the results\n\n\n\n\n\n\n\nREADME.md\n\n## How to reproduce the results\n\nThe manuscript can be rendered to PDF using the following command:\n\n```bash\nquarto render Manuscript.qmd\n```\n\n\n\n\n\n\n\n\n\n\nTip 5: Citation\n\n\n\n\n\nYou need to add your name in the following example:\n\n\nREADME.md\n\n## Citation\n\nPlease cite this draft as follows:\n\n&gt; Zerna, Scheffel, & &lt;YOUR NAME&gt; (2024): \"A Study on Penguins: A Minimal Reproducible Example\". Unpublished manuscript.\n\n\n\n\n\n\n\n\n\n\nTip 6: License\n\n\n\n\n\nOf course, you would use the same license for the manuscript that you chose in the previous step. You need to add your name in the following example:\n\n\nREADME.md\n\n## License\n\nThe manuscript files `Manuscript.qmd`, `Manuscript.tex`, and `Manuscript.pdf` by Josephine Zerna, Christoph Scheffel, and &lt;YOUR NAME&gt; are available under [CC\\ BY-SA\\ 4.0](https://creativecommons.org/licenses/by-sa/4.0/). For further copyright information, see `LICENSE.txt`.\n\n\n\n\nAfter adding a README, commit your changes:\n\n\nTerminal\n\ngit status\ngit add .\ngit commit -m \"Add README\"",
+    "crumbs": [
+      "Home",
+      "Make a README"
+    ]
+  },
+  {
     "objectID": "setup.html",
     "href": "setup.html",
     "title": "Project Setup",
@@ -752,78 +806,24 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Code Publishing Tutorial",
+    "objectID": "CONTRIBUTING.html",
+    "href": "CONTRIBUTING.html",
+    "title": "",
     "section": "",
-    "text": "This tutorial covers how to make your code and material available to others. It wraps up a series of tutorials which we recommend to go through in advance.",
-    "crumbs": [
-      "Home",
-      "Overview"
-    ]
+    "text": "Code\n\n\n\n\n\n\nContributing Notes\nThere are some things to consider when contributing to this repo:\n\nMake screenshots in high resolution by temporarily increasing the font scaling factor in your OS and using a large display.\nLimit the width of images and center them, for example, as follows:\n![](assets/my_image.png){width=500px fig-align=\"center\"}\nAnnotate code blocks with filename=\"Terminal\" and filename=\"R Console\" to differentiate Bash and R that should be entered by the user (if there is no file from which the code is an excerpt).\nPut optional content into a collapsed note.\nPut important content into warning.\nhierarchy of callouts\n\nnote\ntip\ncaution\nwarning\nimportant\n\nHeadings (including tabset tabs and callout titles) are written in title case.\nOn any page, start headings at level 2 (i.e., use ##) and above because the page title is already at level 1.\nMaintain the hierarchy of headings, that is, only create headings at level n if there’s already a heading at level n-1.\nAlso maintain the hierarchy of headings for callouts: Callouts use heading levels that are one below the current heading level.\nFilenames and R package names are typeset in monospace.\nNo special formatting of terms in headings (e.g., $\\TeX$).\nPrefer R packages that follow the tinyverse philosophy, that is, have a lightweight dependency footprint. All packages need to be downloaded by renv and (worst case) compiled during the tutorial, which better not take too long. Use pak::pkg_deps() to count the total number of package dependencies.\nWrite license abbreviations with no-break spaces (e.g., write CC\\ BY\\ 4.0 rather than CC BY 4.0).\nWhen writing markdown:\n\nUse semantic linefeeds to ease change tracking, except for exact quotes (as they won’t be updated) and for example code in code blocks (to allow for wrapping on the website depending on the user’s screen width).\nUse regular footnotes rather than inline footnotes to increase the readability of markdown (except for short notes or at the end of lines).\nUse reference links rather than inline links to increase the readability of markdown (except for short links or at the end of a line).\n\nIf the (R package/system) dependencies that are required to work through the tutorial change, make sure to adjust the respective section in make-readme.qmd accordingly.\nWhen making significant contributions, add people to the CITATION.cff file and mention them in about.qmd. Also adjust choose-license.qmd, _01_Example/Manuscript.qmd, and LICENSE.txt where necessary.\nKeep usage of terms consistent, for example:\n\nAlways write data dictionary or always write codebook (but don’t mix).\n\nIn the case of this tutorial, the convention is to write data dictionary.\n\nAlways write data set or always write dataset (but don’t mix).\n\nIn the case of this tutorial, the convention is to write data set.\n\n\nWhen preparing a new release:\n\nIn the file CITATION.cff update the fields version, date-released, year, and doi (twice).\nIn the file about.qmd update the fields issued and doi.\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "index.html#tutorial-overview",
-    "href": "index.html#tutorial-overview",
-    "title": "Code Publishing Tutorial",
-    "section": "Tutorial Overview",
-    "text": "Tutorial Overview\nThis self-paced tutorial is intended to be worked through in order, one section after the other.\nThe tutorial is split into the following sections:\n\n\nIntroduction motivates why you should publish your code and material.\n\nProject Setup prepares the project folder and the example manuscript used throughout.\n\nSharing work of others: Copyright explains what you are allowed to share and under which conditions.\n\nAdd Data and Data Dictionary adds the underlying data and documents it.\n\nAdd Code adds the analysis code and makes the project reproducible.\n\nChoose a License picks an appropriate license for your content and code.\n\nMake a README writes the high-level documentation others need to reuse your project.\n\nArchive Your Project uploads the project to a repository and obtains a DOI.\n\nWe will start with creating a simple report which incorporates R code. Then, we will focus on what is required to publish your work:\n\nremoving legal barriers: adding an appropriate license\nhigh-level documentation: creating a README file\narchival: uploading it to a repository",
-    "crumbs": [
-      "Home",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "index.html#prerequisite-tutorials",
-    "href": "index.html#prerequisite-tutorials",
-    "title": "Code Publishing Tutorial",
-    "section": "Prerequisite Tutorials",
-    "text": "Prerequisite Tutorials\nWhile the general principles taught in this tutorial apply to most researchers publishing code, we will focus on the programming language R and the publishing system Quarto. You may want to work through the following tutorials in advance:\n\n\nIntroduction to version control with git and GitHub within RStudio: This tutorial explains how to set up a simple project with version control.\n\nCollaborative coding with GitHub and RStudio: Here you can learn how to collaborate with others on code projects using GitHub.\n\nIntroduction to R: This is an introduction to the R programming language.\n\nIntroduction to {renv}: Here you can learn how to manage the dependencies of an R project.\n\nIntroduction to Quarto: Learn how to combine prose and code to make documents more reproducible.\n\nIntroduction to Zotero: Get introduced to the reference management software Zotero.\n\nFAIR research data management: Learn how to make your data findable, accessible, interoperable, and reusable.\n\n\n\n\n\n\n\nWarningRecommended Software\n\n\n\nThis tutorial assumes you have the following software installed:\n\nGit\nR\nQuarto\n\nRTools (Windows users only)\n\nSome things will be explained using the RStudio IDE, but you are free to use any IDE you like.\n\n\n\n\n\n\n\n\nNote 1: Alternatives to Quarto\n\n\n\n\n\nQuarto is a tool to render dynamic documents, but not the only one.\nIt is the successor of the R package rmarkdown and mostly backwards-compatible. rmarkdown continues to be supported, but the development of new features happens in Quarto. The main difference is that Quarto has first-class support for Python. In other words, Python users of Quarto do not need to have R installed.\nWhile this tutorial focuses on Quarto, you can also create dynamic documents with the following tools:\n\nJupyter Book\nPluto\nmarimo\nStencila\nCurvenote\nshowyourwork!\nOrg Mode\nStatTag\n\n\n\n\nGet started\n\n\n\n\n\n\n\n\nTipSupport the LMU Open Science Center!\n\n\n\nLike this tutorial? Be sure to give the repository a star and follow us on GitHub!\n\n\n\n\n\n\n\n\n\n\n\nTipQuestions about this tutorial?\n\n\n\nIf you have questions for the author of this tutorial, please take a look at the About page.",
-    "crumbs": [
-      "Home",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "footer/accessibilty.html",
-    "href": "footer/accessibilty.html",
-    "title": "Accessibility",
+    "objectID": "footer/privacy.html",
+    "href": "footer/privacy.html",
+    "title": "Privacy Policy",
     "section": "",
-    "text": "The Ludwig-Maximilians-Universität München strives to make its offers accessible in accordance with § 9 Act on Digitalisation in the Free State of Bavaria (Bayerisches Digitalgesetz – BayDig).\nThis Accessibility Statement applies to applications available at https://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages."
+    "text": "For data collected by the LMU Open Science Center, LMU’s general privacy policy  applies.\nAdditionally, this site is hosted on the webhosting service GitHub Pages (https://docs.github.com/en/pages) with it’s own privacy policy available at https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement."
   },
   {
-    "objectID": "footer/accessibilty.html#status-of-compliance",
-    "href": "footer/accessibilty.html#status-of-compliance",
-    "title": "Accessibility",
-    "section": "Status of Compliance",
-    "text": "Status of Compliance\nPartially compliant: This application partially corresponds to § 1 BayEGovV.\n\nLegal Name\nLudwig-Maximilians-Universität München\n\n\nWebsite(s):\nhttps://www.lmu.de/de/index.html, https://www.lmu.de/de/index.html and all subdomain pages."
-  },
-  {
-    "objectID": "footer/accessibilty.html#known-accessibility-issues",
-    "href": "footer/accessibilty.html#known-accessibility-issues",
-    "title": "Accessibility",
-    "section": "Known Accessibility Issues",
-    "text": "Known Accessibility Issues\nList and explanation of the problems encountered when implementing the accessibility of these websites\n\nContent Not Accessible to People With Disabilities\n\nApart from the main pages, alternative text-based content for images and tables may be missing. There may also be errors in content hierarchy and links may be unintelligible.\nPDF documents created before 09/23/2018 have not yet been converted to a fully accessible format.\nSome documents have been provided by institutions of the LMU, which are not yet all available in a fully accessible version.\nMany of our videos also lack subtitles and audio descriptions. We will be adding written directions for the maps used to give directions.\nQuotes are often not indicated as such using the appropriate HTML tag.\nResponsive design (for viewing on mobile devices) is only partially available for the websites, screen orientation is otherwise limited to landscape format. For non-responsive pages, texts do not wrap correctly in a small viewport.\nFields for inputting user data are not always sufficiently designated as such.\nWords or passages in other languages are not always indicated as such.\nBecause of the Google Search plugin, the criteria for “valid HTML text” is not being fulfilled."
-  },
-  {
-    "objectID": "footer/accessibilty.html#explanation",
-    "href": "footer/accessibilty.html#explanation",
-    "title": "Accessibility",
-    "section": "Explanation",
-    "text": "Explanation\nAll LMU websites are currently undergoing a complete relaunch. It therefore no longer makes sense to revise the existing websites.\nThe deficiencies of the old website have been listed above.\nCreation Date: 09/22/2019\nMethodology: Self-assessment"
-  },
-  {
-    "objectID": "footer/accessibilty.html#feedback-mechanism",
-    "href": "footer/accessibilty.html#feedback-mechanism",
-    "title": "Accessibility",
-    "section": "Feedback Mechanism",
-    "text": "Feedback Mechanism\nAs a user, you can inform us of any shortcomings in complying with accessibility requirements or request information in an accessible format that is not required to be displayed in an accessible format.\n\nContact Information\nUnit VI.5 Internet Services\nMartiusstraße 4\n80802 Munich\nMail: it.internet@verwaltung.uni-muenchen.de\nPhone: +49 (0) 89 / 2180-9832"
-  },
-  {
-    "objectID": "footer/accessibilty.html#enforcement-procedure",
-    "href": "footer/accessibilty.html#enforcement-procedure",
-    "title": "Accessibility",
-    "section": "Enforcement Procedure",
-    "text": "Enforcement Procedure\nIf a request for contact remains unanswered in whole or in part within six weeks, the Landesamt für Digitalisierung, Breitband und Vermessung (Agency for Digitisation, High-Speed Internet and Surveying) will, at the request of the user, examine whether measures are necessary with regard to the monitoring of the obligated party.\n\nContact information of the agency responsible for the enforcement procedure\nLandesamt für Digitalisierung, Breitband und Vermessung Alexandrastraße 4\n80538 Munich\nPhone: +49 89 2129-1111\nFax: +49 89 2129-1113\nEmail:service@geodaten.bayern.de\nhttps://www.ldbv.bayern.de/service/kontakt/\n\n\nOther Help Services\nStudents with disabilities are supported by the Beratungsstelle für Studierende mit Behinderung und chronischer Erkrankung (Counselling Center for Students with Disabilities and Chronic Illnesses).\nThe Schwerbehindertenvertretung (Representative for Disabled Persons) (access protected on the service portal) can support employees."
+    "objectID": "footer/privacy.html#matomo-tracking-opt-out",
+    "href": "footer/privacy.html#matomo-tracking-opt-out",
+    "title": "Privacy Policy",
+    "section": "Matomo Tracking Opt-Out",
+    "text": "Matomo Tracking Opt-Out\nThis opt-out is only for the Matomo web analytics tool in use directly the LMU Open Science Center website. It does not affect any other tracking or analytics tools that may be in use on this site, including those used by GitHub Pages."
   }
 ]
